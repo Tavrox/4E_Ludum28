@@ -22,7 +22,7 @@
         <key>dataFormat</key>
         <string>cocos2d</string>
         <key>textureFileName</key>
-        <filename>player.png</filename>
+        <filename>teleport.png</filename>
         <key>flipPVR</key>
         <false/>
         <key>ditherType</key>
@@ -99,7 +99,7 @@
             <key>packageName</key>
             <string>Texture</string>
             <key>javaFileName</key>
-            <filename>player.java</filename>
+            <filename>teleport.java</filename>
             <key>wrap</key>
             <struct type="AndEngineWrap">
                 <key>s</key>
@@ -111,7 +111,7 @@
             <enum type="AndEngine::MagFilter">MagLinear</enum>
         </struct>
         <key>dataFileName</key>
-        <filename>player.xml</filename>
+        <filename>teleport.xml</filename>
         <key>multiPack</key>
         <false/>
         <key>mainExtension</key>
@@ -148,16 +148,19 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>../../../../../../../../../Downloads/perso_run_test/perso_run0001.png</filename>
-            <filename>../../../../../../../../../Downloads/perso_run_test/perso_run0002.png</filename>
-            <filename>../../../../../../../../../Downloads/perso_run_test/perso_run0003.png</filename>
-            <filename>../../../../../../../../../Downloads/perso_run_test/perso_run0004.png</filename>
-            <filename>../../../../../../../../../Downloads/perso_run_test/perso_run0005.png</filename>
-            <filename>../../../../../../../../../Downloads/perso_run_test/perso_run0006.png</filename>
-            <filename>../../../../../../../../../Downloads/perso_run_test/perso_run0007.png</filename>
-            <filename>../../../../../../../../../Downloads/perso_run_test/perso_run0008.png</filename>
-            <filename>../../../../../../../../../Downloads/perso_run_test/perso_run0009.png</filename>
-            <filename>../../../../../../../../../Downloads/perso_run_test/perso_run0010.png</filename>
+            <filename>../../../../../../../../../Desktop/teleport00.png</filename>
+            <filename>../../../../../../../../../Desktop/teleport01.png</filename>
+            <filename>../../../../../../../../../Desktop/teleport02.png</filename>
+            <filename>../../../../../../../../../Desktop/teleport03.png</filename>
+            <filename>../../../../../../../../../Desktop/teleport04.png</filename>
+            <filename>../../../../../../../../../Desktop/teleport05.png</filename>
+            <filename>../../../../../../../../../Desktop/teleport06.png</filename>
+            <filename>../../../../../../../../../Desktop/teleport07.png</filename>
+            <filename>../../../../../../../../../Desktop/teleport08.png</filename>
+            <filename>../../../../../../../../../Desktop/teleport09.png</filename>
+            <filename>../../../../../../../../../Desktop/teleport10.png</filename>
+            <filename>../../../../../../../../../Desktop/teleport11.png</filename>
+            <filename>../../../../../../../../../Desktop/teleport12.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

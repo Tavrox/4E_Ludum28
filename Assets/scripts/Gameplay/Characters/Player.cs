@@ -148,14 +148,14 @@ public class Player : Character {
 		//		{
 		//			StartCoroutine("specialCircleCast");
 		//		}
-		if(Input.GetKeyDown("left shift")) {
+		/*if(Input.GetKeyDown("left shift")) {
 			moveVel = 1.75f * moveVel;
 			//footStepDelay = footStepDelay / 2f;
 		}
 		if(Input.GetKeyUp("left shift")) {
 			moveVel = moveVel / 1.75f;
 			//footStepDelay = footStepDelay * 2f;
-		}
+		}*/
 		//		if(Input.GetKey("left shift")) {
 		//			toSprint=true;
 		//		}
@@ -275,4 +275,7 @@ public class Player : Character {
 	//		//yield return new WaitForSeconds(soundInstru1.getLifeTime());
 	//		specialCast = false;
 	//	}
+	public void teleportTo(Vector3 pos) {
+		thisTransform.position = pos;
+	}
 }
