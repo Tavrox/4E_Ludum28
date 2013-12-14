@@ -2,13 +2,15 @@
 <objecttypes>
  <objecttype name="Leviers" color="#a40096"/>
  <objecttype name="Caisses" color="#a40002"/>
- <objecttype name="Interrupteurs" color="#a0a0a4"/>
- <objecttype name="Enemy_walker" color="#a0a0a4"/>
- <objecttype name="Enemy_patrol" color="#a0a0a4"/>
- <objecttype name="Enemy_turret" color="#a0a0a4"/>
- <objecttype name="Blob" color="#a0a0a4"/>
- <objecttype name="Keys" color="#ffd12b"/>
- <objecttype name="Doors" color="#8a3c3c"/>
- <objecttype name="TimedBtn" color="#a0a0a4"/>
- <objecttype name="SequencedBtn" color="#a0a0a4"/>
+ <objecttype name="Interrupteur" color="#262627"/>
+ <objecttype name="Enemy_walker" color="#74a40d"/>
+ <objecttype name="Patroler&amp;Points" color="#a4125d"/>
+ <objecttype name="Enemy_turret" color="#3fa400"/>
+ <objecttype name="Blob" color="#a40023"/>
+ <objecttype name="Key" color="#ffd12b"/>
+ <objecttype name="Door" color="#8a3c3c"/>
+ <objecttype name="TimedBtn" color="#2435a4"/>
+ <objecttype name="SequencedBtn" color="#a44a56"/>
+ <objecttype name="TeleportIn" color="#4ca461"/>
+ <objecttype name="TeleportOut" color="#3263a4"/>
 </objecttypes>

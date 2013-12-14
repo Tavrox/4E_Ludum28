@@ -5,19 +5,13 @@ public class Player : Character {
 	
 	[HideInInspector] public Vector3 position;
 	[HideInInspector] public Transform trans;
-	
-	public Skills skill_knife;
-	public Skills skill_axe;
-	public Skills skill_shield;
+
 	//	public Pebble instPebble;
 	//	public WaveCreator instFootWave,instInstruWave;
 	//	public GameObject instPebbleBar;
 	public OTSprite menu;
 	//	public float footStepDelay = 0.6f;
-	
-	[SerializeField] private Rect hp_display;
-	[SerializeField] private SoundSprite soundMan;
-	[SerializeField] private ModulatedSound mdSound;
+
 	//	private WaveCreator soundEmitt1, soundEmitt2, soundInstru1, soundInstru2,soundEmitt3;
 	//	private int cptWave=1, pebbleDirection = 1;
 	//	private bool blockCoroutine, first, toSprint, toWalk, specialCast, playerDirLeft;
@@ -39,6 +33,8 @@ public class Player : Character {
 		GameEventManager.GameUnpause += GameUnpause;
 		
 		spawnPos = thisTransform.position;
+
+		GameObject.Find("Frameworks/OT/View").GetComponent<OTView>().movementTarget = gameObject;
 		
 		//		soundEmitt1 = Instantiate(instFootWave) as WaveCreator;
 		//		soundEmitt2 = Instantiate(instFootWave) as WaveCreator;
