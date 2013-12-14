@@ -5,9 +5,10 @@ public class MenuUI : MonoBehaviour {
 	
 	public enum ListMenu
 	{
-		Notebook,
-		Trombinoscope,
-		CloseMenu,
+		Main,
+		ChooseLevel,
+		HighScores,
+		EndLevel
 	}
 	public ListMenu menu;
 	public static bool exists;
@@ -27,11 +28,7 @@ public class MenuUI : MonoBehaviour {
 	{
 		switch (menu)
 		{
-			case (ListMenu.CloseMenu) :
-				{
-					GameEventManager.TriggerGameUnpause();
-					break;
-				}
+
 		}
 	}
 	private void GameStart () 
@@ -49,19 +46,7 @@ public class MenuUI : MonoBehaviour {
 		{
 			switch (menu)
 			{
-				case (ListMenu.CloseMenu) :
-					{
-						
-						break;
-					}
-				case (ListMenu.Trombinoscope) :
-					{
-						break;
-					}
-				case (ListMenu.Notebook) :
-					{
-						break;
-					}
+
 			}
 		}
 		
@@ -70,20 +55,7 @@ public class MenuUI : MonoBehaviour {
 	{
 		switch (menu)
 		{
-			case (ListMenu.CloseMenu) :
-				{
-					
-					break;
-				}
-			case (ListMenu.Trombinoscope) :
-				{
 
-					break;
-				}
-			case (ListMenu.Notebook) :
-				{
-					break;
-				}
 		}
 	}
 	

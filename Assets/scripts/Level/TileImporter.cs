@@ -12,7 +12,7 @@ public class TileImporter : MonoBehaviour {
 	private int tileHeight;
 
 	private string url;
-	private int levelID;
+	public int levelID = 1;
 	private XmlDocument xmlDoc;
 	private XmlNodeList mapNodes;
 	private XmlNodeList tileNodes;
@@ -21,8 +21,7 @@ public class TileImporter : MonoBehaviour {
 	
 	public enum tileList
 	{
-		Rock,
-		Stone
+		Metal
 	};
 	public tileList tileToGet;
 
@@ -35,7 +34,6 @@ public class TileImporter : MonoBehaviour {
 	
 	private void initXML()
 	{
-		levelID = 1;
 		xmlDoc = new XmlDocument();
 		string url = "file:///" + Application.dataPath + "/"+"maps/" + levelID.ToString() + ".xml";
 		xmlDoc.Load(url);
@@ -88,33 +86,42 @@ public class TileImporter : MonoBehaviour {
 		XmlNode tilesetParams = tilesetNodes[1];
 		int _currWidth = 0;
 		int _currHeight = 0;
+		int _width = 0;
+		int _height = 0;
+		string namePrefab = "";
+		string nameCase = "";
 
 		foreach (XmlNode node in tileNodes)
 		{
 			foreach (XmlNode children in node.ChildNodes)
 			{
 				foreach (tileList _tile in Enum.GetValues(typeof(tileList)))
-				{
+				{					
+					int modVal = int.Parse(children.Attributes.GetNamedItem("gid").Value);
+					string stringVal = "";
+					if (modVal < 10)
+					{ stringVal = "0" + modVal.ToString(); }
+					else
+					{ stringVal = modVal.ToString(); }
+					namePrefab = "Tiles/" + _tile.ToString() + "/" + stringVal;
 
-					if (Resources.Load("Tiles/" + _tile.ToString() + "/" + children.Attributes.GetNamedItem("gid").Value) != null)
+					if (Resources.Load(namePrefab) != null)
 					{
-						if (children.Attributes.GetNamedItem("gid").Value == _currTile.ToString())
+						GameObject _instance = Instantiate(Resources.Load(namePrefab)) as GameObject;
+						_instance.transform.parent = GameObject.Find("Level/TilesLayout").transform;
+						_width = 50;
+						_height = 50;
+						if (_currWidth >= levelWidth)
 						{
-							GameObject _instance = Instantiate(Resources.Load("Tiles/" + _tile.ToString() + children.Attributes.GetNamedItem("gid").Value)) as GameObject;
-							Debug.Log(children.Attributes.GetNamedItem("gid").Value);
-							if (_currWidth == levelWidth)
-							{
-								_currWidth = 0;
-								_currHeight += tileHeight;
-							}
-							_instance.transform.position = new Vector3 (_currWidth, _currHeight, 0f);
-							_currWidth += tileWidth ;
-							print (_instance.transform.position);
+							_currWidth = 0;
+							_currHeight += tileHeight;
 						}
+						_instance.transform.position = new Vector3 (_currWidth * _width, _currHeight, 0f);
+						_currWidth += 1 ;
 					}
 					else
 					{
-						Debug.Log("The tile " + _tile.ToString() + " hasn't been found ! Fix that error NOW.PLZ.PLZ.");
+						Debug.Log("The tile " + "[Tiles/" + _tile.ToString() + "XX] hasn't been found ! Fix that error NOW.PLZ.PLZ.");
 					}
 				}
 				if (children.Attributes.GetNamedItem("gid").Value == "50" || 
