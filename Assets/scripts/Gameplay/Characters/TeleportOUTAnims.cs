@@ -9,9 +9,4 @@ public class TeleportOUTAnims : MonoBehaviour {
 	{
 		animSprite.Play("teleportOUT");
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }
