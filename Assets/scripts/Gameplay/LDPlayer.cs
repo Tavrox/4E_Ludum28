@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class WaveEmitter : MonoBehaviour {
+public class LDPlayer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

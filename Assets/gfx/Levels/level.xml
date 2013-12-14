@@ -7,7 +7,7 @@
             <key>border_bottom.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,0},{760,40}}</string>
+                <string>{{5,5},{760,40}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -20,7 +20,7 @@
             <key>border_left.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{760,0},{40,560}}</string>
+                <string>{{770,5},{40,560}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,7 +33,7 @@
             <key>border_right.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{800,0},{40,520}}</string>
+                <string>{{815,5},{40,520}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -46,7 +46,7 @@
             <key>border_top.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,560},{800,40}}</string>
+                <string>{{5,570},{800,40}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -59,7 +59,7 @@
             <key>cracking.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{800,560},{40,40}}</string>
+                <string>{{810,570},{40,40}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -72,7 +72,7 @@
             <key>grass.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,600},{40,40}}</string>
+                <string>{{5,615},{40,40}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -85,7 +85,7 @@
             <key>lavapool.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{40,600},{40,40}}</string>
+                <string>{{50,615},{40,40}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -98,7 +98,7 @@
             <key>wire.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{80,600},{40,40}}</string>
+                <string>{{95,615},{40,40}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -116,9 +116,9 @@
             <key>realTextureFileName</key>
             <string>level.png</string>
             <key>size</key>
-            <string>{840,640}</string>
+            <string>{860,660}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:48e1bbf70d9c5fa45301510a4b51a5e5:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:9a54e93ad7ca1f821d09f0d222d4e1e0:1/1$</string>
             <key>textureFileName</key>
             <string>level.png</string>
         </dict>
