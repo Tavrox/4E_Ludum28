@@ -18,14 +18,12 @@ public class TileImporter : MonoBehaviour {
 	private XmlNodeList tileNodes;
 	private XmlNodeList tilesetNodes;
 	private XmlNodeList itemNodes;
-
-	private Array
 	
 	public enum tileList
 	{
 		Rock,
 		Stone
-	}
+	};
 	public tileList tileToGet;
 
 	public enum objectList
