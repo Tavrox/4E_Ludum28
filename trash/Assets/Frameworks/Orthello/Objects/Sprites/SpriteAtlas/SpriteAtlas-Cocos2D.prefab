@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: SpriteAtlas-Cocos2D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1002 &100001
+EditorExtensionImpl:
+  serializedVersion: 6
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!1002 &400001
+EditorExtensionImpl:
+  serializedVersion: 6
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd220758bd0b8b4685199267909af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: gjrieh
+  _sheetSize: {x: 2048, y: 2048}
+  texture: {fileID: 2800000, guid: 21d2d82908904984f981e731eb8caba7, type: 3}
+  sizeTextures: []
+  generateSprites: 0
+  atlasData:
+  - name: bg1
+    position: {x: 1, y: 1}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 1342, y: 240}
+    frameSize: {x: 1342, y: 240}
+    metaData: []
+  - name: bg2
+    position: {x: 1, y: 242}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 1342, y: 240}
+    frameSize: {x: 1342, y: 240}
+    metaData: []
+  - name: bg3
+    position: {x: 1, y: 483}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 1342, y: 240}
+    frameSize: {x: 1342, y: 240}
+    metaData: []
+  - name: murs1
+    position: {x: 1, y: 724}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 1342, y: 240}
+    frameSize: {x: 1342, y: 240}
+    metaData: []
+  - name: murs2
+    position: {x: 1, y: 965}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 1342, y: 240}
+    frameSize: {x: 1342, y: 240}
+    metaData: []
+  - name: murs3
+    position: {x: 1, y: 1206}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 1342, y: 240}
+    frameSize: {x: 1342, y: 240}
+    metaData: []
+  offsetSizing: 1
+  metaType: 
+  metaData: []
+  _atlasDataFile: {fileID: 4900000, guid: 75b52c69325b04049a60503013905d94, type: 3}
+  reloadData: 0
+  bytesDataFile: 3551
+  id: 1
+--- !u!1002 &11400001
+EditorExtensionImpl:
+  serializedVersion: 6
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1
+--- !u!1002 &100100001
+EditorExtensionImpl:
+  serializedVersion: 6
