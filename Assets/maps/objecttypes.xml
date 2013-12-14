@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objecttypes>
+ <objecttype name="Leviers" color="#a40096"/>
+ <objecttype name="Caisses" color="#a40002"/>
+ <objecttype name="Interrupteurs" color="#a0a0a4"/>
+ <objecttype name="Enemy_walker" color="#a0a0a4"/>
+ <objecttype name="Enemy_patrol" color="#a0a0a4"/>
+ <objecttype name="Enemy_turret" color="#a0a0a4"/>
+ <objecttype name="Blob" color="#a0a0a4"/>
+ <objecttype name="Keys" color="#ffd12b"/>
+ <objecttype name="Doors" color="#8a3c3c"/>
+ <objecttype name="TimedBtn" color="#a0a0a4"/>
+ <objecttype name="SequencedBtn" color="#a0a0a4"/>
+</objecttypes>
