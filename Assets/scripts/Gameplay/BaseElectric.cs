@@ -18,7 +18,7 @@ public class BaseElectric : MonoBehaviour {
 	void Update () {
 	
 	}
-	private IEnumerator active() {
+	new private IEnumerator active() {
 		cpt++;
 		if(cpt % 2 == 0) {waitTime = activeTime;animSprite.Play("baseON");collider.enabled=true;}
 		else {waitTime = inactiveTime;animSprite.Play("baseDefault");collider.enabled=false;}

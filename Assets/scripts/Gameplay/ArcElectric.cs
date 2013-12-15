@@ -18,7 +18,7 @@ public class ArcElectric : MonoBehaviour {
 	void Update () {
 		
 	}
-	private IEnumerator active() {
+	new private IEnumerator active() {
 		cpt++;
 		if(cpt % 2 == 0) {waitTime = activeTime;animSprite.Play("arcON");collider.enabled=true;}
 		else {waitTime = inactiveTime;animSprite.Play("arcDefault");collider.enabled=false;}
