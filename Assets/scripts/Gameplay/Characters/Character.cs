@@ -54,15 +54,15 @@ public class Character : MonoBehaviour
 	protected Vector3 vectorMove;
 	private Vector3 mypos;
 	
-	[Range (0,1000)] 	public float 	moveVel = 400f;
-	[Range (0,300)] 	public float 	jumpVel = 300f;
-	[Range (0,300)] 	public float 	jump2Vel = 450f;
+	[Range (0,2000)] 	public float 	moveVel = 400f;
+	[Range (0,2000)] 	public float 	jumpVel = 300f;
+	[Range (0,2000)] 	public float 	jump2Vel = 450f;
 	[Range (1,2)] 	public int 		maxJumps = 1;
-	[Range (0,250)] public float 	fallVel = 180f;
+	[Range (0,2000)] public float 	fallVel = 180f;
 	
 	[SerializeField] private int jumps = 0;
-	[SerializeField] private float gravityY = 520f;
-	[SerializeField] private float maxVelY = 1000f;
+	[Range (0,2000)] public float gravityY = 520f;
+	[Range (0,2000)] public float maxVelY = 1000f;
 		
 	[SerializeField] private RaycastHit hitInfo;
 	[SerializeField] private float halfMyX;
