@@ -54,15 +54,15 @@ public class Character : MonoBehaviour
 	protected Vector3 vectorMove;
 	private Vector3 mypos;
 	
-	[Range (0,10)] 	public float 	moveVel = 4f;
-	[Range (0,30)] 	public float 	jumpVel = 16f;
-	[Range (0,30)] 	public float 	jump2Vel = 14f;
-	[Range (1,2)] 	public int 		maxJumps = 2;
-	[Range (0,25)] public float 	fallVel = 18f;
+	[Range (0,1000)] 	public float 	moveVel = 400f;
+	[Range (0,300)] 	public float 	jumpVel = 300f;
+	[Range (0,300)] 	public float 	jump2Vel = 450f;
+	[Range (1,2)] 	public int 		maxJumps = 1;
+	[Range (0,250)] public float 	fallVel = 180f;
 	
 	[SerializeField] private int jumps = 0;
-	[SerializeField] private float gravityY;
-	[SerializeField] private float maxVelY = 0f;
+	[SerializeField] private float gravityY = 520f;
+	[SerializeField] private float maxVelY = 1000f;
 		
 	[SerializeField] private RaycastHit hitInfo;
 	[SerializeField] private float halfMyX;
@@ -96,7 +96,7 @@ public class Character : MonoBehaviour
 	{
 		// wait for things to settle before applying gravity
 		yield return new WaitForSeconds(0.1f);
-		gravityY = 52f;
+		gravityY = 520f;
 	}
 	
 	// Update is called once per frame
@@ -261,7 +261,6 @@ public class Character : MonoBehaviour
 			blockedRight = true;
 			vectorMove.x = 0f;
 			thisTransform.position = new Vector3(hitInfo.point.x-(halfMyX-0.01f),thisTransform.position.y, 0f); // .01 less than collision width.
-			
 		}
 	}
 	
