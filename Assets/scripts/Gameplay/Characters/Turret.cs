@@ -13,6 +13,10 @@ public class Turret : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		StartCoroutine("waitB4Shoot");
+	}
+	private IEnumerator waitB4Shoot () {
+		yield return new WaitForSeconds(0.35f);
 		StartCoroutine("shoot");
 	}
 	private IEnumerator shoot () {
@@ -33,11 +37,8 @@ public class Turret : MonoBehaviour {
 				break;
 		}
 
-		instProj.transform.position = gameObject.transform.position;
+		instProj.transform.position = new Vector3(gameObject.transform.position.x,(gameObject.transform.position.y+gameObject.transform.localScale.y/2-0.1f),gameObject.transform.position.z-1);
+		instProj.posIni = instProj.transform.position;
 		StartCoroutine("shoot");
-	}
-	// Update is called once per frame
-	void Update () {
-	
 	}
 }

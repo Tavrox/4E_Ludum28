@@ -4,174 +4,161 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>teleport00.png</key>
+            <key>tp_01.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,0},{100,120}}</string>
+                <string>{{0,0},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{100,120}}</string>
+                <string>{{0,0},{50,100}}</string>
                 <key>sourceSize</key>
-                <string>{100,120}</string>
+                <string>{50,100}</string>
             </dict>
-            <key>teleport01.png</key>
+            <key>tp_02.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{100,0},{100,120}}</string>
+                <string>{{50,0},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{100,120}}</string>
+                <string>{{0,0},{50,100}}</string>
                 <key>sourceSize</key>
-                <string>{100,120}</string>
+                <string>{50,100}</string>
             </dict>
-            <key>teleport02.png</key>
+            <key>tp_03.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{200,0},{100,120}}</string>
+                <string>{{100,0},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{100,120}}</string>
+                <string>{{0,0},{50,100}}</string>
                 <key>sourceSize</key>
-                <string>{100,120}</string>
+                <string>{50,100}</string>
             </dict>
-            <key>teleport03.png</key>
+            <key>tp_04.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{300,0},{100,120}}</string>
+                <string>{{150,0},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{100,120}}</string>
+                <string>{{0,0},{50,100}}</string>
                 <key>sourceSize</key>
-                <string>{100,120}</string>
+                <string>{50,100}</string>
             </dict>
-            <key>teleport04.png</key>
+            <key>tp_05.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{400,0},{100,120}}</string>
+                <string>{{200,0},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{100,120}}</string>
+                <string>{{0,0},{50,100}}</string>
                 <key>sourceSize</key>
-                <string>{100,120}</string>
+                <string>{50,100}</string>
             </dict>
-            <key>teleport05.png</key>
+            <key>tp_06.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,120},{100,120}}</string>
+                <string>{{0,100},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{100,120}}</string>
+                <string>{{0,0},{50,100}}</string>
                 <key>sourceSize</key>
-                <string>{100,120}</string>
+                <string>{50,100}</string>
             </dict>
-            <key>teleport06.png</key>
+            <key>tp_07.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{100,120},{100,120}}</string>
+                <string>{{50,100},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{100,120}}</string>
+                <string>{{0,0},{50,100}}</string>
                 <key>sourceSize</key>
-                <string>{100,120}</string>
+                <string>{50,100}</string>
             </dict>
-            <key>teleport07.png</key>
+            <key>tp_08.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{200,120},{100,120}}</string>
+                <string>{{100,100},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{100,120}}</string>
+                <string>{{0,0},{50,100}}</string>
                 <key>sourceSize</key>
-                <string>{100,120}</string>
+                <string>{50,100}</string>
             </dict>
-            <key>teleport08.png</key>
+            <key>tp_out_01.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{300,120},{100,120}}</string>
+                <string>{{150,100},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{100,120}}</string>
+                <string>{{0,0},{50,100}}</string>
                 <key>sourceSize</key>
-                <string>{100,120}</string>
+                <string>{50,100}</string>
             </dict>
-            <key>teleport09.png</key>
+            <key>tp_out_02.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{400,120},{100,120}}</string>
+                <string>{{200,100},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{100,120}}</string>
+                <string>{{0,0},{50,100}}</string>
                 <key>sourceSize</key>
-                <string>{100,120}</string>
+                <string>{50,100}</string>
             </dict>
-            <key>teleport10.png</key>
+            <key>tp_out_03.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,240},{100,120}}</string>
+                <string>{{0,200},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{100,120}}</string>
+                <string>{{0,0},{50,100}}</string>
                 <key>sourceSize</key>
-                <string>{100,120}</string>
+                <string>{50,100}</string>
             </dict>
-            <key>teleport11.png</key>
+            <key>tp_out_04.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{100,240},{100,120}}</string>
+                <string>{{50,200},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{100,120}}</string>
+                <string>{{0,0},{50,100}}</string>
                 <key>sourceSize</key>
-                <string>{100,120}</string>
-            </dict>
-            <key>teleport12.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{200,240},{100,120}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{100,120}}</string>
-                <key>sourceSize</key>
-                <string>{100,120}</string>
+                <string>{50,100}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -181,9 +168,9 @@
             <key>realTextureFileName</key>
             <string>teleport.png</string>
             <key>size</key>
-            <string>{512,512}</string>
+            <string>{256,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:f78293db903c3767e8257e0603f8801c:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:9d0ccdd6f690a6503dbd18919010b4b7:1/1$</string>
             <key>textureFileName</key>
             <string>teleport.png</string>
         </dict>

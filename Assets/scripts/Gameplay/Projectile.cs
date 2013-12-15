@@ -4,8 +4,10 @@ using System.Collections;
 public class Projectile : MonoBehaviour {
 
 	public float ProjectileSpeed;
+	public OTAnimatingSprite animSprite;
 	//public int dmg;
 	private Transform myTransform;
+	public Vector3 posIni;
 
 	//[HideInInspector] public Player player;
 	
@@ -14,6 +16,7 @@ public class Projectile : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		myTransform = transform;
+		animSprite.Play("default");
 //		player = GameObject.FindWithTag("Player").GetComponent<PlayerPop>();
 //		if(player.shootLeft == true) direction = Vector3.left;
 //		else direction = Vector3.right;
@@ -23,7 +26,7 @@ public class Projectile : MonoBehaviour {
 	void Update () {
 		myTransform.Translate(direction * ProjectileSpeed * Time.deltaTime);
 		
-		if(myTransform.position.x > (myTransform.position.x + 15f) || myTransform.position.x < (myTransform.position.x - 15f)) {
+		if(myTransform.position.x > (posIni.x + 15f) || myTransform.position.x < (posIni.x - 15f)) {
 			Destroy(gameObject);
 		}
 	}

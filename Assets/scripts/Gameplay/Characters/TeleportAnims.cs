@@ -25,6 +25,7 @@ public class TeleportAnims : MonoBehaviour
 	private Character _character;
 	private Player _player;
 	public Transform teleportDestination;
+	public int delayB4Telep = 1;
 	
 	private bool animPlaying = false, playerCollision;
 	
@@ -49,14 +50,16 @@ public class TeleportAnims : MonoBehaviour
 //		Fall();
 		//		Paused();
 	}
-	private void OnTriggerEnter(Collider other) 
+	private void OnTriggerStay(Collider other) 
 	{
 		if(other.gameObject.CompareTag("Player")) 
 		{
-			animSprite.Play("teleport");
-			//_player.enabled = false;
-			StartCoroutine("stopPlayer");
-			StartCoroutine("teleportTo",teleportDestination);
+			if (Input.GetKeyDown(KeyCode.F)) {
+				animSprite.Play("teleport");
+				//_player.enabled = false;
+				StartCoroutine("stopPlayer");
+				StartCoroutine("teleportTo",teleportDestination);
+			}
 		}
 	}
 	private IEnumerator stopPlayer () {
@@ -65,7 +68,7 @@ public class TeleportAnims : MonoBehaviour
 		_player.isLeft = _player.isRight = false;
 	}
 	private IEnumerator teleportTo(Transform destination) {
-		yield return new WaitForSeconds(2f);
+		yield return new WaitForSeconds(delayB4Telep);
 		//_player.position = new Vector3(0f,0f,0f);//destination.position;
 		_player.teleportTo(destination.position);
 		_player.enabled = true;

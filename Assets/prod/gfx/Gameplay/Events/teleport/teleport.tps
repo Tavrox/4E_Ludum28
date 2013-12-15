@@ -148,19 +148,18 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>../../../../../../../../../Desktop/teleport00.png</filename>
-            <filename>../../../../../../../../../Desktop/teleport01.png</filename>
-            <filename>../../../../../../../../../Desktop/teleport02.png</filename>
-            <filename>../../../../../../../../../Desktop/teleport03.png</filename>
-            <filename>../../../../../../../../../Desktop/teleport04.png</filename>
-            <filename>../../../../../../../../../Desktop/teleport05.png</filename>
-            <filename>../../../../../../../../../Desktop/teleport06.png</filename>
-            <filename>../../../../../../../../../Desktop/teleport07.png</filename>
-            <filename>../../../../../../../../../Desktop/teleport08.png</filename>
-            <filename>../../../../../../../../../Desktop/teleport09.png</filename>
-            <filename>../../../../../../../../../Desktop/teleport10.png</filename>
-            <filename>../../../../../../../../../Desktop/teleport11.png</filename>
-            <filename>../../../../../../../../../Desktop/teleport12.png</filename>
+            <filename>../../../Levels/Adrian/tp_01.png</filename>
+            <filename>../../../Levels/Adrian/tp_02.png</filename>
+            <filename>../../../Levels/Adrian/tp_03.png</filename>
+            <filename>../../../Levels/Adrian/tp_04.png</filename>
+            <filename>../../../Levels/Adrian/tp_05.png</filename>
+            <filename>../../../Levels/Adrian/tp_06.png</filename>
+            <filename>../../../Levels/Adrian/tp_07.png</filename>
+            <filename>../../../Levels/Adrian/tp_08.png</filename>
+            <filename>../../../Levels/Adrian/tp_out_01.png</filename>
+            <filename>../../../Levels/Adrian/tp_out_02.png</filename>
+            <filename>../../../Levels/Adrian/tp_out_03.png</filename>
+            <filename>../../../Levels/Adrian/tp_out_04.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
