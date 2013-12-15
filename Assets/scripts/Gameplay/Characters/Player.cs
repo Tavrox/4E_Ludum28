@@ -35,19 +35,6 @@ public class Player : Character {
 		spawnPos = thisTransform.position;
 
 		GameObject.Find("Frameworks/OT/View").GetComponent<OTView>().movementTarget = gameObject;
-		
-		//		soundEmitt1 = Instantiate(instFootWave) as WaveCreator;
-		//		soundEmitt2 = Instantiate(instFootWave) as WaveCreator;
-		//		soundEmitt3 = Instantiate(instFootWave) as WaveCreator;
-		//		soundInstru1 = Instantiate(instInstruWave) as WaveCreator;
-		//		soundInstru2 = Instantiate(instInstruWave) as WaveCreator;
-		//		soundEmitt1.createCircle(thisTransform);
-		//		soundEmitt2.createCircle(thisTransform);
-		//		soundEmitt3.createCircle(thisTransform);
-		//		soundInstru1.createCircle(thisTransform);soundInstru1.specialCircle();
-		//		soundInstru2.createCircle(thisTransform);soundInstru2.specialCircle();
-		//		
-		//		pebbleBar = Instantiate(instPebbleBar) as GameObject;
 	}
 	
 	// Update is called once per frame
@@ -103,75 +90,7 @@ public class Player : Character {
 		isCrounch = false;
 		
 		movingDir = moving.None;
-		
-		// keyboard input
-		//		if (Input.GetKeyDown(KeyCode.F))
-		//		{
-		//			if(!pebble1) {
-		//				powerPebble = 0f;
-		//				pebbleBar.transform.localScale = new Vector3(0f,1f,1f);
-		//			}
-		//		}
-		//		if (Input.GetKey(KeyCode.F))
-		//		{
-		//			if(powerPebble <=10 && !pebble1) {
-		//				powerPebble += 0.2f;
-		//				pebbleBar.transform.localScale = new Vector3(powerPebble,1f,1f);
-		//				pebbleBar.transform.position = new Vector3((powerPebble-12f)/2,5.5f,-30f);
-		//			}
-		//		}
-		//		if (Input.GetKeyUp(KeyCode.F))
-		//		{
-		//			if(!pebble1) {
-		//				pebble1 = Instantiate(instPebble) as Pebble;
-		//				pebble1.setPosition((transform.position.x-transform.localScale.x/2),transform.position.y, -6f);
-		//				pebbleDirection = (facingDir == facing.Right) ? 1 : -1;
-		//				pebble1.throwPebble(powerPebble, pebbleDirection);
-		//				powerPebble = 0f;
-		//				pebbleBar.transform.localScale = new Vector3(powerPebble,1f,1f);
-		//				pebbleBar.transform.position = new Vector3((powerPebble-12f)/2,5.5f,-30f);
-		//			}
-		//		}
-		//		if (Input.GetKeyDown(KeyCode.Y))
-		//		{
-		//			soundInstru2.destroyCircle();
-		//		}
-		//		if (Input.GetKeyDown(KeyCode.T))
-		//		{
-		//			soundInstru1.destroyCircle();
-		//		}
-		//		if (Input.GetKeyDown(KeyCode.R)  && grounded && !specialCast)
-		//		{
-		//			StartCoroutine("specialCircleCast");
-		//		}
-		/*if(Input.GetKeyDown("left shift")) {
-			moveVel = 1.75f * moveVel;
-			//footStepDelay = footStepDelay / 2f;
-		}
-		if(Input.GetKeyUp("left shift")) {
-			moveVel = moveVel / 1.75f;
-			//footStepDelay = footStepDelay * 2f;
-		}*/
-		//		if(Input.GetKey("left shift")) {
-		//			toSprint=true;
-		//		}
-		//		else if(!Input.GetKey("left shift")) {
-		//			toWalk=true;
-		//		}
-		//		/*if(!blockCoroutine) {*/
-		//		if(toSprint) 		{
-		//			if(soundEmitt1.getAlpha() <= 0f) soundEmitt1.circleWalkToSprint();
-		//			if(soundEmitt2.getAlpha() <= 0f) soundEmitt2.circleWalkToSprint();
-		//			if(soundEmitt3.getAlpha() <= 0f) soundEmitt3.circleWalkToSprint();
-		//			toSprint=false;
-		//		}
-		//		else if (toWalk) {
-		//			if(soundEmitt1.getAlpha() <= 0f) soundEmitt1.circleSprintToWalk();
-		//			if(soundEmitt2.getAlpha() <= 0f) soundEmitt2.circleSprintToWalk();
-		//			if(soundEmitt3.getAlpha() <= 0f) soundEmitt3.circleSprintToWalk();
-		//			toWalk=false;
-		//		}
-		/*}*/
+
 		if(Input.GetKey("left") /*&& !specialCast*/) 
 		{ 
 			isLeft = true;
@@ -227,50 +146,7 @@ public class Player : Character {
 			}
 		}
 	}
-	//	private void offsetCircles () {
-	//		soundEmitt1.setCharacterMoveOffset(vectorFixed.x);
-	//		soundEmitt2.setCharacterMoveOffset(vectorFixed.x);
-	//		soundEmitt3.setCharacterMoveOffset(vectorFixed.x);
-	//	}
-	//	IEnumerator waitB4FootStep()
-	//	{
-	//		yield return new WaitForSeconds(0.1f);
-	//		if(!blockCoroutine && grounded) StartCoroutine("footStep");
-	//	}
-	//	IEnumerator footStep()
-	//	{
-	//		blockCoroutine =true;
-	//		
-	//		/*if(Input.GetKeyDown("left shift")) {
-	////			moveVel = 2 * moveVel;
-	////			footStepDelay = footStepDelay / 2;
-	//			soundEmitt1.circleWalkToSprint();
-	//			soundEmitt2.circleWalkToSprint();
-	//		}
-	//		if(Input.GetKeyUp("left shift")) {
-	////			moveVel = moveVel / 2;
-	////			footStepDelay = footStepDelay * 2;
-	//			soundEmitt1.circleSprintToWalk();
-	//			soundEmitt2.circleSprintToWalk();
-	//		}*/
-	//		playerDirLeft = (facingDir == facing.Right) ? false : true;
-	//		if(cptWave == 1) {cptWave++;soundEmitt1.resetCircle(transform.localScale.x/1.5f,playerDirLeft, true);}
-	//		else if (cptWave == 2) {cptWave++;soundEmitt2.resetCircle(transform.localScale.x/1.5f,playerDirLeft, true);}
-	//		else if (cptWave == 3) {cptWave=1;soundEmitt3.resetCircle(transform.localScale.x/1.5f,playerDirLeft, true);}
-	//		yield return new WaitForSeconds(footStepDelay);
-	//		
-	//		blockCoroutine = false;
-	//	}
-	//	IEnumerator specialCircleCast()
-	//	{
-	//		specialCast = true;
-	//		yield return new WaitForSeconds(1f);
-	//		
-	//		if(first) {first=!first;soundInstru1.resetCircle();}
-	//		else {first=!first;soundInstru2.resetCircle();}
-	//		//yield return new WaitForSeconds(soundInstru1.getLifeTime());
-	//		specialCast = false;
-	//	}
+
 	public void teleportTo(Vector3 pos) {
 		thisTransform.position = pos;
 	}
