@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml;
 using System;
+using UnityEditor;
 
 public class TileImporter : MonoBehaviour {
 	
@@ -18,7 +19,8 @@ public class TileImporter : MonoBehaviour {
 	private XmlNodeList tileNodes;
 	private XmlNodeList tilesetNodes;
 	private XmlNodeList itemNodes;
-	
+
+	 
 	public enum tileList
 	{
 		Metal,
@@ -41,9 +43,33 @@ public class TileImporter : MonoBehaviour {
 		SequencedBtn,
 		TeleportIn,
 		TeleportOut,
-		TrapKill
+		TrapKill,
+		ColliBox
 	};
 	public objectList obj;
+
+	public List<List<GameObject>> listTiles;
+
+	void Start()
+	{
+		activateTiles();
+	}
+
+
+	private void activateTiles()
+	{
+		if (listTiles != null)
+		{
+			foreach (List<GameObject> _list in listTiles)
+			{
+				_list[0].SetActive(true);
+			}
+		}
+		else 
+		{
+			print ("lists are null");
+		}
+	}
 	
 	private void initXML()
 	{
@@ -52,6 +78,14 @@ public class TileImporter : MonoBehaviour {
 		xmlDoc.Load(url);
 		Debug.Log("Xml successfully loaded" + xmlDoc);
 		initTilesets();
+	}
+
+	public void OnInspectorGUI()
+	{
+		if (GUILayout.Button("ClearMetal"))
+		{
+			Debug.Log("omg");
+		}
 	}
 
 	private void initTilesets()
@@ -69,23 +103,38 @@ public class TileImporter : MonoBehaviour {
 		Debug.Log("Setupped Tiles [TW:"+tileWidth+"][TH:"+tileHeight+"]");
 	}
 
-	private void affectTiles()
+	[ContextMenu ("Clear Tiles")]
+	private void clearTiles()
 	{
+		if (listTiles != null)
+		{
+			foreach (List<GameObject> _list in listTiles)
+			{
+				foreach (GameObject _tiles in _list)
+				{
+					DestroyImmediate(_tiles.gameObject);
+				}
+			}
+			listTiles.Clear();
+		}
+	}
+
+	[ContextMenu ("Refresh Tiles")]
+	private void refreshTiles()
+	{
+		clearTiles();
+		getTiles();
 
 	}
 
-	private void affectObjects()
-	{
-
-	}
 	[ContextMenu ("Show Parameters")]
 	private void showParameters()
 	{
 		initXML();
 		tilesetNodes = xmlDoc.SelectNodes("map/tileset");
 		XmlNode tilesetParams = tilesetNodes.Item(1);
-		print (tilesetParams);
-		print (tilesetNodes);
+		Debug.Log (tilesetParams);
+		Debug.Log (tilesetNodes);
 	}
 	
 	[ContextMenu ("Get Tiles")]
@@ -104,12 +153,20 @@ public class TileImporter : MonoBehaviour {
 		int _height = 0;
 		string namePrefab = "";
 		string nameCase = "";
+		listTiles = new List<List<GameObject>>();
 		
 		foreach (XmlNode node in tileNodes)
 		{
 			if (node.Attributes.GetNamedItem("name").Value == _currTile.ToString())
 			{
-				print ("Enter : " + _currTile.ToString());
+				Debug.Log ("Enter : " + _currTile.ToString());
+				GameObject _container = new GameObject(_currTile.ToString());
+				_container.transform.parent = GameObject.Find("Level/TilesLayout").transform;
+
+				List<GameObject> _GameObjectsList = new List<GameObject>();
+				_GameObjectsList.Add(_container);
+				listTiles.Add(_GameObjectsList);
+
 				foreach (XmlNode child in node.ChildNodes)
 				{
 					foreach (XmlNode children in child.ChildNodes)
@@ -121,11 +178,10 @@ public class TileImporter : MonoBehaviour {
 						else
 						{ stringVal = modVal.ToString(); }
 						namePrefab = "Tiles/" + _currTile.ToString() + "/" + stringVal;
-						print (stringVal);
 
 						if (_currWidth >= levelWidth * tileWidth)
 						{
-							_currWidth = 0;
+							_currWidth = -0;
 							_currHeight -= tileHeight;
 						}
 						_currWidth += tileWidth;
@@ -133,9 +189,9 @@ public class TileImporter : MonoBehaviour {
 						if (Resources.Load(namePrefab) != null)
 						{
 							GameObject _instance = Instantiate(Resources.Load(namePrefab)) as GameObject;
-							_instance.transform.parent = GameObject.Find("Level/TilesLayout/" + _currTile.ToString()).transform;
+							_instance.transform.parent = _container.transform ;
 							_instance.transform.position = new Vector3 (_currWidth, _currHeight, _currDepth);
-							Debug.Log("The tile " + namePrefab+ "is now out in the blue.");
+							_GameObjectsList.Add(_instance);
 						}
 						else
 						{
@@ -165,17 +221,19 @@ public class TileImporter : MonoBehaviour {
 			{
 				foreach (objectList _obj in Enum.GetValues(typeof(objectList)))
 				{
-					Debug.Log(_obj.ToString());
-					Debug.Log("Objects/" + children.Attributes.GetNamedItem("type").Value);
 					if (Resources.Load("Objects/" + _obj.ToString()) != null)
 					{
 						if (children.Attributes.GetNamedItem("type").Value == _obj.ToString())
 						{
 							GameObject _instance = Instantiate(Resources.Load("Objects/" + children.Attributes.GetNamedItem("type").Value)) as GameObject;
-							_instance.transform.position = new Vector3 (float.Parse(children.Attributes.GetNamedItem("x").Value), float.Parse(children.Attributes.GetNamedItem("y").Value), -5f);
+							_instance.transform.position = new Vector3 (float.Parse(children.Attributes.GetNamedItem("x").Value) + 50, float.Parse(children.Attributes.GetNamedItem("y").Value) * -1, -5f);
 							_instance.name = children.Attributes.GetNamedItem("name").Value;
 							_instance.transform.parent = GameObject.Find("Level/Gameplay").transform;
-							Debug.Log("Created a " + children.Attributes.GetNamedItem("type").Value + "at position(X" + _instance.transform.position.x + "/Y" +_instance.transform.position.y+")");
+							Debug.Log("Created a " + children.Attributes.GetNamedItem("type").Value + " at position (X" + _instance.transform.position.x + "/Y" +_instance.transform.position.y+")");
+						}
+						else
+						{
+							print ("didnt find object");
 						}
 					}
 					else 

@@ -14,4 +14,5 @@
  <objecttype name="TeleportIn" color="#4ca461"/>
  <objecttype name="TeleportOut" color="#3263a4"/>
  <objecttype name="TrapKill" color="#000000"/>
+ <objecttype name="ColliBox" color="#a0a0a4"/>
 </objecttypes>
