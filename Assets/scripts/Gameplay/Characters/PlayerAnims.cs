@@ -24,6 +24,7 @@ public class PlayerAnims : MonoBehaviour
 	private animDef currentAnim;
 	private Character _character;
 	private Player _player;
+	private bool stopped;
 	
 	private bool animPlaying = false;
 	
@@ -35,8 +36,9 @@ public class PlayerAnims : MonoBehaviour
 	}
 	void Update() 
 	{
-		animSprite.looping = true;
 		// Order of action matters, they need to have priorities. //
+		if(animSprite.frameIndex == 2 && !stopped) {stopped=true;animSprite.Stop();StartCoroutine("waitB4Restart",1f);}
+		if(animSprite.frameIndex == 4 && !stopped) {stopped=true;animSprite.Stop();StartCoroutine("waitB4Restart",1f);}
 		Run();
 		Walk();
 		Stand();
@@ -46,6 +48,13 @@ public class PlayerAnims : MonoBehaviour
 		Hurt();
 		Fall();
 		Paused();
+		if(_character.grounded) animSprite.looping = true;
+	}
+	private IEnumerator waitB4Restart (float delayRestart) {
+		yield return new WaitForSeconds(delayRestart);
+		//print ("attendu");
+		stopped = false;
+		animSprite.Play(animSprite.frameIndex+1);
 	}
 	private void Run()
 	{
@@ -91,16 +100,19 @@ public class PlayerAnims : MonoBehaviour
 	}
 	private void Jump()
 	{
+		animSprite.looping = false;
 		if(_character.grounded == false && currentAnim != animDef.FallLeft && _character.facingDir == Character.facing.Left)
 		{
 			currentAnim = animDef.FallLeft;
 			animSprite.Play("jump"); // fall left
+			//print (_character.falling);
 			InvertSprite();
 		}
 		if(_character.grounded == false && currentAnim != animDef.FallRight && _character.facingDir == Character.facing.Right)
 		{
 			currentAnim = animDef.FallRight;
 			animSprite.Play("jump"); // fall right
+			//print (_character.falling);
 			NormalScaleSprite();
 		}
 	}

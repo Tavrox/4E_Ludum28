@@ -33,6 +33,7 @@ public class Character : MonoBehaviour
 	[HideInInspector] public bool isPass;
 	
 	[HideInInspector] public bool jumping = false;
+	[HideInInspector] public bool falling = false;
 	[HideInInspector] public bool grounded = false;
 	[HideInInspector] public bool passingPlatform;
 	[HideInInspector] public bool onPlatform;
@@ -90,6 +91,7 @@ public class Character : MonoBehaviour
 		halfMyX = GetComponentInChildren<Transform>().GetComponentInChildren<OTAnimatingSprite>().size.x * 0.5f;
 		halfMyY = GetComponentInChildren<Transform>().GetComponentInChildren<OTAnimatingSprite>().size.y * 0.5f + 0.2f;
 		StartCoroutine(StartGravity());
+		mypos = new Vector3(thisTransform.position.x,thisTransform.position.y,thisTransform.position.z);
 	}
 	
 	IEnumerator StartGravity()
@@ -102,9 +104,12 @@ public class Character : MonoBehaviour
 	// Update is called once per frame
 	public virtual void UpdateMovement() 
 	{
+		
+		if(thisTransform.position.y < mypos.x) falling = true;
+		else falling = false;
 
 		mypos = new Vector3(thisTransform.position.x,thisTransform.position.y,thisTransform.position.z);
-		
+
 		if(alive == false) return;
 		
 		vectorMove.x = 0;

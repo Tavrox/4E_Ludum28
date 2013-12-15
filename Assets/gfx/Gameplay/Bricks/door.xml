@@ -20,7 +20,7 @@
             <key>door01.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{30,0},{30,120}}</string>
+                <string>{{31,0},{30,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,7 +33,7 @@
             <key>door02.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{60,0},{30,120}}</string>
+                <string>{{62,0},{30,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -46,7 +46,7 @@
             <key>door03.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{90,0},{30,120}}</string>
+                <string>{{93,0},{30,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -59,7 +59,7 @@
             <key>door04.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{120,0},{30,120}}</string>
+                <string>{{124,0},{30,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -72,7 +72,7 @@
             <key>door05.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{150,0},{30,120}}</string>
+                <string>{{155,0},{30,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -85,7 +85,7 @@
             <key>door06.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{180,0},{30,120}}</string>
+                <string>{{186,0},{30,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -98,7 +98,7 @@
             <key>door07.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{210,0},{30,120}}</string>
+                <string>{{217,0},{30,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -111,7 +111,7 @@
             <key>door08.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,120},{30,120}}</string>
+                <string>{{0,121},{30,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -131,7 +131,7 @@
             <key>size</key>
             <string>{256,256}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:1249b76c2722470dd604c9d01d96e14c:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:b261e597959b6937e34078e1aa6c6fa2:1/1$</string>
             <key>textureFileName</key>
             <string>door.png</string>
         </dict>

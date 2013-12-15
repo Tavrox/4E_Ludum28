@@ -148,16 +148,26 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>../../../../../../../../../Downloads/perso_run_test/perso_run0001.png</filename>
-            <filename>../../../../../../../../../Downloads/perso_run_test/perso_run0002.png</filename>
-            <filename>../../../../../../../../../Downloads/perso_run_test/perso_run0003.png</filename>
-            <filename>../../../../../../../../../Downloads/perso_run_test/perso_run0004.png</filename>
-            <filename>../../../../../../../../../Downloads/perso_run_test/perso_run0005.png</filename>
-            <filename>../../../../../../../../../Downloads/perso_run_test/perso_run0006.png</filename>
-            <filename>../../../../../../../../../Downloads/perso_run_test/perso_run0007.png</filename>
-            <filename>../../../../../../../../../Downloads/perso_run_test/perso_run0008.png</filename>
-            <filename>../../../../../../../../../Downloads/perso_run_test/perso_run0009.png</filename>
-            <filename>../../../../../../../../../Downloads/perso_run_test/perso_run0010.png</filename>
+            <filename>perso_idle0001.png</filename>
+            <filename>perso_idle0002.png</filename>
+            <filename>perso_idle0003.png</filename>
+            <filename>perso_idle0004.png</filename>
+            <filename>perso_idle0005.png</filename>
+            <filename>perso_jump0001.png</filename>
+            <filename>perso_jump0002.png</filename>
+            <filename>perso_jump0003.png</filename>
+            <filename>perso_jump0004.png</filename>
+            <filename>perso_jump0005.png</filename>
+            <filename>perso_run0001.png</filename>
+            <filename>perso_run0002.png</filename>
+            <filename>perso_run0003.png</filename>
+            <filename>perso_run0004.png</filename>
+            <filename>perso_run0005.png</filename>
+            <filename>perso_run0006.png</filename>
+            <filename>perso_run0007.png</filename>
+            <filename>perso_run0008.png</filename>
+            <filename>perso_run0009.png</filename>
+            <filename>perso_run0010.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

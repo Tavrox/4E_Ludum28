@@ -1,29 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Lever : MonoBehaviour {
 	
 	public OTAnimatingSprite animSprite;
-	public TriggeredDoor linkedDoor;
+	public List<TriggeredDoor> doors = new List<TriggeredDoor>();
 
 	void OnTriggerStay(Collider other)
 	{
 		if (other.gameObject.CompareTag("Player"))
 		{
-			if (Input.GetKey(KeyCode.F))
+			if (Input.GetKeyDown(KeyCode.F))
 			{
 				triggerLever();
 			}
 		}
 		
 	}
-	
 	void triggerLever()
 	{
-		//		animSprite.Play("trigger");
-		//		ScaleMode = new Vector3(-1,0,0);
-		if(linkedDoor.isLocked) {animSprite.Play("unlock");linkedDoor.Unlock();}
-		else {animSprite.Play("lock");linkedDoor.Lock();}
-		
+		foreach (TriggeredDoor door in doors) {
+			if(door.isLocked) {animSprite.Play("unlock");door.Unlock();}
+			else {animSprite.Play("lock");door.Lock();}
+		}
 	}
 }

@@ -4,7 +4,7 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>perso_run0001.png</key>
+            <key>perso_idle0001.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{0,0},{100,120}}</string>
@@ -17,7 +17,7 @@
                 <key>sourceSize</key>
                 <string>{100,120}</string>
             </dict>
-            <key>perso_run0002.png</key>
+            <key>perso_idle0002.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{100,0},{100,120}}</string>
@@ -30,7 +30,7 @@
                 <key>sourceSize</key>
                 <string>{100,120}</string>
             </dict>
-            <key>perso_run0003.png</key>
+            <key>perso_idle0003.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{200,0},{100,120}}</string>
@@ -43,7 +43,7 @@
                 <key>sourceSize</key>
                 <string>{100,120}</string>
             </dict>
-            <key>perso_run0004.png</key>
+            <key>perso_idle0004.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{300,0},{100,120}}</string>
@@ -56,7 +56,7 @@
                 <key>sourceSize</key>
                 <string>{100,120}</string>
             </dict>
-            <key>perso_run0005.png</key>
+            <key>perso_idle0005.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{400,0},{100,120}}</string>
@@ -69,7 +69,7 @@
                 <key>sourceSize</key>
                 <string>{100,120}</string>
             </dict>
-            <key>perso_run0006.png</key>
+            <key>perso_jump0001.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{0,120},{100,120}}</string>
@@ -82,7 +82,7 @@
                 <key>sourceSize</key>
                 <string>{100,120}</string>
             </dict>
-            <key>perso_run0007.png</key>
+            <key>perso_jump0002.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{100,120},{100,120}}</string>
@@ -95,7 +95,7 @@
                 <key>sourceSize</key>
                 <string>{100,120}</string>
             </dict>
-            <key>perso_run0008.png</key>
+            <key>perso_jump0003.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{200,120},{100,120}}</string>
@@ -108,7 +108,7 @@
                 <key>sourceSize</key>
                 <string>{100,120}</string>
             </dict>
-            <key>perso_run0009.png</key>
+            <key>perso_jump0004.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{300,120},{100,120}}</string>
@@ -121,10 +121,140 @@
                 <key>sourceSize</key>
                 <string>{100,120}</string>
             </dict>
-            <key>perso_run0010.png</key>
+            <key>perso_jump0005.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{400,120},{100,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,120}}</string>
+                <key>sourceSize</key>
+                <string>{100,120}</string>
+            </dict>
+            <key>perso_run0001.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,240},{100,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,120}}</string>
+                <key>sourceSize</key>
+                <string>{100,120}</string>
+            </dict>
+            <key>perso_run0002.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{100,240},{100,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,120}}</string>
+                <key>sourceSize</key>
+                <string>{100,120}</string>
+            </dict>
+            <key>perso_run0003.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{200,240},{100,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,120}}</string>
+                <key>sourceSize</key>
+                <string>{100,120}</string>
+            </dict>
+            <key>perso_run0004.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{300,240},{100,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,120}}</string>
+                <key>sourceSize</key>
+                <string>{100,120}</string>
+            </dict>
+            <key>perso_run0005.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{400,240},{100,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,120}}</string>
+                <key>sourceSize</key>
+                <string>{100,120}</string>
+            </dict>
+            <key>perso_run0006.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,360},{100,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,120}}</string>
+                <key>sourceSize</key>
+                <string>{100,120}</string>
+            </dict>
+            <key>perso_run0007.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{100,360},{100,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,120}}</string>
+                <key>sourceSize</key>
+                <string>{100,120}</string>
+            </dict>
+            <key>perso_run0008.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{200,360},{100,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,120}}</string>
+                <key>sourceSize</key>
+                <string>{100,120}</string>
+            </dict>
+            <key>perso_run0009.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{300,360},{100,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,120}}</string>
+                <key>sourceSize</key>
+                <string>{100,120}</string>
+            </dict>
+            <key>perso_run0010.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{400,360},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -142,9 +272,9 @@
             <key>realTextureFileName</key>
             <string>player.png</string>
             <key>size</key>
-            <string>{512,256}</string>
+            <string>{512,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:ee730c62935c4782ccc174d0c89c7d9d:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:dbac842291d3fdf2669ea9333ec60999:1/1$</string>
             <key>textureFileName</key>
             <string>player.png</string>
         </dict>
