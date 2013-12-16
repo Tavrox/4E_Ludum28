@@ -5,6 +5,8 @@ public class EndDoor : MonoBehaviour {
 
 	public OTSprite sprite;
 	public bool triggered;
+	public int levelToGo = 0;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -40,6 +42,6 @@ public class EndDoor : MonoBehaviour {
 		sprite.frameIndex += 1;
 	}
 	private void finishLevel() {
-		print ("finish level function");
+		Application.LoadLevel(levelToGo);
 	}
 }

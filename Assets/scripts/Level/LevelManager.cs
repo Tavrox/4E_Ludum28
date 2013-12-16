@@ -7,12 +7,11 @@ public class LevelManager : MonoBehaviour {
 	[SerializeField] private Camera myCamera;
 	
 	public int ID;
-	public int nextLvlID;
-	public int previousLvlID;
+	public int chosenVariation;
 
-	private int chosenVariation;
 	private int _secLeft;
 	private TileImporter _tileImporter;
+	private PlayerData _pdata;
 
 	// Use this for initialization
 	void Start () 
@@ -25,16 +24,26 @@ public class LevelManager : MonoBehaviour {
 		myCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
 		_secLeft = GameObject.Find("Player/IngameUI/Timer").GetComponent<Timer>().secLeft;
 		_tileImporter = GameObject.Find("Level/TileImporter").GetComponent<TileImporter>();
+		_pdata = GameObject.Find("PlayerData").GetComponent<PlayerData>();
+
 		MasterAudio.PlaySound("bg");
 		MasterAudio.PlaySound("jam");
+
+		string _rand = Random.Range(_tileImporter.minVariation, _tileImporter.maxVariation).ToString();
+		print ("Level generated " + _rand);
+		foreach (Transform _gameo in GameObject.Find("Level/Gameplay").transform)
+		{
+			if (_gameo.gameObject.name == _rand )
+		    {
+				_gameo.gameObject.SetActive(true);
+			}
+		}
+		_pdata.displayInput = false;
 
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GameOver += GameOver;
 		GameEventManager.GamePause += GamePause;
 		GameEventManager.GameUnpause += GameUnpause;
-
-		DontDestroyOnLoad(GameObject.Find("Frameworks"));
-		
 	}
 	
 	// Update is called once per frame
@@ -58,7 +67,6 @@ public class LevelManager : MonoBehaviour {
 	}
 	private void GameStart()
 	{
-
 	}
 	private void GamePause()
 	{
@@ -81,6 +89,7 @@ public class LevelManager : MonoBehaviour {
 	public void playerDies()
 	{
 		Instantiate(Resources.Load("Objects/Invasion"));
+		print ("die bitch");
 	}
 
 	public void loadLevel(int _variation, int _lvlID)

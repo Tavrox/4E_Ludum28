@@ -40,6 +40,18 @@ public class Timer : MonoBehaviour {
 			secLeft -= 1 ;
 			microSecLeft = 59;
 		}
+
+		if (secLeft <= 0)
+		{
+			GameEventManager.TriggerGameOver();
+			secLeft = 60;
+		}
+	}
+
+	public void resetTimer()
+	{
+			secLeft = 60;
+			microSecLeft = 60;
 	}
 
 	private void OnGUI()

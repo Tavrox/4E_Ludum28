@@ -29,6 +29,7 @@ public class MenuUI : MonoBehaviour {
 	public bool animate = true;
 	private OTSprite spr;
 	private List<GameObject> menuObjects;
+	public string _str = "Enter your name";
 	
 	// Use this for initialization
 	void Start () {
@@ -74,6 +75,7 @@ public class MenuUI : MonoBehaviour {
 		}
 	
 	}
+
 	private void OnMouseDown()
 	{
 		menuObjects = new List<GameObject>();

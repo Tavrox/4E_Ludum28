@@ -9,7 +9,8 @@ public class IngameUI : MonoBehaviour {
 		ResumeGame,
 		MuteSound,
 		ExplosionTimer,
-		GoToMenu
+		GoToMenu,
+		Manager
 	}
 	public ListAction action;
 	private OTSprite prefabSprite;
@@ -21,6 +22,12 @@ public class IngameUI : MonoBehaviour {
 		GameEventManager.GameOver += GameOver;
 		GameEventManager.GamePause += GamePause;
 		GameEventManager.GameUnpause += GameUnpause;
+
+		if (action == ListAction.Manager)
+		{
+
+
+		}
 	}
 
 	public void fadeOut()
