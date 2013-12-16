@@ -14,7 +14,7 @@ public class Enemy : Character {
 	
 	public float targetDetectionArea = 3f;
 	public float blockDetectionArea = 2f;
-	private float spriteScaleX;
+	protected float spriteScaleX;
 	protected RaycastHit hitInfo; //infos de collision
 	protected Ray detectTargetLeft, detectTargetRight, detectBlockLeft, detectBlockRight, detectEndPFLeft, detectEndPFRight; //point de départ, direction
 	
@@ -69,11 +69,11 @@ public class Enemy : Character {
 		spriteScaleX = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.x;
 	}
 	// Update is called once per frame
-	public void Update () 
-	{
-		moveVel = 20f;
-		gravityY = 20f;
-	}
+//	public void Update () 
+//	{
+//		moveVel = 20f;
+//		gravityY = 20f;
+//	}
 //		//		isLeft = false;
 //		//		isRight = false;
 //		//		isJump = false;
@@ -106,49 +106,49 @@ public class Enemy : Character {
 	 *  DETECTION RAYCASTS 	*
 	 *						*
 	 ***********************/
-	protected void detectPlayer() {
-		detectTargetLeft = new Ray(thisTransform.position, Vector3.left);
-		detectTargetRight = new Ray(thisTransform.position, Vector3.right);
-		Debug.DrawRay(thisTransform.position, Vector3.left*targetDetectionArea);
-		Debug.DrawRay(thisTransform.position, Vector3.right*targetDetectionArea);
-		
-		if (Physics.Raycast(detectTargetLeft, out hitInfo, targetDetectionArea) || Physics.Raycast(detectTargetRight, out hitInfo, targetDetectionArea)) {
-			//print ("CA TOUCHE");
-			if(hitInfo.collider.name == "Player" && !endChasingPlayer) {
-				//print ("CHAAAASSSSSEE");
-				chasingPlayer = true;
-			}
-			//print(hitInfo);
-		}
-	}
-	protected void detectEndPlatform() {
-		detectEndPFLeft = new Ray(new Vector3 (thisTransform.position.x-(spriteScaleX/2), thisTransform.position.y, thisTransform.position.z), Vector3.down);
-		detectEndPFRight = new Ray(new Vector3 (thisTransform.position.x+(spriteScaleX/2), thisTransform.position.y, thisTransform.position.z), Vector3.down);
-		//print (blockDetectionArea);
-		Debug.DrawRay(new Vector3 (thisTransform.position.x-(spriteScaleX/2), thisTransform.position.y, thisTransform.position.z), Vector3.down*blockDetectionArea);
-		Debug.DrawRay(new Vector3 (thisTransform.position.x+(spriteScaleX/2), thisTransform.position.y, thisTransform.position.z), Vector3.down*blockDetectionArea);
-
-		if (!Physics.Raycast(detectEndPFLeft, out hitInfo, blockDetectionArea) || !Physics.Raycast(detectEndPFRight, out hitInfo, blockDetectionArea)) {
-			chasingPlayer = false;
-			isLeft = isRight = false;
-			if (!Physics.Raycast(detectEndPFLeft, out hitInfo, blockDetectionArea)) {
-				if (Physics.Raycast(detectTargetRight, out hitInfo, targetDetectionArea)) {
-					if(hitInfo.collider.name == "Player") {
-						chasingPlayer = true;
-						thisTransform.position += new Vector3(0.1f,0f,0f);
-					}
-				}
-			}
-			if (!Physics.Raycast(detectEndPFRight, out hitInfo, blockDetectionArea)) {			
-				if (Physics.Raycast(detectTargetLeft, out hitInfo, targetDetectionArea)) {
-					if(hitInfo.collider.name == "Player") {
-						chasingPlayer = true;
-						thisTransform.position -= new Vector3(0.1f,0f,0f);
-					}
-				}
-			}
-		}
-	}
+//	protected void detectPlayer() {
+//		detectTargetLeft = new Ray(thisTransform.position, Vector3.left);
+//		detectTargetRight = new Ray(thisTransform.position, Vector3.right);
+//		Debug.DrawRay(thisTransform.position, Vector3.left*targetDetectionArea);
+//		Debug.DrawRay(thisTransform.position, Vector3.right*targetDetectionArea);
+//		
+//		if (Physics.Raycast(detectTargetLeft, out hitInfo, targetDetectionArea) || Physics.Raycast(detectTargetRight, out hitInfo, targetDetectionArea)) {
+//			//print ("CA TOUCHE");
+//			if(hitInfo.collider.name == "Player" && !endChasingPlayer) {
+//				//print ("CHAAAASSSSSEE");
+//				chasingPlayer = true;
+//			}
+//			//print(hitInfo);
+//		}
+//	}
+//	protected void detectEndPlatform() {
+//		detectEndPFLeft = new Ray(new Vector3 (thisTransform.position.x-(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down);
+//		detectEndPFRight = new Ray(new Vector3 (thisTransform.position.x+(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down);
+//		//print (blockDetectionArea);
+//		Debug.DrawRay(new Vector3 (thisTransform.position.x-(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down*blockDetectionArea);
+//		Debug.DrawRay(new Vector3 (thisTransform.position.x+(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down*blockDetectionArea);
+//
+//		if (!Physics.Raycast(detectEndPFLeft, out hitInfo, blockDetectionArea) || !Physics.Raycast(detectEndPFRight, out hitInfo, blockDetectionArea)) {
+//			chasingPlayer = false;
+//			isLeft = isRight = false;
+//			if (!Physics.Raycast(detectEndPFLeft, out hitInfo, blockDetectionArea)) {
+//				if (Physics.Raycast(detectTargetRight, out hitInfo, targetDetectionArea)) {
+//					if(hitInfo.collider.name == "Player") {
+//						chasingPlayer = true;
+//						thisTransform.position += new Vector3(0.1f,0f,0f);
+//					}
+//				}
+//			}
+//			if (!Physics.Raycast(detectEndPFRight, out hitInfo, blockDetectionArea)) {			
+//				if (Physics.Raycast(detectTargetLeft, out hitInfo, targetDetectionArea)) {
+//					if(hitInfo.collider.name == "Player") {
+//						chasingPlayer = true;
+//						thisTransform.position -= new Vector3(0.1f,0f,0f);
+//					}
+//				}
+//			}
+//		}
+//	}
 	
 	/************************
 	 *						*
@@ -197,7 +197,7 @@ public class Enemy : Character {
 		//		}
 		if(Vector3.Distance(new Vector3(transform.position.x,0f,0f), new Vector3(waypoints[waypointId].position.x,0f,0f)) < 30 && canChangeDir) {
 			canChangeDir = false;
-			go = !go;print ("*-*-*-*-*-****-*--*-*-*-*-*-*-*-*-*-*-*-*-***-*--*-*-*");
+			go = !go;//print ("*-*-*-*-*-****-*--*-*-*-*-*-*-*-*-*-*-*-*-***-*--*-*-*");
 			if(go) waypointId=0;
 			else if (!go) waypointId=1;
 		}
@@ -218,28 +218,6 @@ public class Enemy : Character {
 			thisTransform.position += new Vector3(1f,0f,0f);
 		}
 	}
-	protected void ChasePlayer () {
-		//Debug.Log("Px ="+target.position.x+" / Zx ="+myTransform.position.x);
-		if (target.position.x < thisTransform.position.x-0.2f) {
-			//direction = Vector3.left;
-			isLeft = true;
-			isRight = false;
-			facingDir = facing.Left;
-			UpdateMovement();
-		}
-		else if (target.position.x > thisTransform.position.x+0.2f /*&& isLeft == false*/) {
-			//direction = Vector3.right;
-			isRight = true; 
-			isLeft = false;
-			facingDir = facing.Right;
-			UpdateMovement();
-		}
-		else {
-			isLeft = isRight = false;
-		}
-		//myTransform.Translate(direction * movevectorMove * Time.deltaTime);
-	}
-	
 	/************************
 	 *						*
 	 *  WAVES MANAGEMENT	*

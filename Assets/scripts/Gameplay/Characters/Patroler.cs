@@ -85,7 +85,7 @@ public class Patroler : Character {
 		//		}
 		if(Vector3.Distance(new Vector3(transform.position.x,0f,0f), new Vector3(waypoints[waypointId].position.x,0f,0f)) < 30 && canChangeDir) {
 			canChangeDir = false;
-			go = !go;print ("*-*-*-*-*-****-*--*-*-*-*-*-*-*-*-*-*-*-*-***-*--*-*-*");
+			go = !go;//print ("*-*-*-*-*-****-*--*-*-*-*-*-*-*-*-*-*-*-*-***-*--*-*-*");
 			if(go) waypointId=0;
 			else if (!go) waypointId=1;
 		}

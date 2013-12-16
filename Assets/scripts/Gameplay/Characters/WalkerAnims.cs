@@ -43,13 +43,13 @@ public class WalkerAnims : MonoBehaviour
 	}
 	private void Run()
 	{
-		if(_character.isRight && _character.grounded && currentAnim!=animDef.WalkRight)
+		if(_character.isRight && /*_character.grounded &&*/ currentAnim!=animDef.WalkRight)
 		{
 			currentAnim = animDef.WalkRight;
 			animSprite.Play("run");
-			NormalScaleSprite();;
+			NormalScaleSprite();
 		}
-		if(_character.isLeft && _character.grounded && currentAnim!=animDef.WalkLeft)
+		if(_character.isLeft && /*_character.grounded &&*/ currentAnim!=animDef.WalkLeft)
 		{
 			currentAnim = animDef.WalkLeft;
 			animSprite.Play("run");
@@ -58,13 +58,13 @@ public class WalkerAnims : MonoBehaviour
 	}
 	private void Stand()
 	{	
-		if(!_character.isLeft && _character.grounded == true && currentAnim != animDef.StandLeft && _character.facingDir == Character.facing.Left && animPlaying == false)
+		if(!_character.isLeft && /*_character.grounded == true &&*/ currentAnim != animDef.StandLeft && _character.facingDir == Character.facing.Left && animPlaying == false)
 		{
 			currentAnim = animDef.StandLeft;
 			animSprite.Play("stand"); // stand left
 			InvertSprite();
 		}
-		if(!_character.isRight && _character.grounded && currentAnim != animDef.StandRight && _character.facingDir == Character.facing.Right && animPlaying == false)
+		if(!_character.isRight && /*_character.grounded &&*/ currentAnim != animDef.StandRight && _character.facingDir == Character.facing.Right && animPlaying == false)
 		{
 			currentAnim = animDef.StandRight;
 			animSprite.Play("stand"); // stand left

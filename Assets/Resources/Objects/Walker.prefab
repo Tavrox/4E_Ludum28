@@ -86,7 +86,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1693.06836, y: -1274.57556, z: 0}
+  m_LocalPosition: {x: 2548.83545, y: -1270.15869, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -167,8 +167,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 95, y: 95, z: 30}
-  m_Center: {x: 0, y: -.0500000007, z: 0}
+  m_Size: {x: 90, y: 80, z: 30}
+  m_Center: {x: 0, y: -10, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -227,7 +227,7 @@ MonoBehaviour:
   shieldDef: 0
   thisTransform: {fileID: 0}
   vectorFixed: {x: 0, y: 0, z: 0}
-  moveVel: 600
+  moveVel: 500
   jumpVel: 16
   jump2Vel: 14
   maxJumps: 2
@@ -240,7 +240,7 @@ MonoBehaviour:
   position: {x: 0, y: 0, z: 0}
   trans: {fileID: 0}
   targetDetectionArea: 200
-  blockDetectionArea: 55
+  blockDetectionArea: 70
   waypoints:
   - {fileID: 0}
   - {fileID: 0}
