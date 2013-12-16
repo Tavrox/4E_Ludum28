@@ -20,7 +20,7 @@ public class Player : Character {
 	//	private GameObject pebbleBar;
 	
 	[HideInInspector] public bool paused = false;
-	
+	public int angleRotation;
 	// Use this for initialization
 	public override void Start () 
 	{
@@ -36,7 +36,6 @@ public class Player : Character {
 
 		GameObject.Find("Frameworks/OT/View").GetComponent<OTView>().movementTarget = gameObject;
 	}
-	
 	// Update is called once per frame
 	public void Update () 
 	{
@@ -109,15 +108,17 @@ public class Player : Character {
 			shootLeft = false;
 			/*if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");*/
 		}
-		if (Input.GetKey(KeyCode.DownArrow))
-		{
-			isCrounch = true;
-			facingDir = facing.Down;
-		}
-		if (Input.GetKeyDown("up")) 
+//		if (Input.GetKey(KeyCode.DownArrow))
+//		{
+//			isCrounch = true;
+//			facingDir = facing.Down;
+//		}
+		if (Input.GetKey("up") /* && grounded*/) 
 		{ 
 			isJump = true; 
 		}
+		if (Input.GetKeyUp("up")) chute=true;
+		
 		if(Input.GetKeyDown("space"))
 		{
 			isPass = true;
@@ -128,11 +129,11 @@ public class Player : Character {
 		}
 		if (Input.GetKeyDown(KeyCode.Alpha2))
 		{
-			
+			GameObject.Find("Invasion").GetComponent<InvasionAnims>().invade();
 		}
 		if (Input.GetKeyDown(KeyCode.Alpha3))
 		{
-			
+			//thisTransform.rotation = Quaternion.Euler(new Vector3(0f,0f,0f));
 		}
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{
@@ -149,5 +150,17 @@ public class Player : Character {
 
 	public void teleportTo(Vector3 pos) {
 		thisTransform.position = pos;
+	}
+	public IEnumerator rewind () {
+		yield return new WaitForSeconds(0.02f);
+		thisTransform.Rotate(0f,0f,angleRotation++);
+		StartCoroutine("rewind");
+	}
+	public IEnumerator stopRewind (float duree) {
+		yield return new WaitForSeconds(duree);
+		StopCoroutine("rewind");
+		thisTransform.Rotate(0f,0f,angleRotation--);
+		if(angleRotation<12) {StopCoroutine("stopRewind");thisTransform.rotation = Quaternion.Euler(new Vector3(0f,0f,0f));}
+		StartCoroutine("stopRewind",0.04f);
 	}
 }

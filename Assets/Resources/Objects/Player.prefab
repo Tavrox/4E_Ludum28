@@ -264,7 +264,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 636.793396, y: -80.0947952, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -644,10 +644,10 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 0
-  _frameName: perso_idle0001
+  _frameIndex: 10
+  _frameName: perso_run0001
   _spriteContainer: {fileID: 0}
-  _containerName: player
+  _containerName: playerSheet
   _newSprite: 0
   _animation: {fileID: 0}
   _animationFrameset: 
@@ -689,6 +689,7 @@ MonoBehaviour:
   isPass: 0
   jumping: 0
   falling: 0
+  chute: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -703,12 +704,12 @@ MonoBehaviour:
   thisTransform: {fileID: 0}
   vectorFixed: {x: 0, y: 0, z: 0}
   moveVel: 546
-  jumpVel: 372
+  jumpVel: 600
   jump2Vel: 14
   maxJumps: 1
-  fallVel: 520
+  fallVel: 896
   jumps: 0
-  gravityY: 632
+  gravityY: 920
   maxVelY: 1000
   halfMyX: 0
   halfMyY: 0
@@ -716,6 +717,7 @@ MonoBehaviour:
   trans: {fileID: 0}
   menu: {fileID: 0}
   paused: 0
+  angleRotation: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
