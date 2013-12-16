@@ -60,11 +60,11 @@ public class PatrolerAnims : MonoBehaviour
 	{
 		animPlaying = false;
 	}
-	private void InvertSprite()
+	public void InvertSprite()
 	{
 		spriteParent.localScale = new Vector3(-1,1,1);
 	}
-	private void NormalScaleSprite()
+	public void NormalScaleSprite()
 	{
 		spriteParent.localScale = new Vector3(1,1,1);
 	}

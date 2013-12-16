@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Patroler : Character {
-
+	
 	// Use this for initialization
 	[HideInInspector] public Vector3 position;
 	[HideInInspector] public Transform trans;
@@ -10,7 +10,7 @@ public class Patroler : Character {
 	/***** ENNEMI BEGIN *****/
 	protected Transform target; //the enemy's target
 	
-	protected bool chasingPlayer, endChasingPlayer, patroling;
+	protected bool chasingPlayer, endChasingPlayer, patroling, canChangeDir=true;
 	protected Vector3 direction;
 	
 	public float targetDetectionArea = 3f;
@@ -18,7 +18,7 @@ public class Patroler : Character {
 	private float spriteScaleX;
 	protected RaycastHit hitInfo; //infos de collision
 	protected Ray detectTargetLeft, detectTargetRight, detectBlockLeft, detectBlockRight, detectEndPFLeft, detectEndPFRight; //point de départ, direction
-	
+	public float myCORRECTSPEED = 10f;
 	protected bool go = true;
 	protected int waypointId = 0;
 	public Transform[] waypoints;
@@ -72,46 +72,41 @@ public class Patroler : Character {
 	// Update is called once per frame
 	void Update () {
 		Patrol();
-
-		if (Input.GetKeyDown(KeyCode.Escape))
-		{
-			if (GameEventManager.gamePaused == false)
-			{
-				GameEventManager.TriggerGamePause();
-			}
-			else if (GameEventManager.gamePaused == true)
-			{
-				GameEventManager.TriggerGameUnpause();
-			}
-		}
 	}
 	protected void Patrol () {
 		//print ("patrolllll");
+		//print (waypointId);
 		if(waypoints.Length<=0) print("No Waypoints linked");
-		print(gameObject.transform.position.x+" + "+waypoints[waypointId].position.x);
-		//		print(transform.position+" - "+waypoints[waypointId].position);
-		if (transform.position.x < waypoints[waypointId].position.x+10f && transform.position.x > waypoints[waypointId].position.x-10f) {
-			//print(gameObject.transform.position.x+" + "+waypoints[waypointId].position.x);
-			//print ("********** IN *********");
-		}
-		if(Vector3.Distance(new Vector3(transform.position.x,0f,0f), new Vector3(waypoints[waypointId].position.x,0f,0f)) < 50) {
-			go = !go;//print ("*-*-*-*-*-****-*--*-*-*-*-*-*-*-*-*-*-*-*-***-*--*-*-*");
+		//print(gameObject.transform.position.x+" + "+waypoints[waypointId].position.x);
+		//		//		print(transform.position+" - "+waypoints[waypointId].position);
+		//		if (transform.position.x < waypoints[waypointId].position.x+10f && transform.position.x > waypoints[waypointId].position.x-10f) {
+		//			//print(gameObject.transform.position.x+" + "+waypoints[waypointId].position.x);
+		//			//print ("********** IN *********");
+		//		}
+		if(Vector3.Distance(new Vector3(transform.position.x,0f,0f), new Vector3(waypoints[waypointId].position.x,0f,0f)) < 30 && canChangeDir) {
+			canChangeDir = false;
+			go = !go;print ("*-*-*-*-*-****-*--*-*-*-*-*-*-*-*-*-*-*-*-***-*--*-*-*");
 			if(go) waypointId=0;
 			else if (!go) waypointId=1;
 		}
-		
+		else if (Vector3.Distance(new Vector3(transform.position.x,0f,0f), new Vector3(waypoints[waypointId].position.x,0f,0f)) > 40 && !canChangeDir) canChangeDir = true;
+		//		
 		if(go) {
 			isRight = false;
 			isLeft = true;
-			facingDir = facing.Left;UpdateMovement();
+			facingDir = facing.Left;//UpdateMovement();
+			gameObject.GetComponent<PatrolerAnims>().InvertSprite();
+			thisTransform.position -= new Vector3(myCORRECTSPEED,0f,0f);
 		}
 		else {
 			isLeft = false;
 			isRight = true;
-			facingDir = facing.Right;UpdateMovement();
+			facingDir = facing.Right;//UpdateMovement();
+			gameObject.GetComponent<PatrolerAnims>().NormalScaleSprite();
+			thisTransform.position += new Vector3(myCORRECTSPEED,0f,0f);
 		}
 	}
-
+	
 	
 	protected void OnTriggerEnter(Collider other) 
 	{
