@@ -34,8 +34,6 @@ public static class GameEventManager {
 	{
 		if(GamePause != null)
 		{
-			GameObject.Find("Player/IngameUI/Pause").GetComponent<IngameUI>();
-			gamePaused = true;
 			GamePause();
 		}
 	}

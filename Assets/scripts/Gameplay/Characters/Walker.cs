@@ -24,7 +24,7 @@ public class Walker : Enemy {
 
 	private void sound()
 	{
-		MasterAudio.PlaySound("blob_run1");
+		MasterAudio.PlaySound("Blob_run2");
 	}
 
 	
@@ -48,6 +48,15 @@ public class Walker : Enemy {
 			isLeft = isRight = false;
 		}
 		//myTransform.Translate(direction * movevectorMove * Time.deltaTime);
+	}
+
+	void OnTriggerEnter(Collider _other)
+	{
+		if (_other.CompareTag("Player") == true && GameObject.Find("Player").GetComponent<Player>().isDead == false)
+		{
+			GameObject.Find("Player").GetComponent<Player>().isDead = true;
+			GameEventManager.TriggerGameOver();
+		}
 	}
 
 	/************************

@@ -10,6 +10,7 @@ public class Player : Character {
 	
 	[HideInInspector] public bool paused = false;
 	public int angleRotation;
+	public bool isDead = false;
 	// Use this for initialization
 	public override void Start () 
 	{
@@ -45,17 +46,21 @@ public class Player : Character {
 			transform.localPosition = spawnPos;
 			enabled = true;
 		}
+		enabled = true;
+		isDead = false;
 	}
 	
 	private void GameOver () 
 	{
-		enabled = false;
+		StartCoroutine("resetGame");
 		isLeft = false;
 		isRight = false;
 		isJump = false;
 		isPass = false;
+		isDead = true;
 		movingDir = moving.None;
-		MasterAudio.PlaySound("player_lose");
+		MasterAudio.PlaySound("lose");
+		enabled = false;
 	}
 	private void GamePause()
 	{
@@ -72,6 +77,12 @@ public class Player : Character {
 	{
 		paused = false;
 		enabled = true;	
+	}
+
+	IEnumerator resetGame()
+	{
+		yield return new WaitForSeconds(10f);
+		GameEventManager.TriggerGameStart();
 	}
 	
 	private void checkInput()

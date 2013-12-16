@@ -13264,7 +13264,7 @@
    <tile gid="0"/>
   </data>
  </layer>
- <objectgroup name="Objects" width="125" height="53">
+ <objectgroup name="1" width="125" height="53">
   <object name="Camera" type="Camera, monsieur" x="253" y="335" width="797" height="600"/>
   <object name="Perso" x="604" y="560" width="100" height="120"/>
   <object name="Entrée" type="StartDoor" x="4053" y="848" width="100" height="150"/>
