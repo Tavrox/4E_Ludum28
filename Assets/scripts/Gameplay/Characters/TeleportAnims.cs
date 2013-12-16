@@ -55,6 +55,7 @@ public class TeleportAnims : MonoBehaviour
 		if(other.gameObject.CompareTag("Player")) 
 		{
 			if (Input.GetKeyDown(KeyCode.F)) {
+				MasterAudio.PlaySound("teleport_in");
 				animSprite.Play("teleport");
 				//_player.enabled = false;
 				StartCoroutine("stopPlayer");
@@ -73,6 +74,7 @@ public class TeleportAnims : MonoBehaviour
 		_player.teleportTo(destination.position);
 		_player.enabled = true;
 		animSprite.Play("default");
+		MasterAudio.PlaySound("teleport_out");
 	}
 	private void Run()
 	{

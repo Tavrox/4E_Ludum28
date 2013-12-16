@@ -18,10 +18,15 @@ public class LevelManager : MonoBehaviour {
 	void Start () 
 	{
 		chosenVariation = GameObject.Find("Level/TileImporter").GetComponent<TileImporter>().chosenVariation;
-		player = GameObject.FindWithTag("Player").GetComponent<Player>();
+		if (GameObject.FindWithTag("Player") != null)
+		{
+			player = GameObject.FindWithTag("Player").GetComponent<Player>();
+		}
 		myCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
 		_secLeft = GameObject.Find("Player/IngameUI/Timer").GetComponent<Timer>().secLeft;
 		_tileImporter = GameObject.Find("Level/TileImporter").GetComponent<TileImporter>();
+		MasterAudio.PlaySound("bg");
+		MasterAudio.PlaySound("jam");
 
 		DontDestroyOnLoad(GameObject.Find("Frameworks"));
 		

@@ -1,0 +1,3731 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: projectileAnims
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100002
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400002}
+  - 114: {fileID: 11400002}
+  m_Layer: 0
+  m_Name: trapKillAnims
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100004
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400004}
+  - 114: {fileID: 11400004}
+  m_Layer: 0
+  m_Name: arcElectricSheet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100006
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400006}
+  - 114: {fileID: 11400006}
+  m_Layer: 0
+  m_Name: projectileSheet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100008
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400008}
+  - 114: {fileID: 11400008}
+  m_Layer: 0
+  m_Name: turretSheet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100010
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400010}
+  - 114: {fileID: 11400010}
+  m_Layer: 0
+  m_Name: patrolerAnims
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100012
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400012}
+  - 114: {fileID: 11400012}
+  m_Layer: 0
+  m_Name: trapKillSheet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100014
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400014}
+  - 114: {fileID: 11400014}
+  m_Layer: 0
+  m_Name: enemyAnims
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100016
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400016}
+  - 114: {fileID: 11400016}
+  m_Layer: 0
+  m_Name: triggeredDoorSheet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100018
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400018}
+  - 114: {fileID: 11400018}
+  m_Layer: 0
+  m_Name: teleportContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400020}
+  m_Layer: 0
+  m_Name: Prototypes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400022}
+  m_Layer: 0
+  m_Name: Animations
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100024
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400024}
+  - 114: {fileID: 11400020}
+  m_Layer: 0
+  m_Name: triggeredDoorAnims
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100026
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400026}
+  - 114: {fileID: 11400022}
+  m_Layer: 0
+  m_Name: invasionAnimation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100028
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400028}
+  - 114: {fileID: 11400024}
+  m_Layer: 0
+  m_Name: arcElectricAnims
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100030
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400030}
+  - 114: {fileID: 11400026}
+  m_Layer: 0
+  m_Name: player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100032
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400032}
+  - 114: {fileID: 11400028}
+  m_Layer: 0
+  m_Name: ingameui
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100034
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400034}
+  - 114: {fileID: 11400030}
+  m_Layer: 0
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100036
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400036}
+  - 114: {fileID: 11400032}
+  m_Layer: 0
+  m_Name: leverSheet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100038
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400038}
+  - 114: {fileID: 11400034}
+  m_Layer: 0
+  m_Name: turretAnims
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100040
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400040}
+  - 114: {fileID: 11400036}
+  m_Layer: 0
+  m_Name: teleportAnims
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100042
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400042}
+  - 114: {fileID: 11400038}
+  m_Layer: 0
+  m_Name: leverAnims
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400044}
+  - 114: {fileID: 11400044}
+  - 114: {fileID: 11400042}
+  - 114: {fileID: 11400040}
+  m_Layer: 0
+  m_Name: OT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100046
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400046}
+  - 114: {fileID: 11400046}
+  m_Layer: 0
+  m_Name: objects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100048
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400048}
+  - 114: {fileID: 11400048}
+  m_Layer: 0
+  m_Name: walkerAnims
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100050
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400050}
+  - 114: {fileID: 11400050}
+  m_Layer: 0
+  m_Name: materialsSheet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100052
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400052}
+  - 114: {fileID: 11400052}
+  m_Layer: 0
+  m_Name: invasionSheet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100054
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400054}
+  - 114: {fileID: 11400054}
+  m_Layer: 0
+  m_Name: enemySheet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400056}
+  - 114: {fileID: 11400056}
+  m_Layer: 0
+  m_Name: View
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100058
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400058}
+  - 114: {fileID: 11400058}
+  m_Layer: 0
+  m_Name: playerSheet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100060
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400060}
+  - 114: {fileID: 11400060}
+  m_Layer: 0
+  m_Name: metal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100062
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400062}
+  - 114: {fileID: 11400062}
+  m_Layer: 0
+  m_Name: playerAnims
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100064
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400064}
+  - 114: {fileID: 11400064}
+  m_Layer: 0
+  m_Name: Container (id=-2749774)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400066}
+  m_Layer: 0
+  m_Name: Containers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100068
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400068}
+  - 114: {fileID: 11400066}
+  m_Layer: 0
+  m_Name: patrolerSheet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100070
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400070}
+  - 114: {fileID: 11400068}
+  m_Layer: 0
+  m_Name: RocheDestructible
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100072
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400072}
+  - 114: {fileID: 11400070}
+  m_Layer: 0
+  m_Name: walkerSheet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100074
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400074}
+  - 114: {fileID: 11400072}
+  m_Layer: 0
+  m_Name: baseElectricAnims
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400022}
+--- !u!4 &400002
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -381.340057, y: 7.5512886, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400022}
+--- !u!4 &400004
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400066}
+--- !u!4 &400006
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400066}
+--- !u!4 &400008
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100008}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400066}
+--- !u!4 &400010
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100010}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400022}
+--- !u!4 &400012
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100012}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400066}
+--- !u!4 &400014
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400022}
+--- !u!4 &400016
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100016}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400066}
+--- !u!4 &400018
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100018}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400066}
+--- !u!4 &400020
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100020}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400044}
+--- !u!4 &400022
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100022}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 400028}
+  - {fileID: 400074}
+  - {fileID: 400014}
+  - {fileID: 400026}
+  - {fileID: 400042}
+  - {fileID: 400010}
+  - {fileID: 400062}
+  - {fileID: 400000}
+  - {fileID: 400070}
+  - {fileID: 400040}
+  - {fileID: 400002}
+  - {fileID: 400024}
+  - {fileID: 400038}
+  - {fileID: 400048}
+  m_Father: {fileID: 400044}
+--- !u!4 &400024
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100024}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400022}
+--- !u!4 &400026
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100026}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400022}
+--- !u!4 &400028
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100028}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400022}
+--- !u!4 &400030
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100030}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400066}
+--- !u!4 &400032
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100032}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400066}
+--- !u!4 &400034
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100034}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400066}
+--- !u!4 &400036
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100036}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400066}
+--- !u!4 &400038
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100038}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400022}
+--- !u!4 &400040
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100040}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400022}
+--- !u!4 &400042
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100042}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400022}
+--- !u!4 &400044
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100044}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 400022}
+  - {fileID: 400066}
+  - {fileID: 400020}
+  - {fileID: 400056}
+  m_Father: {fileID: 0}
+--- !u!4 &400046
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100046}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 786.019714, y: -356.819275, z: .131531}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400066}
+--- !u!4 &400048
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100048}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400022}
+--- !u!4 &400050
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100050}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400066}
+--- !u!4 &400052
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100052}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400066}
+--- !u!4 &400054
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100054}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400066}
+--- !u!4 &400056
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100056}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1000}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400044}
+--- !u!4 &400058
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100058}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400066}
+--- !u!4 &400060
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100060}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400066}
+--- !u!4 &400062
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100062}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400022}
+--- !u!4 &400064
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100064}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400066}
+--- !u!4 &400066
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100066}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 400004}
+  - {fileID: 400034}
+  - {fileID: 400064}
+  - {fileID: 400054}
+  - {fileID: 400032}
+  - {fileID: 400052}
+  - {fileID: 400036}
+  - {fileID: 400050}
+  - {fileID: 400060}
+  - {fileID: 400046}
+  - {fileID: 400068}
+  - {fileID: 400030}
+  - {fileID: 400058}
+  - {fileID: 400006}
+  - {fileID: 400018}
+  - {fileID: 400012}
+  - {fileID: 400016}
+  - {fileID: 400008}
+  - {fileID: 400072}
+  m_Father: {fileID: 400044}
+--- !u!4 &400068
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400066}
+--- !u!4 &400070
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100070}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400022}
+--- !u!4 &400072
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100072}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400066}
+--- !u!4 &400074
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100074}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400022}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf791b8ec508eb4a94c7295007afe68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: projectileAnims
+  _fps: 12.666667
+  _duration: .236842096
+  framesets:
+  - name: default
+    container: {fileID: 11400006}
+    startFrame: 0
+    endFrame: 2
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 0
+    _containerName: projectileSheet
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf791b8ec508eb4a94c7295007afe68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: trapKillAnims
+  _fps: 24
+  _duration: .0833333358
+  framesets:
+  - name: default
+    container: {fileID: 11400012}
+    startFrame: 0
+    endFrame: 1
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 0
+    _containerName: trapKillSheet
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd220758bd0b8b4685199267909af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: arcElectricSheet
+  _sheetSize: {x: 256, y: 256}
+  texture: {fileID: 2800000, guid: 190095c4b6829db468d2234cb7fb6fdd, type: 3}
+  sizeTextures: []
+  generateSprites: 0
+  atlasData:
+  - name: arc00
+    position: {x: 0, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: arc01
+    position: {x: 50, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: arc02
+    position: {x: 100, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: base00
+    position: {x: 150, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: base01
+    position: {x: 200, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: base02
+    position: {x: 0, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  offsetSizing: 1
+  metaType: 
+  metaData: []
+  _atlasDataFile: {fileID: 4900000, guid: 184251b07e517e74b8f4d7fe6450fafe, type: 3}
+  reloadData: 0
+  bytesDataFile: 3624
+  id: 11
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd220758bd0b8b4685199267909af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: projectileSheet
+  _sheetSize: {x: 64, y: 64}
+  texture: {fileID: 2800000, guid: f46f35e448073cf44a11805c2ab62983, type: 3}
+  sizeTextures: []
+  generateSprites: 0
+  atlasData:
+  - name: projectile0001
+    position: {x: 0, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 30, y: 30}
+    frameSize: {x: 30, y: 30}
+    metaData: []
+  - name: projectile0002
+    position: {x: 30, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 30, y: 30}
+    frameSize: {x: 30, y: 30}
+    metaData: []
+  - name: projectile0003
+    position: {x: 0, y: 30}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 30, y: 30}
+    frameSize: {x: 30, y: 30}
+    metaData: []
+  offsetSizing: 1
+  metaType: 
+  metaData: []
+  _atlasDataFile: {fileID: 4900000, guid: 059d2d1cd71770448a411f709820a341, type: 3}
+  reloadData: 0
+  bytesDataFile: 2212
+  id: 4
+--- !u!114 &11400008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd220758bd0b8b4685199267909af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: turretSheet
+  _sheetSize: {x: 256, y: 256}
+  texture: {fileID: 2800000, guid: 6b11688477fc9784aafc923f5b54eb0a, type: 3}
+  sizeTextures: []
+  generateSprites: 0
+  atlasData:
+  - name: turret0001
+    position: {x: 0, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: turret0002
+    position: {x: 50, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: turret0003
+    position: {x: 100, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: turret0004
+    position: {x: 150, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: turret0005
+    position: {x: 200, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: turret0006
+    position: {x: 0, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  offsetSizing: 1
+  metaType: 
+  metaData: []
+  _atlasDataFile: {fileID: 4900000, guid: 021fa1c01d99fcd42a85ab97ec0fdcbf, type: 3}
+  reloadData: 0
+  bytesDataFile: 3647
+  id: 4
+--- !u!114 &11400010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf791b8ec508eb4a94c7295007afe68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: patrolerAnims
+  _fps: 24
+  _duration: .416666657
+  framesets:
+  - name: run
+    container: {fileID: 11400066}
+    startFrame: 0
+    endFrame: 9
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 0
+    _containerName: patrolerSheet
+--- !u!114 &11400012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd220758bd0b8b4685199267909af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: trapKillSheet
+  _sheetSize: {x: 128, y: 128}
+  texture: {fileID: 2800000, guid: 324f8a1ab83293647876be542b255a8f, type: 3}
+  sizeTextures: []
+  generateSprites: 0
+  atlasData:
+  - name: killTrap00
+    position: {x: 0, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 50}
+    frameSize: {x: 100, y: 50}
+    metaData: []
+  - name: killTrap01
+    position: {x: 0, y: 51}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 50}
+    frameSize: {x: 100, y: 50}
+    metaData: []
+  offsetSizing: 1
+  metaType: 
+  metaData: []
+  _atlasDataFile: {fileID: 4900000, guid: dfdf5ce969754c5439e9576d7a8363be, type: 3}
+  reloadData: 0
+  bytesDataFile: 1727
+  id: 6
+--- !u!114 &11400014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf791b8ec508eb4a94c7295007afe68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: enemyAnims
+  _fps: 17.5
+  _duration: 1.2571429
+  framesets:
+  - name: run
+    container: {fileID: 11400058}
+    startFrame: 0
+    endFrame: 19
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 0
+    _containerName: playerSheet
+  - name: stand
+    container: {fileID: 11400058}
+    startFrame: 1
+    endFrame: 1
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 20
+    _containerName: playerSheet
+  - name: jump
+    container: {fileID: 11400058}
+    startFrame: 5
+    endFrame: 5
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 21
+    _containerName: playerSheet
+--- !u!114 &11400016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd220758bd0b8b4685199267909af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: triggeredDoorSheet
+  _sheetSize: {x: 256, y: 512}
+  texture: {fileID: 2800000, guid: 69b4745a57d9590439ff9b3af0627b97, type: 3}
+  sizeTextures: []
+  generateSprites: 0
+  atlasData:
+  - name: porte_1
+    position: {x: 0, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 300}
+    frameSize: {x: 50, y: 300}
+    metaData: []
+  - name: porte_2
+    position: {x: 51, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 300}
+    frameSize: {x: 50, y: 300}
+    metaData: []
+  - name: porte_3
+    position: {x: 102, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 300}
+    frameSize: {x: 50, y: 300}
+    metaData: []
+  - name: porte_4
+    position: {x: 153, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 300}
+    frameSize: {x: 50, y: 300}
+    metaData: []
+  - name: porte_5
+    position: {x: 204, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 300}
+    frameSize: {x: 50, y: 300}
+    metaData: []
+  offsetSizing: 1
+  metaType: 
+  metaData: []
+  _atlasDataFile: {fileID: 4900000, guid: b022cc3be52659240bd2e98b4918c507, type: 3}
+  reloadData: 0
+  bytesDataFile: 3147
+  id: 8
+--- !u!114 &11400018
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd220758bd0b8b4685199267909af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: teleportContainer
+  _sheetSize: {x: 256, y: 512}
+  texture: {fileID: 2800000, guid: b30d048316e88d549aba7caf7b7b86f3, type: 3}
+  sizeTextures: []
+  generateSprites: 0
+  atlasData:
+  - name: tp_01
+    position: {x: 0, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: tp_02
+    position: {x: 50, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: tp_03
+    position: {x: 100, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: tp_04
+    position: {x: 150, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: tp_05
+    position: {x: 200, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: tp_06
+    position: {x: 0, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: tp_07
+    position: {x: 50, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: tp_08
+    position: {x: 100, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: tp_out_01
+    position: {x: 150, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: tp_out_02
+    position: {x: 200, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: tp_out_03
+    position: {x: 0, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: tp_out_04
+    position: {x: 50, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  offsetSizing: 1
+  metaType: 
+  metaData: []
+  _atlasDataFile: {fileID: 4900000, guid: 6c0eb94aa2069ec4f8e3c5c73db0cb2d, type: 3}
+  reloadData: 0
+  bytesDataFile: 6501
+  id: 8
+--- !u!114 &11400020
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf791b8ec508eb4a94c7295007afe68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: triggeredDoorAnims
+  _fps: 12.666667
+  _duration: .552631557
+  framesets:
+  - name: unlock
+    container: {fileID: 11400016}
+    startFrame: 0
+    endFrame: 4
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 0
+    _containerName: triggeredDoorSheet
+  - name: lock
+    container: {fileID: 11400016}
+    startFrame: 4
+    endFrame: 4
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 5
+    _containerName: triggeredDoorSheet
+  - name: closed
+    container: {fileID: 11400016}
+    startFrame: 0
+    endFrame: 0
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 6
+    _containerName: triggeredDoorSheet
+--- !u!114 &11400022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf791b8ec508eb4a94c7295007afe68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: invasionAnimation
+  _fps: 24
+  _duration: .791666687
+  framesets:
+  - name: invade
+    container: {fileID: 11400052}
+    startFrame: 0
+    endFrame: 18
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 0
+    _containerName: invasionSheet
+--- !u!114 &11400024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf791b8ec508eb4a94c7295007afe68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: arcElectricAnims
+  _fps: 12.666667
+  _duration: .473684192
+  framesets:
+  - name: baseDefault
+    container: {fileID: 11400004}
+    startFrame: 3
+    endFrame: 3
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 0
+    _containerName: arcElectricSheet
+  - name: baseON
+    container: {fileID: 11400004}
+    startFrame: 4
+    endFrame: 5
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 1
+    _containerName: arcElectricSheet
+  - name: arcDefault
+    container: {fileID: 11400004}
+    startFrame: 0
+    endFrame: 0
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 3
+    _containerName: arcElectricSheet
+  - name: arcON
+    container: {fileID: 11400004}
+    startFrame: 1
+    endFrame: 2
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 4
+    _containerName: arcElectricSheet
+--- !u!114 &11400026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd220758bd0b8b4685199267909af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: player
+  _sheetSize: {x: 512, y: 512}
+  texture: {fileID: 2800000, guid: 15d30b27af903494c8bb73094772a372, type: 3}
+  sizeTextures: []
+  generateSprites: 0
+  atlasData:
+  - name: perso_idle0001
+    position: {x: 0, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_idle0002
+    position: {x: 100, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_idle0003
+    position: {x: 200, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_idle0004
+    position: {x: 300, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_idle0005
+    position: {x: 400, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_jump0001
+    position: {x: 0, y: 120}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_jump0002
+    position: {x: 100, y: 120}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_jump0003
+    position: {x: 200, y: 120}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_jump0004
+    position: {x: 300, y: 120}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_jump0005
+    position: {x: 400, y: 120}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0001
+    position: {x: 0, y: 240}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0002
+    position: {x: 100, y: 240}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0003
+    position: {x: 200, y: 240}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0004
+    position: {x: 300, y: 240}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0005
+    position: {x: 400, y: 240}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0006
+    position: {x: 0, y: 360}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0007
+    position: {x: 100, y: 360}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0008
+    position: {x: 200, y: 360}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0009
+    position: {x: 300, y: 360}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0010
+    position: {x: 400, y: 360}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  offsetSizing: 1
+  metaType: 
+  metaData: []
+  _atlasDataFile: {fileID: 4900000, guid: 296c2c57bc61dcf4987fb2476c391a97, type: 3}
+  reloadData: 0
+  bytesDataFile: 10536
+  id: 7
+--- !u!114 &11400028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd220758bd0b8b4685199267909af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: ingameui
+  _sheetSize: {x: 1024, y: 2048}
+  texture: {fileID: 2800000, guid: 3673517278aed7c458a4fa630396ea11, type: 3}
+  sizeTextures: []
+  generateSprites: 0
+  atlasData:
+  - name: back
+    position: {x: 1, y: 1}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: bubble_interact
+    position: {x: 102, y: 1}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 233, y: 233}
+    frameSize: {x: 233, y: 233}
+    metaData: []
+  - name: bubble_key
+    position: {x: 336, y: 1}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 233, y: 233}
+    frameSize: {x: 233, y: 233}
+    metaData: []
+  - name: credits
+    position: {x: 570, y: 1}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 250, y: 153}
+    frameSize: {x: 250, y: 153}
+    metaData: []
+  - name: creditsDetail
+    position: {x: 1, y: 235}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 800, y: 600}
+    frameSize: {x: 800, y: 600}
+    metaData: []
+  - name: lv1
+    position: {x: 802, y: 235}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 134, y: 139}
+    frameSize: {x: 134, y: 139}
+    metaData: []
+  - name: lv2
+    position: {x: 1, y: 836}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 119, y: 138}
+    frameSize: {x: 119, y: 138}
+    metaData: []
+  - name: lv3
+    position: {x: 121, y: 836}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 115, y: 143}
+    frameSize: {x: 115, y: 143}
+    metaData: []
+  - name: lv4
+    position: {x: 237, y: 836}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 138, y: 131}
+    frameSize: {x: 138, y: 131}
+    metaData: []
+  - name: lv5
+    position: {x: 376, y: 836}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 134, y: 135}
+    frameSize: {x: 134, y: 135}
+    metaData: []
+  - name: mainMenu
+    position: {x: 511, y: 836}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 465, y: 286}
+    frameSize: {x: 465, y: 286}
+    metaData: []
+  - name: pause
+    position: {x: 1, y: 1123}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 465, y: 286}
+    frameSize: {x: 465, y: 286}
+    metaData: []
+  - name: play
+    position: {x: 467, y: 1123}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 251, y: 139}
+    frameSize: {x: 251, y: 139}
+    metaData: []
+  - name: timer
+    position: {x: 1, y: 1410}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 445, y: 108}
+    frameSize: {x: 445, y: 108}
+    metaData: []
+  - name: title
+    position: {x: 447, y: 1410}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 545, y: 224}
+    frameSize: {x: 545, y: 224}
+    metaData: []
+  - name: transi
+    position: {x: 993, y: 1410}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 27, y: 27}
+    frameSize: {x: 27, y: 27}
+    metaData: []
+  offsetSizing: 1
+  metaType: 
+  metaData: []
+  _atlasDataFile: {fileID: 4900000, guid: 6e3138e5e5d36374baf1fada3978c7c6, type: 3}
+  reloadData: 0
+  bytesDataFile: 8226
+  id: 7
+--- !u!114 &11400030
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd220758bd0b8b4685199267909af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: Background
+  _sheetSize: {x: 150, y: 250}
+  texture: {fileID: 2800000, guid: 091fb6c9c45b3b84a98bb331f91fee89, type: 3}
+  sizeTextures: []
+  generateSprites: 0
+  atlasData:
+  - name: Background01
+    position: {x: 0, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Background02
+    position: {x: 50, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Background03
+    position: {x: 100, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Background04
+    position: {x: 0, y: 50}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Background05
+    position: {x: 50, y: 50}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Background06
+    position: {x: 100, y: 50}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Background07
+    position: {x: 0, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Background08
+    position: {x: 50, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Background09
+    position: {x: 100, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Background10
+    position: {x: 0, y: 150}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Background11
+    position: {x: 50, y: 150}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Background12
+    position: {x: 100, y: 150}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Background13
+    position: {x: 0, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Background14
+    position: {x: 50, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  offsetSizing: 1
+  metaType: 
+  metaData: []
+  _atlasDataFile: {fileID: 4900000, guid: 9ff3c9b410a921041b2193fd126f0d24, type: 3}
+  reloadData: 0
+  bytesDataFile: 7292
+  id: 6
+--- !u!114 &11400032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd220758bd0b8b4685199267909af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: leverSheet
+  _sheetSize: {x: 256, y: 256}
+  texture: {fileID: 2800000, guid: c1f764155ee03694884b505ed53beb28, type: 3}
+  sizeTextures: []
+  generateSprites: 0
+  atlasData:
+  - name: leverDown00
+    position: {x: 0, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: leverDown01
+    position: {x: 51, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: leverDown02
+    position: {x: 102, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: leverDown03
+    position: {x: 153, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: leverDown04
+    position: {x: 204, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: leverUp00
+    position: {x: 0, y: 101}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: levier_1
+    position: {x: 51, y: 101}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: levier_2
+    position: {x: 102, y: 101}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  offsetSizing: 1
+  metaType: 
+  metaData: []
+  _atlasDataFile: {fileID: 4900000, guid: cfd96d83056ea9948a78df2c62e4305c, type: 3}
+  reloadData: 0
+  bytesDataFile: 4604
+  id: 6
+--- !u!114 &11400034
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf791b8ec508eb4a94c7295007afe68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: turretAnims
+  _fps: 12
+  _duration: .5
+  framesets:
+  - name: attack
+    container: {fileID: 11400008}
+    startFrame: 0
+    endFrame: 5
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 0
+    _containerName: turretSheet
+--- !u!114 &11400036
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf791b8ec508eb4a94c7295007afe68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: teleportAnims
+  _fps: 12.666667
+  _duration: .947368383
+  framesets:
+  - name: default
+    container: {fileID: 11400018}
+    startFrame: 0
+    endFrame: 3
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 0
+    _containerName: teleportContainer
+  - name: teleport
+    container: {fileID: 11400018}
+    startFrame: 4
+    endFrame: 8
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 4
+    _containerName: teleportContainer
+  - name: teleportOUT
+    container: {fileID: 11400018}
+    startFrame: 9
+    endFrame: 11
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 9
+    _containerName: teleportContainer
+--- !u!114 &11400038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf791b8ec508eb4a94c7295007afe68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: leverAnims
+  _fps: 12.666667
+  _duration: .631578922
+  framesets:
+  - name: unlock
+    container: {fileID: 11400032}
+    startFrame: 7
+    endFrame: 7
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 0
+    _containerName: leverSheet
+  - name: timedunlock
+    container: {fileID: 11400032}
+    startFrame: 0
+    endFrame: 4
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 1
+    _containerName: leverSheet
+  - name: timedlock
+    container: {fileID: 11400032}
+    startFrame: 5
+    endFrame: 5
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 6
+    _containerName: leverSheet
+  - name: lock
+    container: {fileID: 11400032}
+    startFrame: 6
+    endFrame: 6
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 7
+    _containerName: leverSheet
+--- !u!114 &11400040
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7fd059584f74b4fa508205f4eb6d94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mute: 0
+  volume: 1
+  soundClips: []
+--- !u!114 &11400042
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100044}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44deb34871f7e654d9aa02cb60595c81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tracing: 1
+  traceMaterials: 0
+--- !u!114 &11400044
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d5babc1b7b3f401aa32b828892605bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrototypes:
+  - name: Sprite
+    prototype: {fileID: 100000, guid: dde1095e7f0e5f24e9e0e4bed757b6c8, type: 2}
+  - name: FilledSprite
+    prototype: {fileID: 100000, guid: 8d62bcfcffb1ec045b3871955951bece, type: 2}
+  - name: AnimatingSprite
+    prototype: {fileID: 100000, guid: 6990eac78afc3924fbf55b3744ffcd04, type: 2}
+  - name: Animation
+    prototype: {fileID: 100000, guid: d15cc9386cefe3a4887d6194eee4a839, type: 2}
+  - name: SpriteSheet
+    prototype: {fileID: 100000, guid: 83f7fb59a87e1e840b645c3d4be771a3, type: 2}
+  - name: GradientSprite
+    prototype: {fileID: 100000, guid: 192bf20f01aed934db2bd1ca41586910, type: 2}
+  - name: TextSprite
+    prototype: {fileID: 100000, guid: 3a751d0f6c428c843a1848acdc33859f, type: 2}
+  - name: Scale9Sprite
+    prototype: {fileID: 100000, guid: f237d126b36f96d4cbb931a9cd256e6b, type: 2}
+  - name: ClippingAreaSprite
+    prototype: {fileID: 100000, guid: 9779b1469c9f47e48bebefab92abb009, type: 2}
+  - name: ClipSprite
+    prototype: {fileID: 100000, guid: 553830f2ab9940c468b8a3c59ebe8c5e, type: 2}
+  materials:
+  - name: solid
+    fieldColorTint: 
+    fieldAlphaChannel: 
+    fieldAlphaColor: 
+    material: {fileID: 2100000, guid: 0689fa8d5b1a444d38245499db0606ca, type: 2}
+  - name: transparent
+    fieldColorTint: 
+    fieldAlphaChannel: 
+    fieldAlphaColor: 
+    material: {fileID: 2100000, guid: efc9e2b7f726042628f95283e95c71ea, type: 2}
+  - name: additive
+    fieldColorTint: 
+    fieldAlphaChannel: 
+    fieldAlphaColor: 
+    material: {fileID: 2100000, guid: 1ba717d70d73142c193d2495a4bc382b, type: 2}
+  - name: tint
+    fieldColorTint: _EmisColor
+    fieldAlphaChannel: 
+    fieldAlphaColor: 
+    material: {fileID: 2100000, guid: 7ad68cdc562564964ad1bc48c61a290e, type: 2}
+  - name: alpha
+    fieldColorTint: _Color
+    fieldAlphaChannel: 
+    fieldAlphaColor: _Color
+    material: {fileID: 2100000, guid: 13b802328ac3e4c3f8f13bde888ac538, type: 2}
+  _world: 0
+  deactivatePrototypes: 1
+  _debug: 0
+  _reset: 0
+  startPassive: 1
+--- !u!114 &11400046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd220758bd0b8b4685199267909af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: objects
+  _sheetSize: {x: 256, y: 256}
+  texture: {fileID: 2800000, guid: 006f7bf6c41bf374b9a9d760c6ae18df, type: 3}
+  sizeTextures: []
+  generateSprites: 0
+  atlasData:
+  - name: crate
+    position: {x: 0, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: end_1
+    position: {x: 100, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: end_2
+    position: {x: 150, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: end_3
+    position: {x: 200, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: key
+    position: {x: 0, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 30, y: 30}
+    frameSize: {x: 30, y: 30}
+    metaData: []
+  offsetSizing: 1
+  metaType: 
+  metaData: []
+  _atlasDataFile: {fileID: 4900000, guid: 954ba3237fd8f9c459ca218263d0ba3a, type: 3}
+  reloadData: 0
+  bytesDataFile: 3138
+  id: 6
+--- !u!114 &11400048
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf791b8ec508eb4a94c7295007afe68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: walkerAnims
+  _fps: 12.666667
+  _duration: 1.73684204
+  framesets:
+  - name: stand
+    container: {fileID: 11400070}
+    startFrame: 0
+    endFrame: 11
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 0
+    _containerName: walkerSheet
+  - name: run
+    container: {fileID: 11400070}
+    startFrame: 12
+    endFrame: 21
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 12
+    _containerName: walkerSheet
+--- !u!114 &11400050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd220758bd0b8b4685199267909af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: materialsSheet
+  _sheetSize: {x: 40, y: 20}
+  texture: {fileID: 2800000, guid: a651ba96b21a4354e823ac2f7ea0458c, type: 3}
+  sizeTextures: []
+  generateSprites: 0
+  atlasData:
+  - name: reflecting_mat
+    position: {x: 0, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 20, y: 20}
+    frameSize: {x: 20, y: 20}
+    metaData: []
+  - name: stone_mat
+    position: {x: 20, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 20, y: 20}
+    frameSize: {x: 20, y: 20}
+    metaData: []
+  offsetSizing: 1
+  metaType: 
+  metaData: []
+  _atlasDataFile: {fileID: 4900000, guid: 1dd7b9a870737f644a8de520f532704c, type: 3}
+  reloadData: 0
+  bytesDataFile: 1724
+  id: 3
+--- !u!114 &11400052
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd220758bd0b8b4685199267909af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: invasionSheet
+  _sheetSize: {x: 4096, y: 4096}
+  texture: {fileID: 2800000, guid: 4280461a98b32a249bf4d0e0854486a6, type: 3}
+  sizeTextures: []
+  generateSprites: 0
+  atlasData:
+  - name: invasion_0000
+    position: {x: 0, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 800, y: 600}
+    frameSize: {x: 800, y: 600}
+    metaData: []
+  - name: invasion_0001
+    position: {x: 800, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 800, y: 600}
+    frameSize: {x: 800, y: 600}
+    metaData: []
+  - name: invasion_0002
+    position: {x: 1600, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 800, y: 600}
+    frameSize: {x: 800, y: 600}
+    metaData: []
+  - name: invasion_0003
+    position: {x: 2400, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 800, y: 600}
+    frameSize: {x: 800, y: 600}
+    metaData: []
+  - name: invasion_0004
+    position: {x: 3200, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 800, y: 600}
+    frameSize: {x: 800, y: 600}
+    metaData: []
+  - name: invasion_0005
+    position: {x: 0, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 800, y: 600}
+    frameSize: {x: 800, y: 600}
+    metaData: []
+  - name: invasion_0006
+    position: {x: 800, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 800, y: 600}
+    frameSize: {x: 800, y: 600}
+    metaData: []
+  - name: invasion_0007
+    position: {x: 1600, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 800, y: 600}
+    frameSize: {x: 800, y: 600}
+    metaData: []
+  - name: invasion_0008
+    position: {x: 2400, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 800, y: 600}
+    frameSize: {x: 800, y: 600}
+    metaData: []
+  - name: invasion_0009
+    position: {x: 3200, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 800, y: 600}
+    frameSize: {x: 800, y: 600}
+    metaData: []
+  - name: invasion_0010
+    position: {x: 0, y: 1200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 800, y: 600}
+    frameSize: {x: 800, y: 600}
+    metaData: []
+  - name: invasion_0011
+    position: {x: 800, y: 1200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 800, y: 600}
+    frameSize: {x: 800, y: 600}
+    metaData: []
+  - name: invasion_0012
+    position: {x: 1600, y: 1200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 800, y: 600}
+    frameSize: {x: 800, y: 600}
+    metaData: []
+  - name: invasion_0013
+    position: {x: 2400, y: 1200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 800, y: 600}
+    frameSize: {x: 800, y: 600}
+    metaData: []
+  - name: invasion_0014
+    position: {x: 3200, y: 1200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 800, y: 600}
+    frameSize: {x: 800, y: 600}
+    metaData: []
+  - name: invasion_0015
+    position: {x: 0, y: 1800}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 800, y: 600}
+    frameSize: {x: 800, y: 600}
+    metaData: []
+  - name: invasion_0016
+    position: {x: 800, y: 1800}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 800, y: 600}
+    frameSize: {x: 800, y: 600}
+    metaData: []
+  - name: invasion_0017
+    position: {x: 1600, y: 1800}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 800, y: 600}
+    frameSize: {x: 800, y: 600}
+    metaData: []
+  - name: invasion_0018
+    position: {x: 2400, y: 1800}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 800, y: 600}
+    frameSize: {x: 800, y: 600}
+    metaData: []
+  offsetSizing: 1
+  metaType: 
+  metaData: []
+  _atlasDataFile: {fileID: 4900000, guid: f141eb9b3d271a843975be4d386ef319, type: 3}
+  reloadData: 0
+  bytesDataFile: 10063
+  id: 4
+--- !u!114 &11400054
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd220758bd0b8b4685199267909af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: enemySheet
+  _sheetSize: {x: 512, y: 1024}
+  texture: {fileID: 2800000, guid: 53a8df75d8b9d7347940ce46bb43d377, type: 3}
+  sizeTextures: []
+  generateSprites: 0
+  atlasData:
+  - name: 01
+    position: {x: 1, y: 1}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 02
+    position: {x: 103, y: 1}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 03
+    position: {x: 205, y: 1}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 04
+    position: {x: 307, y: 1}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 05
+    position: {x: 409, y: 1}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 06
+    position: {x: 1, y: 124}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 07
+    position: {x: 103, y: 124}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 08
+    position: {x: 205, y: 124}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 09
+    position: {x: 307, y: 124}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 10
+    position: {x: 409, y: 124}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 11
+    position: {x: 1, y: 247}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 12
+    position: {x: 103, y: 247}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 13
+    position: {x: 205, y: 247}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 14
+    position: {x: 307, y: 247}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 15
+    position: {x: 409, y: 247}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 16
+    position: {x: 1, y: 370}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 17
+    position: {x: 103, y: 370}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 18
+    position: {x: 205, y: 370}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 19
+    position: {x: 307, y: 370}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 20
+    position: {x: 409, y: 370}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 21
+    position: {x: 1, y: 493}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 22
+    position: {x: 103, y: 493}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 23
+    position: {x: 205, y: 493}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 24
+    position: {x: 307, y: 493}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 25
+    position: {x: 409, y: 493}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 26
+    position: {x: 1, y: 616}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 27
+    position: {x: 103, y: 616}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 28
+    position: {x: 205, y: 616}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 29
+    position: {x: 307, y: 616}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  - name: 30
+    position: {x: 409, y: 616}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 101, y: 122}
+    frameSize: {x: 101, y: 122}
+    metaData: []
+  offsetSizing: 1
+  metaType: 
+  metaData: []
+  _atlasDataFile: {fileID: 4900000, guid: 7f3d3e1d167181a4ba7dd771bf70b6b4, type: 3}
+  reloadData: 0
+  bytesDataFile: 15087
+  id: 17
+--- !u!114 &11400056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb3151926952d240ba095713745f034, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraOverride: {fileID: 0}
+  _zoom: 0
+  _position: {x: 0, y: 0}
+  _rotation: 0
+  _movementTarget: {fileID: 0}
+  _rotationTarget: {fileID: 0}
+  _worldBounds:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  _alwaysPixelPerfect: 0
+  _pixelPerfectResolution: {x: 800, y: 600}
+  customSize: 0
+  drawGizmos: 1
+  gizmosColor: {r: 1, g: .921568632, b: .0156862754, a: 1}
+  cameraDepth: -1000
+  cameraRange: 2001
+--- !u!114 &11400058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd220758bd0b8b4685199267909af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: playerSheet
+  _sheetSize: {x: 512, y: 512}
+  texture: {fileID: 2800000, guid: 15d30b27af903494c8bb73094772a372, type: 3}
+  sizeTextures: []
+  generateSprites: 0
+  atlasData:
+  - name: perso_idle0001
+    position: {x: 0, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_idle0002
+    position: {x: 100, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_idle0003
+    position: {x: 200, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_idle0004
+    position: {x: 300, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_idle0005
+    position: {x: 400, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_jump0001
+    position: {x: 0, y: 120}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_jump0002
+    position: {x: 100, y: 120}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_jump0003
+    position: {x: 200, y: 120}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_jump0004
+    position: {x: 300, y: 120}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_jump0005
+    position: {x: 400, y: 120}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0001
+    position: {x: 0, y: 240}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0002
+    position: {x: 100, y: 240}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0003
+    position: {x: 200, y: 240}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0004
+    position: {x: 300, y: 240}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0005
+    position: {x: 400, y: 240}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0006
+    position: {x: 0, y: 360}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0007
+    position: {x: 100, y: 360}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0008
+    position: {x: 200, y: 360}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0009
+    position: {x: 300, y: 360}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0010
+    position: {x: 400, y: 360}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  offsetSizing: 1
+  metaType: 
+  metaData: []
+  _atlasDataFile: {fileID: 4900000, guid: 296c2c57bc61dcf4987fb2476c391a97, type: 3}
+  reloadData: 0
+  bytesDataFile: 10536
+  id: 24
+--- !u!114 &11400060
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd220758bd0b8b4685199267909af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: metal
+  _sheetSize: {x: 150, y: 250}
+  texture: {fileID: 2800000, guid: f947a830383a657478553c40db7718e2, type: 3}
+  sizeTextures: []
+  generateSprites: 0
+  atlasData:
+  - name: Metal01
+    position: {x: 0, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Metal02
+    position: {x: 50, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Metal03
+    position: {x: 100, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Metal04
+    position: {x: 0, y: 50}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Metal05
+    position: {x: 50, y: 50}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Metal06
+    position: {x: 100, y: 50}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Metal07
+    position: {x: 0, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Metal08
+    position: {x: 50, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Metal09
+    position: {x: 100, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Metal10
+    position: {x: 0, y: 150}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Metal11
+    position: {x: 50, y: 150}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Metal12
+    position: {x: 100, y: 150}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Metal13
+    position: {x: 0, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  offsetSizing: 1
+  metaType: 
+  metaData: []
+  _atlasDataFile: {fileID: 4900000, guid: 10e0a2f44c359ee479baf37ffd639020, type: 3}
+  reloadData: 0
+  bytesDataFile: 6940
+  id: 6
+--- !u!114 &11400062
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf791b8ec508eb4a94c7295007afe68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: playerAnims
+  _fps: 12.666667
+  _duration: 1.57894731
+  framesets:
+  - name: run
+    container: {fileID: 11400058}
+    startFrame: 10
+    endFrame: 19
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 0
+    _containerName: playerSheet
+  - name: stand
+    container: {fileID: 11400058}
+    startFrame: 0
+    endFrame: 4
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 10
+    _containerName: playerSheet
+  - name: jump
+    container: {fileID: 11400058}
+    startFrame: 5
+    endFrame: 9
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 15
+    _containerName: playerSheet
+--- !u!114 &11400064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc190f792e38f049ba23d3fe25546c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: Container (id=-2749774)
+  _sheetSize: {x: 0, y: 0}
+  texture: {fileID: 0}
+  sizeTextures: []
+  generateSprites: 0
+  _framesXY: {x: 1, y: 1}
+  _frameSize: {x: 0, y: 0}
+--- !u!114 &11400066
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd220758bd0b8b4685199267909af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: patrolerSheet
+  _sheetSize: {x: 256, y: 256}
+  texture: {fileID: 2800000, guid: e26e1cf59ca572d49a7bf76b465b2d9d, type: 3}
+  sizeTextures: []
+  generateSprites: 0
+  atlasData:
+  - name: patrol0001
+    position: {x: 0, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 50}
+    frameSize: {x: 100, y: 50}
+    metaData: []
+  - name: patrol0002
+    position: {x: 100, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 50}
+    frameSize: {x: 100, y: 50}
+    metaData: []
+  - name: patrol0003
+    position: {x: 0, y: 50}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 50}
+    frameSize: {x: 100, y: 50}
+    metaData: []
+  - name: patrol0004
+    position: {x: 100, y: 50}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 50}
+    frameSize: {x: 100, y: 50}
+    metaData: []
+  - name: patrol0005
+    position: {x: 0, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 50}
+    frameSize: {x: 100, y: 50}
+    metaData: []
+  - name: patrol0006
+    position: {x: 100, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 50}
+    frameSize: {x: 100, y: 50}
+    metaData: []
+  - name: patrol0007
+    position: {x: 0, y: 150}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 50}
+    frameSize: {x: 100, y: 50}
+    metaData: []
+  - name: patrol0008
+    position: {x: 100, y: 150}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 50}
+    frameSize: {x: 100, y: 50}
+    metaData: []
+  - name: patrol0009
+    position: {x: 0, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 50}
+    frameSize: {x: 100, y: 50}
+    metaData: []
+  - name: patrol0010
+    position: {x: 100, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 50}
+    frameSize: {x: 100, y: 50}
+    metaData: []
+  offsetSizing: 1
+  metaType: 
+  metaData: []
+  _atlasDataFile: {fileID: 4900000, guid: 97ec9a62edd99374180f3fff603fa54c, type: 3}
+  reloadData: 0
+  bytesDataFile: 5582
+  id: 4
+--- !u!114 &11400068
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf791b8ec508eb4a94c7295007afe68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: RocheDestructible
+  _fps: 24
+  _duration: 4.5
+  framesets:
+  - name: destroy
+    container: {fileID: 0}
+    startFrame: 15
+    endFrame: 23
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 0
+    _containerName: TileRocheDestrucible
+--- !u!114 &11400070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd220758bd0b8b4685199267909af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: walkerSheet
+  _sheetSize: {x: 512, y: 512}
+  texture: {fileID: 2800000, guid: e85ad46854bab1e4dae79ffada6cebb1, type: 3}
+  sizeTextures: []
+  generateSprites: 0
+  atlasData:
+  - name: follow_idle0001
+    position: {x: 0, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: follow_idle0002
+    position: {x: 100, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: follow_idle0003
+    position: {x: 200, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: follow_idle0004
+    position: {x: 300, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: follow_idle0005
+    position: {x: 400, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: follow_idle0006
+    position: {x: 0, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: follow_idle0007
+    position: {x: 100, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: follow_idle0008
+    position: {x: 200, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: follow_idle0009
+    position: {x: 300, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: follow_idle0010
+    position: {x: 400, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: follow_idle0011
+    position: {x: 0, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: follow_idle0012
+    position: {x: 100, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: follow_walk0001
+    position: {x: 200, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: follow_walk0002
+    position: {x: 300, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: follow_walk0003
+    position: {x: 400, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: follow_walk0004
+    position: {x: 0, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: follow_walk0005
+    position: {x: 100, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: follow_walk0006
+    position: {x: 200, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: follow_walk0007
+    position: {x: 300, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: follow_walk0008
+    position: {x: 400, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: follow_walk0009
+    position: {x: 0, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: follow_walk0010
+    position: {x: 100, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  offsetSizing: 1
+  metaType: 
+  metaData: []
+  _atlasDataFile: {fileID: 4900000, guid: 80839b9832ecd984c957b5bf1ae36a8d, type: 3}
+  reloadData: 0
+  bytesDataFile: 11546
+  id: 4
+--- !u!114 &11400072
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf791b8ec508eb4a94c7295007afe68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: baseElectricAnims
+  _fps: 12.666667
+  _duration: .473684192
+  framesets:
+  - name: baseDefault
+    container: {fileID: 11400004}
+    startFrame: 3
+    endFrame: 3
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 0
+    _containerName: arcElectricSheet
+  - name: baseON
+    container: {fileID: 11400004}
+    startFrame: 4
+    endFrame: 5
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 1
+    _containerName: arcElectricSheet
+  - name: arcDefault
+    container: {fileID: 11400004}
+    startFrame: 0
+    endFrame: 0
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 3
+    _containerName: arcElectricSheet
+  - name: arcON
+    container: {fileID: 11400004}
+    startFrame: 1
+    endFrame: 2
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 4
+    _containerName: arcElectricSheet
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100044}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

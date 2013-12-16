@@ -26,6 +26,7 @@ public class EndDoor : MonoBehaviour {
 				StartCoroutine("lastFrameBuzzer");
 				Destroy (GameObject.Find("Player/IngameUI/NeedKey").gameObject);
 				finishLevel();
+				MasterAudio.PlaySound("key_door");
 			}
 			else if (Input.GetKeyDown(KeyCode.F) && GameObject.Find("Player").GetComponent<Player>().hasFinalKey == false)
 			{

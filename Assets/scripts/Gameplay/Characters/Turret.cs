@@ -22,6 +22,7 @@ public class Turret : MonoBehaviour {
 	private IEnumerator shoot () {
 		yield return new WaitForSeconds(shootFrequency);
 		instProj = Instantiate (prefabProj) as Projectile;
+		MasterAudio.PlaySound("turret_shot");
 		switch (myShootDir) {
 			case shootDir.Down:
 				instProj.direction = Vector3.down;

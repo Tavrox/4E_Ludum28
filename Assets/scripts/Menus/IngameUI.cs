@@ -13,11 +13,14 @@ public class IngameUI : MonoBehaviour {
 	}
 	public ListAction action;
 	private OTSprite prefabSprite;
-	public bool paused;
 	
 	void Start () 
 	{
 		prefabSprite = GetComponentInChildren<OTSprite>();
+		
+		GameEventManager.GameOver += GameOver;
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
 	}
 
 	public void fadeOut()
@@ -37,6 +40,18 @@ public class IngameUI : MonoBehaviour {
 			}
 
 		}
+	}
+	private void GamePause()
+	{
+		
+	}
+	private void GameUnpause()
+	{
+
+	}
+	private void GameOver()
+	{
+
 
 	}
 }

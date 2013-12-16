@@ -23,7 +23,7 @@ public class Player : Character {
 	{
 		base.Start();
 		
-		
+		InvokeRepeating("playFootstep",0,0.2f);
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GameOver += GameOver;
 		GameEventManager.GamePause += GamePause;
@@ -142,6 +142,14 @@ public class Player : Character {
 			{
 				GameEventManager.TriggerGameUnpause();
 			}
+		}
+	}
+
+	private void playFootstep()
+	{
+		if (isLeft == true || isRight == true || isGoDown == true || isJump == true)
+		{
+			MasterAudio.PlaySound("player_runL1");
 		}
 	}
 
