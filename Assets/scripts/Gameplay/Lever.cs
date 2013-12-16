@@ -35,6 +35,7 @@ public class Lever : MonoBehaviour {
 		{
 			if (Input.GetKeyDown(KeyCode.F) && !seqLocked)
 			{
+				MasterAudio.PlaySound("lever");
 				trigged = !trigged;
 				if(trigged) {if(myButtonType == btnType.TimedBtn) animSprite.Play("timedunlock"); else animSprite.Play("unlock");}
 				else {if(myButtonType == btnType.TimedBtn) animSprite.Play("timedlock"); else animSprite.Play("lock");}

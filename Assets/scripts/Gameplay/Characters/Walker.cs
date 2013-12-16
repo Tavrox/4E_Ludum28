@@ -8,11 +8,21 @@ public class Walker : Enemy {
 
 	/***** ENNEMI BEGIN *****/
 
+	void Start()
+	{
+		InvokeRepeating("sound",0,0.5f);
+	}
+
 	// Update is called once per frame
 	public void Update () 
 	{
 		if(chasingPlayer) {ChasePlayer();}
 		detectPlayer();
 		detectEndPlatform();
+	}
+
+	private void sound()
+	{
+		MasterAudio.PlaySound("blob_run1");
 	}
 }

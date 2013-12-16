@@ -17,6 +17,7 @@ public class Key : MonoBehaviour {
 	{
 		if (_coll.name == "Player")
 		{
+			MasterAudio.PlaySound("key_collecting");
 			GameObject.Find("Player").GetComponent<Player>().hasFinalKey = true;
 			Destroy (gameObject);
 		}
