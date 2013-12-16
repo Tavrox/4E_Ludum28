@@ -59,9 +59,12 @@ public class Lever : MonoBehaviour {
 	}
 	public void triggerLever()
 	{
-		foreach (TriggeredDoor door in doors) {
-			if(door.isLocked) {door.Unlock();}
-			else {door.Lock();}
+		if (gameObject != null)
+		{
+			foreach (TriggeredDoor door in doors) {
+				if(door.isLocked) {door.Unlock();}
+				else {door.Lock();}
+			}
 		}
 	}
 	public IEnumerator resetLever () {

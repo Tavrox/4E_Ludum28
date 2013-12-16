@@ -7,15 +7,6 @@ public class EndDoor : MonoBehaviour {
 	public bool triggered;
 	public int levelToGo = 0;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
 	void OnTriggerStay(Collider other)
 	{
@@ -42,6 +33,18 @@ public class EndDoor : MonoBehaviour {
 		sprite.frameIndex += 1;
 	}
 	private void finishLevel() {
+		MasterAudio.PlaySound("win");
+		MasterAudio.FadePlaylistToVolume(0f, 2f);
+		MasterAudio.FadeAllPlaylistsToVolume(0f, 2f);
+		MasterAudio.FadeOutAllOfSound("bg",2f);
+		MasterAudio.FadeOutAllOfSound("intro",2f);
+		MasterAudio.FadeOutAllOfSound("jam",2f);
+		StartCoroutine("EndGame");
+	}
+
+	IEnumerator EndGame()
+	{
+		yield return new WaitForSeconds(5f);		
 		Application.LoadLevel(levelToGo);
 	}
 }

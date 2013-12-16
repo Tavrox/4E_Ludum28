@@ -11,40 +11,52 @@ public class Timer : MonoBehaviour {
 	public Color _colSafe;
 	public Color _colorWarning;
 	public Color _colCritical;
+	private bool pauseTimer = false;
+
+	public bool triggeredEnd = false;
 
 
 	// Use this for initialization
 	void Start () {
-		InvokeRepeating("updateTimer",0,0.01f);
+		InvokeRepeating("updateTimer", 0, 0.01f);
+
+		GameEventManager.GameStart += GameStart;
+		GameEventManager.GameOver += GameOver;
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
 	}
 	
 	private void updateTimer()
 	{
-		microSecLeft -= 1;
+		if (pauseTimer != true)
+		{
+			microSecLeft -= 1;
 
-		if (secLeft < 60)
-		{
-			_skinTimer.label.normal.textColor = _colSafe;
-		}
-		if (secLeft < 30)
-		{
-			_skinTimer.label.normal.textColor = _colorWarning;
-		}
-		if (secLeft < 15)
-		{
-			_skinTimer.label.normal.textColor = _colCritical;
-		}
+			if (secLeft < 60)
+			{
+				_skinTimer.label.normal.textColor = _colSafe;
+			}
+			if (secLeft < 30)
+			{
+				_skinTimer.label.normal.textColor = _colorWarning;
+			}
+			if (secLeft < 15)
+			{
+				_skinTimer.label.normal.textColor = _colCritical;
+			}
 
-		if (microSecLeft == 0)
-		{
-			secLeft -= 1 ;
-			microSecLeft = 59;
-		}
+			if (microSecLeft == 0)
+			{
+				secLeft -= 1 ;
+				microSecLeft = 59;
+			}
 
-		if (secLeft <= 0)
-		{
-			GameEventManager.TriggerGameOver();
-			secLeft = 60;
+			if (secLeft <= 0 && triggeredEnd == false)
+			{
+				GameEventManager.TriggerGameOver();
+				triggeredEnd = true;
+				secLeft = 60;
+			}
 		}
 	}
 
@@ -52,6 +64,25 @@ public class Timer : MonoBehaviour {
 	{
 			secLeft = 60;
 			microSecLeft = 60;
+	}
+
+	private void GameStart()
+	{
+		pauseTimer = false;
+		resetTimer();
+	}
+	private void GamePause()
+	{
+		pauseTimer = true;
+	}
+	private void GameUnpause()
+	{
+		pauseTimer = false;
+	}
+	
+	private void GameOver()
+	{
+		pauseTimer = true;
 	}
 
 	private void OnGUI()

@@ -26,10 +26,11 @@ public class BaseElectric : MonoBehaviour {
 		StartCoroutine("active");
 	}
 
-	void OnTriggerEnter(Collider other)
+	void OnTriggerEnter(Collider _other)
 	{
-		if (other.CompareTag("Player") == true)
+		if (_other.CompareTag("Player") == true && GameObject.Find("Player").GetComponent<Player>().isDead == false)
 		{
+			GameObject.Find("Player").GetComponent<Player>().isDead = true;
 			GameEventManager.TriggerGameOver();
 		}
 	}

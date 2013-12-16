@@ -37,6 +37,7 @@ public class Patroler : Character {
 	{
 		base.Start();
 		
+		InvokeRepeating("sound",0,0.5f);
 		
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GameOver += GameOver;
@@ -108,12 +109,12 @@ public class Patroler : Character {
 	}
 	
 	
-	protected void OnTriggerEnter(Collider other) 
+	protected void OnTriggerEnter(Collider _other) 
 	{
-		if(other.gameObject.CompareTag("Player")) 
+		if (_other.CompareTag("Player") == true && GameObject.Find("Player").GetComponent<Player>().isDead == false)
 		{
+			GameObject.Find("Player").GetComponent<Player>().isDead = true;
 			GameEventManager.TriggerGameOver();
-			chasingPlayer = false;
 		}
 	}
 	
@@ -146,5 +147,10 @@ public class Patroler : Character {
 	{
 		enabled = true;	
 		paused = false;
+	}
+
+	private void sound()
+	{
+		MasterAudio.PlaySound("Blob_run2");
 	}
 }
