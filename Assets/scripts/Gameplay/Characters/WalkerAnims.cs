@@ -39,6 +39,7 @@ public class WalkerAnims : MonoBehaviour
 		animSprite.looping = true;
 		// Order of action matters, they need to have priorities. //
 		Run();
+		Stand();
 	}
 	private void Run()
 	{

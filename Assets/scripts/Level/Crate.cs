@@ -55,7 +55,7 @@ public class Crate : MonoBehaviour {
 	void OnTriggerStay(Collider other) 
 	{
 		if(other.gameObject.name=="Crate" || other.gameObject.name=="Crate(Clone)") {
-			other.gameObject.GetComponent<Crate>().transform.position += new Vector3(crateMove+0.1f,0f,0f);
+			if(detectPlayer()) other.gameObject.GetComponent<Crate>().transform.position += new Vector3(crateMove*1.5f/*+0.1f*/,0f,0f);
 		}
 //		if(other.gameObject.CompareTag("Player")) {
 //
@@ -78,7 +78,7 @@ public class Crate : MonoBehaviour {
 //////			grounded = true;
 //////		}
 	}
-	private void detectPlayer() {
+	private bool detectPlayer() {
 		detectPlayerLeft = new Ray(new Vector3 (thisTransform.position.x, thisTransform.position.y, thisTransform.position.z), Vector3.left);
 		detectPlayerRight = new Ray(new Vector3 (thisTransform.position.x, thisTransform.position.y, thisTransform.position.z), Vector3.right);
 		Debug.DrawRay(new Vector3 (thisTransform.position.x, thisTransform.position.y, thisTransform.position.z), Vector3.left*spriteScaleX/2);
@@ -87,18 +87,21 @@ public class Crate : MonoBehaviour {
 			//print (hitInfo.collider.gameObject.tag);
 			if(hitInfo.collider.gameObject.tag=="Player") {
 				_player.moveVel = 0.5f*playerMoveVel;
-				if(_player.isRight) crateMove = _player.moveVel*Time.deltaTime;
+				if(_player.isRight) crateMove = _player.moveVel*Time.deltaTime*2f;
 				thisTransform.position += new Vector3(crateMove,0f,0f);
+				return true;
 			}
 		}
 		if (Physics.Raycast(detectPlayerRight, out hitInfo, spriteScaleX/2)) {
 			//print (hitInfo.collider.gameObject.tag);
 			if(hitInfo.collider.gameObject.tag=="Player") {
 				_player.moveVel = 0.5f*playerMoveVel;
-				if(_player.isLeft) crateMove = -_player.moveVel*Time.deltaTime;
+				if(_player.isLeft) crateMove = -_player.moveVel*Time.deltaTime*2f;
 				thisTransform.position += new Vector3(crateMove,0f,0f);
+				return true;
 			}
 		}
+		return false;
 	}
 	private void detectEndPlatform() {
 		detectEndPFLeft = new Ray(new Vector3 (thisTransform.position.x-(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down);

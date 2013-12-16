@@ -105,7 +105,6 @@ public class Character : MonoBehaviour
 	// Update is called once per frame
 	public virtual void UpdateMovement() 
 	{
-		
 		if(thisTransform.position.y < mypos.x) falling = true;
 		else falling = false;
 
@@ -125,7 +124,8 @@ public class Character : MonoBehaviour
 		{			
 			vectorMove.x = -moveVel;
 		}
-		
+		if(!grounded) vectorMove.x=vectorMove.x/1.2f;
+		//if (chute) vectorMove.x=vectorMove.x/2.5f;
 		// pressed jump button
 		if (isJump == true && !chute)
 		{
@@ -142,10 +142,12 @@ public class Character : MonoBehaviour
 //					vectorMove.y = jump2Vel;
 //				}
 			}
-			if(vectorMove.y < maxVelY)	vectorMove.y += 50;
+			if(vectorMove.y < maxVelY)	vectorMove.y += 60;
 			else chute=true;
 		}
-		if(!grounded && !Input.GetKey("up")) chute = true;
+		float addForce = 1;
+		if((!grounded && !Input.GetKey("up")) || blockedUp) chute = true;
+		if(blockedUp) {print("TARACE");addForce=10f;/*gravityY += 150f;StartCoroutine("resetGravity");*/}
 		if(chute && grounded) chute = false;
 
 		// landed from fall/jump
@@ -160,8 +162,8 @@ public class Character : MonoBehaviour
 		// apply gravity while airborne
 		if(grounded == false && chute)
 		{
-			if(vectorMove.y>0 && vectorMove.y<500) vectorMove.y -= gravityY * Time.deltaTime * 1.5f;
-			vectorMove.y -= gravityY * Time.deltaTime * 1.5f;
+			if(vectorMove.y>0 && vectorMove.y<850) vectorMove.y -= gravityY * Time.deltaTime * 1.5f * addForce;
+			vectorMove.y -= gravityY * Time.deltaTime * 1.5f* addForce;
 		}
 		
 		// velocity limiter
@@ -176,7 +178,10 @@ public class Character : MonoBehaviour
 		thisTransform.position += new Vector3(vectorFixed.x,vectorFixed.y,0f);
 		
 	}
-	
+	private IEnumerator resetGravity() {
+		yield return new WaitForSeconds (1f);
+		gravityY -= 150f;
+	}
 	// ============================== RAYCASTS ============================== 
 	
 	void UpdateRaycasts()
