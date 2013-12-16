@@ -91,7 +91,7 @@ public class Character : MonoBehaviour
 		halfMyX = GetComponentInChildren<Transform>().GetComponentInChildren<OTAnimatingSprite>().size.x * 0.5f;
 		halfMyY = GetComponentInChildren<Transform>().GetComponentInChildren<OTAnimatingSprite>().size.y * 0.5f + 0.2f;
 		StartCoroutine(StartGravity());
-		mypos = new Vector3(thisTransform.position.x,thisTransform.position.y,thisTransform.position.z);
+		spawnPos = mypos = new Vector3(thisTransform.position.x,thisTransform.position.y,thisTransform.position.z);
 	}
 	
 	IEnumerator StartGravity()
