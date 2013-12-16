@@ -115,10 +115,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: teleportAnims
   _fps: 12.666667
-  _duration: 1.42105258
+  _duration: .947368383
   framesets:
   - name: default
-    container: {fileID: 0}
+    container: {fileID: 112737211}
     startFrame: 0
     endFrame: 3
     frameNames: []
@@ -130,7 +130,7 @@ MonoBehaviour:
     startIndex: 0
     _containerName: teleportContainer
   - name: teleport
-    container: {fileID: 0}
+    container: {fileID: 112737211}
     startFrame: 4
     endFrame: 8
     frameNames: []
@@ -142,9 +142,9 @@ MonoBehaviour:
     startIndex: 4
     _containerName: teleportContainer
   - name: teleportOUT
-    container: {fileID: 0}
+    container: {fileID: 112737211}
     startFrame: 9
-    endFrame: 13
+    endFrame: 11
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -219,109 +219,102 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: teleportContainer
-  _sheetSize: {x: 512, y: 512}
+  _sheetSize: {x: 256, y: 512}
   texture: {fileID: 2800000, guid: b30d048316e88d549aba7caf7b7b86f3, type: 3}
   sizeTextures: []
   generateSprites: 0
   atlasData:
-  - name: teleport00
+  - name: tp_01
     position: {x: 0, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
-    size: {x: 100, y: 120}
-    frameSize: {x: 100, y: 120}
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
     metaData: []
-  - name: teleport01
+  - name: tp_02
+    position: {x: 50, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: tp_03
     position: {x: 100, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
-    size: {x: 100, y: 120}
-    frameSize: {x: 100, y: 120}
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
     metaData: []
-  - name: teleport02
+  - name: tp_04
+    position: {x: 150, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: tp_05
     position: {x: 200, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
-    size: {x: 100, y: 120}
-    frameSize: {x: 100, y: 120}
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
     metaData: []
-  - name: teleport03
-    position: {x: 300, y: 0}
+  - name: tp_06
+    position: {x: 0, y: 100}
     offset: {x: 0, y: 0}
     rotated: 0
-    size: {x: 100, y: 120}
-    frameSize: {x: 100, y: 120}
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
     metaData: []
-  - name: teleport04
-    position: {x: 400, y: 0}
+  - name: tp_07
+    position: {x: 50, y: 100}
     offset: {x: 0, y: 0}
     rotated: 0
-    size: {x: 100, y: 120}
-    frameSize: {x: 100, y: 120}
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
     metaData: []
-  - name: teleport05
-    position: {x: 0, y: 120}
+  - name: tp_08
+    position: {x: 100, y: 100}
     offset: {x: 0, y: 0}
     rotated: 0
-    size: {x: 100, y: 120}
-    frameSize: {x: 100, y: 120}
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
     metaData: []
-  - name: teleport06
-    position: {x: 100, y: 120}
+  - name: tp_out_01
+    position: {x: 150, y: 100}
     offset: {x: 0, y: 0}
     rotated: 0
-    size: {x: 100, y: 120}
-    frameSize: {x: 100, y: 120}
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
     metaData: []
-  - name: teleport07
-    position: {x: 200, y: 120}
+  - name: tp_out_02
+    position: {x: 200, y: 100}
     offset: {x: 0, y: 0}
     rotated: 0
-    size: {x: 100, y: 120}
-    frameSize: {x: 100, y: 120}
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
     metaData: []
-  - name: teleport08
-    position: {x: 300, y: 120}
+  - name: tp_out_03
+    position: {x: 0, y: 200}
     offset: {x: 0, y: 0}
     rotated: 0
-    size: {x: 100, y: 120}
-    frameSize: {x: 100, y: 120}
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
     metaData: []
-  - name: teleport09
-    position: {x: 400, y: 120}
+  - name: tp_out_04
+    position: {x: 50, y: 200}
     offset: {x: 0, y: 0}
     rotated: 0
-    size: {x: 100, y: 120}
-    frameSize: {x: 100, y: 120}
-    metaData: []
-  - name: teleport10
-    position: {x: 0, y: 240}
-    offset: {x: 0, y: 0}
-    rotated: 0
-    size: {x: 100, y: 120}
-    frameSize: {x: 100, y: 120}
-    metaData: []
-  - name: teleport11
-    position: {x: 100, y: 240}
-    offset: {x: 0, y: 0}
-    rotated: 0
-    size: {x: 100, y: 120}
-    frameSize: {x: 100, y: 120}
-    metaData: []
-  - name: teleport12
-    position: {x: 200, y: 240}
-    offset: {x: 0, y: 0}
-    rotated: 0
-    size: {x: 100, y: 120}
-    frameSize: {x: 100, y: 120}
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
     metaData: []
   offsetSizing: 1
   metaType: 
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: 6c0eb94aa2069ec4f8e3c5c73db0cb2d, type: 3}
   reloadData: 0
-  bytesDataFile: 7070
-  id: 6
+  bytesDataFile: 6501
+  id: 7
 --- !u!1 &116516480
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,7 +885,7 @@ MonoBehaviour:
     pingPong: 0
     singleDuration: 0
     startIndex: 12
-    _containerName: playerSheet
+    _containerName: player
 --- !u!1 &281976422
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,7 +992,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 329735858}
+  - {fileID: 2080098883}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1015,7 +1008,7 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 1224145057}
   m_GameObject: {fileID: 281976422}
-  m_Mesh: {fileID: 1460154577}
+  m_Mesh: {fileID: 1759859238}
 --- !u!1001 &328425087
 Prefab:
   m_ObjectHideFlags: 0
@@ -1060,44 +1053,6 @@ Prefab:
   m_RootGameObject: {fileID: 1953680309}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!21 &329735858
-Material:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: OTMaterial-transparent
-  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
-  m_ShaderKeywords: []
-  m_CustomRenderQueue: -1
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-      data:
-        first:
-          name: _MainTex
-        second:
-          m_Texture: {fileID: 2800000, guid: 53a8df75d8b9d7347940ce46bb43d377, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-    m_Floats:
-      data:
-        first:
-          name: _InvFade
-        second: 1
-    m_Colors:
-      data:
-        first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _TintColor
-        second: {r: .5, g: .5, b: .5, a: .5}
-      data:
-        first:
-          name: _EmisColor
-        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &341992589
 GameObject:
   m_ObjectHideFlags: 0
@@ -4182,11 +4137,11 @@ Prefab:
     - target: {fileID: 3300000, guid: 91b838f1f91c9ee49b76a61700f615b6, type: 2}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1460154577}
+      objectReference: {fileID: 1759859238}
     - target: {fileID: 2300000, guid: 91b838f1f91c9ee49b76a61700f615b6, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 329735858}
+      objectReference: {fileID: 2080098883}
     - target: {fileID: 11400000, guid: 91b838f1f91c9ee49b76a61700f615b6, type: 2}
       propertyPath: _spriteContainer
       value: 
@@ -4553,8 +4508,8 @@ MonoBehaviour:
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: 9ff3c9b410a921041b2193fd126f0d24, type: 3}
   reloadData: 0
-  bytesDataFile: 7496
-  id: 4
+  bytesDataFile: 7292
+  id: 5
 --- !u!1001 &1378947335
 Prefab:
   m_ObjectHideFlags: 0
@@ -4743,149 +4698,6 @@ Prefab:
   m_RootGameObject: {fileID: 975305959}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!43 &1460154577
-Mesh:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  serializedVersion: 8
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 6
-    topology: 0
-    firstVertex: 0
-    vertexCount: 4
-    localAABB:
-      m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: .5, y: .5, z: 0}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_MeshCompression: 0
-  m_StreamCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexBuffer: 000001000200020003000000
-  m_Skin: []
-  m_VertexData:
-    m_CurrentChannels: 15
-    m_VertexCount: 4
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 24
-      format: 2
-      dimension: 1
-    - stream: 0
-      offset: 28
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_Streams:
-    - channelMask: 15
-      offset: 0
-      stride: 36
-      dividerOp: 0
-      frequency: 0
-    - channelMask: 0
-      offset: 0
-      stride: 0
-      dividerOp: 0
-      frequency: 0
-    - channelMask: 0
-      offset: 0
-      stride: 0
-      dividerOp: 0
-      frequency: 0
-    - channelMask: 0
-      offset: 0
-      stride: 0
-      dividerOp: 0
-      frequency: 0
-    m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000003b00c07f3f0000003f0000003f000000000000000000000000000080bfffffffff00004c3e00c07f3f0000003f000000bf000000000000000000000000000080bfffffffff00004c3e0040613f000000bf000000bf000000000000000000000000000080bfffffffff0000003b0040613f
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BindPoses:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Colors:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-  m_LocalAABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: .5, y: .5, z: 0}
-  m_MeshUsageFlags: 0
-  m_MeshOptimized: 0
 --- !u!1 &1466197171
 GameObject:
   m_ObjectHideFlags: 0
@@ -5010,11 +4822,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: bytesDataFile
-      value: 7496
+      value: 7292
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: id
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: m_Name
@@ -6507,7 +6319,7 @@ Camera:
   far clip plane: 2001
   field of view: 60
   orthographic: 1
-  orthographic size: 688.789246
+  orthographic size: 300
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -6888,6 +6700,149 @@ MonoBehaviour:
     singleDuration: 0
     startIndex: 4
     _containerName: arcElectricSheet
+--- !u!43 &1759859238
+Mesh:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  serializedVersion: 8
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 6
+    topology: 0
+    firstVertex: 0
+    vertexCount: 4
+    localAABB:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: .5, y: .5, z: 0}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_MeshCompression: 0
+  m_StreamCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexBuffer: 000001000200020003000000
+  m_Skin: []
+  m_VertexData:
+    m_CurrentChannels: 15
+    m_VertexCount: 4
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 24
+      format: 2
+      dimension: 1
+    - stream: 0
+      offset: 28
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_Streams:
+    - channelMask: 15
+      offset: 0
+      stride: 36
+      dividerOp: 0
+      frequency: 0
+    - channelMask: 0
+      offset: 0
+      stride: 0
+      dividerOp: 0
+      frequency: 0
+    - channelMask: 0
+      offset: 0
+      stride: 0
+      dividerOp: 0
+      frequency: 0
+    - channelMask: 0
+      offset: 0
+      stride: 0
+      dividerOp: 0
+      frequency: 0
+    m_DataSize: 144
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000003b00c07f3f0000003f0000003f000000000000000000000000000080bfffffffff00004c3e00c07f3f0000003f000000bf000000000000000000000000000080bfffffffff00004c3e0040613f000000bf000000bf000000000000000000000000000080bfffffffff0000003b0040613f
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BindPoses:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Colors:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+  m_LocalAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: .5, y: .5, z: 0}
+  m_MeshUsageFlags: 0
+  m_MeshOptimized: 0
 --- !u!1001 &1760413957
 Prefab:
   m_ObjectHideFlags: 0
@@ -7575,7 +7530,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.size
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: m_LocalPosition.x
@@ -7619,7 +7574,7 @@ Prefab:
       objectReference: {fileID: 4900000, guid: 6c0eb94aa2069ec4f8e3c5c73db0cb2d, type: 3}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: _sheetSize.x
-      value: 512
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: _sheetSize.y
@@ -7631,7 +7586,7 @@ Prefab:
       objectReference: {fileID: 2800000, guid: b30d048316e88d549aba7caf7b7b86f3, type: 3}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[0].name
-      value: teleport00
+      value: tp_01
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[0].position.x
@@ -7643,27 +7598,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[0].size.x
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[0].size.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[0].frameSize.x
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[0].frameSize.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[1].name
-      value: teleport01
+      value: tp_02
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[1].position.x
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[1].position.y
@@ -7671,27 +7626,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[1].size.x
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[1].size.y
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
-      propertyPath: atlasData.Array.data[1].frameSize.x
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
+      propertyPath: atlasData.Array.data[1].frameSize.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[1].frameSize.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[2].name
-      value: teleport02
+      value: tp_03
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[2].position.x
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[2].position.y
@@ -7699,27 +7654,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[2].size.x
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[2].size.y
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
-      propertyPath: atlasData.Array.data[2].frameSize.x
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
+      propertyPath: atlasData.Array.data[2].frameSize.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[2].frameSize.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[3].name
-      value: teleport03
+      value: tp_04
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[3].position.x
-      value: 300
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[3].position.y
@@ -7727,27 +7682,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[3].size.x
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[3].size.y
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
-      propertyPath: atlasData.Array.data[3].frameSize.x
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
+      propertyPath: atlasData.Array.data[3].frameSize.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[3].frameSize.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[4].name
-      value: teleport04
+      value: tp_05
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[4].position.x
-      value: 400
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[4].position.y
@@ -7755,23 +7710,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[4].size.x
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[4].size.y
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
-      propertyPath: atlasData.Array.data[4].frameSize.x
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
+      propertyPath: atlasData.Array.data[4].frameSize.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[4].frameSize.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[5].name
-      value: teleport05
+      value: tp_06
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[5].position.x
@@ -7779,195 +7734,195 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[5].position.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[5].size.x
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[5].size.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[5].frameSize.x
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[5].frameSize.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[6].name
-      value: teleport06
+      value: tp_07
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[6].position.x
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[6].position.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[6].size.x
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[6].size.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[6].frameSize.x
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[6].frameSize.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[7].name
-      value: teleport07
+      value: tp_08
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[7].position.x
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[7].position.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[7].size.x
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[7].size.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[7].frameSize.x
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[7].frameSize.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[8].name
-      value: teleport08
+      value: tp_out_01
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[8].position.x
-      value: 300
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[8].position.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[8].size.x
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[8].size.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[8].frameSize.x
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[8].frameSize.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: bytesDataFile
-      value: 7070
+      value: 6501
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: id
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[9].name
-      value: teleport09
+      value: tp_out_02
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[9].position.x
-      value: 400
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[9].position.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[9].size.x
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[9].size.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[9].frameSize.x
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[9].frameSize.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[10].name
-      value: teleport10
+      value: tp_out_03
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[10].position.y
-      value: 240
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[10].size.x
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[10].size.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[10].frameSize.x
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[10].frameSize.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[11].name
-      value: teleport11
+      value: tp_out_04
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[11].position.x
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[11].position.y
-      value: 240
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[11].size.x
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[11].size.y
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
-      propertyPath: atlasData.Array.data[11].frameSize.x
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
+      propertyPath: atlasData.Array.data[11].frameSize.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[11].frameSize.y
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9b3c86c20b0b56c4993ef04c40115bf4, type: 2}
       propertyPath: atlasData.Array.data[12].name
@@ -8258,6 +8213,44 @@ Transform:
   - {fileID: 1201443300}
   - {fileID: 116516481}
   m_Father: {fileID: 0}
+--- !u!21 &2080098883
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: OTMaterial-transparent
+  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 53a8df75d8b9d7347940ce46bb43d377, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _InvFade
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1001 &2104395474
 Prefab:
   m_ObjectHideFlags: 0

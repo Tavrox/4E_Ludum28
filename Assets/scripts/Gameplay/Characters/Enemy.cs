@@ -198,7 +198,7 @@ public class Enemy : Character {
 		//print ("patrolllll");
 		if(waypoints.Length<=0) print("No Waypoints linked");
 		//		print(transform.position+" - "+waypoints[waypointId].position);
-		if(Vector3.Distance(transform.position, waypoints[waypointId].position) < 1) {
+		if(Vector3.Distance(transform.position, waypoints[waypointId].position) < 30) {
 			go = !go;
 			if(go) waypointId=0;
 			else if (!go) waypointId=1;

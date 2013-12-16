@@ -159,6 +159,10 @@
             <filename>lv1.png</filename>
             <filename>lv2.png</filename>
             <filename>lv3.png</filename>
+            <filename>C:/Users/Tav/Google Drive/Workspace/4Edges/Projets/Prod/LD28/GD/transi.png</filename>
+            <filename>C:/Users/Tav/Pictures/bubble_key.png</filename>
+            <filename>C:/Users/Tav/Pictures/bubble_interact.png</filename>
+            <filename>C:/Users/Tav/Pictures/pause.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

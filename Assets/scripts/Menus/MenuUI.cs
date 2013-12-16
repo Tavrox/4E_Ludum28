@@ -13,14 +13,20 @@ public class MenuUI : MonoBehaviour {
 		Play,
 		GoToCredits,
 		Title,
-		BackToMenuFromCredits,
+		BackToMenu,
 		BackLevel,
 		GoToMainMenu,
 		None,
-		BackToMenuFromLevelChooser
+		BackToMenuFromLevelChooser,
+		GoLevel1,
+		GoLevel2,
+		GoLevel3,
+		GoLevel4,
+		GoLevel5
 	};
 	public ListMenu menu;
 	private bool clickable = false;
+	public bool animate = true;
 	private OTSprite spr;
 	private List<GameObject> menuObjects;
 	
@@ -54,7 +60,10 @@ public class MenuUI : MonoBehaviour {
 				break;
 			}
 		}
-		InvokeRepeating("animateItem", 0f, 2.5f);
+		if (animate == true)
+		{
+			InvokeRepeating("animateItem", 0f, 2.5f);
+		}
 	
 	}
 	private void OnMouseDown()
@@ -77,9 +86,9 @@ public class MenuUI : MonoBehaviour {
 				menuObjects.Clear();
 				break;
 			}
-			case (ListMenu.BackToMenuFromCredits):
+			case (ListMenu.BackToMenu):
 			{
-				
+				translateCamera(0f);
 				menuObjects.Add(findObject("Title"));
 				menuObjects.Add(findObject("Play"));
 				menuObjects.Add(findObject("Credits"));
@@ -97,12 +106,31 @@ public class MenuUI : MonoBehaviour {
 				translateCamera(-804.2063f);
 				break;
 			}
+			case (ListMenu.GoLevel1) :
+			{
+				Application.LoadLevel(1);
+				break;
+			}
+			case (ListMenu.GoLevel2) :
+			{
+				menuObjects.Add(findObject("Transition"));
+				fadeInObjects(menuObjects);
+				menuObjects.Clear();
+				StartCoroutine(loadLevel(2));
+				break;
+			}
 		}
 	}
 	
 	private void triggerCredits()
 	{
 
+	}
+
+	IEnumerator loadLevel(int _lvl)
+	{
+		yield return new WaitForSeconds(2f);
+		Application.LoadLevel(_lvl);
 	}
 
 	private GameObject findObject(string _str)
@@ -153,8 +181,9 @@ public class MenuUI : MonoBehaviour {
 
 	private void animateItem()
 	{
+		int randRange = Random.Range(-30,30);
 		OTTween _tween = new OTTween(spr,2.5f)
-		.Tween("size", new Vector2(spr.size.x - Random.Range(-30,30), spr.size.y - Random.Range(-30,30)) )
+			.Tween("size", new Vector2(spr.size.x - randRange, spr.size.y - randRange) )
 		.PingPong();
 	}
 	/*

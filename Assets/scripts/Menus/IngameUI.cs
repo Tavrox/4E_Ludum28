@@ -5,26 +5,18 @@ public class IngameUI : MonoBehaviour {
 
 	public enum ListAction
 	{
-		LaunchScene,
+		PauseGame,
+		ResumeGame,
 		MuteSound,
-		LowerSound,
-		RaiseSound,
-		FunStuff, // To do funny miscellaneous stuff in menus :)
+		ExplosionTimer
 	}
 	public ListAction action;
 	private Object prefabSprite;
-//	private OTSprite childSpr;
-	public static bool exists;
+	public bool paused;
 	
 	void Start () 
 	{
-		GameEventManager.GameStart += GameStart;
-		GameEventManager.GameOver += GameOver;
-		GameEventManager.GamePause += GamePause;
-		GameEventManager.GameUnpause += GameUnpause;
-//		childSpr = GetComponentInChildren<OTSprite>();
-		
-		exists = true;
+
 	}
 	
 	// Update is called once per frame
@@ -38,10 +30,7 @@ public class IngameUI : MonoBehaviour {
 	
 	private void OnMouseDown()
 	{
-//		switch (action)
-//		{
-//
-//		}
+
 	}
 	private void checkExistingMenu()
 	{
