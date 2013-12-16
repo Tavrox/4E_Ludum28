@@ -13,8 +13,8 @@ public class Enemy : Character {
 	protected Vector3 direction;
 	
 	public float targetDetectionArea = 3f;
-	protected float blockDetectionArea = 2f;
-	
+	public float blockDetectionArea = 2f;
+	private float spriteScaleX;
 	protected RaycastHit hitInfo; //infos de collision
 	protected Ray detectTargetLeft, detectTargetRight, detectBlockLeft, detectBlockRight, detectEndPFLeft, detectEndPFRight; //point de départ, direction
 	
@@ -66,6 +66,7 @@ public class Enemy : Character {
 		
 		target = GameObject.FindWithTag("Player").transform; //target the player
 		patroling = true;
+		spriteScaleX = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.x;
 	}
 	// Update is called once per frame
 //	public void Update () 
@@ -118,11 +119,11 @@ public class Enemy : Character {
 		}
 	}
 	protected void detectEndPlatform() {
-		detectEndPFLeft = new Ray(new Vector3 (thisTransform.position.x-(thisTransform.localScale.x), thisTransform.position.y, thisTransform.position.z), Vector3.down);
-		detectEndPFRight = new Ray(new Vector3 (thisTransform.position.x+(thisTransform.localScale.x), thisTransform.position.y, thisTransform.position.z), Vector3.down);
+		detectEndPFLeft = new Ray(new Vector3 (thisTransform.position.x-(spriteScaleX/2), thisTransform.position.y, thisTransform.position.z), Vector3.down);
+		detectEndPFRight = new Ray(new Vector3 (thisTransform.position.x+(spriteScaleX/2), thisTransform.position.y, thisTransform.position.z), Vector3.down);
 		//print (blockDetectionArea);
-		Debug.DrawRay(new Vector3 (thisTransform.position.x-(thisTransform.localScale.x), thisTransform.position.y, thisTransform.position.z), Vector3.down*blockDetectionArea);
-		Debug.DrawRay(new Vector3 (thisTransform.position.x+(thisTransform.localScale.x), thisTransform.position.y, thisTransform.position.z), Vector3.down*blockDetectionArea);
+		Debug.DrawRay(new Vector3 (thisTransform.position.x-(spriteScaleX/2), thisTransform.position.y, thisTransform.position.z), Vector3.down*blockDetectionArea);
+		Debug.DrawRay(new Vector3 (thisTransform.position.x+(spriteScaleX/2), thisTransform.position.y, thisTransform.position.z), Vector3.down*blockDetectionArea);
 
 		if (!Physics.Raycast(detectEndPFLeft, out hitInfo, blockDetectionArea) || !Physics.Raycast(detectEndPFRight, out hitInfo, blockDetectionArea)) {
 			chasingPlayer = false;
