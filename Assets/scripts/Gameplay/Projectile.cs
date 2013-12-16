@@ -38,16 +38,22 @@ public class Projectile : MonoBehaviour {
 
 	void OnTriggerEnter(Collider _other)
 	{
-		if (_other.CompareTag("Player") == true && killedPlay == false)
+		if (_other.CompareTag("Player") == true && GameObject.Find("Player").GetComponent<Player>().isDead == false)
 		{
-			killedPlay = true;
+			GameObject.Find("Player").GetComponent<Player>().isDead = true;
 			GameEventManager.TriggerGameOver();
 		}
-		Destroy(gameObject);
+		if (_other.CompareTag("Turret") != true)
+	    {
+			Destroy(gameObject);
+		}
 	}
 
 	private void GameOver()
 	{
-		Destroy(gameObject);
+		if (gameObject != null)
+		{
+			Destroy(gameObject);
+		}
 	}
 }
