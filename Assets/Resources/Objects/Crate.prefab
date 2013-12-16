@@ -192,7 +192,7 @@ MonoBehaviour:
   _frameIndex: 0
   _frameName: crate
   _spriteContainer: {fileID: 0}
-  _containerName: crate
+  _containerName: objects
   _newSprite: 0
 --- !u!114 &11400002
 MonoBehaviour:

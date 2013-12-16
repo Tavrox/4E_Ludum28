@@ -14,6 +14,8 @@ public class TileImporter : MonoBehaviour {
 
 	private string url;
 	public int levelID = 1;
+	public string specificAddition = "";
+	public bool specificTrigger = false;
 	private XmlDocument xmlDoc;
 	private XmlNodeList mapNodes;
 	private XmlNodeList tileNodes;
@@ -69,8 +71,15 @@ public class TileImporter : MonoBehaviour {
 		if (listTiles != null)
 		{
 			foreach (GameObject _tiles in listTiles)
-			{
-				_tiles.SetActive(true);
+			{ 
+				if (_tiles != null)
+				{
+					_tiles.SetActive(true);
+				}
+				else
+				{
+					listTiles.Remove(_tiles);
+				}
 			}
 		}
 		else 
@@ -114,7 +123,23 @@ public class TileImporter : MonoBehaviour {
 	[ContextMenu ("Clear Tiles")]
 	private void clearTiles()
 	{
-
+		foreach(GameObject _tile in listTiles)
+		{
+			DestroyImmediate(_tile);
+			listTiles.Remove(_tile);
+		}
+	}
+	
+	[ContextMenu ("Remove Specific Tiles")]
+	private void removeSpecificTiles()
+	{
+		foreach(GameObject _tile in listTiles)
+		{
+			if (_tile.name == "05(Clone)")
+			{
+				DestroyImmediate(_tile);
+			}
+		}
 	}
 
 	[ContextMenu ("Refresh Tiles")]
@@ -172,6 +197,11 @@ public class TileImporter : MonoBehaviour {
 						{ stringVal = modVal.ToString(); }
 						namePrefab = "Tiles/" + _currTile.ToString() + "/" + stringVal;
 
+						if (specificTrigger == true)
+						{
+							namePrefab = "Tiles/" + _currTile.ToString() + "/" + specificAddition;
+						}
+
 						if (_currWidth >= levelWidth * tileWidth)
 						{
 							_currWidth = -0;
@@ -200,6 +230,8 @@ public class TileImporter : MonoBehaviour {
 		}
 		Debug.Log("Finish getting tiles");
 	}
+
+
 	
 	[ContextMenu ("Get Objects")]
 	private void getObjects()
