@@ -103,6 +103,7 @@ public class PlayerAnims : MonoBehaviour
 		animSprite.looping = false;
 		if(_character.grounded == false && currentAnim != animDef.FallLeft && _character.facingDir == Character.facing.Left)
 		{
+			MasterAudio.StopAllOfSound("player_runL1");
 			currentAnim = animDef.FallLeft;
 			animSprite.Play("jump"); // fall left
 			//print (_character.falling);
@@ -110,6 +111,7 @@ public class PlayerAnims : MonoBehaviour
 		}
 		if(_character.grounded == false && currentAnim != animDef.FallRight && _character.facingDir == Character.facing.Right)
 		{
+			MasterAudio.StopAllOfSound("player_runL1");
 			currentAnim = animDef.FallRight;
 			animSprite.Play("jump"); // fall right
 			//print (_character.falling);

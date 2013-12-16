@@ -17,6 +17,7 @@ public class TrapKill : MonoBehaviour {
 	{
 		if(other.gameObject.CompareTag("Player")) 
 		{
+			MasterAudio.PlaySound("hole");
 			GameEventManager.TriggerGameOver();
 		}
 	}
