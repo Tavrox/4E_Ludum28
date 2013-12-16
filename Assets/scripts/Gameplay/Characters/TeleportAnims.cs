@@ -54,7 +54,7 @@ public class TeleportAnims : MonoBehaviour
 	{
 		if(other.gameObject.CompareTag("Player")) 
 		{
-			if (Input.GetKeyDown(KeyCode.Escape)) {
+			if (Input.GetKeyDown(KeyCode.Space)) {
 				MasterAudio.PlaySound("teleport_in");
 				animSprite.Play("teleport");
 				//_player.enabled = false;
