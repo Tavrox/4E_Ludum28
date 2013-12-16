@@ -55,6 +55,11 @@ public class Walker : Enemy {
 	 *  DETECTION RAYCASTS 	*
 	 *						*
 	 ***********************/
+//	void OnTriggerEnter (Collider other) {
+//		if (other.gameObject.name == "ColliBox") {
+//			chasingPlayer=false;
+//		}
+//	}
 	protected void detectPlayer() {
 		detectTargetLeft = new Ray(thisTransform.position, Vector3.left);
 		detectTargetRight = new Ray(thisTransform.position, Vector3.right);
@@ -63,6 +68,10 @@ public class Walker : Enemy {
 		
 		if (Physics.Raycast(detectTargetLeft, out hitInfo, targetDetectionArea) || Physics.Raycast(detectTargetRight, out hitInfo, targetDetectionArea)) {
 			//print ("CA TOUCHE");
+			if(hitInfo.collider.name == "ColliBox" || hitInfo.collider.tag=="Blocker") {
+				chasingPlayer = false;
+				isLeft = isRight = false;
+			}
 			if(hitInfo.collider.name == "Player" && !endChasingPlayer) {
 				//print ("CHAAAASSSSSEE");
 				chasingPlayer = true;
