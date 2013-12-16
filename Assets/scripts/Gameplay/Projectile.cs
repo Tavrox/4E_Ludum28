@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour {
 	//public int dmg;
 	private Transform myTransform;
 	public Vector3 posIni;
+	private bool killedPlay = false;
 
 	//[HideInInspector] public Player player;
 	
@@ -37,15 +38,16 @@ public class Projectile : MonoBehaviour {
 
 	void OnTriggerEnter(Collider _other)
 	{
-		if (_other.CompareTag("Player") == true)
+		if (_other.CompareTag("Player") == true && killedPlay == false)
 		{
+			killedPlay = true;
 			GameEventManager.TriggerGameOver();
 		}
-
+		Destroy(gameObject);
 	}
 
 	private void GameOver()
 	{
-		collider.enabled = false;
+		Destroy(gameObject);
 	}
 }

@@ -163,7 +163,9 @@
             <filename>C:/Users/Tav/Pictures/bubble_key.png</filename>
             <filename>C:/Users/Tav/Pictures/bubble_interact.png</filename>
             <filename>C:/Users/Tav/Pictures/pause.png</filename>
-            <filename>C:/Users/Tav/Pictures/mainMenu.png</filename>
+            <filename>mainMenu.png</filename>
+            <filename>pause.png</filename>
+            <filename>mainmenu.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

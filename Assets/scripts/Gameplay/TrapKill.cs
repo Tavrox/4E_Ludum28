@@ -3,6 +3,8 @@ using System.Collections;
 
 public class TrapKill : MonoBehaviour {
 
+	private bool triggered = false;
+
 //	// Use this for initialization
 //	void Start () {
 //
@@ -15,8 +17,9 @@ public class TrapKill : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) 
 	{
-		if(other.gameObject.CompareTag("Player")) 
+		if(other.gameObject.CompareTag("Player") && triggered == false) 
 		{
+			triggered = true;
 			MasterAudio.PlaySound("hole");
 			GameEventManager.TriggerGameOver();
 		}
