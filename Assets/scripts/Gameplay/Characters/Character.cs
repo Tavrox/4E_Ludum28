@@ -33,7 +33,7 @@ public class Character : MonoBehaviour
 	[HideInInspector] public bool isPass;
 	
 	[HideInInspector] public bool jumping = false;
-	[HideInInspector] public bool falling = false;
+	[HideInInspector] public bool falling = false,chute;
 	[HideInInspector] public bool grounded = false;
 	[HideInInspector] public bool passingPlatform;
 	[HideInInspector] public bool onPlatform;
@@ -59,12 +59,12 @@ public class Character : MonoBehaviour
 	[Range (0,2000)] 	public float 	jumpVel = 300f;
 	[Range (0,2000)] 	public float 	jump2Vel = 450f;
 	[Range (1,2)] 	public int 		maxJumps = 1;
-	[Range (0,2000)] public float 	fallVel = 180f;
+	[Range (0,2000)] public float 	fallVel = 350f;
 	
 	[SerializeField] private int jumps = 0;
-	[Range (0,2000)] public float gravityY = 520f;
+	[Range (0,2000)] public float gravityY = 720f;
 	[Range (0,2000)] public float maxVelY = 1000f;
-		
+
 	[SerializeField] private RaycastHit hitInfo;
 	[SerializeField] private float halfMyX;
 	[SerializeField] private float halfMyY;
@@ -98,7 +98,8 @@ public class Character : MonoBehaviour
 	{
 		// wait for things to settle before applying gravity
 		yield return new WaitForSeconds(0.1f);
-		gravityY = 520f;
+		gravityY = 900f;
+		chute = true;
 	}
 	
 	// Update is called once per frame
@@ -126,23 +127,27 @@ public class Character : MonoBehaviour
 		}
 		
 		// pressed jump button
-		if (isJump == true)
+		if (isJump == true && !chute)
 		{
 			if (jumps < maxJumps)
 		    {
-				jumps += 1;
-				jumping = true;
-				if(jumps == 1)
-				{
-					vectorMove.y = jumpVel;
-				}
-				if(jumps == 2)
-				{
-					vectorMove.y = jump2Vel;
-				}
-		    }
+//				jumps += 1;
+//				jumping = true;
+//				if(jumps == 1)
+//				{
+//					vectorMove.y = jumpVel;
+//				}
+//				if(jumps == 2)
+//				{
+//					vectorMove.y = jump2Vel;
+//				}
+			}
+			if(vectorMove.y < maxVelY)	vectorMove.y += 50;
+			else chute=true;
 		}
-		
+		if(!grounded && !Input.GetKey("up")) chute = true;
+		if(chute && grounded) chute = false;
+
 		// landed from fall/jump
 		if(grounded == true && vectorMove.y == 0)
 		{
@@ -153,9 +158,10 @@ public class Character : MonoBehaviour
 		UpdateRaycasts();
 		
 		// apply gravity while airborne
-		if(grounded == false)
+		if(grounded == false && chute)
 		{
-			vectorMove.y -= gravityY * Time.deltaTime;
+			if(vectorMove.y>0 && vectorMove.y<500) vectorMove.y -= gravityY * Time.deltaTime * 1.5f;
+			vectorMove.y -= gravityY * Time.deltaTime * 1.5f;
 		}
 		
 		// velocity limiter

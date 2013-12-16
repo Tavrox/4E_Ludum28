@@ -108,15 +108,17 @@ public class Player : Character {
 			shootLeft = false;
 			/*if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");*/
 		}
-		if (Input.GetKey(KeyCode.DownArrow))
-		{
-			isCrounch = true;
-			facingDir = facing.Down;
-		}
-		if (Input.GetKeyDown("up")) 
+//		if (Input.GetKey(KeyCode.DownArrow))
+//		{
+//			isCrounch = true;
+//			facingDir = facing.Down;
+//		}
+		if (Input.GetKey("up") /* && grounded*/) 
 		{ 
 			isJump = true; 
 		}
+		if (Input.GetKeyUp("up")) chute=true;
+		
 		if(Input.GetKeyDown("space"))
 		{
 			isPass = true;
