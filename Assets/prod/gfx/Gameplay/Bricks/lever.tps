@@ -22,7 +22,7 @@
         <key>dataFormat</key>
         <string>cocos2d</string>
         <key>textureFileName</key>
-        <filename></filename>
+        <filename>lever.png</filename>
         <key>flipPVR</key>
         <false/>
         <key>ditherType</key>
