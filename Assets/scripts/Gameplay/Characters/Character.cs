@@ -142,10 +142,10 @@ public class Character : MonoBehaviour
 //					vectorMove.y = jump2Vel;
 //				}
 			}
-			if(vectorMove.y < maxVelY)	vectorMove.y += 50;
+			if(vectorMove.y < maxVelY)	vectorMove.y += 60;
 			else chute=true;
 		}
-		if(!grounded && !Input.GetKey("up")) chute = true;
+		if((!grounded && !Input.GetKey("up")) || blockedUp) chute = true;
 		if(chute && grounded) chute = false;
 
 		// landed from fall/jump
@@ -160,7 +160,7 @@ public class Character : MonoBehaviour
 		// apply gravity while airborne
 		if(grounded == false && chute)
 		{
-			if(vectorMove.y>0 && vectorMove.y<500) vectorMove.y -= gravityY * Time.deltaTime * 1.5f;
+			if(vectorMove.y>0 && vectorMove.y<600) vectorMove.y -= gravityY * Time.deltaTime * 1.5f;
 			vectorMove.y -= gravityY * Time.deltaTime * 1.5f;
 		}
 		

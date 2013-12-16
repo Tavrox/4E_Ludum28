@@ -149,7 +149,7 @@ public class Player : Character {
 		thisTransform.position = pos;
 	}
 	public IEnumerator rewind () {
-		yield return new WaitForSeconds(0.02f);
+		yield return new WaitForSeconds(0.01f);
 		thisTransform.Rotate(0f,0f,angleRotation++);
 		StartCoroutine("rewind");
 	}
@@ -157,7 +157,7 @@ public class Player : Character {
 		yield return new WaitForSeconds(duree);
 		StopCoroutine("rewind");
 		thisTransform.Rotate(0f,0f,angleRotation--);
-		if(angleRotation<12) {StopCoroutine("stopRewind");thisTransform.rotation = Quaternion.Euler(new Vector3(0f,0f,0f));}
-		StartCoroutine("stopRewind",0.04f);
+		if(angleRotation<5) {StopCoroutine("stopRewind");thisTransform.rotation = Quaternion.Euler(new Vector3(0f,0f,0f));}
+		StartCoroutine("stopRewind",0.015f);
 	}
 }
