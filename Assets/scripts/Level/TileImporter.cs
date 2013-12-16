@@ -213,7 +213,9 @@ public class TileImporter : MonoBehaviour {
 				{
 					if (Resources.Load("Objects/" + _obj.ToString()) != null)
 					{
-						if (children.Attributes.GetNamedItem("type").Value == _obj.ToString() && children.Attributes.GetNamedItem("type").Value != null)
+						if(children.Attributes.GetNamedItem("type").Value != null)
+						{
+						if (children.Attributes.GetNamedItem("type").Value == _obj.ToString())
 						{
 							GameObject _instance = Instantiate(Resources.Load("Objects/" + children.Attributes.GetNamedItem("type").Value)) as GameObject;
 							_instance.transform.position = new Vector3 (float.Parse(children.Attributes.GetNamedItem("x").Value) + 50, float.Parse(children.Attributes.GetNamedItem("y").Value) * -1, -5f);
@@ -224,6 +226,7 @@ public class TileImporter : MonoBehaviour {
 						else
 						{
 //							print ("didnt find object");
+						}
 						}
 					}
 					else 

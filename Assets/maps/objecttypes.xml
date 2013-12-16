@@ -19,4 +19,5 @@
  <objecttype name="BaseArcU" color="#a49466"/>
  <objecttype name="BaseArcD" color="#a44343"/>
  <objecttype name="EndDoor" color="#00a489"/>
+ <objecttype name="Comment" color="#ffffff"/>
 </objecttypes>
