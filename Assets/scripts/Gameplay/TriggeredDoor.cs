@@ -22,7 +22,8 @@ public class TriggeredDoor : MonoBehaviour {
 	
 	public void Lock()
 	{
-		animSprite.Play("lock");
+		//animSprite.Play("lock");
+		animSprite.PlayBackward("unlock");
 		isLocked = true;
 		collider.enabled = true;
 	}

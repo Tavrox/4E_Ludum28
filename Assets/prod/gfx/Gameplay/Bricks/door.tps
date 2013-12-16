@@ -148,15 +148,11 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>../../../../../../../../Desktop/door02.png</filename>
-            <filename>../../../../../../../../Desktop/door03.png</filename>
-            <filename>../../../../../../../../Desktop/door04.png</filename>
-            <filename>../../../../../../../../Desktop/door00.png</filename>
-            <filename>../../../../../../../../Desktop/door01.png</filename>
-            <filename>../../../../../../../../Desktop/door05.png</filename>
-            <filename>../../../../../../../../Desktop/door06.png</filename>
-            <filename>../../../../../../../../Desktop/door07.png</filename>
-            <filename>../../../../../../../../Desktop/door08.png</filename>
+            <filename>../../Levels/Adrian/porte_1.png</filename>
+            <filename>../../Levels/Adrian/porte_2.png</filename>
+            <filename>../../Levels/Adrian/porte_3.png</filename>
+            <filename>../../Levels/Adrian/porte_4.png</filename>
+            <filename>../../Levels/Adrian/porte_5.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

@@ -4,83 +4,83 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>timerArc.png</key>
+            <key>arc00.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,0},{30,85}}</string>
+                <string>{{0,0},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{30,85}}</string>
+                <string>{{0,0},{50,100}}</string>
                 <key>sourceSize</key>
-                <string>{30,85}</string>
+                <string>{50,100}</string>
             </dict>
-            <key>timerArc01.png</key>
+            <key>arc01.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{30,0},{30,85}}</string>
+                <string>{{50,0},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{30,85}}</string>
+                <string>{{0,0},{50,100}}</string>
                 <key>sourceSize</key>
-                <string>{30,85}</string>
+                <string>{50,100}</string>
             </dict>
-            <key>timerArc02.png</key>
+            <key>arc02.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{60,0},{30,85}}</string>
+                <string>{{100,0},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{30,85}}</string>
+                <string>{{0,0},{50,100}}</string>
                 <key>sourceSize</key>
-                <string>{30,85}</string>
+                <string>{50,100}</string>
             </dict>
-            <key>timerBase.png</key>
+            <key>base00.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{90,0},{30,23}}</string>
+                <string>{{150,0},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{30,23}}</string>
+                <string>{{0,0},{50,100}}</string>
                 <key>sourceSize</key>
-                <string>{30,23}</string>
+                <string>{50,100}</string>
             </dict>
-            <key>timerBase01.png</key>
+            <key>base01.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,85},{30,23}}</string>
+                <string>{{200,0},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{30,23}}</string>
+                <string>{{0,0},{50,100}}</string>
                 <key>sourceSize</key>
-                <string>{30,23}</string>
+                <string>{50,100}</string>
             </dict>
-            <key>timerBase02.png</key>
+            <key>base02.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{30,85},{30,23}}</string>
+                <string>{{0,100},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{30,23}}</string>
+                <string>{{0,0},{50,100}}</string>
                 <key>sourceSize</key>
-                <string>{30,23}</string>
+                <string>{50,100}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -90,9 +90,9 @@
             <key>realTextureFileName</key>
             <string>timerArc.png</string>
             <key>size</key>
-            <string>{128,128}</string>
+            <string>{256,256}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:e268edd5706c8e97a7e6e315d23b15cf:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:059eb2eca571e5356b9304f2a8af1253:1/1$</string>
             <key>textureFileName</key>
             <string>timerArc.png</string>
         </dict>

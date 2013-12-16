@@ -4,31 +4,31 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>trapKill00.png</key>
+            <key>killTrap00.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,0},{100,40}}</string>
+                <string>{{0,0},{100,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{100,40}}</string>
+                <string>{{0,0},{100,50}}</string>
                 <key>sourceSize</key>
-                <string>{100,40}</string>
+                <string>{100,50}</string>
             </dict>
-            <key>trapKill01.png</key>
+            <key>killTrap01.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,41},{100,40}}</string>
+                <string>{{0,51},{100,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{100,40}}</string>
+                <string>{{0,0},{100,50}}</string>
                 <key>sourceSize</key>
-                <string>{100,40}</string>
+                <string>{100,50}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -40,7 +40,7 @@
             <key>size</key>
             <string>{128,128}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:30a0221f99d1e6014df5923cf83df106:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:dff67bb843a5771399e11373eb28182c:1/1$</string>
             <key>textureFileName</key>
             <string>trapKill.png</string>
         </dict>

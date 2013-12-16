@@ -148,12 +148,12 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>../../../../../../../../Desktop/images/timerBase02.png</filename>
-            <filename>../../../../../../../../Desktop/images/timerArc.png</filename>
-            <filename>../../../../../../../../Desktop/images/timerArc01.png</filename>
-            <filename>../../../../../../../../Desktop/images/timerArc02.png</filename>
-            <filename>../../../../../../../../Desktop/images/timerBase.png</filename>
-            <filename>../../../../../../../../Desktop/images/timerBase01.png</filename>
+            <filename>../../Levels/arc/arc00.png</filename>
+            <filename>../../Levels/arc/arc01.png</filename>
+            <filename>../../Levels/arc/arc02.png</filename>
+            <filename>../../Levels/arc/base00.png</filename>
+            <filename>../../Levels/arc/base01.png</filename>
+            <filename>../../Levels/arc/base02.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

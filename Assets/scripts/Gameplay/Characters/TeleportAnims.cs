@@ -24,7 +24,7 @@ public class TeleportAnims : MonoBehaviour
 	private animDef currentAnim;
 	private Character _character;
 	private Player _player;
-	public Transform teleportDestination;
+	public TeleportAnims teleportDestination;
 	public int delayB4Telep = 1;
 	
 	private bool animPlaying = false, playerCollision;
@@ -58,7 +58,7 @@ public class TeleportAnims : MonoBehaviour
 				animSprite.Play("teleport");
 				//_player.enabled = false;
 				StartCoroutine("stopPlayer");
-				StartCoroutine("teleportTo",teleportDestination);
+				StartCoroutine("teleportTo",teleportDestination.transform);
 			}
 		}
 	}

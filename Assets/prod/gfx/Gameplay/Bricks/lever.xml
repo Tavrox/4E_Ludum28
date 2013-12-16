@@ -4,70 +4,109 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>lever00.png</key>
+            <key>leverDown00.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,0},{60,58}}</string>
+                <string>{{0,0},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{60,58}}</string>
+                <string>{{0,0},{50,100}}</string>
                 <key>sourceSize</key>
-                <string>{60,58}</string>
+                <string>{50,100}</string>
             </dict>
-            <key>lever01.png</key>
+            <key>leverDown01.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{60,0},{60,58}}</string>
+                <string>{{51,0},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{60,58}}</string>
+                <string>{{0,0},{50,100}}</string>
                 <key>sourceSize</key>
-                <string>{60,58}</string>
+                <string>{50,100}</string>
             </dict>
-            <key>lever02.png</key>
+            <key>leverDown02.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,58},{60,58}}</string>
+                <string>{{102,0},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{60,58}}</string>
+                <string>{{0,0},{50,100}}</string>
                 <key>sourceSize</key>
-                <string>{60,58}</string>
+                <string>{50,100}</string>
             </dict>
-            <key>lever03.png</key>
+            <key>leverDown03.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{60,58},{60,58}}</string>
+                <string>{{153,0},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{60,58}}</string>
+                <string>{{0,0},{50,100}}</string>
                 <key>sourceSize</key>
-                <string>{60,58}</string>
+                <string>{50,100}</string>
             </dict>
-            <key>lever04.png</key>
+            <key>leverDown04.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,116},{60,58}}</string>
+                <string>{{204,0},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{60,58}}</string>
+                <string>{{0,0},{50,100}}</string>
                 <key>sourceSize</key>
-                <string>{60,58}</string>
+                <string>{50,100}</string>
+            </dict>
+            <key>leverUp00.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,101},{50,100}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,100}}</string>
+                <key>sourceSize</key>
+                <string>{50,100}</string>
+            </dict>
+            <key>levier_1.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{51,101},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>levier_2.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{102,101},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -77,9 +116,9 @@
             <key>realTextureFileName</key>
             <string>lever.png</string>
             <key>size</key>
-            <string>{128,256}</string>
+            <string>{256,256}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:cf44013bc844f6a9f6860cc4e835d9ba:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:6836ae656a344b22dd78831e39200c61:1/1$</string>
             <key>textureFileName</key>
             <string>lever.png</string>
         </dict>

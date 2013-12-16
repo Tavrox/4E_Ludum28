@@ -22,7 +22,7 @@
         <key>dataFormat</key>
         <string>cocos2d</string>
         <key>textureFileName</key>
-        <filename>lever.png</filename>
+        <filename></filename>
         <key>flipPVR</key>
         <false/>
         <key>ditherType</key>
@@ -40,7 +40,7 @@
             </struct>
         </struct>
         <key>shapePadding</key>
-        <uint>0</uint>
+        <uint>1</uint>
         <key>jpgQuality</key>
         <uint>80</uint>
         <key>pngOptimizationLevel</key>
@@ -99,7 +99,7 @@
             <key>packageName</key>
             <string>Texture</string>
             <key>javaFileName</key>
-            <filename>level.java</filename>
+            <filename>lever.java</filename>
             <key>wrap</key>
             <struct type="AndEngineWrap">
                 <key>s</key>
@@ -148,11 +148,14 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>../../../../../../../../Desktop/lever00.png</filename>
-            <filename>../../../../../../../../Desktop/lever01.png</filename>
-            <filename>../../../../../../../../Desktop/lever02.png</filename>
-            <filename>../../../../../../../../Desktop/lever03.png</filename>
-            <filename>../../../../../../../../Desktop/lever04.png</filename>
+            <filename>../../Levels/levers/leverDown00.png</filename>
+            <filename>../../Levels/levers/leverDown01.png</filename>
+            <filename>../../Levels/levers/leverDown02.png</filename>
+            <filename>../../Levels/levers/leverDown03.png</filename>
+            <filename>../../Levels/levers/leverDown04.png</filename>
+            <filename>../../Levels/levers/leverUp00.png</filename>
+            <filename>../../Levels/levers/levier_1.png</filename>
+            <filename>../../Levels/levers/levier_2.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

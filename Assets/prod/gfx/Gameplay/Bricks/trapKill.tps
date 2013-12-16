@@ -148,8 +148,8 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>../../../../../../../../Desktop/trapKill01.png</filename>
-            <filename>../../../../../../../../Desktop/trapKill00.png</filename>
+            <filename>../../Levels/Adrian/killTrap01.png</filename>
+            <filename>../../Levels/Adrian/killTrap00.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

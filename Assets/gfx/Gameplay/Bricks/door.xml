@@ -4,122 +4,70 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>door00.png</key>
+            <key>porte_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,0},{30,120}}</string>
+                <string>{{0,0},{50,300}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{30,120}}</string>
+                <string>{{0,0},{50,300}}</string>
                 <key>sourceSize</key>
-                <string>{30,120}</string>
+                <string>{50,300}</string>
             </dict>
-            <key>door01.png</key>
+            <key>porte_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{31,0},{30,120}}</string>
+                <string>{{51,0},{50,300}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{30,120}}</string>
+                <string>{{0,0},{50,300}}</string>
                 <key>sourceSize</key>
-                <string>{30,120}</string>
+                <string>{50,300}</string>
             </dict>
-            <key>door02.png</key>
+            <key>porte_3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{62,0},{30,120}}</string>
+                <string>{{102,0},{50,300}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{30,120}}</string>
+                <string>{{0,0},{50,300}}</string>
                 <key>sourceSize</key>
-                <string>{30,120}</string>
+                <string>{50,300}</string>
             </dict>
-            <key>door03.png</key>
+            <key>porte_4.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{93,0},{30,120}}</string>
+                <string>{{153,0},{50,300}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{30,120}}</string>
+                <string>{{0,0},{50,300}}</string>
                 <key>sourceSize</key>
-                <string>{30,120}</string>
+                <string>{50,300}</string>
             </dict>
-            <key>door04.png</key>
+            <key>porte_5.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{124,0},{30,120}}</string>
+                <string>{{204,0},{50,300}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{30,120}}</string>
+                <string>{{0,0},{50,300}}</string>
                 <key>sourceSize</key>
-                <string>{30,120}</string>
-            </dict>
-            <key>door05.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{155,0},{30,120}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{30,120}}</string>
-                <key>sourceSize</key>
-                <string>{30,120}</string>
-            </dict>
-            <key>door06.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{186,0},{30,120}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{30,120}}</string>
-                <key>sourceSize</key>
-                <string>{30,120}</string>
-            </dict>
-            <key>door07.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{217,0},{30,120}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{30,120}}</string>
-                <key>sourceSize</key>
-                <string>{30,120}</string>
-            </dict>
-            <key>door08.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{0,121},{30,120}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{30,120}}</string>
-                <key>sourceSize</key>
-                <string>{30,120}</string>
+                <string>{50,300}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -129,9 +77,9 @@
             <key>realTextureFileName</key>
             <string>door.png</string>
             <key>size</key>
-            <string>{256,256}</string>
+            <string>{256,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:b261e597959b6937e34078e1aa6c6fa2:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:a526194dd02ab03663feaf86605785b2:1/1$</string>
             <key>textureFileName</key>
             <string>door.png</string>
         </dict>

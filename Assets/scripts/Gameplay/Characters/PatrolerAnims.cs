@@ -33,7 +33,6 @@ public class PatrolerAnims : MonoBehaviour
 		_character 	= GetComponent<Character>();
 		_player 	= GameObject.FindObjectOfType<Player>();
 		animSprite.Play("run");
-		currentAnim = animDef.WalkLeft;
 	}
 	void Update() 
 	{

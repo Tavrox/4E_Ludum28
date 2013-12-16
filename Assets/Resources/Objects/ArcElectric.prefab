@@ -93,7 +93,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 3.69565225, z: 1}
+  m_LocalScale: {x: 1.66666639, y: 4.34782267, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
 --- !u!4 &400002
@@ -103,7 +103,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.78497982, y: -2.0528698, z: 0}
+  m_LocalPosition: {x: -3.79999995, y: -2.0528698, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -116,7 +116,7 @@ Transform:
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.66666639, y: 4.34782267, z: 1}
   m_Children: []
   m_Father: {fileID: 400006}
 --- !u!4 &400006
@@ -126,7 +126,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.84913206, y: -4.39442587, z: 0}
+  m_LocalPosition: {x: -3.79999995, y: -6.3730731, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400004}
@@ -138,7 +138,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.8815043, y: .0234924424, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -210,7 +210,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.5, y: 4.30000019, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6500002
 BoxCollider:
@@ -222,7 +222,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 3.69565201, z: 1}
+  m_Size: {x: 1.5, y: 4.30000019, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -265,7 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: ArcSprite
   _position: {x: 0, y: 0}
-  _size: {x: 1, y: 3.69565225}
+  _size: {x: 1.66666639, y: 4.34782267}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -287,8 +287,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: ArSprite
-  oSize: {x: .625, y: 1.77083337}
-  imageSize: {x: 1, y: 3.69565225}
+  oSize: {x: 1.04166675, y: 2.08333349}
+  imageSize: {x: 1.66666639, y: 4.34782267}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -300,8 +300,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 1
-  _frameName: timerArc01
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 0}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -328,7 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: BaseSprite
   _position: {x: 0, y: 0}
-  _size: {x: 1, y: 1}
+  _size: {x: 1.66666639, y: 4.34782267}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -350,8 +350,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: BaseSprite
-  oSize: {x: .625, y: .479166687}
-  imageSize: {x: 1, y: 1}
+  oSize: {x: 1.04166675, y: 2.08333349}
+  imageSize: {x: 1.66666639, y: 4.34782267}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -363,8 +363,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 4
-  _frameName: timerBase01
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 0}
   _containerName: arcElectricSheet
   _newSprite: 0
