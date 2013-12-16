@@ -1827,5 +1827,10 @@
   <object name="Coll" type="Collibox" x="1250" y="550" width="250" height="150"/>
   <object name="coll" type="Collibox" x="0" y="950" width="1150" height="150"/>
   <object name="coll" type="Collibox" x="0" y="1350" width="1500" height="150"/>
+  <object name="Patroler" type="Patroler" x="400" y="850" width="50" height="50"/>
+  <object name="TimedBTN" type="TimedBtn" x="650" y="850" width="50" height="50"/>
+  <object name="SequenceBtn" type="SequencedBtn" x="850" y="850" width="50" height="50"/>
+  <object name="TeleportIn" type="TeleportIn" x="1050" y="850" width="50" height="50"/>
+  <object name="TeleportIn" type="TurretU" x="100" y="850" width="50" height="50"/>
  </objectgroup>
 </map>

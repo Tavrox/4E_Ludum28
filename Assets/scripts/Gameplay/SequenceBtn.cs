@@ -46,9 +46,10 @@ public class SequenceBtn : MonoBehaviour {
 					btn.triggerLever();
 				}
 				solved = true;
+				MasterAudio.PlaySound ("sequence_succeed");
 			}
 			else if(errorDetected == true) {
-
+				MasterAudio.PlaySound("sequence_fail");
 				foreach (Lever btn in seqBtns) {
 					btn.StartCoroutine("resetLever");
 				}

@@ -22,12 +22,13 @@ public class Player : Character {
 	public override void Start () 
 	{
 		base.Start();
-		
-		InvokeRepeating("playFootstep",0,0.2f);
+
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GameOver += GameOver;
 		GameEventManager.GamePause += GamePause;
 		GameEventManager.GameUnpause += GameUnpause;
+
+		InvokeRepeating("playFootstep",0f,0.4f);
 		
 		spawnPos = thisTransform.position;
 
@@ -57,6 +58,7 @@ public class Player : Character {
 		isJump = false;
 		isPass = false;
 		movingDir = moving.None;
+		MasterAudio.PlaySound("player_lose");
 	}
 	private void GamePause()
 	{
@@ -113,6 +115,7 @@ public class Player : Character {
 		if (Input.GetKey("up") /* && grounded*/) 
 		{ 
 			isJump = true; 
+			MasterAudio.PlaySound("player_jump");
 		}
 		if (Input.GetKeyUp("up")) chute=true;
 		
@@ -127,10 +130,6 @@ public class Player : Character {
 		if (Input.GetKeyDown(KeyCode.Alpha2))
 		{
 			GameObject.Find("Invasion").GetComponent<InvasionAnims>().invade();
-		}
-		if (Input.GetKeyDown(KeyCode.Alpha3))
-		{
-			//thisTransform.rotation = Quaternion.Euler(new Vector3(0f,0f,0f));
 		}
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{
@@ -147,9 +146,9 @@ public class Player : Character {
 
 	private void playFootstep()
 	{
-		if (isLeft == true || isRight == true || isGoDown == true || isJump == true)
+		if ((isLeft == true || isRight == true) && grounded )
 		{
-			MasterAudio.PlaySound("player_runL1");
+			MasterAudio.PlaySound ("player_runL1");
 		}
 	}
 

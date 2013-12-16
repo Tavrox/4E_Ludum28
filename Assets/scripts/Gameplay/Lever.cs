@@ -33,12 +33,12 @@ public class Lever : MonoBehaviour {
 	{
 		if (other.gameObject.CompareTag("Player"))
 		{
-			if (Input.GetKeyDown(KeyCode.F) && !seqLocked)
+			if (Input.GetKeyDown(KeyCode.Space) && !seqLocked)
 			{
 				MasterAudio.PlaySound("lever");
 				trigged = !trigged;
 				if(trigged) {if(myButtonType == btnType.TimedBtn) animSprite.Play("timedunlock"); else animSprite.Play("unlock");}
-				else {if(myButtonType == btnType.TimedBtn) animSprite.Play("timedlock"); else animSprite.Play("lock");}
+				else {if(myButtonType == btnType.TimedBtn){MasterAudio.PlaySound("timer_button_alarm"); animSprite.Play("timedlock");} else animSprite.Play("lock");}
 
 				if(myButtonType == btnType.SequenceBtn) {seqLocked = true;}
 				else {
