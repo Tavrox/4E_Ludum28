@@ -36,7 +36,6 @@ public class Player : Character {
 
 		GameObject.Find("Frameworks/OT/View").GetComponent<OTView>().movementTarget = gameObject;
 	}
-	
 	// Update is called once per frame
 	public void Update () 
 	{
@@ -150,4 +149,5 @@ public class Player : Character {
 	public void teleportTo(Vector3 pos) {
 		thisTransform.position = pos;
 	}
+
 }

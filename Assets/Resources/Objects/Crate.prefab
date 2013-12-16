@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1 &100000
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -11,8 +11,8 @@ GameObject:
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
-  m_Layer: 0
-  m_Name: Sprite (id=-2714304)
+  m_Layer: 8
+  m_Name: crateSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,24 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400002}
+  m_Layer: 8
+  m_Name: spriteParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400004}
   - 65: {fileID: 6500000}
+  - 114: {fileID: 11400002}
+  - 54: {fileID: 5400000}
   m_Layer: 8
   m_Name: Crate
   m_TagString: Untagged
@@ -42,7 +59,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 115.000244, z: 1}
+  m_LocalScale: {x: 100, y: 115, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
 --- !u!4 &400002
@@ -56,6 +73,18 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
+  m_Father: {fileID: 400004}
+--- !u!4 &400004
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 931.046143, y: -139.324707, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 400002}
   m_Father: {fileID: 0}
 --- !u!23 &2300000
 Renderer:
@@ -85,17 +114,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Mesh: {fileID: 0}
+--- !u!54 &5400000
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &6500000
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100002}
+  m_GameObject: {fileID: 100004}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 142.740005, y: 200, z: 100}
+  m_Size: {x: 95, y: 110, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -108,9 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18d0574a4fa59946a49ede6640a1f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Sprite (id=-2714304)
+  _name: crateSprite
   _position: {x: 0, y: 0}
-  _size: {x: 100, y: 115.000244}
+  _size: {x: 100, y: 115}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -131,9 +175,9 @@ MonoBehaviour:
     width: 0
     height: 0
   protoType: 
-  baseName: 
+  baseName: crateSprite
   oSize: {x: 100, y: 100}
-  imageSize: {x: 0, y: 0}
+  imageSize: {x: 100, y: 100}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -146,10 +190,28 @@ MonoBehaviour:
   _image: {fileID: 0}
   sizeImages: []
   _frameIndex: 0
-  _frameName: 
+  _frameName: crate
   _spriteContainer: {fileID: 0}
-  _containerName: 
-  _newSprite: 1
+  _containerName: crate
+  _newSprite: 0
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f9f9bf5225c7bd4b86f735384c1e14b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisTransform: {fileID: 0}
+  gravityY: 10
+  crateMove: 0
+  playerMoveVel: 0
+  spriteScaleX: 0
+  spriteScaleY: 0
+  vectorMove: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -159,6 +221,6 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 100002}
+  m_RootGameObject: {fileID: 100004}
   m_IsPrefabParent: 1
   m_IsExploded: 1
