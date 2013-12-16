@@ -18,13 +18,13 @@ public class InvasionAnims : MonoBehaviour {
 			animSprite.Stop();
 			_player.angleRotation = 0;
 			_player.StartCoroutine("rewind");
-			_player.StartCoroutine("stopRewind",2.7f);
+			_player.StartCoroutine("stopRewind",1.3f);
 			StartCoroutine("reset");
 		}
 	}
 	public IEnumerator reset() {
 		//print ("reset");
-		yield return new WaitForSeconds(4.5f);//print ("DE-invade");
+		yield return new WaitForSeconds(2.25f);//print ("DE-invade");
 		animSprite.PlayBackward("invade");
 		transform.position = new Vector3(_player.transform.position.x,_player.transform.position.y,-5f);
 		_player.transform.position = _player.spawnPos;
