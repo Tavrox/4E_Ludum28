@@ -12,7 +12,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400002}
   m_Layer: 0
-  m_Name: teleport
+  m_Name: teleport-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.99999881, y: 2.29999995, z: 1}
+  m_LocalScale: {x: 47.9999695, y: 91.9999924, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
 --- !u!4 &400002
@@ -80,7 +80,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3385.72461, y: -1281.89465, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -152,9 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e0774980171c514ea93208b47048a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: teleport
+  _name: teleport-2
   _position: {x: 0, y: 0}
-  _size: {x: 1.99999881, y: 2.29999995}
+  _size: {x: 47.9999695, y: 91.9999924}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -176,8 +176,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: teleport
-  oSize: {x: 2.08333349, y: 2.5}
-  imageSize: {x: 1.99999881, y: 2.29999995}
+  oSize: {x: 50, y: 100}
+  imageSize: {x: 47.9999695, y: 91.9999924}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -190,7 +190,7 @@ MonoBehaviour:
   _image: {fileID: 0}
   sizeImages: []
   _frameIndex: 0
-  _frameName: teleport00
+  _frameName: tp_01
   _spriteContainer: {fileID: 0}
   _containerName: teleportContainer
   _newSprite: 0

@@ -18,10 +18,20 @@ public class LevelManager : MonoBehaviour {
 	void Start () 
 	{
 		chosenVariation = GameObject.Find("Level/TileImporter").GetComponent<TileImporter>().chosenVariation;
-		player = GameObject.FindWithTag("Player").GetComponent<Player>();
+		if (GameObject.FindWithTag("Player") != null)
+		{
+			player = GameObject.FindWithTag("Player").GetComponent<Player>();
+		}
 		myCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
 		_secLeft = GameObject.Find("Player/IngameUI/Timer").GetComponent<Timer>().secLeft;
 		_tileImporter = GameObject.Find("Level/TileImporter").GetComponent<TileImporter>();
+		MasterAudio.PlaySound("bg");
+		MasterAudio.PlaySound("jam");
+
+		GameEventManager.GameStart += GameStart;
+		GameEventManager.GameOver += GameOver;
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
 
 		DontDestroyOnLoad(GameObject.Find("Frameworks"));
 		
@@ -35,6 +45,28 @@ public class LevelManager : MonoBehaviour {
 //			endLevel();
 //			loadLevel();
 		}
+
+		if (Input.GetKeyDown(KeyCode.Alpha3))
+		{
+			playerDies();
+		}
+	}
+
+	private void GameOver()
+	{
+		playerDies();
+	}
+	private void GameStart()
+	{
+
+	}
+	private void GamePause()
+	{
+	
+	}
+	private void GameUnpause()
+	{
+
 	}
 
 	private void launchScene()
@@ -44,6 +76,11 @@ public class LevelManager : MonoBehaviour {
 	public void endLevel()
 	{
 
+	}
+	
+	public void playerDies()
+	{
+		Instantiate(Resources.Load("Objects/Invasion"));
 	}
 
 	public void loadLevel(int _variation, int _lvlID)

@@ -11,6 +11,7 @@ public class InvasionAnims : MonoBehaviour {
 	{
 		animSprite.frameIndex = 0;
 		_player = GameObject.Find("Player").GetComponent<Player>();
+		invade();
 	}
 	void Update () {
 		if(animSprite.frameIndex == 18 && !stopped) {
@@ -35,9 +36,11 @@ public class InvasionAnims : MonoBehaviour {
 		//print ("invade");
 		transform.position = new Vector3(_player.transform.position.x,_player.transform.position.y,-5f);
 		animSprite.Play("invade");
+		MasterAudio.PlaySound("rewind");
 	}
 	public IEnumerator finalReset() {
 		yield return new WaitForSeconds(1f);
 		stopped = false;
+		Destroy(gameObject);
 	}
 }

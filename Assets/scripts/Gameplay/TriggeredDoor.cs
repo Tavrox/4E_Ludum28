@@ -8,6 +8,7 @@ public class TriggeredDoor : MonoBehaviour {
 
 	void Start() {
 		animSprite.Play("closed");
+		if(!isLocked) Unlock();
 	}
 
 	public void Unlock()

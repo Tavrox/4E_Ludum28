@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml;
 using System;
-using UnityEditor;
 
 public class TileImporter : MonoBehaviour {
 	
@@ -50,7 +49,7 @@ public class TileImporter : MonoBehaviour {
 		TeleportIn,
 		TeleportOut,
 		TrapKill,
-		ColliBox,
+		Collibox,
 		BaseArcU,
 		BaseArcD,
 		BaseArcL,
@@ -266,6 +265,19 @@ public class TileImporter : MonoBehaviour {
 										_instance.name = children.Attributes.GetNamedItem("name").Value;
 									}
 									_instance.transform.parent = _parentVariation.transform;
+									if (_obj.ToString() == objectList.Collibox.ToString())
+									{
+										print ("boxcollider enabled");
+										float width = float.Parse(children.Attributes.GetNamedItem("width").Value) ;
+										float height = float.Parse(children.Attributes.GetNamedItem("height").Value);
+										_instance.GetComponent<BoxCollider>().size = new Vector3 ( width, height, 100f); 
+										_instance.transform.position =
+											new Vector3 (
+											(float.Parse(children.Attributes.GetNamedItem("x").Value)) + width / 2f,
+											(float.Parse(children.Attributes.GetNamedItem("y").Value) * -1) - height / 2f,
+											-5f);
+
+									}
 									Debug.Log("Created a " + children.Attributes.GetNamedItem("type").Value + " at position (X" + _instance.transform.position.x + "/Y" +_instance.transform.position.y+")");
 								}
 								else

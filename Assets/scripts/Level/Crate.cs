@@ -107,8 +107,8 @@ public class Crate : MonoBehaviour {
 		detectEndPFLeft = new Ray(new Vector3 (thisTransform.position.x-(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down);
 		detectEndPFRight = new Ray(new Vector3 (thisTransform.position.x+(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down);
 		//print (blockDetectionArea);
-		Debug.DrawRay(new Vector3 (thisTransform.position.x-(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY);
-		Debug.DrawRay(new Vector3 (thisTransform.position.x+(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY);
+		Debug.DrawRay(new Vector3 (thisTransform.position.x-(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY/2f);
+		Debug.DrawRay(new Vector3 (thisTransform.position.x+(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY/2f);
 		
 		if (!Physics.Raycast(detectEndPFLeft, out hitInfo, spriteScaleY) && !Physics.Raycast(detectEndPFRight, out hitInfo, spriteScaleY)) {
 			grounded = false;
@@ -117,7 +117,7 @@ public class Crate : MonoBehaviour {
 			grounded = true;
 			BoxCollider colliderHit = hitInfo.collider as BoxCollider;
 			//print (colliderHit.size);
-			thisTransform.position = new Vector3(thisTransform.position.x, (float)((hitInfo.transform.position.y)+(colliderHit.size.y/2f)+(spriteScaleY/2f)), thisTransform.position.z);
+			thisTransform.position = new Vector3(thisTransform.position.x, (float)((hitInfo.transform.position.y)+(colliderHit.size.y/2f)/*+(spriteScaleY/2f)*/), thisTransform.position.z);
 		}
 	}
 }
