@@ -1815,19 +1815,25 @@
   </data>
  </layer>
  <objectgroup name="Objects" width="30" height="30">
-  <object name="Caisse" type="Crate" x="1050" y="1250" width="50" height="50"/>
-  <object name="Interrupt" type="Trigger" x="1350" y="1250" width="50" height="50"/>
-  <object name="Turret" type="Turret" x="850" y="450" width="50" height="50"/>
-  <object name="Key" type="Key" x="600" y="850" width="50" height="50"/>
-  <object name="TimedBtn" type="TimedBtn" x="600" y="450" width="50" height="50"/>
-  <object name="TpIn" type="TeleportIn" x="1400" y="450" width="50" height="50"/>
-  <object name="Tpout" type="TeleportOut" x="50" y="850" width="50" height="50"/>
-  <object name="Levier" type="Lever" x="900" y="850" width="50" height="50"/>
-  <object name="Patroler" type="Patroler" x="500" y="1250" width="50" height="50"/>
+  <object name="Turret" type="Lever" x="400" y="850" width="50" height="50"/>
   <object name="TriggeredDoor" type="TriggeredDoor" x="450" y="150" width="50" height="50"/>
-  <object name="Trapkill" type="TrapKill" x="450" y="1000" width="50" height="50"/>
-  <object name="Patroler" type="Patroler" x="1250" y="450" width="50" height="50"/>
-  <object name="Interrupt" type="Blob" x="150" y="1250" width="50" height="50"/>
-  <object name="Trapkill" type="TrapKill" x="550" y="1000" width="50" height="50"/>
+  <object name="Turret" type="Crate" x="500" y="850" width="50" height="50"/>
+  <object name="Turret" type="Walker" x="700" y="850" width="50" height="50"/>
+  <object name="Turret" type="Key" x="600" y="850" width="50" height="50"/>
+  <object name="Turret" type="BaseArcL" x="1000" y="850" width="50" height="50"/>
+  <object name="Turret" type="Patroler" x="800" y="850" width="50" height="50"/>
+  <object name="Turret" type="Turret" x="900" y="850" width="50" height="50"/>
+  <object name="Turret" type="TeleportOut" x="800" y="1250" width="50" height="50"/>
+  <object name="Turret" type="TeleportIn" x="700" y="1250" width="50" height="50"/>
+  <object name="Turret" type="SequencedBtn" x="600" y="1250" width="50" height="50"/>
+  <object name="Turret" type="TriggeredDoor" x="400" y="1250" width="50" height="50"/>
+  <object name="Turret" type="TrapKill" x="900" y="1250" width="50" height="50"/>
+  <object name="Turret" type="TimedBtn" x="500" y="1250" width="50" height="50"/>
+  <object name="Turret" type="ArcHorizontal" x="1000" y="1250" width="50" height="50"/>
+  <object name="Turret" type="ArcVertical" x="1100" y="1250" width="50" height="50"/>
+  <object name="Turret" type="BaseArcU" x="1300" y="1250" width="50" height="50"/>
+  <object name="Turret" type="BaseArcR" x="1200" y="1250" width="50" height="50"/>
+  <object name="Turret" type="EndDoor" x="1400" y="1150" width="50" height="50"/>
+  <object name="Turret" type="BaseArcD" x="1400" y="1250" width="50" height="50"/>
  </objectgroup>
 </map>

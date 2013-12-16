@@ -143,6 +143,7 @@ MonoBehaviour:
   delay: 0
   trigged: 0
   seqLocked: 0
+  stopped: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -32,11 +32,9 @@ public class TileImporter : MonoBehaviour {
 	{
 		Lever,
 		Crate,
-		Trigger,
 		Walker,
 		Patroler,
 		Turret,
-		Blob,
 		Key,
 		TriggeredDoor,
 		TimedBtn,
@@ -44,7 +42,14 @@ public class TileImporter : MonoBehaviour {
 		TeleportIn,
 		TeleportOut,
 		TrapKill,
-		ColliBox
+		ColliBox,
+		BaseArcU,
+		BaseArcD,
+		BaseArcL,
+		BaseArcR,
+		ArcHorizontal,
+		ArcVertical,
+		EndDoor
 	};
 	public objectList obj;
 
@@ -218,7 +223,7 @@ public class TileImporter : MonoBehaviour {
 						}
 						else
 						{
-							print ("didnt find object");
+//							print ("didnt find object");
 						}
 					}
 					else 

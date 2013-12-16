@@ -242,20 +242,6 @@ MonoBehaviour:
   waypoints:
   - {fileID: 0}
   - {fileID: 0}
-  skill_knife: {fileID: 0}
-  skill_axe: {fileID: 0}
-  skill_shield: {fileID: 0}
-  instPebble: {fileID: 0}
-  menu: {fileID: 0}
-  footStepDelay: .800000012
-  hp_display:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
-  soundMan: {fileID: 0}
-  mdSound: {fileID: 0}
   paused: 0
 --- !u!114 &11400004
 MonoBehaviour:
