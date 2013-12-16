@@ -13776,14 +13776,13 @@
   <object name="porteB" type="TriggeredDoor" x="2950" y="1002" width="50" height="350"/>
   <object name="ETAT INITIAL D'ABC : 0-0-0" x="3331" y="997" width="188" height="127"/>
   <object name="Caisse1" type="Caisses" x="4531" y="1645" width="50" height="50"/>
-  <object name="Level_Start" x="4054" y="1213" width="111" height="135"/>
+  <object name="Level_Start" type="StartDoor" x="4054" y="1213" width="111" height="135"/>
   <object name="1 inverse A et B, 2 inverse B et C, 3 inverse C" x="3564" y="998" width="244" height="125"/>
   <object name="Camera" type="Camera, monsieur" x="1413" y="1001" width="797" height="600"/>
   <object name="Perso" x="1764" y="1226" width="100" height="120"/>
   <object name="follower2" type="Walker" x="550" y="1550" width="100" height="50"/>
   <object name="Tourelle1" type="Turret" x="1750" y="1600" width="50" height="50"/>
   <object name="Tourelle2" type="Turret" x="3500" y="2050" width="50" height="50"/>
-  <object x="3514" y="2119" width="1"/>
   <object name="porteC" type="TriggeredDoor" x="3900" y="1950" width="50" height="200"/>
   <object name="Level_ENDING" x="4170" y="2000" width="111" height="135"/>
   <object name="Clé" type="Key" x="5000" y="800" width="50" height="50"/>

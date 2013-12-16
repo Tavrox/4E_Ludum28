@@ -2,11 +2,9 @@
 <objecttypes>
  <objecttype name="Lever" color="#a40096"/>
  <objecttype name="Crate" color="#a40002"/>
- <objecttype name="Trigger" color="#262627"/>
  <objecttype name="Walker" color="#74a40d"/>
  <objecttype name="Patroler" color="#a4125d"/>
  <objecttype name="Turret" color="#3fa400"/>
- <objecttype name="Blob" color="#a40023"/>
  <objecttype name="Key" color="#ffd12b"/>
  <objecttype name="TriggeredDoor" color="#8a3c3c"/>
  <objecttype name="TimedBtn" color="#2435a4"/>
@@ -14,5 +12,11 @@
  <objecttype name="TeleportIn" color="#4ca461"/>
  <objecttype name="TeleportOut" color="#3263a4"/>
  <objecttype name="TrapKill" color="#000000"/>
- <objecttype name="ColliBox" color="#a0a0a4"/>
+ <objecttype name="BaseArcL" color="#a49900"/>
+ <objecttype name="ArcHorizontal" color="#76a42b"/>
+ <objecttype name="ArcVertical" color="#a4003f"/>
+ <objecttype name="BaseArcR" color="#a46061"/>
+ <objecttype name="BaseArcU" color="#a49466"/>
+ <objecttype name="BaseArcD" color="#a44343"/>
+ <objecttype name="EndDoor" color="#00a489"/>
 </objecttypes>
