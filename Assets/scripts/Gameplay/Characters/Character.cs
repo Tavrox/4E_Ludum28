@@ -147,7 +147,7 @@ public class Character : MonoBehaviour
 		}
 		float addForce = 1;
 		if((!grounded && !Input.GetKey("up")) || blockedUp) chute = true;
-		if(blockedUp) {print("TARACE");addForce=10f;/*gravityY += 150f;StartCoroutine("resetGravity");*/}
+		if(blockedUp) {addForce=10f;/*gravityY += 150f;StartCoroutine("resetGravity");*/}
 		if(chute && grounded) chute = false;
 
 		// landed from fall/jump
