@@ -125,7 +125,8 @@ public class Character : MonoBehaviour
 		{			
 			vectorMove.x = -moveVel;
 		}
-		
+		//if(!grounded) vectorMove.x=vectorMove.x/1.5f;
+		//if (chute) vectorMove.x=vectorMove.x/2.5f;
 		// pressed jump button
 		if (isJump == true && !chute)
 		{
@@ -160,7 +161,7 @@ public class Character : MonoBehaviour
 		// apply gravity while airborne
 		if(grounded == false && chute)
 		{
-			if(vectorMove.y>0 && vectorMove.y<600) vectorMove.y -= gravityY * Time.deltaTime * 1.5f;
+			if(vectorMove.y>0 && vectorMove.y<850) vectorMove.y -= gravityY * Time.deltaTime * 1.5f;
 			vectorMove.y -= gravityY * Time.deltaTime * 1.5f;
 		}
 		
