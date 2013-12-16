@@ -17,6 +17,7 @@ public class Projectile : MonoBehaviour {
 	void Start () {
 		myTransform = transform;
 		animSprite.Play("default");
+		GameEventManager.GameOver += GameOver;
 //		player = GameObject.FindWithTag("Player").GetComponent<PlayerPop>();
 //		if(player.shootLeft == true) direction = Vector3.left;
 //		else direction = Vector3.right;
@@ -32,5 +33,19 @@ public class Projectile : MonoBehaviour {
 		if(myTransform.position.y > (posIni.y + 1000f) || myTransform.position.y < (posIni.y - 1000f)) {
 			Destroy(gameObject);
 		}
+	}
+
+	void OnTriggerEnter(Collider _other)
+	{
+		if (_other.CompareTag("Player") == true)
+		{
+			GameEventManager.TriggerGameOver();
+		}
+
+	}
+
+	private void GameOver()
+	{
+		collider.enabled = false;
 	}
 }

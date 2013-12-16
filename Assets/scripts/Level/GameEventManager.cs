@@ -41,7 +41,6 @@ public static class GameEventManager {
 	}
 	public static void TriggerGameUnpause()
 	{
-		Debug.Log("OMG");
 		if(GameUnpause != null)
 		{
 			Debug.Log("Unpause");

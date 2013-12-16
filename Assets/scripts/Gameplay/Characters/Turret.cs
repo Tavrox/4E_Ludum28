@@ -14,6 +14,7 @@ public class Turret : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		StartCoroutine("waitB4Shoot");
+		GameEventManager.GameOver += GameOver;
 	}
 	private IEnumerator waitB4Shoot () {
 		yield return new WaitForSeconds(0.35f);
@@ -41,5 +42,10 @@ public class Turret : MonoBehaviour {
 		instProj.transform.position = new Vector3(gameObject.transform.position.x,(gameObject.transform.position.y+gameObject.transform.localScale.y/2-0.1f),gameObject.transform.position.z-1);
 		instProj.posIni = instProj.transform.position;
 		StartCoroutine("shoot");
+	}
+	private void GameOver()
+	{
+		StopCoroutine("shoot");
+		enabled = false;
 	}
 }

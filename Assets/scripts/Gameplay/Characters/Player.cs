@@ -7,14 +7,6 @@ public class Player : Character {
 	[HideInInspector] public Transform trans;
 
 	public bool hasFinalKey = false;
-
-
-	//	private WaveCreator soundEmitt1, soundEmitt2, soundInstru1, soundInstru2,soundEmitt3;
-	//	private int cptWave=1, pebbleDirection = 1;
-	//	private bool blockCoroutine, first, toSprint, toWalk, specialCast, playerDirLeft;
-	//	private Pebble pebble1;
-	//	private float powerPebble;
-	//	private GameObject pebbleBar;
 	
 	[HideInInspector] public bool paused = false;
 	public int angleRotation;
@@ -22,6 +14,11 @@ public class Player : Character {
 	public override void Start () 
 	{
 		base.Start();
+
+		OTAnimatingSprite _sprite = GetComponentInChildren<Transform>().GetComponentInChildren<OTAnimatingSprite>();
+
+		_sprite.alpha = 0f;
+		OTTween _tween = new OTTween(_sprite,1f).Tween("alpha",1f);
 
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GameOver += GameOver;
