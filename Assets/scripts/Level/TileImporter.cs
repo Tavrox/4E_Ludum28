@@ -16,6 +16,7 @@ public class TileImporter : MonoBehaviour {
 	public int levelID = 1;
 	public string specificAddition = "";
 	public bool specificTrigger = false;
+	public int chosenVariation = 0;
 	private XmlDocument xmlDoc;
 	private XmlNodeList mapNodes;
 	private XmlNodeList tileNodes;
@@ -242,35 +243,46 @@ public class TileImporter : MonoBehaviour {
 		itemNodes = xmlDoc.SelectNodes("map/objectgroup");
 		foreach (XmlNode node in itemNodes)
 		{
-			foreach (XmlNode children in node.ChildNodes)
+			if (node.Attributes.GetNamedItem("name").Value == chosenVariation.ToString())
 			{
-				foreach (objectList _obj in Enum.GetValues(typeof(objectList)))
+				foreach (XmlNode children in node.ChildNodes)
 				{
-					if (Resources.Load("Objects/" + _obj.ToString()) != null)
+					foreach (objectList _obj in Enum.GetValues(typeof(objectList)))
 					{
-						if(children.Attributes.GetNamedItem("type").Value != null)
+						if (Resources.Load("Objects/" + _obj.ToString()) != null)
 						{
-						if (children.Attributes.GetNamedItem("type").Value == _obj.ToString())
+							if(children.Attributes.GetNamedItem("type").Value != null)
+							{
+								print (children.Attributes.GetNamedItem("type").Value);
+							if (children.Attributes.GetNamedItem("type").Value == _obj.ToString())
+							{
+								GameObject _instance = Instantiate(Resources.Load("Objects/" + children.Attributes.GetNamedItem("type").Value)) as GameObject;
+								print (_instance.name);
+								_instance.transform.position = new Vector3 (float.Parse(children.Attributes.GetNamedItem("x").Value) + 50, float.Parse(children.Attributes.GetNamedItem("y").Value) * -1, -5f);
+								if (children.Attributes.GetNamedItem("name").Value != null)
+								{
+									_instance.name = children.Attributes.GetNamedItem("name").Value;
+								}
+								_instance.transform.parent = GameObject.Find("Level/Gameplay").transform;
+								Debug.Log("Created a " + children.Attributes.GetNamedItem("type").Value + " at position (X" + _instance.transform.position.x + "/Y" +_instance.transform.position.y+")");
+							}
+							else
+							{
+	//							print ("didnt find object");
+							}
+							}
+						}
+						else 
 						{
-							GameObject _instance = Instantiate(Resources.Load("Objects/" + children.Attributes.GetNamedItem("type").Value)) as GameObject;
-							_instance.transform.position = new Vector3 (float.Parse(children.Attributes.GetNamedItem("x").Value) + 50, float.Parse(children.Attributes.GetNamedItem("y").Value) * -1, -5f);
-							_instance.name = children.Attributes.GetNamedItem("name").Value;
-							_instance.transform.parent = GameObject.Find("Level/Gameplay").transform;
-							Debug.Log("Created a " + children.Attributes.GetNamedItem("type").Value + " at position (X" + _instance.transform.position.x + "/Y" +_instance.transform.position.y+")");
+							Debug.Log("The object " + _obj.ToString() + " hasn't been found ! Fix that error NOW.");
 						}
-						else
-						{
-//							print ("didnt find object");
-						}
-						}
-					}
-					else 
-					{
-						Debug.Log("The object " + _obj.ToString() + " hasn't been found ! Fix that error NOW.");
 					}
 				}
 			}
-
+			else
+			{
+				print (node.Attributes.GetNamedItem("name").Value + "not picked");
+			}
 		}
 		Debug.Log("Finish getting item");
 	}
