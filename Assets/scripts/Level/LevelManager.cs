@@ -2,8 +2,7 @@
 using System.Collections;
 
 public class LevelManager : MonoBehaviour {
-	
-	public OTSprite background;
+
 	[SerializeField] private Player player;
 	[SerializeField] private Camera myCamera;
 	
@@ -11,18 +10,46 @@ public class LevelManager : MonoBehaviour {
 	public int nextLvlID;
 	public int previousLvlID;
 
+	private int chosenVariation;
+	private int _secLeft;
+	private TileImporter _tileImporter;
+
 	// Use this for initialization
 	void Start () 
 	{
+		chosenVariation = GameObject.Find("Level/TileImporter").GetComponent<TileImporter>().chosenVariation;
 		player = GameObject.FindWithTag("Player").GetComponent<Player>();
-		//myCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+		myCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+		_secLeft = GameObject.Find("Player/IngameUI/Timer").GetComponent<Timer>().secLeft;
+		_tileImporter = GameObject.Find("Level/TileImporter").GetComponent<TileImporter>();
+
+		DontDestroyOnLoad(GameObject.Find("Frameworks"));
 		
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		myCamera.transform.position = new Vector3 (player.transform.position.x, 0, player.transform.position.z);
-		myCamera.nearClipPlane = -1000;
+		if (_secLeft <= 0)
+		{
+//			endLevel();
+//			loadLevel();
+		}
+	}
+
+	private void launchScene()
+	{
+//		Application.LoadLevel(1);
+	}
+	public void endLevel()
+	{
+
+	}
+
+	public void loadLevel(int _variation, int _lvlID)
+	{
+//		chosenVariation = _variation;
+//		Application.LoadLevel(_lvlID);
+//		_tileImporter.buildLevel(chosenVariation);
 	}
 }

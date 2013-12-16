@@ -6,11 +6,8 @@ public class Player : Character {
 	[HideInInspector] public Vector3 position;
 	[HideInInspector] public Transform trans;
 
-	//	public Pebble instPebble;
-	//	public WaveCreator instFootWave,instInstruWave;
-	//	public GameObject instPebbleBar;
-	public OTSprite menu;
-	//	public float footStepDelay = 0.6f;
+	public bool hasFinalKey = false;
+
 
 	//	private WaveCreator soundEmitt1, soundEmitt2, soundInstru1, soundInstru2,soundEmitt3;
 	//	private int cptWave=1, pebbleDirection = 1;

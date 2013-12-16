@@ -8,48 +8,35 @@ public class IngameUI : MonoBehaviour {
 		PauseGame,
 		ResumeGame,
 		MuteSound,
-		ExplosionTimer
+		ExplosionTimer,
+		GoToMenu
 	}
 	public ListAction action;
-	private Object prefabSprite;
+	private OTSprite prefabSprite;
 	public bool paused;
 	
 	void Start () 
 	{
-
+		prefabSprite = GetComponentInChildren<OTSprite>();
 	}
+
+	public void fadeOut()
+	{
+		OTTween _tween = new OTTween(prefabSprite, 1f).Tween("alpha", 1f).PingPong();
+	}
+
+	void OnMouseDown()
+	{
 	
-	// Update is called once per frame
-	void Update () 
-	{
+		switch (action)
+		{
+		case (ListAction.GoToMenu):
+			{
+				Application.LoadLevel(0);
+				break;
+			}
 
-	}
-	private void OnMouseOver()
-	{
-	}
-	
-	private void OnMouseDown()
-	{
+		}
 
-	}
-	private void checkExistingMenu()
-	{
-		
-	}
-	private void GameStart () 
-	{
-		
-	}
-	private void GameOver () 
-	{
-		
-	}
-	private void GamePause()
-	{
-		
-	}
-	private void GameUnpause()
-	{
-		
 	}
 }

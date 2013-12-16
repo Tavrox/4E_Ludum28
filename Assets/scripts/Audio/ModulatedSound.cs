@@ -17,8 +17,8 @@ public class ModulatedSound : MonoBehaviour {
 	
 	public void PercentSound(Character charac)
 	{
-		float percentHP = (charac.HP * 1.0f / charac.maxHP * 1.0f);		
-		sound.groupMasterVolume = percentHP;
+//		float percentHP = (charac.HP * 1.0f / charac.maxHP * 1.0f);		
+//		sound.groupMasterVolume = percentHP;
 		MasterAudio.PlaySound(sound.name);
 	}
 }

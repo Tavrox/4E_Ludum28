@@ -4,7 +4,7 @@ using System.Collections;
 public class EndDoor : MonoBehaviour {
 
 	public OTSprite sprite;
-	public bool playerHasKey, triggered;
+	public bool triggered;
 	// Use this for initialization
 	void Start () {
 	
@@ -19,14 +19,19 @@ public class EndDoor : MonoBehaviour {
 	{
 		if (other.gameObject.CompareTag("Player") && !triggered)
 		{
-			if (Input.GetKeyDown(KeyCode.F) && playerHasKey)
+			if (Input.GetKeyDown(KeyCode.F) && GameObject.Find("Player").GetComponent<Player>().hasFinalKey == true)
 			{
 				sprite.frameIndex += 1;
 				triggered = true;
 				StartCoroutine("lastFrameBuzzer");
+				Destroy (GameObject.Find("Player/IngameUI/NeedKey").gameObject);
 				finishLevel();
 			}
-			else if (Input.GetKeyDown(KeyCode.F) && !playerHasKey) print ("GET THE KEY !m!");
+			else if (Input.GetKeyDown(KeyCode.F) && GameObject.Find("Player").GetComponent<Player>().hasFinalKey == false)
+			{
+				GameObject.Find("Player/IngameUI/NeedKey").GetComponent<IngameUI>().fadeOut();
+
+			}
 		}
 	}
 	private IEnumerator lastFrameBuzzer () {

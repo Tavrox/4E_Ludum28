@@ -17,6 +17,8 @@ public class TileImporter : MonoBehaviour {
 	public string specificAddition = "";
 	public bool specificTrigger = false;
 	public int chosenVariation = 0;
+	public int minVariation;
+	public int maxVariation;
 	private XmlDocument xmlDoc;
 	private XmlNodeList mapNodes;
 	private XmlNodeList tileNodes;
@@ -285,6 +287,12 @@ public class TileImporter : MonoBehaviour {
 			}
 		}
 		Debug.Log("Finish getting item");
+	}
+
+	public void buildLevel()
+	{
+//		chosenVariation = Random.Range(minVariation, maxVariation);
+		getObjects();
 	}
 
 	IEnumerator Wait(float waitTime)

@@ -134,7 +134,7 @@
                 <key>sourceSize</key>
                 <string>{134,135}</string>
             </dict>
-            <key>pause.png</key>
+            <key>mainMenu.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{511,836},{465,286}}</string>
@@ -147,10 +147,23 @@
                 <key>sourceSize</key>
                 <string>{465,286}</string>
             </dict>
+            <key>pause.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1,1123},{465,286}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{465,286}}</string>
+                <key>sourceSize</key>
+                <string>{465,286}</string>
+            </dict>
             <key>play.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1,1123},{251,139}}</string>
+                <string>{{467,1123},{251,139}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -163,7 +176,7 @@
             <key>timer.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{253,1123},{445,108}}</string>
+                <string>{{1,1410},{445,108}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -176,7 +189,7 @@
             <key>title.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1,1263},{545,224}}</string>
+                <string>{{447,1410},{545,224}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -189,7 +202,7 @@
             <key>transi.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{547,1263},{27,27}}</string>
+                <string>{{993,1410},{27,27}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -209,7 +222,7 @@
             <key>size</key>
             <string>{1024,2048}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:833b6bc51897b325d6d5d2fb14d32500:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:fdefd115574b56aaefc172df9ce14aa1:1/1$</string>
             <key>textureFileName</key>
             <string>menu.png</string>
         </dict>
