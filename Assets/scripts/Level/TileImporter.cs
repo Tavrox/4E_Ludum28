@@ -34,7 +34,10 @@ public class TileImporter : MonoBehaviour {
 		Crate,
 		Walker,
 		Patroler,
-		Turret,
+		TurretU,
+		TurretD,
+		TurretL,
+		TurretR,
 		Key,
 		TriggeredDoor,
 		TimedBtn,
@@ -49,7 +52,7 @@ public class TileImporter : MonoBehaviour {
 		BaseArcR,
 		ArcHorizontal,
 		ArcVertical,
-		EndDoor
+		EndDoor,
 	};
 	public objectList obj;
 

@@ -4,7 +4,7 @@
  <objecttype name="Crate" color="#a40002"/>
  <objecttype name="Walker" color="#74a40d"/>
  <objecttype name="Patroler" color="#a4125d"/>
- <objecttype name="Turret" color="#3fa400"/>
+ <objecttype name="TurretU" color="#a40002"/>
  <objecttype name="Key" color="#ffd12b"/>
  <objecttype name="TriggeredDoor" color="#8a3c3c"/>
  <objecttype name="TimedBtn" color="#2435a4"/>
@@ -19,4 +19,7 @@
  <objecttype name="BaseArcU" color="#a49466"/>
  <objecttype name="BaseArcD" color="#a44343"/>
  <objecttype name="EndDoor" color="#00a489"/>
+ <objecttype name="TurretD" color="#a44748"/>
+ <objecttype name="TurretL" color="#a46064"/>
+ <objecttype name="TurretR" color="#a48e8e"/>
 </objecttypes>

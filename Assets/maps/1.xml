@@ -1076,15 +1076,15 @@
    <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="2"/>
-   <tile gid="2"/>
-   <tile gid="2"/>
-   <tile gid="2"/>
-   <tile gid="2"/>
-   <tile gid="2"/>
-   <tile gid="2"/>
-   <tile gid="2"/>
-   <tile gid="2"/>
    <tile gid="3"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -1106,14 +1106,6 @@
    <tile gid="5"/>
    <tile gid="5"/>
    <tile gid="5"/>
-   <tile gid="5"/>
-   <tile gid="5"/>
-   <tile gid="5"/>
-   <tile gid="5"/>
-   <tile gid="5"/>
-   <tile gid="5"/>
-   <tile gid="5"/>
-   <tile gid="5"/>
    <tile gid="6"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -1122,15 +1114,15 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
    <tile gid="7"/>
-   <tile gid="8"/>
-   <tile gid="8"/>
-   <tile gid="8"/>
-   <tile gid="8"/>
-   <tile gid="8"/>
-   <tile gid="8"/>
-   <tile gid="8"/>
-   <tile gid="8"/>
    <tile gid="8"/>
    <tile gid="8"/>
    <tile gid="8"/>
@@ -1249,6 +1241,14 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
    <tile gid="1"/>
    <tile gid="2"/>
    <tile gid="2"/>
@@ -1261,13 +1261,13 @@
    <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="2"/>
-   <tile gid="2"/>
-   <tile gid="2"/>
-   <tile gid="2"/>
-   <tile gid="2"/>
-   <tile gid="2"/>
-   <tile gid="2"/>
-   <tile gid="2"/>
+   <tile gid="3"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="1"/>
    <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="2"/>
@@ -1291,13 +1291,13 @@
    <tile gid="5"/>
    <tile gid="5"/>
    <tile gid="5"/>
-   <tile gid="5"/>
-   <tile gid="5"/>
-   <tile gid="5"/>
-   <tile gid="5"/>
-   <tile gid="5"/>
-   <tile gid="5"/>
-   <tile gid="5"/>
+   <tile gid="12"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="2"/>
+   <tile gid="13"/>
    <tile gid="5"/>
    <tile gid="5"/>
    <tile gid="5"/>
@@ -1815,25 +1815,25 @@
   </data>
  </layer>
  <objectgroup name="Objects" width="30" height="30">
-  <object name="Turret" type="Lever" x="400" y="850" width="50" height="50"/>
-  <object name="TriggeredDoor" type="TriggeredDoor" x="450" y="150" width="50" height="50"/>
-  <object name="Turret" type="Crate" x="500" y="850" width="50" height="50"/>
-  <object name="Turret" type="Walker" x="700" y="850" width="50" height="50"/>
-  <object name="Turret" type="Key" x="600" y="850" width="50" height="50"/>
-  <object name="Turret" type="BaseArcL" x="1000" y="850" width="50" height="50"/>
-  <object name="Turret" type="Patroler" x="800" y="850" width="50" height="50"/>
-  <object name="Turret" type="Turret" x="900" y="850" width="50" height="50"/>
-  <object name="Turret" type="TeleportOut" x="800" y="1250" width="50" height="50"/>
-  <object name="Turret" type="TeleportIn" x="700" y="1250" width="50" height="50"/>
-  <object name="Turret" type="SequencedBtn" x="600" y="1250" width="50" height="50"/>
-  <object name="Turret" type="TriggeredDoor" x="400" y="1250" width="50" height="50"/>
-  <object name="Turret" type="TrapKill" x="900" y="1250" width="50" height="50"/>
-  <object name="Turret" type="TimedBtn" x="500" y="1250" width="50" height="50"/>
-  <object name="Turret" type="ArcHorizontal" x="1000" y="1250" width="50" height="50"/>
-  <object name="Turret" type="ArcVertical" x="1100" y="1250" width="50" height="50"/>
-  <object name="Turret" type="BaseArcU" x="1300" y="1250" width="50" height="50"/>
-  <object name="Turret" type="BaseArcR" x="1200" y="1250" width="50" height="50"/>
-  <object name="Turret" type="EndDoor" x="1400" y="1150" width="50" height="50"/>
-  <object name="Turret" type="BaseArcD" x="1400" y="1250" width="50" height="50"/>
+  <object name="Lever" type="Lever" x="300" y="850" width="50" height="50"/>
+  <object name="Crate" type="Crate" x="550" y="150" width="50" height="50"/>
+  <object name="Walker" type="Walker" x="700" y="850" width="50" height="50"/>
+  <object name="Key" type="Key" x="400" y="450" width="50" height="50"/>
+  <object name="BaseArcL" type="BaseArcL" x="1150" y="1000" width="50" height="50"/>
+  <object name="Patroler" type="Patroler" x="1100" y="550" width="50" height="50"/>
+  <object name="Turret" type="Turret" x="1300" y="0" width="50" height="50"/>
+  <object name="TeleportOut" type="TeleportOut" x="1350" y="1250" width="50" height="50"/>
+  <object name="TeleportIn" type="TeleportIn" x="1400" y="450" width="50" height="50"/>
+  <object name="SequencedBtn" type="SequencedBtn" x="700" y="450" width="50" height="50"/>
+  <object name="TriggeredDoor" type="TriggeredDoor" x="500" y="750" width="50" height="50"/>
+  <object name="TrapKill" type="TrapKill" x="850" y="750" width="50" height="50"/>
+  <object name="TimedBtn" type="TimedBtn" x="800" y="450" width="50" height="50"/>
+  <object name="ArcHorizontal" type="ArcHorizontal" x="1000" y="850" width="50" height="50"/>
+  <object name="ArcVertical" type="ArcVertical" x="950" y="1150" width="50" height="50"/>
+  <object name="BaseArcU" type="BaseArcU" x="1000" y="900" width="50" height="50"/>
+  <object name="BaseArcR" type="BaseArcR" x="300" y="600" width="50" height="50"/>
+  <object name="EndDoor" type="EndDoor" x="100" y="1200" width="50" height="50"/>
+  <object name="BaseArcD" type="BaseArcD" x="950" y="1100" width="50" height="50"/>
+  <object name="Collibox" type="Collibox" x="100" y="250" width="650" height="150"/>
  </objectgroup>
 </map>
