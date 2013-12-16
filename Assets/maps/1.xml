@@ -1840,5 +1840,7 @@
   <object name="Trap" type="TrapKill" x="550" y="1400" width="50" height="50"/>
   <object name="coll" type="Collibox" x="800" y="1350" width="700" height="150"/>
   <object name="Trap" type="TrapKill" x="700" y="1400" width="50" height="50"/>
+  <object name="BaseARc" type="BaseArcU" x="250" y="900" width="50" height="50"/>
+  <object name="Horizontal" type="ArcHorizontal" x="250" y="800" width="50" height="100"/>
  </objectgroup>
 </map>
