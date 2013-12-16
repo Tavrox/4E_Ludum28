@@ -243,6 +243,8 @@ public class TileImporter : MonoBehaviour {
 		initXML();
 		objectList _currObj = obj;
 		itemNodes = xmlDoc.SelectNodes("map/objectgroup");
+		GameObject _parentVariation = new GameObject(chosenVariation.ToString());
+		_parentVariation.transform.parent = GameObject.Find("Level/Gameplay").transform;
 		foreach (XmlNode node in itemNodes)
 		{
 			if (node.Attributes.GetNamedItem("name").Value == chosenVariation.ToString())
@@ -255,23 +257,21 @@ public class TileImporter : MonoBehaviour {
 						{
 							if(children.Attributes.GetNamedItem("type").Value != null)
 							{
-								print (children.Attributes.GetNamedItem("type").Value);
-							if (children.Attributes.GetNamedItem("type").Value == _obj.ToString())
-							{
-								GameObject _instance = Instantiate(Resources.Load("Objects/" + children.Attributes.GetNamedItem("type").Value)) as GameObject;
-								print (_instance.name);
-								_instance.transform.position = new Vector3 (float.Parse(children.Attributes.GetNamedItem("x").Value) + 50, float.Parse(children.Attributes.GetNamedItem("y").Value) * -1, -5f);
-								if (children.Attributes.GetNamedItem("name").Value != null)
+								if (children.Attributes.GetNamedItem("type").Value == _obj.ToString())
 								{
-									_instance.name = children.Attributes.GetNamedItem("name").Value;
+									GameObject _instance = Instantiate(Resources.Load("Objects/" + children.Attributes.GetNamedItem("type").Value)) as GameObject;
+									_instance.transform.position = new Vector3 (float.Parse(children.Attributes.GetNamedItem("x").Value) + 50, float.Parse(children.Attributes.GetNamedItem("y").Value) * -1, -5f);
+									if (children.Attributes.GetNamedItem("name").Value != null)
+									{
+										_instance.name = children.Attributes.GetNamedItem("name").Value;
+									}
+									_instance.transform.parent = _parentVariation.transform;
+									Debug.Log("Created a " + children.Attributes.GetNamedItem("type").Value + " at position (X" + _instance.transform.position.x + "/Y" +_instance.transform.position.y+")");
 								}
-								_instance.transform.parent = GameObject.Find("Level/Gameplay").transform;
-								Debug.Log("Created a " + children.Attributes.GetNamedItem("type").Value + " at position (X" + _instance.transform.position.x + "/Y" +_instance.transform.position.y+")");
-							}
-							else
-							{
-	//							print ("didnt find object");
-							}
+								else
+								{
+		//							print ("didnt find object");
+								}
 							}
 						}
 						else 

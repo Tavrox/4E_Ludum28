@@ -19,11 +19,8 @@
  <objecttype name="BaseArcU" color="#a49466"/>
  <objecttype name="BaseArcD" color="#a44343"/>
  <objecttype name="EndDoor" color="#00a489"/>
-<<<<<<< HEAD
- <objecttype name="Comment" color="#ffffff"/>
-=======
  <objecttype name="TurretD" color="#a44748"/>
  <objecttype name="TurretL" color="#a46064"/>
  <objecttype name="TurretR" color="#a48e8e"/>
->>>>>>> 92e8ffacbfec486f0252ba47c400f18d52498cca
+ <objecttype name="Collibox" color="#ffffff"/>
 </objecttypes>

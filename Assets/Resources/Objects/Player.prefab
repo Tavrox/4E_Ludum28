@@ -130,7 +130,7 @@ GameObject:
   - 23: {fileID: 2300006}
   - 114: {fileID: 11400012}
   m_Layer: 0
-  m_Name: spr
+  m_Name: spr-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,13 +180,14 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400020}
+  - 114: {fileID: 11400022}
   m_Layer: 0
   m_Name: NeedKey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &100022
 GameObject:
   m_ObjectHideFlags: 1
@@ -234,6 +235,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &100028
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400028}
+  - 114: {fileID: 11400020}
+  m_Layer: 0
+  m_Name: MainMenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -264,7 +281,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 636.793396, y: -80.0947952, z: -6}
+  m_LocalPosition: {x: 901.206665, y: -180.356094, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -400,7 +417,19 @@ Transform:
   - {fileID: 400024}
   - {fileID: 400022}
   - {fileID: 400020}
+  - {fileID: 400028}
   m_Father: {fileID: 400004}
+--- !u!4 &400028
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100028}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.7995605, y: -106.263031, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400026}
 --- !u!23 &2300000
 Renderer:
   m_ObjectHideFlags: 1
@@ -715,7 +744,7 @@ MonoBehaviour:
   halfMyY: 0
   position: {x: 0, y: 0, z: 0}
   trans: {fileID: 0}
-  menu: {fileID: 0}
+  hasFinalKey: 0
   paused: 0
   angleRotation: 0
 --- !u!114 &11400004
@@ -745,8 +774,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posX: 339
   posY: 4
-  secLeft: 30
+  secLeft: 59
+  microSecLeft: 99
   _skinTimer: {fileID: 11400000, guid: 902381b5099917f45af994a30de2b15e, type: 2}
+  _colSafe: {r: .224140882, g: .507352948, b: .18652682, a: 1}
+  _colorWarning: {r: 1, g: .724137962, b: 0, a: 1}
+  _colCritical: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -864,7 +897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18d0574a4fa59946a49ede6640a1f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: spr
+  _name: spr-1
   _position: {x: 0, y: 0}
   _size: {x: 233, y: 233}
   _rotation: 0
@@ -898,7 +931,7 @@ MonoBehaviour:
   _additive: 0
   _materialReference: transparent
   _tintColor: {r: 1, g: 1, b: 1, a: 1}
-  _alpha: 1
+  _alpha: 0
   _image: {fileID: 0}
   sizeImages: []
   _frameIndex: 2
@@ -1007,7 +1040,7 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 12
+  _frameIndex: 13
   _frameName: timer
   _spriteContainer: {fileID: 0}
   _containerName: ingameui
@@ -1018,6 +1051,32 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9814cd135fe2ae84d8d3ba5f5112d0e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: 0
+  paused: 0
+--- !u!114 &11400020
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9814cd135fe2ae84d8d3ba5f5112d0e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: 0
+  paused: 0
+--- !u!114 &11400022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100020}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9814cd135fe2ae84d8d3ba5f5112d0e9, type: 3}
