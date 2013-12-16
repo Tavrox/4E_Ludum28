@@ -631,7 +631,7 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: playerSprite
-  oSize: {x: 101, y: 122}
+  oSize: {x: 100, y: 120}
   imageSize: {x: 96.959938, y: 117.119926}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
@@ -645,7 +645,7 @@ MonoBehaviour:
   _image: {fileID: 0}
   sizeImages: []
   _frameIndex: 0
-  _frameName: 01
+  _frameName: perso_idle0001
   _spriteContainer: {fileID: 0}
   _containerName: player
   _newSprite: 0

@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b92a593d49ee94aabed956e49d3a90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileSpeed: 5
+  ProjectileSpeed: 500
   animSprite: {fileID: 11400002}
   posIni: {x: 0, y: 0, z: 0}
   direction: {x: 0, y: 0, z: 0}

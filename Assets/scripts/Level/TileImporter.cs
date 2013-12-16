@@ -48,7 +48,7 @@ public class TileImporter : MonoBehaviour {
 	};
 	public objectList obj;
 
-	public List<List<GameObject>> listTiles;
+	public List<GameObject> listTiles = new List<GameObject>();
 
 	void Start()
 	{
@@ -60,14 +60,14 @@ public class TileImporter : MonoBehaviour {
 	{
 		if (listTiles != null)
 		{
-			foreach (List<GameObject> _list in listTiles)
+			foreach (GameObject _tiles in listTiles)
 			{
-				_list[0].SetActive(true);
+				_tiles.SetActive(true);
 			}
 		}
 		else 
 		{
-			print ("lists are null");
+			print ("lists are null" + listTiles);
 		}
 	}
 	
@@ -106,17 +106,7 @@ public class TileImporter : MonoBehaviour {
 	[ContextMenu ("Clear Tiles")]
 	private void clearTiles()
 	{
-		if (listTiles != null)
-		{
-			foreach (List<GameObject> _list in listTiles)
-			{
-				foreach (GameObject _tiles in _list)
-				{
-					DestroyImmediate(_tiles.gameObject);
-				}
-			}
-			listTiles.Clear();
-		}
+
 	}
 
 	[ContextMenu ("Refresh Tiles")]
@@ -153,7 +143,6 @@ public class TileImporter : MonoBehaviour {
 		int _height = 0;
 		string namePrefab = "";
 		string nameCase = "";
-		listTiles = new List<List<GameObject>>();
 		
 		foreach (XmlNode node in tileNodes)
 		{
@@ -162,10 +151,6 @@ public class TileImporter : MonoBehaviour {
 				Debug.Log ("Enter : " + _currTile.ToString());
 				GameObject _container = new GameObject(_currTile.ToString());
 				_container.transform.parent = GameObject.Find("Level/TilesLayout").transform;
-
-				List<GameObject> _GameObjectsList = new List<GameObject>();
-				_GameObjectsList.Add(_container);
-				listTiles.Add(_GameObjectsList);
 
 				foreach (XmlNode child in node.ChildNodes)
 				{
@@ -191,7 +176,7 @@ public class TileImporter : MonoBehaviour {
 							GameObject _instance = Instantiate(Resources.Load(namePrefab)) as GameObject;
 							_instance.transform.parent = _container.transform ;
 							_instance.transform.position = new Vector3 (_currWidth, _currHeight, _currDepth);
-							_GameObjectsList.Add(_instance);
+							listTiles.Add(_instance);
 						}
 						else
 						{

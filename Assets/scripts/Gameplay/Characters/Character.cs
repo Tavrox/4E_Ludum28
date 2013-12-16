@@ -113,7 +113,6 @@ public class Character : MonoBehaviour
 		if(alive == false) return;
 		
 		vectorMove.x = 0;
-		
 		// pressed right button
 		if(isRight == true)
 		{

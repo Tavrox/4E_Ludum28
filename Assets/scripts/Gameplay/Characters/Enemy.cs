@@ -21,20 +21,7 @@ public class Enemy : Character {
 	protected bool go = true;
 	protected int waypointId = 0;
 	public Transform[] waypoints;
-	/***** ENNEMI END *****/
-	
-	public Skills skill_knife;
-	public Skills skill_axe;
-	public Skills skill_shield;
-	public Pebble instPebble;
-	//	public WaveCreator instFootWave,instInstruWave;
-	//	public GameObject instPebbleBar;
-	public OTSprite menu;
-	public float footStepDelay = 0.6f;
-	
-	[SerializeField] protected Rect hp_display;
-	[SerializeField] protected SoundSprite soundMan;
-	[SerializeField] protected ModulatedSound mdSound;
+
 	//	private WaveCreator soundEmitt1, soundEmitt2, soundInstru1, soundInstru2,soundEmitt3;
 	//	private int cptWave=1, pebbleDirection = 1;
 	//	private bool blockCoroutine, first, toSprint, toWalk, specialCast, playerDirLeft;
@@ -198,7 +185,7 @@ public class Enemy : Character {
 		//print ("patrolllll");
 		if(waypoints.Length<=0) print("No Waypoints linked");
 		//		print(transform.position+" - "+waypoints[waypointId].position);
-		if(Vector3.Distance(transform.position, waypoints[waypointId].position) < 30) {
+		if(Vector3.Distance(new Vector3(transform.position.x,0f,0f), new Vector3(waypoints[waypointId].position.x,0f,0f)) < 100) {
 			go = !go;
 			if(go) waypointId=0;
 			else if (!go) waypointId=1;
