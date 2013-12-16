@@ -69,8 +69,11 @@ public class Enemy : Character {
 		spriteScaleX = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.x;
 	}
 	// Update is called once per frame
-//	public void Update () 
-//	{
+	public void Update () 
+	{
+		moveVel = 20f;
+		gravityY = 20f;
+	}
 //		//		isLeft = false;
 //		//		isRight = false;
 //		//		isJump = false;
@@ -185,9 +188,14 @@ public class Enemy : Character {
 	protected void Patrol () {
 		//print ("patrolllll");
 		if(waypoints.Length<=0) print("No Waypoints linked");
+		print(gameObject.transform.position.x+" + "+waypoints[waypointId].position.x);
 		//		print(transform.position+" - "+waypoints[waypointId].position);
-		if(Vector3.Distance(new Vector3(transform.position.x,0f,0f), new Vector3(waypoints[waypointId].position.x,0f,0f)) < 100) {
-			go = !go;
+		if (transform.position.x < waypoints[waypointId].position.x+10f && transform.position.x > waypoints[waypointId].position.x-10f) {
+			//print(gameObject.transform.position.x+" + "+waypoints[waypointId].position.x);
+			//print ("********** IN *********");
+		}
+		if(Vector3.Distance(new Vector3(transform.position.x,0f,0f), new Vector3(waypoints[waypointId].position.x,0f,0f)) < 50) {
+			go = !go;//print ("*-*-*-*-*-****-*--*-*-*-*-*-*-*-*-*-*-*-*-***-*--*-*-*");
 			if(go) waypointId=0;
 			else if (!go) waypointId=1;
 		}

@@ -1,12 +1,155 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Patroler : Enemy {
+public class Patroler : Character {
 
 	// Use this for initialization
+	[HideInInspector] public Vector3 position;
+	[HideInInspector] public Transform trans;
 	
+	/***** ENNEMI BEGIN *****/
+	protected Transform target; //the enemy's target
+	
+	protected bool chasingPlayer, endChasingPlayer, patroling;
+	protected Vector3 direction;
+	
+	public float targetDetectionArea = 3f;
+	public float blockDetectionArea = 2f;
+	private float spriteScaleX;
+	protected RaycastHit hitInfo; //infos de collision
+	protected Ray detectTargetLeft, detectTargetRight, detectBlockLeft, detectBlockRight, detectEndPFLeft, detectEndPFRight; //point de départ, direction
+	
+	protected bool go = true;
+	protected int waypointId = 0;
+	public Transform[] waypoints;
+	
+	//	private WaveCreator soundEmitt1, soundEmitt2, soundInstru1, soundInstru2,soundEmitt3;
+	//	private int cptWave=1, pebbleDirection = 1;
+	//	private bool blockCoroutine, first, toSprint, toWalk, specialCast, playerDirLeft;
+	//	private Pebble pebble1;
+	//	private float powerPebble;
+	//	private GameObject pebbleBar;
+	
+	[HideInInspector] public bool paused = false;
+	
+	// Use this for initialization
+	public override void Start () 
+	{
+		base.Start();
+		
+		
+		GameEventManager.GameStart += GameStart;
+		GameEventManager.GameOver += GameOver;
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
+		
+		spawnPos = thisTransform.position;
+		
+		//		soundEmitt1 = Instantiate(instFootWave) as WaveCreator;
+		//		soundEmitt2 = Instantiate(instFootWave) as WaveCreator;
+		//		//soundEmitt3 = Instantiate(instFootWave) as WaveCreator;
+		//		soundInstru1 = Instantiate(instInstruWave) as WaveCreator;
+		//		//soundInstru2 = Instantiate(instInstruWave) as WaveCreator;
+		//		soundEmitt1.createCircle(thisTransform);
+		//		soundEmitt2.createCircle(thisTransform);
+		//		//soundEmitt3.createCircle(thisTransform);
+		//		soundInstru1.createCircle(thisTransform);soundInstru1.specialCircle();
+		//		//soundInstru2.createCircle(thisTransform);soundInstru2.specialCircle();
+		//		
+		//		pebbleBar = Instantiate(instPebbleBar) as GameObject;
+		
+		//enabled = false;
+		
+		HP = 150;
+		res_mag = 50;
+		res_phys = 10;
+		runSpeed = 0.5f;
+		
+		target = GameObject.FindWithTag("Player").transform; //target the player
+		patroling = true;
+		spriteScaleX = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.x;
+	}
 	// Update is called once per frame
 	void Update () {
 		Patrol();
+
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			if (GameEventManager.gamePaused == false)
+			{
+				GameEventManager.TriggerGamePause();
+			}
+			else if (GameEventManager.gamePaused == true)
+			{
+				GameEventManager.TriggerGameUnpause();
+			}
+		}
+	}
+	protected void Patrol () {
+		//print ("patrolllll");
+		if(waypoints.Length<=0) print("No Waypoints linked");
+		print(gameObject.transform.position.x+" + "+waypoints[waypointId].position.x);
+		//		print(transform.position+" - "+waypoints[waypointId].position);
+		if (transform.position.x < waypoints[waypointId].position.x+10f && transform.position.x > waypoints[waypointId].position.x-10f) {
+			//print(gameObject.transform.position.x+" + "+waypoints[waypointId].position.x);
+			//print ("********** IN *********");
+		}
+		if(Vector3.Distance(new Vector3(transform.position.x,0f,0f), new Vector3(waypoints[waypointId].position.x,0f,0f)) < 50) {
+			go = !go;//print ("*-*-*-*-*-****-*--*-*-*-*-*-*-*-*-*-*-*-*-***-*--*-*-*");
+			if(go) waypointId=0;
+			else if (!go) waypointId=1;
+		}
+		
+		if(go) {
+			isRight = false;
+			isLeft = true;
+			facingDir = facing.Left;UpdateMovement();
+		}
+		else {
+			isLeft = false;
+			isRight = true;
+			facingDir = facing.Right;UpdateMovement();
+		}
+	}
+
+	
+	protected void OnTriggerEnter(Collider other) 
+	{
+		if(other.gameObject.CompareTag("Player")) 
+		{
+			GameEventManager.TriggerGameOver();
+			chasingPlayer = false;
+		}
+	}
+	
+	protected void GameStart () {
+		if(FindObjectOfType(typeof(Enemy)) && this != null) {
+			transform.localPosition = spawnPos;
+			enabled = true;
+		}
+	}
+	
+	protected void GameOver () {
+		enabled = false;
+		isLeft = false;
+		isRight = false;
+		isJump = false;
+		isPass = false;
+		movingDir = moving.None;
+	}
+	protected void GamePause()
+	{
+		enabled = false;
+		isLeft = false;
+		isRight = false;
+		isJump = false;
+		isPass = false;
+		paused = true;
+		movingDir = moving.None;	
+	}
+	protected void GameUnpause()
+	{
+		enabled = true;	
+		paused = false;
 	}
 }
