@@ -28,6 +28,9 @@ public class Player : Character {
 
 		InvokeRepeating("playFootstep",0f,0.4f);
 		
+		GetComponent<BoxCollider>().size = new Vector3(72.6f,103.42f,30f);
+		GetComponent<BoxCollider>().center = new Vector3(0.19f,9.7f,0f);
+		
 		spawnPos = thisTransform.position;
 
 		GameObject.Find("Frameworks/OT/View").GetComponent<OTView>().movementTarget = gameObject;
@@ -81,7 +84,7 @@ public class Player : Character {
 
 	IEnumerator resetGame()
 	{
-		yield return new WaitForSeconds(10f);
+		yield return new WaitForSeconds(4f);
 		GameEventManager.TriggerGameStart();
 	}
 	

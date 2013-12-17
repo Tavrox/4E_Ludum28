@@ -37,16 +37,15 @@ public class IngameUI : MonoBehaviour {
 
 	void OnMouseDown()
 	{
-	
 		switch (action)
 		{
-		case (ListAction.GoToMenu):
+			case (ListAction.GoToMenu):
 			{
 				Application.LoadLevel(0);
 				break;
 			}
-
 		}
+		print ("ok");
 	}
 	private void GamePause()
 	{

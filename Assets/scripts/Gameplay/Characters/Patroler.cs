@@ -45,6 +45,9 @@ public class Patroler : Character {
 		GameEventManager.GameUnpause += GameUnpause;
 
 		spawnPos = gameObject.transform.position;
+
+		GetComponent<BoxCollider>().size = new Vector3(77.36f,32f,30f);
+		GetComponent<BoxCollider>().center = new Vector3(0,-3.2f,0f);
 		
 		//		soundEmitt1 = Instantiate(instFootWave) as WaveCreator;
 		//		soundEmitt2 = Instantiate(instFootWave) as WaveCreator;
