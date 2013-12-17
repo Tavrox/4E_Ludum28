@@ -25,6 +25,7 @@ public class LevelManager : MonoBehaviour {
 		_secLeft = GameObject.Find("Player/IngameUI/Timer").GetComponent<Timer>().secLeft;
 		_tileImporter = GameObject.Find("Level/TileImporter").GetComponent<TileImporter>();
 		_pdata = GameObject.Find("PlayerData").GetComponent<PlayerData>();
+		Player _Player  = GameObject.Find("Player").GetComponent<Player>();
 
 		MasterAudio.PlaySound("bg");
 		MasterAudio.PlaySound("jam");
@@ -38,6 +39,10 @@ public class LevelManager : MonoBehaviour {
 				_gameo.gameObject.SetActive(true);
 			}
 		}
+
+
+		_Player.transform.position = GameObject.Find("playerspawn"+_rand).transform.position;
+
 		_pdata.displayInput = false;
 
 		GameEventManager.GameStart += GameStart;

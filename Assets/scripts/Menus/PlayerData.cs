@@ -24,7 +24,7 @@ public class PlayerData : MonoBehaviour {
 	{
 		if (displayInput == true)
 		{
-			_PlayerName = GUI.TextField(new Rect(10,10,200,20), _PlayerName, 25);
+//			_PlayerName = GUI.TextField(new Rect(10,10,200,20), _PlayerName, 25);
 		}
 	}
 }

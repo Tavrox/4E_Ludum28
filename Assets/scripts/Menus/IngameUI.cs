@@ -35,15 +35,11 @@ public class IngameUI : MonoBehaviour {
 		OTTween _tween = new OTTween(prefabSprite, 1f).Tween("alpha", 1f).PingPong();
 	}
 
-	void OnMouseDown()
+	private void OnMouseDown()
 	{
-		switch (action)
+		if (action == ListAction.GoToMenu)
 		{
-			case (ListAction.GoToMenu):
-			{
-				Application.LoadLevel(0);
-				break;
-			}
+			Application.LoadLevel(0);
 		}
 		print ("ok");
 	}
