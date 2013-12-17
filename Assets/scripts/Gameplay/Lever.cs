@@ -11,6 +11,7 @@ public class Lever : MonoBehaviour {
 	public btnType myButtonType;
 	public float delay = 0;
 	public bool trigged, seqLocked, stopped;
+
 	void Start () {
 		if(myButtonType == btnType.TimedBtn) { animSprite.Play("timedlock");}
 	}

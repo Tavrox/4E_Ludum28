@@ -43,8 +43,8 @@ public class Patroler : Character {
 		GameEventManager.GameOver += GameOver;
 		GameEventManager.GamePause += GamePause;
 		GameEventManager.GameUnpause += GameUnpause;
-		
-		spawnPos = thisTransform.position;
+
+		spawnPos = gameObject.transform.position;
 		
 		//		soundEmitt1 = Instantiate(instFootWave) as WaveCreator;
 		//		soundEmitt2 = Instantiate(instFootWave) as WaveCreator;
@@ -120,7 +120,7 @@ public class Patroler : Character {
 	
 	protected void GameStart () {
 		if(FindObjectOfType(typeof(Enemy)) && this != null) {
-			transform.localPosition = spawnPos;
+			transform.localPosition = new Vector3(0f,0f,0f);
 			enabled = true;
 		}
 	}

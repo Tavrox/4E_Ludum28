@@ -39,6 +39,10 @@ public class EndDoor : MonoBehaviour {
 		MasterAudio.FadeOutAllOfSound("bg",2f);
 		MasterAudio.FadeOutAllOfSound("intro",2f);
 		MasterAudio.FadeOutAllOfSound("jam",2f);
+
+		PlayerData _playerdata = GameObject.Find("PlayerData").GetComponent<PlayerData>();
+		_playerdata.addLevelUnlocked(levelToGo);
+
 		StartCoroutine("EndGame");
 	}
 

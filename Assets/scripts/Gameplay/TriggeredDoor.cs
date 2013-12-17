@@ -5,10 +5,20 @@ public class TriggeredDoor : MonoBehaviour {
 	
 	public OTAnimatingSprite animSprite;
 	public bool isLocked = true ;
+	private bool memoryLock;
 
 	void Start() {
 		animSprite.Play("closed");
 		if(!isLocked) Unlock();
+		if (isLocked == true)
+		{
+			memoryLock = true;
+		}
+		else
+		{
+			memoryLock = false;
+		}
+		GameEventManager.GameStart += GameStart;
 	}
 
 	public void Unlock()
@@ -20,6 +30,11 @@ public class TriggeredDoor : MonoBehaviour {
 			MasterAudio.PlaySound("door_open", 1f, 1f, 0.3f);
 			StartCoroutine("WaitUnlock");
 //		}
+	}
+
+	private void GameStart()
+	{
+		isLocked = memoryLock;
 	}
 	
 	public void Lock()

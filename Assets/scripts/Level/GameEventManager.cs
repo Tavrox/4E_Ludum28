@@ -34,6 +34,7 @@ public static class GameEventManager {
 	{
 		if(GamePause != null)
 		{
+
 			GamePause();
 		}
 	}

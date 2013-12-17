@@ -5,12 +5,14 @@ public class Key : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		
+		GameEventManager.GameStart += GameStart;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	void GameStart()
+	{
+		GetComponentInChildren<OTSprite>().renderer.enabled = true;
+		GameObject.Find("Player").GetComponent<Player>().hasFinalKey = false;
 	}
 
 	void OnTriggerEnter(Collider _coll)
@@ -19,7 +21,7 @@ public class Key : MonoBehaviour {
 		{
 			MasterAudio.PlaySound("key_collecting");
 			GameObject.Find("Player").GetComponent<Player>().hasFinalKey = true;
-			Destroy (gameObject);
+			GetComponentInChildren<OTSprite>().renderer.enabled = false;
 		}
 
 	}

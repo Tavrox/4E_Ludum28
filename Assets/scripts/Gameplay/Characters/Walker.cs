@@ -6,12 +6,15 @@ public class Walker : Enemy {
 //	[HideInInspector] public Vector3 position;
 //	[HideInInspector] public Transform trans;
 	private Player myTarget;
+	private Transform myspawnpos;
 	/***** ENNEMI BEGIN *****/
 
 	void Start()
 	{
 		InvokeRepeating("sound",0,0.5f);
 		myTarget = GameObject.Find("Player").GetComponent<Player>();
+		GameEventManager.GameStart += GameStart;
+		myspawnpos.position = gameObject.transform.position;
 	}
 
 	// Update is called once per frame
@@ -20,6 +23,13 @@ public class Walker : Enemy {
 		if(chasingPlayer) {ChasePlayer();}
 		detectPlayer();
 		detectEndPlatform();
+	}
+
+	protected void GameStart () {
+		if(FindObjectOfType(typeof(Enemy)) && this != null) {
+//			transform.position = myspawnpos.position;
+			enabled = true;
+		}
 	}
 
 	private void sound()

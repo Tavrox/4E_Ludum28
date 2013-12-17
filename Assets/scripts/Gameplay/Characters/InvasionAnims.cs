@@ -35,6 +35,7 @@ public class InvasionAnims : MonoBehaviour {
 	public void invade () {
 		//print ("invade");
 		transform.position = new Vector3(_player.transform.position.x,_player.transform.position.y,-5f);
+		_player.transform.position = new Vector3 (_player.transform.position.x,_player.transform.position.y,-20f);
 		animSprite.Play("invade");
 		MasterAudio.PlaySound("rewind");
 	}
