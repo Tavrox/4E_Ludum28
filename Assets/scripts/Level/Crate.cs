@@ -5,12 +5,12 @@ public class Crate : MonoBehaviour {
 
 	private bool grounded;
 	[HideInInspector] public Transform thisTransform;
-	[SerializeField] private float gravityY, crateMove, playerMoveVel, spriteScaleX, spriteScaleY;
-	[SerializeField] private Vector3 vectorMove;
-	[SerializeField] private RaycastHit hitInfo;
-	private Ray detectEndPFLeft, detectEndPFRight, detectPlayerLeft, detectPlayerRight;
-	private int blockDetectionArea = 100;
-	private Player _player;
+	[SerializeField] public float gravityY, crateMove, playerMoveVel, spriteScaleX, spriteScaleY;
+	[SerializeField] public Vector3 vectorMove;
+	[SerializeField] public RaycastHit hitInfo;
+	public Ray detectEndPFLeft, detectEndPFRight, detectPlayerLeft, detectPlayerRight;
+	public int blockDetectionArea = 100;
+	public Player _player;
 	public bool blockCrate;
 	//RaycastHit hitInfo;
 	//Ray landingRay;	
@@ -67,7 +67,7 @@ public class Crate : MonoBehaviour {
 			//return true;
 		}}
 		if(other.gameObject.name=="ColliBox" || other.gameObject.name=="Door") 
-		{print("GAUUUUUUCHE");blockCrate = true;}
+		{/*print("GAUUUUUUCHE");*/blockCrate = true;}
 
 //		if (other.gameObject.tag == "ColliBox") {
 //
