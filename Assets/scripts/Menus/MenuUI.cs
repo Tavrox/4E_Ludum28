@@ -134,6 +134,15 @@ public class MenuUI : MonoBehaviour {
 				StartCoroutine(loadLevel(2));
 				break;
 			}
+		case (ListMenu.GoLevel3) :
+		{
+			menuObjects.Add(findObject("Transition"));
+			fadeInObjects(menuObjects);
+			menuObjects.Clear();
+			MasterAudio.PlaySound("door_open");
+			StartCoroutine(loadLevel(3));
+			break;
+		}
 		}
 	}
 	

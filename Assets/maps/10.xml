@@ -7287,7 +7287,7 @@
   <object name="Fin" type="EndDoor" x="849" y="2097" width="150" height="150"/>
   <object name="Start" type="StartDoor" x="503" y="349" width="150" height="150"/>
  </objectgroup>
- <objectgroup name="4" width="60" height="60">
+ <objectgroup name="4" width="60" height="60" visible="0">
   <object name="Start" type="StartDoor" x="2498" y="1598" width="150" height="150"/>
   <object name="Timer" type="TimedBtn" x="1600" y="903" width="48" height="46"/>
   <object name="Timer" type="Lever" x="535" y="955" width="48" height="46"/>
@@ -7301,7 +7301,7 @@
   <object name="Fin" type="EndDoor" x="2502" y="1048" width="150" height="150"/>
   <object name="InteruptDef" type="Lever" x="2352" y="1101" width="48" height="46"/>
   <object name="Teleport3-4" type="TeleportIn" x="452" y="2698" width="50" height="100"/>
-  <object name="Teleport2-1" type="TeleportIn" x="2104" y="2698" width="50" height="100"/>
+  <object name="Teleport2-1" type="TeleportIn" x="2108" y="2698" width="50" height="100"/>
   <object name="Teleport1-2" type="TeleportIn" x="500" y="1448" width="50" height="100"/>
   <object name="Clef" type="Key" x="901" y="1948" width="50" height="50"/>
   <object name="BaseDown" type="BaseArcD" x="1646" y="2211" width="50" height="50"/>
@@ -7314,9 +7314,9 @@
   <object name="Porte" type="TriggeredDoor" x="2248" y="2501" width="200" height="50"/>
   <object name="Patrouilleur" type="Patroler" x="1550" y="2748" width="50" height="50"/>
   <object name="Door" type="TriggeredDoor" x="2252" y="999" width="50" height="198"/>
-  <object name="BaseUp" type="BaseArcU" x="1351" y="2548" width="50" height="50"/>
-  <object name="BaseDown" type="BaseArcD" x="1351" y="2697" width="50" height="50"/>
-  <object name="BaseDown" type="BaseArcD" x="1301" y="2361" width="50" height="50"/>
+  <object name="BaseUp" type="BaseArcD" x="1351" y="2548" width="50" height="50"/>
+  <object name="BaseDown" type="BaseArcU" x="1351" y="2697" width="50" height="50"/>
+  <object name="BaseDown" type="BaseArcU" x="1301" y="2361" width="50" height="50"/>
   <object name="Fallower" type="Walker" x="749" y="2199" width="50" height="50"/>
   <object name="BaseDown" type="BaseArcD" x="1652" y="1245" width="50" height="50"/>
   <object name="BaseUp" type="BaseArcU" x="1652" y="1400" width="50" height="50"/>
@@ -7329,7 +7329,7 @@
   <object name="BaseUp" type="BaseArcU" x="1053" y="1697" width="50" height="50"/>
   <object name="Patrouilleur" type="Patroler" x="652" y="1498" width="50" height="50"/>
  </objectgroup>
- <objectgroup name="5" width="60" height="60" visible="0">
+ <objectgroup name="5" width="60" height="60">
   <object name="BaseDown" type="BaseArcD" x="2004" y="2593" width="50" height="50"/>
   <object name="BaseUp" type="BaseArcU" x="1751" y="2748" width="50" height="50"/>
   <object name="BaseUp" type="BaseArcU" x="2105" y="2753" width="50" height="50"/>

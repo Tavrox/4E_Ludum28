@@ -16,6 +16,8 @@ public class Player : Character {
 	{
 		base.Start();
 
+		StartCoroutine ("Wait");
+
 		OTAnimatingSprite _sprite = GetComponentInChildren<Transform>().GetComponentInChildren<OTAnimatingSprite>();
 
 		_sprite.alpha = 0f;
@@ -41,6 +43,11 @@ public class Player : Character {
 		checkInput();
 		UpdateMovement();
 		//		offsetCircles ();
+	}
+	IEnumerator Wait()
+	{
+		yield return new WaitForSeconds (6f);
+
 	}
 	
 	private void GameStart () 
