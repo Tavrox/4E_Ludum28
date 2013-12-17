@@ -4,7 +4,7 @@ using System.Collections;
 public class TurretAnims : MonoBehaviour {
 	
 	public OTAnimatingSprite animSprite;
-	private int turretShootFrequency;
+	private float turretShootFrequency;
 	private bool stopped;
 	// Use this for initialization
 	void Start ()

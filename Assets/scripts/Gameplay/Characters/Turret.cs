@@ -5,7 +5,7 @@ public class Turret : MonoBehaviour {
 
 
 	public Projectile prefabProj;
-	public int shootFrequency;
+	public float shootFrequency;
 	private Projectile instProj;
 	
 	public enum shootDir { Right, Left, Up, Down }
