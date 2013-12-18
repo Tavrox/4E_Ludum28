@@ -18,7 +18,6 @@ public class Projectile : MonoBehaviour {
 	void Start () {
 		myTransform = transform;
 		animSprite.Play("default");
-		GameEventManager.GameOver += GameOver;
 //		player = GameObject.FindWithTag("Player").GetComponent<PlayerPop>();
 //		if(player.shootLeft == true) direction = Vector3.left;
 //		else direction = Vector3.right;
@@ -43,17 +42,9 @@ public class Projectile : MonoBehaviour {
 			GameObject.Find("Player").GetComponent<Player>().isDead = true;
 			GameEventManager.TriggerGameOver();
 		}
-		if (_other.CompareTag("Turret") != true)
-	    {
-			Destroy(gameObject);
-		}
-	}
-
-	private void GameOver()
-	{
-		if (gameObject != null)
-		{
-			Destroy(gameObject);
-		}
+//		if (_other.CompareTag("Turret") != true)
+//	    {
+//			Destroy(gameObject);
+//		}
 	}
 }

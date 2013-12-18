@@ -22,7 +22,6 @@ public class Lever : MonoBehaviour {
 		}
 	}
 	private IEnumerator waitB4Restart (float delayRestart) {
-		print (animSprite.frameIndex+1);
 		yield return new WaitForSeconds(delayRestart);
 		//animSprite.Play(animSprite.frameIndex+1);
 		animSprite.frameIndex = animSprite.frameIndex+1;

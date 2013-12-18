@@ -125,18 +125,19 @@ public class Crate : MonoBehaviour {
 	private void detectEndPlatform() {
 		detectEndPFLeft = new Ray(new Vector3 (thisTransform.position.x-(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down);
 		detectEndPFRight = new Ray(new Vector3 (thisTransform.position.x+(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down);
+
 		//print (blockDetectionArea);
-		Debug.DrawRay(new Vector3 (thisTransform.position.x-(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY/2f);
-		Debug.DrawRay(new Vector3 (thisTransform.position.x+(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY/2f);
+//		Debug.DrawRay(new Vector3 (thisTransform.position.x-(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY/2f);
+//		Debug.DrawRay(new Vector3 (thisTransform.position.x+(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY/2f);
 		
-		if (!Physics.Raycast(detectEndPFLeft, out hitInfo, spriteScaleY) && !Physics.Raycast(detectEndPFRight, out hitInfo, spriteScaleY)) {
+		if (!Physics.Raycast(detectEndPFLeft, out hitInfo, spriteScaleY, 1<<8) && !Physics.Raycast(detectEndPFRight, out hitInfo, spriteScaleY, 1<<8)) {
 			grounded = false;
 		}
 		else {
 			grounded = true;
 			BoxCollider colliderHit = hitInfo.collider as BoxCollider;
 			//print (colliderHit.size);
-			thisTransform.position = new Vector3(thisTransform.position.x, (float)((hitInfo.transform.position.y)+(colliderHit.size.y/2f)+(spriteScaleY/2f)), thisTransform.position.z);
+			thisTransform.position = new Vector3(thisTransform.position.x, (float)((hitInfo.transform.position.y)), thisTransform.position.z);
 		}
 	}
 }

@@ -15,14 +15,28 @@ public class Turret : MonoBehaviour {
 	void Start () {
 		StartCoroutine("waitB4Shoot");
 		GameEventManager.GameOver += GameOver;
+		GameEventManager.GameStart += GameStart;
 	}
+
+	private void GameStart()
+	{
+		StartCoroutine("waitB4Shoot");
+	}
+
+	private void GameOver()
+	{
+		StopCoroutine("waitB4Shoot");
+		StopCoroutine("shoot");
+	}
+
 	private IEnumerator waitB4Shoot () {
 		yield return new WaitForSeconds(0.35f);
 		StartCoroutine("shoot");
 	}
 	private IEnumerator shoot () {
 		yield return new WaitForSeconds(shootFrequency);
-		instProj = Instantiate (prefabProj) as Projectile;
+		GameObject _proj = Instantiate (Resources.Load("Objects/Projectile")) as GameObject;
+		instProj = _proj.GetComponent<Projectile>();
 		Player _player = GameObject.Find("Player").GetComponent<Player>();
 //		if (transform.position.x < _player.transform.position.x - 800
 //		    && transform.position.x > _player.trans.position.x + 800
@@ -49,10 +63,5 @@ public class Turret : MonoBehaviour {
 		instProj.transform.position = new Vector3(gameObject.transform.position.x,(gameObject.transform.position.y+gameObject.transform.localScale.y/2-0.1f),gameObject.transform.position.z-1);
 		instProj.posIni = instProj.transform.position;
 		StartCoroutine("shoot");
-	}
-	private void GameOver()
-	{
-		StopCoroutine("shoot");
-		enabled = false;
 	}
 }

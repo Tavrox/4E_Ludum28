@@ -34,6 +34,7 @@ public class Player : Character {
 		GetComponent<BoxCollider>().center = new Vector3(0.19f,9.7f,0f);
 		
 		spawnPos = thisTransform.position;
+		isDead =false;
 
 		GameObject.Find("Frameworks/OT/View").GetComponent<OTView>().movementTarget = gameObject;
 	}
