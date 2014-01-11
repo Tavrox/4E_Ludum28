@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 
 public enum MyTeam { Team1, Team2, None }
@@ -55,15 +56,16 @@ public class Character : MonoBehaviour
 	protected Vector3 vectorMove;
 	private Vector3 mypos;
 	
-	[Range (0,2000)] 	public float 	moveVel = 400f;
-	[Range (0,2000)] 	public float 	jumpVel = 300f;
-	[Range (0,2000)] 	public float 	jump2Vel = 450f;
+	[Range (0,2000)] 	public float 	moveVel = 10f;
+	[Range (0,2000)] 	public float 	jumpVel = 80f;
+	[Range (0,2000)] 	public float 	jump2Vel = 14f;
 	[Range (1,2)] 	public int 		maxJumps = 1;
-	[Range (0,2000)] public float 	fallVel = 350f;
+	[Range (0,2000)] public float 	fallVel = 50f;
+	[SerializeField] public float hitUpBounceForce = 5f;
 	
 	[SerializeField] private int jumps = 0;
-	[Range (0,2000)] public float gravityY = 720f;
-	[Range (0,2000)] public float maxVelY = 1000f;
+	[Range (0,2000)] public float gravityY = 16f;
+	[Range (0,2000)] public float maxVelY = 20f;
 
 	[SerializeField] private RaycastHit hitInfo;
 	[SerializeField] private float halfMyX;
@@ -86,10 +88,10 @@ public class Character : MonoBehaviour
 	public virtual void Start () 
 	{
 		HP = maxHP;
-		maxVelY = fallVel;
+		//maxVelY = fallVel;
 		vectorMove.y = 0;
 		halfMyX = GetComponentInChildren<Transform>().GetComponentInChildren<OTAnimatingSprite>().size.x * 0.5f;
-		halfMyY = GetComponentInChildren<Transform>().GetComponentInChildren<OTAnimatingSprite>().size.y * 0.5f + 0.2f;
+		halfMyY = GetComponentInChildren<Transform>().GetComponentInChildren<OTAnimatingSprite>().size.y * 0.5f /*+ 0.2f*/;
 		StartCoroutine(StartGravity());
 		spawnPos = mypos = new Vector3(thisTransform.position.x,thisTransform.position.y,thisTransform.position.z);
 	}
@@ -98,7 +100,7 @@ public class Character : MonoBehaviour
 	{
 		// wait for things to settle before applying gravity
 		yield return new WaitForSeconds(0.1f);
-		gravityY = 900f;
+		gravityY = 15f;
 		chute = true;
 	}
 	
@@ -142,12 +144,12 @@ public class Character : MonoBehaviour
 //					vectorMove.y = jump2Vel;
 //				}
 			}
-			if(vectorMove.y < maxVelY)	vectorMove.y += 60;
+			if(vectorMove.y < maxVelY)	vectorMove.y += 2f;
 			else chute=true;
 		}
 		float addForce = 1;
 		if((!grounded && !Input.GetKey("up")) || blockedUp) chute = true;
-		if(blockedUp) {addForce=10f;/*gravityY += 150f;StartCoroutine("resetGravity");*/}
+		if(blockedUp) {addForce=hitUpBounceForce;/*gravityY += 150f;StartCoroutine("resetGravity");*/}
 		if(chute && grounded) chute = false;
 
 		// landed from fall/jump
@@ -162,7 +164,7 @@ public class Character : MonoBehaviour
 		// apply gravity while airborne
 		if(grounded == false && chute)
 		{
-			if(vectorMove.y>0 && vectorMove.y<850) vectorMove.y -= gravityY * Time.deltaTime * 1.5f * addForce;
+			if(vectorMove.y>0f && vectorMove.y<50f) vectorMove.y -= gravityY * Time.deltaTime * 1.5f * addForce;
 			vectorMove.y -= gravityY * Time.deltaTime * 1.5f* addForce;
 		}
 		
@@ -178,10 +180,10 @@ public class Character : MonoBehaviour
 		thisTransform.position += new Vector3(vectorFixed.x,vectorFixed.y,0f);
 		
 	}
-	private IEnumerator resetGravity() {
-		yield return new WaitForSeconds (1f);
-		gravityY -= 150f;
-	}
+//	private IEnumerator resetGravity() {
+//		yield return new WaitForSeconds (1f);
+//		gravityY -= 150f;
+//	}
 	// ============================== RAYCASTS ============================== 
 	
 	void UpdateRaycasts()
@@ -191,7 +193,6 @@ public class Character : MonoBehaviour
 		blockedUp = false;
 		blockedDown = false;
 		grounded = false;		
-		
 //		absVel2X = Mathf.Abs(vectorFixed.x);
 //		absVel2Y = Mathf.Abs(vectorFixed.y);
 
@@ -237,7 +238,7 @@ public class Character : MonoBehaviour
 			|| Physics.Raycast(mypos, new Vector3(1f,0.8f,0) , out hitInfo, halfMyX, groundMask)
 			|| Physics.Raycast(mypos, new Vector3(1f,-0.8f,0), out hitInfo, halfMyX, groundMask))
 		{
-			BlockedRight();
+			if(!hitInfo.collider.CompareTag("Crate")) BlockedRight();
 			Debug.DrawRay(mypos, Vector3.right, Color.cyan);
 		}
 		
@@ -246,7 +247,7 @@ public class Character : MonoBehaviour
 			|| Physics.Raycast(mypos, new Vector3(-1f,0.8f,0), out hitInfo, halfMyX, groundMask)
 			|| Physics.Raycast(mypos, new Vector3(-1f,0.8f,0), out hitInfo, halfMyX, groundMask))
 		{
-			BlockedLeft();
+			if(!hitInfo.collider.CompareTag("Crate")) BlockedLeft();
 			Debug.DrawRay(mypos, Vector3.left, Color.yellow);
 		}
 	}

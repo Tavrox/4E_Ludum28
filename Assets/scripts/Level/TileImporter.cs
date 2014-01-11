@@ -114,8 +114,8 @@ public class TileImporter : MonoBehaviour {
 		{
 			levelWidth = int.Parse(node.Attributes.GetNamedItem("width").Value);
 			levelHeight = int.Parse(node.Attributes.GetNamedItem("height").Value);
-			tileWidth = int.Parse(node.Attributes.GetNamedItem("tilewidth").Value);
-			tileHeight = int.Parse(node.Attributes.GetNamedItem("tileheight").Value);
+			tileWidth = int.Parse(node.Attributes.GetNamedItem("tilewidth").Value)/50;/*EDIT MODIF BASTIEN +/50*/
+			tileHeight = int.Parse(node.Attributes.GetNamedItem("tileheight").Value)/50;/*EDIT MODIF BASTIEN +/50*/
 		}
 		tilesetNodes = xmlDoc.SelectNodes("map/tileset");
 		Debug.Log("Setupped Level [LW:"+levelWidth+"][LH:"+levelHeight+"]");
@@ -259,7 +259,7 @@ public class TileImporter : MonoBehaviour {
 								if (children.Attributes.GetNamedItem("type").Value == _obj.ToString())
 								{
 									GameObject _instance = Instantiate(Resources.Load("Objects/" + children.Attributes.GetNamedItem("type").Value)) as GameObject;
-									_instance.transform.position = new Vector3 (float.Parse(children.Attributes.GetNamedItem("x").Value) + 50, float.Parse(children.Attributes.GetNamedItem("y").Value) * -1, -5f);
+									_instance.transform.position = new Vector3 (float.Parse(children.Attributes.GetNamedItem("x").Value)/*EDIT MODIF BASTIEN +/50 -+50*//50 /*+ 50*/, float.Parse(children.Attributes.GetNamedItem("y").Value)/*EDIT MODIF BASTIEN +/50*//50 * -1, -5f);
 									if (children.Attributes.GetNamedItem("name").Value != null)
 									{
 										_instance.name = children.Attributes.GetNamedItem("name").Value;
@@ -268,13 +268,13 @@ public class TileImporter : MonoBehaviour {
 									if (_obj.ToString() == objectList.Collibox.ToString())
 									{
 										print ("boxcollider enabled");
-										float width = float.Parse(children.Attributes.GetNamedItem("width").Value) ;
-										float height = float.Parse(children.Attributes.GetNamedItem("height").Value);
+										float width = float.Parse(children.Attributes.GetNamedItem("width").Value)/50 ;/*EDIT MODIF BASTIEN +/50*/
+										float height = float.Parse(children.Attributes.GetNamedItem("height").Value)/50;/*EDIT MODIF BASTIEN +/50*/
 										_instance.GetComponent<BoxCollider>().size = new Vector3 ( width, height, 100f); 
 										_instance.transform.position =
 											new Vector3 (
-											(float.Parse(children.Attributes.GetNamedItem("x").Value)) + width / 2f,
-											(float.Parse(children.Attributes.GetNamedItem("y").Value) * -1) - height / 2f,
+											(float.Parse(children.Attributes.GetNamedItem("x").Value)) /*+ width / 2f*/,/*EDIT MODIF BASTIEN*/
+												(float.Parse(children.Attributes.GetNamedItem("y").Value) * -1) /*- height / 2f*/,/*EDIT MODIF BASTIEN*/
 											-5f);
 
 									}

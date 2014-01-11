@@ -12,7 +12,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: playerSprite-2
+  m_Name: playerSprite-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ GameObject:
   - 23: {fileID: 2300002}
   - 114: {fileID: 11400008}
   m_Layer: 0
-  m_Name: spr-2
+  m_Name: spr-15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,7 +82,7 @@ GameObject:
   - 23: {fileID: 2300004}
   - 114: {fileID: 11400010}
   m_Layer: 0
-  m_Name: spr
+  m_Name: spr-14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -131,7 +131,7 @@ GameObject:
   - 23: {fileID: 2300006}
   - 114: {fileID: 11400012}
   m_Layer: 0
-  m_Name: spr-17
+  m_Name: spr-15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,7 +149,7 @@ GameObject:
   - 23: {fileID: 2300008}
   - 114: {fileID: 11400014}
   m_Layer: 0
-  m_Name: spr-2
+  m_Name: spr-15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,7 +167,7 @@ GameObject:
   - 23: {fileID: 2300010}
   - 114: {fileID: 11400016}
   m_Layer: 0
-  m_Name: spr-16
+  m_Name: spr-14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -266,7 +266,7 @@ GameObject:
   - 23: {fileID: 2300012}
   - 114: {fileID: 11400024}
   m_Layer: 0
-  m_Name: Sprite (id=-897486)
+  m_Name: Sprite (id=-897486)-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -280,7 +280,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 96.959938, y: 117.119926, z: 1}
+  m_LocalScale: {x: 2, y: 2.41580009, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
 --- !u!4 &400002
@@ -302,7 +302,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 622.122803, y: -326.235077, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -316,7 +316,7 @@ Transform:
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 465, y: 286, z: 1}
+  m_LocalScale: {x: 9.6875, y: 5.95833349, z: 1}
   m_Children: []
   m_Father: {fileID: 400012}
 --- !u!4 &400008
@@ -327,7 +327,7 @@ Transform:
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 700, y: 500, z: 1}
+  m_LocalScale: {x: 14.583334, y: 10.416667, z: 1}
   m_Children: []
   m_Father: {fileID: 400010}
 --- !u!4 &400010
@@ -337,7 +337,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.7608109, y: 210.951935, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400008}
@@ -349,7 +349,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.7231445, y: 372.156525, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400006}
@@ -362,7 +362,7 @@ Transform:
   m_GameObject: {fileID: 100014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 233, y: 233, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 400020}
 --- !u!4 &400016
@@ -373,7 +373,7 @@ Transform:
   m_GameObject: {fileID: 100016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 233, y: 233, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 400022}
 --- !u!4 &400018
@@ -383,8 +383,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100018}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.2635193, y: 25.1882019, z: .0216618497}
-  m_LocalScale: {x: 445, y: 108, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 4.11999989, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400024}
 --- !u!4 &400020
@@ -394,7 +394,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 156.166962, y: 372.785706, z: 0}
+  m_LocalPosition: {x: 2.21918631, y: 1.40639544, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400014}
@@ -406,7 +406,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 156.166962, y: 372.785645, z: 0}
+  m_LocalPosition: {x: 2.25357676, y: 1.31117189, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400016}
@@ -418,7 +418,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.4833221, y: 485.496399, z: 0}
+  m_LocalPosition: {x: 0, y: 5.7924614, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400018}
@@ -430,7 +430,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.1656494, y: -222.930267, z: -5}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400012}
@@ -447,7 +447,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 370.010834, y: 486.447845, z: 5}
+  m_LocalPosition: {x: 6.84128094, y: 5.27526093, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400030}
@@ -460,7 +460,7 @@ Transform:
   m_GameObject: {fileID: 100030}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 195.371658, y: 120.164093, z: 1}
+  m_LocalScale: {x: 3, y: 1.95000005, z: 1}
   m_Children: []
   m_Father: {fileID: 400028}
 --- !u!23 &2300000
@@ -699,8 +699,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 72.5999985, y: 100.110001, z: 30}
-  m_Center: {x: 7.9000001, y: -9.69999981, z: 0}
+  m_Size: {x: 1.29999995, y: 2.41580009, z: 30}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6500002
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -711,7 +711,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 150, y: 150, z: 1}
+  m_Size: {x: 3, y: 1.95000005, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -724,9 +724,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e0774980171c514ea93208b47048a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: playerSprite-2
+  _name: playerSprite-1
   _position: {x: 0, y: 0}
-  _size: {x: 96.959938, y: 117.119926}
+  _size: {x: 2, y: 2.41580009}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -747,9 +747,9 @@ MonoBehaviour:
     width: 0
     height: 0
   protoType: 
-  baseName: playerSprite
-  oSize: {x: 100, y: 120}
-  imageSize: {x: 96.959938, y: 117.119926}
+  baseName: playerSprite-1
+  oSize: {x: 2.08333349, y: 2.5}
+  imageSize: {x: .0416666679, y: .0503291711}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -820,14 +820,15 @@ MonoBehaviour:
   shieldDef: 0
   thisTransform: {fileID: 0}
   vectorFixed: {x: 0, y: 0, z: 0}
-  moveVel: 546
-  jumpVel: 600
+  moveVel: 10
+  jumpVel: 8
   jump2Vel: 14
   maxJumps: 1
-  fallVel: 896
+  fallVel: 50
+  hitUpBounceForce: 5
   jumps: 0
-  gravityY: 920
-  maxVelY: 1000
+  gravityY: 15
+  maxVelY: 20
   halfMyX: 0
   halfMyY: 0
   position: {x: 0, y: 0, z: 0}
@@ -869,7 +870,7 @@ MonoBehaviour:
   _colSafe: {r: .224140882, g: .507352948, b: .18652682, a: 1}
   _colorWarning: {r: 1, g: .724137962, b: 0, a: 1}
   _colCritical: {r: 1, g: 0, b: 0, a: 1}
-  triggeredEnd: 0
+  triggeredEnd: 1
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -881,9 +882,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18d0574a4fa59946a49ede6640a1f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: spr-2
+  _name: spr-15
   _position: {x: 0, y: 0}
-  _size: {x: 465, y: 286}
+  _size: {x: 9.6875, y: 5.95833349}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -905,8 +906,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: spr
-  oSize: {x: 465, y: 286}
-  imageSize: {x: 465, y: 286}
+  oSize: {x: 9.6875, y: 5.95833349}
+  imageSize: {x: 9.6875, y: 5.95833349}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -921,7 +922,7 @@ MonoBehaviour:
   _frameIndex: 11
   _frameName: pause
   _spriteContainer: {fileID: 0}
-  _containerName: ingameui
+  _containerName: 
   _newSprite: 0
 --- !u!114 &11400010
 MonoBehaviour:
@@ -934,9 +935,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18d0574a4fa59946a49ede6640a1f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: spr
+  _name: spr-14
   _position: {x: 0, y: 0}
-  _size: {x: 700, y: 500}
+  _size: {x: 14.583334, y: 10.416667}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -958,8 +959,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: spr
-  oSize: {x: 27, y: 27}
-  imageSize: {x: 27, y: 27}
+  oSize: {x: .5625, y: .5625}
+  imageSize: {x: 14.583334, y: 10.416667}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -971,7 +972,7 @@ MonoBehaviour:
   _alpha: .300000012
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 14
+  _frameIndex: 15
   _frameName: transi
   _spriteContainer: {fileID: 0}
   _containerName: ingameui
@@ -987,9 +988,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18d0574a4fa59946a49ede6640a1f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: spr-17
+  _name: spr-15
   _position: {x: 0, y: 0}
-  _size: {x: 233, y: 233}
+  _size: {x: 3, y: 3}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -1010,9 +1011,9 @@ MonoBehaviour:
     width: 0
     height: 0
   protoType: 
-  baseName: spr
-  oSize: {x: 233, y: 233}
-  imageSize: {x: 233, y: 233}
+  baseName: spr-15
+  oSize: {x: 4.85416698, y: 4.85416698}
+  imageSize: {x: .0625, y: .0625}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -1040,9 +1041,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18d0574a4fa59946a49ede6640a1f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: spr-2
+  _name: spr-15
   _position: {x: 0, y: 0}
-  _size: {x: 233, y: 233}
+  _size: {x: 3, y: 3}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -1064,8 +1065,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: spr
-  oSize: {x: 233, y: 233}
-  imageSize: {x: 233, y: 233}
+  oSize: {x: 4.85416698, y: 4.85416698}
+  imageSize: {x: 4.85416698, y: 4.85416698}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -1093,9 +1094,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18d0574a4fa59946a49ede6640a1f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: spr-16
-  _position: {x: 35.2635193, y: 25.1882019}
-  _size: {x: 445, y: 108}
+  _name: spr-14
+  _position: {x: 0, y: 0}
+  _size: {x: 4.11999989, y: 1}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -1116,9 +1117,9 @@ MonoBehaviour:
     width: 0
     height: 0
   protoType: 
-  baseName: spr
-  oSize: {x: 445, y: 108}
-  imageSize: {x: 445, y: 108}
+  baseName: spr-14
+  oSize: {x: 9.27083397, y: 2.25}
+  imageSize: {x: .0858333334, y: .020833334}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -1182,9 +1183,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18d0574a4fa59946a49ede6640a1f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Sprite (id=-897486)
+  _name: Sprite (id=-897486)-1
   _position: {x: 0, y: 0}
-  _size: {x: 195.371658, y: 120.164093}
+  _size: {x: 3, y: 1.95000005}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -1205,9 +1206,9 @@ MonoBehaviour:
     width: 0
     height: 0
   protoType: 
-  baseName: 
-  oSize: {x: 465, y: 286}
-  imageSize: {x: 195.371658, y: 120.164093}
+  baseName: Sprite (id=-897486)-1
+  oSize: {x: 9.6875, y: 5.95833349}
+  imageSize: {x: .0625, y: .0406250022}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0

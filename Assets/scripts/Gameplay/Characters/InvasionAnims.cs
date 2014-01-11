@@ -11,12 +11,14 @@ public class InvasionAnims : MonoBehaviour {
 	{
 		animSprite.frameIndex = 0;
 		_player = GameObject.Find("Player").GetComponent<Player>();
+		stopped = false;
 		invade();
 	}
 	void Update () {
 		if(animSprite.frameIndex == 18 && !stopped) {
 			stopped = true;
 			animSprite.Stop();
+			MasterAudio.PlaySound("rewind");
 			_player.angleRotation = 0;
 			_player.StartCoroutine("rewind");
 			_player.StartCoroutine("stopRewind",1.3f);
@@ -27,8 +29,8 @@ public class InvasionAnims : MonoBehaviour {
 		//print ("reset");
 		yield return new WaitForSeconds(2.25f);//print ("DE-invade");
 		animSprite.PlayBackward("invade");
-		transform.position = new Vector3(_player.transform.position.x,_player.transform.position.y,-5f);
 		_player.transform.position = _player.spawnPos;
+		transform.position = new Vector3(_player.transform.position.x,_player.transform.position.y,-5f);
 		StartCoroutine("finalReset");
 
 	}
@@ -37,11 +39,12 @@ public class InvasionAnims : MonoBehaviour {
 		transform.position = new Vector3(_player.transform.position.x,_player.transform.position.y,-5f);
 		_player.transform.position = new Vector3 (_player.transform.position.x,_player.transform.position.y,-20f);
 		animSprite.Play("invade");
-		MasterAudio.PlaySound("rewind");
 	}
 	public IEnumerator finalReset() {
 		yield return new WaitForSeconds(1f);
 		stopped = false;
+		_player.StopCoroutine("rewind");
+		_player.StopCoroutine("stopRewind");
 		Destroy(gameObject);
 	}
 }

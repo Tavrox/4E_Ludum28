@@ -12,7 +12,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
   m_Layer: 8
-  m_Name: crateSprite-2
+  m_Name: crateSprite-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +59,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 1}
+  m_LocalScale: {x: 2.08333349, y: 2.08333349, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
 --- !u!4 &400002
@@ -81,7 +81,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 869.030457, y: -2083.09912, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -139,7 +139,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 115, y: 95, z: 1}
+  m_Size: {x: 2.5, y: 2.08333302, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -152,9 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18d0574a4fa59946a49ede6640a1f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: crateSprite-2
+  _name: crateSprite-3
   _position: {x: 0, y: 0}
-  _size: {x: 100, y: 100}
+  _size: {x: 2.08333349, y: 2.08333349}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -176,8 +176,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: crateSprite
-  oSize: {x: 100, y: 100}
-  imageSize: {x: 100, y: 100}
+  oSize: {x: 2.08333349, y: 2.08333349}
+  imageSize: {x: 2.08333349, y: 2.08333349}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -212,6 +212,8 @@ MonoBehaviour:
   spriteScaleX: 0
   spriteScaleY: 0
   vectorMove: {x: 0, y: 0, z: 0}
+  blockDetectionArea: 100
+  _player: {fileID: 0}
   blockCrate: 0
 --- !u!1001 &100100000
 Prefab:

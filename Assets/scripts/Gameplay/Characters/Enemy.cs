@@ -14,7 +14,6 @@ public class Enemy : Character {
 	
 	public float targetDetectionArea = 3f;
 	public float blockDetectionArea = 2f;
-	protected float spriteScaleX;
 	protected RaycastHit hitInfo; //infos de collision
 	protected Ray detectTargetLeft, detectTargetRight, detectBlockLeft, detectBlockRight, detectEndPFLeft, detectEndPFRight; //point de départ, direction
 	
@@ -22,6 +21,7 @@ public class Enemy : Character {
 	protected int waypointId = 0;
 	public Transform[] waypoints;
 
+	protected float spriteScaleX, spriteScaleY;
 	//	private WaveCreator soundEmitt1, soundEmitt2, soundInstru1, soundInstru2,soundEmitt3;
 	//	private int cptWave=1, pebbleDirection = 1;
 	//	private bool blockCoroutine, first, toSprint, toWalk, specialCast, playerDirLeft;
@@ -67,6 +67,7 @@ public class Enemy : Character {
 		target = GameObject.FindWithTag("Player").transform; //target the player
 		patroling = true;
 		spriteScaleX = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.x;
+		spriteScaleY = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.y;
 	}
 	// Update is called once per frame
 //	public void Update () 
@@ -167,57 +168,57 @@ public class Enemy : Character {
 		}
 		
 	}
-	protected IEnumerator goToWaypoint (int waypointIDToReach) {
-		//print ("goToWaypoint");
-		if(Vector3.Distance(transform.position, waypoints[waypointIDToReach].position) < 1) {
-			endChasingPlayer = false;
-			StopCoroutine("goToWaypoint");
-		}
-		if(waypoints[waypointIDToReach].position.x > transform.position.x) {
-			isRight = true;
-			facingDir = facing.Right;
-		}
-		if(waypoints[waypointIDToReach].position.x < transform.position.x) {
-			isLeft = true;
-			facingDir = facing.Left;
-		}
-		UpdateMovement();
-		yield return new WaitForSeconds(0.1f);
-		StartCoroutine("goToWaypoint",waypointIDToReach);
-	}
-	protected void Patrol () {
-		//print ("patrolllll");
-		//print (waypointId);
-		if(waypoints.Length<=0) print("No Waypoints linked");
-		//print(gameObject.transform.position.x+" + "+waypoints[waypointId].position.x);
-		//		//		print(transform.position+" - "+waypoints[waypointId].position);
-		//		if (transform.position.x < waypoints[waypointId].position.x+10f && transform.position.x > waypoints[waypointId].position.x-10f) {
-		//			//print(gameObject.transform.position.x+" + "+waypoints[waypointId].position.x);
-		//			//print ("********** IN *********");
-		//		}
-		if(Vector3.Distance(new Vector3(transform.position.x,0f,0f), new Vector3(waypoints[waypointId].position.x,0f,0f)) < 30 && canChangeDir) {
-			canChangeDir = false;
-			go = !go;//print ("*-*-*-*-*-****-*--*-*-*-*-*-*-*-*-*-*-*-*-***-*--*-*-*");
-			if(go) waypointId=0;
-			else if (!go) waypointId=1;
-		}
-		else if (Vector3.Distance(new Vector3(transform.position.x,0f,0f), new Vector3(waypoints[waypointId].position.x,0f,0f)) > 40 && !canChangeDir) canChangeDir = true;
-		//		
-		if(go) {
-			isRight = false;
-			isLeft = true;
-			facingDir = facing.Left;//UpdateMovement();
-			gameObject.GetComponent<PatrolerAnims>().InvertSprite();
-			thisTransform.position -= new Vector3(1f,0f,0f);
-		}
-		else {
-			isLeft = false;
-			isRight = true;
-			facingDir = facing.Right;//UpdateMovement();
-			gameObject.GetComponent<PatrolerAnims>().NormalScaleSprite();
-			thisTransform.position += new Vector3(1f,0f,0f);
-		}
-	}
+//	protected IEnumerator goToWaypoint (int waypointIDToReach) {
+//		//print ("goToWaypoint");
+//		if(Vector3.Distance(transform.position, waypoints[waypointIDToReach].position) < 1) {
+//			endChasingPlayer = false;
+//			StopCoroutine("goToWaypoint");
+//		}
+//		if(waypoints[waypointIDToReach].position.x > transform.position.x) {
+//			isRight = true;
+//			facingDir = facing.Right;
+//		}
+//		if(waypoints[waypointIDToReach].position.x < transform.position.x) {
+//			isLeft = true;
+//			facingDir = facing.Left;
+//		}
+//		UpdateMovement();
+//		yield return new WaitForSeconds(0.1f);
+//		StartCoroutine("goToWaypoint",waypointIDToReach);
+//	}
+//	protected void Patrol () {
+//		//print ("patrolllll");
+//		//print (waypointId);
+//		if(waypoints.Length<=0) print("No Waypoints linked");
+//		//print(gameObject.transform.position.x+" + "+waypoints[waypointId].position.x);
+//		//		//		print(transform.position+" - "+waypoints[waypointId].position);
+//		//		if (transform.position.x < waypoints[waypointId].position.x+10f && transform.position.x > waypoints[waypointId].position.x-10f) {
+//		//			//print(gameObject.transform.position.x+" + "+waypoints[waypointId].position.x);
+//		//			//print ("********** IN *********");
+//		//		}
+//		if(Vector3.Distance(new Vector3(transform.position.x,0f,0f), new Vector3(waypoints[waypointId].position.x,0f,0f)) < 30 && canChangeDir) {
+//			canChangeDir = false;
+//			go = !go;//print ("*-*-*-*-*-****-*--*-*-*-*-*-*-*-*-*-*-*-*-***-*--*-*-*");
+//			if(go) waypointId=0;
+//			else if (!go) waypointId=1;
+//		}
+//		else if (Vector3.Distance(new Vector3(transform.position.x,0f,0f), new Vector3(waypoints[waypointId].position.x,0f,0f)) > 40 && !canChangeDir) canChangeDir = true;
+//		//		
+//		if(go) {
+//			isRight = false;
+//			isLeft = true;
+//			facingDir = facing.Left;//UpdateMovement();
+//			gameObject.GetComponent<PatrolerAnims>().InvertSprite();
+//			thisTransform.position -= new Vector3(1f,0f,0f);
+//		}
+//		else {
+//			isLeft = false;
+//			isRight = true;
+//			facingDir = facing.Right;//UpdateMovement();
+//			gameObject.GetComponent<PatrolerAnims>().NormalScaleSprite();
+//			thisTransform.position += new Vector3(1f,0f,0f);
+//		}
+//	}
 	/************************
 	 *						*
 	 *  WAVES MANAGEMENT	*
@@ -433,7 +434,7 @@ public class Enemy : Character {
 	
 	protected void GameStart () {
 		if(FindObjectOfType(typeof(Enemy)) && this != null) {
-			transform.localPosition = spawnPos;
+//			transform.localPosition = spawnPos;
 			enabled = true;
 		}
 	}

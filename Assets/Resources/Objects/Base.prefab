@@ -43,7 +43,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.66666663, y: 4.34782553, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
 --- !u!4 &400002
@@ -96,7 +96,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.5, y: 4.30000019, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: BaseSprite
   _position: {x: 0, y: 0}
-  _size: {x: 1, y: 1}
+  _size: {x: 1.66666663, y: 4.34782553}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -147,8 +147,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: BaseSprite
-  oSize: {x: .625, y: .479166687}
-  imageSize: {x: 1, y: 1}
+  oSize: {x: 1.04166675, y: 2.08333349}
+  imageSize: {x: 1.66666663, y: 4.34782553}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -160,8 +160,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 4
-  _frameName: timerBase01
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 0}
   _containerName: arcElectricSheet
   _newSprite: 0

@@ -47,7 +47,7 @@ GameObject:
   - 23: {fileID: 2300002}
   - 114: {fileID: 11400006}
   m_Layer: 0
-  m_Name: BaseSprite
+  m_Name: BaseSprite-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -252,6 +252,7 @@ MonoBehaviour:
   animSprite: {fileID: 11400004}
   activeTime: .300000012
   inactiveTime: .5
+  stateSound: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -326,7 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e0774980171c514ea93208b47048a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: BaseSprite
+  _name: BaseSprite-1
   _position: {x: 0, y: 0}
   _size: {x: 1.66666639, y: 4.34782267}
   _rotation: 0

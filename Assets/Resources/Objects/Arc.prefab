@@ -12,7 +12,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400002}
   m_Layer: 0
-  m_Name: ArcSprite
+  m_Name: ArSprite-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +43,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 3.69565225, z: 1}
+  m_LocalScale: {x: 1.66666663, y: 4.34782553, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
 --- !u!4 &400002
@@ -96,7 +96,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 3.69565201, z: 1}
+  m_Size: {x: 1, y: 4.347826, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -112,6 +112,7 @@ MonoBehaviour:
   animSprite: {fileID: 11400002}
   activeTime: .300000012
   inactiveTime: .5
+  stateSound: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -123,9 +124,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e0774980171c514ea93208b47048a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: ArcSprite
+  _name: ArSprite-1
   _position: {x: 0, y: 0}
-  _size: {x: 1, y: 3.69565225}
+  _size: {x: 1.66666663, y: 4.34782553}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -147,8 +148,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: ArSprite
-  oSize: {x: .625, y: 1.77083337}
-  imageSize: {x: 1, y: 3.69565225}
+  oSize: {x: 1.04166675, y: 2.08333349}
+  imageSize: {x: 1.66666663, y: 4.34782553}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -160,8 +161,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 1
-  _frameName: timerArc01
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 0}
   _containerName: arcElectricSheet
   _newSprite: 0

@@ -82,7 +82,7 @@ Transform:
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.99999881, y: 1.00000012, z: 1}
+  m_LocalScale: {x: 1.99999881, y: 1.25000012, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
 --- !u!23 &2300000
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: trapKillSprite
   _position: {x: 0, y: 0}
-  _size: {x: 1.99999881, y: 1.00000012}
+  _size: {x: 1.99999881, y: 1.25000012}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -171,8 +171,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: trapKillSprite
-  oSize: {x: 2.08333349, y: .833333373}
-  imageSize: {x: 1.99999881, y: 1.00000012}
+  oSize: {x: 2.08333349, y: 1.04166675}
+  imageSize: {x: 1.99999881, y: 1.25000012}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -185,7 +185,7 @@ MonoBehaviour:
   _image: {fileID: 0}
   sizeImages: []
   _frameIndex: 0
-  _frameName: trapKill00
+  _frameName: killTrap00
   _spriteContainer: {fileID: 0}
   _containerName: trapKillSheet
   _newSprite: 0

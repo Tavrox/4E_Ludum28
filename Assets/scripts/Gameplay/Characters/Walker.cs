@@ -11,10 +11,11 @@ public class Walker : Enemy {
 
 	void Start()
 	{
+		base.Start();
 		InvokeRepeating("sound",0,0.5f);
 		myTarget = GameObject.Find("Player").GetComponent<Player>();
+		//myspawnpos.position = new Vector3(gameObject.transform.position.x,gameObject.transform.position.z,0f);
 		GameEventManager.GameStart += GameStart;
-		myspawnpos.position = gameObject.transform.position;
 	}
 
 	// Update is called once per frame
@@ -23,12 +24,14 @@ public class Walker : Enemy {
 		if(chasingPlayer) {ChasePlayer();}
 		detectPlayer();
 		detectEndPlatform();
+		UpdateMovement();
 	}
 
 	protected void GameStart () {
 		if(FindObjectOfType(typeof(Enemy)) && this != null) {
-//			transform.position = myspawnpos.position;
+			transform.position = new Vector3(spawnPos.x,spawnPos.y,0f);
 			enabled = true;
+			chasingPlayer = false;
 		}
 	}
 
@@ -40,14 +43,14 @@ public class Walker : Enemy {
 	
 	protected void ChasePlayer () {
 		//Debug.Log("Px ="+target.position.x+" / Zx ="+myTransform.position.x);
-		if (myTarget.transform.position.x < thisTransform.position.x-50f) {
+		if (myTarget.transform.position.x < thisTransform.position.x-(spriteScaleX/10f)) {
 			//direction = Vector3.left;
 			isLeft = true;
 			isRight = false;
 			facingDir = facing.Left;
 			UpdateMovement();
 		}
-		else if (myTarget.transform.position.x > thisTransform.position.x+50f /*&& isLeft == false*/) {
+		else if (myTarget.transform.position.x > thisTransform.position.x+(spriteScaleX/10f) /*&& isLeft == false*/) {
 			//direction = Vector3.right;
 			isRight = true; 
 			isLeft = false;
@@ -99,11 +102,11 @@ public class Walker : Enemy {
 		}
 	}
 	protected void detectEndPlatform() {
-		detectEndPFLeft = new Ray(new Vector3 (thisTransform.position.x-45f, thisTransform.position.y, thisTransform.position.z), Vector3.down);
-		detectEndPFRight = new Ray(new Vector3 (thisTransform.position.x+45f, thisTransform.position.y, thisTransform.position.z), Vector3.down);
+		detectEndPFLeft = new Ray(new Vector3 (thisTransform.position.x-(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down);
+		detectEndPFRight = new Ray(new Vector3 (thisTransform.position.x+(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down);
 		//print (blockDetectionArea);
-		Debug.DrawRay(new Vector3 (thisTransform.position.x-45f, thisTransform.position.y, thisTransform.position.z), Vector3.down*blockDetectionArea);
-		Debug.DrawRay(new Vector3 (thisTransform.position.x+45f, thisTransform.position.y, thisTransform.position.z), Vector3.down*blockDetectionArea);
+		Debug.DrawRay(new Vector3 (thisTransform.position.x-(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down*blockDetectionArea);
+		Debug.DrawRay(new Vector3 (thisTransform.position.x+(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down*blockDetectionArea);
 		
 		if (!Physics.Raycast(detectEndPFLeft, out hitInfo, blockDetectionArea) || !Physics.Raycast(detectEndPFRight, out hitInfo, blockDetectionArea)) {
 			chasingPlayer = false;
@@ -112,7 +115,7 @@ public class Walker : Enemy {
 				if (Physics.Raycast(detectTargetRight, out hitInfo, targetDetectionArea)) {
 					if(hitInfo.collider.name == "Player") {
 						chasingPlayer = true;
-						thisTransform.position += new Vector3(10f,0f,0f);
+						thisTransform.position += new Vector3((spriteScaleX/2f),0f,0f);
 					}
 				}
 			}
@@ -120,7 +123,7 @@ public class Walker : Enemy {
 				if (Physics.Raycast(detectTargetLeft, out hitInfo, targetDetectionArea)) {
 					if(hitInfo.collider.name == "Player") {
 						chasingPlayer = true;
-						thisTransform.position -= new Vector3(10f,0f,0f);
+						thisTransform.position -= new Vector3((spriteScaleX/2f),0f,0f);
 					}
 				}
 			}

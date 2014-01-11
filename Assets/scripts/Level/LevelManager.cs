@@ -12,6 +12,7 @@ public class LevelManager : MonoBehaviour {
 	private int _secLeft;
 	private TileImporter _tileImporter;
 	private PlayerData _pdata;
+	private string _rand;
 
 	// Use this for initialization
 	void Start () 
@@ -30,7 +31,9 @@ public class LevelManager : MonoBehaviour {
 		MasterAudio.PlaySound("bg");
 		MasterAudio.PlaySound("jam");
 
-		string _rand = Random.Range(_tileImporter.minVariation, _tileImporter.maxVariation).ToString();
+		if(chosenVariation==0) _rand = Random.Range(_tileImporter.minVariation, _tileImporter.maxVariation).ToString();
+		else _rand = chosenVariation.ToString();
+
 		print ("Level generated " + _rand);
 		foreach (Transform _gameo in GameObject.Find("Level/Gameplay").transform)
 		{
@@ -41,7 +44,7 @@ public class LevelManager : MonoBehaviour {
 		}
 
 
-		_Player.transform.position = GameObject.Find("playerspawn"+_rand).transform.position;
+		_Player.transform.position = _Player.spawnPos = GameObject.Find("playerspawn"+_rand).transform.position;
 
 		_pdata.displayInput = false;
 
@@ -62,7 +65,8 @@ public class LevelManager : MonoBehaviour {
 
 		if (Input.GetKeyDown(KeyCode.Alpha3))
 		{
-			playerDies();
+			GameObject.Find("Player").GetComponent<Player>().isDead = true;
+			GameEventManager.TriggerGameOver();
 		}
 	}
 

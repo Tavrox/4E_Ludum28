@@ -46,8 +46,8 @@ public class Patroler : Character {
 
 		spawnPos = gameObject.transform.position;
 
-		GetComponent<BoxCollider>().size = new Vector3(77.36f,32f,30f);
-		GetComponent<BoxCollider>().center = new Vector3(0,-3.2f,0f);
+		GetComponent<BoxCollider>().size = new Vector3(1.3f,0.7f,30f);
+		GetComponent<BoxCollider>().center = new Vector3(0,-0.1f,0f);
 		
 		//		soundEmitt1 = Instantiate(instFootWave) as WaveCreator;
 		//		soundEmitt2 = Instantiate(instFootWave) as WaveCreator;
@@ -82,31 +82,34 @@ public class Patroler : Character {
 		//print (waypointId);
 		if(waypoints.Length<=0) print("No Waypoints linked");
 		//print(gameObject.transform.position.x+" + "+waypoints[waypointId].position.x);
-		//		//		print(transform.position+" - "+waypoints[waypointId].position);
+		//				print(transform.position+" - "+waypoints[waypointId].position);
 		//		if (transform.position.x < waypoints[waypointId].position.x+10f && transform.position.x > waypoints[waypointId].position.x-10f) {
 		//			//print(gameObject.transform.position.x+" + "+waypoints[waypointId].position.x);
 		//			//print ("********** IN *********");
 		//		}
-		if(Vector3.Distance(new Vector3(transform.position.x,0f,0f), new Vector3(waypoints[waypointId].position.x,0f,0f)) < 30 && canChangeDir) {
+		//print(Vector3.Distance(new Vector3(transform.position.x,0f,0f), new Vector3(waypoints[waypointId].position.x,0f,0f)));
+		if(Vector3.Distance(new Vector3(transform.position.x,0f,0f), new Vector3(waypoints[waypointId].position.x,0f,0f)) < (spriteScaleX/2f) && canChangeDir) {
 			canChangeDir = false;
 			go = !go;//print ("*-*-*-*-*-****-*--*-*-*-*-*-*-*-*-*-*-*-*-***-*--*-*-*");
-			if(go) waypointId=0;
-			else if (!go) waypointId=1;
+			if(go == true) waypointId=0;
+			else waypointId=1;
 		}
-		else if (Vector3.Distance(new Vector3(transform.position.x,0f,0f), new Vector3(waypoints[waypointId].position.x,0f,0f)) > 40 && !canChangeDir) canChangeDir = true;
+		else if (Vector3.Distance(new Vector3(transform.position.x,0f,0f), new Vector3(waypoints[waypointId].position.x,0f,0f)) > (spriteScaleX/2f)+1 && !canChangeDir) canChangeDir = true;
 		//		
-		if(go) {
+		if(go == true) {
 			isRight = false;
 			isLeft = true;
-			facingDir = facing.Left;//UpdateMovement();
+			facingDir = facing.Left;
 			gameObject.GetComponent<PatrolerAnims>().InvertSprite();
+			//UpdateMovement();
 			thisTransform.position -= new Vector3(myCORRECTSPEED,0f,0f);
 		}
 		else {
 			isLeft = false;
 			isRight = true;
-			facingDir = facing.Right;//UpdateMovement();
+			facingDir = facing.Right;
 			gameObject.GetComponent<PatrolerAnims>().NormalScaleSprite();
+			//UpdateMovement();
 			thisTransform.position += new Vector3(myCORRECTSPEED,0f,0f);
 		}
 	}

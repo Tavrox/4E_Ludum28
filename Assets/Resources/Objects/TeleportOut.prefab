@@ -69,7 +69,7 @@ Transform:
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.99999881, y: 2.29999995, z: 1}
+  m_LocalScale: {x: .999999404, y: 1.91666663, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
 --- !u!4 &400004
@@ -80,7 +80,7 @@ Transform:
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
   m_Father: {fileID: 0}
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: teleport-1
   _position: {x: 0, y: 0}
-  _size: {x: 1.99999881, y: 2.29999995}
+  _size: {x: .999999404, y: 1.91666663}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -147,8 +147,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: teleport
-  oSize: {x: 2.08333349, y: 2.5}
-  imageSize: {x: 1.99999881, y: 2.29999995}
+  oSize: {x: 1.04166675, y: 2.08333349}
+  imageSize: {x: .999999404, y: 1.91666663}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -161,7 +161,7 @@ MonoBehaviour:
   _image: {fileID: 0}
   sizeImages: []
   _frameIndex: 0
-  _frameName: teleport00
+  _frameName: tp_01
   _spriteContainer: {fileID: 0}
   _containerName: teleportContainer
   _newSprite: 0

@@ -58,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 39.9999962, y: 82.7586212, z: 1}
+  m_LocalScale: {x: .833333313, y: 1.72413802, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
 --- !u!4 &400002
@@ -68,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
-  m_LocalPosition: {x: 2808.54492, y: -1472.05798, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400004}
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: AnimatingSprite
   _position: {x: 0, y: 0}
-  _size: {x: 39.9999962, y: 82.7586212}
+  _size: {x: .833333313, y: 1.72413802}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -174,8 +174,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: leverSprite
-  oSize: {x: 50, y: 100}
-  imageSize: {x: 39.9999962, y: 82.7586212}
+  oSize: {x: 1.04166675, y: 2.08333349}
+  imageSize: {x: .833333313, y: 1.72413802}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0

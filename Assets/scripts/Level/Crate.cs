@@ -12,6 +12,7 @@ public class Crate : MonoBehaviour {
 	public int blockDetectionArea = 100;
 	public Player _player;
 	public bool blockCrate;
+	public float replaceCrate = 3f;
 	//RaycastHit hitInfo;
 	//Ray landingRay;	
 	//public float deployHeight;
@@ -34,13 +35,14 @@ public class Crate : MonoBehaviour {
 	{
 		// wait for things to settle before applying gravity
 		yield return new WaitForSeconds(0.1f);
-		gravityY = 40f;
+		gravityY = 0.2f;
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{		
-		if(grounded == false)
+		//print(grounded);
+		if(!grounded && _player.grounded)
 		{
 			vectorMove.y -= gravityY * Time.deltaTime;
 			thisTransform.position += new Vector3(vectorMove.x,vectorMove.y,0f);
@@ -48,8 +50,7 @@ public class Crate : MonoBehaviour {
 		}
 		detectEndPlatform();
 		//if(!blockCrate) detectPlayer();
-		
-		_player.moveVel = playerMoveVel;
+
 		//landingRay = new Ray(thisTransform.position, Vector3.down);
 	}
 	
@@ -60,15 +61,18 @@ public class Crate : MonoBehaviour {
 //			/*if(detectPlayer())*/ other.gameObject.GetComponent<Crate>().transform.position += new Vector3(crateMove*1.5f/*+0.1f*/,0f,0f);
 //		}
 			if(!blockCrate) {
-			_player.moveVel = 0.2f*playerMoveVel;
-			if(_player.isRight) crateMove = _player.moveVel*Time.deltaTime*2f;
-			else if(_player.isLeft) crateMove = -_player.moveVel*Time.deltaTime*2f;
+			_player.moveVel = playerMoveVel/2;
+			if(_player.isRight) crateMove = _player.moveVel*Time.deltaTime/**2f*/;
+			else if(_player.isLeft) crateMove = -_player.moveVel*Time.deltaTime/**2f*/;
+			else crateMove = 0;
 			thisTransform.position += new Vector3(crateMove,0f,0f);
 			//return true;
 		}}
-		if(other.gameObject.name=="ColliBox" || other.gameObject.name=="Door") 
+		if(other.gameObject.name=="ColliBox" || other.gameObject.CompareTag("Blocker")) 
 		{/*print("GAUUUUUUCHE");*/blockCrate = true;}
-
+		if(other.gameObject.name!="ColliBox" && !other.gameObject.CompareTag("Blocker")) {
+			blockCrate = false;
+		}
 //		if (other.gameObject.tag == "ColliBox") {
 //
 //		}
@@ -79,19 +83,26 @@ public class Crate : MonoBehaviour {
 //				thisTransform.position += new Vector3(crateMove,0f,0f);
 //
 //			//}
-//		}
-////		if(other.gameObject.layer == 8)
-////		{
-////			grounded = true;
 ////		}
-//////		if(other.gameObject.CompareTag("Ground")) 
-//////		{
-//////			grounded = true;
-//////		}
-//////		if(other.gameObject.CompareTag("Platforms")) 
-//////		{
-//////			grounded = true;
-//////		}
+//		if(other.gameObject.layer == 8)
+//		{
+//			grounded = true;
+//		}
+//		if(other.gameObject.CompareTag("Blocker")) 
+//		{
+//			grounded = true;
+//		}
+//		if(other.gameObject.CompareTag("Platforms")) 
+//		{
+//			grounded = true;
+//		}
+	}
+	void OnTriggerExit(Collider other) {
+		if(other.gameObject.tag=="Player") {
+			_player.moveVel = playerMoveVel;
+		}
+		if(other.gameObject.name=="ColliBox" || other.gameObject.CompareTag("Blocker")) 
+		{/*print("GAUUUUUUCHE");*/blockCrate = false;}
 	}
 //	private bool detectPlayer() {
 //		detectPlayerLeft = new Ray(new Vector3 (thisTransform.position.x, thisTransform.position.y, thisTransform.position.z), Vector3.left);
@@ -127,17 +138,18 @@ public class Crate : MonoBehaviour {
 		detectEndPFRight = new Ray(new Vector3 (thisTransform.position.x+(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down);
 
 		//print (blockDetectionArea);
-//		Debug.DrawRay(new Vector3 (thisTransform.position.x-(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY/2f);
-//		Debug.DrawRay(new Vector3 (thisTransform.position.x+(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY/2f);
+		Debug.DrawRay(new Vector3 (thisTransform.position.x-(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY/2f);
+		Debug.DrawRay(new Vector3 (thisTransform.position.x+(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY/2f);
 		
-		if (!Physics.Raycast(detectEndPFLeft, out hitInfo, spriteScaleY, 1<<8) && !Physics.Raycast(detectEndPFRight, out hitInfo, spriteScaleY, 1<<8)) {
+		if (!Physics.Raycast(detectEndPFLeft, out hitInfo, spriteScaleY/2f) && !Physics.Raycast(detectEndPFRight, out hitInfo, spriteScaleY/2f)) {
 			grounded = false;
 		}
 		else {
 			grounded = true;
-			BoxCollider colliderHit = hitInfo.collider as BoxCollider;
+			vectorMove.y = 0;
+			//BoxCollider colliderHit = hitInfo.collider as BoxCollider;
 			//print (colliderHit.size);
-			thisTransform.position = new Vector3(thisTransform.position.x, (float)((hitInfo.transform.position.y)), thisTransform.position.z);
+			//thisTransform.position = new Vector3(thisTransform.position.x, (float)((hitInfo.transform.position.y)+replaceCrate), thisTransform.position.z);
 		}
 	}
 }

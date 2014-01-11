@@ -12,7 +12,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: leverSprite-5
+  m_Name: leverSprite-23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 39.9999962, y: 82.7586212, z: 1}
+  m_LocalScale: {x: .833333313, y: 1.72413802, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
 --- !u!4 &400002
@@ -80,7 +80,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: -.707106829}
-  m_LocalPosition: {x: 3505.62012, y: -1511.91541, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -124,9 +124,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e0774980171c514ea93208b47048a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: leverSprite-5
+  _name: leverSprite-23
   _position: {x: 0, y: 0}
-  _size: {x: 39.9999962, y: 82.7586212}
+  _size: {x: .833333313, y: 1.72413802}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -148,8 +148,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: leverSprite
-  oSize: {x: 50, y: 100}
-  imageSize: {x: 39.9999962, y: 82.7586212}
+  oSize: {x: 1.04166675, y: 2.08333349}
+  imageSize: {x: .833333313, y: 1.72413802}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
