@@ -47,7 +47,7 @@ GameObject:
   m_Layer: 0
   m_Name: TeleportIn
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 813524716, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -157,6 +157,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   teleportDestination: {fileID: 0}
   delayB4Telep: 1
+  isOUT: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -211,7 +212,7 @@ MonoBehaviour:
   _containerName: teleportContainer
   _newSprite: 0
   _animation: {fileID: 0}
-  _animationFrameset: 
+  _animationFrameset: teleportOUT
   _speed: 1
   _looping: 1
   _numberOfPlays: -1

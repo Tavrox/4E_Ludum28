@@ -26,6 +26,7 @@ public class TeleportAnims : MonoBehaviour
 	private Player _player;
 	public TeleportAnims teleportDestination;
 	public int delayB4Telep = 1;
+	public bool isOUT;
 	
 	private bool animPlaying = false, playerCollision;
 	
@@ -34,7 +35,9 @@ public class TeleportAnims : MonoBehaviour
 	{
 		_character 	= GetComponent<Character>();
 		_player 	= GameObject.FindObjectOfType<Player>();
-		animSprite.Play("default");
+
+		if(isOUT) animSprite.Play("teleportOUT");
+		else animSprite.Play("default");
 	}
 	void Update() 
 	{
@@ -52,7 +55,7 @@ public class TeleportAnims : MonoBehaviour
 	}
 	private void OnTriggerStay(Collider other) 
 	{
-		if(other.gameObject.CompareTag("Player")) 
+		if(other.gameObject.CompareTag("Player") && !isOUT) 
 		{
 			if (Input.GetKeyDown(KeyCode.Space)) {
 				MasterAudio.PlaySound("teleport_in");

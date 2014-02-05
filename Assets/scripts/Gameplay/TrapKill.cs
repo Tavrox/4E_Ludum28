@@ -17,9 +17,9 @@ public class TrapKill : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) 
 	{
-		if(other.gameObject.CompareTag("Player") && triggered == false) 
+		if(other.gameObject.CompareTag("Player") /*&& triggered == false*/) 
 		{
-			triggered = true;
+			//triggered = true;
 			MasterAudio.PlaySound("hole");
 			GameEventManager.TriggerGameOver();
 		}

@@ -5,7 +5,7 @@ public static class GameEventManager {
 
 	public delegate void GameEvent();
 	
-	public static event GameEvent GameStart, GamePause, GameUnpause, GameOver, NextLevel, PreviousLevel;
+	public static event GameEvent GameStart, GamePause, GameUnpause, GameOver, NextInstance, NextLevel, PreviousLevel;
 	public static bool gamePaused = false;
 	
 	public static void TriggerGameStart(){
@@ -17,6 +17,11 @@ public static class GameEventManager {
 	public static void TriggerGameOver(){
 		if(GameOver != null){
 			GameOver();
+		}
+	}
+	public static void TriggerNextInstance(){
+		if(NextInstance != null){
+			NextInstance();
 		}
 	}
 	

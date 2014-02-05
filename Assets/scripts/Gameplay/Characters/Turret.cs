@@ -5,7 +5,7 @@ public class Turret : MonoBehaviour {
 
 
 	public Projectile prefabProj;
-	public float shootFrequency;
+	public float shootFrequency, shootSpeed;
 	private Projectile instProj;
 	
 	public enum shootDir { Right, Left, Up, Down }
@@ -13,28 +13,30 @@ public class Turret : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		StartCoroutine("waitB4Shoot");
+		//StartCoroutine("waitB4Shoot");
 		GameEventManager.GameOver += GameOver;
 		GameEventManager.GameStart += GameStart;
 	}
 
 	private void GameStart()
 	{
-		StartCoroutine("waitB4Shoot");
+		gameObject.GetComponent<TurretAnims>().animSprite.Play();
+		//StartCoroutine("waitB4Shoot");
 	}
 
 	private void GameOver()
 	{
-		StopCoroutine("waitB4Shoot");
-		StopCoroutine("shoot");
+		gameObject.GetComponent<TurretAnims>().animSprite.Stop();
+		//StopCoroutine("waitB4Shoot");
+		//StopCoroutine("shoot");
 	}
 
-	private IEnumerator waitB4Shoot () {
-		yield return new WaitForSeconds(0.35f);
-		StartCoroutine("shoot");
-	}
-	private IEnumerator shoot () {
-		yield return new WaitForSeconds(shootFrequency);
+//	private IEnumerator waitB4Shoot () {
+//		yield return new WaitForSeconds(0.35f);
+//		StartCoroutine("shoot");
+//	}
+	public void shoot () {
+		//yield return new WaitForSeconds(shootFrequency);
 		GameObject _proj = Instantiate (Resources.Load("Objects/Projectile")) as GameObject;
 		instProj = _proj.GetComponent<Projectile>();
 		Player _player = GameObject.Find("Player").GetComponent<Player>();
@@ -48,20 +50,23 @@ public class Turret : MonoBehaviour {
 		switch (myShootDir) {
 			case shootDir.Down:
 				instProj.direction = Vector3.down;
+			instProj.transform.position = new Vector3((gameObject.transform.position.x-gameObject.transform.localScale.x/2-0.1f),gameObject.transform.position.y,gameObject.transform.position.z-1);
 				break;
 			case shootDir.Up:
 				instProj.direction = Vector3.up;
+			instProj.transform.position = new Vector3((gameObject.transform.position.x+gameObject.transform.localScale.x/2-0.1f),gameObject.transform.position.y,gameObject.transform.position.z-1);
 				break;
 			case shootDir.Left:
 				instProj.direction = Vector3.left;
+				instProj.transform.position = new Vector3(gameObject.transform.position.x,(gameObject.transform.position.y+gameObject.transform.localScale.y/2-0.1f),gameObject.transform.position.z-1);
 				break;
 			case shootDir.Right:
 				instProj.direction = Vector3.right;
+			instProj.transform.position = new Vector3(gameObject.transform.position.x,(gameObject.transform.position.y+gameObject.transform.localScale.y/2-0.1f),gameObject.transform.position.z-1);
 				break;
 		}
-
-		instProj.transform.position = new Vector3(gameObject.transform.position.x,(gameObject.transform.position.y+gameObject.transform.localScale.y/2-0.1f),gameObject.transform.position.z-1);
+		instProj.ProjectileSpeed = shootSpeed;
 		instProj.posIni = instProj.transform.position;
-		StartCoroutine("shoot");
+		/*StartCoroutine("shoot");*/
 	}
 }

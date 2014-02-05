@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml;
 using System;
+using UnityEditor;
 
 public class ObjectImporter : MonoBehaviour {
 	
@@ -111,7 +112,7 @@ public class ObjectImporter : MonoBehaviour {
 							
 						if (Resources.Load(namePrefab) != null)
 						{
-							GameObject _instance = Instantiate(Resources.Load(namePrefab)) as GameObject;
+							GameObject _instance = PrefabUtility.InstantiatePrefab(Resources.Load(namePrefab)) as GameObject;
 							_instance.transform.parent = _container.transform ;
 							_instance.transform.position = new Vector3 (_currWidth, _currHeight, _currDepth);
 						}
@@ -166,7 +167,7 @@ public class ObjectImporter : MonoBehaviour {
 					string childType = children.Attributes.GetNamedItem("type").Value;
 					if (Resources.Load("Objects/" + childType) != null)
 					{
-						GameObject _instance = Instantiate(Resources.Load("Objects/" + childType)) as GameObject;
+						GameObject _instance = PrefabUtility.InstantiatePrefab(Resources.Load("Objects/" + childType)) as GameObject;
 						_instance.transform.parent = this.transform;
 						float _posX = float.Parse(children.Attributes.GetNamedItem("x").Value) + 50;
 						float _posY = float.Parse(children.Attributes.GetNamedItem("y").Value) - 50;
@@ -177,7 +178,7 @@ public class ObjectImporter : MonoBehaviour {
 							_posX += _objWidth;
 							_posY += _objHeight;
 						}
-						_instance.transform.position = new Vector3 (_posX / 50f, _posY / - 51f , -5f);
+						_instance.transform.position = new Vector3 (_posX / 50f, _posY / - 51f , 0f/*-5f*/);
 						if (children.Attributes.GetNamedItem("name").Value != null)
 						{
 							_instance.name = children.Attributes.GetNamedItem("name").Value;

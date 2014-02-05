@@ -42,7 +42,7 @@ public class Crate : MonoBehaviour {
 	void Update () 
 	{		
 		//print(grounded);
-		if(!grounded && _player.grounded)
+		if(!grounded /*&& _player.grounded*/)
 		{
 			vectorMove.y -= gravityY * Time.deltaTime;
 			thisTransform.position += new Vector3(vectorMove.x,vectorMove.y,0f);
@@ -53,14 +53,16 @@ public class Crate : MonoBehaviour {
 
 		//landingRay = new Ray(thisTransform.position, Vector3.down);
 	}
-	
+
 	void OnTriggerStay(Collider other) 
 	{
 		if(other.gameObject.tag=="Player") {
 //		if(other.gameObject.name=="Crate" || other.gameObject.name=="Crate(Clone)") {
 //			/*if(detectPlayer())*/ other.gameObject.GetComponent<Crate>().transform.position += new Vector3(crateMove*1.5f/*+0.1f*/,0f,0f);
 //		}
-			if(!blockCrate) {
+			if(!blockCrate /*&& _player.grounded */
+			   && !(_player.transform.position.x < thisTransform.position.x && _player.isLeft)
+			   && !(_player.transform.position.x > thisTransform.position.x && _player.isRight)) {
 			_player.moveVel = playerMoveVel/2;
 			if(_player.isRight) crateMove = _player.moveVel*Time.deltaTime/**2f*/;
 			else if(_player.isLeft) crateMove = -_player.moveVel*Time.deltaTime/**2f*/;

@@ -56,7 +56,7 @@
             <key>width</key>
             <int>150</int>
             <key>height</key>
-            <int>512</int>
+            <int>550</int>
         </QSize>
         <key>fixedTextureSize</key>
         <QSize>
@@ -162,6 +162,24 @@
             <filename>Background09.png</filename>
             <filename>Background10.png</filename>
             <filename>Background11.png</filename>
+            <filename>numbers/backgroundNum00.png</filename>
+            <filename>numbers/backgroundNum01.png</filename>
+            <filename>numbers/backgroundNum02.png</filename>
+            <filename>numbers/backgroundNum03.png</filename>
+            <filename>numbers/backgroundNum04.png</filename>
+            <filename>numbers/backgroundNum05.png</filename>
+            <filename>numbers/backgroundNum06.png</filename>
+            <filename>numbers/backgroundNum07.png</filename>
+            <filename>numbers/backgroundNum08.png</filename>
+            <filename>numbers/backgroundNum09.png</filename>
+            <filename>numbers/backgroundNum10.png</filename>
+            <filename>Background25.png</filename>
+            <filename>Background19.png</filename>
+            <filename>Background20.png</filename>
+            <filename>Background21.png</filename>
+            <filename>Background22.png</filename>
+            <filename>Background23.png</filename>
+            <filename>Background24.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

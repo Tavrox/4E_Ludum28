@@ -88,7 +88,7 @@ public class MenuUI : MonoBehaviour {
 			}
 			case (ListMenu.Play):
 			{
-				translateCamera(796.7685f);
+			translateCamera(16.66667f);
 				menuObjects.Add(findObject("Title"));
 				menuObjects.Add(findObject("Play"));
 				menuObjects.Add(findObject("Credits"));
@@ -116,7 +116,7 @@ public class MenuUI : MonoBehaviour {
 				fadeOutObjects(menuObjects);
 				MasterAudio.PlaySound("door_open");
 				menuObjects.Clear();
-				translateCamera(-804.2063f);
+			translateCamera(-16.66667f);
 				break;
 			}
 			case (ListMenu.GoLevel1) :
@@ -205,8 +205,8 @@ public class MenuUI : MonoBehaviour {
 
 	private void animateItem()
 	{
-		int randRange = Random.Range(-30,30);
-		OTTween _tween = new OTTween(spr,2.5f)
+		float randRange = Random.Range(-1.5f,1.5f);
+		OTTween _tween = new OTTween(spr,10f)
 			.Tween("size", new Vector2(spr.size.x - randRange, spr.size.y - randRange) )
 		.PingPong();
 	}

@@ -459,6 +459,8 @@ namespace X_UniTMX
 
 			bx.center = new Vector3(obj.Bounds.center.x, -obj.Bounds.center.y, zDepth);
 			bx.size = new Vector3(obj.Bounds.width, obj.Bounds.height, colliderWidth);
+			boxCollider.tag = "Blocker";
+			boxCollider.layer = 8;
 
 			boxCollider.isStatic = true;
 
@@ -575,9 +577,11 @@ namespace X_UniTMX
 			colliderMesh.RecalculateNormals();
 
 			mc.sharedMesh = colliderMesh;
+			
+			polygonCollider.tag = "Blocker";
+			polygonCollider.layer = 8;
 
 			polygonCollider.isStatic = true;
-
 			return polygonCollider;
 		}
 

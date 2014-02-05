@@ -15,12 +15,8 @@ public class ArcElectric : MonoBehaviour {
 		cpt = 0;
 		StartCoroutine("active");
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-	new private IEnumerator active() {
+
+	private IEnumerator active() {
 		cpt++;
 		if(cpt % 2 == 0) {waitTime = activeTime;animSprite.Play("arcON");collider.enabled=true;MasterAudio.PlaySound("piston_on");}
 		else {waitTime = inactiveTime;animSprite.Play("arcDefault");collider.enabled=false; MasterAudio.PlaySound("piston_idle");}

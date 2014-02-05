@@ -27,10 +27,10 @@ public class Projectile : MonoBehaviour {
 	void Update () {
 		myTransform.Translate(direction * ProjectileSpeed * Time.deltaTime);
 		
-		if(myTransform.position.x > (posIni.x + 1000f) || myTransform.position.x < (posIni.x - 1000f)) {
+		if(myTransform.position.x > (posIni.x + 70f) || myTransform.position.x < (posIni.x - 70f)) {
 			Destroy(gameObject);
 		}
-		if(myTransform.position.y > (posIni.y + 1000f) || myTransform.position.y < (posIni.y - 1000f)) {
+		if(myTransform.position.y > (posIni.y + 70f) || myTransform.position.y < (posIni.y - 70f)) {
 			Destroy(gameObject);
 		}
 	}

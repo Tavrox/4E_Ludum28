@@ -30,8 +30,8 @@ public class Player : Character {
 
 		InvokeRepeating("playFootstep",0f,0.4f);
 		
-		GetComponent<BoxCollider>().size = new Vector3(1.3f,2.4158f,30f);
-		GetComponent<BoxCollider>().center = new Vector3(0f,0f,0f);
+//		GetComponent<BoxCollider>().size = new Vector3(1.3f,2f,30f);
+//		GetComponent<BoxCollider>().center = new Vector3(0f,0f,0f);
 		
 		spawnPos = thisTransform.position;
 		isDead =false;
@@ -57,6 +57,7 @@ public class Player : Character {
 			transform.localPosition = spawnPos;
 			enabled = true;
 		}
+		angleRotation = 0;
 		enabled = true;
 		isDead = false;
 	}
@@ -92,6 +93,7 @@ public class Player : Character {
 
 	IEnumerator resetGame()
 	{
+		Instantiate(Resources.Load("Objects/Invasion"));
 		yield return new WaitForSeconds(4f);
 		GameEventManager.TriggerGameStart();
 	}

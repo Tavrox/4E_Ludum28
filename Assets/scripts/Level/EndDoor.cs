@@ -6,24 +6,35 @@ public class EndDoor : MonoBehaviour {
 	public OTSprite sprite;
 	public bool triggered;
 	public int levelToGo = 0;
+	private Player _player;
+	private GameObject _UINeedKey;
+	private PlayerData _playerdata;
 
+
+	void Start() {
+		_player = GameObject.Find("Player").GetComponent<Player>();
+		_UINeedKey = GameObject.Find("Player/IngameUI/NeedKey").gameObject;
+		_playerdata = _player.GetComponent<PlayerData>();
+		GameEventManager.NextLevel += NextLevel;
+		GameEventManager.NextInstance += NextInstance;
+	}
 
 	void OnTriggerStay(Collider other)
 	{
 		if (other.gameObject.CompareTag("Player") && !triggered)
 		{
-			if (Input.GetKeyDown(KeyCode.F) && GameObject.Find("Player").GetComponent<Player>().hasFinalKey == true)
+			if (Input.GetKeyDown(KeyCode.F) && _player.hasFinalKey == true)
 			{
 				sprite.frameIndex += 1;
 				triggered = true;
 				StartCoroutine("lastFrameBuzzer");
-				Destroy (GameObject.Find("Player/IngameUI/NeedKey").gameObject);
+				Destroy (_UINeedKey);
 				finishLevel();
 				MasterAudio.PlaySound("key_door");
 			}
-			else if (Input.GetKeyDown(KeyCode.F) && GameObject.Find("Player").GetComponent<Player>().hasFinalKey == false)
+			else if (Input.GetKeyDown(KeyCode.F) && _player.hasFinalKey == false)
 			{
-				GameObject.Find("Player/IngameUI/NeedKey").GetComponent<IngameUI>().fadeOut();
+				_UINeedKey.GetComponent<IngameUI>().fadeOut();
 
 			}
 		}
@@ -40,7 +51,6 @@ public class EndDoor : MonoBehaviour {
 		MasterAudio.FadeOutAllOfSound("intro",2f);
 		MasterAudio.FadeOutAllOfSound("jam",2f);
 
-		PlayerData _playerdata = GameObject.Find("PlayerData").GetComponent<PlayerData>();
 		_playerdata.addLevelUnlocked(levelToGo);
 
 		StartCoroutine("EndGame");
@@ -48,7 +58,15 @@ public class EndDoor : MonoBehaviour {
 
 	IEnumerator EndGame()
 	{
-		yield return new WaitForSeconds(5f);		
-		Application.LoadLevel(levelToGo);
+		yield return new WaitForSeconds(5f);
+		GameEventManager.TriggerNextInstance();
+		//Application.LoadLevel(levelToGo);
+	}
+	
+	private void NextInstance ()
+	{
+	}
+	private void NextLevel ()
+	{
 	}
 }
