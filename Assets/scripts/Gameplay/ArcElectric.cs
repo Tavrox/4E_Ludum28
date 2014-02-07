@@ -8,10 +8,12 @@ public class ArcElectric : MonoBehaviour {
 	public float activeTime, inactiveTime;
 	private float waitTime;
 	public bool stateSound = false;
+	private Player _player;
 	
 	// Use this for initialization
 	void Start () {
 		animSprite.Play("arcDefault");
+		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
 		cpt = 0;
 		StartCoroutine("active");
 	}

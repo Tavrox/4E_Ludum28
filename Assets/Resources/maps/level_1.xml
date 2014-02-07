@@ -102,7 +102,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -460,7 +460,26 @@
   <object x="658" y="194" width="39" height="1806"/>
   <object x="1303" y="945" width="494" height="152"/>
  </objectgroup>
- <objectgroup name="1" width="60" height="60"/>
+ <objectgroup name="1" width="60" height="60">
+  <object name="1L1" type="Lever" x="761" y="1648" width="79" height="85"/>
+  <object name="1C" type="Crate" x="888" y="1651" width="79" height="85"/>
+  <object name="1W" type="Walker" x="1500" y="833" width="79" height="85"/>
+  <object name="1P" type="Patroler" x="1051" y="1167" width="79" height="85"/>
+  <object name="1TU" type="TurretU" x="1021" y="1651" width="79" height="85"/>
+  <object name="1K" type="Key" x="1124" y="1651" width="79" height="85"/>
+  <object name="1D" type="TriggeredDoor" x="1251" y="1645" width="79" height="85"/>
+  <object name="1LT1" type="TimedBtn" x="1394" y="1654" width="79" height="85"/>
+  <object name="1LS1" type="SequencedBtn" x="1530" y="1654" width="79" height="85"/>
+  <object name="1LS1" type="SequencedBtn" x="1651" y="1657" width="79" height="85"/>
+  <object name="1TP" type="TeleportOut" x="1694" y="830" width="103" height="106"/>
+  <object name="1Trap" type="TrapKill" x="2224" y="708" width="103" height="106"/>
+  <object name="1Base" type="BaseArcL" x="1948" y="1638" width="103" height="106"/>
+  <object name="1ArcH" type="ArcHorizontal" x="2097" y="1647" width="103" height="106"/>
+  <object name="1ArcV" type="ArcVertical" x="2264" y="1656" width="103" height="106"/>
+  <object name="1BaseU" type="BaseArcU" x="2261" y="1795" width="103" height="106"/>
+  <object name="1ED" type="EndDoor" x="2100" y="1798" width="103" height="106"/>
+  <object name="1TP" type="TeleportIn" x="1824" y="1644" width="103" height="106"/>
+ </objectgroup>
  <objectgroup name="2" width="60" height="60"/>
  <objectgroup name="3" width="60" height="60"/>
  <objectgroup name="4" width="60" height="60"/>
