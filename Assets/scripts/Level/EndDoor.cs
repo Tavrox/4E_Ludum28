@@ -8,13 +8,13 @@ public class EndDoor : MonoBehaviour {
 	public int levelToGo = 0;
 	private Player _player;
 	private GameObject _UINeedKey;
-	private PlayerData _playerdata;
+	//private PlayerData _playerdata;
 
 
 	void Start() {
 		_player = GameObject.Find("Player").GetComponent<Player>();
 		_UINeedKey = GameObject.Find("Player/IngameUI/NeedKey").gameObject;
-		_playerdata = _player.GetComponent<PlayerData>();
+		//_playerdata = _player.GetComponent<PlayerData>();
 		GameEventManager.NextLevel += NextLevel;
 		GameEventManager.NextInstance += NextInstance;
 	}
@@ -28,7 +28,7 @@ public class EndDoor : MonoBehaviour {
 				sprite.frameIndex += 1;
 				triggered = true;
 				StartCoroutine("lastFrameBuzzer");
-				Destroy (_UINeedKey);
+				//Destroy (_UINeedKey);
 				finishLevel();
 				MasterAudio.PlaySound("key_door");
 			}
@@ -51,7 +51,7 @@ public class EndDoor : MonoBehaviour {
 		MasterAudio.FadeOutAllOfSound("intro",2f);
 		MasterAudio.FadeOutAllOfSound("jam",2f);
 
-		_playerdata.addLevelUnlocked(levelToGo);
+//		_playerdata.addLevelUnlocked(levelToGo);
 
 		StartCoroutine("EndGame");
 	}

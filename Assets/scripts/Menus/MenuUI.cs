@@ -30,20 +30,21 @@ public class MenuUI : MonoBehaviour {
 	private OTSprite spr;
 	private List<GameObject> menuObjects;
 	public string _str = "Enter your name";
-	
 	// Use this for initialization
 	void Start () {
 
 		menuObjects = new List<GameObject>();
-
 		spr = GetComponentInChildren<OTSprite>();
-
 
 		switch (menu)	
 		{
 			case (ListMenu.Main):
 			{
-			
+
+			//Application.ExternalEval("document.cookie=\"Level1Unlocked=1;");
+			//Application.ExternalCall( "SaySomethingToUnity", "The game says hello!" );
+			//Application.ExternalCall("setCookie", "Name","Helarizzz", 2);
+			//Application.ExternalCall("alertCookie");
 			break;
 			}
 			case (ListMenu.Play):
@@ -73,67 +74,65 @@ public class MenuUI : MonoBehaviour {
 		{
 			InvokeRepeating("animateItem", 0f, 2.5f);
 		}
-	
 	}
-
 	private void OnMouseDown()
 	{
 		menuObjects = new List<GameObject>();
 		switch (menu)
 		{
-			case (ListMenu.Main):
-			{
-				
-				break;
-			}
-			case (ListMenu.Play):
-			{
-			translateCamera(16.66667f);
-				menuObjects.Add(findObject("Title"));
-				menuObjects.Add(findObject("Play"));
-				menuObjects.Add(findObject("Credits"));
-				fadeOutObjects(menuObjects);
-				MasterAudio.PlaySound("door_open");
-				menuObjects.Clear();
-				break;
-			}
-			case (ListMenu.BackToMenu):
-			{
-				translateCamera(0f);
-				menuObjects.Add(findObject("Title"));
-				menuObjects.Add(findObject("Play"));
-				menuObjects.Add(findObject("Credits"));
-				fadeInObjects(menuObjects);
-				MasterAudio.PlaySound("door_open");
-				menuObjects.Clear();
-				break;
-			}
-			case (ListMenu.GoToCredits):
-			{
-				menuObjects.Add(findObject("Title"));
-				menuObjects.Add(findObject("Play"));
-				menuObjects.Add(findObject("Credits"));
-				fadeOutObjects(menuObjects);
-				MasterAudio.PlaySound("door_open");
-				menuObjects.Clear();
-			translateCamera(-16.66667f);
-				break;
-			}
-			case (ListMenu.GoLevel1) :
-			{
-				MasterAudio.PlaySound("door_close");
-				Application.LoadLevel(1);
-				break;
-			}
-			case (ListMenu.GoLevel2) :
-			{
-				menuObjects.Add(findObject("Transition"));
-				fadeInObjects(menuObjects);
-				menuObjects.Clear();
-				MasterAudio.PlaySound("door_open");
-				StartCoroutine(loadLevel(2));
-				break;
-			}
+		case (ListMenu.Main):
+		{
+			
+			break;
+		}
+		case (ListMenu.Play):
+		{
+		translateCamera(16.66667f);
+			menuObjects.Add(findObject("Title"));
+			menuObjects.Add(findObject("Play"));
+			menuObjects.Add(findObject("Credits"));
+			fadeOutObjects(menuObjects);
+			MasterAudio.PlaySound("door_open");
+			menuObjects.Clear();
+			break;
+		}
+		case (ListMenu.BackToMenu):
+		{
+			translateCamera(0f);
+			menuObjects.Add(findObject("Title"));
+			menuObjects.Add(findObject("Play"));
+			menuObjects.Add(findObject("Credits"));
+			fadeInObjects(menuObjects);
+			MasterAudio.PlaySound("door_open");
+			menuObjects.Clear();
+			break;
+		}
+		case (ListMenu.GoToCredits):
+		{
+			menuObjects.Add(findObject("Title"));
+			menuObjects.Add(findObject("Play"));
+			menuObjects.Add(findObject("Credits"));
+			fadeOutObjects(menuObjects);
+			MasterAudio.PlaySound("door_open");
+			menuObjects.Clear();
+		translateCamera(-16.66667f);
+			break;
+		}
+		case (ListMenu.GoLevel1) :
+		{
+			MasterAudio.PlaySound("door_close");
+			Application.LoadLevel(1);
+			break;
+		}
+		case (ListMenu.GoLevel2) :
+		{
+			menuObjects.Add(findObject("Transition"));
+			fadeInObjects(menuObjects);
+			menuObjects.Clear();
+			MasterAudio.PlaySound("door_open");
+			StartCoroutine(loadLevel(2));
+			break;
+		}
 		case (ListMenu.GoLevel3) :
 		{
 			menuObjects.Add(findObject("Transition"));
@@ -141,6 +140,24 @@ public class MenuUI : MonoBehaviour {
 			menuObjects.Clear();
 			MasterAudio.PlaySound("door_open");
 			StartCoroutine(loadLevel(3));
+			break;
+		}
+		case (ListMenu.GoLevel4) :
+		{
+			menuObjects.Add(findObject("Transition"));
+			fadeInObjects(menuObjects);
+			menuObjects.Clear();
+			MasterAudio.PlaySound("door_open");
+			StartCoroutine(loadLevel(4));
+			break;
+		}
+		case (ListMenu.GoLevel5) :
+		{
+			menuObjects.Add(findObject("Transition"));
+			fadeInObjects(menuObjects);
+			menuObjects.Clear();
+			MasterAudio.PlaySound("door_open");
+			StartCoroutine(loadLevel(5));
 			break;
 		}
 		}
@@ -205,7 +222,7 @@ public class MenuUI : MonoBehaviour {
 
 	private void animateItem()
 	{
-		float randRange = Random.Range(-1.5f,1.5f);
+		float randRange = Random.Range(-0.5f,0.5f);
 		OTTween _tween = new OTTween(spr,10f)
 			.Tween("size", new Vector2(spr.size.x - randRange, spr.size.y - randRange) )
 		.PingPong();
@@ -218,4 +235,8 @@ public class MenuUI : MonoBehaviour {
 		_titleOut.OnFinish(fadeEverything);
 	}
 	*/
+//	public void MyFunction(string param)
+//	{
+//		textTest.text = param;
+//	}
 }

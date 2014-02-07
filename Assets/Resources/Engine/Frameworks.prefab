@@ -2399,6 +2399,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &100252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400252}
+  - 132: {fileID: 13200000}
+  - 114: {fileID: 11400258}
+  m_Layer: 0
+  m_Name: CookieManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -2947,6 +2964,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 400252}
   - {fileID: 400000}
   - {fileID: 400042}
   - {fileID: 400026}
@@ -3910,6 +3928,17 @@ Transform:
   - {fileID: 400104}
   - {fileID: 400060}
   m_Father: {fileID: 400026}
+--- !u!4 &400252
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100252}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .631608963, y: .5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400090}
 --- !u!82 &8200000
 AudioSource:
   m_ObjectHideFlags: 1
@@ -10039,7 +10068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: Background
-  _sheetSize: {x: 150, y: 250}
+  _sheetSize: {x: 150, y: 550}
   texture: {fileID: 2800000, guid: 091fb6c9c45b3b84a98bb331f91fee89, type: 3}
   sizeTextures: []
   generateSprites: 0
@@ -10142,13 +10171,139 @@ MonoBehaviour:
     size: {x: 50, y: 50}
     frameSize: {x: 50, y: 50}
     metaData: []
+  - name: Background19
+    position: {x: 100, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Background20
+    position: {x: 0, y: 250}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Background21
+    position: {x: 50, y: 250}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Background22
+    position: {x: 100, y: 250}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Background23
+    position: {x: 0, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Background24
+    position: {x: 50, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: Background25
+    position: {x: 100, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNum00
+    position: {x: 0, y: 350}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNum01
+    position: {x: 50, y: 350}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNum02
+    position: {x: 100, y: 350}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNum03
+    position: {x: 0, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNum04
+    position: {x: 50, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNum05
+    position: {x: 100, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNum06
+    position: {x: 0, y: 450}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNum07
+    position: {x: 50, y: 450}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNum08
+    position: {x: 100, y: 450}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNum09
+    position: {x: 0, y: 500}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNum10
+    position: {x: 50, y: 500}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
   offsetSizing: 1
   metaType: 
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: 9ff3c9b410a921041b2193fd126f0d24, type: 3}
   reloadData: 0
-  bytesDataFile: 7496
-  id: 10
+  bytesDataFile: 15749
+  id: 11
 --- !u!114 &11400154
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12094,6 +12249,45 @@ MonoBehaviour:
   voiceLimitCount: 1
   isSoloed: 0
   isMuted: 0
+--- !u!114 &11400258
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0aba37a1903a004ba9464dcb3ab056e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Level1Unlocked: 
+  Level2Unlocked: 
+  Level3Unlocked: 
+  Level4Unlocked: 0
+  Level5Unlocked: 0
+--- !u!132 &13200000
+GUIText:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100252}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Text: Gui Text
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278190335
+  m_PixelCorrect: 1
+  m_RichText: 1
 --- !u!164 &16400000
 AudioReverbFilter:
   m_ObjectHideFlags: 1

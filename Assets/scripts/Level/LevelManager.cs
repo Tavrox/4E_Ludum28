@@ -26,11 +26,12 @@ public class LevelManager : MonoBehaviour {
 		myCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
 		_secLeft = GameObject.Find("Player/IngameUI/Timer").GetComponent<Timer>().secLeft;
 		_tileImporter = GameObject.Find("Level/TileImporter").GetComponent<TileImporter>();
-		_pdata = player.GetComponent<PlayerData>();
+//		_pdata = player.GetComponent<PlayerData>();
 //		Player _Player  = GameObject.Find("Player").GetComponent<Player>();
+		ID = Application.loadedLevel;
 
-		MasterAudio.PlaySound("bg");
-		MasterAudio.PlaySound("jam");
+		//MasterAudio.PlaySound("bg");
+		//MasterAudio.PlaySound("jam");
 
 		//if(chosenVariation==0) _rand = Random.Range(_tileImporter.minVariation, _tileImporter.maxVariation).ToString();
 		//else _rand = chosenVariation.ToString();
@@ -47,7 +48,7 @@ public class LevelManager : MonoBehaviour {
 
 		player.transform.position = player.spawnPos = GameObject.Find("playerspawn"+chosenVariation).transform.position;
 
-		_pdata.displayInput = false;
+//		_pdata.displayInput = false;
 
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GameOver += GameOver;
@@ -94,6 +95,7 @@ public class LevelManager : MonoBehaviour {
 	}
 	private void NextLevel ()
 	{
+		Application.ExternalEval("document.cookie = \""+"Level"+ID+"Unlocked"+"=1; \"");
 		Application.LoadLevel(""+(ID+1));
 	}
 	private void GameOver()

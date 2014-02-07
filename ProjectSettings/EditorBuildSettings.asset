@@ -16,6 +16,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/3.unity
   - enabled: 1
-    path: Assets/scenes/6.unity
+    path: Assets/scenes/4.unity
   - enabled: 1
-    path: Assets/scenes/8.unity
+    path: Assets/scenes/5.unity
+  - enabled: 0
+    path: Assets/scenes/oldies/1.unity
+  - enabled: 0
+    path: Assets/scenes/oldies/2.unity
+  - enabled: 0
+    path: Assets/scenes/oldies/3.unity
+  - enabled: 0
+    path: Assets/scenes/oldies/6.unity
+  - enabled: 0
+    path: Assets/scenes/oldies/8.unity
