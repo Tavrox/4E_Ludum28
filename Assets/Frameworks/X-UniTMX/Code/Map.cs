@@ -450,7 +450,7 @@ namespace X_UniTMX
 		/// <param name="obj">Object which properties will be used to generate this collider.</param>
 		/// <param name="zDepth">Z Depth of the collider.</param>
 		/// <returns>Generated Game Object containing the Collider.</returns>
-		public GameObject GenerateBoxCollider(MapObject obj, float zDepth = 0, float colliderWidth = 1.0f)
+		public GameObject GenerateBoxCollider(MapObject obj, float zDepth = 2f, float colliderWidth = 1.0f)
 		{
 			GameObject boxCollider = new GameObject(obj.Name);
 			BoxCollider bx = boxCollider.AddComponent<BoxCollider>();
@@ -473,7 +473,7 @@ namespace X_UniTMX
 		/// <param name="obj">Object which properties will be used to generate this collider.</param>
 		/// <param name="zDepth">Z Depth of the collider.</param>
 		/// <returns>Generated Game Object containing the Collider.</returns>
-		public GameObject GenerateEllipseCollider(MapObject obj, float zDepth = 0, float colliderWidth = 1.0f)
+		public GameObject GenerateEllipseCollider(MapObject obj, float zDepth = 2f, float colliderWidth = 1.0f)
 		{
 			GameObject capsuleCollider = new GameObject(obj.Name);
 			CapsuleCollider cc = capsuleCollider.AddComponent<CapsuleCollider>();
