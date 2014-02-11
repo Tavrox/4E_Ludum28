@@ -12,31 +12,34 @@ public class Lever : MonoBehaviour {
 	public btnType myButtonType;
 	public float delay = 0;
 	public bool trigged, seqLocked, stopped;
-	private Label test;
-	private Rect _myTimer;
+	//private Label test;
+	//private Rect _myTimer;
 	private float _myRemainingTime;
-	public Vector3 myPos;
-	void OnGUI() {
-		if(myButtonType == btnType.TimedBtn) {}
-	}
+	//public Vector3 myPos;
+	//public GUIText _myCpt;
+	public TextMesh _myTimer;
 	void Start () {
 		if(myButtonType == btnType.TimedBtn) {
-			GUI.Label(_myTimer, _myRemainingTime.ToString());
+			_myTimer = gameObject.GetComponentInChildren<TextMesh>();
+			_myRemainingTime = delay;
+			_myTimer.text = _myRemainingTime.ToString();
+			//GUI.Label(_myTimer, _myRemainingTime.ToString());
 			//myPos = Camera.main.WorldToScreenPoint(transform.position);
-			print(myPos);_myTimer = new Rect(15,15,20,20);}
+			/*print(myPos);_myTimer = new Rect(15,15,20,20);*/}
 		if(myButtonType == btnType.TimedBtn) { animSprite.Play("timedlock");}
-		_myRemainingTime = delay;
 	}
 	void Update () {
 		//_myTimer= new Rect(myPos.x,myPos.y,20,20);
 		if(myButtonType == btnType.TimedBtn) {
 			if(animSprite.frameIndex == 0 && !stopped) {stopped=true;animSprite.Stop();StartCoroutine("leverTimer");StartCoroutine("waitB4Restart",delay/4);}
-			if(animSprite.frameIndex == 5 && stopped) {stopped = false;StopCoroutine("leverTimer");StopCoroutine("waitB4Restart");}
+//			if(animSprite.frameIndex == 4 && stopped) {_myRemainingTime = delay;stopped = false;StopCoroutine("leverTimer");}
+//			if(animSprite.frameIndex == 5) {StopCoroutine("waitB4Restart");print ("POTS");}
 		}
 	}
 	private IEnumerator leverTimer() {
 		yield return new WaitForSeconds(1f);
 		_myRemainingTime -= 1;
+		_myTimer.text = _myRemainingTime.ToString();
 		StartCoroutine("leverTimer");
 	}
 	private IEnumerator waitB4Restart (float delayRestart) {
@@ -70,9 +73,10 @@ public class Lever : MonoBehaviour {
 		
 	}
 	IEnumerator delayRetrigg() {
-		yield return new WaitForSeconds(delay+delay/4);
+		yield return new WaitForSeconds(delay+1);
 		triggerLever();
 		trigged = false;
+		_myRemainingTime = delay;stopped = false;StopCoroutine("leverTimer");StopCoroutine("waitB4Restart");
 		animSprite.Play("timedlock");
 	}
 	public void triggerLever()
