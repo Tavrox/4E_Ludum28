@@ -15,7 +15,7 @@ public class ArcElectric : MonoBehaviour {
 		animSprite.Play("arcDefault");
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
 		cpt = 0;
-		StartCoroutine("active");
+		if(activeTime!=0) StartCoroutine("active");
 	}
 
 	private IEnumerator active() {
@@ -33,5 +33,13 @@ public class ArcElectric : MonoBehaviour {
 			GameObject.Find("Player").GetComponent<Player>().isDead = true;
 			GameEventManager.TriggerGameOver();
 		}
+	}
+	public void turnOFF () {
+		animSprite.Play("arcDefault");collider.enabled=false;
+		StopCoroutine("active");
+	}
+	public void turnON () {
+		animSprite.Play("arcON");collider.enabled=true;
+		StartCoroutine("active");
 	}
 }

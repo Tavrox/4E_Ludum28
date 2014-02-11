@@ -14,6 +14,7 @@ public class LevelManager : MonoBehaviour {
 	private TileImporter _tileImporter;
 	private PlayerData _pdata;
 	private string _rand;
+	private Vector3 spawnPoint;
 
 	// Use this for initialization
 	void Start () 
@@ -45,9 +46,8 @@ public class LevelManager : MonoBehaviour {
 			}
 		}
 
-
-		player.transform.position = player.spawnPos = GameObject.Find("playerspawn"+chosenVariation).transform.position;
-
+		spawnPoint = GameObject.Find("playerspawn"+chosenVariation).transform.position;
+		player.transform.position = player.spawnPos = new Vector3(spawnPoint.x,spawnPoint.y,-1f);
 //		_pdata.displayInput = false;
 
 		GameEventManager.GameStart += GameStart;

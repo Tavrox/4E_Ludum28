@@ -32,7 +32,7 @@ public class EndDoor : MonoBehaviour {
 				finishLevel();
 				MasterAudio.PlaySound("key_door");
 			}
-			else if (Input.GetKeyDown(KeyCode.F) && _player.hasFinalKey == false)
+			else if (Input.GetKeyDown("space") && _player.hasFinalKey == false)
 			{
 				_UINeedKey.GetComponent<IngameUI>().fadeOut();
 

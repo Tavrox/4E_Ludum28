@@ -34,4 +34,12 @@ public class BaseElectric : MonoBehaviour {
 			GameEventManager.TriggerGameOver();
 		}
 	}
+	public void turnOFF () {
+		animSprite.Play("baseDefault");collider.enabled=false;
+		StopCoroutine("active");
+	}
+	public void turnON () {
+		animSprite.Play("baseON");collider.enabled=true;
+		StartCoroutine("active");
+	}
 }

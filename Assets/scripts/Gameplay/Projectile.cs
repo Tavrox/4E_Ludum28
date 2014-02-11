@@ -42,6 +42,9 @@ public class Projectile : MonoBehaviour {
 			GameObject.Find("Player").GetComponent<Player>().isDead = true;
 			GameEventManager.TriggerGameOver();
 		}
+		if (_other.CompareTag("Crate") == true) {
+			Destroy(gameObject);
+		}
 //		if (_other.CompareTag("Turret") != true)
 //	    {
 //			Destroy(gameObject);

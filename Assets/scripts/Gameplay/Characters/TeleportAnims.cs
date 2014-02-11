@@ -74,7 +74,7 @@ public class TeleportAnims : MonoBehaviour
 	private IEnumerator teleportTo(Transform destination) {
 		yield return new WaitForSeconds(delayB4Telep);
 		//_player.position = new Vector3(0f,0f,0f);//destination.position;
-		_player.teleportTo( new Vector3(destination.position.x, destination.position.y, 0f));
+		_player.teleportTo( new Vector3(destination.position.x, destination.position.y, _player.transform.position.z));
 		_player.enabled = true;
 		animSprite.Play("default");
 		MasterAudio.PlaySound("teleport_out");

@@ -53,14 +53,42 @@ public class Crate : MonoBehaviour {
 
 		//landingRay = new Ray(thisTransform.position, Vector3.down);
 	}
-
+	void OnTriggerEnter(Collider other) {
+		if(other.gameObject.name=="ColliBox" || other.gameObject.CompareTag("Blocker")) 
+		{/*print("GAUUUUUUCHE");*/blockCrate = true;}
+	}
+//	void OnTriggerExit(Collider other) {
+//		if(other.gameObject.name!="ColliBox" && !other.gameObject.CompareTag("Blocker")) {
+//			blockCrate = false;
+//		}
+//	}
 	void OnTriggerStay(Collider other) 
 	{
 		if(other.gameObject.tag=="Player") {
 //		if(other.gameObject.name=="Crate" || other.gameObject.name=="Crate(Clone)") {
 //			/*if(detectPlayer())*/ other.gameObject.GetComponent<Crate>().transform.position += new Vector3(crateMove*1.5f/*+0.1f*/,0f,0f);
 //		}
-			if(!blockCrate /*&& _player.grounded */
+			if(Input.GetKey("space") && (_player.transform.position.x < thisTransform.position.x) && !_player.isRight) {
+//				print("Je m'accroche à gauche");
+				if(_player.isLeft && !_player.blockedLeft) {
+//					print("Je tire à gauche");
+					_player.moveVel = playerMoveVel/2; 
+					crateMove = -_player.moveVel*Time.deltaTime;
+				}
+				else crateMove = 0;
+				thisTransform.position += new Vector3(crateMove,0f,0f);
+			}
+			else if(Input.GetKey("space") && (_player.transform.position.x > thisTransform.position.x) && !_player.isLeft) {
+//				print("Je m'accroche à droite");
+				if(_player.isRight && !_player.blockedRight) {
+//					print("Je tire à droite");
+					_player.moveVel = playerMoveVel/2; 
+					crateMove = _player.moveVel*Time.deltaTime;
+				}
+				else crateMove = 0;
+				thisTransform.position += new Vector3(crateMove,0f,0f);
+			}
+			else if(!blockCrate /*&& _player.grounded */
 			   && !(_player.transform.position.x < thisTransform.position.x && _player.isLeft)
 			   && !(_player.transform.position.x > thisTransform.position.x && _player.isRight)) {
 			_player.moveVel = playerMoveVel/2;
@@ -70,11 +98,6 @@ public class Crate : MonoBehaviour {
 			thisTransform.position += new Vector3(crateMove,0f,0f);
 			//return true;
 		}}
-		if(other.gameObject.name=="ColliBox" || other.gameObject.CompareTag("Blocker")) 
-		{/*print("GAUUUUUUCHE");*/blockCrate = true;}
-		if(other.gameObject.name!="ColliBox" && !other.gameObject.CompareTag("Blocker")) {
-			blockCrate = false;
-		}
 //		if (other.gameObject.tag == "ColliBox") {
 //
 //		}

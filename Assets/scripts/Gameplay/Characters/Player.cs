@@ -110,7 +110,7 @@ public class Player : Character {
 		
 		movingDir = moving.None;
 
-		if(Input.GetKey("left") /*&& !specialCast*/) 
+		if(Input.GetKey("left") || Input.GetKey(KeyCode.Q) /*&& !specialCast*/) 
 		{ 
 			isLeft = true;
 			shootLeft = true;
@@ -121,7 +121,7 @@ public class Player : Character {
 			StopCoroutine("footStep");
 			blockCoroutine = false;
 		}*/
-		if (Input.GetKey("right") && !isLeft /*&& !specialCast*/) 
+		if ((Input.GetKey("right") || Input.GetKey(KeyCode.D)) && !isLeft /*&& !specialCast*/) 
 		{ 
 			isRight = true; 
 			facingDir = facing.Right;
@@ -133,12 +133,12 @@ public class Player : Character {
 //			isCrounch = true;
 //			facingDir = facing.Down;
 //		}
-		if (Input.GetKey("up") /* && grounded*/) 
+		if (Input.GetKey("up")  || Input.GetKey(KeyCode.Z)/* && grounded*/) 
 		{ 
 			isJump = true; 
 			MasterAudio.PlaySound("player_jump");
 		}
-		if (Input.GetKeyUp("up")) chute=true;
+		if (Input.GetKeyUp("up") || Input.GetKey(KeyCode.Z)) chute=true;
 		
 		if(Input.GetKeyDown("space"))
 		{

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+[ExecuteInEditMode]
 
 public class Lever : MonoBehaviour {
 	
@@ -11,15 +12,32 @@ public class Lever : MonoBehaviour {
 	public btnType myButtonType;
 	public float delay = 0;
 	public bool trigged, seqLocked, stopped;
-
+	private Label test;
+	private Rect _myTimer;
+	private float _myRemainingTime;
+	public Vector3 myPos;
+	void OnGUI() {
+		if(myButtonType == btnType.TimedBtn) {}
+	}
 	void Start () {
+		if(myButtonType == btnType.TimedBtn) {
+			GUI.Label(_myTimer, _myRemainingTime.ToString());
+			//myPos = Camera.main.WorldToScreenPoint(transform.position);
+			print(myPos);_myTimer = new Rect(15,15,20,20);}
 		if(myButtonType == btnType.TimedBtn) { animSprite.Play("timedlock");}
+		_myRemainingTime = delay;
 	}
 	void Update () {
+		//_myTimer= new Rect(myPos.x,myPos.y,20,20);
 		if(myButtonType == btnType.TimedBtn) {
-			if(animSprite.frameIndex == 0 && !stopped) {stopped=true;animSprite.Stop();StartCoroutine("waitB4Restart",delay/4);}
-			if(animSprite.frameIndex == 5 && stopped) {stopped = false;StopCoroutine("waitB4Restart");}
+			if(animSprite.frameIndex == 0 && !stopped) {stopped=true;animSprite.Stop();StartCoroutine("leverTimer");StartCoroutine("waitB4Restart",delay/4);}
+			if(animSprite.frameIndex == 5 && stopped) {stopped = false;StopCoroutine("leverTimer");StopCoroutine("waitB4Restart");}
 		}
+	}
+	private IEnumerator leverTimer() {
+		yield return new WaitForSeconds(1f);
+		_myRemainingTime -= 1;
+		StartCoroutine("leverTimer");
 	}
 	private IEnumerator waitB4Restart (float delayRestart) {
 		yield return new WaitForSeconds(delayRestart);
