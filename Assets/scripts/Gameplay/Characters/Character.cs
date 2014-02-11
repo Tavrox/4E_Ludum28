@@ -12,7 +12,7 @@ public class Character : MonoBehaviour
 	public int res_phys, res_mag;
 	
 	public int maxHP;
-	[HideInInspector] public int HP;
+	/*[HideInInspector]*/ public int HP;
 	[HideInInspector] public bool isShot;
 	[HideInInspector] public bool talking;
 	[HideInInspector] public bool isGoDown;
@@ -232,7 +232,6 @@ public class Character : MonoBehaviour
 			BlockedUp();
 			Debug.DrawLine (thisTransform.position, hitInfo.point, Color.red);
 		}
-		
 		// Blocked on right
 		if( Physics.Raycast(mypos, Vector3.right, out hitInfo, halfMyX, groundMask) 
 			|| Physics.Raycast(mypos, new Vector3(1f,0.8f,0) , out hitInfo, halfMyX, groundMask)

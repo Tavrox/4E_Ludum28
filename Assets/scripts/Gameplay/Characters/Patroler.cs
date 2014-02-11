@@ -64,7 +64,7 @@ public class Patroler : Character {
 		
 		//enabled = false;
 		
-		HP = 150;
+		//HP = 150;
 		res_mag = 50;
 		res_phys = 10;
 		runSpeed = 0.5f;
@@ -114,7 +114,6 @@ public class Patroler : Character {
 		}
 	}
 	
-	
 	protected void OnTriggerEnter(Collider _other) 
 	{
 		if (_other.CompareTag("Player") == true && GameObject.Find("Player").GetComponent<Player>().isDead == false)
@@ -122,8 +121,16 @@ public class Patroler : Character {
 			GameObject.Find("Player").GetComponent<Player>().isDead = true;
 			GameEventManager.TriggerGameOver();
 		}
+		if(_other.CompareTag("Crate")) {
+			getDamage(1);
+		}
 	}
 	
+	private void getDamage(int damage) {
+		HP -= damage;
+		if(HP <=0) gameObject.transform.parent.gameObject.SetActive(false);
+	}
+
 	protected void GameStart () {
 		if(FindObjectOfType(typeof(Enemy)) && this != null) {
 			transform.localPosition = new Vector3(0f,0f,0f);
