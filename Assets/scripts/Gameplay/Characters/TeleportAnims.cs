@@ -68,14 +68,16 @@ public class TeleportAnims : MonoBehaviour
 	}
 	private IEnumerator stopPlayer () {
 		yield return new WaitForSeconds(0.15f);
-		_player.enabled = false;
+		//_player.enabled = false;
+		_player.locked = true;
 		_player.isLeft = _player.isRight = false;
 	}
 	private IEnumerator teleportTo(Transform destination) {
 		yield return new WaitForSeconds(delayB4Telep);
 		//_player.position = new Vector3(0f,0f,0f);//destination.position;
 		_player.teleportTo( new Vector3(destination.position.x, destination.position.y, _player.transform.position.z));
-		_player.enabled = true;
+		//_player.enabled = true;
+		_player.locked = false;
 		animSprite.Play("default");
 		MasterAudio.PlaySound("teleport_out");
 	}

@@ -10,7 +10,7 @@ public class Player : Character {
 	
 	[HideInInspector] public bool paused = false;
 	public int angleRotation;
-	public bool isDead = false;
+	public bool isDead = false, locked = false;
 	// Use this for initialization
 	public override void Start () 
 	{
@@ -41,7 +41,7 @@ public class Player : Character {
 	// Update is called once per frame
 	public void Update () 
 	{
-		checkInput();
+		if(!locked) checkInput();
 		UpdateMovement();
 		//		offsetCircles ();
 	}
