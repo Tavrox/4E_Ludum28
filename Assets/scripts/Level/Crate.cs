@@ -56,6 +56,9 @@ public class Crate : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		if(other.gameObject.name=="ColliBox" || other.gameObject.CompareTag("Blocker")) 
 		{/*print("GAUUUUUUCHE");*/blockCrate = true;}
+		if(other.gameObject.tag=="Enemy") {
+			//other.gameObject.GetComponent<Patroler>().getDamage(1);
+		}
 	}
 //	void OnTriggerExit(Collider other) {
 //		if(other.gameObject.name!="ColliBox" && !other.gameObject.CompareTag("Blocker")) {

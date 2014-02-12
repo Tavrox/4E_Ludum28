@@ -59,7 +59,7 @@ public class Enemy : Character {
 		
 		//enabled = false;
 		
-		HP = 150;
+		//HP = 150;
 		res_mag = 50;
 		res_phys = 10;
 		runSpeed = 0.5f;
@@ -435,6 +435,7 @@ public class Enemy : Character {
 	protected void GameStart () {
 		if(FindObjectOfType(typeof(Enemy)) && this != null) {
 //			transform.localPosition = spawnPos;
+			gameObject.transform.parent.gameObject.SetActive(true);
 			enabled = true;
 		}
 	}

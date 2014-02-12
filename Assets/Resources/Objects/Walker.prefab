@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   m_Layer: 0
   m_Name: Walker
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -273,7 +273,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   res_phys: 0
   res_mag: 0
-  maxHP: 0
+  maxHP: 1
   HP: 0
   isShot: 0
   talking: 0

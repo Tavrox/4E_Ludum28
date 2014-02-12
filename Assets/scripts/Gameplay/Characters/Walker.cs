@@ -70,6 +70,13 @@ public class Walker : Enemy {
 			GameObject.Find("Player").GetComponent<Player>().isDead = true;
 			GameEventManager.TriggerGameOver();
 		}
+		if(_other.CompareTag("Crate")) {
+			getDamage(1);
+		}
+	}
+	private void getDamage(int damage) {
+		HP -= damage;
+		if(HP <=0) gameObject.transform.parent.gameObject.SetActive(false);
 	}
 
 	/************************
@@ -88,17 +95,30 @@ public class Walker : Enemy {
 		Debug.DrawRay(thisTransform.position, Vector3.left*targetDetectionArea);
 		Debug.DrawRay(thisTransform.position, Vector3.right*targetDetectionArea);
 		
-		if (Physics.Raycast(detectTargetLeft, out hitInfo, targetDetectionArea) || Physics.Raycast(detectTargetRight, out hitInfo, targetDetectionArea)) {
-			//print ("CA TOUCHE");
-			if(hitInfo.collider.name == "ColliBox" || hitInfo.collider.tag=="Blocker") {
+		if (Physics.Raycast(detectTargetLeft, out hitInfo, 1.2f) || Physics.Raycast(detectTargetRight, out hitInfo, 1.2f)) {
+			if(hitInfo.collider.tag == "Crate") {
 				chasingPlayer = false;
-				isLeft = isRight = false;
+				if(hitInfo.transform.position.x < thisTransform.position.x) {thisTransform.position += new Vector3((spriteScaleX/8f),0f,0f);/*isLeft = false;isRight = true;*/}
+				else if (hitInfo.transform.position.x > thisTransform.position.x) {thisTransform.position -= new Vector3((spriteScaleX/8f),0f,0f);/*isLeft = true;isRight = false;*/}
 			}
-			if(hitInfo.collider.name == "Player" && !endChasingPlayer) {
-				//print ("CHAAAASSSSSEE");
-				chasingPlayer = true;
+		}
+		else {
+			if (Physics.Raycast(detectTargetLeft, out hitInfo, targetDetectionArea) || Physics.Raycast(detectTargetRight, out hitInfo, targetDetectionArea)) {
+				//print ("CA TOUCHE");
+				if(hitInfo.collider.name == "ColliBox" || hitInfo.collider.tag=="Blocker") {
+					chasingPlayer = false;
+					isLeft = isRight = false;
+				}
+				else if(hitInfo.collider.name == "Player" && !endChasingPlayer) {
+					//print ("CHAAAASSSSSEE");
+					chasingPlayer = true;
+				}
+				else if(!chasingPlayer) {isLeft = isRight = false;}
+				//print(hitInfo);
 			}
-			//print(hitInfo);
+			else {
+				if(!chasingPlayer) {isLeft = isRight = false;}
+			}
 		}
 	}
 	protected void detectEndPlatform() {
