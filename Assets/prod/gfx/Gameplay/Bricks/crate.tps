@@ -150,6 +150,9 @@
         <array>
             <filename>../../Levels/crate.png</filename>
             <filename>../../Levels/Adrian/key.png</filename>
+            <filename>../../Levels/Adrian/end_3.png</filename>
+            <filename>../../Levels/Adrian/end_1.png</filename>
+            <filename>../../Levels/Adrian/end_2.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
