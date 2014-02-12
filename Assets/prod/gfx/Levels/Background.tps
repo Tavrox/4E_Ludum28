@@ -56,7 +56,7 @@
             <key>width</key>
             <int>150</int>
             <key>height</key>
-            <int>550</int>
+            <int>1100</int>
         </QSize>
         <key>fixedTextureSize</key>
         <QSize>
@@ -180,6 +180,37 @@
             <filename>Background22.png</filename>
             <filename>Background23.png</filename>
             <filename>Background24.png</filename>
+            <filename>numbers/backgroundNum11.png</filename>
+            <filename>numbers/backgroundNum12.png</filename>
+            <filename>numbers/backgroundNum13.png</filename>
+            <filename>numbers/backgroundNum14.png</filename>
+            <filename>letters/backgroundNumLetter00.png</filename>
+            <filename>letters/backgroundNumLetter01.png</filename>
+            <filename>letters/backgroundNumLetter02.png</filename>
+            <filename>letters/backgroundNumLetter03.png</filename>
+            <filename>letters/backgroundNumLetter04.png</filename>
+            <filename>letters/backgroundNumLetter05.png</filename>
+            <filename>letters/backgroundNumLetter06.png</filename>
+            <filename>letters/backgroundNumLetter07.png</filename>
+            <filename>letters/backgroundNumLetter08.png</filename>
+            <filename>letters/backgroundNumLetter09.png</filename>
+            <filename>letters/backgroundNumLetter10.png</filename>
+            <filename>letters/backgroundNumLetter11.png</filename>
+            <filename>letters/backgroundNumLetter12.png</filename>
+            <filename>letters/backgroundNumLetter13.png</filename>
+            <filename>letters/backgroundNumLetter14.png</filename>
+            <filename>letters/backgroundNumLetter15.png</filename>
+            <filename>letters/backgroundNumLetter16.png</filename>
+            <filename>letters/backgroundNumLetter17.png</filename>
+            <filename>letters/backgroundNumLetter18.png</filename>
+            <filename>letters/backgroundNumLetter19.png</filename>
+            <filename>letters/backgroundNumLetter20.png</filename>
+            <filename>letters/backgroundNumLetter21.png</filename>
+            <filename>letters/backgroundNumLetter22.png</filename>
+            <filename>letters/backgroundNumLetter23.png</filename>
+            <filename>letters/backgroundNumLetter24.png</filename>
+            <filename>letters/backgroundNumLetter25.png</filename>
+            <filename>numbers/backgroundNum15.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

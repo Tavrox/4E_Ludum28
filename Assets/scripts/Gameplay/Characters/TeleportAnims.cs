@@ -38,6 +38,8 @@ public class TeleportAnims : MonoBehaviour
 
 		if(isOUT) animSprite.Play("teleportOUT");
 		else animSprite.Play("default");
+		GameEventManager.GameStart += GameStart;
+		GameEventManager.GameOver += GameOver;
 	}
 	void Update() 
 	{
@@ -202,5 +204,21 @@ public class TeleportAnims : MonoBehaviour
 	{
 		yield return new WaitForSeconds(waitTime);
 		AnimationFinished();
+	}
+	void GameOver () {		
+		
+		StopCoroutine("stopPlayer");
+		StopCoroutine("teleportTo");
+		_player.locked = false;
+		if(isOUT) animSprite.Play("teleportOUT");
+		else animSprite.Play("default");
+	}
+	void GameStart () {		
+		
+		StopCoroutine("stopPlayer");
+		StopCoroutine("teleportTo");
+		_player.locked = false;
+		if(isOUT) animSprite.Play("teleportOUT");
+		else animSprite.Play("default");
 	}
 }

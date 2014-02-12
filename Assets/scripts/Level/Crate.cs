@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Crate : MonoBehaviour {
 
-	private bool grounded;
+	public bool grounded;
 	[HideInInspector] public Transform thisTransform;
 	[SerializeField] public float gravityY, crateMove, playerMoveVel, spriteScaleX, spriteScaleY;
 	[SerializeField] public Vector3 vectorMove;
@@ -13,6 +13,7 @@ public class Crate : MonoBehaviour {
 	public Player _player;
 	public bool blockCrate;
 	public float replaceCrate = 3f;
+	private Vector3 spawnPos;
 	//RaycastHit hitInfo;
 	//Ray landingRay;	
 	//public float deployHeight;
@@ -25,10 +26,12 @@ public class Crate : MonoBehaviour {
 	public virtual void Start () 
 	{
 		_player = GameObject.Find("Player").GetComponent<Player>();
+		spawnPos = transform.position;
 		playerMoveVel = _player.moveVel;
 		StartCoroutine("StartGravity");
 		spriteScaleX = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.x;
 		spriteScaleY = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.y;
+		GameEventManager.GameStart += GameStart;
 	}
 	
 	IEnumerator StartGravity()
@@ -100,7 +103,8 @@ public class Crate : MonoBehaviour {
 			else crateMove = 0;
 			thisTransform.position += new Vector3(crateMove,0f,0f);
 			//return true;
-		}}
+			}
+		}
 //		if (other.gameObject.tag == "ColliBox") {
 //
 //		}
@@ -173,11 +177,15 @@ public class Crate : MonoBehaviour {
 			grounded = false;
 		}
 		else {
+			if(hitInfo.collider.CompareTag("Enemy")) {hitInfo.collider.gameObject.GetComponent<Character>().getDamage(1);} //Kill mob if Crate falls from top
 			grounded = true;
 			vectorMove.y = 0;
 			//BoxCollider colliderHit = hitInfo.collider as BoxCollider;
 			//print (colliderHit.size);
 			//thisTransform.position = new Vector3(thisTransform.position.x, (float)((hitInfo.transform.position.y)+replaceCrate), thisTransform.position.z);
 		}
+	}
+	void GameStart () {
+		transform.position = new Vector3(spawnPos.x,spawnPos.y,spawnPos.z);
 	}
 }

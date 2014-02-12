@@ -8,7 +8,7 @@ public class Patroler : Character {
 	[HideInInspector] public Transform trans;
 	
 	/***** ENNEMI BEGIN *****/
-	protected Transform target; //the enemy's target
+	//protected Transform target; //the enemy's target
 	
 	protected bool chasingPlayer, endChasingPlayer, patroling, canChangeDir=true;
 	protected Vector3 direction;
@@ -18,10 +18,12 @@ public class Patroler : Character {
 	private float spriteScaleX;
 	protected RaycastHit hitInfo; //infos de collision
 	protected Ray detectTargetLeft, detectTargetRight, detectBlockLeft, detectBlockRight, detectEndPFLeft, detectEndPFRight; //point de départ, direction
-	public float myCORRECTSPEED = 10f;
-	protected bool go = true;
+	[Range (0,2.25f)] public float myCORRECTSPEED = 10f;
+	protected bool go = true, touchingCrate;
+	private Crate touchedCrate;
 	protected int waypointId = 0;
 	public Transform[] waypoints;
+	private Player _player;
 	
 	//	private WaveCreator soundEmitt1, soundEmitt2, soundInstru1, soundInstru2,soundEmitt3;
 	//	private int cptWave=1, pebbleDirection = 1;
@@ -69,7 +71,7 @@ public class Patroler : Character {
 		res_phys = 10;
 		runSpeed = 0.5f;
 		
-		target = GameObject.FindWithTag("Player").transform; //target the player
+		_player = GameObject.FindWithTag("Player").GetComponent<Player>(); //target the player
 		patroling = true;
 		spriteScaleX = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.x;
 	}
@@ -88,13 +90,10 @@ public class Patroler : Character {
 		//			//print ("********** IN *********");
 		//		}
 		//print(Vector3.Distance(new Vector3(transform.position.x,0f,0f), new Vector3(waypoints[waypointId].position.x,0f,0f)));
-		if(Vector3.Distance(new Vector3(transform.position.x,0f,0f), new Vector3(waypoints[waypointId].position.x,0f,0f)) < (spriteScaleX/2f) && canChangeDir) {
-			canChangeDir = false;
-			go = !go;//print ("*-*-*-*-*-****-*--*-*-*-*-*-*-*-*-*-*-*-*-***-*--*-*-*");
-			if(go == true) waypointId=0;
-			else waypointId=1;
-		}
-		else if (Vector3.Distance(new Vector3(transform.position.x,0f,0f), new Vector3(waypoints[waypointId].position.x,0f,0f)) > (spriteScaleX/2f)+1 && !canChangeDir) canChangeDir = true;
+		if(Vector3.Distance(new Vector3(transform.position.x,0f,0f), new Vector3(waypoints[waypointId].position.x,0f,0f)) < (spriteScaleX/2f) && canChangeDir)
+			revertDirection();
+		else if (Vector3.Distance(new Vector3(transform.position.x,0f,0f), new Vector3(waypoints[waypointId].position.x,0f,0f)) > (spriteScaleX/2f)+1 && !canChangeDir)
+			canChangeDir = true;
 		//		
 		if(go == true) {
 			isRight = false;
@@ -103,6 +102,7 @@ public class Patroler : Character {
 			gameObject.GetComponent<PatrolerAnims>().InvertSprite();
 			//UpdateMovement();
 			thisTransform.position -= new Vector3(myCORRECTSPEED,0f,0f);
+			if(touchingCrate && touchedCrate!=null) moveCrate(go);
 		}
 		else {
 			isLeft = false;
@@ -111,9 +111,16 @@ public class Patroler : Character {
 			gameObject.GetComponent<PatrolerAnims>().NormalScaleSprite();
 			//UpdateMovement();
 			thisTransform.position += new Vector3(myCORRECTSPEED,0f,0f);
+			if(touchingCrate && touchedCrate!=null) moveCrate(go);
 		}
 	}
-	
+	private void revertDirection() {
+		canChangeDir = false;
+		go = !go;
+		if(go == true) waypointId=0;
+		else waypointId=1;
+		touchingCrate = false;
+	}
 	protected void OnTriggerEnter(Collider _other) 
 	{
 		if (_other.CompareTag("Player") == true && GameObject.Find("Player").GetComponent<Player>().isDead == false)
@@ -122,39 +129,61 @@ public class Patroler : Character {
 			GameEventManager.TriggerGameOver();
 		}
 		if(_other.CompareTag("Crate")) {
-			getDamage(1);
+			touchingCrate = true;
+			touchedCrate = _other.gameObject.GetComponent<Crate>();
 		}
 	}
-	
-	private void getDamage(int damage) {
+//	protected void OnTriggerExit(Collider _other) 
+//	{
+//		if(_other.CompareTag("Crate")) {
+//			touchingCrate = false;
+//			touchedCrate = null;
+//		}
+//	}
+	private void moveCrate(bool dirLeft) {
+		if(dirLeft) {
+			touchedCrate.transform.position -= new Vector3(myCORRECTSPEED,0f,0f);
+			if(_player.myCrate == touchedCrate && _player.onCrate) _player.transform.position -= new Vector3(myCORRECTSPEED,0f,0f);
+		}
+		else {
+			touchedCrate.transform.position += new Vector3(myCORRECTSPEED,0f,0f);
+			if(_player.myCrate == touchedCrate && _player.onCrate) _player.transform.position += new Vector3(myCORRECTSPEED,0f,0f);
+		}
+	}
+	public void getDamage(int damage) {
 		HP -= damage;
 		if(HP <=0) gameObject.transform.parent.gameObject.SetActive(false);
 	}
 
 	protected void GameStart () {
-		if(FindObjectOfType(typeof(Enemy)) && this != null) {
-			transform.localPosition = new Vector3(0f,0f,0f);
-			enabled = true;
-		}
+		//if(FindObjectOfType(typeof(Enemy)) && this != null) {
+		//transform.localPosition = new Vector3(0f,0f,0f);
+		transform.position = new Vector3(spawnPos.x,spawnPos.y,0f);
+		enabled = true;
+		touchingCrate = false;
+		touchedCrate =null;
+		//}
 	}
 	
 	protected void GameOver () {
 		enabled = false;
-		isLeft = false;
-		isRight = false;
-		isJump = false;
-		isPass = false;
-		movingDir = moving.None;
+		touchingCrate = false;
+		touchedCrate = null;
+//		isLeft = false;
+//		isRight = false;
+//		isJump = false;
+//		isPass = false;
+//		movingDir = moving.None;
 	}
 	protected void GamePause()
 	{
 		enabled = false;
-		isLeft = false;
-		isRight = false;
-		isJump = false;
-		isPass = false;
-		paused = true;
-		movingDir = moving.None;	
+//		isLeft = false;
+//		isRight = false;
+//		isJump = false;
+//		isPass = false;
+//		paused = true;
+//		movingDir = moving.None;	
 	}
 	protected void GameUnpause()
 	{

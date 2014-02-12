@@ -27,6 +27,7 @@ public class Lever : MonoBehaviour {
 			//myPos = Camera.main.WorldToScreenPoint(transform.position);
 			/*print(myPos);_myTimer = new Rect(15,15,20,20);*/}
 		if(myButtonType == btnType.TimedBtn) { animSprite.Play("timedlock");}
+		GameEventManager.GameStart += GameStart;
 	}
 	void Update () {
 		//_myTimer= new Rect(myPos.x,myPos.y,20,20);
@@ -94,5 +95,18 @@ public class Lever : MonoBehaviour {
 		seqLocked = false;
 		trigged = false;
 		if(myButtonType == btnType.TimedBtn) animSprite.Play("timedlock"); else animSprite.Play("lock");
+	}
+	void GameStart () {
+		StopCoroutine("leverTimer");
+		StopCoroutine("waitB4Restart");
+		StopCoroutine("delayRetrigg");
+		StopCoroutine("resetLever");
+		if(myButtonType == btnType.TimedBtn) { 
+			_myRemainingTime = delay;
+			_myTimer.text = _myRemainingTime.ToString();
+			animSprite.Play("timedlock");
+		}
+		else animSprite.Play("lock");
+		stopped = trigged = seqLocked = false;
 	}
 }

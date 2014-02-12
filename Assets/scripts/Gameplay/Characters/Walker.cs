@@ -28,11 +28,11 @@ public class Walker : Enemy {
 	}
 
 	protected void GameStart () {
-		if(FindObjectOfType(typeof(Enemy)) && this != null) {
+		//if(FindObjectOfType(typeof(Enemy)) && this != null) {
 			transform.position = new Vector3(spawnPos.x,spawnPos.y,0f);
 			enabled = true;
 			chasingPlayer = false;
-		}
+		//}
 	}
 
 	private void sound()
@@ -74,7 +74,7 @@ public class Walker : Enemy {
 			getDamage(1);
 		}
 	}
-	private void getDamage(int damage) {
+	public void getDamage(int damage) {
 		HP -= damage;
 		if(HP <=0) gameObject.transform.parent.gameObject.SetActive(false);
 	}

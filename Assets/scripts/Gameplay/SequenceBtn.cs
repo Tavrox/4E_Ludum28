@@ -10,6 +10,7 @@ public class SequenceBtn : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//StartCoroutine("myUpdate");
+		GameEventManager.GameStart += GameStart;
 	}
 	
 	// Update is called once per frame
@@ -61,5 +62,10 @@ public class SequenceBtn : MonoBehaviour {
 		yield return new WaitForSeconds(1.2f);
 		errorDetected = false;
 
+	}
+	void GameStart () {
+		StopCoroutine("resetRightCombo");
+		rightCombo = allTriggered = true;
+		solved = rightComboChecked = errorDetected = false;
 	}
 }

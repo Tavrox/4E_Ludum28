@@ -4,24 +4,28 @@ using System.Collections;
 public class ArcElectric : MonoBehaviour {
 	
 	public OTAnimatingSprite animSprite;
-	private int cpt;
-	public float activeTime, inactiveTime;
+	public float activeTime, inactiveTime, delayBegin;
 	private float waitTime;
-	public bool stateSound = false;
+	public bool stateSound = false, activeState;
 	private Player _player;
 	
 	// Use this for initialization
 	void Start () {
 		animSprite.Play("arcDefault");
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
-		cpt = 0;
-		if(activeTime!=0) StartCoroutine("active");
+		activeState = true;
+		if(activeTime!=0) StartCoroutine("waitB4Active");
+		GameEventManager.GameStart += GameStart;
+		GameEventManager.GameOver += GameOver;
 	}
-
+	
+	private IEnumerator waitB4Active() {
+		yield return new WaitForSeconds(delayBegin);
+		StartCoroutine("active");
+	}
 	private IEnumerator active() {
-		cpt++;
-		if(cpt % 2 == 0) {waitTime = activeTime;animSprite.Play("arcON");collider.enabled=true;MasterAudio.PlaySound("piston_on");}
-		else {waitTime = inactiveTime;animSprite.Play("arcDefault");collider.enabled=false; MasterAudio.PlaySound("piston_idle");}
+		if(activeState) {activeState=!activeState;waitTime = activeTime;animSprite.Play("arcON");collider.enabled=true;MasterAudio.PlaySound("piston_on");}
+		else {activeState=!activeState;waitTime = inactiveTime;animSprite.Play("arcDefault");collider.enabled=false; MasterAudio.PlaySound("piston_idle");}
 		yield return new WaitForSeconds(waitTime);
 		StartCoroutine("active");
 	}
@@ -41,5 +45,12 @@ public class ArcElectric : MonoBehaviour {
 	public void turnON () {
 		animSprite.Play("arcON");collider.enabled=true;
 		StartCoroutine("active");
+	}
+	void GameOver() {
+		turnOFF();
+	}
+	void GameStart() {
+		activeState = true;
+		StartCoroutine("waitB4Active");
 	}
 }

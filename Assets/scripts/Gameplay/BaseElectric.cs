@@ -4,24 +4,24 @@ using System.Collections;
 public class BaseElectric : MonoBehaviour {
 	
 	public OTAnimatingSprite animSprite;
-	private int cpt;
-	public float activeTime, inactiveTime;
+	public float activeTime, inactiveTime, delayBegin;
 	private float waitTime;
+	public bool stateSound = false, activeState;
 	// Use this for initialization
 	void Start () {
 		animSprite.Play("baseDefault");
-		cpt = 0;
+		activeState = true;
+		if(activeTime!=0) StartCoroutine("waitB4Active");
+		GameEventManager.GameStart += GameStart;
+		GameEventManager.GameOver += GameOver;
+	}
+	private IEnumerator waitB4Active() {
+		yield return new WaitForSeconds(delayBegin);
 		StartCoroutine("active");
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-	new private IEnumerator active() {
-		cpt++;
-		if(cpt % 2 == 0) {waitTime = activeTime;animSprite.Play("baseON");collider.enabled=true;}
-		else {waitTime = inactiveTime;animSprite.Play("baseDefault");collider.enabled=false;}
+	private IEnumerator active() {
+		if(activeState) {activeState=!activeState;waitTime = activeTime;animSprite.Play("baseON");collider.enabled=true;}
+		else {activeState=!activeState;waitTime = inactiveTime;animSprite.Play("baseDefault");collider.enabled=false;}
 		yield return new WaitForSeconds(waitTime);
 		StartCoroutine("active");
 	}
@@ -41,5 +41,12 @@ public class BaseElectric : MonoBehaviour {
 	public void turnON () {
 		animSprite.Play("baseON");collider.enabled=true;
 		StartCoroutine("active");
+	}
+	void GameOver() {
+		turnOFF();
+	}
+	void GameStart() {
+		activeState = true;
+		StartCoroutine("waitB4Active");
 	}
 }

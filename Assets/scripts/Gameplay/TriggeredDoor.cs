@@ -9,13 +9,11 @@ public class TriggeredDoor : MonoBehaviour {
 
 	void Start() {
 		animSprite.Play("closed");
-		if(!isLocked) Unlock();
-		if (isLocked == true)
-		{
+		//if(!isLocked) Unlock();
+		if (isLocked)
 			memoryLock = true;
-		}
-		else
-		{
+		else {
+			Unlock();
 			memoryLock = false;
 		}
 		GameEventManager.GameStart += GameStart;
@@ -35,6 +33,11 @@ public class TriggeredDoor : MonoBehaviour {
 	private void GameStart()
 	{
 		isLocked = memoryLock;
+		
+		if (isLocked)
+			Lock();
+		else 
+			Unlock();
 	}
 	
 	public void Lock()

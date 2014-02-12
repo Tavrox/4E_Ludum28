@@ -34,10 +34,11 @@ public class Character : MonoBehaviour
 	[HideInInspector] public bool isPass;
 	
 	[HideInInspector] public bool jumping = false;
-	[HideInInspector] public bool falling = false,chute;
+	[HideInInspector] public bool falling = false,chute, onCrate;
 	[HideInInspector] public bool grounded = false;
 	[HideInInspector] public bool passingPlatform;
 	[HideInInspector] public bool onPlatform;
+	[HideInInspector] public Crate myCrate;
 	
 	[HideInInspector] public bool blockedRight;
 	[HideInInspector] public bool blockedLeft;
@@ -192,7 +193,9 @@ public class Character : MonoBehaviour
 		blockedLeft = false;
 		blockedUp = false;
 		blockedDown = false;
-		grounded = false;		
+		onCrate = false;
+		grounded = false;
+		myCrate = null;
 //		absVel2X = Mathf.Abs(vectorFixed.x);
 //		absVel2Y = Mathf.Abs(vectorFixed.y);
 
@@ -222,6 +225,7 @@ public class Character : MonoBehaviour
 		if (Physics.Raycast(mypos, Vector3.down, out hitInfo, halfMyY, groundMask))
 		{
 //			print ("blocked down");
+			if(hitInfo.collider.CompareTag("Crate")) {onCrate = true;myCrate=hitInfo.collider.gameObject.GetComponent<Crate>();}
 			BlockedDown();
 		}
 		
@@ -297,5 +301,9 @@ public class Character : MonoBehaviour
 	void ThroughPlatform()
 	{
 		vectorMove.y -= pfPassSpeed;
+	}
+	public void getDamage(int damage) {
+		HP -= damage;
+		if(HP <=0) gameObject.transform.parent.gameObject.SetActive(false);
 	}
 }
