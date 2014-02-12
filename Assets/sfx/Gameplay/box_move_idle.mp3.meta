@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/sfx/Gameplay/box_move_idle.mp3.meta
 guid: 096c91035501a674d8eabbd9d4f2caba
+=======
+guid: 29140c0677c2dab42951d0f2daee8a7f
+>>>>>>> 21b827769d6b801987dd6c87ff375ffabc9f56b2:Assets/sfx/Gameplay/box_move_idle.mp3.meta
 AudioImporter:
   serializedVersion: 4
   format: 0
