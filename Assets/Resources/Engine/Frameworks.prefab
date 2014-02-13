@@ -8529,12 +8529,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: leverAnims
   _fps: 12.666667
-  _duration: .631578922
+  _duration: .315789461
   framesets:
   - name: unlock
     container: {fileID: 11400224}
-    startFrame: 7
-    endFrame: 7
+    startFrame: 3
+    endFrame: 3
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -8546,7 +8546,7 @@ MonoBehaviour:
   - name: timedunlock
     container: {fileID: 11400224}
     startFrame: 0
-    endFrame: 4
+    endFrame: 0
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -8557,27 +8557,27 @@ MonoBehaviour:
     _containerName: leverSheet
   - name: timedlock
     container: {fileID: 11400224}
-    startFrame: 5
-    endFrame: 5
+    startFrame: 1
+    endFrame: 1
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
     playCount: 1
     pingPong: 0
     singleDuration: 0
-    startIndex: 6
+    startIndex: 2
     _containerName: leverSheet
   - name: lock
     container: {fileID: 11400224}
-    startFrame: 6
-    endFrame: 6
+    startFrame: 2
+    endFrame: 2
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
     playCount: 1
     pingPong: 0
     singleDuration: 0
-    startIndex: 7
+    startIndex: 3
     _containerName: leverSheet
 --- !u!114 &11400080
 MonoBehaviour:
@@ -8925,8 +8925,8 @@ MonoBehaviour:
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: 184251b07e517e74b8f4d7fe6450fafe, type: 3}
   reloadData: 0
-  bytesDataFile: 3624
-  id: 14
+  bytesDataFile: 3524
+  id: 15
 --- !u!114 &11400094
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9461,8 +9461,8 @@ MonoBehaviour:
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: 75b52c69325b04049a60503013905d94, type: 3}
   reloadData: 0
-  bytesDataFile: 3651
-  id: 4
+  bytesDataFile: 3551
+  id: 5
 --- !u!114 &11400130
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10024,8 +10024,8 @@ MonoBehaviour:
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: b022cc3be52659240bd2e98b4918c507, type: 3}
   reloadData: 0
-  bytesDataFile: 3147
-  id: 11
+  bytesDataFile: 3060
+  id: 12
 --- !u!114 &11400150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10068,7 +10068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: Background
-  _sheetSize: {x: 150, y: 550}
+  _sheetSize: {x: 150, y: 1050}
   texture: {fileID: 2800000, guid: 091fb6c9c45b3b84a98bb331f91fee89, type: 3}
   sizeTextures: []
   generateSprites: 0
@@ -10297,13 +10297,230 @@ MonoBehaviour:
     size: {x: 50, y: 50}
     frameSize: {x: 50, y: 50}
     metaData: []
+  - name: backgroundNum11
+    position: {x: 100, y: 500}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNum12
+    position: {x: 0, y: 550}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNum13
+    position: {x: 50, y: 550}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNum14
+    position: {x: 100, y: 550}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNum15
+    position: {x: 0, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNumLetter00
+    position: {x: 50, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNumLetter01
+    position: {x: 100, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNumLetter02
+    position: {x: 0, y: 650}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNumLetter03
+    position: {x: 50, y: 650}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNumLetter04
+    position: {x: 100, y: 650}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNumLetter05
+    position: {x: 0, y: 700}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNumLetter06
+    position: {x: 50, y: 700}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNumLetter07
+    position: {x: 100, y: 700}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNumLetter08
+    position: {x: 0, y: 750}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNumLetter09
+    position: {x: 50, y: 750}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNumLetter10
+    position: {x: 100, y: 750}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNumLetter11
+    position: {x: 0, y: 800}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNumLetter12
+    position: {x: 50, y: 800}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNumLetter13
+    position: {x: 100, y: 800}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNumLetter14
+    position: {x: 0, y: 850}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNumLetter15
+    position: {x: 50, y: 850}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNumLetter16
+    position: {x: 100, y: 850}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNumLetter17
+    position: {x: 0, y: 900}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNumLetter18
+    position: {x: 50, y: 900}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNumLetter19
+    position: {x: 100, y: 900}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNumLetter20
+    position: {x: 0, y: 950}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNumLetter21
+    position: {x: 50, y: 950}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNumLetter22
+    position: {x: 100, y: 950}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNumLetter23
+    position: {x: 0, y: 1000}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNumLetter24
+    position: {x: 50, y: 1000}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNumLetter25
+    position: {x: 100, y: 1000}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
   offsetSizing: 1
   metaType: 
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: 9ff3c9b410a921041b2193fd126f0d24, type: 3}
   reloadData: 0
-  bytesDataFile: 16187
-  id: 12
+  bytesDataFile: 30511
+  id: 13
 --- !u!114 &11400154
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10978,8 +11195,8 @@ MonoBehaviour:
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: dfdf5ce969754c5439e9576d7a8363be, type: 3}
   reloadData: 0
-  bytesDataFile: 1727
-  id: 9
+  bytesDataFile: 1679
+  id: 10
 --- !u!114 &11400202
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11627,8 +11844,8 @@ MonoBehaviour:
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: 7f3d3e1d167181a4ba7dd771bf70b6b4, type: 3}
   reloadData: 0
-  bytesDataFile: 15087
-  id: 20
+  bytesDataFile: 14675
+  id: 21
 --- !u!114 &11400224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11641,74 +11858,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: leverSheet
-  _sheetSize: {x: 256, y: 256}
+  _sheetSize: {x: 128, y: 256}
   texture: {fileID: 2800000, guid: c1f764155ee03694884b505ed53beb28, type: 3}
   sizeTextures: []
   generateSprites: 0
   atlasData:
   - name: leverDown00
-    position: {x: 0, y: 0}
-    offset: {x: 0, y: 0}
-    rotated: 0
-    size: {x: 50, y: 100}
-    frameSize: {x: 50, y: 100}
-    metaData: []
-  - name: leverDown01
-    position: {x: 51, y: 0}
-    offset: {x: 0, y: 0}
-    rotated: 0
-    size: {x: 50, y: 100}
-    frameSize: {x: 50, y: 100}
-    metaData: []
-  - name: leverDown02
-    position: {x: 102, y: 0}
-    offset: {x: 0, y: 0}
-    rotated: 0
-    size: {x: 50, y: 100}
-    frameSize: {x: 50, y: 100}
-    metaData: []
-  - name: leverDown03
-    position: {x: 153, y: 0}
-    offset: {x: 0, y: 0}
-    rotated: 0
-    size: {x: 50, y: 100}
-    frameSize: {x: 50, y: 100}
-    metaData: []
-  - name: leverDown04
-    position: {x: 204, y: 0}
+    position: {x: 1, y: 1}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 50, y: 100}
     frameSize: {x: 50, y: 100}
     metaData: []
   - name: leverUp00
-    position: {x: 0, y: 101}
+    position: {x: 52, y: 1}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 50, y: 100}
     frameSize: {x: 50, y: 100}
     metaData: []
   - name: levier_1
-    position: {x: 51, y: 101}
+    position: {x: 1, y: 102}
     offset: {x: 0, y: 0}
     rotated: 0
-    size: {x: 50, y: 50}
-    frameSize: {x: 50, y: 50}
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
     metaData: []
   - name: levier_2
-    position: {x: 102, y: 101}
+    position: {x: 52, y: 102}
     offset: {x: 0, y: 0}
     rotated: 0
-    size: {x: 50, y: 50}
-    frameSize: {x: 50, y: 50}
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
     metaData: []
   offsetSizing: 1
   metaType: 
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: cfd96d83056ea9948a78df2c62e4305c, type: 3}
   reloadData: 0
-  bytesDataFile: 4604
-  id: 9
+  bytesDataFile: 2606
+  id: 11
 --- !u!114 &11400226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11911,8 +12100,8 @@ MonoBehaviour:
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: 954ba3237fd8f9c459ca218263d0ba3a, type: 3}
   reloadData: 0
-  bytesDataFile: 3138
-  id: 9
+  bytesDataFile: 3051
+  id: 10
 --- !u!114 &11400240
 MonoBehaviour:
   m_ObjectHideFlags: 1

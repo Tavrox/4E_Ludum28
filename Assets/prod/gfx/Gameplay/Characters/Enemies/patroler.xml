@@ -7,7 +7,7 @@
             <key>patrol0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,0},{100,50}}</string>
+                <string>{{1,1},{100,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -20,7 +20,7 @@
             <key>patrol0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{100,0},{100,50}}</string>
+                <string>{{102,1},{100,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,7 +33,7 @@
             <key>patrol0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,50},{100,50}}</string>
+                <string>{{1,52},{100,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -46,7 +46,7 @@
             <key>patrol0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{100,50},{100,50}}</string>
+                <string>{{102,52},{100,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -59,7 +59,7 @@
             <key>patrol0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,100},{100,50}}</string>
+                <string>{{1,103},{100,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -72,7 +72,7 @@
             <key>patrol0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{100,100},{100,50}}</string>
+                <string>{{102,103},{100,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -85,7 +85,7 @@
             <key>patrol0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,150},{100,50}}</string>
+                <string>{{1,154},{100,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -98,7 +98,7 @@
             <key>patrol0008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{100,150},{100,50}}</string>
+                <string>{{102,154},{100,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -111,7 +111,7 @@
             <key>patrol0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,200},{100,50}}</string>
+                <string>{{1,205},{100,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -124,7 +124,7 @@
             <key>patrol0010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{100,200},{100,50}}</string>
+                <string>{{102,205},{100,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -144,7 +144,7 @@
             <key>size</key>
             <string>{256,256}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:f98fe9b07fd77d7b3eafaf500a6c7288:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:6202718d0c0879b69335a5ea3c061e30:1/1$</string>
             <key>textureFileName</key>
             <string>patroler.png</string>
         </dict>

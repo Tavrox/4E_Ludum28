@@ -32,7 +32,7 @@ public class Lever : MonoBehaviour {
 	void Update () {
 		//_myTimer= new Rect(myPos.x,myPos.y,20,20);
 		if(myButtonType == btnType.TimedBtn) {
-			if(animSprite.frameIndex == 0 && !stopped) {stopped=true;animSprite.Stop();StartCoroutine("leverTimer");StartCoroutine("waitB4Restart",delay/4);}
+			if(animSprite.frameIndex == 0 && !stopped) {stopped=true;animSprite.Stop();StartCoroutine("leverTimer");/*StartCoroutine("waitB4Restart",delay/4);*/}
 //			if(animSprite.frameIndex == 4 && stopped) {_myRemainingTime = delay;stopped = false;StopCoroutine("leverTimer");}
 //			if(animSprite.frameIndex == 5) {StopCoroutine("waitB4Restart");print ("POTS");}
 		}
@@ -77,6 +77,8 @@ public class Lever : MonoBehaviour {
 		yield return new WaitForSeconds(delay+1);
 		triggerLever();
 		trigged = false;
+		_myRemainingTime = delay;
+		_myTimer.text = _myRemainingTime.ToString();
 		_myRemainingTime = delay;stopped = false;StopCoroutine("leverTimer");StopCoroutine("waitB4Restart");
 		animSprite.Play("timedlock");
 	}
