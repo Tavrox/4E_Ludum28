@@ -6,7 +6,7 @@ public class ArcElectric : MonoBehaviour {
 	public OTAnimatingSprite animSprite;
 	public float activeTime, inactiveTime, delayBegin;
 	private float waitTime;
-	public bool stateSound = false, activeState;
+	public bool muted = false, activeState;
 	private Player _player;
 	
 	// Use this for initialization
@@ -23,9 +23,7 @@ public class ArcElectric : MonoBehaviour {
 	
 	private IEnumerator waitB4Active(bool alternate) {
 		yield return new WaitForSeconds(delayBegin);
-		if(alternate) {
-			StartCoroutine("active");
-		}
+		if(alternate) StartCoroutine("active");
 		else StartCoroutine("activateInfinite");
 	}
 	private IEnumerator active() {
@@ -39,6 +37,7 @@ public class ArcElectric : MonoBehaviour {
 	{
 		if (_other.CompareTag("Player") == true && GameObject.Find("Player").GetComponent<Player>().isDead == false)
 		{
+			MasterAudio.PlaySound("hole");
 			GameObject.Find("Player").GetComponent<Player>().isDead = true;
 			GameEventManager.TriggerGameOver();
 		}
@@ -49,8 +48,8 @@ public class ArcElectric : MonoBehaviour {
 		StopCoroutine("waitB4Active");
 		StopCoroutine("activateInfinite");
 		StopCoroutine("SND_activateThenOff");
-		MasterAudio.FadeOutAllOfSound("piston_idle",0.43f);
-		MasterAudio.PlaySound("piston_off");
+		if(!muted) {MasterAudio.FadeOutAllOfSound("piston_idle",0.43f);
+			MasterAudio.PlaySound("piston_off");}
 	}
 	public void turnON () {
 		animSprite.Play("arcON");collider.enabled=true;
@@ -67,22 +66,22 @@ public class ArcElectric : MonoBehaviour {
 		else if(activeTime!=0) StartCoroutine("waitB4Active",true);
 	}
 	IEnumerator activateInfinite() {
-		MasterAudio.PlaySound("piston_on");
+		if(!muted) MasterAudio.PlaySound("piston_on");
 		yield return new WaitForSeconds(0.12f);
 		animSprite.Play("arcON");collider.enabled=true;
-		yield return new WaitForSeconds(0.257f);
-		MasterAudio.PlaySound("piston_idle");
+		if(!muted) {yield return new WaitForSeconds(0.257f);
+			MasterAudio.PlaySound("piston_idle");}
 	}
 	IEnumerator SND_activateThenOff() {
-		MasterAudio.PlaySound("piston_on");
+		if(!muted) MasterAudio.PlaySound("piston_on");
 		yield return new WaitForSeconds(0.12f);
 		animSprite.Play("arcON");collider.enabled=true;
-		yield return new WaitForSeconds(0.257f);
+		if(!muted) {yield return new WaitForSeconds(0.257f);
 		MasterAudio.PlaySound("piston_idle");
 		yield return new WaitForSeconds(activeTime-0.257f-0.43f);
 		MasterAudio.FadeOutAllOfSound("piston_idle",0.43f);
 		MasterAudio.PlaySound("piston_off");
 		yield return new WaitForSeconds(0.43f);
-		MasterAudio.StopAllOfSound("piston_idle");
+			MasterAudio.StopAllOfSound("piston_idle");}
 	}
 }

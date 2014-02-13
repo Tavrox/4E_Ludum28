@@ -17,10 +17,10 @@ public class TrapKill : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) 
 	{
-		if(other.gameObject.CompareTag("Player") /*&& triggered == false*/) 
+		if (_other.CompareTag("Player") == true && GameObject.Find("Player").GetComponent<Player>().isDead == false)
 		{
-			//triggered = true;
 			MasterAudio.PlaySound("hole");
+			GameObject.Find("Player").GetComponent<Player>().isDead = true;
 			GameEventManager.TriggerGameOver();
 		}
 	}
