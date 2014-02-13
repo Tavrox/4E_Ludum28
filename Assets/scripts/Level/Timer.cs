@@ -19,7 +19,6 @@ public class Timer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		InvokeRepeating("updateTimer", 0, 0.01f);
-
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GameOver += GameOver;
 		GameEventManager.GamePause += GamePause;
@@ -48,7 +47,7 @@ public class Timer : MonoBehaviour {
 			if (microSecLeft == 0)
 			{
 				secLeft -= 1 ;
-				microSecLeft = 59;
+				microSecLeft = 99;
 			}
 
 			if (secLeft <= 0 && triggeredEnd == false)
@@ -63,7 +62,7 @@ public class Timer : MonoBehaviour {
 	public void resetTimer()
 	{
 			secLeft = 60;
-			microSecLeft = 60;
+			microSecLeft = 99;
 	}
 
 	private void GameStart()

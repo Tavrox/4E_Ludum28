@@ -51,6 +51,100 @@ public class Player : Character {
 
 	}
 	
+	private void checkInput()
+	{
+		// these are false unless one of keys is pressed
+		isLeft = false;
+		isRight = false;
+		isJump = false;
+		isGoDown = false;
+		isPass = false;
+		isCrounch = false;
+		
+		movingDir = moving.None;
+
+		if(Input.GetKey("left") || Input.GetKey(KeyCode.Q) /*&& !specialCast*/) 
+		{ 
+			isLeft = true;
+			shootLeft = true;
+			facingDir = facing.Left;
+			//if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");
+		}
+		/*if((Input.GetKeyUp("left") && !specialCast) || (Input.GetKeyUp("right") && !isLeft && !specialCast)) {
+			StopCoroutine("footStep");
+			blockCoroutine = false;
+		}*/
+		if ((Input.GetKey("right") || Input.GetKey(KeyCode.D)) && !isLeft /*&& !specialCast*/) 
+		{ 
+			isRight = true; 
+			facingDir = facing.Right;
+			shootLeft = false;
+			/*if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");*/
+		}
+//		if (Input.GetKey(KeyCode.DownArrow))
+//		{
+//			isCrounch = true;
+//			facingDir = facing.Down;
+//		}
+		if (Input.GetKey("up")  || Input.GetKey(KeyCode.Z)/* && grounded*/) 
+		{ 
+			isJump = true; 
+		}
+		if (Input.GetKeyDown("up")  || Input.GetKeyDown(KeyCode.Z)/* && grounded*/) 
+		{ 
+			MasterAudio.PlaySound("player_jump");
+		}
+		if (Input.GetKeyUp("up") || Input.GetKey(KeyCode.Z)) chute=true;
+		
+		if(Input.GetKeyDown("space"))
+		{
+			isPass = true;
+		}
+		if (Input.GetKeyDown(KeyCode.Alpha1))
+		{
+			//skill_axe.useSkill(Skills.SkillList.Axe);
+		}
+		if (Input.GetKeyDown(KeyCode.Alpha2))
+		{
+			GameObject.Find("Invasion").GetComponent<InvasionAnims>().invade();
+		}
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			if (GameEventManager.gamePaused == false)
+			{
+				GameEventManager.TriggerGamePause();
+			}
+			else if (GameEventManager.gamePaused == true)
+			{
+				GameEventManager.TriggerGameUnpause();
+			}
+		}
+	}
+
+	private void playFootstep()
+	{
+		if ((isLeft || isRight) && grounded )
+		{
+			MasterAudio.PlaySound ("player_runL1");
+		}
+	}
+
+	public void teleportTo(Vector3 pos) {
+		thisTransform.position = pos;
+	}
+	public IEnumerator rewind () {
+		yield return new WaitForSeconds(0.01f);
+		thisTransform.Rotate(0f,0f,angleRotation++);
+		StartCoroutine("rewind");
+	}
+	public IEnumerator stopRewind (float duree) {
+		yield return new WaitForSeconds(duree);
+		StopCoroutine("rewind");
+		thisTransform.Rotate(0f,0f,angleRotation--);
+		if(angleRotation<5) {StopCoroutine("stopRewind");thisTransform.rotation = Quaternion.Euler(new Vector3(0f,0f,0f));}
+		StartCoroutine("stopRewind",0.015f);
+	}
+	
 	private void GameStart () 
 	{
 		if(FindObjectOfType(typeof(Player)) && this != null) {
@@ -90,102 +184,11 @@ public class Player : Character {
 		paused = false;
 		enabled = true;	
 	}
-
+	
 	IEnumerator resetGame()
 	{
 		Instantiate(Resources.Load("Objects/Invasion"));
 		yield return new WaitForSeconds(4f);
 		GameEventManager.TriggerGameStart();
-	}
-	
-	private void checkInput()
-	{
-		// these are false unless one of keys is pressed
-		isLeft = false;
-		isRight = false;
-		isJump = false;
-		isGoDown = false;
-		isPass = false;
-		isCrounch = false;
-		
-		movingDir = moving.None;
-
-		if(Input.GetKey("left") || Input.GetKey(KeyCode.Q) /*&& !specialCast*/) 
-		{ 
-			isLeft = true;
-			shootLeft = true;
-			facingDir = facing.Left;
-			//if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");
-		}
-		/*if((Input.GetKeyUp("left") && !specialCast) || (Input.GetKeyUp("right") && !isLeft && !specialCast)) {
-			StopCoroutine("footStep");
-			blockCoroutine = false;
-		}*/
-		if ((Input.GetKey("right") || Input.GetKey(KeyCode.D)) && !isLeft /*&& !specialCast*/) 
-		{ 
-			isRight = true; 
-			facingDir = facing.Right;
-			shootLeft = false;
-			/*if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");*/
-		}
-//		if (Input.GetKey(KeyCode.DownArrow))
-//		{
-//			isCrounch = true;
-//			facingDir = facing.Down;
-//		}
-		if (Input.GetKey("up")  || Input.GetKey(KeyCode.Z)/* && grounded*/) 
-		{ 
-			isJump = true; 
-			MasterAudio.PlaySound("player_jump");
-		}
-		if (Input.GetKeyUp("up") || Input.GetKey(KeyCode.Z)) chute=true;
-		
-		if(Input.GetKeyDown("space"))
-		{
-			isPass = true;
-		}
-		if (Input.GetKeyDown(KeyCode.Alpha1))
-		{
-			//skill_axe.useSkill(Skills.SkillList.Axe);
-		}
-		if (Input.GetKeyDown(KeyCode.Alpha2))
-		{
-			GameObject.Find("Invasion").GetComponent<InvasionAnims>().invade();
-		}
-		if (Input.GetKeyDown(KeyCode.Escape))
-		{
-			if (GameEventManager.gamePaused == false)
-			{
-				GameEventManager.TriggerGamePause();
-			}
-			else if (GameEventManager.gamePaused == true)
-			{
-				GameEventManager.TriggerGameUnpause();
-			}
-		}
-	}
-
-	private void playFootstep()
-	{
-		if ((isLeft == true || isRight == true) && grounded )
-		{
-			MasterAudio.PlaySound ("player_runL1");
-		}
-	}
-
-	public void teleportTo(Vector3 pos) {
-		thisTransform.position = pos;
-	}
-	public IEnumerator rewind () {
-		yield return new WaitForSeconds(0.01f);
-		thisTransform.Rotate(0f,0f,angleRotation++);
-		StartCoroutine("rewind");
-	}
-	public IEnumerator stopRewind (float duree) {
-		yield return new WaitForSeconds(duree);
-		StopCoroutine("rewind");
-		thisTransform.Rotate(0f,0f,angleRotation--);
-		if(angleRotation<5) {StopCoroutine("stopRewind");thisTransform.rotation = Quaternion.Euler(new Vector3(0f,0f,0f));}
-		StartCoroutine("stopRewind",0.015f);
 	}
 }

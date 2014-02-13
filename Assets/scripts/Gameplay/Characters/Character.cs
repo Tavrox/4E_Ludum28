@@ -151,7 +151,7 @@ public class Character : MonoBehaviour
 		float addForce = 1;
 		if((!grounded && !Input.GetKey("up")) || blockedUp) chute = true;
 		if(blockedUp) {addForce=hitUpBounceForce;/*gravityY += 150f;StartCoroutine("resetGravity");*/}
-		if(chute && grounded) chute = false;
+		if(chute && grounded) {chute = false;MasterAudio.PlaySound("player_fall");}
 
 		// landed from fall/jump
 		if(grounded == true && vectorMove.y == 0)

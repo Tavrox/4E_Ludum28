@@ -14,6 +14,7 @@ public class Crate : MonoBehaviour {
 	public bool blockCrate;
 	public float replaceCrate = 3f;
 	private Vector3 spawnPos;
+	private bool crateSoundPlaying, crateSoundStopping, touchFloor;
 	//RaycastHit hitInfo;
 	//Ray landingRay;	
 	//public float deployHeight;
@@ -47,6 +48,7 @@ public class Crate : MonoBehaviour {
 		//print(grounded);
 		if(!grounded /*&& _player.grounded*/)
 		{
+			touchFloor = false;
 			vectorMove.y -= gravityY * Time.deltaTime;
 			thisTransform.position += new Vector3(vectorMove.x,vectorMove.y,0f);
 			//print (vectorMove.y);
@@ -80,6 +82,7 @@ public class Crate : MonoBehaviour {
 //					print("Je tire à gauche");
 					_player.moveVel = playerMoveVel/2; 
 					crateMove = -_player.moveVel*Time.deltaTime;
+					if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
 				}
 				else crateMove = 0;
 				thisTransform.position += new Vector3(crateMove,0f,0f);
@@ -90,6 +93,7 @@ public class Crate : MonoBehaviour {
 //					print("Je tire à droite");
 					_player.moveVel = playerMoveVel/2; 
 					crateMove = _player.moveVel*Time.deltaTime;
+					if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
 				}
 				else crateMove = 0;
 				thisTransform.position += new Vector3(crateMove,0f,0f);
@@ -97,13 +101,14 @@ public class Crate : MonoBehaviour {
 			else if(!blockCrate /*&& _player.grounded */
 			   && !(_player.transform.position.x < thisTransform.position.x && _player.isLeft)
 			   && !(_player.transform.position.x > thisTransform.position.x && _player.isRight)) {
-			_player.moveVel = playerMoveVel/2;
-			if(_player.isRight) crateMove = _player.moveVel*Time.deltaTime/**2f*/;
-			else if(_player.isLeft) crateMove = -_player.moveVel*Time.deltaTime/**2f*/;
-			else crateMove = 0;
-			thisTransform.position += new Vector3(crateMove,0f,0f);
-			//return true;
+				_player.moveVel = playerMoveVel/2;
+				if(_player.isRight) {crateMove = _player.moveVel*Time.deltaTime/**2f*/;if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");}
+				else if(_player.isLeft) {crateMove = -_player.moveVel*Time.deltaTime/**2f*/;if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");}
+				else crateMove = 0;
+				thisTransform.position += new Vector3(crateMove,0f,0f);
+				//return true;
 			}
+			if(!_player.isRight && !_player.isLeft && crateSoundPlaying && !crateSoundStopping) StartCoroutine("SND_moveCrateEnd");
 		}
 //		if (other.gameObject.tag == "ColliBox") {
 //
@@ -129,9 +134,30 @@ public class Crate : MonoBehaviour {
 //			grounded = true;
 //		}
 	}
+	IEnumerator SND_moveCrate() {
+		crateSoundPlaying = true;
+		MasterAudio.PlaySound("box_move_start");
+		yield return new WaitForSeconds(0.885f);
+		MasterAudio.PlaySound("box_move_idle");
+	}
+	IEnumerator SND_moveCrateEnd() {
+		crateSoundStopping = true;
+		StopCoroutine("SND_moveCrate");
+		MasterAudio.PlaySound("box_move_stop");
+		MasterAudio.FadeOutAllOfSound("box_move_start",0.28f);
+		MasterAudio.FadeOutAllOfSound("box_move_idle",0.28f);
+		yield return new WaitForSeconds(0.28f);
+		MasterAudio.StopAllOfSound("box_move_start");
+		MasterAudio.StopAllOfSound("box_move_idle");
+		crateSoundPlaying = crateSoundStopping = false;
+	}
+	void SND_crateFall() {
+		MasterAudio.PlaySound("box_fall");
+	}
 	void OnTriggerExit(Collider other) {
 		if(other.gameObject.tag=="Player") {
 			_player.moveVel = playerMoveVel;
+			if(crateSoundPlaying && !crateSoundStopping) StartCoroutine("SND_moveCrateEnd");
 		}
 		if(other.gameObject.name=="ColliBox" || other.gameObject.CompareTag("Blocker")) 
 		{/*print("GAUUUUUUCHE");*/blockCrate = false;}
@@ -180,6 +206,7 @@ public class Crate : MonoBehaviour {
 			if(hitInfo.collider.CompareTag("Enemy")) {hitInfo.collider.gameObject.GetComponent<Character>().getDamage(1);} //Kill mob if Crate falls from top
 			grounded = true;
 			vectorMove.y = 0;
+			if(!touchFloor) {touchFloor=true;SND_crateFall();}
 			//BoxCollider colliderHit = hitInfo.collider as BoxCollider;
 			//print (colliderHit.size);
 			//thisTransform.position = new Vector3(thisTransform.position.x, (float)((hitInfo.transform.position.y)+replaceCrate), thisTransform.position.z);

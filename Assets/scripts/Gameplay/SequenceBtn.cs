@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class SequenceBtn : MonoBehaviour {
 	
 	public List<Lever> seqBtns = new List<Lever>();
-	private bool rightCombo = true, allTriggered = true, solved, rightComboChecked, errorDetected;
+	private bool rightCombo = true, allTriggered = true, solved, rightComboChecked, errorDetected,errorLaunched;
 	private int cptBtn;
 	// Use this for initialization
 	void Start () {
@@ -50,17 +50,19 @@ public class SequenceBtn : MonoBehaviour {
 				MasterAudio.PlaySound ("sequence_succeed");
 			}
 			else if(errorDetected == true) {
-				MasterAudio.PlaySound("sequence_fail");
 				foreach (Lever btn in seqBtns) {
 					btn.StartCoroutine("resetLever");
 				}
-				StartCoroutine("resetRightCombo");
+				if(!errorLaunched) StartCoroutine("resetRightCombo");
 			}
 		}
 	}
 	private IEnumerator resetRightCombo () {
+		errorLaunched = true;
 		yield return new WaitForSeconds(1.2f);
+		MasterAudio.PlaySound("sequence_fail");
 		errorDetected = false;
+		errorLaunched = false;
 
 	}
 	void GameStart () {

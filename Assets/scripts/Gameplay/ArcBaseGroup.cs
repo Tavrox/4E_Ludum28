@@ -8,7 +8,7 @@ public class ArcBaseGroup : MonoBehaviour {
 	public List<BaseElectric> bases = new List<BaseElectric>();
 	
 	void OnTriggerEnter(Collider _other)
-	{
+	{print (_other.tag);
 		if (_other.CompareTag("Crate"))
 		{
 			foreach(ArcElectric _arc in arcs) _arc.turnOFF();
