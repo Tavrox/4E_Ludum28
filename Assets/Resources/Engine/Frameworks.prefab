@@ -11086,7 +11086,7 @@ MonoBehaviour:
   busIndex: 0
   isExpanded: 1
   groupMasterVolume: 1
-  retriggerPercentage: 0
+  retriggerPercentage: 50
   curVariationMode: 0
   groupVariations:
   - {fileID: 11400204}

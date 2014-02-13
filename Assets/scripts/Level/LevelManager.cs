@@ -31,7 +31,7 @@ public class LevelManager : MonoBehaviour {
 //		Player _Player  = GameObject.Find("Player").GetComponent<Player>();
 		ID = Application.loadedLevel;
 
-		//MasterAudio.PlaySound("bg");
+		MasterAudio.PlaySound("bg");
 		//MasterAudio.PlaySound("jam");
 
 		//if(chosenVariation==0) _rand = Random.Range(_tileImporter.minVariation, _tileImporter.maxVariation).ToString();
@@ -101,9 +101,11 @@ public class LevelManager : MonoBehaviour {
 	private void GameOver()
 	{
 		//playerDies();
+		MasterAudio.StopAllOfSound("bg");
 	}
 	private void GameStart()
 	{
+		MasterAudio.PlaySound("bg");
 	}
 	private void GamePause()
 	{
