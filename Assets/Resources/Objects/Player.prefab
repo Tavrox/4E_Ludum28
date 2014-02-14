@@ -46,6 +46,7 @@ GameObject:
   - 54: {fileID: 5400000}
   - 65: {fileID: 6500000}
   - 114: {fileID: 11400028}
+  - 114: {fileID: 11400030}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -303,7 +304,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.381443, y: -36.6924591, z: -1}
+  m_LocalPosition: {x: 30.5212116, y: -32.1497421, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -448,7 +449,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.84128094, y: 5.27526093, z: 5}
+  m_LocalPosition: {x: 6.84128094, y: 5.27526093, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400030}
@@ -808,9 +809,11 @@ MonoBehaviour:
   jumping: 0
   falling: 0
   chute: 0
+  onCrate: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
+  myCrate: {fileID: 0}
   blockedRight: 0
   blockedLeft: 0
   blockedUp: 0
@@ -838,6 +841,7 @@ MonoBehaviour:
   paused: 0
   angleRotation: 0
   isDead: 0
+  locked: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1239,6 +1243,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   action: 0
 --- !u!114 &11400028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd119fcfaf9f6394ca6ce278cd6354ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _levelUnlocked: 
+  displayInput: 1
+--- !u!114 &11400030
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

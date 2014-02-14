@@ -76,21 +76,16 @@ public class Crate : MonoBehaviour {
 //		if(other.gameObject.name=="Crate" || other.gameObject.name=="Crate(Clone)") {
 //			/*if(detectPlayer())*/ other.gameObject.GetComponent<Crate>().transform.position += new Vector3(crateMove*1.5f/*+0.1f*/,0f,0f);
 //		}
-			if(Input.GetKey("space") && (_player.transform.position.x < thisTransform.position.x) && !_player.isRight) {
-//				print("Je m'accroche à gauche");
-				if(_player.isLeft && !_player.blockedLeft) {
-//					print("Je tire à gauche");
+			if(Input.GetKey("space") && (_player.transform.position.x < thisTransform.position.x) /*&& !_player.isRight*/) {
+				print("Je m'accroche à gauche");
+				if(_player.isLeft && !_player.blockedLeft) {//Tire Gauche
+					print("Je tire à gauche");
 					_player.moveVel = playerMoveVel/2; 
 					crateMove = -_player.moveVel*Time.deltaTime;
 					if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
 				}
-				else crateMove = 0;
-				thisTransform.position += new Vector3(crateMove,0f,0f);
-			}
-			else if(Input.GetKey("space") && (_player.transform.position.x > thisTransform.position.x) && !_player.isLeft) {
-//				print("Je m'accroche à droite");
-				if(_player.isRight && !_player.blockedRight) {
-//					print("Je tire à droite");
+				else if(!blockCrate && _player.isRight) {//Pousse Droite
+					print("Je pousse à droite");
 					_player.moveVel = playerMoveVel/2; 
 					crateMove = _player.moveVel*Time.deltaTime;
 					if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
@@ -98,17 +93,56 @@ public class Crate : MonoBehaviour {
 				else crateMove = 0;
 				thisTransform.position += new Vector3(crateMove,0f,0f);
 			}
-			else if(!blockCrate /*&& _player.grounded */
-			   && !(_player.transform.position.x < thisTransform.position.x && _player.isLeft)
-			   && !(_player.transform.position.x > thisTransform.position.x && _player.isRight)) {
-				_player.moveVel = playerMoveVel/2;
-				if(_player.isRight) {crateMove = _player.moveVel*Time.deltaTime/**2f*/;if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");}
-				else if(_player.isLeft) {crateMove = -_player.moveVel*Time.deltaTime/**2f*/;if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");}
+			else if(Input.GetKey("space") && (_player.transform.position.x > thisTransform.position.x) /*&& !_player.isLeft*/) {
+				print("Je m'accroche à droite");
+				if(_player.isRight && !_player.blockedRight) {//Tire Droite
+					print("Je tire à droite");
+					_player.moveVel = playerMoveVel/2; 
+					crateMove = _player.moveVel*Time.deltaTime;
+					if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
+				}
+				else if(!blockCrate && _player.isLeft) {//Pousse Gauche
+					print("Je pousse à gauche");
+					_player.moveVel = playerMoveVel/2; 
+					crateMove = -_player.moveVel*Time.deltaTime;
+					if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
+				}
 				else crateMove = 0;
 				thisTransform.position += new Vector3(crateMove,0f,0f);
-				//return true;
 			}
-			if(!_player.isRight && !_player.isLeft && crateSoundPlaying && !crateSoundStopping) StartCoroutine("SND_moveCrateEnd");
+//			else if(!blockCrate && Input.GetKey("space") && (_player.transform.position.x > thisTransform.position.x) && !_player.isRight) {//Pousse Gauche
+//								print("Je m'accroche à droite");
+//				if(_player.isLeft) {
+//										print("Je pousse à gauche");
+//					_player.moveVel = playerMoveVel/2; 
+//					crateMove = -_player.moveVel*Time.deltaTime;
+//					if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
+//				}
+//				else crateMove = 0;
+//				thisTransform.position += new Vector3(crateMove,0f,0f);
+//			}
+//			else if(!blockCrate && Input.GetKey("space") && (_player.transform.position.x < thisTransform.position.x) && !_player.isLeft) {//Pousse Droite
+//								print("Je m'accroche à droite");
+//				if(_player.isRight) {
+//										print("Je pousse à droite");
+//					_player.moveVel = playerMoveVel/2; 
+//					crateMove = _player.moveVel*Time.deltaTime;
+//					if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
+//				}
+//				else crateMove = 0;
+//				thisTransform.position += new Vector3(crateMove,0f,0f);
+//			}
+//			else if(!blockCrate /*&& _player.grounded */
+//			   && !(_player.transform.position.x < thisTransform.position.x && _player.isLeft)
+//			   && !(_player.transform.position.x > thisTransform.position.x && _player.isRight)) {
+//				_player.moveVel = playerMoveVel/2;
+//				if(_player.isRight) {crateMove = _player.moveVel*Time.deltaTime/**2f*/;if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");}
+//				else if(_player.isLeft) {crateMove = -_player.moveVel*Time.deltaTime/**2f*/;if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");}
+//				else crateMove = 0;
+//				thisTransform.position += new Vector3(crateMove,0f,0f);
+//				//return true;
+//			}
+			if((!_player.isRight && !_player.isLeft && crateSoundPlaying && !crateSoundStopping) || blockCrate && crateSoundPlaying && !crateSoundStopping) StartCoroutine("SND_moveCrateEnd");
 		}
 //		if (other.gameObject.tag == "ColliBox") {
 //

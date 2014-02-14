@@ -7,12 +7,13 @@ public class Walker : Enemy {
 //	[HideInInspector] public Transform trans;
 	private Player myTarget;
 	private Transform myspawnpos;
+	private bool walkSoundSwitch;
 	/***** ENNEMI BEGIN *****/
 
 	void Start()
 	{
 		base.Start();
-		InvokeRepeating("sound",0,0.5f);
+		InvokeRepeating("sound",0,0.65f);
 		myTarget = GameObject.Find("Player").GetComponent<Player>();
 		//myspawnpos.position = new Vector3(gameObject.transform.position.x,gameObject.transform.position.z,0f);
 		GameEventManager.GameStart += GameStart;
@@ -37,7 +38,9 @@ public class Walker : Enemy {
 
 	private void sound()
 	{
-		MasterAudio.PlaySound("Blob_run2");
+		if(walkSoundSwitch) MasterAudio.PlaySound ("blob_run1");
+		else MasterAudio.PlaySound ("blob_run2");
+		walkSoundSwitch = !walkSoundSwitch;
 	}
 
 	

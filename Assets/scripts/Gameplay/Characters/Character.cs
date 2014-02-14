@@ -238,20 +238,38 @@ public class Character : MonoBehaviour
 		}
 		// Blocked on right
 		if( Physics.Raycast(mypos, Vector3.right, out hitInfo, halfMyX, groundMask) 
-			|| Physics.Raycast(mypos, new Vector3(1f,0.8f,0) , out hitInfo, halfMyX, groundMask)
-			|| Physics.Raycast(mypos, new Vector3(1f,-0.8f,0), out hitInfo, halfMyX, groundMask))
+		   || Physics.Raycast(mypos, new Vector3(1f,0.8f,0) , out hitInfo, halfMyX, groundMask)
+		   || Physics.Raycast(mypos, new Vector3(1f,-0.8f,0), out hitInfo, halfMyX, groundMask))
 		{
 			if(!hitInfo.collider.CompareTag("Crate")) BlockedRight();
 			Debug.DrawRay(mypos, Vector3.right, Color.cyan);
 		}
+		if( Physics.Raycast(mypos, Vector3.right, out hitInfo, halfMyX-0.6f, groundMask) 
+		   || Physics.Raycast(mypos, new Vector3(1f,0.8f,0) , out hitInfo, halfMyX-0.6f, groundMask)
+		   || Physics.Raycast(mypos, new Vector3(1f,-0.8f,0), out hitInfo, halfMyX-0.6f, groundMask))
+		{
+			BlockedRightCrate();
+		}
 		
 		// Blocked on left
 		if(	Physics.Raycast(mypos, Vector3.left, out hitInfo, halfMyX, groundMask)
-			|| Physics.Raycast(mypos, new Vector3(-1f,0.8f,0), out hitInfo, halfMyX, groundMask)
-			|| Physics.Raycast(mypos, new Vector3(-1f,0.8f,0), out hitInfo, halfMyX, groundMask))
+		   || Physics.Raycast(mypos, new Vector3(-1f,0.8f,0), out hitInfo, halfMyX, groundMask)
+		   || Physics.Raycast(mypos, new Vector3(-1f,0.8f,0), out hitInfo, halfMyX, groundMask))
 		{
 			if(!hitInfo.collider.CompareTag("Crate")) BlockedLeft();
 			Debug.DrawRay(mypos, Vector3.left, Color.yellow);
+		}
+//		Debug.DrawRay(new Vector3(1f,0.8f,0), Vector3.right*(halfMyX-0.6f), Color.cyan);
+//		Debug.DrawRay(new Vector3(1f,-0.8f,0), Vector3.right*(halfMyX-0.6f), Color.cyan);
+		//		Debug.DrawRay(new Vector3(-1f,0.8f,0), Vector3.left*(halfMyX-0.6f), Color.yellow);
+		//		Debug.DrawRay(new Vector3(-1f,0.8f,0), Vector3.left*(halfMyX-0.6f), Color.yellow);
+		Debug.DrawRay(mypos, Vector3.right*(halfMyX-0.6f), Color.cyan);
+		Debug.DrawRay(mypos, Vector3.left*(halfMyX-0.6f), Color.yellow);
+		if(	Physics.Raycast(mypos, Vector3.left, out hitInfo, halfMyX-0.6f, groundMask)
+		   || Physics.Raycast(mypos, new Vector3(-1f,0.8f,0), out hitInfo, halfMyX-0.6f, groundMask)
+		   || Physics.Raycast(mypos, new Vector3(-1f,0.8f,0), out hitInfo, halfMyX-0.6f, groundMask))
+		{
+			BlockedLeftCrate();
 		}
 	}
 	
@@ -290,6 +308,25 @@ public class Character : MonoBehaviour
 			blockedLeft = true;
 			vectorMove.x = 0f;
 			thisTransform.position = new Vector3(hitInfo.point.x+(halfMyX-0.01f),thisTransform.position.y, thisTransform.position.z); // .01 less than collision width.
+		}
+	}
+	void BlockedRightCrate()
+	{
+		if(facingDir == facing.Right || movingDir == moving.Right)
+		{
+			//blockedRight = true;
+			vectorMove.x = 0f;
+			//thisTransform.position = new Vector3(hitInfo.point.x-(halfMyX-0.6f),thisTransform.position.y, thisTransform.position.z); // .01 less than collision width.
+		}
+	}
+	
+	void BlockedLeftCrate()
+	{
+		if(facingDir == facing.Left || movingDir == moving.Left)
+		{
+			//blockedLeft = true;
+			vectorMove.x = 0f;
+			//thisTransform.position = new Vector3(hitInfo.point.x+(halfMyX-0.6f),thisTransform.position.y, thisTransform.position.z); // .01 less than collision width.
 		}
 	}
 	

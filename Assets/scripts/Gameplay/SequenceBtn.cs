@@ -43,11 +43,10 @@ public class SequenceBtn : MonoBehaviour {
 			}
 		if(allTriggered) {
 			if(errorDetected==false) {
-				foreach (Lever btn in seqBtns) {
-					btn.triggerLever();
-				}
+				seqBtns[1].triggerLever();
 				solved = true;
 				MasterAudio.PlaySound ("sequence_succeed");
+				StartCoroutine("resetSequence");
 			}
 			else if(errorDetected == true) {
 				foreach (Lever btn in seqBtns) {
@@ -56,6 +55,14 @@ public class SequenceBtn : MonoBehaviour {
 				if(!errorLaunched) StartCoroutine("resetRightCombo");
 			}
 		}
+	}
+	private IEnumerator resetSequence() {
+		foreach (Lever btn in seqBtns) {
+			btn.StartCoroutine("resetLever");//btn.triggerLever();
+		}
+		yield return new WaitForSeconds(1f);
+		rightCombo = allTriggered = true;
+		solved = rightComboChecked = errorDetected = false;
 	}
 	private IEnumerator resetRightCombo () {
 		errorLaunched = true;
@@ -67,7 +74,8 @@ public class SequenceBtn : MonoBehaviour {
 	}
 	void GameStart () {
 		StopCoroutine("resetRightCombo");
+		StopCoroutine("resetSequence");
 		rightCombo = allTriggered = true;
-		solved = rightComboChecked = errorDetected = false;
+		solved = rightComboChecked = errorDetected = errorLaunched = false;
 	}
 }

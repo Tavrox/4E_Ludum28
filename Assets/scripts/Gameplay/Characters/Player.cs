@@ -11,6 +11,7 @@ public class Player : Character {
 	[HideInInspector] public bool paused = false;
 	public int angleRotation;
 	public bool isDead = false, locked = false;
+	private bool walkSoundLeft;
 	// Use this for initialization
 	public override void Start () 
 	{
@@ -125,7 +126,9 @@ public class Player : Character {
 	{
 		if ((isLeft || isRight) && grounded )
 		{
-			MasterAudio.PlaySound ("player_runL1");
+			if(walkSoundLeft) MasterAudio.PlaySound ("player_runL1");
+			else MasterAudio.PlaySound ("player_runR1");
+			walkSoundLeft = !walkSoundLeft;
 		}
 	}
 

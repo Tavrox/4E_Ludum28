@@ -24,6 +24,7 @@ public class Patroler : Character {
 	protected int waypointId = 0;
 	public Transform[] waypoints;
 	private Player _player;
+	private bool walkSoundSwitch;
 	
 	//	private WaveCreator soundEmitt1, soundEmitt2, soundInstru1, soundInstru2,soundEmitt3;
 	//	private int cptWave=1, pebbleDirection = 1;
@@ -39,7 +40,7 @@ public class Patroler : Character {
 	{
 		base.Start();
 		
-		InvokeRepeating("sound",0,0.5f);
+		InvokeRepeating("sound",0,0.65f);
 		
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GameOver += GameOver;
@@ -193,6 +194,8 @@ public class Patroler : Character {
 
 	private void sound()
 	{
-		MasterAudio.PlaySound("Blob_run2");
+		if(walkSoundSwitch) MasterAudio.PlaySound ("blob_run1");
+		else MasterAudio.PlaySound ("blob_run2");
+		walkSoundSwitch = !walkSoundSwitch;
 	}
 }
