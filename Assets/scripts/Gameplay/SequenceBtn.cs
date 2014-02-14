@@ -7,10 +7,12 @@ public class SequenceBtn : MonoBehaviour {
 	public List<Lever> seqBtns = new List<Lever>();
 	private bool rightCombo = true, allTriggered = true, solved, rightComboChecked, errorDetected,errorLaunched;
 	private int cptBtn;
+	private Player _player;
 	// Use this for initialization
 	void Start () {
 		//StartCoroutine("myUpdate");
 		GameEventManager.GameStart += GameStart;
+		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
 	}
 	
 	// Update is called once per frame

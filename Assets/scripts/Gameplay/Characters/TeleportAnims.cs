@@ -34,7 +34,7 @@ public class TeleportAnims : MonoBehaviour
 	void Start () 
 	{
 		_character 	= GetComponent<Character>();
-		_player 	= GameObject.FindObjectOfType<Player>();
+		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
 
 		if(isOUT) animSprite.Play("teleportOUT");
 		else animSprite.Play("default");
@@ -60,7 +60,7 @@ public class TeleportAnims : MonoBehaviour
 		if(other.gameObject.CompareTag("Player") && !isOUT) 
 		{
 			if (Input.GetKeyDown(KeyCode.Space)) {
-				MasterAudio.PlaySound("teleport_in");
+				FESound.playDistancedSound("teleport_in",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("teleport_in");
 				animSprite.Play("teleport");
 				//_player.enabled = false;
 				StartCoroutine("stopPlayer");
@@ -81,7 +81,7 @@ public class TeleportAnims : MonoBehaviour
 		//_player.enabled = true;
 		_player.locked = false;
 		animSprite.Play("default");
-		MasterAudio.PlaySound("teleport_out");
+		FESound.playDistancedSound("teleport_out",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("teleport_out");
 	}
 	private void Run()
 	{

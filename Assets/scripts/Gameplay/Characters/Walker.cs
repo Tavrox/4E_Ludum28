@@ -5,7 +5,7 @@ public class Walker : Enemy {
 	
 //	[HideInInspector] public Vector3 position;
 //	[HideInInspector] public Transform trans;
-	private Player myTarget;
+	private Player _player;
 	private Transform myspawnpos;
 	private bool walkSoundSwitch;
 	/***** ENNEMI BEGIN *****/
@@ -14,7 +14,7 @@ public class Walker : Enemy {
 	{
 		base.Start();
 		InvokeRepeating("sound",0,0.65f);
-		myTarget = GameObject.Find("Player").GetComponent<Player>();
+		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
 		//myspawnpos.position = new Vector3(gameObject.transform.position.x,gameObject.transform.position.z,0f);
 		GameEventManager.GameStart += GameStart;
 	}
@@ -38,22 +38,22 @@ public class Walker : Enemy {
 
 	private void sound()
 	{
-		if(walkSoundSwitch) MasterAudio.PlaySound ("blob_run1");
-		else MasterAudio.PlaySound ("blob_run2");
+		if(walkSoundSwitch) FESound.playDistancedSound("blob_run1",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound ("blob_run1");
+		else FESound.playDistancedSound("blob_run2",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound ("blob_run2");
 		walkSoundSwitch = !walkSoundSwitch;
 	}
 
 	
 	protected void ChasePlayer () {
 		//Debug.Log("Px ="+target.position.x+" / Zx ="+myTransform.position.x);
-		if (myTarget.transform.position.x < thisTransform.position.x-(spriteScaleX/10f)) {
+		if (_player.transform.position.x < thisTransform.position.x-(spriteScaleX/10f)) {
 			//direction = Vector3.left;
 			isLeft = true;
 			isRight = false;
 			facingDir = facing.Left;
 			UpdateMovement();
 		}
-		else if (myTarget.transform.position.x > thisTransform.position.x+(spriteScaleX/10f) /*&& isLeft == false*/) {
+		else if (_player.transform.position.x > thisTransform.position.x+(spriteScaleX/10f) /*&& isLeft == false*/) {
 			//direction = Vector3.right;
 			isRight = true; 
 			isLeft = false;

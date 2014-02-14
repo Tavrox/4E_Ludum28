@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Crate : MonoBehaviour {
 
@@ -15,6 +16,7 @@ public class Crate : MonoBehaviour {
 	public float replaceCrate = 3f;
 	private Vector3 spawnPos;
 	private bool crateSoundPlaying, crateSoundStopping, touchFloor;
+//	private FESound testSon;
 	//RaycastHit hitInfo;
 	//Ray landingRay;	
 	//public float deployHeight;
@@ -26,7 +28,8 @@ public class Crate : MonoBehaviour {
 	
 	public virtual void Start () 
 	{
-		_player = GameObject.Find("Player").GetComponent<Player>();
+		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
+//		testSon = gameObject.AddComponent<FESound>();
 		spawnPos = transform.position;
 		playerMoveVel = _player.moveVel;
 		StartCoroutine("StartGravity");
@@ -44,7 +47,7 @@ public class Crate : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () 
-	{		
+	{
 		//print(grounded);
 		if(!grounded /*&& _player.grounded*/)
 		{
@@ -168,25 +171,25 @@ public class Crate : MonoBehaviour {
 //			grounded = true;
 //		}
 	}
-	IEnumerator SND_moveCrate() {
+	public IEnumerator SND_moveCrate() {
 		crateSoundPlaying = true;
-		MasterAudio.PlaySound("box_move_start");
+		FESound.playDistancedSound("box_move_start",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("box_move_start");
 		yield return new WaitForSeconds(0.885f);
-		MasterAudio.PlaySound("box_move_idle");
+		FESound.playDistancedSound("box_move_idle",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("box_move_idle");
 	}
-	IEnumerator SND_moveCrateEnd() {
+	public IEnumerator SND_moveCrateEnd() {
 		crateSoundStopping = true;
 		StopCoroutine("SND_moveCrate");
-		MasterAudio.PlaySound("box_move_stop");
-		MasterAudio.FadeOutAllOfSound("box_move_start",0.28f);
-		MasterAudio.FadeOutAllOfSound("box_move_idle",0.28f);
+		FESound.playDistancedSound("box_move_stop",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("box_move_stop");
+		FESound.playDistancedSound("box_move_start",gameObject.transform, _player.transform,0f,"fade",0.28f);//MasterAudio.FadeOutAllOfSound("box_move_start",0.28f);
+		FESound.playDistancedSound("box_move_idle",gameObject.transform, _player.transform,0f,"fade",0.28f);//MasterAudio.FadeOutAllOfSound("box_move_idle",0.28f);
 		yield return new WaitForSeconds(0.28f);
-		MasterAudio.StopAllOfSound("box_move_start");
-		MasterAudio.StopAllOfSound("box_move_idle");
+		FESound.playDistancedSound("box_move_start",gameObject.transform, _player.transform,0f,"stop");//MasterAudio.StopAllOfSound("box_move_start");
+		FESound.playDistancedSound("box_move_idle",gameObject.transform, _player.transform,0f,"stop");//MasterAudio.StopAllOfSound("box_move_idle");
 		crateSoundPlaying = crateSoundStopping = false;
 	}
 	void SND_crateFall() {
-		MasterAudio.PlaySound("box_fall");
+		FESound.playDistancedSound("box_fall",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("box_fall");
 	}
 	void OnTriggerExit(Collider other) {
 		if(other.gameObject.tag=="Player") {
@@ -238,12 +241,14 @@ public class Crate : MonoBehaviour {
 		}
 		else {
 			if(hitInfo.collider.CompareTag("Enemy")) {hitInfo.collider.gameObject.GetComponent<Character>().getDamage(1);} //Kill mob if Crate falls from top
+			if(hitInfo.collider.CompareTag("Blocker")) {
 			grounded = true;
 			vectorMove.y = 0;
 			if(!touchFloor) {touchFloor=true;SND_crateFall();}
 			//BoxCollider colliderHit = hitInfo.collider as BoxCollider;
 			//print (colliderHit.size);
 			//thisTransform.position = new Vector3(thisTransform.position.x, (float)((hitInfo.transform.position.y)+replaceCrate), thisTransform.position.z);
+			}
 		}
 	}
 	void GameStart () {

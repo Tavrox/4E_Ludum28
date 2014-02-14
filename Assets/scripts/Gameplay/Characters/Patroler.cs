@@ -120,6 +120,7 @@ public class Patroler : Character {
 		go = !go;
 		if(go == true) waypointId=0;
 		else waypointId=1;
+		if(touchingCrate) touchedCrate.gameObject.GetComponent<Crate>().StartCoroutine("SND_moveCrateEnd");
 		touchingCrate = false;
 	}
 	protected void OnTriggerEnter(Collider _other) 
@@ -132,6 +133,7 @@ public class Patroler : Character {
 		if(_other.CompareTag("Crate")) {
 			touchingCrate = true;
 			touchedCrate = _other.gameObject.GetComponent<Crate>();
+			_other.gameObject.GetComponent<Crate>().StartCoroutine("SND_moveCrate");
 		}
 	}
 //	protected void OnTriggerExit(Collider _other) 
@@ -194,8 +196,8 @@ public class Patroler : Character {
 
 	private void sound()
 	{
-		if(walkSoundSwitch) MasterAudio.PlaySound ("blob_run1");
-		else MasterAudio.PlaySound ("blob_run2");
+		if(walkSoundSwitch) FESound.playDistancedSound("blob_run1",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound ("blob_run1");
+		else FESound.playDistancedSound("blob_run2",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound ("blob_run2");
 		walkSoundSwitch = !walkSoundSwitch;
 	}
 }

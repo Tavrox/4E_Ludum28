@@ -6,6 +6,7 @@ public class TriggeredDoor : MonoBehaviour {
 	public OTAnimatingSprite animSprite;
 	public bool isLocked = true ;
 	private bool memoryLock;
+	private Player _player;
 
 	void Start() {
 		animSprite.Play("closed");
@@ -16,6 +17,7 @@ public class TriggeredDoor : MonoBehaviour {
 			Unlock();
 			memoryLock = false;
 		}
+		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
 		GameEventManager.GameStart += GameStart;
 	}
 
@@ -25,7 +27,7 @@ public class TriggeredDoor : MonoBehaviour {
 //		{
 			isLocked = false;
 			collider.enabled = false;//Destroy(collider);
-			MasterAudio.PlaySound("door_open", 1f, 1f, 0.3f);
+			FESound.playDistancedSound("door_open",gameObject.transform, _player.transform,0f,"play",0.3f);//MasterAudio.PlaySound("door_open", 1f, 1f, 0.3f);
 			StartCoroutine("WaitUnlock");
 //		}
 	}
@@ -46,7 +48,7 @@ public class TriggeredDoor : MonoBehaviour {
 //		animSprite.PlayBackward("unlock");
 		isLocked = true;
 		collider.enabled = true;
-		MasterAudio.PlaySound("door_close");
+		FESound.playDistancedSound("door_close",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("door_close");
 		StartCoroutine("WaitLock");
 	}
 

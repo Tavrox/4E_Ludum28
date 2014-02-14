@@ -10,8 +10,9 @@ public class Lever : MonoBehaviour {
 
 	public enum btnType { Lever, TimedBtn, SequenceBtn }
 	public btnType myButtonType;
-	public float delay = 0;
+	public float delay = 0, SND_minDist;
 	public bool trigged, seqLocked, stopped;
+	private Player _player;
 	//private Label test;
 	//private Rect _myTimer;
 	private float _myRemainingTime;
@@ -27,6 +28,7 @@ public class Lever : MonoBehaviour {
 			//myPos = Camera.main.WorldToScreenPoint(transform.position);
 			/*print(myPos);_myTimer = new Rect(15,15,20,20);*/}
 		if(myButtonType == btnType.TimedBtn) { animSprite.Play("timedlock");}
+		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
 		GameEventManager.GameStart += GameStart;
 	}
 	void Update () {
@@ -57,10 +59,10 @@ public class Lever : MonoBehaviour {
 		{
 			if (Input.GetKeyDown(KeyCode.Space) && !seqLocked)
 			{
-				MasterAudio.PlaySound("lever");
+				FESound.playDistancedSound("lever",gameObject.transform, _player.transform,SND_minDist);//MasterAudio.PlaySound("lever");
 				trigged = !trigged;
 				if(trigged) {if(myButtonType == btnType.TimedBtn) animSprite.Play("timedunlock"); else animSprite.Play("unlock");}
-				else {if(myButtonType == btnType.TimedBtn){MasterAudio.PlaySound("timer_button_alarm"); animSprite.Play("timedlock");} else animSprite.Play("lock");}
+				else {if(myButtonType == btnType.TimedBtn){/*MasterAudio.PlaySound("timer_button_alarm");*/ animSprite.Play("timedlock");} else animSprite.Play("lock");}
 
 				if(myButtonType == btnType.SequenceBtn) {seqLocked = true;}
 				else {

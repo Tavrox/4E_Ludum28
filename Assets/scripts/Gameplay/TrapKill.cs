@@ -4,11 +4,12 @@ using System.Collections;
 public class TrapKill : MonoBehaviour {
 
 	private bool triggered = false;
+	private Player _player;
 
 //	// Use this for initialization
-//	void Start () {
-//
-//	}
+	void Start () {
+		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
+	}
 //	
 //	// Update is called once per frame
 //	void Update () {
@@ -19,7 +20,7 @@ public class TrapKill : MonoBehaviour {
 	{
 		if (_other.CompareTag("Player") == true && GameObject.Find("Player").GetComponent<Player>().isDead == false)
 		{
-			MasterAudio.PlaySound("hole");
+			FESound.playDistancedSound("hole",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("hole");
 			GameObject.Find("Player").GetComponent<Player>().isDead = true;
 			GameEventManager.TriggerGameOver();
 		}

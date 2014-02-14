@@ -7,6 +7,7 @@ public class Turret : MonoBehaviour {
 	public Projectile prefabProj;
 	public float shootFrequency, shootSpeed;
 	private Projectile instProj;
+	private Player _player;
 	
 	public enum shootDir { Right, Left, Up, Down }
 	public shootDir myShootDir;
@@ -16,6 +17,7 @@ public class Turret : MonoBehaviour {
 		//StartCoroutine("waitB4Shoot");
 		GameEventManager.GameOver += GameOver;
 		GameEventManager.GameStart += GameStart;
+		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
 	}
 
 	private void GameStart()
@@ -45,7 +47,7 @@ public class Turret : MonoBehaviour {
 //		    && transform.position.y < _player.trans.position.x - 600
 //		    && transform.position.y > _player.trans.position.x + 600)
 //		{
-			MasterAudio.PlaySound("turret_shot");
+		FESound.playDistancedSound("turret_shot",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("turret_shot");
 //		}
 		switch (myShootDir) {
 			case shootDir.Down:

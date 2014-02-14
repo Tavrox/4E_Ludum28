@@ -315,7 +315,7 @@ GameObject:
   - 164: {fileID: 16400010}
   - 166: {fileID: 16600010}
   m_Layer: 0
-  m_Name: Blob_run2
+  m_Name: blob_run2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1467,7 +1467,7 @@ GameObject:
   - 4: {fileID: 400154}
   - 114: {fileID: 11400166}
   m_Layer: 0
-  m_Name: player_runL1
+  m_Name: player_runR1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1616,7 +1616,7 @@ GameObject:
   - 4: {fileID: 400170}
   - 114: {fileID: 11400182}
   m_Layer: 0
-  m_Name: Blob_run2
+  m_Name: blob_run2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13033,19 +13033,6 @@ MonoBehaviour:
   - {fileID: 11400064}
   - {fileID: 11400034}
   - {fileID: 11400210}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   bulkVariationMode: 0
   logSound: 0
   limitMode: 0

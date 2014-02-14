@@ -37,7 +37,7 @@ public class ArcElectric : MonoBehaviour {
 	{
 		if (_other.CompareTag("Player") == true && GameObject.Find("Player").GetComponent<Player>().isDead == false)
 		{
-			MasterAudio.PlaySound("hole");
+			FESound.playDistancedSound("hole",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("hole");
 			GameObject.Find("Player").GetComponent<Player>().isDead = true;
 			GameEventManager.TriggerGameOver();
 		}
@@ -49,7 +49,8 @@ public class ArcElectric : MonoBehaviour {
 		StopCoroutine("activateInfinite");
 		StopCoroutine("SND_activateThenOff");
 		if(!muted) {MasterAudio.FadeOutAllOfSound("piston_idle",0.43f);
-			MasterAudio.PlaySound("piston_off");}
+			FESound.playDistancedSound("piston_off",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_off");
+		}
 	}
 	public void turnON () {
 		animSprite.Play("arcON");collider.enabled=true;
@@ -66,22 +67,24 @@ public class ArcElectric : MonoBehaviour {
 		else if(activeTime!=0) StartCoroutine("waitB4Active",true);
 	}
 	IEnumerator activateInfinite() {
-		if(!muted) MasterAudio.PlaySound("piston_on");
+			if(!muted) FESound.playDistancedSound("piston_on",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_on");
 		yield return new WaitForSeconds(0.12f);
 		animSprite.Play("arcON");collider.enabled=true;
 		if(!muted) {yield return new WaitForSeconds(0.257f);
-			MasterAudio.PlaySound("piston_idle");}
+				FESound.playDistancedSound("piston_idle",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_idle");
+			}
 	}
 	IEnumerator SND_activateThenOff() {
-		if(!muted) MasterAudio.PlaySound("piston_on");
+		if(!muted) FESound.playDistancedSound("piston_on",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_on");
 		yield return new WaitForSeconds(0.12f);
 		animSprite.Play("arcON");collider.enabled=true;
 		if(!muted) {yield return new WaitForSeconds(0.257f);
-		MasterAudio.PlaySound("piston_idle");
+		FESound.playDistancedSound("piston_idle",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_idle");
 		yield return new WaitForSeconds(activeTime-0.257f-0.43f);
-		MasterAudio.FadeOutAllOfSound("piston_idle",0.43f);
-		MasterAudio.PlaySound("piston_off");
+		FESound.playDistancedSound("piston_idle",gameObject.transform, _player.transform,0f,"fade",0.43f);//MasterAudio.FadeOutAllOfSound("piston_idle",0.43f);
+		FESound.playDistancedSound("piston_off",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_off");
 		yield return new WaitForSeconds(0.43f);
-			MasterAudio.StopAllOfSound("piston_idle");}
+		FESound.playDistancedSound("piston_idle",gameObject.transform, _player.transform,0f,"stop");//MasterAudio.StopAllOfSound("piston_idle");
+			}
 	}
 }
