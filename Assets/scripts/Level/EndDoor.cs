@@ -23,7 +23,7 @@ public class EndDoor : MonoBehaviour {
 	{
 		if (other.gameObject.CompareTag("Player") && !triggered)
 		{
-			if (Input.GetKeyDown(KeyCode.F) && _player.hasFinalKey == true)
+			if ((Input.GetKeyDown(KeyCode.F) || Input.GetKey("space")) && _player.hasFinalKey == true)
 			{
 				sprite.frameIndex += 1;
 				triggered = true;
@@ -32,7 +32,7 @@ public class EndDoor : MonoBehaviour {
 				finishLevel();
 				MasterAudio.PlaySound("key_door");
 			}
-			else if (Input.GetKeyDown("space") && _player.hasFinalKey == false)
+			else if ((Input.GetKeyDown(KeyCode.F) || Input.GetKey("space"))  && _player.hasFinalKey == false)
 			{
 				_UINeedKey.GetComponent<IngameUI>().fadeOut();
 

@@ -56,7 +56,8 @@ public class Character : MonoBehaviour
 	[HideInInspector] public Vector3 vectorFixed;
 	protected Vector3 vectorMove;
 	private Vector3 mypos;
-	
+
+	public float jumpSpeed = 2f;
 	[Range (0,2000)] 	public float 	moveVel = 10f;
 	[Range (0,2000)] 	public float 	jumpVel = 80f;
 	[Range (0,2000)] 	public float 	jump2Vel = 14f;
@@ -79,6 +80,7 @@ public class Character : MonoBehaviour
 	protected int groundMask = 1 << 8 | 1 << 9; // Ground, Block
 	protected int platformMask = 1 << 9; //Block
 	private float pfPassSpeed = 2.8f;
+	private float addForce;
 	
 	public virtual void Awake()
 	{
@@ -145,10 +147,12 @@ public class Character : MonoBehaviour
 //					vectorMove.y = jump2Vel;
 //				}
 			}
-			if(vectorMove.y < maxVelY)	vectorMove.y += 2f;
+			print (vectorMove.y);
+			if(vectorMove.y < maxVelY/2f)	vectorMove.y += jumpSpeed;
+			else if(vectorMove.y < maxVelY)	vectorMove.y += jumpSpeed*2f;
 			else chute=true;
 		}
-		float addForce = 1;
+		addForce = 1;
 		if((!grounded && !Input.GetKey("up")) || blockedUp) chute = true;
 		if(blockedUp) {addForce=hitUpBounceForce;/*gravityY += 150f;StartCoroutine("resetGravity");*/}
 		if(chute && grounded) {chute = false;MasterAudio.PlaySound("player_fall");}
