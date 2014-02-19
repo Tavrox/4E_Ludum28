@@ -42,7 +42,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 16.6666679, y: 12.5, z: 1}
+  m_LocalScale: {x: 18.6666679, y: 13.9999981, z: 1.12}
   m_Children: []
   m_Father: {fileID: 400002}
 --- !u!4 &400002
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: spriteInvasion
   _position: {x: 0, y: 0}
-  _size: {x: 16.6666679, y: 12.5}
+  _size: {x: 18.6666679, y: 13.9999981}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -145,8 +145,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 0
-  _frameName: invasion_0000
+  _frameIndex: 18
+  _frameName: invasion_0018
   _spriteContainer: {fileID: 0}
   _containerName: invasionSheet
   _newSprite: 0

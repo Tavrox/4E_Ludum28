@@ -40,9 +40,9 @@ public class Lever : MonoBehaviour {
 		}
 	}
 	private IEnumerator leverTimer() {
-		yield return new WaitForSeconds(1f);
 		_myRemainingTime -= 1;
 		_myTimer.text = _myRemainingTime.ToString();
+		yield return new WaitForSeconds(1f);
 		StartCoroutine("leverTimer");
 	}
 	private IEnumerator waitB4Restart (float delayRestart) {
@@ -57,7 +57,7 @@ public class Lever : MonoBehaviour {
 	{
 		if (other.gameObject.CompareTag("Player"))
 		{
-			if (Input.GetKeyDown(KeyCode.Space) && !seqLocked)
+			if (Input.GetKeyDown(KeyCode.Space) && !seqLocked && !(myButtonType == btnType.TimedBtn && trigged))
 			{
 				FESound.playDistancedSound("lever",gameObject.transform, _player.transform,SND_minDist);//MasterAudio.PlaySound("lever");
 				trigged = !trigged;
@@ -76,7 +76,7 @@ public class Lever : MonoBehaviour {
 		
 	}
 	IEnumerator delayRetrigg() {
-		yield return new WaitForSeconds(delay+1);
+		yield return new WaitForSeconds(delay);
 		triggerLever();
 		trigged = false;
 		_myRemainingTime = delay;
