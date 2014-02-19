@@ -420,7 +420,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.7924614, z: 0}
+  m_LocalPosition: {x: 0, y: 6.5999999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400018}
@@ -449,7 +449,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.84128094, y: 5.27526093, z: 0}
+  m_LocalPosition: {x: 7.5, y: 6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400030}
@@ -824,6 +824,7 @@ MonoBehaviour:
   shieldDef: 0
   thisTransform: {fileID: 0}
   vectorFixed: {x: 0, y: 0, z: 0}
+  jumpSpeed: 2
   moveVel: 10
   jumpVel: 600
   jump2Vel: 14
