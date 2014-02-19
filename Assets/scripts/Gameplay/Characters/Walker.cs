@@ -104,24 +104,28 @@ public class Walker : Enemy {
 				if(hitInfo.transform.position.x < thisTransform.position.x) {thisTransform.position += new Vector3((spriteScaleX/8f),0f,0f);/*isLeft = false;isRight = true;*/}
 				else if (hitInfo.transform.position.x > thisTransform.position.x) {thisTransform.position -= new Vector3((spriteScaleX/8f),0f,0f);/*isLeft = true;isRight = false;*/}
 			}
+			else checkPlayerRaycast();
+		}
+		else checkPlayerRaycast();
+	}
+	
+	private void checkPlayerRaycast() {
+		//print ("CA CHERCHE");
+		if (Physics.Raycast(detectTargetLeft, out hitInfo, targetDetectionArea) || Physics.Raycast(detectTargetRight, out hitInfo, targetDetectionArea)) {
+//			print ("CA TOUCHE");
+			if(hitInfo.collider.name == "ColliBox" || hitInfo.collider.tag=="Blocker") {
+				chasingPlayer = false;
+				isLeft = isRight = false;
+			}
+			else if(hitInfo.collider.name == "Player" && !endChasingPlayer) {
+//				print ("CHAAAASSSSSEE");
+				chasingPlayer = true;
+			}
+			else if(!chasingPlayer) {isLeft = isRight = false;}
+//			print(hitInfo);
 		}
 		else {
-			if (Physics.Raycast(detectTargetLeft, out hitInfo, targetDetectionArea) || Physics.Raycast(detectTargetRight, out hitInfo, targetDetectionArea)) {
-				//print ("CA TOUCHE");
-				if(hitInfo.collider.name == "ColliBox" || hitInfo.collider.tag=="Blocker") {
-					chasingPlayer = false;
-					isLeft = isRight = false;
-				}
-				else if(hitInfo.collider.name == "Player" && !endChasingPlayer) {
-					//print ("CHAAAASSSSSEE");
-					chasingPlayer = true;
-				}
-				else if(!chasingPlayer) {isLeft = isRight = false;}
-				//print(hitInfo);
-			}
-			else {
-				if(!chasingPlayer) {isLeft = isRight = false;}
-			}
+			if(!chasingPlayer) {isLeft = isRight = false;}
 		}
 	}
 	protected void detectEndPlatform() {
