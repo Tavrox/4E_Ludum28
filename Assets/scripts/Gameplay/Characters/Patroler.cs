@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Patroler : Character {
@@ -25,6 +25,7 @@ public class Patroler : Character {
 	public Transform[] waypoints;
 	private Player _player;
 	private bool walkSoundSwitch;
+	public bool isVertical;
 	
 	//	private WaveCreator soundEmitt1, soundEmitt2, soundInstru1, soundInstru2,soundEmitt3;
 	//	private int cptWave=1, pebbleDirection = 1;
@@ -91,10 +92,18 @@ public class Patroler : Character {
 		//			//print ("********** IN *********");
 		//		}
 		//print(Vector3.Distance(new Vector3(transform.position.x,0f,0f), new Vector3(waypoints[waypointId].position.x,0f,0f)));
+		if(isVertical) {
+			if(Vector3.Distance(new Vector3(0f,transform.position.y,0f), new Vector3(0f,waypoints[waypointId].position.y,0f)) < (spriteScaleX/2f) && canChangeDir)
+				revertDirection();
+			else if (Vector3.Distance(new Vector3(0f,transform.position.y,0f), new Vector3(0f,waypoints[waypointId].position.y,0f)) > (spriteScaleX/2f)+1 && !canChangeDir)
+				canChangeDir = true;
+		}
+		else {
 		if(Vector3.Distance(new Vector3(transform.position.x,0f,0f), new Vector3(waypoints[waypointId].position.x,0f,0f)) < (spriteScaleX/2f) && canChangeDir)
 			revertDirection();
 		else if (Vector3.Distance(new Vector3(transform.position.x,0f,0f), new Vector3(waypoints[waypointId].position.x,0f,0f)) > (spriteScaleX/2f)+1 && !canChangeDir)
 			canChangeDir = true;
+		}
 		//		
 		if(go == true) {
 			isRight = false;
@@ -102,7 +111,8 @@ public class Patroler : Character {
 			facingDir = facing.Left;
 			gameObject.GetComponent<PatrolerAnims>().InvertSprite();
 			//UpdateMovement();
-			thisTransform.position -= new Vector3(myCORRECTSPEED,0f,0f);
+			if(isVertical) thisTransform.position -= new Vector3(0f,myCORRECTSPEED,0f);
+			else thisTransform.position -= new Vector3(myCORRECTSPEED,0f,0f);
 			if(touchingCrate && touchedCrate!=null) moveCrate(go);
 		}
 		else {
@@ -111,7 +121,8 @@ public class Patroler : Character {
 			facingDir = facing.Right;
 			gameObject.GetComponent<PatrolerAnims>().NormalScaleSprite();
 			//UpdateMovement();
-			thisTransform.position += new Vector3(myCORRECTSPEED,0f,0f);
+			if(isVertical) thisTransform.position += new Vector3(0f,myCORRECTSPEED,0f);
+			else thisTransform.position += new Vector3(myCORRECTSPEED,0f,0f);
 			if(touchingCrate && touchedCrate!=null) moveCrate(go);
 		}
 	}

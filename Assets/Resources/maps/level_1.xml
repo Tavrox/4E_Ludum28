@@ -506,9 +506,9 @@
   <object name="1BaseL1" type="BaseArcL" x="190" y="698" width="166" height="76"/>
   <object name="1Patroleur1" type="Patroler" x="1336" y="1936" width="112" height="48"/>
  </objectgroup>
- <objectgroup name="2" width="60" height="60">
-  <object name="1Door4" type="TriggeredDoor" x="1292" y="398" width="224" height="52"/>
-  <object name="1Door7" type="TriggeredDoor" x="2396" y="402" width="472" height="70"/>
+ <objectgroup name="2" width="60" height="60" visible="0">
+  <object name="2Door4" type="TriggeredDoor" x="1292" y="398" width="224" height="52"/>
+  <object name="2Door7" type="TriggeredDoor" x="2396" y="402" width="472" height="70"/>
   <object name="2Door11" type="TriggeredDoor" x="1500" y="1238" width="56" height="168"/>
   <object name="2Patroleur1" type="Patroler" x="1121" y="994" width="112" height="48"/>
   <object name="2Seq-9-3" type="SequencedBtn" x="1390" y="1290" width="58" height="78"/>
@@ -545,7 +545,75 @@
   <object name="2Door12" type="TriggeredDoor" x="2324" y="1826" width="48" height="188"/>
   <object name="2Timed-6-11-12" type="TimedBtn" x="2539" y="1149" width="66" height="90"/>
  </objectgroup>
- <objectgroup name="3" width="60" height="60"/>
- <objectgroup name="4" width="60" height="60"/>
- <objectgroup name="5" width="60" height="60"/>
+ <objectgroup name="3" width="60" height="60" visible="0">
+  <object name="3ArcH3" type="ArcHorizontal" x="1846" y="521" width="102" height="54"/>
+  <object name="3Door4" type="TriggeredDoor" x="1288" y="408" width="224" height="52"/>
+  <object name="3Door9" type="TriggeredDoor" x="444" y="1148" width="56" height="268"/>
+  <object name="3Patroleur1" type="Patroler" x="1117" y="1004" width="112" height="48"/>
+  <object name="3BaseL4" type="BaseArcL" x="2652" y="1263" width="102" height="52"/>
+  <object name="3EndDoor" type="EndDoor" x="300" y="1246" width="88" height="158"/>
+  <object name="3Door8" type="TriggeredDoor" x="700" y="852" width="52" height="218"/>
+  <object name="3Door12" type="TriggeredDoor" x="2320" y="1836" width="48" height="188"/>
+  <object name="3BaseL2" type="BaseArcL" x="745" y="497" width="102" height="52"/>
+  <object name="3BaseR3" type="BaseArcR" x="1950" y="521" width="102" height="54"/>
+  <object name="3Door7" type="TriggeredDoor" x="2392" y="412" width="472" height="70"/>
+  <object name="3Door5" type="TriggeredDoor" x="1844" y="406" width="216" height="58"/>
+  <object name="3Key" type="Key" x="921" y="1487" width="60" height="60"/>
+  <object name="3ArcH2" type="ArcHorizontal" x="849" y="497" width="102" height="54"/>
+  <object name="3Lever3" type="Lever" x="854" y="266" width="54" height="72"/>
+  <object name="3Patroleur2" type="Patroler" x="2394" y="206" width="112" height="48"/>
+  <object name="3Timed-6-11-12" type="TimedBtn" x="2535" y="1159" width="66" height="90"/>
+  <object name="3Door6" type="TriggeredDoor" x="1841" y="1586" width="48" height="188"/>
+  <object name="3ArcH2" type="ArcHorizontal" x="952" y="497" width="102" height="54"/>
+  <object name="3Door11" type="TriggeredDoor" x="1496" y="1248" width="56" height="168"/>
+  <object name="3ArcH4" type="ArcHorizontal" x="2756" y="1263" width="102" height="54"/>
+  <object name="3Door2" type="TriggeredDoor" x="738" y="406" width="322" height="52"/>
+  <object name="3Seq-9-1" type="SequencedBtn" x="403" y="1656" width="58" height="78"/>
+  <object name="3Lever8" type="TimedBtn" x="890" y="927" width="52" height="78"/>
+  <object name="3Door3" type="TriggeredDoor" x="1056" y="200" width="62" height="212"/>
+  <object name="3Lever-5-7" type="Lever" x="2199" y="276" width="66" height="90"/>
+  <object name="3ArcH3" type="ArcHorizontal" x="1300" y="515" width="102" height="54"/>
+  <object name="3BaseR3" type="BaseArcR" x="1404" y="515" width="102" height="54"/>
+  <object name="3Patroleur2" type="Patroler" x="1502" y="203" width="112" height="48"/>
+ </objectgroup>
+ <objectgroup name="4" width="60" height="60">
+  <object name="4ArcH3" type="ArcHorizontal" x="1843" y="563" width="102" height="54"/>
+  <object name="4Door4" type="TriggeredDoor" x="1285" y="408" width="224" height="52"/>
+  <object name="4Door1" type="TriggeredDoor" x="497" y="202" width="44" height="206"/>
+  <object name="4Door9" type="TriggeredDoor" x="441" y="1148" width="56" height="268"/>
+  <object name="4ArcH2" type="ArcHorizontal" x="2798" y="882" width="102" height="54"/>
+  <object name="4Patroleur1" type="Patroler" x="1114" y="1004" width="112" height="48"/>
+  <object name="4BaseL4" type="BaseArcL" x="1843" y="481" width="102" height="52"/>
+  <object name="4EndDoor" type="EndDoor" x="337" y="1252" width="88" height="158"/>
+  <object name="4BaseD1" type="BaseArcD" x="573" y="308" width="54" height="103"/>
+  <object name="4Seq-9-2" type="SequencedBtn" x="934" y="1507" width="58" height="78"/>
+  <object name="4Door8" type="TriggeredDoor" x="476" y="1755" width="334" height="45"/>
+  <object name="4Door12" type="TriggeredDoor" x="2317" y="1836" width="48" height="188"/>
+  <object name="4BaseL2" type="BaseArcL" x="2488" y="882" width="102" height="52"/>
+  <object name="4ArcH1" type="ArcHorizontal" x="2797" y="535" width="102" height="54"/>
+  <object name="4BaseR3" type="BaseArcR" x="1947" y="563" width="102" height="54"/>
+  <object name="4Door7" type="TriggeredDoor" x="2389" y="412" width="472" height="70"/>
+  <object name="4Door5" type="TriggeredDoor" x="1841" y="406" width="216" height="58"/>
+  <object name="4Key" type="Key" x="770" y="917" width="60" height="60"/>
+  <object name="4ArcH2" type="ArcHorizontal" x="2592" y="882" width="102" height="54"/>
+  <object name="4Seq-9-3" type="SequencedBtn" x="1383" y="1300" width="58" height="78"/>
+  <object name="4Level23" type="Lever" x="648" y="272" width="54" height="72"/>
+  <object name="4ArcH1" type="ArcHorizontal" x="2591" y="535" width="102" height="54"/>
+  <object name="4BaseL1" type="BaseArcL" x="2488" y="535" width="102" height="52"/>
+  <object name="4Patroleur2" type="Patroler" x="197" y="530" width="64" height="115"/>
+  <object name="4Timed-6-11-12" type="TimedBtn" x="2532" y="1159" width="66" height="90"/>
+  <object name="4Door6" type="TriggeredDoor" x="1838" y="1586" width="48" height="188"/>
+  <object name="4Lever1" type="TimedBtn" x="365" y="582" width="52" height="78"/>
+  <object name="4ArcH2" type="ArcHorizontal" x="2695" y="882" width="102" height="54"/>
+  <object name="4Door11" type="TriggeredDoor" x="1493" y="1248" width="56" height="168"/>
+  <object name="4ArcH4" type="ArcHorizontal" x="1947" y="481" width="102" height="54"/>
+  <object name="4Door2" type="TriggeredDoor" x="735" y="406" width="322" height="52"/>
+  <object name="4BaseU1" type="BaseArcU" x="574" y="201" width="54" height="107"/>
+  <object name="4Seq-9-1" type="SequencedBtn" x="246" y="1771" width="58" height="78"/>
+  <object name="4Lever8" type="TimedBtn" x="627" y="1039" width="52" height="78"/>
+  <object name="4Door3" type="TriggeredDoor" x="1053" y="200" width="62" height="212"/>
+  <object name="4Lever-5-7" type="Lever" x="2196" y="276" width="66" height="90"/>
+  <object name="4ArcH1" type="ArcHorizontal" x="2694" y="535" width="102" height="54"/>
+ </objectgroup>
+ <objectgroup name="5" width="60" height="60" visible="0"/>
 </map>
