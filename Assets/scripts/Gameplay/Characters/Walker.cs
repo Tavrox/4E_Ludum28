@@ -25,7 +25,7 @@ public class Walker : Enemy {
 		if(chasingPlayer) {ChasePlayer();}
 		detectPlayer();
 		detectEndPlatform();
-		UpdateMovement();
+		if(!chasingPlayer) {UpdateMovement();}
 	}
 
 	protected void GameStart () {
@@ -110,21 +110,29 @@ public class Walker : Enemy {
 	}
 	
 	private void checkPlayerRaycast() {
-		//print ("CA CHERCHE");
+//		print ("CA CHERCHE");
 		if (Physics.Raycast(detectTargetLeft, out hitInfo, targetDetectionArea) || Physics.Raycast(detectTargetRight, out hitInfo, targetDetectionArea)) {
 //			print ("CA TOUCHE");
 			if(hitInfo.collider.name == "ColliBox" || hitInfo.collider.tag=="Blocker") {
+//				print ("CHAAArhrt/r88tr*h7*/7*/*ASSSSColliBoxSEE");
 				chasingPlayer = false;
 				isLeft = isRight = false;
 			}
-			else if(hitInfo.collider.name == "Player" && !endChasingPlayer) {
+			else if(hitInfo.collider.name == "Player" /*&& !endChasingPlayer*/) {
 //				print ("CHAAAASSSSSEE");
 				chasingPlayer = true;
 			}
 			else if(!chasingPlayer) {isLeft = isRight = false;}
 //			print(hitInfo);
 		}
+		if(Physics.Raycast(detectTargetRight, out hitInfo, targetDetectionArea)) {
+			if(hitInfo.collider.name == "Player") {
+//				print ("CHAAAASSSSSEE");
+				chasingPlayer = true;
+			}
+		}
 		else {
+//			print("OLOLOLOLO-*---*/-/*/-/-/-/-*/*-/-*");
 			if(!chasingPlayer) {isLeft = isRight = false;}
 		}
 	}
