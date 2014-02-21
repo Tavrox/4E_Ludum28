@@ -124,7 +124,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -.349999994, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -141,9 +141,11 @@ MonoBehaviour:
   - {fileID: 0}
   myButtonType: 2
   delay: 0
+  SND_minDist: 0
   trigged: 0
   seqLocked: 0
   stopped: 0
+  _myTimer: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

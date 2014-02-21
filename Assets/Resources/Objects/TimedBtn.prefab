@@ -174,7 +174,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -.349999994, z: 0}
 --- !u!102 &10200000
 TextMesh:
   serializedVersion: 3
@@ -212,6 +212,7 @@ MonoBehaviour:
   - {fileID: 0}
   myButtonType: 1
   delay: 5
+  SND_minDist: 0
   trigged: 0
   seqLocked: 0
   stopped: 0
