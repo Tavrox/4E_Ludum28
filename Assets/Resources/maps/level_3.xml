@@ -400,7 +400,6 @@
   <object x="1300" y="900" width="100" height="50"/>
   <object x="900" y="1150" width="50" height="100"/>
   <object x="1350" y="750" width="50" height="150"/>
-  <object name="ZONE PATROLLER" type="Start" x="1700" y="1050" width="550" height="50"/>
   <object x="2050" y="1300" width="50" height="250"/>
   <object x="2050" y="1300" width="150" height="50"/>
   <object x="2800" y="350" width="100" height="100"/>
@@ -430,7 +429,7 @@
   <object name="1ArcVertB2" type="ArcVertical" x="1750" y="550" width="50" height="100"/>
   <object name="1ArcVertC" type="ArcVertical" x="2650" y="1050" width="50" height="100"/>
  </objectgroup>
- <objectgroup name="2" width="90" height="44" visible="0">
+ <objectgroup name="2" width="90" height="44">
   <object name="2Poursuiveur" type="Walker" x="3450" y="1400" width="48" height="48"/>
   <object name="2Poursuiveur1" type="Walker" x="950" y="700" width="48" height="48"/>
   <object name="2Caisse1" type="Crate" x="1000" y="650" width="100" height="100"/>
@@ -459,8 +458,16 @@
   <object name="2BaseArcRE" type="BaseArcR" x="3550" y="1100" width="50" height="100"/>
   <object name="2BaseArcLE" type="BaseArcL" x="3550" y="950" width="50" height="100"/>
   <object name="TIMING EASY MAIS LONG" type="Start" x="3350" y="1000" width="200" height="50"/>
+  <object name="ZONE PATROLLER" type="Start" x="1675" y="1025" width="550" height="50"/>
  </objectgroup>
- <objectgroup name="3" width="90" height="44" visible="0"/>
- <objectgroup name="4" width="90" height="44" visible="0"/>
+ <objectgroup name="3" width="90" height="44">
+  <object name="TourelleL1" type="TurretL" x="950" y="700" width="50" height="50"/>
+  <object name="TourelleU1" type="TurretU" x="1550" y="300" width="50" height="50"/>
+  <object name="TourelleL2" type="TurretL" x="1400" y="800" width="50" height="50"/>
+ </objectgroup>
+ <objectgroup name="4" width="90" height="44">
+  <object name="Caisse1" type="Crate" x="1700" y="650" width="100" height="100"/>
+  <object name="Clé" type="Crate" x="1450" y="1200" width="100" height="100"/>
+ </objectgroup>
  <objectgroup name="5" width="90" height="44" visible="0"/>
 </map>
