@@ -8,12 +8,14 @@ public class EndDoor : MonoBehaviour {
 	public int levelToGo = 0;
 	private Player _player;
 	private GameObject _UINeedKey;
+	private Timer _lvlTimer;
 	//private PlayerData _playerdata;
 
 
 	void Start() {
 		_player = GameObject.Find("Player").GetComponent<Player>();
 		_UINeedKey = GameObject.Find("Player/IngameUI/NeedKey").gameObject;
+		_lvlTimer = GameObject.Find("Player/IngameUI/Timer").GetComponent<Timer>();
 		//_playerdata = _player.GetComponent<PlayerData>();
 		GameEventManager.NextLevel += NextLevel;
 		GameEventManager.NextInstance += NextInstance;
@@ -44,6 +46,7 @@ public class EndDoor : MonoBehaviour {
 		sprite.frameIndex += 1;
 	}
 	private void finishLevel() {
+		_lvlTimer.pauseTimer = true;
 		MasterAudio.PlaySound("win");
 		MasterAudio.FadePlaylistToVolume(0f, 2f);
 		MasterAudio.FadeAllPlaylistsToVolume(0f, 2f);

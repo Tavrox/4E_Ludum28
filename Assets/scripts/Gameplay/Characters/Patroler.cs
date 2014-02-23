@@ -142,9 +142,12 @@ public class Patroler : Character {
 			GameEventManager.TriggerGameOver();
 		}
 		if(_other.CompareTag("Crate")) {
-			touchingCrate = true;
-			touchedCrate = _other.gameObject.GetComponent<Crate>();
-			_other.gameObject.GetComponent<Crate>().StartCoroutine("SND_moveCrate");
+			if(_other.gameObject.GetComponent<Crate>().grounded) {
+				touchingCrate = true;
+				touchedCrate = _other.gameObject.GetComponent<Crate>();
+				_other.gameObject.GetComponent<Crate>().StartCoroutine("SND_moveCrate");
+			}
+			else getDamage(1);
 		}
 	}
 //	protected void OnTriggerExit(Collider _other) 
@@ -157,11 +160,11 @@ public class Patroler : Character {
 	private void moveCrate(bool dirLeft) {
 		if(dirLeft) {
 			touchedCrate.transform.position -= new Vector3(myCORRECTSPEED,0f,0f);
-			if(_player.myCrate == touchedCrate && _player.onCrate) _player.transform.position -= new Vector3(myCORRECTSPEED,0f,0f);
+			//if(_player.myCrate == touchedCrate && _player.onCrate) _player.transform.position -= new Vector3(myCORRECTSPEED,0f,0f);
 		}
 		else {
 			touchedCrate.transform.position += new Vector3(myCORRECTSPEED,0f,0f);
-			if(_player.myCrate == touchedCrate && _player.onCrate) _player.transform.position += new Vector3(myCORRECTSPEED,0f,0f);
+			//if(_player.myCrate == touchedCrate && _player.onCrate) _player.transform.position += new Vector3(myCORRECTSPEED,0f,0f);
 		}
 	}
 	public void getDamage(int damage) {
@@ -173,6 +176,7 @@ public class Patroler : Character {
 		//if(FindObjectOfType(typeof(Enemy)) && this != null) {
 		//transform.localPosition = new Vector3(0f,0f,0f);
 		transform.position = new Vector3(spawnPos.x,spawnPos.y,0f);
+		gameObject.transform.parent.gameObject.SetActive(true);
 		enabled = true;
 		touchingCrate = false;
 		touchedCrate =null;

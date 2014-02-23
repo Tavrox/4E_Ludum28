@@ -12,7 +12,7 @@ public class Crate : MonoBehaviour {
 	public Ray detectEndPFLeft, detectEndPFRight, detectPlayerLeft, detectPlayerRight;
 	public int blockDetectionArea = 100;
 	public Player _player;
-	public bool blockCrate;
+	public bool blockCrate, isObjChild;
 	public float replaceCrate = 3f;
 	private Vector3 spawnPos;
 	private bool crateSoundPlaying, crateSoundStopping, touchFloor;
@@ -252,6 +252,6 @@ public class Crate : MonoBehaviour {
 		}
 	}
 	void GameStart () {
-		transform.position = new Vector3(spawnPos.x,spawnPos.y,spawnPos.z);
+		if(!isObjChild)	transform.position = new Vector3(spawnPos.x,spawnPos.y,spawnPos.z);
 	}
 }

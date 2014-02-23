@@ -178,7 +178,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 1802007415}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -208,7 +208,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4895675
 Transform:
   m_ObjectHideFlags: 0
@@ -234,9 +234,9 @@ Transform:
   - {fileID: 1255518894}
   - {fileID: 1033305111}
   - {fileID: 1140755872}
+  - {fileID: 1594167669}
   - {fileID: 1654173816}
   - {fileID: 1197979611}
-  - {fileID: 1594167669}
   m_Father: {fileID: 1147543988}
 --- !u!1 &6732556
 GameObject:
@@ -342,7 +342,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -896,7 +896,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 1806225831}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1146,44 +1146,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!21 &25964329
-Material:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: OTMaterial-transparent
-  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
-  m_ShaderKeywords: []
-  m_CustomRenderQueue: -1
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-      data:
-        first:
-          name: _MainTex
-        second:
-          m_Texture: {fileID: 2800000, guid: 190095c4b6829db468d2234cb7fb6fdd, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-    m_Floats:
-      data:
-        first:
-          name: _InvFade
-        second: 1
-    m_Colors:
-      data:
-        first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _TintColor
-        second: {r: .5, g: .5, b: .5, a: .5}
-      data:
-        first:
-          name: _EmisColor
-        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &30448354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1319,6 +1281,7 @@ MonoBehaviour:
   passingPlatform: 0
   onPlatform: 0
   myCrate: {fileID: 0}
+  myCrateX: 0
   blockedRight: 0
   blockedLeft: 0
   blockedUp: 0
@@ -2024,7 +1987,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -3080,7 +3043,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -3723,7 +3686,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -3843,7 +3806,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1354595810}
+  - {fileID: 1879114554}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -3963,7 +3926,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 1806225831}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -4382,7 +4345,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -4972,7 +4935,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -5357,7 +5320,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 135098143}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -5477,7 +5440,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -5740,7 +5703,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -5833,8 +5796,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 1
-  _frameName: arc01
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -5860,7 +5823,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -5876,6 +5839,90 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 118751233}
   m_Mesh: {fileID: 1899476277}
+--- !u!1 &121236338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+  m_PrefabInternal: {fileID: 468228705}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 121236339}
+  - 65: {fileID: 121236342}
+  - 114: {fileID: 121236341}
+  - 54: {fileID: 121236340}
+  m_Layer: 8
+  m_Name: Crate
+  m_TagString: Crate
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &121236339
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+  m_PrefabInternal: {fileID: 468228705}
+  m_GameObject: {fileID: 121236338}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.3023653, y: -36.6500015, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 146696961}
+  m_Father: {fileID: 0}
+--- !u!54 &121236340
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: c73ed60118ebfd84c8a8a5d61d3a0336,
+    type: 2}
+  m_PrefabInternal: {fileID: 468228705}
+  m_GameObject: {fileID: 121236338}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &121236341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: c73ed60118ebfd84c8a8a5d61d3a0336,
+    type: 2}
+  m_PrefabInternal: {fileID: 468228705}
+  m_GameObject: {fileID: 121236338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f9f9bf5225c7bd4b86f735384c1e14b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grounded: 0
+  thisTransform: {fileID: 0}
+  gravityY: .200000003
+  crateMove: 0
+  playerMoveVel: 0
+  spriteScaleX: 0
+  spriteScaleY: 0
+  vectorMove: {x: 0, y: 0, z: 0}
+  blockDetectionArea: 100
+  _player: {fileID: 0}
+  blockCrate: 0
+  isObjChild: 0
+  replaceCrate: 3
+--- !u!65 &121236342
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: c73ed60118ebfd84c8a8a5d61d3a0336,
+    type: 2}
+  m_PrefabInternal: {fileID: 468228705}
+  m_GameObject: {fileID: 121236338}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5, y: 1.75, z: 10}
+  m_Center: {x: 0, y: .150000006, z: 0}
 --- !u!1 &122795364
 GameObject:
   m_ObjectHideFlags: 0
@@ -5953,8 +6000,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 1
-  _frameName: arc01
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -5980,7 +6027,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -6081,6 +6128,44 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.04166698, y: 2.14583302, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!21 &135098143
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: OTMaterial-transparent
+  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: c1f764155ee03694884b505ed53beb28, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _InvFade
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &135963347
 GameObject:
   m_ObjectHideFlags: 0
@@ -6158,8 +6243,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 5
-  _frameName: base02
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -6185,7 +6270,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -6352,6 +6437,33 @@ Transform:
   m_Children:
   - {fileID: 1248327783}
   m_Father: {fileID: 934929779}
+--- !u!1 &146696960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100002, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+  m_PrefabInternal: {fileID: 468228705}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 146696961}
+  m_Layer: 8
+  m_Name: spriteParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &146696961
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400002, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+  m_PrefabInternal: {fileID: 468228705}
+  m_GameObject: {fileID: 146696960}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 803418769}
+  m_Father: {fileID: 121236339}
 --- !u!1 &151575216
 GameObject:
   m_ObjectHideFlags: 0
@@ -6769,7 +6881,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 206738109}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -6867,7 +6979,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000000000001c3f0000003f0000003f000000000000000000000000000080bfffffffff0000483e00001c3f0000003f000000bf000000000000000000000000000080bfffffffff0000483e0000603e000000bf000000bf000000000000000000000000000080bfffffffff000000000000603e
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -7032,7 +7144,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 1806225831}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -7191,7 +7303,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 135098143}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -7374,6 +7486,7 @@ MonoBehaviour:
   passingPlatform: 0
   onPlatform: 0
   myCrate: {fileID: 0}
+  myCrateX: 0
   blockedRight: 0
   blockedLeft: 0
   blockedUp: 0
@@ -7510,7 +7623,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 206738109}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -7773,7 +7886,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -7893,7 +8006,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -7909,44 +8022,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 173757282}
   m_Mesh: {fileID: 1781388362}
---- !u!21 &179049225
-Material:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: OTMaterial-transparent
-  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
-  m_ShaderKeywords: []
-  m_CustomRenderQueue: -1
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-      data:
-        first:
-          name: _MainTex
-        second:
-          m_Texture: {fileID: 2800000, guid: 15d30b27af903494c8bb73094772a372, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-    m_Floats:
-      data:
-        first:
-          name: _InvFade
-        second: 1
-    m_Colors:
-      data:
-        first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _TintColor
-        second: {r: .5, g: .5, b: .5, a: .5}
-      data:
-        first:
-          name: _EmisColor
-        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &179913328
 GameObject:
   m_ObjectHideFlags: 0
@@ -8238,8 +8313,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 1
-  _frameName: arc01
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -8265,7 +8340,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -8281,6 +8356,149 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 185028505}
   m_Mesh: {fileID: 875763600}
+--- !u!43 &185404183
+Mesh:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  serializedVersion: 8
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 6
+    topology: 0
+    firstVertex: 0
+    vertexCount: 4
+    localAABB:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: .5, y: .5, z: 0}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_MeshCompression: 0
+  m_StreamCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexBuffer: 000001000200020003000000
+  m_Skin: []
+  m_VertexData:
+    m_CurrentChannels: 15
+    m_VertexCount: 4
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 24
+      format: 2
+      dimension: 1
+    - stream: 0
+      offset: 28
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_Streams:
+    - channelMask: 15
+      offset: 0
+      stride: 36
+      dividerOp: 0
+      frequency: 0
+    - channelMask: 0
+      offset: 0
+      stride: 0
+      dividerOp: 0
+      frequency: 0
+    - channelMask: 0
+      offset: 0
+      stride: 0
+      dividerOp: 0
+      frequency: 0
+    - channelMask: 0
+      offset: 0
+      stride: 0
+      dividerOp: 0
+      frequency: 0
+    m_DataSize: 144
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff000000000000803f0000003f0000003f000000000000000000000000000080bfffffffff0000c83e0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000c83e00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000000000001c3f
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BindPoses:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Colors:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+  m_LocalAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: .5, y: .5, z: 0}
+  m_MeshUsageFlags: 0
+  m_MeshOptimized: 0
 --- !u!1 &185991142
 GameObject:
   m_ObjectHideFlags: 0
@@ -8385,7 +8603,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 135098143}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -8684,7 +8902,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000000000001c3f0000003f0000003f000000000000000000000000000080bfffffffff0000483e00001c3f0000003f000000bf000000000000000000000000000080bfffffffff0000483e0000603e000000bf000000bf000000000000000000000000000080bfffffffff000000000000603e
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -8886,7 +9104,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000483e0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000c83e0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000c83e00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000483e00001c3f
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -9271,6 +9489,44 @@ Transform:
   m_Children:
   - {fileID: 467674639}
   m_Father: {fileID: 318366635}
+--- !u!21 &206738109
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: OTMaterial-transparent
+  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: c1f764155ee03694884b505ed53beb28, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _InvFade
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!43 &208926796
 Mesh:
   m_ObjectHideFlags: 0
@@ -9545,7 +9801,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -9782,7 +10038,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -9929,7 +10185,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 135098143}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -10238,7 +10494,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -10390,8 +10646,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 1
-  _frameName: arc01
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -10417,7 +10673,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -11129,6 +11385,7 @@ MonoBehaviour:
   passingPlatform: 0
   onPlatform: 0
   myCrate: {fileID: 0}
+  myCrateX: 0
   blockedRight: 0
   blockedLeft: 0
   blockedUp: 0
@@ -12051,7 +12308,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -12149,7 +12406,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000483e0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000c83e0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000c83e00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000483e00001c3f
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -12498,7 +12755,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000000000001c3f0000003f0000003f000000000000000000000000000080bfffffffff0000483e00001c3f0000003f000000bf000000000000000000000000000080bfffffffff0000483e0000603e000000bf000000bf000000000000000000000000000080bfffffffff000000000000603e
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -12870,7 +13127,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -13027,7 +13284,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000000000001c3f0000003f0000003f000000000000000000000000000080bfffffffff0000483e00001c3f0000003f000000bf000000000000000000000000000080bfffffffff0000483e0000603e000000bf000000bf000000000000000000000000000080bfffffffff000000000000603e
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -13422,7 +13679,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -13722,8 +13979,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 5
-  _frameName: base02
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -13749,7 +14006,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -14338,7 +14595,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -14768,8 +15025,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 1
-  _frameName: arc01
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -14795,7 +15052,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -15175,7 +15432,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 962739492}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -15322,7 +15579,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 1806225831}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -15612,7 +15869,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -17003,7 +17260,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -17951,7 +18208,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000000000001c3f0000003f0000003f000000000000000000000000000080bfffffffff0000483e00001c3f0000003f000000bf000000000000000000000000000080bfffffffff0000483e0000603e000000bf000000bf000000000000000000000000000080bfffffffff000000000000603e
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -18330,7 +18587,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000000000001c3f0000003f0000003f000000000000000000000000000080bfffffffff0000483e00001c3f0000003f000000bf000000000000000000000000000080bfffffffff0000483e0000603e000000bf000000bf000000000000000000000000000080bfffffffff000000000000603e
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -18495,7 +18752,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 1806225831}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -18615,7 +18872,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -18735,7 +18992,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -18975,7 +19232,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -19181,7 +19438,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -19389,7 +19646,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 917033057}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -19965,7 +20222,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000483e0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000c83e0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000c83e00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000483e00001c3f
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -20329,7 +20586,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1411623562}
+  - {fileID: 519305987}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -20738,7 +20995,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000000000001c3f0000003f0000003f000000000000000000000000000080bfffffffff0000483e00001c3f0000003f000000bf000000000000000000000000000080bfffffffff0000483e0000603e000000bf000000bf000000000000000000000000000080bfffffffff000000000000603e
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -21462,7 +21719,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -21582,7 +21839,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -23387,6 +23644,44 @@ Mesh:
     m_Extent: {x: .5, y: .5, z: 0}
   m_MeshUsageFlags: 0
   m_MeshOptimized: 0
+--- !u!21 &459810572
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: OTMaterial-transparent
+  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 69b4745a57d9590439ff9b3af0627b97, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _InvFade
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &460167299
 GameObject:
   m_ObjectHideFlags: 0
@@ -23413,7 +23708,7 @@ Transform:
   m_GameObject: {fileID: 460167299}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.04166675, y: 2.14583278, z: 1}
+  m_LocalScale: {x: 1.04166675, y: 2.14583254, z: 1}
   m_Children: []
   m_Father: {fileID: 2044292996}
 --- !u!114 &460167301
@@ -23429,7 +23724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: leverSprite-127
   _position: {x: 0, y: 0}
-  _size: {x: 1.04166675, y: 2.14583278}
+  _size: {x: 1.04166675, y: 2.14583254}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -23452,7 +23747,7 @@ MonoBehaviour:
   protoType: 
   baseName: leverSprite
   oSize: {x: 1.04166675, y: 2.08333349}
-  imageSize: {x: 1.04166675, y: 2.14583278}
+  imageSize: {x: 1.04166675, y: 2.14583254}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -23464,8 +23759,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 5
-  _frameName: base02
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -23491,7 +23786,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -23584,8 +23879,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 1
-  _frameName: arc01
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -23611,7 +23906,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -23731,7 +24026,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 1806225831}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -23910,7 +24205,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -24436,7 +24731,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 459810572}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -24452,6 +24747,70 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 467674638}
   m_Mesh: {fileID: 1567268619}
+--- !u!1001 &468228705
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 13.3023653
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -36.6500015
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: _name
+      value: crateSprite-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: _spriteContainer
+      value: 
+      objectReference: {fileID: 1338251461}
+    - target: {fileID: 11400002, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: _containerName
+      value: objects
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1237329012}
+    - target: {fileID: 3300000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 185404183}
+    - target: {fileID: 100004, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: m_Name
+      value: crateSprite-1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+  m_RootGameObject: {fileID: 121236338}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &472426769
 GameObject:
   m_ObjectHideFlags: 0
@@ -24504,7 +24863,7 @@ Transform:
   m_GameObject: {fileID: 473772507}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.04166675, y: 2.14583206, z: 1}
+  m_LocalScale: {x: 1.04166675, y: 2.14583182, z: 1}
   m_Children: []
   m_Father: {fileID: 1851647566}
 --- !u!114 &473772509
@@ -24520,7 +24879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: leverSprite-12
   _position: {x: 0, y: 0}
-  _size: {x: 1.04166675, y: 2.14583206}
+  _size: {x: 1.04166675, y: 2.14583182}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -24543,7 +24902,7 @@ MonoBehaviour:
   protoType: 
   baseName: leverSprite
   oSize: {x: 1.04166675, y: 2.08333349}
-  imageSize: {x: 1.04166675, y: 2.14583206}
+  imageSize: {x: 1.04166675, y: 2.14583182}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -24555,8 +24914,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 5
-  _frameName: base02
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -24582,7 +24941,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -25225,7 +25584,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1354595810}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -25345,7 +25704,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 1806225831}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -25984,7 +26343,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -26083,6 +26442,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1230995922}
   - {fileID: 2065453587}
   m_Father: {fileID: 300785586}
 --- !u!65 &498982501
@@ -26162,6 +26522,7 @@ MonoBehaviour:
   passingPlatform: 0
   onPlatform: 0
   myCrate: {fileID: 0}
+  myCrateX: 0
   blockedRight: 0
   blockedLeft: 0
   blockedUp: 0
@@ -26356,8 +26717,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 1
-  _frameName: arc01
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -26383,7 +26744,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -26507,6 +26868,7 @@ MonoBehaviour:
   passingPlatform: 0
   onPlatform: 0
   myCrate: {fileID: 0}
+  myCrateX: 0
   blockedRight: 0
   blockedLeft: 0
   blockedUp: 0
@@ -26621,7 +26983,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000000000001c3f0000003f0000003f000000000000000000000000000080bfffffffff0000483e00001c3f0000003f000000bf000000000000000000000000000080bfffffffff0000483e0000603e000000bf000000bf000000000000000000000000000080bfffffffff000000000000603e
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -27257,6 +27619,44 @@ Mesh:
     m_Extent: {x: .5, y: .5, z: 0}
   m_MeshUsageFlags: 0
   m_MeshOptimized: 0
+--- !u!21 &519305987
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: OTMaterial-transparent
+  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 3673517278aed7c458a4fa630396ea11, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _InvFade
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &523557419
 GameObject:
   m_ObjectHideFlags: 0
@@ -27508,7 +27908,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000000000001c3f0000003f0000003f000000000000000000000000000080bfffffffff0000483e00001c3f0000003f000000bf000000000000000000000000000080bfffffffff0000483e0000603e000000bf000000bf000000000000000000000000000080bfffffffff000000000000603e
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -28500,8 +28900,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 1
-  _frameName: arc01
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -28527,7 +28927,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -28543,44 +28943,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 548622914}
   m_Mesh: {fileID: 1548343866}
---- !u!21 &551590068
-Material:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: OTMaterial-transparent
-  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
-  m_ShaderKeywords: []
-  m_CustomRenderQueue: -1
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-      data:
-        first:
-          name: _MainTex
-        second:
-          m_Texture: {fileID: 2800000, guid: c1f764155ee03694884b505ed53beb28, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-    m_Floats:
-      data:
-        first:
-          name: _InvFade
-        second: 1
-    m_Colors:
-      data:
-        first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _TintColor
-        second: {r: .5, g: .5, b: .5, a: .5}
-      data:
-        first:
-          name: _EmisColor
-        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &555169085
 GameObject:
   m_ObjectHideFlags: 0
@@ -29120,7 +29482,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -29304,7 +29666,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -29650,6 +30012,110 @@ Mesh:
     m_Extent: {x: .5, y: .5, z: 0}
   m_MeshUsageFlags: 0
   m_MeshOptimized: 0
+--- !u!1 &581871166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100002, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+  m_PrefabInternal: {fileID: 582149737}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 581871167}
+  m_Layer: 8
+  m_Name: spriteParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &581871167
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400002, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+  m_PrefabInternal: {fileID: 582149737}
+  m_GameObject: {fileID: 581871166}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1706307575}
+  m_Father: {fileID: 1230995922}
+--- !u!1001 &582149737
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 498982500}
+    m_Modifications:
+    - target: {fileID: 400000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -.00614547729
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -.24861145
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: _spriteContainer
+      value: 
+      objectReference: {fileID: 1338251461}
+    - target: {fileID: 11400002, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: _containerName
+      value: objects
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1237329012}
+    - target: {fileID: 3300000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 834622220}
+    - target: {fileID: 400000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: m_LocalScale.x
+      value: .802852273
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: m_LocalScale.y
+      value: .802852273
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: m_LocalScale.z
+      value: .802852273
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+      propertyPath: isObjChild
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5400000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+  m_RootGameObject: {fileID: 1230995918}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &582976983
 GameObject:
   m_ObjectHideFlags: 0
@@ -29816,7 +30282,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 459810572}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -29936,7 +30402,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -30283,7 +30749,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -30376,8 +30842,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 1
-  _frameName: arc01
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -30403,7 +30869,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -30445,7 +30911,7 @@ Transform:
   m_GameObject: {fileID: 600568067}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.04166675, y: 2.14583206, z: 1}
+  m_LocalScale: {x: 1.04166675, y: 2.14583182, z: 1}
   m_Children: []
   m_Father: {fileID: 368764161}
 --- !u!114 &600568069
@@ -30461,7 +30927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: leverSprite-10
   _position: {x: 0, y: 0}
-  _size: {x: 1.04166675, y: 2.14583206}
+  _size: {x: 1.04166675, y: 2.14583182}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -30484,7 +30950,7 @@ MonoBehaviour:
   protoType: 
   baseName: leverSprite
   oSize: {x: 1.04166675, y: 2.08333349}
-  imageSize: {x: 1.04166675, y: 2.14583206}
+  imageSize: {x: 1.04166675, y: 2.14583182}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -30496,8 +30962,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 5
-  _frameName: base02
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -30523,7 +30989,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -30923,7 +31389,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000000000001c3f0000003f0000003f000000000000000000000000000080bfffffffff0000483e00001c3f0000003f000000bf000000000000000000000000000080bfffffffff0000483e0000603e000000bf000000bf000000000000000000000000000080bfffffffff000000000000603e
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -31250,7 +31716,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1411623562}
+  - {fileID: 519305987}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -31432,7 +31898,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -32144,7 +32610,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 459810572}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -32861,6 +33327,7 @@ MonoBehaviour:
   passingPlatform: 0
   onPlatform: 0
   myCrate: {fileID: 0}
+  myCrateX: 0
   blockedRight: 0
   blockedLeft: 0
   blockedUp: 0
@@ -33236,7 +33703,7 @@ Transform:
   m_GameObject: {fileID: 667982537}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.04166675, y: 2.14583278, z: 1}
+  m_LocalScale: {x: 1.04166675, y: 2.14583254, z: 1}
   m_Children: []
   m_Father: {fileID: 650805884}
 --- !u!114 &667982539
@@ -33252,7 +33719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: leverSprite-87
   _position: {x: 0, y: 0}
-  _size: {x: 1.04166675, y: 2.14583278}
+  _size: {x: 1.04166675, y: 2.14583254}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -33275,7 +33742,7 @@ MonoBehaviour:
   protoType: 
   baseName: leverSprite
   oSize: {x: 1.04166675, y: 2.08333349}
-  imageSize: {x: 1.04166675, y: 2.14583278}
+  imageSize: {x: 1.04166675, y: 2.14583254}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -33287,8 +33754,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 5
-  _frameName: base02
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -33314,7 +33781,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -33434,7 +33901,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -33854,8 +34321,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 1
-  _frameName: arc01
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -33881,7 +34348,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -34001,7 +34468,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 135098143}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -35011,7 +35478,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -35745,7 +36212,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000000000001c3f0000003f0000003f000000000000000000000000000080bfffffffff0000483e00001c3f0000003f000000bf000000000000000000000000000080bfffffffff0000483e0000603e000000bf000000bf000000000000000000000000000080bfffffffff000000000000603e
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -36237,7 +36704,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 135098143}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -36415,7 +36882,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 1806225831}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -36710,6 +37177,7 @@ MonoBehaviour:
   passingPlatform: 0
   onPlatform: 0
   myCrate: {fileID: 0}
+  myCrateX: 0
   blockedRight: 0
   blockedLeft: 0
   blockedUp: 0
@@ -36915,8 +37383,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 1
-  _frameName: arc01
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -36942,7 +37410,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -37296,7 +37764,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -37391,7 +37859,7 @@ Transform:
   m_GameObject: {fileID: 768075172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.04166675, y: 2.14583278, z: 1}
+  m_LocalScale: {x: 1.04166675, y: 2.14583254, z: 1}
   m_Children: []
   m_Father: {fileID: 106004347}
 --- !u!114 &768075174
@@ -37407,7 +37875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: leverSprite-128
   _position: {x: 0, y: 0}
-  _size: {x: 1.04166675, y: 2.14583278}
+  _size: {x: 1.04166675, y: 2.14583254}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -37430,7 +37898,7 @@ MonoBehaviour:
   protoType: 
   baseName: leverSprite
   oSize: {x: 1.04166675, y: 2.08333349}
-  imageSize: {x: 1.04166675, y: 2.14583278}
+  imageSize: {x: 1.04166675, y: 2.14583254}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -37442,8 +37910,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 5
-  _frameName: base02
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -37469,7 +37937,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -37685,7 +38153,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000000000001c3f0000003f0000003f000000000000000000000000000080bfffffffff0000483e00001c3f0000003f000000bf000000000000000000000000000080bfffffffff0000483e0000603e000000bf000000bf000000000000000000000000000080bfffffffff000000000000603e
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -38112,8 +38580,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 1
-  _frameName: arc01
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -38139,7 +38607,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -38734,6 +39202,119 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1628640397}
+--- !u!1 &803418768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100004, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+  m_PrefabInternal: {fileID: 468228705}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 803418769}
+  - 33: {fileID: 803418772}
+  - 23: {fileID: 803418771}
+  - 114: {fileID: 803418770}
+  m_Layer: 8
+  m_Name: crateSprite-1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &803418769
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400004, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+  m_PrefabInternal: {fileID: 468228705}
+  m_GameObject: {fileID: 803418768}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.08333349, y: 2.08333349, z: 1}
+  m_Children: []
+  m_Father: {fileID: 146696961}
+--- !u!114 &803418770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: c73ed60118ebfd84c8a8a5d61d3a0336,
+    type: 2}
+  m_PrefabInternal: {fileID: 468228705}
+  m_GameObject: {fileID: 803418768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a18d0574a4fa59946a49ede6640a1f55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: crateSprite-1
+  _position: {x: 0, y: 0}
+  _size: {x: 2.08333349, y: 2.08333349}
+  _rotation: 0
+  _pivot: 4
+  _pivotPoint: {x: 0, y: 0}
+  _registerInput: 0
+  _depth: 0
+  _collidable: 0
+  _physics: 0
+  _colliderType: 0
+  _collisionDepth: 0
+  _collisionSize: .400000006
+  draggable: 0
+  dragButton: 0
+  init: 0
+  _worldBounds:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  protoType: 
+  baseName: crateSprite
+  oSize: {x: 2.08333349, y: 2.08333349}
+  imageSize: {x: 2.08333349, y: 2.08333349}
+  _offset: {x: 0, y: 0}
+  _baseOffset: {x: 0, y: 0}
+  _flipHorizontal: 0
+  _flipVertical: 0
+  _transparent: 1
+  _additive: 0
+  _materialReference: transparent
+  _tintColor: {r: 1, g: 1, b: 1, a: 1}
+  _alpha: 1
+  _image: {fileID: 0}
+  sizeImages: []
+  _frameIndex: 0
+  _frameName: crate
+  _spriteContainer: {fileID: 1338251461}
+  _containerName: objects
+  _newSprite: 0
+--- !u!23 &803418771
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: c73ed60118ebfd84c8a8a5d61d3a0336,
+    type: 2}
+  m_PrefabInternal: {fileID: 468228705}
+  m_GameObject: {fileID: 803418768}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 1237329012}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!33 &803418772
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: c73ed60118ebfd84c8a8a5d61d3a0336,
+    type: 2}
+  m_PrefabInternal: {fileID: 468228705}
+  m_GameObject: {fileID: 803418768}
+  m_Mesh: {fileID: 185404183}
 --- !u!1 &805920832
 GameObject:
   m_ObjectHideFlags: 0
@@ -38838,7 +39419,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -38958,7 +39539,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -39132,7 +39713,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -39567,7 +40148,7 @@ Transform:
   m_GameObject: {fileID: 822016268}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.04166675, y: 2.14583278, z: 1}
+  m_LocalScale: {x: 1.04166675, y: 2.14583254, z: 1}
   m_Children: []
   m_Father: {fileID: 377448188}
 --- !u!114 &822016270
@@ -39583,7 +40164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: leverSprite-29
   _position: {x: 0, y: 0}
-  _size: {x: 1.04166675, y: 2.14583278}
+  _size: {x: 1.04166675, y: 2.14583254}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -39606,7 +40187,7 @@ MonoBehaviour:
   protoType: 
   baseName: leverSprite
   oSize: {x: 1.04166675, y: 2.08333349}
-  imageSize: {x: 1.04166675, y: 2.14583278}
+  imageSize: {x: 1.04166675, y: 2.14583254}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -39618,8 +40199,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 5
-  _frameName: base02
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -39645,7 +40226,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -39897,7 +40478,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 1806225831}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -40263,6 +40844,149 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!43 &834622220
+Mesh:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  serializedVersion: 8
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 6
+    topology: 0
+    firstVertex: 0
+    vertexCount: 4
+    localAABB:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: .5, y: .5, z: 0}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_MeshCompression: 0
+  m_StreamCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexBuffer: 000001000200020003000000
+  m_Skin: []
+  m_VertexData:
+    m_CurrentChannels: 15
+    m_VertexCount: 4
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 24
+      format: 2
+      dimension: 1
+    - stream: 0
+      offset: 28
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_Streams:
+    - channelMask: 15
+      offset: 0
+      stride: 36
+      dividerOp: 0
+      frequency: 0
+    - channelMask: 0
+      offset: 0
+      stride: 0
+      dividerOp: 0
+      frequency: 0
+    - channelMask: 0
+      offset: 0
+      stride: 0
+      dividerOp: 0
+      frequency: 0
+    - channelMask: 0
+      offset: 0
+      stride: 0
+      dividerOp: 0
+      frequency: 0
+    m_DataSize: 144
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff000000000000803f0000003f0000003f000000000000000000000000000080bfffffffff0000c83e0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000c83e00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000000000001c3f
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BindPoses:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Colors:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+  m_LocalAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: .5, y: .5, z: 0}
+  m_MeshUsageFlags: 0
+  m_MeshOptimized: 0
 --- !u!1 &834912068
 GameObject:
   m_ObjectHideFlags: 0
@@ -40431,7 +41155,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000000000001c3f0000003f0000003f000000000000000000000000000080bfffffffff0000483e00001c3f0000003f000000bf000000000000000000000000000080bfffffffff0000483e0000603e000000bf000000bf000000000000000000000000000080bfffffffff000000000000603e
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -40864,7 +41588,7 @@ Transform:
   m_GameObject: {fileID: 851738057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.04166675, y: 2.14583278, z: 1}
+  m_LocalScale: {x: 1.04166675, y: 2.14583254, z: 1}
   m_Children: []
   m_Father: {fileID: 1368527611}
 --- !u!114 &851738059
@@ -40880,7 +41604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: leverSprite-129
   _position: {x: 0, y: 0}
-  _size: {x: 1.04166675, y: 2.14583278}
+  _size: {x: 1.04166675, y: 2.14583254}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -40903,7 +41627,7 @@ MonoBehaviour:
   protoType: 
   baseName: leverSprite
   oSize: {x: 1.04166675, y: 2.08333349}
-  imageSize: {x: 1.04166675, y: 2.14583278}
+  imageSize: {x: 1.04166675, y: 2.14583254}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -40915,8 +41639,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 5
-  _frameName: base02
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -40942,7 +41666,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -41625,8 +42349,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 5
-  _frameName: base02
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -41652,7 +42376,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -41862,7 +42586,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000483e0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000c83e0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000c83e00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000483e00001c3f
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -42031,7 +42755,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000483e0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000c83e0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000c83e00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000483e00001c3f
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -43017,7 +43741,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -43216,7 +43940,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000000000001c3f0000003f0000003f000000000000000000000000000080bfffffffff0000483e00001c3f0000003f000000bf000000000000000000000000000080bfffffffff0000483e0000603e000000bf000000bf000000000000000000000000000080bfffffffff000000000000603e
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -43471,7 +44195,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -43591,7 +44315,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -43607,6 +44331,44 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 915689396}
   m_Mesh: {fileID: 1281580162}
+--- !u!21 &917033057
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: OTMaterial-transparent
+  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: e26e1cf59ca572d49a7bf76b465b2d9d, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _InvFade
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &929212461
 GameObject:
   m_ObjectHideFlags: 0
@@ -43711,7 +44473,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -43831,7 +44593,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -44281,7 +45043,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000000000001c3f0000003f0000003f000000000000000000000000000080bfffffffff0000483e00001c3f0000003f000000bf000000000000000000000000000080bfffffffff0000483e0000603e000000bf000000bf000000000000000000000000000080bfffffffff000000000000603e
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -44368,7 +45130,7 @@ Transform:
   m_GameObject: {fileID: 935484838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.04166675, y: 2.14583278, z: 1}
+  m_LocalScale: {x: 1.04166675, y: 2.14583254, z: 1}
   m_Children: []
   m_Father: {fileID: 130882691}
 --- !u!114 &935484840
@@ -44384,7 +45146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: leverSprite-124
   _position: {x: 0, y: 0}
-  _size: {x: 1.04166675, y: 2.14583278}
+  _size: {x: 1.04166675, y: 2.14583254}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -44407,7 +45169,7 @@ MonoBehaviour:
   protoType: 
   baseName: leverSprite
   oSize: {x: 1.04166675, y: 2.08333349}
-  imageSize: {x: 1.04166675, y: 2.14583278}
+  imageSize: {x: 1.04166675, y: 2.14583254}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -44419,8 +45181,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 5
-  _frameName: base02
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -44446,7 +45208,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -44669,7 +45431,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000000000001c3f0000003f0000003f000000000000000000000000000080bfffffffff0000483e00001c3f0000003f000000bf000000000000000000000000000080bfffffffff0000483e0000603e000000bf000000bf000000000000000000000000000080bfffffffff000000000000603e
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -44834,7 +45596,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -45021,44 +45783,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animSprite: {fileID: 1041342127}
   isLocked: 1
---- !u!21 &962739492
-Material:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: OTMaterial-transparent
-  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
-  m_ShaderKeywords: []
-  m_CustomRenderQueue: -1
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-      data:
-        first:
-          name: _MainTex
-        second:
-          m_Texture: {fileID: 2800000, guid: 006f7bf6c41bf374b9a9d760c6ae18df, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-    m_Floats:
-      data:
-        first:
-          name: _InvFade
-        second: 1
-    m_Colors:
-      data:
-        first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _TintColor
-        second: {r: .5, g: .5, b: .5, a: .5}
-      data:
-        first:
-          name: _EmisColor
-        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &963647809
 GameObject:
   m_ObjectHideFlags: 0
@@ -45486,7 +46210,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1411623562}
+  - {fileID: 519305987}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -45860,7 +46584,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 962739492}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -46674,7 +47398,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -48720,7 +49444,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 459810572}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -48949,7 +49673,7 @@ Transform:
   m_GameObject: {fileID: 1062266854}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.04166675, y: 2.14583254, z: 1}
+  m_LocalScale: {x: 1.04166675, y: 2.1458323, z: 1}
   m_Children: []
   m_Father: {fileID: 1574292892}
 --- !u!114 &1062266856
@@ -48965,7 +49689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: leverSprite-4
   _position: {x: 0, y: 0}
-  _size: {x: 1.04166675, y: 2.14583254}
+  _size: {x: 1.04166675, y: 2.1458323}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -48988,7 +49712,7 @@ MonoBehaviour:
   protoType: 
   baseName: leverSprite
   oSize: {x: 1.04166675, y: 2.08333349}
-  imageSize: {x: 1.04166675, y: 2.14583254}
+  imageSize: {x: 1.04166675, y: 2.1458323}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -49000,8 +49724,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 5
-  _frameName: base02
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -49027,7 +49751,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -49176,7 +49900,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 135098143}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -49296,7 +50020,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -49559,7 +50283,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 459810572}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -49679,7 +50403,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -50615,7 +51339,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 135098143}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -51319,7 +52043,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000483e0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000c83e0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000c83e00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000483e00001c3f
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -51717,7 +52441,7 @@ Transform:
   m_GameObject: {fileID: 1125028337}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.04166675, y: 2.14583206, z: 1}
+  m_LocalScale: {x: 1.04166675, y: 2.14583182, z: 1}
   m_Children: []
   m_Father: {fileID: 1019725965}
 --- !u!114 &1125028339
@@ -51733,7 +52457,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: leverSprite-13
   _position: {x: 0, y: 0}
-  _size: {x: 1.04166675, y: 2.14583206}
+  _size: {x: 1.04166675, y: 2.14583182}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -51756,7 +52480,7 @@ MonoBehaviour:
   protoType: 
   baseName: leverSprite
   oSize: {x: 1.04166675, y: 2.08333349}
-  imageSize: {x: 1.04166675, y: 2.14583206}
+  imageSize: {x: 1.04166675, y: 2.14583182}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -51768,8 +52492,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 5
-  _frameName: base02
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -51795,7 +52519,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -52276,7 +53000,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 459810572}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -52948,6 +53672,44 @@ Transform:
   - {fileID: 1772045619}
   - {fileID: 1003317760}
   m_Father: {fileID: 1628640397}
+--- !u!21 &1148839111
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: OTMaterial-transparent
+  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 15d30b27af903494c8bb73094772a372, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _InvFade
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!43 &1151388491
 Mesh:
   m_ObjectHideFlags: 0
@@ -53361,7 +54123,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -55059,6 +55821,7 @@ MonoBehaviour:
   passingPlatform: 0
   onPlatform: 0
   myCrate: {fileID: 0}
+  myCrateX: 0
   blockedRight: 0
   blockedLeft: 0
   blockedUp: 0
@@ -55400,7 +56163,7 @@ Transform:
   m_GameObject: {fileID: 1191401195}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.04166675, y: 2.14583278, z: 1}
+  m_LocalScale: {x: 1.04166675, y: 2.14583254, z: 1}
   m_Children: []
   m_Father: {fileID: 481458864}
 --- !u!114 &1191401197
@@ -55416,7 +56179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: leverSprite-102
   _position: {x: 0, y: 0}
-  _size: {x: 1.04166675, y: 2.14583278}
+  _size: {x: 1.04166675, y: 2.14583254}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -55439,7 +56202,7 @@ MonoBehaviour:
   protoType: 
   baseName: leverSprite
   oSize: {x: 1.04166675, y: 2.08333349}
-  imageSize: {x: 1.04166675, y: 2.14583278}
+  imageSize: {x: 1.04166675, y: 2.14583254}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -55451,8 +56214,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 5
-  _frameName: base02
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -55478,7 +56241,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -55995,7 +56758,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -56169,7 +56932,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 459810572}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -56289,7 +57052,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -56826,7 +57589,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -57645,7 +58408,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 135098143}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -57661,6 +58424,73 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1229005832}
   m_Mesh: {fileID: 2019814165}
+--- !u!1 &1230995918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+  m_PrefabInternal: {fileID: 582149737}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1230995922}
+  - 65: {fileID: 1230995921}
+  - 114: {fileID: 1230995920}
+  m_Layer: 8
+  m_Name: Crate
+  m_TagString: Crate
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1230995920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: c73ed60118ebfd84c8a8a5d61d3a0336,
+    type: 2}
+  m_PrefabInternal: {fileID: 582149737}
+  m_GameObject: {fileID: 1230995918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f9f9bf5225c7bd4b86f735384c1e14b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grounded: 0
+  thisTransform: {fileID: 0}
+  gravityY: .200000003
+  crateMove: 0
+  playerMoveVel: 0
+  spriteScaleX: 0
+  spriteScaleY: 0
+  vectorMove: {x: 0, y: 0, z: 0}
+  blockDetectionArea: 100
+  _player: {fileID: 0}
+  blockCrate: 0
+  isObjChild: 1
+  replaceCrate: 3
+--- !u!65 &1230995921
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: c73ed60118ebfd84c8a8a5d61d3a0336,
+    type: 2}
+  m_PrefabInternal: {fileID: 582149737}
+  m_GameObject: {fileID: 1230995918}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5, y: 1.75, z: 10}
+  m_Center: {x: 0, y: .150000006, z: 0}
+--- !u!4 &1230995922
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+  m_PrefabInternal: {fileID: 582149737}
+  m_GameObject: {fileID: 1230995918}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.00614547729, y: -.24861145, z: .300000012}
+  m_LocalScale: {x: .802852273, y: .802852273, z: .802852273}
+  m_Children:
+  - {fileID: 581871167}
+  m_Father: {fileID: 498982500}
 --- !u!1 &1231194394
 GameObject:
   m_ObjectHideFlags: 0
@@ -58109,6 +58939,44 @@ Mesh:
     m_Extent: {x: .5, y: .5, z: 0}
   m_MeshUsageFlags: 0
   m_MeshOptimized: 0
+--- !u!21 &1237329012
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: OTMaterial-transparent
+  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 006f7bf6c41bf374b9a9d760c6ae18df, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _InvFade
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &1237525316
 GameObject:
   m_ObjectHideFlags: 0
@@ -58213,7 +59081,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 206738109}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -58360,7 +59228,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -58550,7 +59418,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 1806225831}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -60066,7 +60934,7 @@ Transform:
   m_GameObject: {fileID: 1290347641}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.04166675, y: 2.14583278, z: 1}
+  m_LocalScale: {x: 1.04166675, y: 2.14583254, z: 1}
   m_Children: []
   m_Father: {fileID: 63214646}
 --- !u!114 &1290347643
@@ -60082,7 +60950,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: leverSprite-126
   _position: {x: 0, y: 0}
-  _size: {x: 1.04166675, y: 2.14583278}
+  _size: {x: 1.04166675, y: 2.14583254}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -60105,7 +60973,7 @@ MonoBehaviour:
   protoType: 
   baseName: leverSprite
   oSize: {x: 1.04166675, y: 2.08333349}
-  imageSize: {x: 1.04166675, y: 2.14583278}
+  imageSize: {x: 1.04166675, y: 2.14583254}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -60117,8 +60985,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 5
-  _frameName: base02
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -60144,7 +61012,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -60819,7 +61687,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000000000001c3f0000003f0000003f000000000000000000000000000080bfffffffff0000483e00001c3f0000003f000000bf000000000000000000000000000080bfffffffff0000483e0000603e000000bf000000bf000000000000000000000000000080bfffffffff000000000000603e
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -61770,8 +62638,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 5
-  _frameName: base02
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -61797,7 +62665,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -62159,7 +63027,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000000000001c3f0000003f0000003f000000000000000000000000000080bfffffffff0000483e00001c3f0000003f000000bf000000000000000000000000000080bfffffffff0000483e0000603e000000bf000000bf000000000000000000000000000080bfffffffff000000000000603e
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -62324,7 +63192,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -62449,7 +63317,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000000000001c3f0000003f0000003f000000000000000000000000000080bfffffffff0000483e00001c3f0000003f000000bf000000000000000000000000000080bfffffffff0000483e0000603e000000bf000000bf000000000000000000000000000080bfffffffff000000000000603e
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -62630,44 +63498,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1352594193}
   m_Mesh: {fileID: 396898630}
---- !u!21 &1354595810
-Material:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: OTMaterial-transparent
-  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
-  m_ShaderKeywords: []
-  m_CustomRenderQueue: -1
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-      data:
-        first:
-          name: _MainTex
-        second:
-          m_Texture: {fileID: 2800000, guid: e26e1cf59ca572d49a7bf76b465b2d9d, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-    m_Floats:
-      data:
-        first:
-          name: _InvFade
-        second: 1
-    m_Colors:
-      data:
-        first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _TintColor
-        second: {r: .5, g: .5, b: .5, a: .5}
-      data:
-        first:
-          name: _EmisColor
-        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &1357868565
 GameObject:
   m_ObjectHideFlags: 0
@@ -62839,7 +63669,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -62992,7 +63822,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000483e0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000c83e0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000c83e00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000483e00001c3f
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -63157,7 +63987,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -63411,7 +64241,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 179049225}
+  - {fileID: 1148839111}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -63641,8 +64471,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 1
-  _frameName: arc01
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -63668,7 +64498,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -63833,11 +64663,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400004, guid: 91b838f1f91c9ee49b76a61700f615b6, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 26.9300003
+      value: 24.9499836
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 91b838f1f91c9ee49b76a61700f615b6, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -32.1497421
+      value: -31.4897366
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 91b838f1f91c9ee49b76a61700f615b6, type: 2}
       propertyPath: m_LocalPosition.z
@@ -63866,7 +64696,7 @@ Prefab:
     - target: {fileID: 2300010, guid: 91b838f1f91c9ee49b76a61700f615b6, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1411623562}
+      objectReference: {fileID: 519305987}
     - target: {fileID: 3300010, guid: 91b838f1f91c9ee49b76a61700f615b6, type: 2}
       propertyPath: m_Mesh
       value: 
@@ -63878,7 +64708,7 @@ Prefab:
     - target: {fileID: 2300006, guid: 91b838f1f91c9ee49b76a61700f615b6, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1411623562}
+      objectReference: {fileID: 519305987}
     - target: {fileID: 3300006, guid: 91b838f1f91c9ee49b76a61700f615b6, type: 2}
       propertyPath: m_Mesh
       value: 
@@ -63890,7 +64720,7 @@ Prefab:
     - target: {fileID: 2300012, guid: 91b838f1f91c9ee49b76a61700f615b6, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1411623562}
+      objectReference: {fileID: 519305987}
     - target: {fileID: 3300012, guid: 91b838f1f91c9ee49b76a61700f615b6, type: 2}
       propertyPath: m_Mesh
       value: 
@@ -63906,7 +64736,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 91b838f1f91c9ee49b76a61700f615b6, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 179049225}
+      objectReference: {fileID: 1148839111}
     - target: {fileID: 3300000, guid: 91b838f1f91c9ee49b76a61700f615b6, type: 2}
       propertyPath: m_Mesh
       value: 
@@ -65191,7 +66021,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -65311,7 +66141,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 1802007415}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -65591,7 +66421,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 1237329012}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -65661,44 +66491,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animSprite: {fileID: 1762897650}
   isLocked: 1
---- !u!21 &1411623562
-Material:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: OTMaterial-transparent
-  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
-  m_ShaderKeywords: []
-  m_CustomRenderQueue: -1
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-      data:
-        first:
-          name: _MainTex
-        second:
-          m_Texture: {fileID: 2800000, guid: 3673517278aed7c458a4fa630396ea11, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-    m_Floats:
-      data:
-        first:
-          name: _InvFade
-        second: 1
-    m_Colors:
-      data:
-        first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _TintColor
-        second: {r: .5, g: .5, b: .5, a: .5}
-      data:
-        first:
-          name: _EmisColor
-        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &1416072291
 GameObject:
   m_ObjectHideFlags: 0
@@ -66153,44 +66945,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1744957456}
---- !u!21 &1427608621
-Material:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: OTMaterial-transparent
-  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
-  m_ShaderKeywords: []
-  m_CustomRenderQueue: -1
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-      data:
-        first:
-          name: _MainTex
-        second:
-          m_Texture: {fileID: 2800000, guid: 69b4745a57d9590439ff9b3af0627b97, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-    m_Floats:
-      data:
-        first:
-          name: _InvFade
-        second: 1
-    m_Colors:
-      data:
-        first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _TintColor
-        second: {r: .5, g: .5, b: .5, a: .5}
-      data:
-        first:
-          name: _EmisColor
-        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &1429047197
 GameObject:
   m_ObjectHideFlags: 0
@@ -66470,7 +67224,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000483e0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000c83e0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000c83e00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000483e00001c3f
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -67577,7 +68331,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 206738109}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -67888,7 +68642,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000483e0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000c83e0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000c83e00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000483e00001c3f
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -68107,7 +68861,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 459810572}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -69904,7 +70658,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 1237329012}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -70024,7 +70778,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -70120,7 +70874,7 @@ Transform:
   m_GameObject: {fileID: 1495266238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.04166675, y: 2.14583254, z: 1}
+  m_LocalScale: {x: 1.04166675, y: 2.1458323, z: 1}
   m_Children: []
   m_Father: {fileID: 2101779880}
 --- !u!114 &1495266240
@@ -70136,7 +70890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: leverSprite-2
   _position: {x: 0, y: 0}
-  _size: {x: 1.04166675, y: 2.14583254}
+  _size: {x: 1.04166675, y: 2.1458323}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -70159,7 +70913,7 @@ MonoBehaviour:
   protoType: 
   baseName: leverSprite
   oSize: {x: 1.04166675, y: 2.08333349}
-  imageSize: {x: 1.04166675, y: 2.14583254}
+  imageSize: {x: 1.04166675, y: 2.1458323}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -70171,8 +70925,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 5
-  _frameName: base02
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -70198,7 +70952,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -70611,6 +71365,7 @@ MonoBehaviour:
   _colSafe: {r: .224140882, g: .507352948, b: .18652682, a: 1}
   _colorWarning: {r: 1, g: .724137962, b: 0, a: 1}
   _colCritical: {r: 1, g: 0, b: 0, a: 1}
+  pauseTimer: 0
   triggeredEnd: 0
 --- !u!1 &1508607999
 GameObject:
@@ -70864,7 +71619,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1354595810}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -71140,7 +71895,7 @@ Transform:
   m_GameObject: {fileID: 1520441251}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.04166675, y: 2.14583278, z: 1}
+  m_LocalScale: {x: 1.04166675, y: 2.14583254, z: 1}
   m_Children: []
   m_Father: {fileID: 1542233393}
 --- !u!114 &1520441253
@@ -71156,7 +71911,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: leverSprite-92
   _position: {x: 0, y: 0}
-  _size: {x: 1.04166675, y: 2.14583278}
+  _size: {x: 1.04166675, y: 2.14583254}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -71179,7 +71934,7 @@ MonoBehaviour:
   protoType: 
   baseName: leverSprite
   oSize: {x: 1.04166675, y: 2.08333349}
-  imageSize: {x: 1.04166675, y: 2.14583278}
+  imageSize: {x: 1.04166675, y: 2.14583254}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -71191,8 +71946,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 5
-  _frameName: base02
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -71218,7 +71973,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -71260,7 +72015,7 @@ Transform:
   m_GameObject: {fileID: 1522312011}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.04166675, y: 2.14583278, z: 1}
+  m_LocalScale: {x: 1.04166675, y: 2.14583254, z: 1}
   m_Children: []
   m_Father: {fileID: 913041161}
 --- !u!114 &1522312013
@@ -71276,7 +72031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: leverSprite-113
   _position: {x: 0, y: 0}
-  _size: {x: 1.04166675, y: 2.14583278}
+  _size: {x: 1.04166675, y: 2.14583254}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -71299,7 +72054,7 @@ MonoBehaviour:
   protoType: 
   baseName: leverSprite
   oSize: {x: 1.04166675, y: 2.08333349}
-  imageSize: {x: 1.04166675, y: 2.14583278}
+  imageSize: {x: 1.04166675, y: 2.14583254}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -71311,8 +72066,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 5
-  _frameName: base02
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -71338,7 +72093,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -71744,7 +72499,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1354595810}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -72071,7 +72826,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 1806225831}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -72436,7 +73191,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 135098143}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -72534,7 +73289,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000000000001c3f0000003f0000003f000000000000000000000000000080bfffffffff0000483e00001c3f0000003f000000bf000000000000000000000000000080bfffffffff0000483e0000603e000000bf000000bf000000000000000000000000000080bfffffffff000000000000603e
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -72891,7 +73646,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 962739492}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -73011,7 +73766,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1354595810}
+  - {fileID: 1879114554}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -73148,7 +73903,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000483e0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000c83e0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000c83e00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000483e00001c3f
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -73313,7 +74068,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 1806225831}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -74957,7 +75712,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -75203,7 +75958,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 459810572}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -76682,7 +77437,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000000000001c3f0000003f0000003f000000000000000000000000000080bfffffffff0000483e00001c3f0000003f000000bf000000000000000000000000000080bfffffffff0000483e0000603e000000bf000000bf000000000000000000000000000080bfffffffff000000000000603e
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -77085,7 +77840,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1354595810}
+  - {fileID: 1879114554}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -77576,7 +78331,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 135098143}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -77696,7 +78451,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -77870,7 +78625,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 1806225831}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -78090,7 +78845,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -78210,7 +78965,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -78615,6 +79370,119 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   action: 4
+--- !u!1 &1706307574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100004, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+  m_PrefabInternal: {fileID: 582149737}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1706307575}
+  - 33: {fileID: 1706307578}
+  - 23: {fileID: 1706307577}
+  - 114: {fileID: 1706307576}
+  m_Layer: 8
+  m_Name: crateSprite-2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1706307575
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400004, guid: c73ed60118ebfd84c8a8a5d61d3a0336, type: 2}
+  m_PrefabInternal: {fileID: 582149737}
+  m_GameObject: {fileID: 1706307574}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.08333349, y: 2.08333349, z: 1}
+  m_Children: []
+  m_Father: {fileID: 581871167}
+--- !u!114 &1706307576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: c73ed60118ebfd84c8a8a5d61d3a0336,
+    type: 2}
+  m_PrefabInternal: {fileID: 582149737}
+  m_GameObject: {fileID: 1706307574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a18d0574a4fa59946a49ede6640a1f55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: crateSprite-2
+  _position: {x: 0, y: 0}
+  _size: {x: 2.08333349, y: 2.08333349}
+  _rotation: 0
+  _pivot: 4
+  _pivotPoint: {x: 0, y: 0}
+  _registerInput: 0
+  _depth: 0
+  _collidable: 0
+  _physics: 0
+  _colliderType: 0
+  _collisionDepth: 0
+  _collisionSize: .400000006
+  draggable: 0
+  dragButton: 0
+  init: 0
+  _worldBounds:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  protoType: 
+  baseName: crateSprite
+  oSize: {x: 2.08333349, y: 2.08333349}
+  imageSize: {x: 2.08333349, y: 2.08333349}
+  _offset: {x: 0, y: 0}
+  _baseOffset: {x: 0, y: 0}
+  _flipHorizontal: 0
+  _flipVertical: 0
+  _transparent: 1
+  _additive: 0
+  _materialReference: transparent
+  _tintColor: {r: 1, g: 1, b: 1, a: 1}
+  _alpha: 1
+  _image: {fileID: 0}
+  sizeImages: []
+  _frameIndex: 0
+  _frameName: crate
+  _spriteContainer: {fileID: 1338251461}
+  _containerName: objects
+  _newSprite: 0
+--- !u!23 &1706307577
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: c73ed60118ebfd84c8a8a5d61d3a0336,
+    type: 2}
+  m_PrefabInternal: {fileID: 582149737}
+  m_GameObject: {fileID: 1706307574}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 1237329012}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!33 &1706307578
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: c73ed60118ebfd84c8a8a5d61d3a0336,
+    type: 2}
+  m_PrefabInternal: {fileID: 582149737}
+  m_GameObject: {fileID: 1706307574}
+  m_Mesh: {fileID: 834622220}
 --- !u!1 &1706479636
 GameObject:
   m_ObjectHideFlags: 0
@@ -79127,7 +79995,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000000000001c3f0000003f0000003f000000000000000000000000000080bfffffffff0000483e00001c3f0000003f000000bf000000000000000000000000000080bfffffffff0000483e0000603e000000bf000000bf000000000000000000000000000080bfffffffff000000000000603e
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -79296,6 +80164,7 @@ MonoBehaviour:
   passingPlatform: 0
   onPlatform: 0
   myCrate: {fileID: 0}
+  myCrateX: 0
   blockedRight: 0
   blockedLeft: 0
   blockedUp: 0
@@ -79634,7 +80503,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 459810572}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -79781,7 +80650,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -80314,7 +81183,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 962739492}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -80434,7 +81303,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 1802007415}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -81073,7 +81942,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -81193,7 +82062,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -82197,7 +83066,7 @@ Transform:
   m_PrefabInternal: {fileID: 1379103007}
   m_GameObject: {fileID: 1781820742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.9300003, y: -32.1497421, z: 0}
+  m_LocalPosition: {x: 24.9499836, y: -31.4897366, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1431523464}
@@ -82284,6 +83153,7 @@ MonoBehaviour:
   passingPlatform: 0
   onPlatform: 0
   myCrate: {fileID: 0}
+  myCrateX: 0
   blockedRight: 0
   blockedLeft: 0
   blockedUp: 0
@@ -82672,7 +83542,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 135098143}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -82947,7 +83817,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -82963,6 +83833,44 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1796460536}
   m_Mesh: {fileID: 1909691332}
+--- !u!21 &1802007415
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: OTMaterial-transparent
+  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 190095c4b6829db468d2234cb7fb6fdd, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _InvFade
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &1803135599
 GameObject:
   m_ObjectHideFlags: 0
@@ -83067,7 +83975,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 135098143}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -83288,6 +84196,44 @@ Mesh:
     m_Extent: {x: .5, y: .5, z: 0}
   m_MeshUsageFlags: 0
   m_MeshOptimized: 0
+--- !u!21 &1806225831
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: OTMaterial-transparent
+  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 69b4745a57d9590439ff9b3af0627b97, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _InvFade
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &1808688498
 GameObject:
   m_ObjectHideFlags: 0
@@ -83521,7 +84467,7 @@ Transform:
   m_GameObject: {fileID: 1814045989}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.04166675, y: 2.14583278, z: 1}
+  m_LocalScale: {x: 1.04166675, y: 2.14583254, z: 1}
   m_Children: []
   m_Father: {fileID: 939955757}
 --- !u!114 &1814045991
@@ -83537,7 +84483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: leverSprite-111
   _position: {x: 0, y: 0}
-  _size: {x: 1.04166675, y: 2.14583278}
+  _size: {x: 1.04166675, y: 2.14583254}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -83560,7 +84506,7 @@ MonoBehaviour:
   protoType: 
   baseName: leverSprite
   oSize: {x: 1.04166675, y: 2.08333349}
-  imageSize: {x: 1.04166675, y: 2.14583278}
+  imageSize: {x: 1.04166675, y: 2.14583254}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -83572,8 +84518,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 5
-  _frameName: base02
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -83599,7 +84545,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -83746,7 +84692,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -83776,7 +84722,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1824270244
 Transform:
   m_ObjectHideFlags: 0
@@ -84059,7 +85005,7 @@ Transform:
   m_GameObject: {fileID: 1833893377}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.04166675, y: 2.14583278, z: 1}
+  m_LocalScale: {x: 1.04166675, y: 2.14583254, z: 1}
   m_Children: []
   m_Father: {fileID: 1208266826}
 --- !u!114 &1833893379
@@ -84075,7 +85021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: leverSprite-125
   _position: {x: 0, y: 0}
-  _size: {x: 1.04166675, y: 2.14583278}
+  _size: {x: 1.04166675, y: 2.14583254}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -84098,7 +85044,7 @@ MonoBehaviour:
   protoType: 
   baseName: leverSprite
   oSize: {x: 1.04166675, y: 2.08333349}
-  imageSize: {x: 1.04166675, y: 2.14583278}
+  imageSize: {x: 1.04166675, y: 2.14583254}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -84110,8 +85056,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 5
-  _frameName: base02
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -84137,7 +85083,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -84892,7 +85838,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 1806225831}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -85719,7 +86665,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000483e0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000c83e0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000c83e00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000483e00001c3f
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -85888,6 +86834,7 @@ MonoBehaviour:
   passingPlatform: 0
   onPlatform: 0
   myCrate: {fileID: 0}
+  myCrateX: 0
   blockedRight: 0
   blockedLeft: 0
   blockedUp: 0
@@ -85997,8 +86944,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 1
-  _frameName: arc01
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -86024,7 +86971,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -86098,6 +87045,44 @@ MonoBehaviour:
   delayBegin: 0
   muted: 0
   activeState: 0
+--- !u!21 &1879114554
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: OTMaterial-transparent
+  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: e26e1cf59ca572d49a7bf76b465b2d9d, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _InvFade
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &1882051562
 GameObject:
   m_ObjectHideFlags: 0
@@ -86821,7 +87806,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -86958,7 +87943,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000483e0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000c83e0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000c83e00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000483e00001c3f
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -87387,7 +88372,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000483e0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000c83e0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000c83e00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000483e00001c3f
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -87695,7 +88680,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -87977,7 +88962,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -88403,8 +89388,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 1
-  _frameName: arc01
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -88430,7 +89415,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -88806,7 +89791,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 135098143}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -88887,7 +89872,7 @@ Transform:
   m_GameObject: {fileID: 1930706152}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.04166675, y: 2.14583278, z: 1}
+  m_LocalScale: {x: 1.04166675, y: 2.14583254, z: 1}
   m_Children: []
   m_Father: {fileID: 396191705}
 --- !u!114 &1930706154
@@ -88903,7 +89888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: leverSprite-112
   _position: {x: 0, y: 0}
-  _size: {x: 1.04166675, y: 2.14583278}
+  _size: {x: 1.04166675, y: 2.14583254}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -88926,7 +89911,7 @@ MonoBehaviour:
   protoType: 
   baseName: leverSprite
   oSize: {x: 1.04166675, y: 2.08333349}
-  imageSize: {x: 1.04166675, y: 2.14583278}
+  imageSize: {x: 1.04166675, y: 2.14583254}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -88938,8 +89923,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 5
-  _frameName: base02
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -88965,7 +89950,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -89621,7 +90606,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000000000001c3f0000003f0000003f000000000000000000000000000080bfffffffff0000483e00001c3f0000003f000000bf000000000000000000000000000080bfffffffff0000483e0000603e000000bf000000bf000000000000000000000000000080bfffffffff000000000000603e
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -89818,7 +90803,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000483e0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000c83e0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000c83e00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000483e00001c3f
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -90041,7 +91026,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 1806225831}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -90628,7 +91613,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -90904,7 +91889,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 459810572}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -91167,7 +92152,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -91350,8 +92335,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 1
-  _frameName: arc01
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -91377,7 +92362,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -91640,7 +92625,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -92009,7 +92994,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -92146,7 +93131,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000000000001c3f0000003f0000003f000000000000000000000000000080bfffffffff0000483e00001c3f0000003f000000bf000000000000000000000000000080bfffffffff0000483e0000603e000000bf000000bf000000000000000000000000000080bfffffffff000000000000603e
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -92301,7 +93286,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 962739492}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -92531,7 +93516,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1354595810}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -92651,7 +93636,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 135098143}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -92829,7 +93814,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -92927,7 +93912,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000483e0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000c83e0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000c83e00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000483e00001c3f
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -93132,7 +94117,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000483e0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000c83e0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000c83e00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000483e00001c3f
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -93297,7 +94282,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -93417,7 +94402,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -94664,6 +95649,7 @@ MonoBehaviour:
   passingPlatform: 0
   onPlatform: 0
   myCrate: {fileID: 0}
+  myCrateX: 0
   blockedRight: 0
   blockedLeft: 0
   blockedUp: 0
@@ -95074,7 +96060,7 @@ Transform:
   m_GameObject: {fileID: 2045909588}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.04166675, y: 2.14583278, z: 1}
+  m_LocalScale: {x: 1.04166675, y: 2.14583254, z: 1}
   m_Children: []
   m_Father: {fileID: 211531423}
 --- !u!114 &2045909590
@@ -95090,7 +96076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: leverSprite-86
   _position: {x: 0, y: 0}
-  _size: {x: 1.04166675, y: 2.14583278}
+  _size: {x: 1.04166675, y: 2.14583254}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -95113,7 +96099,7 @@ MonoBehaviour:
   protoType: 
   baseName: leverSprite
   oSize: {x: 1.04166675, y: 2.08333349}
-  imageSize: {x: 1.04166675, y: 2.14583278}
+  imageSize: {x: 1.04166675, y: 2.14583254}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -95125,8 +96111,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 5
-  _frameName: base02
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -95152,7 +96138,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -95253,7 +96239,7 @@ Transform:
   m_GameObject: {fileID: 2048761754}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.04166675, y: 2.14583278, z: 1}
+  m_LocalScale: {x: 1.04166675, y: 2.14583254, z: 1}
   m_Children: []
   m_Father: {fileID: 1776187977}
 --- !u!114 &2048761756
@@ -95269,7 +96255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: leverSprite-114
   _position: {x: 0, y: 0}
-  _size: {x: 1.04166675, y: 2.14583278}
+  _size: {x: 1.04166675, y: 2.14583254}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -95292,7 +96278,7 @@ MonoBehaviour:
   protoType: 
   baseName: leverSprite
   oSize: {x: 1.04166675, y: 2.08333349}
-  imageSize: {x: 1.04166675, y: 2.14583278}
+  imageSize: {x: 1.04166675, y: 2.14583254}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -95304,8 +96290,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 5
-  _frameName: base02
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -95331,7 +96317,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -95675,7 +96661,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 1806225831}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -95794,8 +96780,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 1
-  _frameName: arc01
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -95821,7 +96807,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -96463,7 +97449,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000000000001c3f0000003f0000003f000000000000000000000000000080bfffffffff0000483e00001c3f0000003f000000bf000000000000000000000000000080bfffffffff0000483e0000603e000000bf000000bf000000000000000000000000000080bfffffffff000000000000603e
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -96655,7 +97641,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -97115,7 +98101,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1427608621}
+  - {fileID: 1806225831}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -97502,7 +98488,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 962739492}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -98213,6 +99199,44 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.04166698, y: 2.14583302, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!21 &2104885348
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: OTMaterial-transparent
+  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 190095c4b6829db468d2234cb7fb6fdd, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _InvFade
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!43 &2105479248
 Mesh:
   m_ObjectHideFlags: 0
@@ -98295,7 +99319,7 @@ Mesh:
       dividerOp: 0
       frequency: 0
     m_DataSize: 144
-    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000483e0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000c83e0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000c83e00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000483e00001c3f
+    _typelessdata: 000000bf0000003f000000000000000000000000000080bfffffffff0000163f0000803f0000003f0000003f000000000000000000000000000080bfffffffff0000483f0000803f0000003f000000bf000000000000000000000000000080bfffffffff0000483f00001c3f000000bf000000bf000000000000000000000000000080bfffffffff0000163f00001c3f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -99018,7 +100042,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -99197,7 +100221,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 551590068}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -99425,8 +100449,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 5
-  _frameName: base02
+  _frameIndex: 3
+  _frameName: base00
   _spriteContainer: {fileID: 1165166925}
   _containerName: arcElectricSheet
   _newSprite: 0
@@ -99452,7 +100476,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 2104885348}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -99853,7 +100877,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 25964329}
+  - {fileID: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
