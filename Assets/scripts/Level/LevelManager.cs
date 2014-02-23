@@ -31,7 +31,7 @@ public class LevelManager : MonoBehaviour {
 //		Player _Player  = GameObject.Find("Player").GetComponent<Player>();
 		ID = Application.loadedLevel;
 
-		MasterAudio.PlaySound("bg");
+		playLevelMusic();
 		//MasterAudio.PlaySound("jam");
 
 		//if(chosenVariation==0) _rand = Random.Range(_tileImporter.minVariation, _tileImporter.maxVariation).ToString();
@@ -98,6 +98,40 @@ public class LevelManager : MonoBehaviour {
 		Application.ExternalEval("document.cookie = \""+"Level"+ID+"Unlocked"+"=1; \"");
 		Application.LoadLevel(""+(ID+1));
 	}
+	private void playLevelMusic () {
+		switch(ID) {
+		case 1:
+			MasterAudio.PlaySound("bg");
+			break;
+		case 2:
+			MasterAudio.PlaySound("bg");
+			break;
+		case 3:
+			MasterAudio.PlaySound("bg");
+			break;
+		case 4:
+			MasterAudio.PlaySound("bg");
+			break;
+		case 5:
+			MasterAudio.PlaySound("level_theme_2");
+			break;
+		case 6:
+			MasterAudio.PlaySound("level_theme_2");
+			break;
+		case 7:
+			MasterAudio.PlaySound("level_theme_2");
+			break;
+		case 8:
+			MasterAudio.PlaySound("level_theme_2");
+			break;
+		case 9:
+			MasterAudio.PlaySound("level_theme_2");
+			break;
+		case 10:
+			MasterAudio.PlaySound("level_theme_2");
+			break;
+		}
+	}
 	private void GameOver()
 	{
 		//playerDies();
@@ -105,7 +139,7 @@ public class LevelManager : MonoBehaviour {
 	}
 	private void GameStart()
 	{
-		MasterAudio.PlaySound("bg");
+		playLevelMusic();
 	}
 	private void GamePause()
 	{
