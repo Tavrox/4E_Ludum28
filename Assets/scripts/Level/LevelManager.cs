@@ -8,7 +8,7 @@ public class LevelManager : MonoBehaviour {
 	[SerializeField] private Camera myCamera;
 	
 	public int ID;
-	private int chosenVariation;
+	public int chosenVariation;
 
 	private int _secLeft;
 	private TileImporter _tileImporter;
@@ -96,10 +96,13 @@ public class LevelManager : MonoBehaviour {
 	private void NextLevel ()
 	{
 		Application.ExternalEval("document.cookie = \""+"Level"+ID+"Unlocked"+"=1; \"");
-		Application.LoadLevel(""+(ID+1));
+		Application.LoadLevel(""+(ID));
 	}
 	private void playLevelMusic () {
 		switch(ID) {
+//		case 0:
+//			MasterAudio.PlaySound("bg");
+//			break;
 		case 1:
 			MasterAudio.PlaySound("bg");
 			break;
@@ -140,6 +143,7 @@ public class LevelManager : MonoBehaviour {
 	private void GameStart()
 	{
 		playLevelMusic();
+		MasterAudio.StopAllPlaylists();
 	}
 	private void GamePause()
 	{
