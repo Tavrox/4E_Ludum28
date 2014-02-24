@@ -100,9 +100,9 @@ public class LevelManager : MonoBehaviour {
 	}
 	private void playLevelMusic () {
 		switch(ID) {
-//		case 0:
-//			MasterAudio.PlaySound("bg");
-//			break;
+		case 0:
+			MasterAudio.PlaySound("bg");
+			break;
 		case 1:
 			MasterAudio.PlaySound("bg");
 			break;
