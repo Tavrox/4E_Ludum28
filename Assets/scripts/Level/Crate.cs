@@ -244,10 +244,11 @@ public class Crate : MonoBehaviour {
 			if(hitInfo.collider.CompareTag("Blocker")) {
 			grounded = true;
 			vectorMove.y = 0;
-			if(!touchFloor) {touchFloor=true;SND_crateFall();}
+				if(!touchFloor) {thisTransform.position = new Vector3(thisTransform.position.x, (float)((hitInfo.collider.bounds.center.y+(hitInfo.collider.bounds.size.y/2f)+spriteScaleY/2f)), thisTransform.position.z);
+					touchFloor=true;SND_crateFall();}
 			//BoxCollider colliderHit = hitInfo.collider as BoxCollider;
 			//print (colliderHit.size);
-			//thisTransform.position = new Vector3(thisTransform.position.x, (float)((hitInfo.transform.position.y)+replaceCrate), thisTransform.position.z);
+
 			}
 		}
 	}
