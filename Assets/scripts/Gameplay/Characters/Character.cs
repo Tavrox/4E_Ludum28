@@ -148,7 +148,7 @@ public class Character : MonoBehaviour
 //					vectorMove.y = jump2Vel;
 //				}
 			}
-			if(vectorMove.y < (2*maxVelY)/3f)	vectorMove.y += jumpSpeed*0.75f;
+			if(vectorMove.y < (3*maxVelY)/4f)	vectorMove.y += jumpSpeed*0.75f;
 			else if(vectorMove.y < maxVelY)	vectorMove.y += jumpSpeed*1.75f;
 			else chute=true;
 		}
