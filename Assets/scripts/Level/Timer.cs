@@ -11,7 +11,7 @@ public class Timer : MonoBehaviour {
 	public Color _colSafe;
 	public Color _colorWarning;
 	public Color _colCritical;
-	private bool pauseTimer = false;
+	public bool pauseTimer = false;
 
 	public bool triggeredEnd = false;
 
@@ -50,18 +50,18 @@ public class Timer : MonoBehaviour {
 				microSecLeft = 99;
 			}
 
-			if (secLeft <= 0 && triggeredEnd == false)
+			if (secLeft == 0 && triggeredEnd == false)
 			{
 				GameEventManager.TriggerGameOver();
 				triggeredEnd = true;
-				secLeft = 60;
+				secLeft = 59;
 			}
 		}
 	}
 
 	public void resetTimer()
 	{
-			secLeft = 60;
+			secLeft = 59;
 			microSecLeft = 99;
 	}
 

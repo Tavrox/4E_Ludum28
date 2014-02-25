@@ -120,6 +120,10 @@ public class Player : Character {
 				GameEventManager.TriggerGameUnpause();
 			}
 		}
+		if (Input.GetKeyDown(KeyCode.Backspace)) {
+			GameObject.Find("Player").GetComponent<Player>().isDead = true;
+			GameEventManager.TriggerGameOver();
+		}
 	}
 
 	private void playFootstep()
@@ -154,6 +158,10 @@ public class Player : Character {
 			transform.localPosition = spawnPos;
 			enabled = true;
 		}
+		
+		isJump = false;
+		chute = true;
+		vectorMove.y = 0;
 		angleRotation = 0;
 		enabled = true;
 		isDead = false;

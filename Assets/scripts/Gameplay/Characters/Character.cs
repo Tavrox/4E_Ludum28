@@ -39,6 +39,7 @@ public class Character : MonoBehaviour
 	[HideInInspector] public bool passingPlatform;
 	[HideInInspector] public bool onPlatform;
 	[HideInInspector] public Crate myCrate;
+	[HideInInspector] public float myCrateX;
 	
 	[HideInInspector] public bool blockedRight;
 	[HideInInspector] public bool blockedLeft;
@@ -106,7 +107,7 @@ public class Character : MonoBehaviour
 		gravityY = 15f;
 		chute = true;
 	}
-	
+
 	// Update is called once per frame
 	public virtual void UpdateMovement() 
 	{
@@ -147,8 +148,8 @@ public class Character : MonoBehaviour
 //					vectorMove.y = jump2Vel;
 //				}
 			}
-			if(vectorMove.y < maxVelY/2f)	vectorMove.y += jumpSpeed;
-			else if(vectorMove.y < maxVelY)	vectorMove.y += jumpSpeed*2f;
+			if(vectorMove.y < (2*maxVelY)/3f)	vectorMove.y += jumpSpeed*0.75f;
+			else if(vectorMove.y < maxVelY)	vectorMove.y += jumpSpeed*1.75f;
 			else chute=true;
 		}
 		addForce = 1;
@@ -163,6 +164,14 @@ public class Character : MonoBehaviour
 			jumps = 0;
 		}
 		
+		if(onCrate) {
+			if(myCrate.transform.position.x < myCrateX) {
+				thisTransform.position -= new Vector3(Mathf.Abs(myCrate.transform.position.x - myCrateX),0,0);
+			}
+			if(myCrate.transform.position.x > myCrateX) {
+				thisTransform.position += new Vector3(Mathf.Abs(myCrate.transform.position.x - myCrateX),0,0);
+			}
+		}
 		UpdateRaycasts();
 		
 		// apply gravity while airborne
@@ -171,7 +180,6 @@ public class Character : MonoBehaviour
 			if(vectorMove.y>0f && vectorMove.y<50f) vectorMove.y -= gravityY * Time.deltaTime * 1.5f * addForce;
 			vectorMove.y -= gravityY * Time.deltaTime * 1.5f* addForce;
 		}
-		
 		// velocity limiter
 		if(vectorMove.y < -maxVelY)
 		{
@@ -182,7 +190,6 @@ public class Character : MonoBehaviour
 		vectorMove.x = vectorMove.x * runSpeed; //ADD
 		vectorFixed = vectorMove * Time.deltaTime;
 		thisTransform.position += new Vector3(vectorFixed.x,vectorFixed.y,0f);
-		
 	}
 //	private IEnumerator resetGravity() {
 //		yield return new WaitForSeconds (1f);
@@ -203,61 +210,72 @@ public class Character : MonoBehaviour
 //		absVel2Y = Mathf.Abs(vectorFixed.y);
 
 		
-		Vector3 tst = new Vector3(mypos.x, mypos.y,0f);
-		Debug.DrawLine( tst , tst+Vector3.down, Color.green);
-		Debug.DrawLine( mypos , Vector3.down, Color.blue);
+//		Vector3 tst = new Vector3(mypos.x, mypos.y,0f);
+//		Debug.DrawLine( tst , tst+Vector3.down, Color.green);
+//		Debug.DrawLine( mypos , Vector3.down, Color.blue);
 //		print (mypos);
 //
 //		print (halfMyY);
 		
 		//BLOCKED TO DOWN
-		if (Physics.Raycast(mypos, mypos+Vector3.down, out hitInfo, halfMyY, platformMask))
-		{
-//			print ("entered blocker");
-			Debug.DrawLine(thisTransform.position, hitInfo.point, Color.black);
-			if (isCrounch == true)
-			{
-				passingPlatform = true;
-				ThroughPlatform();
-			}
-			else 
-			{
-				BlockedDown();	
-			}
-		}
-		if (Physics.Raycast(mypos, Vector3.down, out hitInfo, halfMyY, groundMask))
+//		if (Physics.Raycast(mypos, Vector3.down, out hitInfo, halfMyY, platformMask))
+//		{
+////			print ("entered blocker");
+//			Debug.DrawLine(thisTransform.position, hitInfo.point, Color.black);
+//			if (isCrounch == true)
+//			{
+//				passingPlatform = true;
+//				ThroughPlatform();
+//			}
+//			else 
+//			{
+//				BlockedDown();	
+//			}
+		//		}
+		Debug.DrawRay (new Vector3(mypos.x+0.25f, mypos.y), Vector3.down*halfMyY, Color.yellow);
+		Debug.DrawRay (new Vector3(mypos.x-0.25f, mypos.y), Vector3.down*halfMyY, Color.yellow);
+		if (Physics.Raycast(mypos, Vector3.down, out hitInfo, halfMyY, groundMask) 
+		    || Physics.Raycast(new Vector3(mypos.x+0.25f, mypos.y), Vector3.down, out hitInfo, halfMyY, groundMask)
+		    || Physics.Raycast(new Vector3(mypos.x-0.25f, mypos.y), Vector3.down, out hitInfo, halfMyY, groundMask)
+		    )
 		{
 //			print ("blocked down");
-			if(hitInfo.collider.CompareTag("Crate")) {onCrate = true;myCrate=hitInfo.collider.gameObject.GetComponent<Crate>();}
+			if(hitInfo.collider.CompareTag("Crate")) {
+				onCrate = true;
+				myCrate=hitInfo.collider.gameObject.GetComponent<Crate>();
+				myCrateX = myCrate.transform.position.x;
+			}
 			BlockedDown();
 		}
-		
-		
+
 		// BLOCKED TO UP
 		if (Physics.Raycast(mypos, Vector3.up, out hitInfo, halfMyY, groundMask))
 		{
 			BlockedUp();
 			Debug.DrawLine (thisTransform.position, hitInfo.point, Color.red);
 		}
+		Debug.DrawRay (new Vector3(mypos.x, mypos.y+halfMyY-0.4f), Vector3.right*(halfMyX-0.5f), Color.red);
+		//Debug.DrawRay (new Vector3(mypos.x, mypos.y), Vector3.right*(halfMyX-0.5f), Color.red);
+		Debug.DrawRay (new Vector3(mypos.x, mypos.y-halfMyY+0.4f), Vector3.right*(halfMyX-0.5f), Color.red);
 		// Blocked on right
 		if( Physics.Raycast(mypos, Vector3.right, out hitInfo, halfMyX, groundMask) 
-		   || Physics.Raycast(mypos, new Vector3(1f,0.8f,0) , out hitInfo, halfMyX, groundMask)
-		   || Physics.Raycast(mypos, new Vector3(1f,-0.8f,0), out hitInfo, halfMyX, groundMask))
+		   || Physics.Raycast(new Vector3(mypos.x, mypos.y+halfMyY-0.4f), Vector3.right, out hitInfo, halfMyX, groundMask)
+		   || Physics.Raycast(new Vector3(mypos.x, mypos.y-halfMyY+0.4f), Vector3.right, out hitInfo, halfMyX, groundMask))
 		{
 			if(!hitInfo.collider.CompareTag("Crate")) BlockedRight();
 			Debug.DrawRay(mypos, Vector3.right, Color.cyan);
 		}
 		if( Physics.Raycast(mypos, Vector3.right, out hitInfo, halfMyX-0.6f, groundMask) 
-		   || Physics.Raycast(mypos, new Vector3(1f,0.8f,0) , out hitInfo, halfMyX-0.6f, groundMask)
-		   || Physics.Raycast(mypos, new Vector3(1f,-0.8f,0), out hitInfo, halfMyX-0.6f, groundMask))
+		   || Physics.Raycast(new Vector3(mypos.x, mypos.y+halfMyY-0.4f), Vector3.right, out hitInfo, halfMyX-0.5f, groundMask)
+		   || Physics.Raycast(new Vector3(mypos.x, mypos.y-halfMyY+0.4f), Vector3.right, out hitInfo, halfMyX-0.5f, groundMask))
 		{
 			BlockedRightCrate();
 		}
 		
 		// Blocked on left
 		if(	Physics.Raycast(mypos, Vector3.left, out hitInfo, halfMyX, groundMask)
-		   || Physics.Raycast(mypos, new Vector3(-1f,0.8f,0), out hitInfo, halfMyX, groundMask)
-		   || Physics.Raycast(mypos, new Vector3(-1f,0.8f,0), out hitInfo, halfMyX, groundMask))
+		   || Physics.Raycast(new Vector3(mypos.x, mypos.y+halfMyY-0.4f), Vector3.left, out hitInfo, halfMyX, groundMask)
+		   || Physics.Raycast(new Vector3(mypos.x, mypos.y-halfMyY+0.4f), Vector3.left, out hitInfo, halfMyX, groundMask))
 		{
 			if(!hitInfo.collider.CompareTag("Crate")) BlockedLeft();
 			Debug.DrawRay(mypos, Vector3.left, Color.yellow);
@@ -266,11 +284,15 @@ public class Character : MonoBehaviour
 //		Debug.DrawRay(new Vector3(1f,-0.8f,0), Vector3.right*(halfMyX-0.6f), Color.cyan);
 		//		Debug.DrawRay(new Vector3(-1f,0.8f,0), Vector3.left*(halfMyX-0.6f), Color.yellow);
 		//		Debug.DrawRay(new Vector3(-1f,0.8f,0), Vector3.left*(halfMyX-0.6f), Color.yellow);
-		Debug.DrawRay(mypos, Vector3.right*(halfMyX-0.6f), Color.cyan);
-		Debug.DrawRay(mypos, Vector3.left*(halfMyX-0.6f), Color.yellow);
+		
+		Debug.DrawRay (new Vector3(mypos.x, mypos.y+halfMyY-0.4f), Vector3.left*(halfMyX-0.5f), Color.cyan);
+		//Debug.DrawRay (new Vector3(mypos.x, mypos.y), Vector3.right*(halfMyX-0.5f), Color.red);
+		Debug.DrawRay (new Vector3(mypos.x, mypos.y-halfMyY+0.4f), Vector3.left*(halfMyX-0.5f), Color.cyan);
+//		Debug.DrawRay(mypos, Vector3.right*(halfMyX-0.6f), Color.cyan);
+//		Debug.DrawRay(mypos, Vector3.left*(halfMyX-0.6f), Color.yellow);
 		if(	Physics.Raycast(mypos, Vector3.left, out hitInfo, halfMyX-0.6f, groundMask)
-		   || Physics.Raycast(mypos, new Vector3(-1f,0.8f,0), out hitInfo, halfMyX-0.6f, groundMask)
-		   || Physics.Raycast(mypos, new Vector3(-1f,0.8f,0), out hitInfo, halfMyX-0.6f, groundMask))
+		   || Physics.Raycast(new Vector3(mypos.x, mypos.y+halfMyY-0.4f), Vector3.left, out hitInfo, halfMyX-0.5f, groundMask)
+		   || Physics.Raycast(new Vector3(mypos.x, mypos.y-halfMyY+0.4f), Vector3.left, out hitInfo, halfMyX-0.5f, groundMask))
 		{
 			BlockedLeftCrate();
 		}

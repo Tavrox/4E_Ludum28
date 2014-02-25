@@ -8,6 +8,7 @@ public class Walker : Enemy {
 	private Player _player;
 	private Transform myspawnpos;
 	private bool walkSoundSwitch;
+	private bool activated;
 	/***** ENNEMI BEGIN *****/
 
 	void Start()
@@ -17,22 +18,29 @@ public class Walker : Enemy {
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
 		//myspawnpos.position = new Vector3(gameObject.transform.position.x,gameObject.transform.position.z,0f);
 		GameEventManager.GameStart += GameStart;
+		StartCoroutine("waitB4Gravity");
 	}
-
+	private IEnumerator waitB4Gravity() {
+		yield return new WaitForSeconds(0.5f);
+		activated = true;
+	}
 	// Update is called once per frame
 	public void Update () 
 	{
-		if(chasingPlayer) {ChasePlayer();}
-		detectPlayer();
-		detectEndPlatform();
-		if(!chasingPlayer) {UpdateMovement();}
+		if(activated) {
+			if(chasingPlayer) {ChasePlayer();}
+			detectPlayer();
+			detectEndPlatform();
+			if(!chasingPlayer) {UpdateMovement();}
+		}
 	}
 
 	protected void GameStart () {
 		//if(FindObjectOfType(typeof(Enemy)) && this != null) {
 			transform.position = new Vector3(spawnPos.x,spawnPos.y,0f);
 			enabled = true;
-			chasingPlayer = false;
+			chasingPlayer = activated = false;
+			StartCoroutine("waitB4Gravity");
 		//}
 	}
 
