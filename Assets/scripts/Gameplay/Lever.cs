@@ -57,7 +57,7 @@ public class Lever : MonoBehaviour {
 	{
 		if (other.gameObject.CompareTag("Player"))
 		{
-			if (Input.GetKeyDown(KeyCode.Space) && !seqLocked && !(myButtonType == btnType.TimedBtn && trigged))
+			if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E)) && !seqLocked && !(myButtonType == btnType.TimedBtn && trigged))
 			{
 				FESound.playDistancedSound("lever",gameObject.transform, _player.transform,SND_minDist);//MasterAudio.PlaySound("lever");
 				trigged = !trigged;

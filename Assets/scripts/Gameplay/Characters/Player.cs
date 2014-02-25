@@ -96,7 +96,7 @@ public class Player : Character {
 		{ 
 			MasterAudio.PlaySound("player_jump");
 		}
-		if (Input.GetKeyUp("up") || Input.GetKey(KeyCode.Z)) chute=true;
+		if (Input.GetKeyUp("up") || Input.GetKeyUp(KeyCode.Z)) chute=true;
 		
 		if(Input.GetKeyDown("space"))
 		{
