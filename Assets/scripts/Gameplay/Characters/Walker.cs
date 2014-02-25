@@ -119,7 +119,7 @@ public class Walker : Enemy {
 	
 	private void checkPlayerRaycast() {
 //		print ("CA CHERCHE");
-		if (Physics.Raycast(detectTargetLeft, out hitInfo, targetDetectionArea) || Physics.Raycast(detectTargetRight, out hitInfo, targetDetectionArea)) {
+		if (Physics.Raycast(detectTargetLeft, out hitInfo, targetDetectionArea, (1 << 8) | (1 << 9)) || Physics.Raycast(detectTargetRight, out hitInfo, targetDetectionArea, (1 << 8) | (1 << 9))) {
 //			print ("CA TOUCHE");
 			if(hitInfo.collider.name == "ColliBox" || hitInfo.collider.tag=="Blocker") {
 //				print ("CHAAArhrt/r88tr*h7*/7*/*ASSSSColliBoxSEE");
@@ -131,9 +131,9 @@ public class Walker : Enemy {
 				chasingPlayer = true;
 			}
 			else if(!chasingPlayer) {isLeft = isRight = false;}
-//			print(hitInfo);
+			print(hitInfo);
 		}
-		if(Physics.Raycast(detectTargetRight, out hitInfo, targetDetectionArea)) {
+		if(Physics.Raycast(detectTargetRight, out hitInfo, targetDetectionArea, (1 << 8) | (1 << 9))) {
 			if(hitInfo.collider.name == "Player") {
 //				print ("CHAAAASSSSSEE");
 				chasingPlayer = true;
@@ -153,7 +153,7 @@ public class Walker : Enemy {
 		
 		if (!Physics.Raycast(detectEndPFLeft, out hitInfo, blockDetectionArea) || !Physics.Raycast(detectEndPFRight, out hitInfo, blockDetectionArea)) {
 			chasingPlayer = false;
-			isLeft = isRight = false;
+			isLeft = isRight = false;print("STOOOOOOOOOOOOOOOOOOOOP");
 			if (!Physics.Raycast(detectEndPFLeft, out hitInfo, blockDetectionArea)) {
 				if (Physics.Raycast(detectTargetRight, out hitInfo, targetDetectionArea)) {
 					if(hitInfo.collider.name == "Player") {
