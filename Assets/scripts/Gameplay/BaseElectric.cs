@@ -17,6 +17,7 @@ public class BaseElectric : MonoBehaviour {
 		else if(activeTime!=0) StartCoroutine("waitB4Active",true);
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GameOver += GameOver;
+		if(delayBegin != 0) collider.enabled=false;
 	}
 	private IEnumerator waitB4Active(bool alternate) {
 		yield return new WaitForSeconds(delayBegin);
@@ -65,6 +66,7 @@ public class BaseElectric : MonoBehaviour {
 	void GameStart() {
 		animSprite.Play("baseDefault");
 		activeState = true;
+		if(delayBegin != 0) collider.enabled=false;
 		if(inactiveTime==0) StartCoroutine("waitB4Active",false);
 		else if(activeTime!=0) StartCoroutine("waitB4Active",true);
 	}
