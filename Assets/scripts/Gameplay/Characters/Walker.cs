@@ -18,6 +18,7 @@ public class Walker : Enemy {
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
 		//myspawnpos.position = new Vector3(gameObject.transform.position.x,gameObject.transform.position.z,0f);
 		GameEventManager.GameStart += GameStart;
+		GameEventManager.FinishLevel += FinishLevel;
 		StartCoroutine("waitB4Gravity");
 	}
 	private IEnumerator waitB4Gravity() {
@@ -37,11 +38,17 @@ public class Walker : Enemy {
 
 	protected void GameStart () {
 		//if(FindObjectOfType(typeof(Enemy)) && this != null) {
+		if(gameObject.activeInHierarchy) {
 			transform.position = new Vector3(spawnPos.x,spawnPos.y,0f);
 			enabled = true;
 			chasingPlayer = activated = false;
 			StartCoroutine("waitB4Gravity");
 		//}
+		}
+	}
+	private void FinishLevel() {
+		enabled = false;
+		collider.enabled=false;
 	}
 
 	private void sound()
@@ -119,7 +126,7 @@ public class Walker : Enemy {
 	
 	private void checkPlayerRaycast() {
 //		print ("CA CHERCHE");
-		if (Physics.Raycast(detectTargetLeft, out hitInfo, targetDetectionArea) || Physics.Raycast(detectTargetRight, out hitInfo, targetDetectionArea)) {
+		if (Physics.Raycast(detectTargetLeft, out hitInfo, targetDetectionArea, (1 << 8) | (1 << 9)) || Physics.Raycast(detectTargetRight, out hitInfo, targetDetectionArea, (1 << 8) | (1 << 9))) {
 //			print ("CA TOUCHE");
 			if(hitInfo.collider.name == "ColliBox" || hitInfo.collider.tag=="Blocker") {
 //				print ("CHAAArhrt/r88tr*h7*/7*/*ASSSSColliBoxSEE");
@@ -131,9 +138,9 @@ public class Walker : Enemy {
 				chasingPlayer = true;
 			}
 			else if(!chasingPlayer) {isLeft = isRight = false;}
-//			print(hitInfo);
+			print(hitInfo);
 		}
-		if(Physics.Raycast(detectTargetRight, out hitInfo, targetDetectionArea)) {
+		if(Physics.Raycast(detectTargetRight, out hitInfo, targetDetectionArea, (1 << 8) | (1 << 9))) {
 			if(hitInfo.collider.name == "Player") {
 //				print ("CHAAAASSSSSEE");
 				chasingPlayer = true;
@@ -153,12 +160,12 @@ public class Walker : Enemy {
 		
 		if (!Physics.Raycast(detectEndPFLeft, out hitInfo, blockDetectionArea) || !Physics.Raycast(detectEndPFRight, out hitInfo, blockDetectionArea)) {
 			chasingPlayer = false;
-			isLeft = isRight = false;
+			isLeft = isRight = false;print("STOOOOOOOOOOOOOOOOOOOOP");
 			if (!Physics.Raycast(detectEndPFLeft, out hitInfo, blockDetectionArea)) {
 				if (Physics.Raycast(detectTargetRight, out hitInfo, targetDetectionArea)) {
 					if(hitInfo.collider.name == "Player") {
 						chasingPlayer = true;
-						thisTransform.position += new Vector3((spriteScaleX/2f),0f,0f);
+						if(grounded) thisTransform.position += new Vector3((spriteScaleX/2f),0f,0f);
 					}
 				}
 			}
@@ -166,7 +173,7 @@ public class Walker : Enemy {
 				if (Physics.Raycast(detectTargetLeft, out hitInfo, targetDetectionArea)) {
 					if(hitInfo.collider.name == "Player") {
 						chasingPlayer = true;
-						thisTransform.position -= new Vector3((spriteScaleX/2f),0f,0f);
+						if(grounded) thisTransform.position -= new Vector3((spriteScaleX/2f),0f,0f);
 					}
 				}
 			}

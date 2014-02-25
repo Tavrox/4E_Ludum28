@@ -75,9 +75,11 @@ public class SequenceBtn : MonoBehaviour {
 
 	}
 	void GameStart () {
-		StopCoroutine("resetRightCombo");
-		StopCoroutine("resetSequence");
-		rightCombo = allTriggered = true;
-		solved = rightComboChecked = errorDetected = errorLaunched = false;
+		if(gameObject.activeInHierarchy) {
+			StopCoroutine("resetRightCombo");
+			StopCoroutine("resetSequence");
+			rightCombo = allTriggered = true;
+			solved = rightComboChecked = errorDetected = errorLaunched = false;
+		}
 	}
 }

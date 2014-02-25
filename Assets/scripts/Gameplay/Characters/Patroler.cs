@@ -47,6 +47,7 @@ public class Patroler : Character {
 		GameEventManager.GameOver += GameOver;
 		GameEventManager.GamePause += GamePause;
 		GameEventManager.GameUnpause += GameUnpause;
+		GameEventManager.FinishLevel += FinishLevel;
 
 		spawnPos = gameObject.transform.position;
 
@@ -173,16 +174,22 @@ public class Patroler : Character {
 	}
 
 	protected void GameStart () {
+		if(gameObject.activeInHierarchy) {
 		//if(FindObjectOfType(typeof(Enemy)) && this != null) {
 		//transform.localPosition = new Vector3(0f,0f,0f);
 		transform.position = new Vector3(spawnPos.x,spawnPos.y,0f);
 		gameObject.transform.parent.gameObject.SetActive(true);
-		enabled = true;
-		touchingCrate = false;
+		enabled = true;go = true;
+		touchingCrate = false;waypointId=0;
 		touchedCrate =null;
 		//}
+		}
 	}
 	
+	private void FinishLevel() {
+		enabled = false;
+		collider.enabled=false;
+	}
 	protected void GameOver () {
 		enabled = false;
 		touchingCrate = false;

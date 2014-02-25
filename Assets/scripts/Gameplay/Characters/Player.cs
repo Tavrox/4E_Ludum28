@@ -28,6 +28,7 @@ public class Player : Character {
 		GameEventManager.GameOver += GameOver;
 		GameEventManager.GamePause += GamePause;
 		GameEventManager.GameUnpause += GameUnpause;
+		GameEventManager.FinishLevel += FinishLevel;
 
 		InvokeRepeating("playFootstep",0f,0.4f);
 		
@@ -95,7 +96,7 @@ public class Player : Character {
 		{ 
 			MasterAudio.PlaySound("player_jump");
 		}
-		if (Input.GetKeyUp("up") || Input.GetKey(KeyCode.Z)) chute=true;
+		if (Input.GetKeyUp("up") || Input.GetKeyUp(KeyCode.Z)) chute=true;
 		
 		if(Input.GetKeyDown("space"))
 		{
@@ -159,12 +160,18 @@ public class Player : Character {
 			enabled = true;
 		}
 		
+		enabled = true;
+		collider.enabled=true;
 		isJump = false;
 		chute = true;
 		vectorMove.y = 0;
 		angleRotation = 0;
 		enabled = true;
 		isDead = false;
+	}
+	private void FinishLevel() {
+		enabled = false;
+		collider.enabled=false;
 	}
 	
 	private void GameOver () 

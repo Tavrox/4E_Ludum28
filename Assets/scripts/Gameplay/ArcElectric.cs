@@ -18,6 +18,8 @@ public class ArcElectric : MonoBehaviour {
 		else if(activeTime!=0) StartCoroutine("waitB4Active",true);
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GameOver += GameOver;
+		GameEventManager.FinishLevel += FinishLevel;
+		if(delayBegin != 0) collider.enabled=false;
 		//MasterAudio.PlaySound("piston_idle");
 	}
 	
@@ -65,11 +67,22 @@ public class ArcElectric : MonoBehaviour {
 		StopCoroutine("activateInfinite");
 		StopCoroutine("SND_activateThenOff");
 	}
+	private void FinishLevel() {
+		StopCoroutine("active");
+		StopCoroutine("waitB4Active");
+		StopCoroutine("activateInfinite");
+		StopCoroutine("SND_activateThenOff");
+		enabled = false;
+		collider.enabled=false;
+	}
 	void GameStart() {
+		if(gameObject.activeInHierarchy) {
 		animSprite.Play("arcDefault");
+		if(delayBegin != 0) collider.enabled=false;
 		activeState = true;
 		if(inactiveTime==0) StartCoroutine("waitB4Active",false);
 		else if(activeTime!=0) StartCoroutine("waitB4Active",true);
+		}
 	}
 	IEnumerator activateCollider () {
 		yield return new WaitForSeconds(0f);

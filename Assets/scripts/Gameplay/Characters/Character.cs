@@ -78,8 +78,8 @@ public class Character : MonoBehaviour
 //	[SerializeField] private float absVel2Y;
 	
 	// layer masks
-	protected int groundMask = 1 << 8 | 1 << 9; // Ground, Block
-	protected int platformMask = 1 << 9; //Block
+	protected int groundMask = 1 << 8; // Ground, Block
+	protected int platformMask = 1 << 8; //Block
 	private float pfPassSpeed = 2.8f;
 	private float addForce;
 	
