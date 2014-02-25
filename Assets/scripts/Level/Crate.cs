@@ -253,6 +253,6 @@ public class Crate : MonoBehaviour {
 		}
 	}
 	void GameStart () {
-		if(!isObjChild)	transform.position = new Vector3(spawnPos.x,spawnPos.y,spawnPos.z);
+		if(!isObjChild && gameObject.activeInHierarchy)	transform.position = new Vector3(spawnPos.x,spawnPos.y,spawnPos.z);
 	}
 }

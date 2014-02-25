@@ -30,12 +30,14 @@ public class TriggeredDoor : MonoBehaviour {
 
 	private void GameStart()
 	{
+		if(gameObject.activeInHierarchy) {
 		isLocked = memoryLock;
-		
-		if (isLocked)
-			Lock();
-		else 
-			Unlock();
+			
+			if (isLocked)
+				Lock();
+			else 
+				Unlock();
+		}
 	}
 	
 	public void Lock()

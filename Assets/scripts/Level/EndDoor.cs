@@ -19,6 +19,7 @@ public class EndDoor : MonoBehaviour {
 		//_playerdata = _player.GetComponent<PlayerData>();
 		GameEventManager.NextLevel += NextLevel;
 		GameEventManager.NextInstance += NextInstance;
+		GameEventManager.FinishLevel += FinishLevel;
 	}
 
 	void OnTriggerStay(Collider other)
@@ -31,7 +32,8 @@ public class EndDoor : MonoBehaviour {
 				triggered = true;
 				StartCoroutine("lastFrameBuzzer");
 				//Destroy (_UINeedKey);
-				finishLevel();
+				GameEventManager.TriggerFinishLevel();
+				FinishLevel();
 				MasterAudio.PlaySound("key_door");
 			}
 			else if ((Input.GetKeyDown(KeyCode.F) || Input.GetKey("space"))  && _player.hasFinalKey == false)
@@ -45,7 +47,7 @@ public class EndDoor : MonoBehaviour {
 		yield return new WaitForSeconds(1f);
 		sprite.frameIndex += 1;
 	}
-	private void finishLevel() {
+	private void FinishLevel() {
 		_lvlTimer.pauseTimer = true;
 		MasterAudio.PlaySound("win");
 		MasterAudio.FadePlaylistToVolume(0f, 2f);

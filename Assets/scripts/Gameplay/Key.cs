@@ -18,7 +18,7 @@ public class Key : MonoBehaviour {
 
 	void GameStart()
 	{
-		resetKey();
+		if(gameObject.activeInHierarchy) resetKey();
 	}
 	void GameOver() {
 		resetKey();

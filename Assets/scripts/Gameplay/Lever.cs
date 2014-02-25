@@ -101,16 +101,18 @@ public class Lever : MonoBehaviour {
 		if(myButtonType == btnType.TimedBtn) animSprite.Play("timedlock"); else animSprite.Play("lock");
 	}
 	void GameStart () {
-		StopCoroutine("leverTimer");
-		StopCoroutine("waitB4Restart");
-		StopCoroutine("delayRetrigg");
-		StopCoroutine("resetLever");
-		if(myButtonType == btnType.TimedBtn) { 
-			_myRemainingTime = delay;
-			_myTimer.text = _myRemainingTime.ToString();
-			animSprite.Play("timedlock");
+		if(gameObject.activeInHierarchy) {
+			StopCoroutine("leverTimer");
+			StopCoroutine("waitB4Restart");
+			StopCoroutine("delayRetrigg");
+			StopCoroutine("resetLever");
+			if(myButtonType == btnType.TimedBtn) { 
+				_myRemainingTime = delay;
+				_myTimer.text = _myRemainingTime.ToString();
+				animSprite.Play("timedlock");
+			}
+			else animSprite.Play("lock");
+			stopped = trigged = seqLocked = false;
 		}
-		else animSprite.Play("lock");
-		stopped = trigged = seqLocked = false;
 	}
 }
