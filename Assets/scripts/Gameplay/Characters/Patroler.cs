@@ -178,7 +178,7 @@ public class Patroler : Character {
 		transform.position = new Vector3(spawnPos.x,spawnPos.y,0f);
 		gameObject.transform.parent.gameObject.SetActive(true);
 		enabled = true;go = true;
-		touchingCrate = false;
+		touchingCrate = false;waypointId=0;
 		touchedCrate =null;
 		//}
 	}
