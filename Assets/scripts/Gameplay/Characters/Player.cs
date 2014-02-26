@@ -65,7 +65,7 @@ public class Player : Character {
 		isPass = false;
 		isCrounch = false;
 		
-		//col.size = new Vector3(1.1f, col.size.y, col.size.z);
+		col.size = new Vector3(1.1f, col.size.y, col.size.z);
 		movingDir = moving.None;
 		if(Input.GetKey("left shift")) {
 			col.size = new Vector3(1.75f, col.size.y, col.size.z);

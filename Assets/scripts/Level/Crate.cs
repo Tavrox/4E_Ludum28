@@ -232,12 +232,12 @@ public class Crate : MonoBehaviour {
 //		return false;
 //	}
 	private void detectEndPlatform() {
-		detectEndPFLeft = new Ray(new Vector3 (thisTransform.position.x-(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down);
-		detectEndPFRight = new Ray(new Vector3 (thisTransform.position.x+(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down);
+		detectEndPFLeft = new Ray(new Vector3 (thisTransform.position.x-(spriteScaleX/2.5f), thisTransform.position.y, thisTransform.position.z), Vector3.down);
+		detectEndPFRight = new Ray(new Vector3 (thisTransform.position.x+(spriteScaleX/2.5f), thisTransform.position.y, thisTransform.position.z), Vector3.down);
 
 		//print (blockDetectionArea);
-		Debug.DrawRay(new Vector3 (thisTransform.position.x-(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY/2f);
-		Debug.DrawRay(new Vector3 (thisTransform.position.x+(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY/2f);
+		Debug.DrawRay(new Vector3 (thisTransform.position.x-(spriteScaleX/2.5f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY/2f);
+		Debug.DrawRay(new Vector3 (thisTransform.position.x+(spriteScaleX/2.5f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY/2f);
 		
 		if (!Physics.Raycast(detectEndPFLeft, out hitInfo, spriteScaleY/2f) && !Physics.Raycast(detectEndPFRight, out hitInfo, spriteScaleY/2f)) {
 			grounded = false;
@@ -276,29 +276,10 @@ public class Crate : MonoBehaviour {
 		else cakeCrate = null;
 	}
 	public void moveCake (float moveValue) {
-		if (cakeCrate != null) {
+		if (cakeCrate != null && !cakeCrate.blockCrate) {
 			cakeCrate.transform.position += new Vector3(moveValue,0f,0f);
 			cakeCrate.moveCake(moveValue);
 		}
-	}
-	public void getUpperCrates() {
-		
-		linkedCrates = checkUpperCrates();
-		if(linkedCrates!=null) {
-		foreach(Crate cr in linkedCrates) {
-			print(cr.name);
-		}
-		}
-	}
-	public List<Crate> checkUpperCrates() {
-		if( Physics.Raycast(thisTransform.position, Vector3.up, out hitInfo, spriteScaleY/1.8f) && hitInfo.collider.CompareTag("Crate")) {
-			if(hitInfo.collider.gameObject.GetComponent<Crate>().checkUpperCrates() != null) {
-				linkedCratesTMP = hitInfo.collider.gameObject.GetComponent<Crate>().checkUpperCrates();
-			}
-			linkedCratesTMP.Add(hitInfo.collider.gameObject.GetComponent<Crate>());
-			return linkedCratesTMP;			
-		}
-		else return null;
 	}
 	void GameStart () {
 		if(!isObjChild && gameObject.activeInHierarchy)	transform.position = new Vector3(spawnPos.x,spawnPos.y,spawnPos.z);
