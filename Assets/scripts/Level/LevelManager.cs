@@ -38,13 +38,13 @@ public class LevelManager : MonoBehaviour {
 		//else _rand = chosenVariation.ToString();
 
 		//print ("Level generated " + _rand);
-		foreach (Transform _gameo in GameObject.Find("Level/ObjectImporter").transform)
-		{
-			if (_gameo.gameObject.name == chosenVariation.ToString() )
-		    {
-				_gameo.gameObject.SetActive(true);
-			}
-		}
+//		foreach (Transform _gameo in GameObject.Find("Level/ObjectImporter").transform)
+//		{
+//			if (_gameo.gameObject.name == chosenVariation.ToString() )
+//		    {
+//				_gameo.gameObject.SetActive(true);
+//			}
+//		}
 
 		spawnPoint = GameObject.Find("playerspawn"+chosenVariation).transform.position;
 		player.transform.position = player.spawnPos = new Vector3(spawnPoint.x,spawnPoint.y,-1f);

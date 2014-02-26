@@ -138,7 +138,7 @@ public class Walker : Enemy {
 				chasingPlayer = true;
 			}
 			else if(!chasingPlayer) {isLeft = isRight = false;}
-			print(hitInfo);
+			//print(hitInfo);
 		}
 		if(Physics.Raycast(detectTargetRight, out hitInfo, targetDetectionArea, (1 << 8) | (1 << 9))) {
 			if(hitInfo.collider.name == "Player") {
