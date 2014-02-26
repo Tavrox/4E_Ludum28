@@ -317,5 +317,8 @@
   <object name="Boss--LaserBase01BaseG" type="BaseArcL" x="436" y="2804" width="164" height="44"/>
   <object name="Boss--LaserBase01" type="ArcHorizontal" x="602" y="2802" width="200" height="46"/>
   <object name="Boss--LaserBase01BaseD" type="BaseArcR" x="1246" y="2800" width="158" height="52"/>
+  <object name="Boss--EndDoo" type="EndDoor" x="897" y="2681" width="53" height="118"/>
+  <object name="Boss--Key" type="Key" x="879" y="646" width="72" height="61"/>
+  <object name="Boss--teleportSalle1" type="TeleportIn" x="756" y="2833" width="53" height="118"/>
  </objectgroup>
 </map>

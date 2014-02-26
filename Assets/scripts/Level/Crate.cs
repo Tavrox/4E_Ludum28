@@ -16,6 +16,9 @@ public class Crate : MonoBehaviour {
 	public float replaceCrate = 3f;
 	private Vector3 spawnPos;
 	private bool crateSoundPlaying, crateSoundStopping, touchFloor;
+	public List<Crate> linkedCrates = new List<Crate>();
+	public List<Crate> linkedCratesTMP = new List<Crate>();
+	public Crate cakeCrate;
 //	private FESound testSon;
 	//RaycastHit hitInfo;
 	//Ray landingRay;	
@@ -62,7 +65,7 @@ public class Crate : MonoBehaviour {
 		//landingRay = new Ray(thisTransform.position, Vector3.down);
 	}
 	void OnTriggerEnter(Collider other) {
-		if(other.gameObject.name=="ColliBox" || other.gameObject.CompareTag("Blocker")) 
+		if(other.gameObject.name=="ColliBox" || other.gameObject.CompareTag("Blocker") || other.gameObject.CompareTag("Crate")) 
 		{/*print("GAUUUUUUCHE");*/blockCrate = true;}
 		if(other.gameObject.tag=="Enemy") {
 			//other.gameObject.GetComponent<Patroler>().getDamage(1);
@@ -84,30 +87,30 @@ public class Crate : MonoBehaviour {
 				if(_player.isLeft && !_player.blockedLeft) {//Tire Gauche
 					print("Je tire à gauche");
 					_player.moveVel = playerMoveVel/2; 
-					crateMove = -_player.moveVel*Time.deltaTime;
+					crateMove = -_player.moveVel*Time.deltaTime;moveCake(-_player.moveVel*Time.deltaTime);
 					if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
 				}
 				else if(!blockCrate && _player.isRight) {//Pousse Droite
 					print("Je pousse à droite");
 					_player.moveVel = playerMoveVel/2; 
-					crateMove = _player.moveVel*Time.deltaTime;
+					crateMove = _player.moveVel*Time.deltaTime;moveCake(_player.moveVel*Time.deltaTime);
 					if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
 				}
 				else crateMove = 0;
 				thisTransform.position += new Vector3(crateMove,0f,0f);
 			}
-			else if(Input.GetKey("space") && (_player.transform.position.x > thisTransform.position.x) /*&& !_player.isLeft*/) {
+			else if((Input.GetKey("left shift") || Input.GetKey(KeyCode.A)) && (_player.transform.position.x > thisTransform.position.x) /*&& !_player.isLeft*/) {
 				print("Je m'accroche à droite");
 				if(_player.isRight && !_player.blockedRight) {//Tire Droite
 					print("Je tire à droite");
 					_player.moveVel = playerMoveVel/2; 
-					crateMove = _player.moveVel*Time.deltaTime;
+					crateMove = _player.moveVel*Time.deltaTime;moveCake(_player.moveVel*Time.deltaTime);
 					if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
 				}
 				else if(!blockCrate && _player.isLeft) {//Pousse Gauche
 					print("Je pousse à gauche");
 					_player.moveVel = playerMoveVel/2; 
-					crateMove = -_player.moveVel*Time.deltaTime;
+					crateMove = -_player.moveVel*Time.deltaTime;moveCake(-_player.moveVel*Time.deltaTime);
 					if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
 				}
 				else crateMove = 0;
@@ -196,7 +199,7 @@ public class Crate : MonoBehaviour {
 			_player.moveVel = playerMoveVel;
 			if(crateSoundPlaying && !crateSoundStopping) StartCoroutine("SND_moveCrateEnd");
 		}
-		if(other.gameObject.name=="ColliBox" || other.gameObject.CompareTag("Blocker")) 
+		if(other.gameObject.name=="ColliBox" || other.gameObject.CompareTag("Blocker") || other.gameObject.CompareTag("Crate")) 
 		{/*print("GAUUUUUUCHE");*/blockCrate = false;}
 	}
 //	private bool detectPlayer() {
@@ -229,27 +232,53 @@ public class Crate : MonoBehaviour {
 //		return false;
 //	}
 	private void detectEndPlatform() {
-		detectEndPFLeft = new Ray(new Vector3 (thisTransform.position.x-(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down);
-		detectEndPFRight = new Ray(new Vector3 (thisTransform.position.x+(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down);
+		detectEndPFLeft = new Ray(new Vector3 (thisTransform.position.x-(spriteScaleX/2.5f), thisTransform.position.y, thisTransform.position.z), Vector3.down);
+		detectEndPFRight = new Ray(new Vector3 (thisTransform.position.x+(spriteScaleX/2.5f), thisTransform.position.y, thisTransform.position.z), Vector3.down);
 
 		//print (blockDetectionArea);
-		Debug.DrawRay(new Vector3 (thisTransform.position.x-(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY/2f);
-		Debug.DrawRay(new Vector3 (thisTransform.position.x+(spriteScaleX/2f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY/2f);
+		Debug.DrawRay(new Vector3 (thisTransform.position.x-(spriteScaleX/2.5f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY/2f);
+		Debug.DrawRay(new Vector3 (thisTransform.position.x+(spriteScaleX/2.5f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY/2f);
 		
 		if (!Physics.Raycast(detectEndPFLeft, out hitInfo, spriteScaleY/2f) && !Physics.Raycast(detectEndPFRight, out hitInfo, spriteScaleY/2f)) {
 			grounded = false;
+			cakeCrate = null;
 		}
 		else {
 			if(hitInfo.collider.CompareTag("Enemy")) {hitInfo.collider.gameObject.GetComponent<Character>().getDamage(1);} //Kill mob if Crate falls from top
-			if(hitInfo.collider.CompareTag("Blocker")) {
+			if(hitInfo.collider.CompareTag("Blocker") || hitInfo.collider.CompareTag("Crate")) {
 			grounded = true;
 			vectorMove.y = 0;
-				if(!touchFloor) {thisTransform.position = new Vector3(thisTransform.position.x, (float)((hitInfo.collider.bounds.center.y+(hitInfo.collider.bounds.size.y/2f)+spriteScaleY/2f)), thisTransform.position.z);
-					touchFloor=true;SND_crateFall();}
+				if(!touchFloor) {
+					thisTransform.position = new Vector3(thisTransform.position.x, (float)((hitInfo.collider.bounds.center.y+(hitInfo.collider.bounds.size.y/2f)+spriteScaleY/2f)), thisTransform.position.z);
+					touchFloor=true;SND_crateFall();
+					if(hitInfo.collider.CompareTag("Crate")) {
+						//hitInfo.collider.gameObject.transform.parent = transform;
+						//hitInfo.collider.gameObject.GetComponent<Crate>().touchFloor = hitInfo.collider.gameObject.GetComponent<Crate>().grounded = true;
+						//linkedCrates.Add(hitInfo.collider.gameObject.GetComponent<Crate>());
+					}
+				}
 			//BoxCollider colliderHit = hitInfo.collider as BoxCollider;
 			//print (colliderHit.size);
 
 			}
+		}
+		Debug.DrawRay(new Vector3(thisTransform.position.x-(spriteScaleX/2.5f), thisTransform.position.y, thisTransform.position.z), Vector3.up*spriteScaleY/1.5f, Color.yellow);
+		Debug.DrawRay(new Vector3(thisTransform.position.x+(spriteScaleX/2.5f), thisTransform.position.y, thisTransform.position.z), Vector3.up*spriteScaleY/1.5f, Color.yellow);
+		//getUpperCrates();
+		createCake();
+
+	}
+	public void createCake() {
+		if( (Physics.Raycast(new Vector3(thisTransform.position.x-(spriteScaleX/2.5f), thisTransform.position.y, thisTransform.position.z), Vector3.up, out hitInfo, spriteScaleY/1.5f) ||
+		     Physics.Raycast(new Vector3(thisTransform.position.x+(spriteScaleX/2.5f), thisTransform.position.y, thisTransform.position.z), Vector3.up, out hitInfo, spriteScaleY/1.5f)) && hitInfo.collider.CompareTag("Crate")) {
+			cakeCrate = hitInfo.collider.gameObject.GetComponent<Crate>();
+		}
+		else cakeCrate = null;
+	}
+	public void moveCake (float moveValue) {
+		if (cakeCrate != null && !cakeCrate.blockCrate) {
+			cakeCrate.transform.position += new Vector3(moveValue,0f,0f);
+			cakeCrate.moveCake(moveValue);
 		}
 	}
 	void GameStart () {

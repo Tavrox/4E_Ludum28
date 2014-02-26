@@ -12,6 +12,8 @@ public class Player : Character {
 	public int angleRotation;
 	public bool isDead = false, locked = false;
 	private bool walkSoundLeft;
+	
+	private BoxCollider col;
 	// Use this for initialization
 	public override void Start () 
 	{
@@ -37,7 +39,7 @@ public class Player : Character {
 		
 		spawnPos = thisTransform.position;
 		isDead =false;
-
+		col = (BoxCollider)this.collider;
 		GameObject.Find("Frameworks/OT/View").GetComponent<OTView>().movementTarget = gameObject;
 	}
 	// Update is called once per frame
@@ -63,8 +65,12 @@ public class Player : Character {
 		isPass = false;
 		isCrounch = false;
 		
+		col.size = new Vector3(1.1f, col.size.y, col.size.z);
 		movingDir = moving.None;
-
+		if(Input.GetKey("left shift")) {
+			col.size = new Vector3(1.75f, col.size.y, col.size.z);
+			//collider.bounds.size.Set(1.75f, 1.75f, 10f);
+		}
 		if(Input.GetKey("left") || Input.GetKey(KeyCode.Q) /*&& !specialCast*/) 
 		{ 
 			isLeft = true;
