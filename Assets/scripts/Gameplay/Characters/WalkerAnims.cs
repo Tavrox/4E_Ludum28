@@ -20,6 +20,7 @@ public class WalkerAnims : MonoBehaviour
 	public Transform spriteParent;
 	public OTAnimatingSprite animSprite;
 	public OTAnimation anim;
+	public bool lookLeft;
 	
 	private animDef currentAnim;
 	private Character _character;
@@ -31,7 +32,9 @@ public class WalkerAnims : MonoBehaviour
 	void Start () 
 	{
 		_character 	= GetComponent<Character>();
+		GameEventManager.GameStart += GameStart;
 		_player 	= GameObject.FindObjectOfType<Player>();
+		if(lookLeft) {InvertSprite();currentAnim = animDef.StandLeft;_character.facingDir = Character.facing.Left;}
 		animSprite.Play("stand");
 	}
 	void Update() 
@@ -72,6 +75,9 @@ public class WalkerAnims : MonoBehaviour
 		}
 	}
 	
+	protected void GameStart () {
+		if(lookLeft) InvertSprite();
+	}
 	private void AnimationFinished()
 	{
 		animPlaying = false;
