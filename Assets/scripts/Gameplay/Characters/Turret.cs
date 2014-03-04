@@ -71,4 +71,14 @@ public class Turret : MonoBehaviour {
 		instProj.posIni = instProj.transform.position;
 		/*StartCoroutine("shoot");*/
 	}
+
+	void OnTriggerEnter(Collider _other)
+	{
+		if (_other.CompareTag("Player") == true && GameObject.Find("Player").GetComponent<Player>().isDead == false)
+		{
+			GameObject.Find("Player").GetComponent<Player>().isDead = true;
+			GameEventManager.TriggerGameOver();
+		}
+	}
+
 }
