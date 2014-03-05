@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour {
 	
 	public int ID;
 	public int chosenVariation;
+	public bool isBoss;
 
 	private int _secLeft;
 	private TileImporter _tileImporter;
@@ -76,7 +77,7 @@ public class LevelManager : MonoBehaviour {
 	
 	private void NextInstance ()
 	{
-		if(chosenVariation<5) {
+		if(chosenVariation<5 && !isBoss) {
 			chosenVariation += 1;
 			foreach (Transform _gameo in GameObject.Find("Level/ObjectImporter").transform)
 			{
