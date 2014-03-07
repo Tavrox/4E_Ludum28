@@ -20,7 +20,7 @@ public class LevelManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		chosenVariation = 1;//GameObject.Find("Level/TileImporter").GetComponent<TileImporter>().chosenVariation;
+		if(chosenVariation==0) chosenVariation = 1;//GameObject.Find("Level/TileImporter").GetComponent<TileImporter>().chosenVariation;
 //		if (GameObject.FindWithTag("Player") != null)
 //		{
 			player = GameObject.FindWithTag("Player").GetComponent<Player>();
@@ -39,13 +39,13 @@ public class LevelManager : MonoBehaviour {
 		//else _rand = chosenVariation.ToString();
 
 		//print ("Level generated " + _rand);
-//		foreach (Transform _gameo in GameObject.Find("Level/ObjectImporter").transform)
-//		{
-//			if (_gameo.gameObject.name == chosenVariation.ToString() )
-//		    {
-//				_gameo.gameObject.SetActive(true);
-//			}
-//		}
+		foreach (Transform _gameo in GameObject.Find("Level/ObjectImporter").transform)
+		{
+			if (_gameo.gameObject.name == chosenVariation.ToString() )
+		    {
+				_gameo.gameObject.SetActive(true);
+			}
+		}
 
 		spawnPoint = GameObject.Find("playerspawn"+chosenVariation).transform.position;
 		player.transform.position = player.spawnPos = new Vector3(spawnPoint.x,spawnPoint.y,-1f);
