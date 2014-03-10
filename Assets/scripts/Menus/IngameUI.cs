@@ -45,7 +45,6 @@ public class IngameUI : MonoBehaviour {
 		{
 			Application.LoadLevel(0);
 		}
-		print ("ok");
 	}
 	private void GamePause()
 	{

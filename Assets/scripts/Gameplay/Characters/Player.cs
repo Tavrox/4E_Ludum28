@@ -5,10 +5,10 @@ public class Player : Character {
 	
 	[HideInInspector] public Vector3 position;
 	[HideInInspector] public Transform trans;
+	[HideInInspector] public bool paused = false;
 
 	public bool hasFinalKey = false;
-	
-	[HideInInspector] public bool paused = false;
+
 	public int angleRotation;
 	public bool isDead = false, locked = false;
 	private bool walkSoundLeft;
@@ -41,6 +41,7 @@ public class Player : Character {
 		isDead =false;
 		col = (BoxCollider)this.collider;
 		GameObject.Find("Frameworks/OT/View").GetComponent<OTView>().movementTarget = gameObject;
+
 	}
 	// Update is called once per frame
 	public void Update () 
@@ -67,70 +68,96 @@ public class Player : Character {
 		
 		col.size = new Vector3(1.1f, col.size.y, col.size.z);
 		movingDir = moving.None;
+<<<<<<< HEAD
 		if(Input.GetKey("left shift") || Input.GetKey(KeyCode.A)) {
 			col.size = new Vector3(1.75f, col.size.y, col.size.z);
 			//collider.bounds.size.Set(1.75f, 1.75f, 10f);
+=======
+
+		if(Input.GetKey("left shift")) 
+		{
+			holdCrate();
+>>>>>>> Xbox Pad Inputs
 		}
-		if(Input.GetKey("left") || Input.GetKey(KeyCode.Q) /*&& !specialCast*/) 
+		if(Input.GetKey(InputMan.Left) || Input.GetKey(KeyCode.Q) || Input.GetAxisRaw("X axis") > InputMan.X_AxisPos_Sensibility ) 
 		{ 
 			isLeft = true;
 			shootLeft = true;
 			facingDir = facing.Left;
-			//if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");
 		}
-		/*if((Input.GetKeyUp("left") && !specialCast) || (Input.GetKeyUp("right") && !isLeft && !specialCast)) {
-			StopCoroutine("footStep");
-			blockCoroutine = false;
-		}*/
-		if ((Input.GetKey("right") || Input.GetKey(KeyCode.D)) && !isLeft /*&& !specialCast*/) 
+		
+		if ((Input.GetKey(InputMan.Right) || Input.GetKey(KeyCode.D) || Input.GetAxisRaw("X axis") < InputMan.X_AxisNeg_Sensibility)
+			    && !isLeft) 
 		{ 
 			isRight = true; 
 			facingDir = facing.Right;
 			shootLeft = false;
-			/*if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");*/
+			//if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");
 		}
-//		if (Input.GetKey(KeyCode.DownArrow))
-//		{
-//			isCrounch = true;
-//			facingDir = facing.Down;
-//		}
-		if (Input.GetKey("up")  || Input.GetKey(KeyCode.Z)/* && grounded*/) 
+		if (Input.GetKey(InputMan.Up)  || Input.GetKey(KeyCode.Z) || Input.GetKey(InputMan.PadJump)) 
 		{ 
-			isJump = true; 
+			isJump = true;
 		}
-		if (Input.GetKeyDown("up")  || Input.GetKeyDown(KeyCode.Z)/* && grounded*/) 
+		if (Input.GetKeyDown(InputMan.Up)  || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(InputMan.PadJump) /* && grounded*/) 
 		{ 
 			MasterAudio.PlaySound("player_jump");
 		}
-		if (Input.GetKeyUp("up") || Input.GetKeyUp(KeyCode.Z)) chute=true;
+		if (Input.GetKeyUp(InputMan.Up) || Input.GetKeyUp(KeyCode.Z) || Input.GetKeyUp(InputMan.PadJump) ) chute=true;
 		
-		if(Input.GetKeyDown("space"))
+		if(Input.GetKeyDown(InputMan.Action))
 		{
 			isPass = true;
-		}
-		if (Input.GetKeyDown(KeyCode.Alpha1))
-		{
-			//skill_axe.useSkill(Skills.SkillList.Axe);
 		}
 		if (Input.GetKeyDown(KeyCode.Alpha2))
 		{
 			GameObject.Find("Invasion").GetComponent<InvasionAnims>().invade();
 		}
-		if (Input.GetKeyDown(KeyCode.Escape))
+		if (Input.GetKeyDown(InputMan.Pause))
 		{
-			if (GameEventManager.gamePaused == false)
-			{
-				GameEventManager.TriggerGamePause();
-			}
-			else if (GameEventManager.gamePaused == true)
-			{
-				GameEventManager.TriggerGameUnpause();
-			}
+			triggerPause();
 		}
-		if (Input.GetKeyDown(KeyCode.Backspace)) {
-			GameObject.Find("Player").GetComponent<Player>().isDead = true;
-			GameEventManager.TriggerGameOver();
+		if (Input.GetKeyDown(InputMan.Reset)) 
+		{
+			resetLevel();
 		}
+			
+		//		if (Input.GetKey(KeyCode.DownArrow))
+		//		{
+		//			isCrounch = true;
+		//			facingDir = facing.Down;
+		//		}
+
+		/*
+		 * if((Input.GetKeyUp("left") && !specialCast) || (Input.GetKeyUp("right") && !isLeft && !specialCast)) {
+		 * StopCoroutine("footStep");
+		 * blockCoroutine = false;
+		}*/
+		/*if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");*/
+		//if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");
+	}
+
+	private void holdCrate()
+	{
+		col.size = new Vector3(1.75f, col.size.y, col.size.z);
+		//collider.bounds.size.Set(1.75f, 1.75f, 10f);
+	}
+
+	private void triggerPause()
+	{
+		if (GameEventManager.gamePaused == false)
+		{
+			GameEventManager.TriggerGamePause();
+		}
+		else if (GameEventManager.gamePaused == true)
+		{
+			GameEventManager.TriggerGameUnpause();
+		}
+	}
+
+	private void resetLevel()
+	{
+		GameObject.Find("Player").GetComponent<Player>().isDead = true;
+		GameEventManager.TriggerGameOver();
 	}
 
 	private void playFootstep()

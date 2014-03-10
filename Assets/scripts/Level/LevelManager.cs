@@ -9,13 +9,22 @@ public class LevelManager : MonoBehaviour {
 	
 	public int ID;
 	public int chosenVariation;
+<<<<<<< HEAD
 	public bool isBoss;
+=======
+	public static BMTuning TuningDocument;
+>>>>>>> Xbox Pad Inputs
 
 	private int _secLeft;
 	private TileImporter _tileImporter;
 	private PlayerData _pdata;
 	private string _rand;
 	private Vector3 spawnPoint;
+
+	void Awake()
+	{
+		TuningDocument  = Instantiate(Resources.Load("Tuning/BMTuning")) as BMTuning;
+	}
 
 	// Use this for initialization
 	void Start () 

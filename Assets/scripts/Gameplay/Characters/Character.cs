@@ -57,6 +57,7 @@ public class Character : MonoBehaviour
 	[HideInInspector] public Vector3 vectorFixed;
 	protected Vector3 vectorMove;
 	private Vector3 mypos;
+	public InputManager InputMan;
 
 	public float jumpSpeed = 2f;
 	[Range (0,2000)] 	public float 	moveVel = 10f;
@@ -98,6 +99,9 @@ public class Character : MonoBehaviour
 		halfMyY = GetComponentInChildren<Transform>().GetComponentInChildren<OTAnimatingSprite>().size.y * 0.5f /*+ 0.2f*/;
 		StartCoroutine(StartGravity());
 		spawnPos = mypos = new Vector3(thisTransform.position.x,thisTransform.position.y,thisTransform.position.z);
+
+		InputMan = Instantiate(Resources.Load("Tuning/InputManager")) as InputManager;
+		InputMan.Setup();
 	}
 	
 	IEnumerator StartGravity()
@@ -153,7 +157,7 @@ public class Character : MonoBehaviour
 			else chute=true;
 		}
 		addForce = 1;
-		if((!grounded && !Input.GetKey("up")) || blockedUp) chute = true;
+		if((!grounded && (!Input.GetKey(InputMan.Up)) || Input.GetKey(InputMan.PadJump) ) || blockedUp) chute = true;
 		if(blockedUp) {addForce=hitUpBounceForce;/*gravityY += 150f;StartCoroutine("resetGravity");*/}
 		if(chute && grounded) {chute = false;MasterAudio.PlaySound("player_fall");}
 
