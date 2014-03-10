@@ -59,7 +59,7 @@ public class Character : MonoBehaviour
 	private Vector3 mypos;
 	public InputManager InputMan;
 
-	public float jumpSpeed = 2f;
+	public float jumpSpeed = 12f, jumpDuration = 0.028f, jumpState; //0.036
 	[Range (0,2000)] 	public float 	moveVel = 10f;
 	[Range (0,2000)] 	public float 	jumpVel = 80f;
 	[Range (0,2000)] 	public float 	jump2Vel = 14f;
@@ -68,7 +68,7 @@ public class Character : MonoBehaviour
 	[SerializeField] public float hitUpBounceForce = 5f;
 	
 	[SerializeField] private int jumps = 0;
-	[Range (0,2000)] public float gravityY = 16f;
+	[Range (0,2000)] public float gravityY/* = 16f*/;
 	[Range (0,2000)] public float maxVelY = 20f;
 
 	[SerializeField] private RaycastHit hitInfo;
@@ -108,7 +108,7 @@ public class Character : MonoBehaviour
 	{
 		// wait for things to settle before applying gravity
 		yield return new WaitForSeconds(0.1f);
-		gravityY = 15f;
+		//gravityY = 25f;
 		chute = true;
 	}
 
@@ -152,9 +152,14 @@ public class Character : MonoBehaviour
 //					vectorMove.y = jump2Vel;
 //				}
 			}
-			if(vectorMove.y < (3*maxVelY)/4f)	vectorMove.y += jumpSpeed*0.75f;
-			else if(vectorMove.y < maxVelY)	vectorMove.y += jumpSpeed*1.75f;
-			else chute=true;
+
+			vectorMove.y = jumpSpeed;
+			jumpState += 0.001f;
+			print (jumpState);
+			if(jumpState > jumpDuration) chute=true;
+//			if(vectorMove.y < (3*maxVelY)/4f)	vectorMove.y += jumpSpeed*0.75f;
+//			else if(vectorMove.y < maxVelY)	vectorMove.y += jumpSpeed*1.75f;
+//			else chute=true;
 		}
 		addForce = 1;
 		if((!grounded && (!Input.GetKey(InputMan.Up)) || Input.GetKey(InputMan.PadJump) ) || blockedUp) chute = true;
@@ -166,6 +171,7 @@ public class Character : MonoBehaviour
 		{
 			jumping = false;
 			jumps = 0;
+			jumpState = 0;
 		}
 		
 		if(onCrate) {

@@ -825,7 +825,10 @@ MonoBehaviour:
   shieldDef: 0
   thisTransform: {fileID: 0}
   vectorFixed: {x: 0, y: 0, z: 0}
-  jumpSpeed: 2
+  InputMan: {fileID: 0}
+  jumpSpeed: 11
+  jumpDuration: .0340000018
+  jumpState: 0
   moveVel: 10
   jumpVel: 600
   jump2Vel: 14
@@ -833,14 +836,14 @@ MonoBehaviour:
   fallVel: 50
   hitUpBounceForce: 5
   jumps: 0
-  gravityY: 15
+  gravityY: 25
   maxVelY: 20
   halfMyX: 0
   halfMyY: 0
   position: {x: 0, y: 0, z: 0}
   trans: {fileID: 0}
-  hasFinalKey: 0
   paused: 0
+  hasFinalKey: 0
   angleRotation: 0
   isDead: 0
   locked: 0
