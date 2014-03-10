@@ -68,16 +68,10 @@ public class Player : Character {
 		
 		col.size = new Vector3(1.1f, col.size.y, col.size.z);
 		movingDir = moving.None;
-<<<<<<< HEAD
 		if(Input.GetKey("left shift") || Input.GetKey(KeyCode.A)) {
 			col.size = new Vector3(1.75f, col.size.y, col.size.z);
 			//collider.bounds.size.Set(1.75f, 1.75f, 10f);
-=======
-
-		if(Input.GetKey("left shift")) 
-		{
 			holdCrate();
->>>>>>> Xbox Pad Inputs
 		}
 		if(Input.GetKey(InputMan.Left) || Input.GetKey(KeyCode.Q) || Input.GetAxisRaw("X axis") > InputMan.X_AxisPos_Sensibility ) 
 		{ 

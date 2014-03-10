@@ -9,11 +9,8 @@ public class LevelManager : MonoBehaviour {
 	
 	public int ID;
 	public int chosenVariation;
-<<<<<<< HEAD
 	public bool isBoss;
-=======
 	public static BMTuning TuningDocument;
->>>>>>> Xbox Pad Inputs
 
 	private int _secLeft;
 	private TileImporter _tileImporter;
