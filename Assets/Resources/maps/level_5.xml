@@ -302,7 +302,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Deco&amp;Ecritures4" width="70" height="70">
+ <layer name="Deco&amp;Ecritures4" width="70" height="70" visible="0">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -376,7 +376,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Deco&amp;Ecritures5" width="70" height="70" visible="0">
+ <layer name="Deco&amp;Ecritures5" width="70" height="70">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -728,7 +728,7 @@
   <object name="3-LevierPorteHautDroite" type="Lever" x="1860" y="1400" width="47" height="51"/>
   <object name="3-LevierPorteHautDroite" type="Lever" x="1159" y="1389" width="47" height="51"/>
  </objectgroup>
- <objectgroup name="4" width="70" height="70">
+ <objectgroup name="4" width="70" height="70" visible="0">
   <object name="4-EndDoor" type="EndDoor" x="747" y="447" width="53" height="155"/>
   <object name="4-LevierHaut" type="Lever" x="2300" y="496" width="49" height="53"/>
   <object name="4-PorteBasGauche" type="TriggeredDoor" x="1245" y="2289" width="52" height="263"/>
@@ -770,5 +770,13 @@
   <object name="4-Levier/02" type="Lever" x="1355" y="1092" width="52" height="56"/>
   <object name="4-LaserGauche01" type="ArcHorizontal" x="838" y="1050" width="206" height="101"/>
  </objectgroup>
- <objectgroup name="5" width="70" height="70" visible="0"/>
+ <objectgroup name="5" width="70" height="70">
+  <object name="5-PorteMillieux" type="TriggeredDoor" x="1382" y="2146" width="328" height="54"/>
+  <object name="5-PorteHorizontalHaut01" type="TriggeredDoor" x="1348" y="1196" width="204" height="56"/>
+  <object name="5-PorteHorizontalHaut02" type="TriggeredDoor" x="1552" y="1196" width="204" height="56"/>
+  <object name="5-PorteHorizontalHaut03" type="TriggeredDoor" x="1348" y="994" width="204" height="56"/>
+  <object name="5-PorteHorizontalHaut04" type="TriggeredDoor" x="1554" y="994" width="204" height="56"/>
+  <object name="5-PorteHorizontalHaut03" type="TriggeredDoor" x="1346" y="802" width="204" height="56"/>
+  <object name="5-PorteHorizontalHaut03" type="TriggeredDoor" x="1554" y="804" width="204" height="56"/>
+ </objectgroup>
 </map>
