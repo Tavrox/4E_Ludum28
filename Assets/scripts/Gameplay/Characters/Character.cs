@@ -152,7 +152,8 @@ public class Character : MonoBehaviour
 //					vectorMove.y = jump2Vel;
 //				}
 			}
-
+			jumpSpeed=12f;
+			if(jumpState>0.028f) jumpSpeed=jumpSpeed+1f;
 			vectorMove.y = jumpSpeed;
 			jumpState += 0.001f;
 			print (jumpState);
