@@ -6,6 +6,7 @@ public class ArcBaseGroup : MonoBehaviour {
 	
 	public List<ArcElectric> arcs = new List<ArcElectric>();
 	public List<BaseElectric> bases = new List<BaseElectric>();
+	private int nbCrates = 0;
 	
 	void OnTriggerEnter(Collider _other)
 	{//print (_other.tag);
@@ -13,14 +14,18 @@ public class ArcBaseGroup : MonoBehaviour {
 		{
 			foreach(ArcElectric _arc in arcs) _arc.turnOFF();
 			foreach(BaseElectric _base in bases) _base.turnOFF();
+			nbCrates++;
 		}
 	}
 	void OnTriggerExit(Collider _other)
 	{
 		if (_other.CompareTag("Crate"))
 		{
-			foreach(ArcElectric _arc in arcs) _arc.turnON();
-			foreach(BaseElectric _base in bases) _base.turnON();
+			nbCrates--;
+			if(nbCrates==0) {
+				foreach(ArcElectric _arc in arcs) _arc.turnON();
+				foreach(BaseElectric _base in bases) _base.turnON();
+			}
 		}
 	}
 }
