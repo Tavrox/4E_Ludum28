@@ -426,16 +426,16 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,27,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,1,2,2,2,2,2,2,2,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,2,2,2,2,2,2,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,8,8,8,8,8,8,8,8,8,9,0,0,0,0,0,0,0,0,0,0,0,27,0,0,0,0,0,0,0,0,0,0,7,8,8,8,8,8,8,8,8,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -771,12 +771,69 @@
   <object name="4-LaserGauche01" type="ArcHorizontal" x="838" y="1050" width="206" height="101"/>
  </objectgroup>
  <objectgroup name="5" width="70" height="70">
-  <object name="5-PorteMillieux" type="TriggeredDoor" x="1382" y="2146" width="328" height="54"/>
-  <object name="5-PorteHorizontalHaut01" type="TriggeredDoor" x="1348" y="1196" width="204" height="56"/>
-  <object name="5-PorteHorizontalHaut02" type="TriggeredDoor" x="1552" y="1196" width="204" height="56"/>
-  <object name="5-PorteHorizontalHaut03" type="TriggeredDoor" x="1348" y="994" width="204" height="56"/>
-  <object name="5-PorteHorizontalHaut04" type="TriggeredDoor" x="1554" y="994" width="204" height="56"/>
-  <object name="5-PorteHorizontalHaut03" type="TriggeredDoor" x="1346" y="802" width="204" height="56"/>
-  <object name="5-PorteHorizontalHaut03" type="TriggeredDoor" x="1554" y="804" width="204" height="56"/>
+  <object name="5-PorteMillieux" type="TriggeredDoor" x="1379" y="2154" width="328" height="54"/>
+  <object name="5-PorteHorizontalHaut01" type="TriggeredDoor" x="1348" y="1190" width="204" height="56"/>
+  <object name="5-PorteHorizontalHaut02" type="TriggeredDoor" x="1551" y="1190" width="204" height="56"/>
+  <object name="5-PorteHorizontalHaut03" type="TriggeredDoor" x="1347" y="997" width="204" height="56"/>
+  <object name="5-PorteHorizontalHaut04" type="TriggeredDoor" x="1552" y="997" width="204" height="56"/>
+  <object name="5-PorteHorizontalHaut05" type="TriggeredDoor" x="1347" y="801" width="204" height="56"/>
+  <object name="5-PorteHorizontalHaut06" type="TriggeredDoor" x="1550" y="801" width="204" height="56"/>
+  <object name="5-PorteHorizontalHaut07" type="TriggeredDoor" x="1347" y="599" width="204" height="56"/>
+  <object name="5-PorteHorizontalHaut08" type="TriggeredDoor" x="1549" y="600" width="204" height="56"/>
+  <object name="5-PorteVerticallHaut05" type="TriggeredDoor" x="1502" y="642" width="48" height="169"/>
+  <object name="5-PorteVerticallHaut06" type="TriggeredDoor" x="1548" y="641" width="48" height="169"/>
+  <object name="5-PorteVerticallHaut01" type="TriggeredDoor" x="1500" y="1037" width="48" height="169"/>
+  <object name="5-PorteVerticallHaut03" type="TriggeredDoor" x="1500" y="838" width="48" height="169"/>
+  <object name="5-PorteVerticallHaut01" type="TriggeredDoor" x="1547" y="1036" width="48" height="169"/>
+  <object name="5-PorteVerticallHaut04" type="TriggeredDoor" x="1548" y="838" width="48" height="169"/>
+  <object name="5-BaseArcMilieuxDroit01Up" type="BaseArcU" x="1852" y="1837" width="47" height="112"/>
+  <object name="5-BaseArcMilieuxDroit01Down" type="BaseArcD" x="1851" y="2037" width="47" height="112"/>
+  <object name="5-BaseArcMilieuxDroit01" type="ArcVertical" x="1851" y="1937" width="47" height="112"/>
+  <object name="5-BaseArcMilieuxDroit02Up" type="BaseArcU" x="2000" y="1843" width="47" height="112"/>
+  <object name="5-BaseArcMilieuxDroit02" type="ArcVertical" x="1999" y="1943" width="47" height="112"/>
+  <object name="5-BaseArcMilieuxDroit02Down" type="BaseArcD" x="1999" y="2043" width="47" height="112"/>
+  <object name="5-BaseArcMilieuxgauche02Down" type="BaseArcD" x="1200" y="2046" width="47" height="112"/>
+  <object name="5-BaseArcMilieuxgauche01Up" type="BaseArcU" x="1053" y="1840" width="47" height="112"/>
+  <object name="5-BaseArcMilieuxgauche02" type="ArcVertical" x="1200" y="1946" width="47" height="112"/>
+  <object name="5-BaseArcMilieuxgauche02Up" type="BaseArcU" x="1201" y="1846" width="47" height="112"/>
+  <object name="5-BaseArcMilieuxgauche01" type="ArcVertical" x="1052" y="1940" width="47" height="112"/>
+  <object name="5-BaseArcMilieuxgauche01Down" type="BaseArcD" x="1052" y="2040" width="47" height="112"/>
+  <object name="5-PorteHorizontalHautClef" type="TriggeredDoor" x="1243" y="1750" width="611" height="47"/>
+  <object name="5-Key" type="Key" x="1521" y="1647" width="53" height="45"/>
+  <object name="5-PorteVerticalDroiteHaut01" type="TriggeredDoor" x="1754" y="1245" width="47" height="256"/>
+  <object name="5-PorteVerticalDroiteHaut02" type="TriggeredDoor" x="1901" y="1247" width="47" height="256"/>
+  <object name="5-PorteVerticalGaucheHaut02" type="TriggeredDoor" x="1302" y="1245" width="47" height="256"/>
+  <object name="5-PorteVerticalGaucheHaut01" type="TriggeredDoor" x="1203" y="1244" width="47" height="256"/>
+  <object name="5-PatrouilleurMillieux" type="Patroler" x="1447" y="2033" width="199" height="116"/>
+  <object name="5-CaissePatrouilleur" type="Crate" x="1482" y="2020" width="137" height="123"/>
+  <object name="5-TeleportIn01" type="TeleportIn" x="1529" y="1967" width="43" height="52"/>
+  <object name="5-PorteHorizontalHaut02" type="TriggeredDoor" x="1949" y="1594" width="254" height="56"/>
+  <object name="5-PorteHorizontalHaut02" type="TriggeredDoor" x="693" y="1700" width="364" height="56"/>
+  <object name="5-TeleportOut01" type="TeleportOut" x="2254" y="1402" width="54" height="98"/>
+  <object name="5-CaisseMillieuxGauche" type="Crate" x="584" y="2038" width="120" height="112"/>
+  <object name="5-CaisseMillieuxDroite" type="Crate" x="2454" y="2052" width="102" height="96"/>
+  <object name="5-PatrouilleurToit01" type="Patroler" x="2008" y="2294" width="84" height="42"/>
+  <object name="5-PatrouilleurToit02" type="Patroler" x="866" y="2296" width="84" height="42"/>
+  <object name="5-PatrouilleurToit03" type="Patroler" x="650" y="2747" width="84" height="42"/>
+  <object name="5-PatrouilleurToit04" type="Patroler" x="2324" y="2753" width="84" height="42"/>
+  <object name="5-WalkerHaut01" type="Walker" x="1376" y="888" width="100" height="104"/>
+  <object name="5-WalkerHaut01" type="Walker" x="1626" y="686" width="100" height="110"/>
+  <object name="5-LevierHaut07-01" type="Lever" x="1352" y="504" width="50" height="48"/>
+  <object name="5-LevierHaut08-01" type="Lever" x="1704" y="498" width="44" height="52"/>
+  <object name="5-LevierHaut05-01" type="Lever" x="1350" y="698" width="44" height="52"/>
+  <object name="5-End" type="EndDoor" x="1822" y="1386" width="54" height="114"/>
+  <object name="5-PatrouilleurSol03" type="Patroler" x="660" y="2905" width="84" height="42"/>
+  <object name="5-PatrouilleurSol02" type="Patroler" x="740" y="2605" width="84" height="42"/>
+  <object name="5-PatrouilleurSol01" type="Patroler" x="2232" y="2607" width="84" height="42"/>
+  <object name="5-PatrouilleurSol04" type="Patroler" x="2208" y="2907" width="84" height="42"/>
+  <object name="5-PorteVerticallBasDroite" type="TriggeredDoor" x="2505" y="2286" width="48" height="169"/>
+  <object name="5-PorteVerticallBasGauche" type="TriggeredDoor" x="555" y="2290" width="48" height="169"/>
+  <object name="5-LevierBasDroite" type="Lever" x="2558" y="2848" width="44" height="52"/>
+  <object name="5-LevierBasGauche" type="Lever" x="496" y="2848" width="44" height="52"/>
+  <object name="5-PorteHorizontalHautClef" type="TriggeredDoor" x="1449" y="1499" width="204" height="56"/>
+  <object name="5-PatrouilleurVerticale01" type="Patroler" x="1893" y="2644" width="39" height="85"/>
+  <object name="5-PatrouilleurVerticale02" type="Patroler" x="1156" y="2678" width="39" height="85"/>
+  <object name="5-PatrouilleurVerticale04" type="Patroler" x="693" y="2502" width="39" height="85"/>
+  <object name="5-PatrouilleurVerticale03" type="Patroler" x="2365" y="2518" width="39" height="85"/>
  </objectgroup>
 </map>
