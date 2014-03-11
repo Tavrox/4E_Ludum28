@@ -59,7 +59,7 @@ public class Crate : MonoBehaviour {
 			thisTransform.position += new Vector3(vectorMove.x,vectorMove.y,0f);
 			//print (vectorMove.y);
 		}
-		else if (!isObjChild) detectEndPlatform();
+		if (!isObjChild) detectEndPlatform();
 		//if(!blockCrate) detectPlayer();
 
 		//landingRay = new Ray(thisTransform.position, Vector3.down);
