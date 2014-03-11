@@ -52,14 +52,14 @@ public class Crate : MonoBehaviour {
 	void Update () 
 	{
 		//print(grounded);
-		if(!grounded /*&& _player.grounded*/)
+		if(!grounded && !isObjChild/*&& _player.grounded*/)
 		{
 			touchFloor = false;
 			vectorMove.y -= gravityY * Time.deltaTime;
 			thisTransform.position += new Vector3(vectorMove.x,vectorMove.y,0f);
 			//print (vectorMove.y);
 		}
-		detectEndPlatform();
+		else if (!isObjChild) detectEndPlatform();
 		//if(!blockCrate) detectPlayer();
 
 		//landingRay = new Ray(thisTransform.position, Vector3.down);
@@ -82,7 +82,7 @@ public class Crate : MonoBehaviour {
 //		if(other.gameObject.name=="Crate" || other.gameObject.name=="Crate(Clone)") {
 //			/*if(detectPlayer())*/ other.gameObject.GetComponent<Crate>().transform.position += new Vector3(crateMove*1.5f/*+0.1f*/,0f,0f);
 //		}
-			if((Input.GetKey("left shift") || Input.GetKey(KeyCode.A)) && (_player.transform.position.x < thisTransform.position.x) /*&& !_player.isRight*/) {
+			if((Input.GetKey("left shift") || Input.GetKey("left shift") || Input.GetKey(KeyCode.A)) && (_player.transform.position.x < thisTransform.position.x) /*&& !_player.isRight*/) {
 				print("Je m'accroche à gauche");
 				if(_player.isLeft && !_player.blockedLeft) {//Tire Gauche
 					print("Je tire à gauche");
@@ -99,7 +99,7 @@ public class Crate : MonoBehaviour {
 				else crateMove = 0;
 				thisTransform.position += new Vector3(crateMove,0f,0f);
 			}
-			else if((Input.GetKey("left shift") || Input.GetKey(KeyCode.A)) && (_player.transform.position.x > thisTransform.position.x) /*&& !_player.isLeft*/) {
+			else if((Input.GetKey("left shift") || Input.GetKey("left shift") || Input.GetKey(KeyCode.A)) && (_player.transform.position.x > thisTransform.position.x) /*&& !_player.isLeft*/) {
 				print("Je m'accroche à droite");
 				if(_player.isRight && !_player.blockedRight) {//Tire Droite
 					print("Je tire à droite");

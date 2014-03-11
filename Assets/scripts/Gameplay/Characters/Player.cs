@@ -68,7 +68,7 @@ public class Player : Character {
 		
 		col.size = new Vector3(1.1f, col.size.y, col.size.z);
 		movingDir = moving.None;
-		if(Input.GetKey("left shift") || Input.GetKey(KeyCode.A)) {
+		if(Input.GetKey("left shift") || Input.GetKey("right shift") || Input.GetKey(KeyCode.A)) {
 			col.size = new Vector3(1.75f, col.size.y, col.size.z);
 			//collider.bounds.size.Set(1.75f, 1.75f, 10f);
 			holdCrate();
