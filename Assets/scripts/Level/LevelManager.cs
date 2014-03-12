@@ -22,16 +22,16 @@ public class LevelManager : MonoBehaviour {
 	{
 		TuningDocument  = Instantiate(Resources.Load("Tuning/BMTuning")) as BMTuning;
 	}
-	void Update () {
-		print (chosenVariation);
-	}
+//	void Update () {
+//		print (chosenVariation);
+//	}
 	// Use this for initialization
 	void Start () 
 	{
 		//DontDestroyOnLoad(this);
 		if(chosenVariation==0 /*|| chosenVariation==5*/) chosenVariation = 1;//GameObject.Find("Level/TileImporter").GetComponent<TileImporter>().chosenVariation;
 //		if (GameObject.FindWithTag("Player") != null)
-//		{
+		//		{
 			player = GameObject.FindWithTag("Player").GetComponent<Player>();
 //		}
 		myCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
@@ -98,16 +98,14 @@ public class LevelManager : MonoBehaviour {
 					_gameo.gameObject.SetActive(false);
 				}
 			}
-			print ("C'est next ?");
 			if(player.gameObject != null) player.transform.position = player.spawnPos = GameObject.Find("playerspawn"+chosenVariation).transform.position;
-			print ("C'est next ?2");
 			GameEventManager.TriggerGameStart();
-			print ("C'est next ?3");
 		}
-		else {print("lalalalalalopoplpleokfpjp");GameEventManager.TriggerNextLevel();
-
+		else {
+			//chosenVariation = 0;
+			GameEventManager.TriggerNextLevel();
 			GameEventManager.NextInstance -= NextInstance;
-			print("9844987787987");DestroyImmediate(this.gameObject);}
+			DestroyImmediate(this.gameObject);}
 	}
 	private void NextLevel ()
 	{

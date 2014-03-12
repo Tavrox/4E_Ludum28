@@ -48,7 +48,7 @@ public class EndDoor : MonoBehaviour {
 		sprite.frameIndex += 1;
 	}
 	private void FinishLevel() {
-		if(this != null) {
+		if(this != null && gameObject.activeInHierarchy) {
 		_lvlTimer.pauseTimer = true;
 		MasterAudio.PlaySound("win");
 		MasterAudio.FadePlaylistToVolume(0f, 2f);
