@@ -29,7 +29,7 @@ public class LevelManager : MonoBehaviour {
 	void Start () 
 	{
 		//DontDestroyOnLoad(this);
-		if(chosenVariation==0 || chosenVariation==5) chosenVariation = 1;//GameObject.Find("Level/TileImporter").GetComponent<TileImporter>().chosenVariation;
+		if(chosenVariation==0 /*|| chosenVariation==5*/) chosenVariation = 1;//GameObject.Find("Level/TileImporter").GetComponent<TileImporter>().chosenVariation;
 //		if (GameObject.FindWithTag("Player") != null)
 //		{
 			player = GameObject.FindWithTag("Player").GetComponent<Player>();
