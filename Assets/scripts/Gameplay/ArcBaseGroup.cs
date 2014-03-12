@@ -6,7 +6,7 @@ public class ArcBaseGroup : MonoBehaviour {
 	
 	public List<ArcElectric> arcs = new List<ArcElectric>();
 	public List<BaseElectric> bases = new List<BaseElectric>();
-	private int nbCrates = 0;
+	public int nbCrates = 0;
 	
 	void OnTriggerEnter(Collider _other)
 	{//print (_other.tag);

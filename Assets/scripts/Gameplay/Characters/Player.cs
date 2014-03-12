@@ -185,7 +185,7 @@ public class Player : Character {
 		if(FindObjectOfType(typeof(Player)) && this != null) {
 			transform.localPosition = spawnPos;
 			enabled = true;
-		}
+		
 		
 		enabled = true;
 		collider.enabled=true;
@@ -195,23 +195,28 @@ public class Player : Character {
 		angleRotation = 0;
 		enabled = true;
 		isDead = false;
+		}
 	}
 	private void FinishLevel() {
-		enabled = false;
-		collider.enabled=false;
+		if(FindObjectOfType(typeof(Player)) && this != null) {
+			enabled = false;
+			collider.enabled=false;
+		}
 	}
 	
 	private void GameOver () 
 	{
-		StartCoroutine("resetGame");
-		isLeft = false;
-		isRight = false;
-		isJump = false;
-		isPass = false;
-		isDead = true;
-		movingDir = moving.None;
-		MasterAudio.PlaySound("lose");
-		enabled = false;
+		if(this != null) {
+			StartCoroutine("resetGame");
+			isLeft = false;
+			isRight = false;
+			isJump = false;
+			isPass = false;
+			isDead = true;
+			movingDir = moving.None;
+			MasterAudio.PlaySound("lose");
+			enabled = false;
+		}
 	}
 	private void GamePause()
 	{

@@ -18,7 +18,7 @@ public class Key : MonoBehaviour {
 
 	void GameStart()
 	{
-		if(gameObject.activeInHierarchy) resetKey();
+		if(this != null && gameObject.activeInHierarchy) resetKey();
 	}
 	void GameOver() {
 		resetKey();
@@ -27,10 +27,12 @@ public class Key : MonoBehaviour {
 		resetKey();
 	}
 	void resetKey() {
-		gameObject.transform.parent = _myGameParent;
-		transform.localPosition = myPosINI;
-		//GetComponentInChildren<OTSprite>().renderer.enabled = true;
-		GameObject.Find("Player").GetComponent<Player>().hasFinalKey = false;
+		if(this != null) {
+			gameObject.transform.parent = _myGameParent;
+			transform.localPosition = myPosINI;
+			//GetComponentInChildren<OTSprite>().renderer.enabled = true;
+			GameObject.Find("Player").GetComponent<Player>().hasFinalKey = false;
+		}
 	}
 	void OnTriggerEnter(Collider _coll)
 	{

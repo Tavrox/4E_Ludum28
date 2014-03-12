@@ -174,7 +174,7 @@ public class Patroler : Character {
 	}
 
 	protected void GameStart () {
-		if(gameObject.activeInHierarchy) {
+		if(this != null && gameObject.activeInHierarchy) {
 		//if(FindObjectOfType(typeof(Enemy)) && this != null) {
 		//transform.localPosition = new Vector3(0f,0f,0f);
 		transform.position = new Vector3(spawnPos.x,spawnPos.y,0f);
@@ -187,8 +187,10 @@ public class Patroler : Character {
 	}
 	
 	private void FinishLevel() {
-		enabled = false;
-		collider.enabled=false;
+		if(this != null) {
+			enabled = false;
+			collider.enabled=false;
+		}
 	}
 	protected void GameOver () {
 		enabled = false;

@@ -48,6 +48,7 @@ public class EndDoor : MonoBehaviour {
 		sprite.frameIndex += 1;
 	}
 	private void FinishLevel() {
+		if(this != null) {
 		_lvlTimer.pauseTimer = true;
 		MasterAudio.PlaySound("win");
 		MasterAudio.FadePlaylistToVolume(0f, 2f);
@@ -59,6 +60,7 @@ public class EndDoor : MonoBehaviour {
 //		_playerdata.addLevelUnlocked(levelToGo);
 
 		StartCoroutine("EndGame");
+		}
 	}
 
 	IEnumerator EndGame()

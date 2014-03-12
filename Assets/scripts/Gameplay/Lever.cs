@@ -101,7 +101,7 @@ public class Lever : MonoBehaviour {
 		if(myButtonType == btnType.TimedBtn) animSprite.Play("timedlock"); else animSprite.Play("lock");
 	}
 	void GameStart () {
-		if(gameObject.activeInHierarchy) {
+		if(this != null && gameObject.activeInHierarchy) {
 			StopCoroutine("leverTimer");
 			StopCoroutine("waitB4Restart");
 			StopCoroutine("delayRetrigg");

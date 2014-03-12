@@ -214,11 +214,12 @@ public class TeleportAnims : MonoBehaviour
 		else animSprite.Play("default");
 	}
 	void GameStart () {		
-		
+		if(this != null) {
 		StopCoroutine("stopPlayer");
 		StopCoroutine("teleportTo");
 		_player.locked = false;
 		if(isOUT) animSprite.Play("teleportOUT");
 		else animSprite.Play("default");
+		}
 	}
 }

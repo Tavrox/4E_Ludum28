@@ -68,15 +68,17 @@ public class ArcElectric : MonoBehaviour {
 		StopCoroutine("SND_activateThenOff");
 	}
 	private void FinishLevel() {
+		if(this != null) {
 		StopCoroutine("active");
 		StopCoroutine("waitB4Active");
 		StopCoroutine("activateInfinite");
 		StopCoroutine("SND_activateThenOff");
 		enabled = false;
 		collider.enabled=false;
+		}
 	}
 	void GameStart() {
-		if(gameObject.activeInHierarchy) {
+		if(this != null && gameObject.activeInHierarchy) {
 		animSprite.Play("arcDefault");
 		if(delayBegin != 0) collider.enabled=false;
 		activeState = true;

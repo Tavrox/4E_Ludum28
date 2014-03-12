@@ -38,7 +38,7 @@ public class Walker : Enemy {
 
 	protected void GameStart () {
 		//if(FindObjectOfType(typeof(Enemy)) && this != null) {
-		if(gameObject.activeInHierarchy) {
+		if(this != null && gameObject.activeInHierarchy) {
 			transform.position = new Vector3(spawnPos.x,spawnPos.y,0f);
 			enabled = true;
 			chasingPlayer = activated = false;
@@ -47,8 +47,10 @@ public class Walker : Enemy {
 		}
 	}
 	private void FinishLevel() {
-		enabled = false;
-		collider.enabled=false;
+		if(this != null) {
+			enabled = false;
+			collider.enabled=false;
+		}
 	}
 
 	private void sound()

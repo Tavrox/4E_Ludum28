@@ -75,7 +75,7 @@ public class SequenceBtn : MonoBehaviour {
 
 	}
 	void GameStart () {
-		if(gameObject.activeInHierarchy) {
+		if(this != null && gameObject.activeInHierarchy) {
 			StopCoroutine("resetRightCombo");
 			StopCoroutine("resetSequence");
 			rightCombo = allTriggered = true;

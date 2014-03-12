@@ -152,11 +152,11 @@ public class Character : MonoBehaviour
 //					vectorMove.y = jump2Vel;
 //				}
 			}
-			jumpSpeed=14f;
-			if(jumpState>0.023f) jumpSpeed=jumpSpeed+1f;
+			jumpSpeed=12f;
+			if(jumpState>0.028f) jumpSpeed=jumpSpeed+1f;
 			vectorMove.y = jumpSpeed;
 			jumpState += 0.001f;
-			print (jumpState);
+			//print (jumpState);
 			if(jumpState > jumpDuration) chute=true;
 //			if(vectorMove.y < (3*maxVelY)/4f)	vectorMove.y += jumpSpeed*0.75f;
 //			else if(vectorMove.y < maxVelY)	vectorMove.y += jumpSpeed*1.75f;
