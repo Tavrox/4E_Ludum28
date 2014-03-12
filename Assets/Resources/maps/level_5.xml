@@ -597,9 +597,9 @@
   <object name="1-BaseArcRGros02" type="BaseArcR" x="1694" y="1798" width="160" height="50"/>
   <object name="1-BaseArcLGros02" type="BaseArcL" x="1245" y="1798" width="160" height="50"/>
  </objectgroup>
- <objectgroup name="2" width="70" height="70" visible="0">
-  <object name="CaisseDroite" type="Crate" x="1756" y="2446" width="101" height="102"/>
-  <object name="CaisseGauche" type="Crate" x="1249" y="2448" width="101" height="102"/>
+ <objectgroup name="2" width="70" height="70">
+  <object name="2-CaisseDroite" type="Crate" x="1756" y="2446" width="101" height="102"/>
+  <object name="2-CaisseGauche" type="Crate" x="1249" y="2448" width="101" height="102"/>
   <object name="2-PorteMillieux" type="TriggeredDoor" x="1391" y="2154" width="309" height="43"/>
   <object name="2-PorteMillieuxDroite" type="TriggeredDoor" x="1853" y="1845" width="49" height="313"/>
   <object name="2-PorteGenerator" type="TriggeredDoor" x="1654" y="2793" width="43" height="156"/>
@@ -770,7 +770,7 @@
   <object name="4-Levier/02" type="Lever" x="1355" y="1092" width="52" height="56"/>
   <object name="4-LaserGauche01" type="ArcHorizontal" x="838" y="1050" width="206" height="101"/>
  </objectgroup>
- <objectgroup name="5" width="70" height="70">
+ <objectgroup name="5" width="70" height="70" visible="0">
   <object name="5-PorteMillieux" type="TriggeredDoor" x="1379" y="2154" width="328" height="54"/>
   <object name="5-PorteHorizontalHaut01" type="TriggeredDoor" x="1348" y="1190" width="204" height="56"/>
   <object name="5-PorteHorizontalHaut02" type="TriggeredDoor" x="1551" y="1190" width="204" height="56"/>
