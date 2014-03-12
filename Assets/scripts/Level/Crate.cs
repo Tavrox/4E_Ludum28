@@ -244,12 +244,12 @@ public class Crate : MonoBehaviour {
 			cakeCrate = null;
 		}
 		else {
-			if(hitInfo.collider.CompareTag("Enemy")) {hitInfo.collider.gameObject.GetComponent<Character>().getDamage(1);} //Kill mob if Crate falls from top
+			if(hitInfo.collider.CompareTag("Enemy")) {/*hitInfo.collider.gameObject.GetComponent<Character>().getDamage(1);*/} //Kill mob if Crate falls from top
 			if(hitInfo.collider.CompareTag("Blocker") || hitInfo.collider.CompareTag("Crate")) {
 			grounded = true;
 			vectorMove.y = 0;
 				if(!touchFloor) {
-					thisTransform.position = new Vector3(thisTransform.position.x, (float)((hitInfo.collider.bounds.center.y+(hitInfo.collider.bounds.size.y/2f)+spriteScaleY/2f)), thisTransform.position.z);
+					thisTransform.position = new Vector3(thisTransform.position.x, (float)((hitInfo.collider.bounds.center.y+(hitInfo.collider.bounds.size.y/2f)+spriteScaleY/2.2f)), thisTransform.position.z);
 					touchFloor=true;SND_crateFall();
 					if(hitInfo.collider.CompareTag("Crate")) {
 						//hitInfo.collider.gameObject.transform.parent = transform;

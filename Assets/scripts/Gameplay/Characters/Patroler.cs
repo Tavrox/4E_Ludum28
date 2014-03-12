@@ -148,7 +148,7 @@ public class Patroler : Character {
 				touchedCrate = _other.gameObject.GetComponent<Crate>();
 				_other.gameObject.GetComponent<Crate>().StartCoroutine("SND_moveCrate");
 			}
-			else getDamage(1);
+			else {getDamage(1);print ("AIAIAIAIAI");}
 		}
 	}
 //	protected void OnTriggerExit(Collider _other) 
