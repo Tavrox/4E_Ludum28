@@ -115,37 +115,40 @@ public class LevelManager : MonoBehaviour {
 	private void playLevelMusic () {
 		switch(ID) {
 		case 0:
-			MasterAudio.PlaySound("bg");
+			MasterAudio.PlaySound("intro");
 			break;
 		case 1:
-			MasterAudio.PlaySound("bg");
+			MasterAudio.PlaySound("intro");
 			break;
 		case 2:
-			MasterAudio.PlaySound("bg");
+			MasterAudio.PlaySound("level_theme_1");
 			break;
 		case 3:
-			MasterAudio.PlaySound("bg");
+			MasterAudio.PlaySound("boss_theme");
 			break;
 		case 4:
-			MasterAudio.PlaySound("bg");
+			MasterAudio.PlaySound("level_theme_2");
 			break;
 		case 5:
-			MasterAudio.PlaySound("level_theme_2");
+			MasterAudio.PlaySound("level_theme_3");
 			break;
 		case 6:
 			MasterAudio.PlaySound("level_theme_2");
 			break;
 		case 7:
-			MasterAudio.PlaySound("level_theme_2");
+			MasterAudio.PlaySound("level_theme_3");
 			break;
 		case 8:
 			MasterAudio.PlaySound("level_theme_2");
 			break;
 		case 9:
-			MasterAudio.PlaySound("level_theme_2");
+			MasterAudio.PlaySound("level_theme_3");
 			break;
 		case 10:
 			MasterAudio.PlaySound("level_theme_2");
+			break;
+		case 11:
+			MasterAudio.PlaySound("level_theme_3");
 			break;
 		}
 	}
