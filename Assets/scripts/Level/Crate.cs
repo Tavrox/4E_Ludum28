@@ -36,8 +36,12 @@ public class Crate : MonoBehaviour {
 		spawnPos = transform.position;
 		playerMoveVel = _player.moveVel;
 		StartCoroutine("StartGravity");
-		spriteScaleX = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.x;
-		spriteScaleY = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.y;
+		spriteScaleX = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.x*thisTransform.localScale.x;
+		spriteScaleY = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.y*thisTransform.localScale.y;
+		if(isObjChild) {			
+			spriteScaleX = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.x*thisTransform.localScale.x*gameObject.transform.parent.transform.localScale.x;
+			spriteScaleY = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.y*thisTransform.localScale.y*gameObject.transform.parent.transform.localScale.y;
+		}
 		GameEventManager.GameStart += GameStart;
 	}
 	
@@ -59,10 +63,15 @@ public class Crate : MonoBehaviour {
 			thisTransform.position += new Vector3(vectorMove.x,vectorMove.y,0f);
 			//print (vectorMove.y);
 		}
-		if (!isObjChild) detectEndPlatform();
+		detectEndPlatform();
+		if(isObjChild) moveCakeOnSurfPatroler();
 		//if(!blockCrate) detectPlayer();
 
 		//landingRay = new Ray(thisTransform.position, Vector3.down);
+	}
+	void moveCakeOnSurfPatroler() {
+		if(gameObject.transform.parent.GetComponent<Patroler>().go)	moveCake(-gameObject.transform.parent.GetComponent<Patroler>().myCORRECTSPEED);
+		else moveCake(gameObject.transform.parent.GetComponent<Patroler>().myCORRECTSPEED);
 	}
 	void OnTriggerEnter(Collider other) {
 		if(other.gameObject.name=="ColliBox" || other.gameObject.CompareTag("Blocker") || other.gameObject.CompareTag("Crate")) 
@@ -238,28 +247,29 @@ public class Crate : MonoBehaviour {
 		//print (blockDetectionArea);
 		Debug.DrawRay(new Vector3 (thisTransform.position.x-(spriteScaleX/2.5f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY/2f);
 		Debug.DrawRay(new Vector3 (thisTransform.position.x+(spriteScaleX/2.5f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY/2f);
-		
-		if (!Physics.Raycast(detectEndPFLeft, out hitInfo, spriteScaleY/2f) && !Physics.Raycast(detectEndPFRight, out hitInfo, spriteScaleY/2f)) {
-			grounded = false;
-			cakeCrate = null;
-		}
-		else {
-			if(hitInfo.collider.CompareTag("Enemy")) {/*hitInfo.collider.gameObject.GetComponent<Character>().getDamage(1);*/} //Kill mob if Crate falls from top
-			if(hitInfo.collider.CompareTag("Blocker") || hitInfo.collider.CompareTag("Crate")) {
-			grounded = true;
-			vectorMove.y = 0;
-				if(!touchFloor) {
-					thisTransform.position = new Vector3(thisTransform.position.x, (float)((hitInfo.collider.bounds.center.y+(hitInfo.collider.bounds.size.y/2f)+spriteScaleY/2.2f)), thisTransform.position.z);
-					touchFloor=true;SND_crateFall();
-					if(hitInfo.collider.CompareTag("Crate")) {
-						//hitInfo.collider.gameObject.transform.parent = transform;
-						//hitInfo.collider.gameObject.GetComponent<Crate>().touchFloor = hitInfo.collider.gameObject.GetComponent<Crate>().grounded = true;
-						//linkedCrates.Add(hitInfo.collider.gameObject.GetComponent<Crate>());
+		if (!isObjChild) {
+			if (!Physics.Raycast(detectEndPFLeft, out hitInfo, spriteScaleY/2f) && !Physics.Raycast(detectEndPFRight, out hitInfo, spriteScaleY/2f)) {
+				grounded = false;
+				cakeCrate = null;
+			}
+			else {
+				if(hitInfo.collider.CompareTag("Enemy")) {/*hitInfo.collider.gameObject.GetComponent<Character>().getDamage(1);*/} //Kill mob if Crate falls from top
+				if(hitInfo.collider.CompareTag("Blocker") || hitInfo.collider.CompareTag("Crate")) {
+				grounded = true;
+				vectorMove.y = 0;
+					if(!touchFloor) {
+						thisTransform.position = new Vector3(thisTransform.position.x, (float)((hitInfo.collider.bounds.center.y+(hitInfo.collider.bounds.size.y/2f)+spriteScaleY/2.2f)), thisTransform.position.z);
+						touchFloor=true;SND_crateFall();
+						if(hitInfo.collider.CompareTag("Crate")) {
+							//hitInfo.collider.gameObject.transform.parent = transform;
+							//hitInfo.collider.gameObject.GetComponent<Crate>().touchFloor = hitInfo.collider.gameObject.GetComponent<Crate>().grounded = true;
+							//linkedCrates.Add(hitInfo.collider.gameObject.GetComponent<Crate>());
+						}
 					}
-				}
-			//BoxCollider colliderHit = hitInfo.collider as BoxCollider;
-			//print (colliderHit.size);
+				//BoxCollider colliderHit = hitInfo.collider as BoxCollider;
+				//print (colliderHit.size);
 
+				}
 			}
 		}
 		Debug.DrawRay(new Vector3(thisTransform.position.x-(spriteScaleX/2.5f), thisTransform.position.y, thisTransform.position.z), Vector3.up*spriteScaleY/1.5f, Color.yellow);
@@ -281,6 +291,12 @@ public class Crate : MonoBehaviour {
 			cakeCrate.moveCake(moveValue);
 		}
 	}
+//	public void moveCakeBlob (float moveValue) {
+//		if (cakeCrate != null && !cakeCrate.blockCrate) {
+//			cakeCrate.transform.position += new Vector3(moveValue,0f,0f);
+//			cakeCrate.moveCake(moveValue);
+//		}
+//	}
 	void GameStart () {
 		if(this != null && !isObjChild && gameObject.activeInHierarchy)	transform.position = new Vector3(spawnPos.x,spawnPos.y,spawnPos.z);
 	}

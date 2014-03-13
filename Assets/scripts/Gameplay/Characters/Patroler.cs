@@ -19,8 +19,8 @@ public class Patroler : Character {
 	protected RaycastHit hitInfo; //infos de collision
 	protected Ray detectTargetLeft, detectTargetRight, detectBlockLeft, detectBlockRight, detectEndPFLeft, detectEndPFRight; //point de départ, direction
 	[Range (0,2.25f)] public float myCORRECTSPEED = 10f;
-	protected bool go = true, touchingCrate;
-	private Crate touchedCrate;
+	public bool go = true, touchingCrate;
+	public Crate touchedCrate;
 	protected int waypointId = 0;
 	public Transform[] waypoints;
 	private Player _player;
@@ -134,6 +134,15 @@ public class Patroler : Character {
 		else waypointId=1;
 		if(touchingCrate) touchedCrate.gameObject.GetComponent<Crate>().StartCoroutine("SND_moveCrateEnd");
 		touchingCrate = false;
+		touchedCrate =null;
+	}
+	protected void OnTriggerExit(Collider _other) 
+	{
+		if(_other.CompareTag("Crate")) {
+			//print (_other.GetInstanceID() +" - other - = - stocked - "+ touchedCrate.GetInstanceID());
+//			if(_other.GetInstanceID() == touchedCrate.GetInstanceID()) touchedCrate =null;
+			//;
+		}
 	}
 	protected void OnTriggerEnter(Collider _other) 
 	{
@@ -145,10 +154,13 @@ public class Patroler : Character {
 		if(_other.CompareTag("Crate")) {
 			if(_other.gameObject.GetComponent<Crate>().grounded) {
 				touchingCrate = true;
-				touchedCrate = _other.gameObject.GetComponent<Crate>();
-				_other.gameObject.GetComponent<Crate>().StartCoroutine("SND_moveCrate");
+				if(touchedCrate == null) touchedCrate = _other.gameObject.GetComponent<Crate>();
+				if(touchedCrate.transform.position.y>_other.gameObject.transform.position.y) {
+					touchedCrate = _other.gameObject.GetComponent<Crate>();
+					_other.gameObject.GetComponent<Crate>().StartCoroutine("SND_moveCrate");
+				}
 			}
-			else {getDamage(1);print ("AIAIAIAIAI");}
+			else {getDamage(1);}
 		}
 	}
 //	protected void OnTriggerExit(Collider _other) 
@@ -161,10 +173,12 @@ public class Patroler : Character {
 	private void moveCrate(bool dirLeft) {
 		if(dirLeft) {
 			touchedCrate.transform.position -= new Vector3(myCORRECTSPEED,0f,0f);
+			touchedCrate.moveCake(-myCORRECTSPEED);
 			//if(_player.myCrate == touchedCrate && _player.onCrate) _player.transform.position -= new Vector3(myCORRECTSPEED,0f,0f);
 		}
 		else {
 			touchedCrate.transform.position += new Vector3(myCORRECTSPEED,0f,0f);
+			touchedCrate.moveCake(myCORRECTSPEED);
 			//if(_player.myCrate == touchedCrate && _player.onCrate) _player.transform.position += new Vector3(myCORRECTSPEED,0f,0f);
 		}
 	}
