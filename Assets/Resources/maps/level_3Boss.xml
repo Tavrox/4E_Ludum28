@@ -370,6 +370,8 @@
   <object x="3550" y="2550" width="50" height="250"/>
   <object x="2750" y="2550" width="250" height="50"/>
   <object x="2750" y="2100" width="50" height="500"/>
+  <object name="ArcVertB" type="ArcVertical" x="2850" y="600" width="50" height="100"/>
+  <object name="ArcVertC" type="ArcVertical" x="3150" y="600" width="50" height="100"/>
  </objectgroup>
  <objectgroup color="#005500" name="1" width="192" height="80">
   <object name="BaseArcDA" type="BaseArcD" x="2550" y="700" width="50" height="100"/>
@@ -378,10 +380,8 @@
   <object name="TP1" type="TeleportIn" x="5600" y="2100" width="50" height="100"/>
   <object name="TP2" type="TeleportIn" x="5600" y="2650" width="50" height="100"/>
   <object name="TP3" type="TeleportOut" x="2850" y="2450" width="50" height="100"/>
-  <object name="BaseArcUA" type="BaseArcU" x="2550" y="650" width="50" height="50"/>
-  <object name="BaseArcUB" type="BaseArcU" x="2850" y="600" width="50" height="100"/>
+  <object name="ArcVertA" type="ArcVertical" x="2550" y="650" width="50" height="50"/>
   <object name="BaseArcDB" type="BaseArcD" x="2850" y="700" width="50" height="100"/>
-  <object name="BaseArcUC" type="BaseArcU" x="3150" y="650" width="50" height="50"/>
   <object name="BaseArcDC" type="BaseArcD" x="3150" y="700" width="50" height="100"/>
   <object name="BaseArcRA1" type="BaseArcR" x="3450" y="800" width="100" height="50"/>
   <object name="BaseArcLA1" type="BaseArcL" x="3350" y="800" width="100" height="50"/>
@@ -501,10 +501,6 @@
   <object name="BaseArcRG" type="BaseArcL" x="5050" y="700" width="100" height="50"/>
   <object name="ArcHorizG1" type="ArcHorizontal" x="4800" y="700" width="100" height="50"/>
   <object name="ArcHorizG2" type="ArcHorizontal" x="4900" y="700" width="150" height="50"/>
-  <object name="ArcHorizH2" type="ArcHorizontal" x="4900" y="750" width="150" height="50"/>
-  <object name="BaseArcLH" type="BaseArcL" x="4700" y="750" width="100" height="50"/>
-  <object name="BaseArcRH" type="BaseArcL" x="5050" y="750" width="100" height="50"/>
-  <object name="ArcHorizH1" type="ArcHorizontal" x="4800" y="750" width="100" height="50"/>
   <object name="BOSS NUMERO 2 FAST QUI DEBARQUE VITE ET RALENTIT." x="8900" y="1850" width="400" height="350"/>
   <object name="TRIGGER BOSS 2 SAFE" x="7800" y="2300" width="150" height="500"/>
   <object name="porteL" type="TriggeredDoor" x="8500" y="1800" width="50" height="400"/>
