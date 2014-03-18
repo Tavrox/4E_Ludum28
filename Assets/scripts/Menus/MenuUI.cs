@@ -40,7 +40,8 @@ public class MenuUI : MonoBehaviour {
 		{
 			case (ListMenu.Main):
 			{
-
+			
+			//MasterAudio.PlaySound("intro");
 			//Application.ExternalEval("document.cookie=\"Level1Unlocked=1;");
 			//Application.ExternalCall( "SaySomethingToUnity", "The game says hello!" );
 			//Application.ExternalCall("setCookie", "Name","Helarizzz", 2);
@@ -64,8 +65,10 @@ public class MenuUI : MonoBehaviour {
 			}
 			case (ListMenu.Title) :
 			{
-				MasterAudio.TriggerPlaylistClip("intro");
-				MasterAudio.ResumeAllPlaylists();
+				//MasterAudio.TriggerPlaylistClip("intro");
+			
+			MasterAudio.PlaySound("intro");
+				//MasterAudio.ResumeAllPlaylists();
 
 				break;
 			}
@@ -157,7 +160,7 @@ public class MenuUI : MonoBehaviour {
 			fadeInObjects(menuObjects);
 			menuObjects.Clear();
 			MasterAudio.PlaySound("door_open");
-			StartCoroutine(loadLevel(5));
+			StartCoroutine(loadLevel(6));
 			break;
 		}
 		}

@@ -118,7 +118,7 @@ public class LevelManager : MonoBehaviour {
 			MasterAudio.PlaySound("intro");
 			break;
 		case 1:
-			MasterAudio.PlaySound("intro");
+			MasterAudio.PlaySound("bg");
 			break;
 		case 2:
 			MasterAudio.PlaySound("level_theme_1");
@@ -130,25 +130,25 @@ public class LevelManager : MonoBehaviour {
 			MasterAudio.PlaySound("level_theme_2");
 			break;
 		case 5:
-			MasterAudio.PlaySound("level_theme_3");
+			MasterAudio.PlaySound("boss_theme");
 			break;
 		case 6:
-			MasterAudio.PlaySound("level_theme_2");
+			MasterAudio.PlaySound("level_theme_3");
 			break;
 		case 7:
-			MasterAudio.PlaySound("level_theme_3");
+			MasterAudio.PlaySound("level_theme_2");
 			break;
 		case 8:
-			MasterAudio.PlaySound("level_theme_2");
+			MasterAudio.PlaySound("level_theme_3");
 			break;
 		case 9:
-			MasterAudio.PlaySound("level_theme_3");
-			break;
-		case 10:
 			MasterAudio.PlaySound("level_theme_2");
 			break;
-		case 11:
+		case 10:
 			MasterAudio.PlaySound("level_theme_3");
+			break;
+		case 11:
+			MasterAudio.PlaySound("level_theme_2");
 			break;
 		}
 	}

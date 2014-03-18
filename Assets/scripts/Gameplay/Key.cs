@@ -39,7 +39,7 @@ public class Key : MonoBehaviour {
 		if (_coll.name == "Player")
 		{
 			gameObject.transform.parent = _playerUI;
-			transform.localPosition = new Vector3(-2.5f,5.5f,0f);
+			transform.localPosition = new Vector3(-8.3f,4f,0f);
 			MasterAudio.PlaySound("key_collecting");
 			GameObject.Find("Player").GetComponent<Player>().hasFinalKey = true;
 			//GetComponentInChildren<OTSprite>().renderer.enabled = false;

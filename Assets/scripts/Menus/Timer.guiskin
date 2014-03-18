@@ -193,7 +193,7 @@ MonoBehaviour:
     m_Name: label
     m_Normal:
       m_Background: {fileID: 2800000, guid: 53b80a8085b1cef4c8be86b3428d2ef3, type: 3}
-      m_TextColor: {r: 1, g: .724137962, b: 0, a: 1}
+      m_TextColor: {r: .224140882, g: .507352948, b: .18652682, a: 1}
     m_Hover:
       m_Background: {fileID: 0}
       m_TextColor: {r: 1, g: 1, b: 1, a: 1}
@@ -236,7 +236,7 @@ MonoBehaviour:
       m_Top: 0
       m_Bottom: 0
     m_Font: {fileID: 12800000, guid: c11cb685577830947a2ed65a4d01a540, type: 3}
-    m_FontSize: 64
+    m_FontSize: 32
     m_FontStyle: 0
     m_Alignment: 0
     m_WordWrap: 1

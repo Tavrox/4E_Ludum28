@@ -58,11 +58,13 @@ public class BaseElectric : MonoBehaviour {
 		else if(activeTime!=0) StartCoroutine("active");
 	}
 	void GameOver() {
+		if(this != null && gameObject.activeInHierarchy) {
 		//turnOFF();
 		StopCoroutine("active");
 		StopCoroutine("waitB4Active");
 		StopCoroutine("activateInfinite");
 		StopCoroutine("SND_activateThenOff");
+		}
 	}
 	private void FinishLevel() {
 		if(this != null) {

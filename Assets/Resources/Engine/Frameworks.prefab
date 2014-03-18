@@ -2798,6 +2798,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &100292
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400292}
+  - 114: {fileID: 11400298}
+  m_Layer: 0
+  m_Name: HUDLevels
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -4119,6 +4135,7 @@ Transform:
   m_Children:
   - {fileID: 400078}
   - {fileID: 400140}
+  - {fileID: 400292}
   - {fileID: 400162}
   - {fileID: 400210}
   - {fileID: 400116}
@@ -4549,6 +4566,17 @@ Transform:
   m_Children:
   - {fileID: 400288}
   m_Father: {fileID: 400042}
+--- !u!4 &400292
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100292}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 32.4499817, y: -25.4897366, z: -7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400222}
 --- !u!82 &8200000
 AudioSource:
   m_ObjectHideFlags: 1
@@ -14257,6 +14285,72 @@ MonoBehaviour:
   voiceLimitCount: 1
   isSoloed: 0
   isMuted: 0
+--- !u!114 &11400298
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd220758bd0b8b4685199267909af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: HUDLevels
+  _sheetSize: {x: 128, y: 256}
+  texture: {fileID: 2800000, guid: 2fc676781c9fe6b4ca6286caad1f7cbd, type: 3}
+  sizeTextures: []
+  generateSprites: 0
+  atlasData:
+  - name: backgroundNum01
+    position: {x: 0, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNum02
+    position: {x: 50, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNum03
+    position: {x: 0, y: 50}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNum04
+    position: {x: 50, y: 50}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNum05
+    position: {x: 0, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: backgroundNum13
+    position: {x: 50, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  offsetSizing: 1
+  metaType: 
+  metaData: []
+  _atlasDataFile: {fileID: 4900000, guid: 07c012495d6d7014fae5acbf94551b14, type: 3}
+  reloadData: 0
+  bytesDataFile: 3565
+  id: 4
 --- !u!132 &13200000
 GUIText:
   m_ObjectHideFlags: 1

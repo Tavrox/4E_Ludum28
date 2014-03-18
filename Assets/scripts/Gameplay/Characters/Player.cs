@@ -66,7 +66,8 @@ public class Player : Character {
 		isPass = false;
 		isCrounch = false;
 		
-		col.size = new Vector3(1.1f, col.size.y, col.size.z);
+		col.size = new Vector3(1f, col.size.y, col.size.z);
+		col.center = new Vector3(0f, 0f, 0f);
 		movingDir = moving.None;
 		if(Input.GetKey("left shift") || Input.GetKey("right shift") || Input.GetKey(KeyCode.A)) {
 			col.size = new Vector3(1.75f, col.size.y, col.size.z);
@@ -128,6 +129,12 @@ public class Player : Character {
 		}*/
 		/*if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");*/
 		//if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");
+		
+		if(!grounded) {if(facingDir == facing.Right) col.center = new Vector3(0.35f, 0f, 0f);
+			else col.center = new Vector3(-0.35f, 0f, 0f);
+			col.size = new Vector3(0.8f, col.size.y, col.size.z);
+		}
+		//if(chute && grounded) {col.center = new Vector3(0f, 0f, 0f);}
 	}
 
 	private void holdCrate()
