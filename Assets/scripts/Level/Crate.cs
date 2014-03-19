@@ -92,15 +92,15 @@ public class Crate : MonoBehaviour {
 //			/*if(detectPlayer())*/ other.gameObject.GetComponent<Crate>().transform.position += new Vector3(crateMove*1.5f/*+0.1f*/,0f,0f);
 //		}
 			if((Input.GetKey("left shift") || Input.GetKey("left shift") || Input.GetKey(KeyCode.A)) && (_player.transform.position.x < thisTransform.position.x) /*&& !_player.isRight*/) {
-				print("Je m'accroche à gauche");
+				//print("Je m'accroche à gauche");
 				if(_player.isLeft && !_player.blockedLeft) {//Tire Gauche
-					print("Je tire à gauche");
+					//print("Je tire à gauche");
 					_player.moveVel = playerMoveVel/2; 
 					crateMove = -_player.moveVel*Time.deltaTime;moveCake(-_player.moveVel*Time.deltaTime);
 					if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
 				}
 				else if(!blockCrate && _player.isRight) {//Pousse Droite
-					print("Je pousse à droite");
+					//print("Je pousse à droite");
 					_player.moveVel = playerMoveVel/2; 
 					crateMove = _player.moveVel*Time.deltaTime;moveCake(_player.moveVel*Time.deltaTime);
 					if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
@@ -109,15 +109,15 @@ public class Crate : MonoBehaviour {
 				thisTransform.position += new Vector3(crateMove,0f,0f);
 			}
 			else if((Input.GetKey("left shift") || Input.GetKey("left shift") || Input.GetKey(KeyCode.A)) && (_player.transform.position.x > thisTransform.position.x) /*&& !_player.isLeft*/) {
-				print("Je m'accroche à droite");
+				//print("Je m'accroche à droite");
 				if(_player.isRight && !_player.blockedRight) {//Tire Droite
-					print("Je tire à droite");
+				//	print("Je tire à droite");
 					_player.moveVel = playerMoveVel/2; 
 					crateMove = _player.moveVel*Time.deltaTime;moveCake(_player.moveVel*Time.deltaTime);
 					if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
 				}
 				else if(!blockCrate && _player.isLeft) {//Pousse Gauche
-					print("Je pousse à gauche");
+				//	print("Je pousse à gauche");
 					_player.moveVel = playerMoveVel/2; 
 					crateMove = -_player.moveVel*Time.deltaTime;moveCake(-_player.moveVel*Time.deltaTime);
 					if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");

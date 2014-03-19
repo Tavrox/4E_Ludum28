@@ -207,6 +207,7 @@ public class Patroler : Character {
 		}
 	}
 	protected void GameOver () {
+		if(this != null && gameObject.activeInHierarchy) {
 		enabled = false;
 		touchingCrate = false;
 		touchedCrate = null;
@@ -215,6 +216,7 @@ public class Patroler : Character {
 //		isJump = false;
 //		isPass = false;
 //		movingDir = moving.None;
+		}
 	}
 	protected void GamePause()
 	{

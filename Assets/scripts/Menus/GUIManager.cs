@@ -44,6 +44,7 @@ public class GUIManager : MonoBehaviour {
 	
 	private void GameOver () 
 	{
+		if(this != null && gameObject.activeInHierarchy) 
 		gameOverText.enabled = true;
 	}
 	

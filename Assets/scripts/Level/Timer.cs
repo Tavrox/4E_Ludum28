@@ -82,7 +82,9 @@ public class Timer : MonoBehaviour {
 	
 	private void GameOver()
 	{
+		if(this != null && gameObject.activeInHierarchy) {
 		pauseTimer = true;
+		}
 	}
 
 	private void OnGUI()

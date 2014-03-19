@@ -56,6 +56,12 @@ public class EndDoor : MonoBehaviour {
 		MasterAudio.FadeOutAllOfSound("bg",2f);
 		MasterAudio.FadeOutAllOfSound("intro",2f);
 		MasterAudio.FadeOutAllOfSound("jam",2f);
+			MasterAudio.FadeOutAllOfSound("level_theme_1",2f);
+			MasterAudio.FadeOutAllOfSound("level_theme_2",2f);
+			MasterAudio.FadeOutAllOfSound("level_theme_3",2f);
+		//	MasterAudio.FadeOutAllOfSound("level_theme_4",2f);
+		//	MasterAudio.FadeOutAllOfSound("level_theme_5",2f);
+			MasterAudio.FadeOutAllOfSound("boss_theme",2f);
 
 //		_playerdata.addLevelUnlocked(levelToGo);
 
@@ -66,6 +72,15 @@ public class EndDoor : MonoBehaviour {
 	IEnumerator EndGame()
 	{
 		yield return new WaitForSeconds(5f);
+		MasterAudio.StopAllOfSound("bg");
+		MasterAudio.StopAllOfSound("intro");
+		MasterAudio.StopAllOfSound("jam");
+		MasterAudio.StopAllOfSound("level_theme_1");
+		MasterAudio.StopAllOfSound("level_theme_2");
+		MasterAudio.StopAllOfSound("level_theme_3");
+		//	MasterAudio.StopAllOfSound("level_theme_4");
+		//	MasterAudio.StopAllOfSound("level_theme_5");
+		MasterAudio.StopAllOfSound("boss_theme");
 		GameEventManager.TriggerNextInstance();
 		//Application.LoadLevel(levelToGo);
 	}
