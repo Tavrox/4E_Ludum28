@@ -913,7 +913,7 @@ MonoBehaviour:
   vectorFixed: {x: 0, y: 0, z: 0}
   InputMan: {fileID: 0}
   jumpSpeed: 14
-  jumpDuration: .0250000004
+  jumpDuration: .0280000009
   jumpState: 0
   moveVel: 10
   jumpVel: 600

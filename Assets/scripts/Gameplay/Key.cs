@@ -21,6 +21,7 @@ public class Key : MonoBehaviour {
 		if(this != null && gameObject.activeInHierarchy) resetKey();
 	}
 	void GameOver() {
+		if(this != null && gameObject.activeInHierarchy) 
 		resetKey();
 	}
 	void NextInstance() {

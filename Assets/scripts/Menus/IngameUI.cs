@@ -32,8 +32,10 @@ public class IngameUI : MonoBehaviour {
 
 	public void fadeOut()
 	{
-		OTTween _tween = new OTTween(prefabSprite, 1f).Tween("alpha", 1f).PingPong();
-		StartCoroutine("hideItem");
+		if(prefabSprite.alpha == 0f) {
+			OTTween _tween = new OTTween(prefabSprite, 1f).Tween("alpha", 1f).PingPong();
+			StartCoroutine("hideItem");
+		}
 	}
 	private IEnumerator hideItem() {
 		yield return new WaitForSeconds(1f);

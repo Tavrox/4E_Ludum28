@@ -213,7 +213,7 @@ public class Player : Character {
 	
 	private void GameOver () 
 	{
-		if(this != null) {
+		if(this != null && gameObject.activeInHierarchy) {
 			StartCoroutine("resetGame");
 			isLeft = false;
 			isRight = false;

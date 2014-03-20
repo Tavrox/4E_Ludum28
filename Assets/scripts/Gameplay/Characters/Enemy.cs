@@ -441,12 +441,14 @@ public class Enemy : Character {
 	}
 	
 	protected void GameOver () {
+		if(this != null && gameObject.activeInHierarchy) {
 		enabled = false;
 		isLeft = false;
 		isRight = false;
 		isJump = false;
 		isPass = false;
 		movingDir = moving.None;
+		}
 	}
 	protected void GamePause()
 	{
