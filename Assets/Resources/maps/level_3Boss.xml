@@ -367,7 +367,7 @@
  </objectgroup>
  <objectgroup color="#005500" name="1" width="200" height="80">
   <object name="BaseArcDA" type="BaseArcD" x="2800" y="700" width="50" height="100"/>
-  <object name="TourelleL3" type="TurretL" x="6000" y="1800" width="50" height="50"/>
+  <object name="TourelleL3" type="TurretL" x="6600" y="2150" width="50" height="50"/>
   <object name="TRIGGER BOSS 2 FAST" x="7950" y="2000" width="700" height="200"/>
   <object name="TP1" type="TeleportIn" x="6100" y="2100" width="50" height="100"/>
   <object name="TP2" type="TeleportIn" x="6100" y="2650" width="50" height="100"/>
