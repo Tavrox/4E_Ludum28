@@ -659,7 +659,7 @@
   <object name="2PorteB" type="TriggeredDoor" x="4000" y="1550" width="50" height="200"/>
   <object name="2PorteC" type="TriggeredDoor" x="4000" y="1900" width="50" height="150"/>
  </objectgroup>
- <objectgroup color="#ffffff" name="3" width="110" height="70" visible="0">
+ <objectgroup color="#ffffff" name="3" width="110" height="70">
   <object name="3TourelleU" type="TurretU" x="950" y="1700" width="50" height="50"/>
   <object name="3TourelleD1" type="TurretD" x="1550" y="1300" width="50" height="50"/>
   <object name="3TourelleL2" type="TurretL" x="1400" y="1800" width="50" height="50"/>
