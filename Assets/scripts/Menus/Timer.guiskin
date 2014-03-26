@@ -244,7 +244,7 @@ MonoBehaviour:
     m_TextClipping: 0
     m_ImagePosition: 0
     m_ContentOffset: {x: 0, y: 0}
-    m_FixedWidth: -.289999992
+    m_FixedWidth: .400000006
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0

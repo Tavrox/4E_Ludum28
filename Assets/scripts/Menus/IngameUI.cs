@@ -22,6 +22,7 @@ public class IngameUI : MonoBehaviour {
 		GameEventManager.GameOver += GameOver;
 		GameEventManager.GamePause += GamePause;
 		GameEventManager.GameUnpause += GameUnpause;
+		GameEventManager.GameStart += GameStart;
 
 		if (action == ListAction.Manager)
 		{
@@ -58,7 +59,9 @@ public class IngameUI : MonoBehaviour {
 	}
 	private void GameOver()
 	{
-
-
+		gameObject.SetActive(false);
+	}
+	void GameStart () {		
+		gameObject.SetActive(true);
 	}
 }
