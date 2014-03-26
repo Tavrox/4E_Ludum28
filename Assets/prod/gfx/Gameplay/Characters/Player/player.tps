@@ -225,6 +225,16 @@
             <filename>perso_Ymort0003.png</filename>
             <filename>perso_Ymort0004.png</filename>
             <filename>perso_Ymort0005.png</filename>
+            <filename>D:/Travail/4Edges Studio/The blobMinute/gfx/Levels/ludum/ludum/perso/perso_poussecaisse0001.png</filename>
+            <filename>D:/Travail/4Edges Studio/The blobMinute/gfx/Levels/ludum/ludum/perso/perso_poussecaisse0002.png</filename>
+            <filename>D:/Travail/4Edges Studio/The blobMinute/gfx/Levels/ludum/ludum/perso/perso_poussecaisse0003.png</filename>
+            <filename>D:/Travail/4Edges Studio/The blobMinute/gfx/Levels/ludum/ludum/perso/perso_poussecaisse0004.png</filename>
+            <filename>D:/Travail/4Edges Studio/The blobMinute/gfx/Levels/ludum/ludum/perso/perso_poussecaisse0005.png</filename>
+            <filename>D:/Travail/4Edges Studio/The blobMinute/gfx/Levels/ludum/ludum/perso/perso_poussecaisse0006.png</filename>
+            <filename>D:/Travail/4Edges Studio/The blobMinute/gfx/Levels/ludum/ludum/perso/perso_poussecaisse0007.png</filename>
+            <filename>D:/Travail/4Edges Studio/The blobMinute/gfx/Levels/ludum/ludum/perso/perso_poussecaisse0008.png</filename>
+            <filename>D:/Travail/4Edges Studio/The blobMinute/gfx/Levels/ludum/ludum/perso/perso_poussecaisse0009.png</filename>
+            <filename>D:/Travail/4Edges Studio/The blobMinute/gfx/Levels/ludum/ludum/perso/perso_poussecaisse0010.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
