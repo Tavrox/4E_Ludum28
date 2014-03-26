@@ -56,10 +56,88 @@
                 <key>sourceSize</key>
                 <string>{50,100}</string>
             </dict>
+            <key>kEY.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,100},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>kEYBleu.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{50,100},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>kEYJaune.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{100,100},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>kEYRouge.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{150,100},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>kEYVert.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{200,100},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>kEYViolet.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,150},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
             <key>key.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,100},{30,30}}</string>
+                <string>{{50,150},{30,30}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -79,7 +157,7 @@
             <key>size</key>
             <string>{256,256}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:446d03237f12eeebd7db12b758f1a6a1:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:ddc2627f3ffefc2e1d96d832f33cecf3:8741fe5beec03b880b9706b6729c9cc7:60b61656b60030cacf39390ab091f69c$</string>
             <key>textureFileName</key>
             <string>crate.png</string>
         </dict>
