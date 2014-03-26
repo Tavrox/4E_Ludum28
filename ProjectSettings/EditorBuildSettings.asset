@@ -19,11 +19,11 @@ EditorBuildSettings:
     path: Assets/scenes/1Boss.unity
   - enabled: 0
     path: Assets/scenes/2.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/scenes/3.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/scenes/3Boss.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/scenes/4.unity
   - enabled: 0
     path: Assets/scenes/5.unity

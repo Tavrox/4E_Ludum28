@@ -4,83 +4,70 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>backgroundNum01.png</key>
+            <key>Camera_02.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,0},{50,50}}</string>
+                <string>{{0,0},{300,205}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{50,50}}</string>
+                <string>{{0,0},{300,205}}</string>
                 <key>sourceSize</key>
-                <string>{50,50}</string>
+                <string>{300,205}</string>
             </dict>
-            <key>backgroundNum02.png</key>
+            <key>Camera_04.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{50,0},{50,50}}</string>
+                <string>{{300,0},{300,205}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{50,50}}</string>
+                <string>{{0,0},{300,205}}</string>
                 <key>sourceSize</key>
-                <string>{50,50}</string>
+                <string>{300,205}</string>
             </dict>
-            <key>backgroundNum03.png</key>
+            <key>Camera_06.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,50},{50,50}}</string>
+                <string>{{600,0},{301,205}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{50,50}}</string>
+                <string>{{0,0},{301,205}}</string>
                 <key>sourceSize</key>
-                <string>{50,50}</string>
+                <string>{301,205}</string>
             </dict>
-            <key>backgroundNum04.png</key>
+            <key>Camera_11.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{50,50},{50,50}}</string>
+                <string>{{0,205},{300,205}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{50,50}}</string>
+                <string>{{0,0},{300,205}}</string>
                 <key>sourceSize</key>
-                <string>{50,50}</string>
+                <string>{300,205}</string>
             </dict>
-            <key>backgroundNum05.png</key>
+            <key>Camera_12.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,100},{50,50}}</string>
+                <string>{{300,205},{301,205}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{50,50}}</string>
+                <string>{{0,0},{301,205}}</string>
                 <key>sourceSize</key>
-                <string>{50,50}</string>
-            </dict>
-            <key>backgroundNum13.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{50,100},{50,50}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{50,50}}</string>
-                <key>sourceSize</key>
-                <string>{50,50}</string>
+                <string>{301,205}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -90,9 +77,9 @@
             <key>realTextureFileName</key>
             <string>HUDLevels.png</string>
             <key>size</key>
-            <string>{128,256}</string>
+            <string>{1024,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:79be8d66f908ae11a173233a51c51946:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:afe9c1d7cd154f31936545630c294420:8284f83751d955a9d04611be69dff577:f22b502dc906ef7152b7a2bcfcfb8989$</string>
             <key>textureFileName</key>
             <string>HUDLevels.png</string>
         </dict>

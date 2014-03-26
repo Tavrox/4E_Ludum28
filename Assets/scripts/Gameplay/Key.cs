@@ -5,6 +5,9 @@ public class Key : MonoBehaviour {
 
 	private Vector3 myPosINI;
 	private Transform _myGameParent, _playerUI;
+	
+	private LevelManager _levelM;
+	private OTSprite _KeySprite;
 
 	// Use this for initialization
 	void Start () {
@@ -14,6 +17,11 @@ public class Key : MonoBehaviour {
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.NextInstance += NextInstance;
 		GameEventManager.GameOver += GameOver;
+
+		_levelM = GameObject.FindObjectOfType<LevelManager>();
+		_KeySprite = gameObject.GetComponentInChildren<OTSprite>();
+		_KeySprite.frameIndex = _levelM.chosenVariation+4;
+		if(_levelM.isBoss == true) _KeySprite.frameIndex = 4;
 	}
 
 	void GameStart()
@@ -29,6 +37,9 @@ public class Key : MonoBehaviour {
 	}
 	void resetKey() {
 		if(this != null) {
+			
+			_KeySprite.frameIndex = _levelM.chosenVariation+4;
+			if(_levelM.isBoss == true) _KeySprite.frameIndex = 5;
 			gameObject.transform.parent = _myGameParent;
 			transform.localPosition = myPosINI;
 			//GetComponentInChildren<OTSprite>().renderer.enabled = true;
