@@ -182,6 +182,14 @@
             <filename>Key/kEYJaune.png</filename>
             <filename>Key/kEYRouge.png</filename>
             <filename>Key/kEY.png</filename>
+            <filename>../../Levels/Zcrate_exploo0001 (1).png</filename>
+            <filename>../../Levels/Zcrate_exploo0001 (2).png</filename>
+            <filename>../../Levels/Zcrate_exploo0001 (3).png</filename>
+            <filename>../../Levels/Zcrate_exploo0001 (4).png</filename>
+            <filename>../../Levels/Zcrate_exploo0001 (5).png</filename>
+            <filename>../../Levels/Zcrate_exploo0001 (6).png</filename>
+            <filename>../../Levels/Zcrate_exploo0001 (7).png</filename>
+            <filename>../../Levels/Zcrate_exploo0001 (8).png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

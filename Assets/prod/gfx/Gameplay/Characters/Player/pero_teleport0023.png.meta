@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: cf8a4d0f885ed0e4293572105df63e03
+=======
+guid: 2fe9de0887bcd7e429b3e513087c631c
+>>>>>>> Mort Blob
 TextureImporter:
   serializedVersion: 2
   mipmaps:

@@ -2,16 +2,30 @@
 <data version="1.0">
     <struct type="Settings">
         <key>fileFormatVersion</key>
-        <int>1</int>
-        <key>variation</key>
-        <string>main</string>
-        <key>verbose</key>
-        <false/>
+        <int>3</int>
+        <key>texturePackerVersion</key>
+        <string>3.2.1</string>
         <key>autoSDSettings</key>
-        <array/>
+        <array>
+            <struct type="AutoSDSettings">
+                <key>scale</key>
+                <double>1</double>
+                <key>extension</key>
+                <string></string>
+                <key>spriteFilter</key>
+                <string></string>
+                <key>acceptFractionalValues</key>
+                <false/>
+                <key>maxTextureSize</key>
+                <QSize>
+                    <key>width</key>
+                    <int>-1</int>
+                    <key>height</key>
+                    <int>-1</int>
+                </QSize>
+            </struct>
+        </array>
         <key>allowRotation</key>
-        <false/>
-        <key>quiet</key>
         <false/>
         <key>premultiplyAlpha</key>
         <false/>
@@ -56,7 +70,7 @@
             <key>width</key>
             <int>256</int>
             <key>height</key>
-            <int>256</int>
+            <int>1024</int>
         </QSize>
         <key>fixedTextureSize</key>
         <QSize>
@@ -98,8 +112,6 @@
             <enum type="AndEngine::MinFilter">Linear</enum>
             <key>packageName</key>
             <string>Texture</string>
-            <key>javaFileName</key>
-            <filename>patroler.java</filename>
             <key>wrap</key>
             <struct type="AndEngineWrap">
                 <key>s</key>
@@ -110,12 +122,21 @@
             <key>magFilter</key>
             <enum type="AndEngine::MagFilter">MagLinear</enum>
         </struct>
-        <key>dataFileName</key>
-        <filename>patroler.xml</filename>
+        <key>dataFileNames</key>
+        <map type="GFileNameMap">
+            <key>data</key>
+            <struct type="DataFile">
+                <key>name</key>
+                <filename>patroler.xml</filename>
+            </struct>
+            <key>java</key>
+            <struct type="DataFile">
+                <key>name</key>
+                <filename>patroler.java</filename>
+            </struct>
+        </map>
         <key>multiPack</key>
         <false/>
-        <key>mainExtension</key>
-        <string></string>
         <key>forceIdenticalLayout</key>
         <false/>
         <key>outputFormat</key>
@@ -129,6 +150,8 @@
         <false/>
         <key>trimSpriteNames</key>
         <false/>
+        <key>cleanTransparentPixels</key>
+        <true/>
         <key>globalSpriteSettings</key>
         <struct type="SpriteSettings">
             <key>scale</key>
@@ -158,6 +181,16 @@
             <filename>../../../Levels/Adrian/patrol0007.png</filename>
             <filename>../../../Levels/Adrian/patrol0008.png</filename>
             <filename>../../../Levels/Adrian/patrol0009.png</filename>
+            <filename>AnimeDemortPatroler/patrol_dead0001.png</filename>
+            <filename>AnimeDemortPatroler/patrol_dead0002.png</filename>
+            <filename>AnimeDemortPatroler/patrol_dead0003.png</filename>
+            <filename>AnimeDemortPatroler/patrol_dead0004.png</filename>
+            <filename>AnimeDemortPatroler/patrol_dead0005.png</filename>
+            <filename>AnimeDemortPatroler/patrol_dead0006.png</filename>
+            <filename>AnimeDemortPatroler/patrol_dead0007.png</filename>
+            <filename>AnimeDemortPatroler/patrol_dead0008.png</filename>
+            <filename>AnimeDemortPatroler/patrol_dead0009.png</filename>
+            <filename>AnimeDemortPatroler/patrol_dead0010.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

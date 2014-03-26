@@ -215,6 +215,16 @@
             <filename>pero_teleport0022.png</filename>
             <filename>pero_teleport0023.png</filename>
             <filename>pero_teleport0024.png</filename>
+            <filename>perso_Ymort0006.png</filename>
+            <filename>perso_Ymort0007.png</filename>
+            <filename>perso_Ymort0008.png</filename>
+            <filename>perso_Ymort0009.png</filename>
+            <filename>perso_Ymort0010.png</filename>
+            <filename>perso_Ymort0001.png</filename>
+            <filename>perso_Ymort0002.png</filename>
+            <filename>perso_Ymort0003.png</filename>
+            <filename>perso_Ymort0004.png</filename>
+            <filename>perso_Ymort0005.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

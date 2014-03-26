@@ -4,10 +4,140 @@
     <dict>
         <key>frames</key>
         <dict>
+            <key>PorteExplose0001.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,0},{300,300}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{300,300}}</string>
+                <key>sourceSize</key>
+                <string>{300,300}</string>
+            </dict>
+            <key>PorteExplose0002.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{301,0},{300,300}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{300,300}}</string>
+                <key>sourceSize</key>
+                <string>{300,300}</string>
+            </dict>
+            <key>PorteExplose0003.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{602,0},{300,300}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{300,300}}</string>
+                <key>sourceSize</key>
+                <string>{300,300}</string>
+            </dict>
+            <key>PorteExplose0004.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{903,0},{300,300}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{300,300}}</string>
+                <key>sourceSize</key>
+                <string>{300,300}</string>
+            </dict>
+            <key>PorteExplose0005.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1204,0},{300,300}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{300,300}}</string>
+                <key>sourceSize</key>
+                <string>{300,300}</string>
+            </dict>
+            <key>PorteExplose0006.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1505,0},{300,300}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{300,300}}</string>
+                <key>sourceSize</key>
+                <string>{300,300}</string>
+            </dict>
+            <key>PorteExplose0007.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,301},{300,300}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{300,300}}</string>
+                <key>sourceSize</key>
+                <string>{300,300}</string>
+            </dict>
+            <key>PorteExplose0008.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{301,301},{300,300}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{300,300}}</string>
+                <key>sourceSize</key>
+                <string>{300,300}</string>
+            </dict>
+            <key>PorteExplose0009.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{602,301},{300,300}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{300,300}}</string>
+                <key>sourceSize</key>
+                <string>{300,300}</string>
+            </dict>
+            <key>PorteExplose0010.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{903,301},{300,300}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{300,300}}</string>
+                <key>sourceSize</key>
+                <string>{300,300}</string>
+            </dict>
             <key>porte_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,0},{50,300}}</string>
+                <string>{{1204,301},{50,300}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -20,7 +150,7 @@
             <key>porte_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{51,0},{50,300}}</string>
+                <string>{{1255,301},{50,300}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,7 +163,7 @@
             <key>porte_3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{102,0},{50,300}}</string>
+                <string>{{1306,301},{50,300}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -46,7 +176,7 @@
             <key>porte_4.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{153,0},{50,300}}</string>
+                <string>{{1357,301},{50,300}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -59,7 +189,7 @@
             <key>porte_5.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{204,0},{50,300}}</string>
+                <string>{{1408,301},{50,300}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -77,9 +207,9 @@
             <key>realTextureFileName</key>
             <string>door.png</string>
             <key>size</key>
-            <string>{256,512}</string>
+            <string>{2048,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:a526194dd02ab03663feaf86605785b2:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:8b535cd6a2054db6070ac01571bb2484:c338c2f11935889db9d0bc7c2f31bddf:94eb888170255f99fae4aad77917705e$</string>
             <key>textureFileName</key>
             <string>door.png</string>
         </dict>
