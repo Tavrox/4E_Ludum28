@@ -15,6 +15,10 @@ public class PlayerAnims : MonoBehaviour
 		ShootLeft, ShootRight,
 		CrounchLeft, CrounchRight,
 		AttackLeft, AttackRight,
+		PushCrateLeft, PushCrateRight,
+		DeathBlobLeft, DeathBlobRight,
+		TeleportINRight, TeleportINLeft,
+		TeleportOUTRight, TeleportOUTLeft
 	}
 	
 	public Transform spriteParent;
@@ -33,13 +37,19 @@ public class PlayerAnims : MonoBehaviour
 	{
 		_character 	= GetComponent<Character>();
 		_player 	= GetComponent<Player>();
+		anim = GameObject.Find("playerAnims").GetComponent<OTAnimation>();
 	}
 	void Update() 
 	{
 		// Order of action matters, they need to have priorities. //
-		if(animSprite.frameIndex == 2 && !stopped) {stopped=true;animSprite.Stop();StartCoroutine("waitB4Restart",1f);}
-		if(animSprite.frameIndex == 4 && !stopped) {stopped=true;animSprite.Stop();StartCoroutine("waitB4Restart",1f);}
+		if(animSprite.frameIndex == 23) {animPlaying=false;anim.fps = 12.66667f;_player.locked=false;} //stop teleport
+		if(animSprite.frameIndex == 28 && !stopped) {stopped=true;animSprite.Pauze();StartCoroutine("waitB4Restart",2.5f);} //deathBlob pause
+		if(animSprite.frameIndex == 36 && !stopped) {stopped=true;animSprite.Pauze();StartCoroutine("waitB4Restart",1f);} //iddle pause 1
+		if(animSprite.frameIndex == 38 && !stopped) {stopped=true;animSprite.Pauze();StartCoroutine("waitB4Restart",1f);} //iddle pause 2
+		if(animSprite.frameIndex == 33 && !stopped) {stopped=true;animSprite.Stop();StartCoroutine("waitB4Restart",0.09f);} //deathBlob pause
+		TeleportIN();
 		Run();
+		PushCrate();
 		Walk();
 		Stand();
 		Crounch();
@@ -48,26 +58,107 @@ public class PlayerAnims : MonoBehaviour
 		Hurt();
 		Fall();
 		Paused();
+		DeathBlob();
+		//print (currentAnim);
 		if(_character.grounded) animSprite.looping = true;
 	}
-	private IEnumerator waitB4Restart (float delayRestart) {
+	private IEnumerator waitB4Restart (float delayRestart) {print ("attend");
 		yield return new WaitForSeconds(delayRestart);
 		//print ("attendu");
-		stopped = false;
-		animSprite.Play(animSprite.frameIndex+1);
+		stopped = false;//print (animSprite.frameIndex+1);
+		if(animSprite.frameIndex == 28) { //Reprend anim mort
+			if(animSprite.frameIndex != 38) animSprite.frameIndex=animSprite.frameIndex+1;
+			animSprite.Resume();
+		}
+		else if (animSprite.frameIndex == 33) {
+			animSprite.frameIndex = 40;
+		}
+		else //Reprend autres anims
+			animSprite.Play(animSprite.frameIndex+1);
+	}
+	private void TeleportIN()
+	{
+		if(_player.locked && _character.grounded && currentAnim!=animDef.TeleportINRight && _character.facingDir == Character.facing.Right)
+		{
+			currentAnim = animDef.TeleportINRight;
+			animSprite.PlayOnce("teleportIN");
+			NormalScaleSprite();
+			animPlaying = true;
+			anim.fps = 16f;
+			//StartCoroutine( WaitAndCallback( anim.GetDuration(anim.framesets[2]) ) );
+		}
+		if(_player.locked && _character.grounded && currentAnim!=animDef.TeleportINLeft && _character.facingDir == Character.facing.Left)
+		{
+			currentAnim = animDef.TeleportINLeft;
+			animSprite.PlayOnce("teleportIN");
+			animPlaying = true;
+			InvertSprite();
+			anim.fps = 16f;
+			//StartCoroutine( WaitAndCallback( anim.GetDuration(anim.framesets[2]) ) );
+		}
+	}
+//	private void TeleportOUT()
+//	{
+//		if(_player.locked && _character.grounded && currentAnim!=animDef.TeleportOUTRight && _character.facingDir == Character.facing.Right)
+//		{
+//			currentAnim = animDef.TeleportOUTRight;
+//			animSprite.PlayOnce("teleportOUT");
+//			//animPlaying = true;
+//			NormalScaleSprite();
+//			//StartCoroutine( WaitAndCallback( anim.GetDuration(anim.framesets[2]) ) );
+//		}
+//		if(_player.locked && _character.grounded && currentAnim!=animDef.TeleportOUTLeft && _character.facingDir == Character.facing.Left)
+//		{
+//			currentAnim = animDef.TeleportOUTLeft;
+//			animSprite.PlayOnce("teleportOUT");
+//			//animPlaying = true;
+//			InvertSprite();
+//			//StartCoroutine( WaitAndCallback( anim.GetDuration(anim.framesets[2]) ) );
+//		}
+//	}
+	
+	private void DeathBlob()
+	{
+		if(_character.facingDir == Character.facing.Right && currentAnim!=animDef.DeathBlobRight && _player.isDead)
+		{
+			currentAnim = animDef.DeathBlobRight;
+			animSprite.Play("deathBlob");
+			NormalScaleSprite();
+		}
+		if(_character.facingDir == Character.facing.Left && currentAnim!=animDef.DeathBlobLeft && _player.isDead)
+		{
+			currentAnim = animDef.DeathBlobLeft;
+			animSprite.Play("deathBlob");
+			InvertSprite();
+		}
 	}
 	private void Run()
 	{
-		if(_character.isRight && _character.grounded && currentAnim!=animDef.WalkRight)
+		if(_character.isRight && _character.grounded && currentAnim!=animDef.WalkRight && !_player.pushCrate)
 		{
 			currentAnim = animDef.WalkRight;
 			animSprite.Play("run");
-			NormalScaleSprite();;
+			NormalScaleSprite();
 		}
-		if(_character.isLeft && _character.grounded && currentAnim!=animDef.WalkLeft)
+		if(_character.isLeft && _character.grounded && currentAnim!=animDef.WalkLeft && !_player.pushCrate)
 		{
 			currentAnim = animDef.WalkLeft;
 			animSprite.Play("run");
+			InvertSprite();
+		}
+	}
+	private void PushCrate()
+	{
+		if(_character.isRight && _character.grounded && currentAnim!=animDef.PushCrateRight && _player.pushCrate)
+		{
+			currentAnim = animDef.PushCrateRight;
+			animSprite.Play("pushCrate");
+			NormalScaleSprite();
+		}
+		if(_character.isLeft && _character.grounded && currentAnim!=animDef.PushCrateLeft && _player.pushCrate)
+		{
+			currentAnim = animDef.PushCrateLeft;
+			animSprite.Play("pushCrate");
 			InvertSprite();
 		}
 	}
@@ -100,17 +191,18 @@ public class PlayerAnims : MonoBehaviour
 	}
 	private void Jump()
 	{
-		animSprite.looping = false;
-		if(_character.grounded == false && currentAnim != animDef.FallLeft && _character.facingDir == Character.facing.Left)
+		if(!_player.locked && !_player.isDead && _character.grounded == false && currentAnim != animDef.FallLeft && _character.facingDir == Character.facing.Left)
 		{
+			animSprite.looping = false;
 			MasterAudio.StopAllOfSound("player_runL1");
 			currentAnim = animDef.FallLeft;
 			animSprite.Play("jump"); // fall left
 			//print (_character.falling);
 			InvertSprite();
 		}
-		if(_character.grounded == false && currentAnim != animDef.FallRight && _character.facingDir == Character.facing.Right)
+		if(!_player.locked && !_player.isDead && _character.grounded == false && currentAnim != animDef.FallRight && _character.facingDir == Character.facing.Right)
 		{
+			animSprite.looping = false;
 			MasterAudio.StopAllOfSound("player_runL1");
 			currentAnim = animDef.FallRight;
 			animSprite.Play("jump"); // fall right

@@ -146,9 +146,10 @@ public class Patroler : Character {
 	}
 	protected void OnTriggerEnter(Collider _other) 
 	{
-		if (_other.CompareTag("Player") == true && GameObject.Find("Player").GetComponent<Player>().isDead == false)
+		if (_other.CompareTag("Player") == true && _player.isDead == false)
 		{
-			GameObject.Find("Player").GetComponent<Player>().isDead = true;
+			_player.isDead = true;
+			_player.killedByBlob = true;
 			GameEventManager.TriggerGameOver();
 		}
 		if(_other.CompareTag("Crate")) {

@@ -34,7 +34,7 @@ public class Character : MonoBehaviour
 	[HideInInspector] public bool isPass;
 	
 	[HideInInspector] public bool jumping = false;
-	[HideInInspector] public bool falling = false,chute, onCrate;
+	[HideInInspector] public bool falling = false,chute, onCrate, pushCrate;
 	[HideInInspector] public bool grounded = false;
 	[HideInInspector] public bool passingPlatform;
 	[HideInInspector] public bool onPlatform;

@@ -13,6 +13,7 @@ public class InvasionAnims : MonoBehaviour {
 		_player = GameObject.Find("Player").GetComponent<Player>();
 		stopped = false;
 		invade();
+		if(!_player.killedByBlob) animSprite.renderer.enabled = false;
 	}
 	void Update () {
 		if(animSprite.frameIndex == 18 && !stopped) {
