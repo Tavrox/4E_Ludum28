@@ -846,7 +846,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:a5b48618b9131637803ee82916c168b3:5b1e4b4faf26599fd46a252a0747acf4:6c45f23d1211d37495dbafcfd7f348f6$</string>
+            <string>$TexturePacker:SmartUpdate:89f549475c92fe70ecca8e1209b0f0bd:2ce6d8afae5ea6e0a16e1add4dc5f9fa:6c45f23d1211d37495dbafcfd7f348f6$</string>
             <key>textureFileName</key>
             <string>player.png</string>
         </dict>
