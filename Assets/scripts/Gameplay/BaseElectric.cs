@@ -54,7 +54,7 @@ public class BaseElectric : MonoBehaviour {
 	public void turnON () {
 		animSprite.Play("baseON");StartCoroutine("activateCollider");
 		activeState = true;
-		if(inactiveTime==0) StartCoroutine("activateInfinite");
+		if(inactiveTime==0) StartCoroutine("displayInfinite");
 		else if(activeTime!=0) StartCoroutine("active");
 	}
 	void GameOver() {
@@ -103,6 +103,10 @@ public class BaseElectric : MonoBehaviour {
 		animSprite.animation.fps = 18f;
 		animSprite.Play("baseActivation");
 		yield return new WaitForSeconds(0.08f);
+		StartCoroutine("displayInfinite");
+	}
+	IEnumerator displayInfinite() {
+		
 		if(!muted) FESound.playDistancedSound("piston_on",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_on");
 		yield return new WaitForSeconds(0.12f);
 		animSprite.animation.fps = 12.66667f;
