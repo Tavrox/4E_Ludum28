@@ -27,17 +27,17 @@ public class BaseElectric : MonoBehaviour {
 	}
 	private IEnumerator active() {
 		if(activeState) {activeState=!activeState;waitTime = activeTime;StartCoroutine("SND_activateThenOff");}
-		else {activeState=!activeState;waitTime = inactiveTime;animSprite.Play("baseDefault");collider.enabled=false;}
+		else {activeState=!activeState;waitTime = inactiveTime;StartCoroutine("deactivate");collider.enabled=false;}
 		yield return new WaitForSeconds(waitTime);
 		StartCoroutine("active");
 	}
 
 	void OnTriggerEnter(Collider _other)
 	{
-		if (_other.CompareTag("Player") == true && GameObject.Find("Player").GetComponent<Player>().isDead == false)
+		if (_other.CompareTag("Player") == true && _player.isDead == false)
 		{
 			FESound.playDistancedSound("hole",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("hole");
-			GameObject.Find("Player").GetComponent<Player>().isDead = true;
+			_player.isDead = true;
 			GameEventManager.TriggerGameOver();
 		}
 	}
@@ -89,17 +89,39 @@ public class BaseElectric : MonoBehaviour {
 		yield return new WaitForSeconds(0f);
 		collider.enabled=true;
 	}
+	IEnumerator deactivate() {
+		animSprite.animation.fps = 18f;
+		animSprite.PlayBackward("baseActivation");
+		yield return new WaitForSeconds(0.08f);
+		animSprite.animation.fps = 12.66667f;
+		animSprite.Play("baseDefault");
+	}
 	IEnumerator activateInfinite() {
+		animSprite.animation.fps = 15f;
+		animSprite.Play("baseAlert");
+		yield return new WaitForSeconds(.8f);
+		animSprite.animation.fps = 18f;
+		animSprite.Play("baseActivation");
+		yield return new WaitForSeconds(0.08f);
 		if(!muted) FESound.playDistancedSound("piston_on",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_on");
 		yield return new WaitForSeconds(0.12f);
+		animSprite.animation.fps = 12.66667f;
 		animSprite.Play("baseON");StartCoroutine("activateCollider");
 		if(!muted) {yield return new WaitForSeconds(0.257f);
 			FESound.playDistancedSound("piston_idle",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_idle");
 		}
 	}
 	IEnumerator SND_activateThenOff() {
+		
+		animSprite.animation.fps = 15f;
+		animSprite.Play("baseAlert");
+		yield return new WaitForSeconds(.8f);
+		animSprite.animation.fps = 18f;
+		animSprite.Play("baseActivation");
+		yield return new WaitForSeconds(0.08f);
 		if(!muted) FESound.playDistancedSound("piston_on",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_on");
 		yield return new WaitForSeconds(0.12f);
+		animSprite.animation.fps = 12.66667f;
 		animSprite.Play("baseON");StartCoroutine("activateCollider");
 		if(!muted) {yield return new WaitForSeconds(0.257f);
 			FESound.playDistancedSound("piston_idle",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_idle");

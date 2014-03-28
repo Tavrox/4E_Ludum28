@@ -43,6 +43,45 @@
                 <key>sourceSize</key>
                 <string>{30,30}</string>
             </dict>
+            <key>projectile_explo0001.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{30,30},{30,30}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{30,30}}</string>
+                <key>sourceSize</key>
+                <string>{30,30}</string>
+            </dict>
+            <key>projectile_explo0002.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,60},{30,30}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{30,30}}</string>
+                <key>sourceSize</key>
+                <string>{30,30}</string>
+            </dict>
+            <key>projectile_explo0003.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{30,60},{30,30}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{30,30}}</string>
+                <key>sourceSize</key>
+                <string>{30,30}</string>
+            </dict>
         </dict>
         <key>metadata</key>
         <dict>
@@ -51,9 +90,9 @@
             <key>realTextureFileName</key>
             <string>projectile.png</string>
             <key>size</key>
-            <string>{64,64}</string>
+            <string>{64,128}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:94cc24e245fd8df8429a0fa24d8ae068:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:165d1ee3b7cb77ccf561c9b98b4e17d9:24399dca4c6baec3a4c95d50f65b46e8:4bb8c1d9a2b0e7c74e5e000f2a31111e$</string>
             <key>textureFileName</key>
             <string>projectile.png</string>
         </dict>

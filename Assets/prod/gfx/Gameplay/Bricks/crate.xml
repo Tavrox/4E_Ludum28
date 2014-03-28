@@ -4,114 +4,10 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>Zcrate_exploo0001 (1).png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{0,0},{200,200}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{200,200}}</string>
-                <key>sourceSize</key>
-                <string>{200,200}</string>
-            </dict>
-            <key>Zcrate_exploo0001 (2).png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{200,0},{200,200}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{200,200}}</string>
-                <key>sourceSize</key>
-                <string>{200,200}</string>
-            </dict>
-            <key>Zcrate_exploo0001 (3).png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{0,200},{200,200}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{200,200}}</string>
-                <key>sourceSize</key>
-                <string>{200,200}</string>
-            </dict>
-            <key>Zcrate_exploo0001 (4).png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{200,200},{200,200}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{200,200}}</string>
-                <key>sourceSize</key>
-                <string>{200,200}</string>
-            </dict>
-            <key>Zcrate_exploo0001 (5).png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{0,400},{200,200}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{200,200}}</string>
-                <key>sourceSize</key>
-                <string>{200,200}</string>
-            </dict>
-            <key>Zcrate_exploo0001 (6).png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{200,400},{200,200}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{200,200}}</string>
-                <key>sourceSize</key>
-                <string>{200,200}</string>
-            </dict>
-            <key>Zcrate_exploo0001 (7).png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{0,600},{200,200}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{200,200}}</string>
-                <key>sourceSize</key>
-                <string>{200,200}</string>
-            </dict>
-            <key>Zcrate_exploo0001 (8).png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{0,600},{200,200}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{200,200}}</string>
-                <key>sourceSize</key>
-                <string>{200,200}</string>
-            </dict>
             <key>crate.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{200,600},{100,100}}</string>
+                <string>{{0,0},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -124,7 +20,7 @@
             <key>end_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{300,600},{50,100}}</string>
+                <string>{{100,0},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -137,7 +33,7 @@
             <key>end_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{350,600},{50,100}}</string>
+                <string>{{150,0},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -150,7 +46,7 @@
             <key>end_3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{400,600},{50,100}}</string>
+                <string>{{200,0},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -163,7 +59,7 @@
             <key>kEY.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{450,600},{50,50}}</string>
+                <string>{{250,0},{50,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -176,7 +72,7 @@
             <key>kEYBleu.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,800},{50,50}}</string>
+                <string>{{300,0},{50,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -189,7 +85,7 @@
             <key>kEYJaune.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{50,800},{50,50}}</string>
+                <string>{{350,0},{50,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -202,7 +98,7 @@
             <key>kEYRouge.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{100,800},{50,50}}</string>
+                <string>{{400,0},{50,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -215,7 +111,7 @@
             <key>kEYVert.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{150,800},{50,50}}</string>
+                <string>{{450,0},{50,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -228,7 +124,7 @@
             <key>kEYViolet.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{200,800},{50,50}}</string>
+                <string>{{500,0},{50,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -241,7 +137,7 @@
             <key>key.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{250,800},{30,30}}</string>
+                <string>{{550,0},{30,30}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -251,6 +147,110 @@
                 <key>sourceSize</key>
                 <string>{30,30}</string>
             </dict>
+            <key>zcrate_exploo0001.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{580,0},{200,200}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{200,200}}</string>
+                <key>sourceSize</key>
+                <string>{200,200}</string>
+            </dict>
+            <key>zcrate_exploo0002.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{780,0},{200,200}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{200,200}}</string>
+                <key>sourceSize</key>
+                <string>{200,200}</string>
+            </dict>
+            <key>zcrate_exploo0003.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,200},{200,200}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{200,200}}</string>
+                <key>sourceSize</key>
+                <string>{200,200}</string>
+            </dict>
+            <key>zcrate_exploo0004.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{200,200},{200,200}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{200,200}}</string>
+                <key>sourceSize</key>
+                <string>{200,200}</string>
+            </dict>
+            <key>zcrate_exploo0005.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{400,200},{200,200}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{200,200}}</string>
+                <key>sourceSize</key>
+                <string>{200,200}</string>
+            </dict>
+            <key>zcrate_exploo0006.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{600,200},{200,200}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{200,200}}</string>
+                <key>sourceSize</key>
+                <string>{200,200}</string>
+            </dict>
+            <key>zcrate_exploo0007.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{800,200},{200,200}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{200,200}}</string>
+                <key>sourceSize</key>
+                <string>{200,200}</string>
+            </dict>
+            <key>zcrate_exploo0008.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{800,200},{-1,-1}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{-1,-1}}</string>
+                <key>sourceSize</key>
+                <string>{-1,-1}</string>
+            </dict>
         </dict>
         <key>metadata</key>
         <dict>
@@ -259,9 +259,9 @@
             <key>realTextureFileName</key>
             <string>crate.png</string>
             <key>size</key>
-            <string>{512,1024}</string>
+            <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:e76afe3f2b6c4ab606719d7025451cb6:0651b4bfb10df6e2eb72aa6bfbf39573:60b61656b60030cacf39390ab091f69c$</string>
+            <string>$TexturePacker:SmartUpdate:acfeeec4ad5bef42872226f91c95e9ea:1/1$</string>
             <key>textureFileName</key>
             <string>crate.png</string>
         </dict>
