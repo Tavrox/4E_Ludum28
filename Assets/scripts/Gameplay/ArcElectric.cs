@@ -93,6 +93,7 @@ public class ArcElectric : MonoBehaviour {
 		collider.enabled=true;
 	}
 	IEnumerator activateInfinite() {
+		yield return new WaitForSeconds(.88f);
 			if(!muted) FESound.playDistancedSound("piston_on",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_on");
 		yield return new WaitForSeconds(0.12f);
 		animSprite.Play("arcON");StartCoroutine("activateCollider");
@@ -101,6 +102,7 @@ public class ArcElectric : MonoBehaviour {
 			}
 	}
 	IEnumerator SND_activateThenOff() {
+		yield return new WaitForSeconds(.88f);
 		if(!muted) FESound.playDistancedSound("piston_on",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_on");
 		yield return new WaitForSeconds(0.12f);
 		animSprite.Play("arcON");StartCoroutine("activateCollider");
