@@ -132,9 +132,9 @@ public class Player : Character {
 		/*if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");*/
 		//if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");
 		
-		if(!grounded) {if(facingDir == facing.Right) col.center = new Vector3(0.35f, 0f, 0f);
-			else col.center = new Vector3(-0.35f, 0f, 0f);
-			col.size = new Vector3(0.8f, col.size.y, col.size.z);
+		if(!grounded) {if(facingDir == facing.Right) col.center = new Vector3(0.2f, 0f, 0f);
+			else col.center = new Vector3(-0.2f, 0f, 0f);
+			col.size = new Vector3(0.4f, col.size.y, col.size.z);
 		}
 		//if(chute && grounded) {col.center = new Vector3(0f, 0f, 0f);}
 	}

@@ -70,4 +70,9 @@ public class TriggeredDoor : MonoBehaviour {
 		yield return new WaitForSeconds(0.3f);collider.enabled = true;
 		animSprite.PlayBackward("unlock");
 	}
+	public void explode() {
+		print ("EXPLOOOOOODE");
+		collider.enabled = false;
+		animSprite.Play("destroy");
+	}
 }

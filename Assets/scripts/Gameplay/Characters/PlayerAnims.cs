@@ -62,7 +62,7 @@ public class PlayerAnims : MonoBehaviour
 		//print (currentAnim);
 		if(_character.grounded) animSprite.looping = true;
 	}
-	private IEnumerator waitB4Restart (float delayRestart) {print ("attend");
+	private IEnumerator waitB4Restart (float delayRestart) {//print ("attend");
 		yield return new WaitForSeconds(delayRestart);
 		//print ("attendu");
 		stopped = false;//print (animSprite.frameIndex+1);

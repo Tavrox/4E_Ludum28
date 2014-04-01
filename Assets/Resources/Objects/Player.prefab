@@ -47,6 +47,7 @@ GameObject:
   - 65: {fileID: 6500000}
   - 114: {fileID: 11400028}
   - 114: {fileID: 11400030}
+  - 114: {fileID: 11400036}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -338,7 +339,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.9499836, y: -31.4897366, z: -1}
+  m_LocalPosition: {x: 81.7158661, y: -13.9564886, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -508,7 +509,7 @@ Transform:
   m_GameObject: {fileID: 100032}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .999999404, y: .999999404, z: 1}
+  m_LocalScale: {x: 5.99999619, y: 4.09999752, z: 1}
   m_Children: []
   m_Father: {fileID: 400034}
 --- !u!4 &400034
@@ -787,7 +788,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.29999995, y: 2, z: 30}
+  m_Size: {x: 1.29999995, y: 1.5, z: 30}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6500002
 BoxCollider:
@@ -849,7 +850,7 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 10
+  _frameIndex: 54
   _frameName: perso_run0001
   _spriteContainer: {fileID: 0}
   _containerName: playerSheet
@@ -896,6 +897,7 @@ MonoBehaviour:
   falling: 0
   chute: 0
   onCrate: 0
+  pushCrate: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -926,6 +928,8 @@ MonoBehaviour:
   maxVelY: 20
   halfMyX: 0
   halfMyY: 0
+  spriteScaleX: 0
+  spriteScaleY: 0
   position: {x: 0, y: 0, z: 0}
   trans: {fileID: 0}
   paused: 0
@@ -933,6 +937,7 @@ MonoBehaviour:
   angleRotation: 0
   isDead: 0
   locked: 0
+  killedByBlob: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1373,7 +1378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: spr-HUDLevels
   _position: {x: 0, y: 0}
-  _size: {x: .999999404, y: .999999404}
+  _size: {x: 5.99999619, y: 4.09999752}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -1395,8 +1400,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: spr-HUDLevels
-  oSize: {x: 1.04166675, y: 1.04166675}
-  imageSize: {x: .999999404, y: .999999404}
+  oSize: {x: 6.25, y: 4.27083349}
+  imageSize: {x: 5.99999619, y: 4.09999752}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -1424,6 +1429,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f22a144abfee90f4aa4eac9dcbc3b994, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11400036
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd119fcfaf9f6394ca6ce278cd6354ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _levelUnlocked: 
+  displayInput: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

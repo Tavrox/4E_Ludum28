@@ -26,8 +26,16 @@ public class BaseElectric : MonoBehaviour {
 		else StartCoroutine("activateInfinite");
 	}
 	private IEnumerator active() {
-		if(activeState) {activeState=!activeState;waitTime = activeTime;StartCoroutine("SND_activateThenOff");}
-		else {activeState=!activeState;waitTime = inactiveTime;StartCoroutine("deactivate");collider.enabled=false;}
+		if(activeState) {activeState=!activeState;
+			if(activeTime>=1) waitTime = activeTime+0.88f;
+			else if(activeTime<1) waitTime = activeTime+0.48f;
+			//waitTime = activeTime;
+			StartCoroutine("SND_activateThenOff");}
+		else {activeState=!activeState;
+			if(activeTime>=1) waitTime = inactiveTime-0.88f;
+			else if(activeTime<1) waitTime = inactiveTime-0.48f;
+			//waitTime = inactiveTime;
+			StartCoroutine("deactivate");collider.enabled=false;}
 		yield return new WaitForSeconds(waitTime);
 		StartCoroutine("active");
 	}
@@ -119,7 +127,8 @@ public class BaseElectric : MonoBehaviour {
 		
 		animSprite.animation.fps = 15f;
 		animSprite.Play("baseAlert");
-		yield return new WaitForSeconds(.8f);
+		if(activeTime>=1) yield return new WaitForSeconds(.8f);
+		else if(activeTime<1) yield return new WaitForSeconds(.4f);
 		animSprite.animation.fps = 18f;
 		animSprite.Play("baseActivation");
 		yield return new WaitForSeconds(0.08f);

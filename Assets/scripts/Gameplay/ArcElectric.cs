@@ -29,8 +29,16 @@ public class ArcElectric : MonoBehaviour {
 		else StartCoroutine("activateInfinite");
 	}
 	private IEnumerator active() {
-		if(activeState) {activeState=!activeState;waitTime = activeTime;StartCoroutine("SND_activateThenOff");/*MasterAudio.PlaySound("piston_on");*/}
-		else {activeState=!activeState;waitTime = inactiveTime;animSprite.Play("arcDefault");collider.enabled=false; /*MasterAudio.PlaySound("piston_idle");*/}
+		if(activeState) {activeState=!activeState;
+			if(activeTime>=1) waitTime = activeTime+0.88f;
+			else if(activeTime<1) waitTime = activeTime+0.48f;
+			//waitTime = activeTime;
+			StartCoroutine("SND_activateThenOff");/*MasterAudio.PlaySound("piston_on");*/}
+		else {activeState=!activeState;
+			if(activeTime>=1) waitTime = inactiveTime-0.88f;
+			else if(activeTime<1) waitTime = inactiveTime-0.48f;
+			//waitTime = inactiveTime;
+			animSprite.Play("arcDefault");collider.enabled=false; /*MasterAudio.PlaySound("piston_idle");*/}
 		yield return new WaitForSeconds(waitTime);
 		StartCoroutine("active");
 	}
@@ -102,7 +110,8 @@ public class ArcElectric : MonoBehaviour {
 			}
 	}
 	IEnumerator SND_activateThenOff() {
-		yield return new WaitForSeconds(.88f);
+		if(activeTime>=1) yield return new WaitForSeconds(.88f);
+		else if(activeTime<1) yield return new WaitForSeconds(.48f);
 		if(!muted) FESound.playDistancedSound("piston_on",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_on");
 		yield return new WaitForSeconds(0.12f);
 		animSprite.Play("arcON");StartCoroutine("activateCollider");
