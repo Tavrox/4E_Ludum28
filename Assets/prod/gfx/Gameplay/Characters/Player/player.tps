@@ -235,6 +235,16 @@
             <filename>perso_poussecaisse0009.png</filename>
             <filename>perso_poussecaisse0010.png</filename>
             <filename>perso_poussecaisse0001.png</filename>
+            <filename>perso_Tiragecaissemoisi0009.png</filename>
+            <filename>perso_Tiragecaissemoisi0010.png</filename>
+            <filename>perso_Tiragecaissemoisi0001.png</filename>
+            <filename>perso_Tiragecaissemoisi0002.png</filename>
+            <filename>perso_Tiragecaissemoisi0003.png</filename>
+            <filename>perso_Tiragecaissemoisi0004.png</filename>
+            <filename>perso_Tiragecaissemoisi0005.png</filename>
+            <filename>perso_Tiragecaissemoisi0006.png</filename>
+            <filename>perso_Tiragecaissemoisi0007.png</filename>
+            <filename>perso_Tiragecaissemoisi0008.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
