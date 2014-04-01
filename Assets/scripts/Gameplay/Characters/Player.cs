@@ -75,7 +75,7 @@ public class Player : Character {
 			//collider.bounds.size.Set(1.75f, 1.75f, 10f);
 			holdCrate();
 		}
-		if(Input.GetKeyUp("left shift") || Input.GetKeyUp("right shift") || Input.GetKeyUp(KeyCode.A)) pushCrate = false;
+		if(Input.GetKeyUp("left shift") || Input.GetKeyUp("right shift") || Input.GetKeyUp(KeyCode.A)) pushCrate = grabCrate = false;
 		if(Input.GetKey(InputMan.Left) || Input.GetKey(KeyCode.Q) || Input.GetAxisRaw("X axis") > InputMan.X_AxisPos_Sensibility ) 
 		{ 
 			isLeft = true;
@@ -132,9 +132,9 @@ public class Player : Character {
 		/*if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");*/
 		//if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");
 		
-		if(!grounded) {if(facingDir == facing.Right) col.center = new Vector3(0.35f, 0f, 0f);
-			else col.center = new Vector3(-0.35f, 0f, 0f);
-			col.size = new Vector3(0.8f, col.size.y, col.size.z);
+		if(!grounded) {if(facingDir == facing.Right) col.center = new Vector3(0.2f, 0f, 0f);
+			else col.center = new Vector3(-0.2f, 0f, 0f);
+			col.size = new Vector3(0.4f, col.size.y, col.size.z);
 		}
 		//if(chute && grounded) {col.center = new Vector3(0f, 0f, 0f);}
 	}

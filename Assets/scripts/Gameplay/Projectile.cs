@@ -25,7 +25,6 @@ public class Projectile : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		myTransform.Translate(direction * ProjectileSpeed * Time.deltaTime);
 		
 		if(myTransform.position.x > (posIni.x + 70f) || myTransform.position.x < (posIni.x - 70f)) {
 			Destroy(gameObject);
@@ -33,21 +32,35 @@ public class Projectile : MonoBehaviour {
 		if(myTransform.position.y > (posIni.y + 70f) || myTransform.position.y < (posIni.y - 70f)) {
 			Destroy(gameObject);
 		}
+		
+		if(!killedPlay) myTransform.Translate(direction * ProjectileSpeed * Time.deltaTime);
+		if (animSprite.frameIndex == 5) Destroy(gameObject);
 	}
 
 	void OnTriggerEnter(Collider _other)
 	{
 		if (_other.CompareTag("Player") == true && GameObject.Find("Player").GetComponent<Player>().isDead == false)
 		{
+			killedPlay = true;
+			animSprite.PlayOnce("splash");
 			GameObject.Find("Player").GetComponent<Player>().isDead = true;
 			GameEventManager.TriggerGameOver();
 		}
-		if (_other.CompareTag("Crate") == true || _other.CompareTag("Blocker") == true) {
-			Destroy(gameObject);
+		if (_other.CompareTag("Crate") == true) {
+			StartCoroutine("delayDestroy",0.04f);
+			animSprite.PlayOnce("splash");
+		}
+		if(_other.CompareTag("Blocker") == true)  {
+			StartCoroutine("delayDestroy",0f);
+			animSprite.PlayOnce("splash");
 		}
 //		if (_other.CompareTag("Turret") != true)
 //	    {
 //			Destroy(gameObject);
 //		}
+	}
+	IEnumerator delayDestroy(float delay) {
+		yield return new WaitForSeconds(delay);
+		killedPlay = true;
 	}
 }

@@ -34,7 +34,7 @@ public class Character : MonoBehaviour
 	[HideInInspector] public bool isPass;
 	
 	[HideInInspector] public bool jumping = false;
-	[HideInInspector] public bool falling = false,chute, onCrate, pushCrate;
+	[HideInInspector] public bool falling = false,chute, onCrate, pushCrate, grabCrate;
 	[HideInInspector] public bool grounded = false;
 	[HideInInspector] public bool passingPlatform;
 	[HideInInspector] public bool onPlatform;
@@ -75,6 +75,8 @@ public class Character : MonoBehaviour
 	[SerializeField] private float halfMyX;
 	[SerializeField] private float halfMyY;
 	
+	protected float spriteScaleX, spriteScaleY;
+	
 //	[SerializeField] private float absVel2X;
 //	[SerializeField] private float absVel2Y;
 	
@@ -97,6 +99,10 @@ public class Character : MonoBehaviour
 		vectorMove.y = 0;
 		halfMyX = GetComponentInChildren<Transform>().GetComponentInChildren<OTAnimatingSprite>().size.x * 0.5f;
 		halfMyY = GetComponentInChildren<Transform>().GetComponentInChildren<OTAnimatingSprite>().size.y * 0.5f /*+ 0.2f*/;
+		
+		spriteScaleX = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.x;
+		spriteScaleY = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.y;
+
 		StartCoroutine(StartGravity());
 		spawnPos = mypos = new Vector3(thisTransform.position.x,thisTransform.position.y,thisTransform.position.z);
 
@@ -183,7 +189,8 @@ public class Character : MonoBehaviour
 				thisTransform.position += new Vector3(Mathf.Abs(myCrate.transform.position.x - myCrateX),0,0);
 			}
 		}
-		UpdateRaycasts();
+		if(gameObject.name == "WalkerBoss") UpdateRaycastsBoss();
+		else UpdateRaycasts();
 		
 		// apply gravity while airborne
 		if(grounded == false && chute)
@@ -308,7 +315,69 @@ public class Character : MonoBehaviour
 			BlockedLeftCrate();
 		}
 	}
-	
+	void UpdateRaycastsBoss()
+	{
+		blockedRight = false;
+		blockedLeft = false;
+		blockedUp = false;
+		blockedDown = false;
+		onCrate = false;
+		grounded = false;
+		myCrate = null;
+		//		absVel2X = Mathf.Abs(vectorFixed.x);
+		//		absVel2Y = Mathf.Abs(vectorFixed.y);
+		
+		
+		//		Vector3 tst = new Vector3(mypos.x, mypos.y,0f);
+		//		Debug.DrawLine( tst , tst+Vector3.down, Color.green);
+		//		Debug.DrawLine( mypos , Vector3.down, Color.blue);
+		//		print (mypos);
+		//
+		//		print (halfMyY);
+		
+		//BLOCKED TO DOWN
+		//		if (Physics.Raycast(mypos, Vector3.down, out hitInfo, halfMyY, platformMask))
+		//		{
+		////			print ("entered blocker");
+		//			Debug.DrawLine(thisTransform.position, hitInfo.point, Color.black);
+		//			if (isCrounch == true)
+		//			{
+		//				passingPlatform = true;
+		//				ThroughPlatform();
+		//			}
+		//			else 
+		//			{
+		//				BlockedDown();	
+		//			}
+		//		}
+		Debug.DrawRay (new Vector3(mypos.x+spriteScaleX/2, mypos.y), Vector3.down*halfMyY, Color.yellow);
+		Debug.DrawRay (new Vector3(mypos.x-spriteScaleX/2, mypos.y), Vector3.down*halfMyY, Color.yellow);
+		if (Physics.Raycast(mypos, Vector3.down, out hitInfo, halfMyY, groundMask) 
+		    || Physics.Raycast(new Vector3(mypos.x+spriteScaleX/2, mypos.y), Vector3.down, out hitInfo, halfMyY, groundMask)
+		    || Physics.Raycast(new Vector3(mypos.x-spriteScaleX/2, mypos.y), Vector3.down, out hitInfo, halfMyY, groundMask)
+		    )
+		{
+			//			print ("blocked down");
+			if(hitInfo.collider.CompareTag("Crate")) {
+				onCrate = true;
+				myCrate=hitInfo.collider.gameObject.GetComponent<Crate>();
+				myCrateX = myCrate.transform.position.x;
+			}
+			BlockedDown();
+		}
+		
+		// BLOCKED TO UP
+		if (Physics.Raycast(mypos, Vector3.up, out hitInfo, halfMyY, groundMask))
+		{
+			BlockedUp();
+			Debug.DrawLine (thisTransform.position, hitInfo.point, Color.red);
+		}
+		Debug.DrawRay (new Vector3(mypos.x, mypos.y+halfMyY-0.4f), Vector3.right*(halfMyX-0.5f), Color.red);
+		//Debug.DrawRay (new Vector3(mypos.x, mypos.y), Vector3.right*(halfMyX-0.5f), Color.red);
+		Debug.DrawRay (new Vector3(mypos.x, mypos.y-halfMyY+0.4f), Vector3.right*(halfMyX-0.5f), Color.red);
+
+	}
+
 	void BlockedUp()
 	{
 		if(vectorMove.y > 0)

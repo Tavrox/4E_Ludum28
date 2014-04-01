@@ -21,7 +21,6 @@ public class Enemy : Character {
 	protected int waypointId = 0;
 	public Transform[] waypoints;
 
-	protected float spriteScaleX, spriteScaleY;
 	//	private WaveCreator soundEmitt1, soundEmitt2, soundInstru1, soundInstru2,soundEmitt3;
 	//	private int cptWave=1, pebbleDirection = 1;
 	//	private bool blockCoroutine, first, toSprint, toWalk, specialCast, playerDirLeft;
@@ -29,7 +28,7 @@ public class Enemy : Character {
 	//	private float powerPebble;
 	//	private GameObject pebbleBar;
 	
-	[HideInInspector] public bool paused = false;
+	[HideInInspector] public bool paused = false,splashed=false;
 	
 	// Use this for initialization
 	public override void Start () 
@@ -66,8 +65,6 @@ public class Enemy : Character {
 		
 		target = GameObject.FindWithTag("Player").transform; //target the player
 		patroling = true;
-		spriteScaleX = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.x;
-		spriteScaleY = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.y;
 	}
 	// Update is called once per frame
 //	public void Update () 

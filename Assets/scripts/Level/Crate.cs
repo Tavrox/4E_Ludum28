@@ -95,7 +95,8 @@ public class Crate : MonoBehaviour {
 				//print("Je m'accroche à gauche");
 				if(_player.isLeft && !_player.blockedLeft) {//Tire Gauche
 					//print("Je tire à gauche");
-					_player.pushCrate = true;
+					_player.grabCrate = true;
+					_player.pushCrate = false;
 					_player.moveVel = playerMoveVel/2; 
 					crateMove = -_player.moveVel*Time.deltaTime;moveCake(-_player.moveVel*Time.deltaTime);
 					if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
@@ -104,6 +105,7 @@ public class Crate : MonoBehaviour {
 					//print("Je pousse à droite");
 					_player.moveVel = playerMoveVel/2; 
 					_player.pushCrate = true;
+					_player.grabCrate = false;
 					crateMove = _player.moveVel*Time.deltaTime;moveCake(_player.moveVel*Time.deltaTime);
 					if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
 				}
@@ -115,7 +117,8 @@ public class Crate : MonoBehaviour {
 				if(_player.isRight && !_player.blockedRight) {//Tire Droite
 				//	print("Je tire à droite");
 					_player.moveVel = playerMoveVel/2; 
-					_player.pushCrate = true;
+					_player.grabCrate = true;
+					_player.pushCrate = false;
 					crateMove = _player.moveVel*Time.deltaTime;moveCake(_player.moveVel*Time.deltaTime);
 					if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
 				}
@@ -123,6 +126,7 @@ public class Crate : MonoBehaviour {
 				//	print("Je pousse à gauche");
 					_player.moveVel = playerMoveVel/2; 
 					_player.pushCrate = true;
+					_player.grabCrate = false;
 					crateMove = -_player.moveVel*Time.deltaTime;moveCake(-_player.moveVel*Time.deltaTime);
 					if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
 				}
@@ -209,7 +213,7 @@ public class Crate : MonoBehaviour {
 	}
 	void OnTriggerExit(Collider other) {
 		if(other.gameObject.tag=="Player") {
-			_player.pushCrate = false;
+			_player.pushCrate = _player.grabCrate = false;
 			_player.moveVel = playerMoveVel;
 			if(crateSoundPlaying && !crateSoundStopping) StartCoroutine("SND_moveCrateEnd");
 		}
