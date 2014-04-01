@@ -202,6 +202,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &100022
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400022}
+  - 114: {fileID: 11400032}
+  m_Layer: 0
+  m_Name: crateAnims
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &100024
 GameObject:
   m_ObjectHideFlags: 1
@@ -2937,6 +2953,17 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400154}
+--- !u!4 &400022
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100022}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 29.6864967, y: -34.5621376, z: 2.59570312}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400250}
 --- !u!4 &400024
 Transform:
   m_ObjectHideFlags: 1
@@ -4302,6 +4329,7 @@ Transform:
   - {fileID: 400134}
   - {fileID: 400104}
   - {fileID: 400060}
+  - {fileID: 400022}
   m_Father: {fileID: 400026}
 --- !u!4 &400252
 Transform:
@@ -5107,7 +5135,7 @@ AudioSource:
   m_GameObject: {fileID: 100048}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 295be8549c14b7d45b57a3f109460a91, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 17a374bd9593dd148ab35caff21b24ed, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -8297,7 +8325,7 @@ AudioSource:
   m_GameObject: {fileID: 100280}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 295be8549c14b7d45b57a3f109460a91, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1da11c1ccf5f24f4a9acb13671562404, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -8355,7 +8383,7 @@ AudioSource:
   m_GameObject: {fileID: 100286}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 295be8549c14b7d45b57a3f109460a91, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 891473e23ebf74b4f941f0ea46b7fa71, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -8910,7 +8938,7 @@ MonoBehaviour:
   _atlasDataFile: {fileID: 4900000, guid: 97ec9a62edd99374180f3fff603fa54c, type: 3}
   reloadData: 0
   bytesDataFile: 5430
-  id: 17
+  id: 19
 --- !u!114 &11400020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9188,6 +9216,33 @@ MonoBehaviour:
   fadeInTime: 0
   fadeOutTime: 0
   originalPitch: 0
+--- !u!114 &11400032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf791b8ec508eb4a94c7295007afe68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: crateAnims
+  _fps: 12.6666698
+  _duration: .631578803
+  framesets:
+  - name: destroy
+    container: {fileID: 11400238}
+    startFrame: 11
+    endFrame: 18
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 0
+    _containerName: objects
 --- !u!114 &11400034
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9335,12 +9390,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: playerAnims
   _fps: 12.666667
-  _duration: 1.34210527
+  _duration: 6
   framesets:
   - name: run
     container: {fileID: 11400088}
-    startFrame: 10
-    endFrame: 19
+    startFrame: 54
+    endFrame: 63
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -9351,8 +9406,8 @@ MonoBehaviour:
     _containerName: playerSheet
   - name: stand
     container: {fileID: 11400088}
-    startFrame: 0
-    endFrame: 4
+    startFrame: 34
+    endFrame: 38
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -9361,10 +9416,10 @@ MonoBehaviour:
     singleDuration: 0
     startIndex: 10
     _containerName: playerSheet
-  - name: jump
+  - name: teleportIN
     container: {fileID: 11400088}
-    startFrame: 8
-    endFrame: 9
+    startFrame: 0
+    endFrame: 23
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -9372,6 +9427,54 @@ MonoBehaviour:
     pingPong: 0
     singleDuration: 0
     startIndex: 15
+    _containerName: playerSheet
+  - name: teleportOUT
+    container: {fileID: 11400088}
+    startFrame: 12
+    endFrame: 23
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 39
+    _containerName: playerSheet
+  - name: jump
+    container: {fileID: 11400088}
+    startFrame: 39
+    endFrame: 43
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 51
+    _containerName: playerSheet
+  - name: deathBlob
+    container: {fileID: 11400088}
+    startFrame: 24
+    endFrame: 33
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 56
+    _containerName: playerSheet
+  - name: pushCrate
+    container: {fileID: 11400088}
+    startFrame: 44
+    endFrame: 53
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 66
     _containerName: playerSheet
 --- !u!114 &11400046
 MonoBehaviour:
@@ -9672,7 +9775,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: projectileAnims
   _fps: 12.666667
-  _duration: .236842096
+  _duration: .473684192
   framesets:
   - name: default
     container: {fileID: 11400114}
@@ -9685,6 +9788,18 @@ MonoBehaviour:
     pingPong: 0
     singleDuration: 0
     startIndex: 0
+    _containerName: projectileSheet
+  - name: splash
+    container: {fileID: 11400114}
+    startFrame: 3
+    endFrame: 5
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 3
     _containerName: projectileSheet
 --- !u!114 &11400068
 MonoBehaviour:
@@ -9974,146 +10089,454 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: playerSheet
-  _sheetSize: {x: 512, y: 512}
+  _sheetSize: {x: 1024, y: 1024}
   texture: {fileID: 2800000, guid: 15d30b27af903494c8bb73094772a372, type: 3}
   sizeTextures: []
   generateSprites: 0
   atlasData:
-  - name: perso_idle0001
+  - name: pero_teleport0001
     position: {x: 0, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_idle0002
+  - name: pero_teleport0002
     position: {x: 100, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_idle0003
+  - name: pero_teleport0003
     position: {x: 200, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_idle0004
+  - name: pero_teleport0004
     position: {x: 300, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_idle0005
+  - name: pero_teleport0005
     position: {x: 400, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_jump0001
+  - name: pero_teleport0006
+    position: {x: 500, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: pero_teleport0007
+    position: {x: 600, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: pero_teleport0008
+    position: {x: 700, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: pero_teleport0009
+    position: {x: 800, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: pero_teleport0010
+    position: {x: 900, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: pero_teleport0011
     position: {x: 0, y: 120}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_jump0002
+  - name: pero_teleport0012
     position: {x: 100, y: 120}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_jump0003
+  - name: pero_teleport0013
     position: {x: 200, y: 120}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_jump0004
+  - name: pero_teleport0014
     position: {x: 300, y: 120}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_jump0005
+  - name: pero_teleport0015
     position: {x: 400, y: 120}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0001
+  - name: pero_teleport0016
+    position: {x: 500, y: 120}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: pero_teleport0017
+    position: {x: 600, y: 120}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: pero_teleport0018
+    position: {x: 700, y: 120}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: pero_teleport0019
+    position: {x: 800, y: 120}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: pero_teleport0020
+    position: {x: 900, y: 120}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: pero_teleport0021
     position: {x: 0, y: 240}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0002
+  - name: pero_teleport0022
     position: {x: 100, y: 240}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0003
+  - name: pero_teleport0023
     position: {x: 200, y: 240}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0004
+  - name: pero_teleport0024
     position: {x: 300, y: 240}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0005
+  - name: perso_Ymort0001
     position: {x: 400, y: 240}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0006
+  - name: perso_Ymort0002
+    position: {x: 500, y: 240}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_Ymort0003
+    position: {x: 600, y: 240}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_Ymort0004
+    position: {x: 700, y: 240}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_Ymort0005
+    position: {x: 800, y: 240}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_Ymort0006
+    position: {x: 900, y: 240}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_Ymort0007
     position: {x: 0, y: 360}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0007
+  - name: perso_Ymort0008
     position: {x: 100, y: 360}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0008
+  - name: perso_Ymort0009
     position: {x: 200, y: 360}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0009
+  - name: perso_Ymort0010
     position: {x: 300, y: 360}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0010
+  - name: perso_idle0001
     position: {x: 400, y: 360}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_idle0002
+    position: {x: 500, y: 360}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_idle0003
+    position: {x: 600, y: 360}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_idle0004
+    position: {x: 700, y: 360}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_idle0005
+    position: {x: 800, y: 360}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_jump0001
+    position: {x: 900, y: 360}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_jump0002
+    position: {x: 0, y: 480}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_jump0003
+    position: {x: 100, y: 480}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_jump0004
+    position: {x: 200, y: 480}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_jump0005
+    position: {x: 300, y: 480}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_poussecaisse0001
+    position: {x: 400, y: 480}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_poussecaisse0002
+    position: {x: 500, y: 480}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_poussecaisse0003
+    position: {x: 600, y: 480}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_poussecaisse0004
+    position: {x: 700, y: 480}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_poussecaisse0005
+    position: {x: 800, y: 480}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_poussecaisse0006
+    position: {x: 900, y: 480}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_poussecaisse0007
+    position: {x: 0, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_poussecaisse0008
+    position: {x: 100, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_poussecaisse0009
+    position: {x: 200, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_poussecaisse0010
+    position: {x: 300, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0001
+    position: {x: 400, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0002
+    position: {x: 500, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0003
+    position: {x: 600, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0004
+    position: {x: 700, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0005
+    position: {x: 800, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0006
+    position: {x: 900, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0007
+    position: {x: 0, y: 720}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0008
+    position: {x: 100, y: 720}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0009
+    position: {x: 200, y: 720}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0010
+    position: {x: 300, y: 720}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
@@ -10124,8 +10547,8 @@ MonoBehaviour:
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: 296c2c57bc61dcf4987fb2476c391a97, type: 3}
   reloadData: 0
-  bytesDataFile: 10536
-  id: 23
+  bytesDataFile: 32306
+  id: 25
 --- !u!114 &11400090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10160,48 +10583,181 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: arcElectricSheet
-  _sheetSize: {x: 256, y: 256}
+  _sheetSize: {x: 256, y: 512}
   texture: {fileID: 2800000, guid: 190095c4b6829db468d2234cb7fb6fdd, type: 3}
   sizeTextures: []
   generateSprites: 0
   atlasData:
-  - name: arc00
+  - name: "LaserPr\xE9paration"
     position: {x: 0, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 50, y: 100}
     frameSize: {x: 50, y: 100}
     metaData: []
-  - name: arc01
+  - name: "LaserPr\xE9paration01"
     position: {x: 50, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 50, y: 100}
     frameSize: {x: 50, y: 100}
     metaData: []
-  - name: arc02
+  - name: "LaserPr\xE9paration02"
     position: {x: 100, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 50, y: 100}
     frameSize: {x: 50, y: 100}
     metaData: []
-  - name: base00
+  - name: "LaserPr\xE9paration03"
     position: {x: 150, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 50, y: 100}
     frameSize: {x: 50, y: 100}
     metaData: []
-  - name: base01
+  - name: "LaserPr\xE9paration04"
     position: {x: 200, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 50, y: 100}
     frameSize: {x: 50, y: 100}
     metaData: []
-  - name: base02
+  - name: "LaserPr\xE9paration05"
     position: {x: 0, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: "LaserPr\xE9paration06"
+    position: {x: 50, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: "LaserPr\xE9paration07"
+    position: {x: 100, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: "LaserPr\xE9paration08"
+    position: {x: 150, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: "LaserPr\xE9paration09"
+    position: {x: 200, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: "LaserPr\xE9paration10"
+    position: {x: 0, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: "LaserPr\xE9paration11"
+    position: {x: 50, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: "LaserPr\xE9paration12"
+    position: {x: 100, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: "LaserPr\xE9paration13"
+    position: {x: 150, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: "LaserPr\xE9paration14"
+    position: {x: 200, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: "LaserPr\xE9paration15"
+    position: {x: 0, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: "LaserPr\xE9paration16"
+    position: {x: 50, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: "LaserPr\xE9paration17"
+    position: {x: 100, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: "LaserPr\xE9paration18"
+    position: {x: 150, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: arc00
+    position: {x: 200, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: arc01
+    position: {x: 0, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: arc02
+    position: {x: 50, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: base00
+    position: {x: 100, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: base01
+    position: {x: 150, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 100}
+    frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: base02
+    position: {x: 200, y: 400}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 50, y: 100}
@@ -10212,8 +10768,8 @@ MonoBehaviour:
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: 184251b07e517e74b8f4d7fe6450fafe, type: 3}
   reloadData: 0
-  bytesDataFile: 3524
-  id: 19
+  bytesDataFile: 13022
+  id: 25
 --- !u!114 &11400094
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10414,12 +10970,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: arcElectricAnims
   _fps: 12.666667
-  _duration: .473684192
+  _duration: 1.97368419
   framesets:
   - name: baseDefault
     container: {fileID: 11400092}
-    startFrame: 3
-    endFrame: 3
+    startFrame: 22
+    endFrame: 22
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -10430,8 +10986,8 @@ MonoBehaviour:
     _containerName: arcElectricSheet
   - name: baseON
     container: {fileID: 11400092}
-    startFrame: 4
-    endFrame: 5
+    startFrame: 23
+    endFrame: 24
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -10442,8 +10998,8 @@ MonoBehaviour:
     _containerName: arcElectricSheet
   - name: arcDefault
     container: {fileID: 11400092}
-    startFrame: 0
-    endFrame: 0
+    startFrame: 19
+    endFrame: 19
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -10454,8 +11010,8 @@ MonoBehaviour:
     _containerName: arcElectricSheet
   - name: arcON
     container: {fileID: 11400092}
-    startFrame: 1
-    endFrame: 2
+    startFrame: 20
+    endFrame: 21
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -10463,6 +11019,30 @@ MonoBehaviour:
     pingPong: 0
     singleDuration: 0
     startIndex: 4
+    _containerName: arcElectricSheet
+  - name: baseAlert
+    container: {fileID: 11400092}
+    startFrame: 0
+    endFrame: 12
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 6
+    _containerName: arcElectricSheet
+  - name: baseActivation
+    container: {fileID: 11400092}
+    startFrame: 13
+    endFrame: 18
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 19
     _containerName: arcElectricSheet
 --- !u!114 &11400112
 MonoBehaviour:
@@ -10498,7 +11078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: projectileSheet
-  _sheetSize: {x: 64, y: 64}
+  _sheetSize: {x: 64, y: 128}
   texture: {fileID: 2800000, guid: f46f35e448073cf44a11805c2ab62983, type: 3}
   sizeTextures: []
   generateSprites: 0
@@ -10524,13 +11104,34 @@ MonoBehaviour:
     size: {x: 30, y: 30}
     frameSize: {x: 30, y: 30}
     metaData: []
+  - name: projectile_explo0001
+    position: {x: 30, y: 30}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 30, y: 30}
+    frameSize: {x: 30, y: 30}
+    metaData: []
+  - name: projectile_explo0002
+    position: {x: 0, y: 60}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 30, y: 30}
+    frameSize: {x: 30, y: 30}
+    metaData: []
+  - name: projectile_explo0003
+    position: {x: 30, y: 60}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 30, y: 30}
+    frameSize: {x: 30, y: 30}
+    metaData: []
   offsetSizing: 1
   metaType: 
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: 059d2d1cd71770448a411f709820a341, type: 3}
   reloadData: 0
-  bytesDataFile: 2212
-  id: 5
+  bytesDataFile: 3738
+  id: 7
 --- !u!114 &11400116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10749,7 +11350,7 @@ MonoBehaviour:
   _atlasDataFile: {fileID: 4900000, guid: 75b52c69325b04049a60503013905d94, type: 3}
   reloadData: 0
   bytesDataFile: 3551
-  id: 7
+  id: 9
 --- !u!114 &11400130
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11037,7 +11638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: walkerSheet
-  _sheetSize: {x: 512, y: 512}
+  _sheetSize: {x: 1024, y: 1024}
   texture: {fileID: 2800000, guid: e85ad46854bab1e4dae79ffada6cebb1, type: 3}
   sizeTextures: []
   generateSprites: 0
@@ -11078,131 +11679,201 @@ MonoBehaviour:
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: follow_idle0006
-    position: {x: 0, y: 100}
+    position: {x: 500, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 100}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: follow_idle0007
-    position: {x: 100, y: 100}
+    position: {x: 600, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 100}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: follow_idle0008
-    position: {x: 200, y: 100}
+    position: {x: 700, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 100}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: follow_idle0009
-    position: {x: 300, y: 100}
+    position: {x: 800, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 100}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: follow_idle0010
-    position: {x: 400, y: 100}
+    position: {x: 900, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 100}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: follow_idle0011
-    position: {x: 0, y: 200}
+    position: {x: 0, y: 100}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 100}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: follow_idle0012
-    position: {x: 100, y: 200}
+    position: {x: 100, y: 100}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 100}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: follow_walk0001
-    position: {x: 200, y: 200}
+    position: {x: 200, y: 100}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 100}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: follow_walk0002
-    position: {x: 300, y: 200}
+    position: {x: 300, y: 100}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 100}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: follow_walk0003
-    position: {x: 400, y: 200}
+    position: {x: 400, y: 100}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 100}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: follow_walk0004
-    position: {x: 0, y: 300}
+    position: {x: 500, y: 100}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 100}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: follow_walk0005
-    position: {x: 100, y: 300}
+    position: {x: 600, y: 100}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 100}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: follow_walk0006
-    position: {x: 200, y: 300}
+    position: {x: 700, y: 100}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 100}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: follow_walk0007
-    position: {x: 300, y: 300}
+    position: {x: 800, y: 100}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 100}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: follow_walk0008
-    position: {x: 400, y: 300}
+    position: {x: 900, y: 100}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 100}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: follow_walk0009
-    position: {x: 0, y: 400}
+    position: {x: 0, y: 200}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 100}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: follow_walk0010
-    position: {x: 100, y: 400}
+    position: {x: 100, y: 200}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 100}
     frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: walker_dead0001
+    position: {x: 200, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 300, y: 100}
+    frameSize: {x: 300, y: 100}
+    metaData: []
+  - name: walker_dead0002
+    position: {x: 500, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 300, y: 100}
+    frameSize: {x: 300, y: 100}
+    metaData: []
+  - name: walker_dead0003
+    position: {x: 0, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 300, y: 100}
+    frameSize: {x: 300, y: 100}
+    metaData: []
+  - name: walker_dead0004
+    position: {x: 300, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 300, y: 100}
+    frameSize: {x: 300, y: 100}
+    metaData: []
+  - name: walker_dead0005
+    position: {x: 600, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 300, y: 100}
+    frameSize: {x: 300, y: 100}
+    metaData: []
+  - name: walker_dead0006
+    position: {x: 0, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 300, y: 100}
+    frameSize: {x: 300, y: 100}
+    metaData: []
+  - name: walker_dead0007
+    position: {x: 300, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 300, y: 100}
+    frameSize: {x: 300, y: 100}
+    metaData: []
+  - name: walker_dead0008
+    position: {x: 600, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 300, y: 100}
+    frameSize: {x: 300, y: 100}
+    metaData: []
+  - name: walker_dead0009
+    position: {x: 0, y: 500}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 300, y: 100}
+    frameSize: {x: 300, y: 100}
+    metaData: []
+  - name: walker_dead0010
+    position: {x: 300, y: 500}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 300, y: 100}
+    frameSize: {x: 300, y: 100}
     metaData: []
   offsetSizing: 1
   metaType: 
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: 80839b9832ecd984c957b5bf1ae36a8d, type: 3}
   reloadData: 0
-  bytesDataFile: 11546
-  id: 3
+  bytesDataFile: 16508
+  id: 5
 --- !u!114 &11400146
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11216,12 +11887,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: triggeredDoorAnims
   _fps: 12.666667
-  _duration: .552631557
+  _duration: 1.34210527
   framesets:
   - name: unlock
     container: {fileID: 11400148}
-    startFrame: 0
-    endFrame: 4
+    startFrame: 10
+    endFrame: 14
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -11232,8 +11903,8 @@ MonoBehaviour:
     _containerName: triggeredDoorSheet
   - name: lock
     container: {fileID: 11400148}
-    startFrame: 4
-    endFrame: 4
+    startFrame: 14
+    endFrame: 14
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -11244,8 +11915,8 @@ MonoBehaviour:
     _containerName: triggeredDoorSheet
   - name: closed
     container: {fileID: 11400148}
-    startFrame: 0
-    endFrame: 0
+    startFrame: 10
+    endFrame: 10
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -11253,6 +11924,18 @@ MonoBehaviour:
     pingPong: 0
     singleDuration: 0
     startIndex: 6
+    _containerName: triggeredDoorSheet
+  - name: destroy
+    container: {fileID: 11400148}
+    startFrame: 0
+    endFrame: 9
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 7
     _containerName: triggeredDoorSheet
 --- !u!114 &11400148
 MonoBehaviour:
@@ -11266,41 +11949,111 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: triggeredDoorSheet
-  _sheetSize: {x: 256, y: 512}
+  _sheetSize: {x: 2048, y: 1024}
   texture: {fileID: 2800000, guid: 69b4745a57d9590439ff9b3af0627b97, type: 3}
   sizeTextures: []
   generateSprites: 0
   atlasData:
-  - name: porte_1
+  - name: PorteExplose0001
     position: {x: 0, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 300, y: 300}
+    frameSize: {x: 300, y: 300}
+    metaData: []
+  - name: PorteExplose0002
+    position: {x: 301, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 300, y: 300}
+    frameSize: {x: 300, y: 300}
+    metaData: []
+  - name: PorteExplose0003
+    position: {x: 602, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 300, y: 300}
+    frameSize: {x: 300, y: 300}
+    metaData: []
+  - name: PorteExplose0004
+    position: {x: 903, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 300, y: 300}
+    frameSize: {x: 300, y: 300}
+    metaData: []
+  - name: PorteExplose0005
+    position: {x: 1204, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 300, y: 300}
+    frameSize: {x: 300, y: 300}
+    metaData: []
+  - name: PorteExplose0006
+    position: {x: 1505, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 300, y: 300}
+    frameSize: {x: 300, y: 300}
+    metaData: []
+  - name: PorteExplose0007
+    position: {x: 0, y: 301}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 300, y: 300}
+    frameSize: {x: 300, y: 300}
+    metaData: []
+  - name: PorteExplose0008
+    position: {x: 301, y: 301}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 300, y: 300}
+    frameSize: {x: 300, y: 300}
+    metaData: []
+  - name: PorteExplose0009
+    position: {x: 602, y: 301}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 300, y: 300}
+    frameSize: {x: 300, y: 300}
+    metaData: []
+  - name: PorteExplose0010
+    position: {x: 903, y: 301}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 300, y: 300}
+    frameSize: {x: 300, y: 300}
+    metaData: []
+  - name: porte_1
+    position: {x: 1204, y: 301}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 50, y: 300}
     frameSize: {x: 50, y: 300}
     metaData: []
   - name: porte_2
-    position: {x: 51, y: 0}
+    position: {x: 1255, y: 301}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 50, y: 300}
     frameSize: {x: 50, y: 300}
     metaData: []
   - name: porte_3
-    position: {x: 102, y: 0}
+    position: {x: 1306, y: 301}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 50, y: 300}
     frameSize: {x: 50, y: 300}
     metaData: []
   - name: porte_4
-    position: {x: 153, y: 0}
+    position: {x: 1357, y: 301}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 50, y: 300}
     frameSize: {x: 50, y: 300}
     metaData: []
   - name: porte_5
-    position: {x: 204, y: 0}
+    position: {x: 1408, y: 301}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 50, y: 300}
@@ -11311,8 +12064,8 @@ MonoBehaviour:
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: b022cc3be52659240bd2e98b4918c507, type: 3}
   reloadData: 0
-  bytesDataFile: 3060
-  id: 17
+  bytesDataFile: 8135
+  id: 33
 --- !u!114 &11400150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11807,7 +12560,7 @@ MonoBehaviour:
   _atlasDataFile: {fileID: 4900000, guid: 9ff3c9b410a921041b2193fd126f0d24, type: 3}
   reloadData: 0
   bytesDataFile: 30511
-  id: 15
+  id: 17
 --- !u!114 &11400154
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12483,7 +13236,7 @@ MonoBehaviour:
   _atlasDataFile: {fileID: 4900000, guid: dfdf5ce969754c5439e9576d7a8363be, type: 3}
   reloadData: 0
   bytesDataFile: 1679
-  id: 15
+  id: 17
 --- !u!114 &11400202
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12587,12 +13340,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: baseElectricAnims
   _fps: 12.666667
-  _duration: .315789461
+  _duration: 1.97368419
   framesets:
   - name: baseDefault
     container: {fileID: 11400092}
-    startFrame: 3
-    endFrame: 3
+    startFrame: 22
+    endFrame: 22
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -12603,8 +13356,8 @@ MonoBehaviour:
     _containerName: arcElectricSheet
   - name: baseON
     container: {fileID: 11400092}
-    startFrame: 4
-    endFrame: 5
+    startFrame: 23
+    endFrame: 24
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -12615,8 +13368,8 @@ MonoBehaviour:
     _containerName: arcElectricSheet
   - name: arcDefault
     container: {fileID: 11400092}
-    startFrame: 0
-    endFrame: 0
+    startFrame: 19
+    endFrame: 19
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -12624,6 +13377,42 @@ MonoBehaviour:
     pingPong: 0
     singleDuration: 0
     startIndex: 3
+    _containerName: arcElectricSheet
+  - name: arcON
+    container: {fileID: 11400092}
+    startFrame: 20
+    endFrame: 21
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 4
+    _containerName: arcElectricSheet
+  - name: baseAlert
+    container: {fileID: 11400092}
+    startFrame: 0
+    endFrame: 12
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 6
+    _containerName: arcElectricSheet
+  - name: baseActivation
+    container: {fileID: 11400092}
+    startFrame: 13
+    endFrame: 18
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 19
     _containerName: arcElectricSheet
 --- !u!114 &11400210
 MonoBehaviour:
@@ -12725,146 +13514,454 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: player
-  _sheetSize: {x: 512, y: 512}
+  _sheetSize: {x: 1024, y: 1024}
   texture: {fileID: 2800000, guid: 15d30b27af903494c8bb73094772a372, type: 3}
   sizeTextures: []
   generateSprites: 0
   atlasData:
-  - name: perso_idle0001
+  - name: pero_teleport0001
     position: {x: 0, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_idle0002
+  - name: pero_teleport0002
     position: {x: 100, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_idle0003
+  - name: pero_teleport0003
     position: {x: 200, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_idle0004
+  - name: pero_teleport0004
     position: {x: 300, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_idle0005
+  - name: pero_teleport0005
     position: {x: 400, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_jump0001
+  - name: pero_teleport0006
+    position: {x: 500, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: pero_teleport0007
+    position: {x: 600, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: pero_teleport0008
+    position: {x: 700, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: pero_teleport0009
+    position: {x: 800, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: pero_teleport0010
+    position: {x: 900, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: pero_teleport0011
     position: {x: 0, y: 120}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_jump0002
+  - name: pero_teleport0012
     position: {x: 100, y: 120}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_jump0003
+  - name: pero_teleport0013
     position: {x: 200, y: 120}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_jump0004
+  - name: pero_teleport0014
     position: {x: 300, y: 120}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_jump0005
+  - name: pero_teleport0015
     position: {x: 400, y: 120}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0001
+  - name: pero_teleport0016
+    position: {x: 500, y: 120}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: pero_teleport0017
+    position: {x: 600, y: 120}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: pero_teleport0018
+    position: {x: 700, y: 120}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: pero_teleport0019
+    position: {x: 800, y: 120}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: pero_teleport0020
+    position: {x: 900, y: 120}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: pero_teleport0021
     position: {x: 0, y: 240}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0002
+  - name: pero_teleport0022
     position: {x: 100, y: 240}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0003
+  - name: pero_teleport0023
     position: {x: 200, y: 240}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0004
+  - name: pero_teleport0024
     position: {x: 300, y: 240}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0005
+  - name: perso_Ymort0001
     position: {x: 400, y: 240}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0006
+  - name: perso_Ymort0002
+    position: {x: 500, y: 240}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_Ymort0003
+    position: {x: 600, y: 240}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_Ymort0004
+    position: {x: 700, y: 240}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_Ymort0005
+    position: {x: 800, y: 240}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_Ymort0006
+    position: {x: 900, y: 240}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_Ymort0007
     position: {x: 0, y: 360}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0007
+  - name: perso_Ymort0008
     position: {x: 100, y: 360}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0008
+  - name: perso_Ymort0009
     position: {x: 200, y: 360}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0009
+  - name: perso_Ymort0010
     position: {x: 300, y: 360}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0010
+  - name: perso_idle0001
     position: {x: 400, y: 360}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_idle0002
+    position: {x: 500, y: 360}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_idle0003
+    position: {x: 600, y: 360}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_idle0004
+    position: {x: 700, y: 360}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_idle0005
+    position: {x: 800, y: 360}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_jump0001
+    position: {x: 900, y: 360}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_jump0002
+    position: {x: 0, y: 480}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_jump0003
+    position: {x: 100, y: 480}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_jump0004
+    position: {x: 200, y: 480}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_jump0005
+    position: {x: 300, y: 480}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_poussecaisse0001
+    position: {x: 400, y: 480}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_poussecaisse0002
+    position: {x: 500, y: 480}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_poussecaisse0003
+    position: {x: 600, y: 480}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_poussecaisse0004
+    position: {x: 700, y: 480}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_poussecaisse0005
+    position: {x: 800, y: 480}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_poussecaisse0006
+    position: {x: 900, y: 480}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_poussecaisse0007
+    position: {x: 0, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_poussecaisse0008
+    position: {x: 100, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_poussecaisse0009
+    position: {x: 200, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_poussecaisse0010
+    position: {x: 300, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0001
+    position: {x: 400, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0002
+    position: {x: 500, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0003
+    position: {x: 600, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0004
+    position: {x: 700, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0005
+    position: {x: 800, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0006
+    position: {x: 900, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0007
+    position: {x: 0, y: 720}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0008
+    position: {x: 100, y: 720}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0009
+    position: {x: 200, y: 720}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 120}
+    frameSize: {x: 100, y: 120}
+    metaData: []
+  - name: perso_run0010
+    position: {x: 300, y: 720}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
@@ -12875,8 +13972,8 @@ MonoBehaviour:
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: 296c2c57bc61dcf4987fb2476c391a97, type: 3}
   reloadData: 0
-  bytesDataFile: 10536
-  id: 25
+  bytesDataFile: 32306
+  id: 28
 --- !u!114 &11400220
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13132,7 +14229,7 @@ MonoBehaviour:
   _atlasDataFile: {fileID: 4900000, guid: 7f3d3e1d167181a4ba7dd771bf70b6b4, type: 3}
   reloadData: 0
   bytesDataFile: 14675
-  id: 23
+  id: 25
 --- !u!114 &11400224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13184,7 +14281,7 @@ MonoBehaviour:
   _atlasDataFile: {fileID: 4900000, guid: cfd96d83056ea9948a78df2c62e4305c, type: 3}
   reloadData: 0
   bytesDataFile: 2606
-  id: 15
+  id: 17
 --- !u!114 &11400226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13342,7 +14439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: objects
-  _sheetSize: {x: 256, y: 256}
+  _sheetSize: {x: 1024, y: 1024}
   texture: {fileID: 2800000, guid: 006f7bf6c41bf374b9a9d760c6ae18df, type: 3}
   sizeTextures: []
   generateSprites: 0
@@ -13375,20 +14472,118 @@ MonoBehaviour:
     size: {x: 50, y: 100}
     frameSize: {x: 50, y: 100}
     metaData: []
+  - name: kEY
+    position: {x: 250, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: kEYBleu
+    position: {x: 300, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: kEYJaune
+    position: {x: 350, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: kEYRouge
+    position: {x: 400, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: kEYVert
+    position: {x: 450, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: kEYViolet
+    position: {x: 500, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
   - name: key
-    position: {x: 0, y: 100}
+    position: {x: 550, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 30, y: 30}
     frameSize: {x: 30, y: 30}
+    metaData: []
+  - name: zcrate_exploo0001
+    position: {x: 580, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 200, y: 200}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: zcrate_exploo0002
+    position: {x: 780, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 200, y: 200}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: zcrate_exploo0003
+    position: {x: 0, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 200, y: 200}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: zcrate_exploo0004
+    position: {x: 200, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 200, y: 200}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: zcrate_exploo0005
+    position: {x: 400, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 200, y: 200}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: zcrate_exploo0006
+    position: {x: 600, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 200, y: 200}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: zcrate_exploo0007
+    position: {x: 800, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 200, y: 200}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: zcrate_exploo0008
+    position: {x: 800, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: -1, y: -1}
+    frameSize: {x: -1, y: -1}
     metaData: []
   offsetSizing: 1
   metaType: 
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: 954ba3237fd8f9c459ca218263d0ba3a, type: 3}
   reloadData: 0
-  bytesDataFile: 3051
-  id: 13
+  bytesDataFile: 9653
+  id: 22
 --- !u!114 &11400240
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14245,60 +15440,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: HUDLevels
-  _sheetSize: {x: 128, y: 256}
+  _sheetSize: {x: 1024, y: 512}
   texture: {fileID: 2800000, guid: 2fc676781c9fe6b4ca6286caad1f7cbd, type: 3}
   sizeTextures: []
   generateSprites: 0
   atlasData:
-  - name: backgroundNum01
+  - name: Camera_02
     position: {x: 0, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
-    size: {x: 50, y: 50}
-    frameSize: {x: 50, y: 50}
+    size: {x: 300, y: 205}
+    frameSize: {x: 300, y: 205}
     metaData: []
-  - name: backgroundNum02
-    position: {x: 50, y: 0}
+  - name: Camera_04
+    position: {x: 300, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
-    size: {x: 50, y: 50}
-    frameSize: {x: 50, y: 50}
+    size: {x: 300, y: 205}
+    frameSize: {x: 300, y: 205}
     metaData: []
-  - name: backgroundNum03
-    position: {x: 0, y: 50}
+  - name: Camera_06
+    position: {x: 600, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
-    size: {x: 50, y: 50}
-    frameSize: {x: 50, y: 50}
+    size: {x: 301, y: 205}
+    frameSize: {x: 301, y: 205}
     metaData: []
-  - name: backgroundNum04
-    position: {x: 50, y: 50}
+  - name: Camera_11
+    position: {x: 0, y: 205}
     offset: {x: 0, y: 0}
     rotated: 0
-    size: {x: 50, y: 50}
-    frameSize: {x: 50, y: 50}
+    size: {x: 300, y: 205}
+    frameSize: {x: 300, y: 205}
     metaData: []
-  - name: backgroundNum05
-    position: {x: 0, y: 100}
+  - name: Camera_12
+    position: {x: 300, y: 205}
     offset: {x: 0, y: 0}
     rotated: 0
-    size: {x: 50, y: 50}
-    frameSize: {x: 50, y: 50}
-    metaData: []
-  - name: backgroundNum13
-    position: {x: 50, y: 100}
-    offset: {x: 0, y: 0}
-    rotated: 0
-    size: {x: 50, y: 50}
-    frameSize: {x: 50, y: 50}
+    size: {x: 301, y: 205}
+    frameSize: {x: 301, y: 205}
     metaData: []
   offsetSizing: 1
   metaType: 
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: 07c012495d6d7014fae5acbf94551b14, type: 3}
   reloadData: 0
-  bytesDataFile: 3565
-  id: 4
+  bytesDataFile: 3248
+  id: 8
 --- !u!114 &11400300
 MonoBehaviour:
   m_ObjectHideFlags: 1

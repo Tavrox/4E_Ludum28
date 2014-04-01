@@ -59,7 +59,7 @@ public class TeleportAnims : MonoBehaviour
 	{
 		if(other.gameObject.CompareTag("Player") && !isOUT) 
 		{
-			if (Input.GetKeyDown(KeyCode.Space)) {
+			if (Input.GetKeyDown(KeyCode.Space) && !_player.locked) {
 				FESound.playDistancedSound("teleport_in",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("teleport_in");
 				animSprite.Play("teleport");
 				//_player.enabled = false;
@@ -79,8 +79,8 @@ public class TeleportAnims : MonoBehaviour
 		//_player.position = new Vector3(0f,0f,0f);//destination.position;
 		_player.teleportTo( new Vector3(destination.position.x, destination.position.y, _player.transform.position.z));
 		//_player.enabled = true;
-		_player.locked = false;
-		animSprite.Play("default");
+		//_player.locked = false;
+		//animSprite.Play("default");
 		FESound.playDistancedSound("teleport_out",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("teleport_out");
 	}
 	private void Run()

@@ -10,7 +10,7 @@ public class Player : Character {
 	public bool hasFinalKey = false;
 
 	public int angleRotation;
-	public bool isDead = false, locked = false;
+	public bool isDead = false, locked = false, killedByBlob;
 	private bool walkSoundLeft;
 	
 	private BoxCollider col;
@@ -65,6 +65,7 @@ public class Player : Character {
 		isGoDown = false;
 		isPass = false;
 		isCrounch = false;
+		//pushCrate = false;
 		
 		col.size = new Vector3(1f, col.size.y, col.size.z);
 		col.center = new Vector3(0f, 0f, 0f);
@@ -74,6 +75,7 @@ public class Player : Character {
 			//collider.bounds.size.Set(1.75f, 1.75f, 10f);
 			holdCrate();
 		}
+		if(Input.GetKeyUp("left shift") || Input.GetKeyUp("right shift") || Input.GetKeyUp(KeyCode.A)) pushCrate = false;
 		if(Input.GetKey(InputMan.Left) || Input.GetKey(KeyCode.Q) || Input.GetAxisRaw("X axis") > InputMan.X_AxisPos_Sensibility ) 
 		{ 
 			isLeft = true;
@@ -90,7 +92,7 @@ public class Player : Character {
 			//if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");
 		}
 		if (Input.GetKey(InputMan.Up)  || Input.GetKey(KeyCode.Z) || Input.GetKey(InputMan.PadJump)) 
-		{ 
+		{
 			isJump = true;
 		}
 		if (Input.GetKeyDown(InputMan.Up)  || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(InputMan.PadJump) /* && grounded*/) 
@@ -193,7 +195,7 @@ public class Player : Character {
 			transform.localPosition = spawnPos;
 			enabled = true;
 		
-		
+			killedByBlob = false;
 		enabled = true;
 		collider.enabled=true;
 		isJump = false;

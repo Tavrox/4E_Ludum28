@@ -2,30 +2,16 @@
 <data version="1.0">
     <struct type="Settings">
         <key>fileFormatVersion</key>
-        <int>3</int>
-        <key>texturePackerVersion</key>
-        <string>3.2.1</string>
+        <int>1</int>
+        <key>variation</key>
+        <string>main</string>
+        <key>verbose</key>
+        <false/>
         <key>autoSDSettings</key>
-        <array>
-            <struct type="AutoSDSettings">
-                <key>scale</key>
-                <double>1</double>
-                <key>extension</key>
-                <string></string>
-                <key>spriteFilter</key>
-                <string></string>
-                <key>acceptFractionalValues</key>
-                <false/>
-                <key>maxTextureSize</key>
-                <QSize>
-                    <key>width</key>
-                    <int>-1</int>
-                    <key>height</key>
-                    <int>-1</int>
-                </QSize>
-            </struct>
-        </array>
+        <array/>
         <key>allowRotation</key>
+        <false/>
+        <key>quiet</key>
         <false/>
         <key>premultiplyAlpha</key>
         <false/>
@@ -68,16 +54,16 @@
         <key>maxTextureSize</key>
         <QSize>
             <key>width</key>
-            <int>2048</int>
+            <int>1024</int>
             <key>height</key>
-            <int>2048</int>
+            <int>1024</int>
         </QSize>
         <key>fixedTextureSize</key>
         <QSize>
             <key>width</key>
-            <int>-1</int>
+            <int>1024</int>
             <key>height</key>
-            <int>-1</int>
+            <int>1024</int>
         </QSize>
         <key>reduceBorderArtifacts</key>
         <false/>
@@ -112,6 +98,8 @@
             <enum type="AndEngine::MinFilter">Linear</enum>
             <key>packageName</key>
             <string>Texture</string>
+            <key>javaFileName</key>
+            <filename>crate.java</filename>
             <key>wrap</key>
             <struct type="AndEngineWrap">
                 <key>s</key>
@@ -122,21 +110,12 @@
             <key>magFilter</key>
             <enum type="AndEngine::MagFilter">MagLinear</enum>
         </struct>
-        <key>dataFileNames</key>
-        <map type="GFileNameMap">
-            <key>data</key>
-            <struct type="DataFile">
-                <key>name</key>
-                <filename>crate.xml</filename>
-            </struct>
-            <key>java</key>
-            <struct type="DataFile">
-                <key>name</key>
-                <filename>crate.java</filename>
-            </struct>
-        </map>
+        <key>dataFileName</key>
+        <filename>crate.xml</filename>
         <key>multiPack</key>
         <false/>
+        <key>mainExtension</key>
+        <string></string>
         <key>forceIdenticalLayout</key>
         <false/>
         <key>outputFormat</key>
@@ -150,8 +129,6 @@
         <true/>
         <key>trimSpriteNames</key>
         <false/>
-        <key>cleanTransparentPixels</key>
-        <true/>
         <key>globalSpriteSettings</key>
         <struct type="SpriteSettings">
             <key>scale</key>
@@ -171,25 +148,24 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>../../Levels/crate.png</filename>
-            <filename>../../Levels/Adrian/key.png</filename>
-            <filename>../../Levels/Adrian/end_3.png</filename>
-            <filename>../../Levels/Adrian/end_1.png</filename>
-            <filename>../../Levels/Adrian/end_2.png</filename>
-            <filename>Key/kEYVert.png</filename>
-            <filename>Key/kEYViolet.png</filename>
+            <filename>Key/kEY.png</filename>
             <filename>Key/kEYBleu.png</filename>
             <filename>Key/kEYJaune.png</filename>
             <filename>Key/kEYRouge.png</filename>
-            <filename>Key/kEY.png</filename>
-            <filename>../../Levels/Zcrate_exploo0001 (1).png</filename>
-            <filename>../../Levels/Zcrate_exploo0001 (2).png</filename>
-            <filename>../../Levels/Zcrate_exploo0001 (3).png</filename>
-            <filename>../../Levels/Zcrate_exploo0001 (4).png</filename>
-            <filename>../../Levels/Zcrate_exploo0001 (5).png</filename>
-            <filename>../../Levels/Zcrate_exploo0001 (6).png</filename>
-            <filename>../../Levels/Zcrate_exploo0001 (7).png</filename>
-            <filename>../../Levels/Zcrate_exploo0001 (8).png</filename>
+            <filename>Key/kEYVert.png</filename>
+            <filename>Key/kEYViolet.png</filename>
+            <filename>../../Levels/crate.png</filename>
+            <filename>../../Levels/Adrian/end_3.png</filename>
+            <filename>../../Levels/Adrian/end_1.png</filename>
+            <filename>../../Levels/Adrian/end_2.png</filename>
+            <filename>../../Levels/Adrian/key.png</filename>
+            <filename>../../Levels/zcrate_exploo0001.png</filename>
+            <filename>../../Levels/zcrate_exploo0002.png</filename>
+            <filename>../../Levels/zcrate_exploo0003.png</filename>
+            <filename>../../Levels/zcrate_exploo0004.png</filename>
+            <filename>../../Levels/zcrate_exploo0005.png</filename>
+            <filename>../../Levels/zcrate_exploo0006.png</filename>
+            <filename>../../Levels/zcrate_exploo0007.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
