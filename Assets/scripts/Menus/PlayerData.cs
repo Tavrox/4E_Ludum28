@@ -1,30 +1,53 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
 public class PlayerData : MonoBehaviour {
 
-	public List<int> _levelUnlocked = new List<int>();
-	private string _PlayerName = "";
-	public bool displayInput = true;
+	public PlayerProfile PROFILE;
+	public GameSetup SETUP;
+	public float GlobalVolume = 1f;
+	public bool globalVolMuted = false;
+	public float musicVolume = 1f;
+	public bool musicVolMuted = false;
 
 	// Use this for initialization
-	void Start ()
+	void Awake () 
 	{
-		//DontDestroyOnLoad(gameObject);
-	}
-	
-	public bool addLevelUnlocked(int _id)
-	{
-		_levelUnlocked.Add(_id);
-		return true;
+		PROFILE = Resources.Load("Tuning/PlayerProfile") as PlayerProfile;
+		SETUP = Resources.Load("Tuning/GameSetup") as GameSetup;
+		name = "PlayerData";
+		DontDestroyOnLoad(this);
 	}
 
-	void OnGUI()
+	
+	public void MuteMusic()
 	{
-		if (displayInput == true)
+		if (musicVolMuted == true)
 		{
-//			_PlayerName = GUI.TextField(new Rect(10,10,200,20), _PlayerName, 25);
+			musicVolMuted = false;
+			musicVolume = 0f;
 		}
+		else
+		{
+			musicVolMuted = true;
+			musicVolume = 1f;
+		}
+		
+	}
+	
+	public void MuteGlobal()
+	{
+		if (globalVolMuted == true)
+		{
+			globalVolMuted = false;
+			GlobalVolume = 0f;
+		}
+		else
+		{
+			globalVolMuted = true;
+			GlobalVolume = 1f;
+		}
+		
+		
 	}
 }

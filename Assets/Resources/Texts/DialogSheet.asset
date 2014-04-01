@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c7d05a10b78c84882fc706b2a1cef9, type: 3}
+  m_Name: DialogSheet
+  m_EditorClassIdentifier: 
+  dialog_file: {fileID: 4900000, guid: 3e6e53a765d0d7a4dbcc0d60b813d241, type: 3}
+  translateGame: 0

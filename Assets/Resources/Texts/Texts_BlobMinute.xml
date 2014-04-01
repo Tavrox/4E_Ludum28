@@ -1,0 +1,303 @@
+<texts>								
+	<info>			Pour créer un espace, entrez /n				</info>
+<entry id='	4EDGESGAMES	'>						
+			<english>	4EdgesGames	</english>	<help>	11	</help>
+			<french>	4EdgesGames	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	CREDITS_BTN	'>						
+			<english>	Credits	</english>	<help>	7	</help>
+			<french>	Crédits	</french>	<help>	7	</help>
+	</entry>							
+<entry id='	CREDITS_LABEL	'>						
+			<english>	Credits	</english>	<help>	7	</help>
+			<french>	Crédits	</french>	<help>	7	</help>
+	</entry>							
+<entry id='	EXIT_BTN	'>						
+			<english>	Exit	</english>	<help>	4	</help>
+			<french>	Quitter	</french>	<help>	7	</help>
+	</entry>							
+<entry id='	GAME_VERSION	'>						
+			<english>	Free version /nAlphav2	</english>	<help>	22	</help>
+			<french>	Version gratuite /nAlphav2	</french>	<help>	26	</help>
+	</entry>							
+<entry id='	JULIEN_LABEL	'>						
+			<english>	Music	</english>	<help>	5	</help>
+			<french>	Musique	</french>	<help>	7	</help>
+	</entry>							
+<entry id='	YANNICK_LABEL	'>						
+			<english>	Game design - code	</english>	<help>	18	</help>
+			<french>	Game design - code	</french>	<help>	18	</help>
+	</entry>							
+<entry id='	PAUL_LABEL	'>						
+			<english>	Sound design - music	</english>	<help>	20	</help>
+			<french>	Sound design - musique	</french>	<help>	22	</help>
+	</entry>							
+<entry id='	LUDOVIC_LABEL	'>						
+			<english>	Game design - Graphic art	</english>	<help>	25	</help>
+			<french>	Game design - Graphiste	</french>	<help>	23	</help>
+	</entry>							
+<entry id='	LEVEL_NAME	'>						
+			<english>	Grensdalur	</english>	<help>	10	</help>
+			<french>	Grensdalur	</french>	<help>	10	</help>
+	</entry>							
+<entry id='	MUTE_MUSIC_BTN	'>						
+			<english>	Muted	</english>	<help>	5	</help>
+			<french>	Muet	</french>	<help>	4	</help>
+	</entry>							
+<entry id='	MUTE_GLOBAL_BTN	'>						
+			<english>	Muted	</english>	<help>	5	</help>
+			<french>	Muet	</french>	<help>	4	</help>
+	</entry>							
+<entry id='	MUTE_GLOBAL_LABEL	'>						
+			<english>	All sounds	</english>	<help>	10	</help>
+			<french>	Global	</french>	<help>	6	</help>
+	</entry>							
+<entry id='	MUTE_MUSIC_LABEL	'>						
+			<english>	Music	</english>	<help>	5	</help>
+			<french>	Musique	</french>	<help>	7	</help>
+	</entry>							
+<entry id='	OPTIONS_BTN	'>						
+			<english>	Options	</english>	<help>	7	</help>
+			<french>	Options	</french>	<help>	7	</help>
+	</entry>							
+<entry id='	START_BTN	'>						
+			<english>	Play	</english>	<help>	4	</help>
+			<french>	Jouer	</french>	<help>	5	</help>
+	</entry>							
+<entry id='	LUDOVIC	'>						
+			<english>	Ludovic Servat	</english>	<help>	14	</help>
+			<french>	Ludovic Servat	</french>	<help>	14	</help>
+	</entry>							
+<entry id='	JULIEN	'>						
+			<english>	Julien Commerenc	</english>	<help>	16	</help>
+			<french>	Julien Commerenc	</french>	<help>	16	</help>
+	</entry>							
+<entry id='	PAUL	'>						
+			<english>	Paul Lagarrigue	</english>	<help>	15	</help>
+			<french>	Paul Lagarrigue	</french>	<help>	15	</help>
+	</entry>							
+<entry id='	YANNICK	'>						
+			<english>	Yannick Elahee	</english>	<help>	14	</help>
+			<french>	Yannick Elahee	</french>	<help>	14	</help>
+	</entry>							
+<entry id='	PLAY_LABEL	'>						
+			<english>	Play	</english>	<help>	4	</help>
+			<french>	Jouer	</french>	<help>	5	</help>
+	</entry>							
+<entry id='	MUTE_MUSIC_ALT	'>						
+			<english>	Unmuted	</english>	<help>	7	</help>
+			<french>	Non-muet	</french>	<help>	8	</help>
+	</entry>							
+<entry id='	MUTE_GLOBAL_ALT	'>						
+			<english>	Unmuted	</english>	<help>	7	</help>
+			<french>	Non-muet	</french>	<help>	8	</help>
+	</entry>							
+<entry id='	___TRANSLATE_MEE___	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_ME____	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_MEE___	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_ME____	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_MEE___	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_ME____	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_MEE___	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_ME____	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_MEE___	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_ME____	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_MEE___	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_ME____	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_MEE___	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_ME____	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_MEE___	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_ME____	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_MEE___	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_ME____	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_MEE___	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_ME____	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_MEE___	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_ME____	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_MEE___	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_ME____	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_MEE___	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_ME____	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_MEE___	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_ME____	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_MEE___	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_ME____	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_MEE___	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_ME____	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_MEE___	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_ME____	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_MEE___	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_ME____	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_MEE___	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_ME____	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_MEE___	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_ME____	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_MEE___	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_ME____	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_MEE___	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_ME____	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_MEE___	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_ME____	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_MEE___	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_ME____	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_MEE___	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_ME____	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_MEE___	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+<entry id='	___TRANSLATE_ME____	'>						
+			<english>	Placeholder	</english>	<help>	11	</help>
+			<french>	Placeholder	</french>	<help>	11	</help>
+	</entry>							
+</texts>								
