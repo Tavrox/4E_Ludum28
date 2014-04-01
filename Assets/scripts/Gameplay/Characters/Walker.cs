@@ -41,6 +41,7 @@ public class Walker : Enemy {
 		if(this != null && gameObject.activeInHierarchy) {
 			transform.position = new Vector3(spawnPos.x,spawnPos.y,0f);
 			enabled = true;
+			collider.enabled = true;
 			chasingPlayer = activated = false;
 			StartCoroutine("waitB4Gravity");
 		//}
@@ -97,9 +98,15 @@ public class Walker : Enemy {
 	}
 	public void getDamage(int damage) {
 		HP -= damage;
-		if(HP <=0) gameObject.transform.parent.gameObject.SetActive(false);
+		if(HP <=0) {
+			splashed=true;
+			StartCoroutine("hideAfterSplash",0.79f);
+		}
 	}
-
+	IEnumerator hideAfterSplash(float delay) {
+		yield return new WaitForSeconds(delay);
+		gameObject.transform.parent.gameObject.SetActive(false);
+	}
 	/************************
 	 *						*
 	 *  DETECTION RAYCASTS 	*
@@ -163,7 +170,7 @@ public class Walker : Enemy {
 		
 		if (!Physics.Raycast(detectEndPFLeft, out hitInfo, blockDetectionArea) || !Physics.Raycast(detectEndPFRight, out hitInfo, blockDetectionArea)) {
 			chasingPlayer = false;
-			isLeft = isRight = false;print("STOOOOOOOOOOOOOOOOOOOOP");
+			isLeft = isRight = false;//print("STOOOOOOOOOOOOOOOOOOOOP");
 			if (!Physics.Raycast(detectEndPFLeft, out hitInfo, blockDetectionArea)) {
 				if (Physics.Raycast(detectTargetRight, out hitInfo, targetDetectionArea)) {
 					if(hitInfo.collider.name == "Player") {

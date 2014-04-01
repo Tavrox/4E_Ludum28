@@ -15,7 +15,7 @@ public class Patroler : Character {
 	
 	public float targetDetectionArea = 3f;
 	public float blockDetectionArea = 2f;
-	private float spriteScaleX;
+	//private float spriteScaleX;
 	protected RaycastHit hitInfo; //infos de collision
 	protected Ray detectTargetLeft, detectTargetRight, detectBlockLeft, detectBlockRight, detectEndPFLeft, detectEndPFRight; //point de départ, direction
 	[Range (0,2.25f)] public float myCORRECTSPEED = 10f;
@@ -25,7 +25,7 @@ public class Patroler : Character {
 	public Transform[] waypoints;
 	private Player _player;
 	private bool walkSoundSwitch;
-	public bool isVertical;
+	public bool isVertical,splashed;
 	
 	//	private WaveCreator soundEmitt1, soundEmitt2, soundInstru1, soundInstru2,soundEmitt3;
 	//	private int cptWave=1, pebbleDirection = 1;
@@ -76,11 +76,11 @@ public class Patroler : Character {
 		
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>(); //target the player
 		patroling = true;
-		spriteScaleX = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.x;
+		//spriteScaleX = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.x;
 	}
 	// Update is called once per frame
 	void Update () {
-		Patrol();
+		if(!splashed) Patrol();
 	}
 	protected void Patrol () {
 		//print ("patrolllll");
@@ -183,9 +183,17 @@ public class Patroler : Character {
 			//if(_player.myCrate == touchedCrate && _player.onCrate) _player.transform.position += new Vector3(myCORRECTSPEED,0f,0f);
 		}
 	}
+	
 	public void getDamage(int damage) {
 		HP -= damage;
-		if(HP <=0) gameObject.transform.parent.gameObject.SetActive(false);
+		if(HP <=0) {
+			splashed=true;
+			StartCoroutine("hideAfterSplash",0.42f);
+		}
+	}
+	IEnumerator hideAfterSplash(float delay) {
+		yield return new WaitForSeconds(delay);
+		gameObject.transform.parent.gameObject.SetActive(false);
 	}
 
 	protected void GameStart () {

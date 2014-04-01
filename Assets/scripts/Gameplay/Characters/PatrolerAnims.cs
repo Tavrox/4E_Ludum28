@@ -13,6 +13,7 @@ public class PatrolerAnims : MonoBehaviour
 		HangLeft, HangRight,
 		FallLeft, FallRight ,
 		ShootLeft, ShootRight,
+		SplashLeft, SplashRight,
 		CrounchLeft, CrounchRight,
 		AttackLeft, AttackRight,
 	}
@@ -24,6 +25,7 @@ public class PatrolerAnims : MonoBehaviour
 	private animDef currentAnim;
 	private Character _character;
 	private Player _player;
+	private Patroler _enemy;
 	
 	private bool animPlaying = false;
 	
@@ -32,6 +34,7 @@ public class PatrolerAnims : MonoBehaviour
 	{
 		_character 	= GetComponent<Character>();
 		_player 	= GameObject.FindObjectOfType<Player>();
+		_enemy = GetComponent<Patroler>();
 		animSprite.Play("run");
 	}
 	void Update() 
@@ -39,20 +42,36 @@ public class PatrolerAnims : MonoBehaviour
 		animSprite.looping = true;
 		// Order of action matters, they need to have priorities. //
 		Run();
+		Splash();
 	}
 	private void Run()
 	{
-		if(_character.isRight && _character.grounded && currentAnim!=animDef.WalkRight)
+		if(_character.isRight && _character.grounded && currentAnim!=animDef.WalkRight && !_enemy.splashed)
 		{
 			currentAnim = animDef.WalkRight;
 			animSprite.Play("run");
 			NormalScaleSprite();;
 		}
-		if(_character.isLeft && _character.grounded && currentAnim!=animDef.WalkLeft)
+		if(_character.isLeft && _character.grounded && currentAnim!=animDef.WalkLeft && !_enemy.splashed)
 		{
 			currentAnim = animDef.WalkLeft;
 			animSprite.Play("run");
 			InvertSprite();
+		}
+	}
+	private void Splash()
+	{	
+		if(/*!_character.isLeft && _character.grounded == true &&*/ currentAnim != animDef.SplashLeft && _character.facingDir == Character.facing.Left && _enemy.splashed)
+		{
+			currentAnim = animDef.SplashLeft;
+			animSprite.PlayOnce("splash"); // stand left
+			InvertSprite();
+		}
+		if(/*!_character.isRight && _character.grounded &&*/ currentAnim != animDef.SplashRight && _character.facingDir == Character.facing.Right && _enemy.splashed)
+		{
+			currentAnim = animDef.SplashRight;
+			animSprite.PlayOnce("splash"); // stand left
+			NormalScaleSprite();
 		}
 	}
 	

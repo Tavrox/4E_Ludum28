@@ -134,6 +134,136 @@
                 <key>sourceSize</key>
                 <string>{100,50}</string>
             </dict>
+            <key>patrol_dead0001.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1,256},{220,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{220,50}}</string>
+                <key>sourceSize</key>
+                <string>{220,50}</string>
+            </dict>
+            <key>patrol_dead0002.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1,307},{220,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{220,50}}</string>
+                <key>sourceSize</key>
+                <string>{220,50}</string>
+            </dict>
+            <key>patrol_dead0003.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1,358},{220,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{220,50}}</string>
+                <key>sourceSize</key>
+                <string>{220,50}</string>
+            </dict>
+            <key>patrol_dead0004.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1,409},{220,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{220,50}}</string>
+                <key>sourceSize</key>
+                <string>{220,50}</string>
+            </dict>
+            <key>patrol_dead0005.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1,460},{220,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{220,50}}</string>
+                <key>sourceSize</key>
+                <string>{220,50}</string>
+            </dict>
+            <key>patrol_dead0006.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1,511},{220,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{220,50}}</string>
+                <key>sourceSize</key>
+                <string>{220,50}</string>
+            </dict>
+            <key>patrol_dead0007.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1,562},{220,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{220,50}}</string>
+                <key>sourceSize</key>
+                <string>{220,50}</string>
+            </dict>
+            <key>patrol_dead0008.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1,613},{220,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{220,50}}</string>
+                <key>sourceSize</key>
+                <string>{220,50}</string>
+            </dict>
+            <key>patrol_dead0009.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1,664},{220,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{220,50}}</string>
+                <key>sourceSize</key>
+                <string>{220,50}</string>
+            </dict>
+            <key>patrol_dead0010.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1,715},{220,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{220,50}}</string>
+                <key>sourceSize</key>
+                <string>{220,50}</string>
+            </dict>
         </dict>
         <key>metadata</key>
         <dict>
@@ -142,9 +272,9 @@
             <key>realTextureFileName</key>
             <string>patroler.png</string>
             <key>size</key>
-            <string>{256,256}</string>
+            <string>{256,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:6202718d0c0879b69335a5ea3c061e30:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:73bf258ac6d2b61307f02ee3f86575a8:eaf0ff70ea27264325748ffc76050aae:f6fec57d14312e8a5f5ea5dccbd493d8$</string>
             <key>textureFileName</key>
             <string>patroler.png</string>
         </dict>
