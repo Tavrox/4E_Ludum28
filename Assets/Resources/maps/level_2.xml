@@ -665,49 +665,49 @@
 </data>
  </layer>
  <objectgroup name="Collider_0" width="90" height="90">
-  <object x="848" y="502" width="1848" height="92"/>
+  <object x="851" y="499" width="1843" height="100"/>
   <object x="340" y="562" width="107" height="2225"/>
-  <object x="552" y="801" width="792" height="98"/>
-  <object x="747" y="1049" width="602" height="97"/>
+  <object x="551" y="798" width="792" height="98"/>
+  <object x="756" y="1048" width="591" height="98"/>
   <object x="1601" y="1050" width="845" height="95"/>
   <object x="2250" y="750" width="96" height="331"/>
   <object x="2335" y="999" width="111" height="58"/>
   <object x="2606" y="559" width="89" height="771"/>
   <object x="755" y="1124" width="441" height="72"/>
   <object x="1107" y="1187" width="88" height="213"/>
-  <object x="1111" y="1297" width="1737" height="103"/>
+  <object x="1111" y="1298" width="1737" height="103"/>
   <object x="354" y="1298" width="196" height="156"/>
   <object x="1602" y="568" width="444" height="226"/>
   <object x="2154" y="1364" width="86" height="938"/>
-  <object x="2154" y="1599" width="694" height="98"/>
+  <object x="2154" y="1598" width="694" height="98"/>
   <object x="2757" y="1671" width="85" height="723"/>
-  <object x="2792" y="2000" width="355" height="96"/>
+  <object x="2792" y="1998" width="355" height="96"/>
   <object x="3053" y="2036" width="91" height="308"/>
   <object x="339" y="215" width="3552" height="130"/>
   <object x="236" y="270" width="158" height="330"/>
-  <object x="413" y="2453" width="1834" height="222"/>
+  <object x="414" y="2448" width="1834" height="222"/>
   <object x="2152" y="2495" width="95" height="176"/>
-  <object x="2752" y="2596" width="95" height="84"/>
-  <object x="3051" y="2547" width="96" height="120"/>
+  <object x="2751" y="2599" width="95" height="84"/>
+  <object x="3052" y="2548" width="96" height="120"/>
   <object x="3804" y="296" width="92" height="1449"/>
   <object x="4102" y="0" width="124" height="2788"/>
-  <object x="436" y="1698" width="260" height="148"/>
-  <object x="1602" y="1700" width="246" height="146"/>
-  <object x="853" y="1701" width="142" height="144"/>
-  <object x="1103" y="1702" width="142" height="144"/>
-  <object x="1355" y="1702" width="142" height="144"/>
-  <object x="2402" y="2098" width="370" height="154"/>
-  <object x="2604" y="1846" width="176" height="104"/>
-  <object x="1151" y="2051" width="1079" height="138"/>
-  <object x="653" y="2050" width="291" height="143"/>
-  <object x="2629" y="601" width="215" height="143"/>
+  <object x="437" y="1699" width="260" height="148"/>
+  <object x="1602" y="1698" width="246" height="146"/>
+  <object x="852" y="1699" width="142" height="144"/>
+  <object x="1104" y="1699" width="142" height="144"/>
+  <object x="1353" y="1700" width="142" height="144"/>
+  <object x="2403" y="2098" width="370" height="154"/>
+  <object x="2601" y="1848" width="176" height="104"/>
+  <object x="1152" y="2049" width="1079" height="138"/>
+  <object x="653" y="2048" width="291" height="143"/>
+  <object x="2629" y="599" width="215" height="143"/>
   <object x="3601" y="748" width="244" height="102"/>
-  <object x="2854" y="998" width="972" height="96"/>
-  <object x="-134" y="550" width="833" height="96"/>
+  <object x="2853" y="998" width="972" height="96"/>
+  <object x="-135" y="548" width="833" height="96"/>
   <object x="1601" y="787" width="145" height="58"/>
-  <object x="2236" y="2654" width="1951" height="143"/>
+  <object x="2235" y="2649" width="1951" height="143"/>
  </objectgroup>
- <objectgroup name="1" width="90" height="90">
+ <objectgroup name="1" width="90" height="90" visible="0">
   <object name="1-Porte1" type="TriggeredDoor" x="1347" y="799" width="259" height="47"/>
   <object name="1-Porte2" type="TriggeredDoor" x="1344" y="1049" width="261" height="48"/>
   <object name="1-Porte3" type="TriggeredDoor" x="1601" y="832" width="45" height="223"/>
@@ -739,12 +739,12 @@
   <object name="1-CaissePatrol" type="Crate" x="1507" y="1591" width="95" height="97"/>
   <object name="1-PatrollAvecCaisse" type="Patroler" x="1245" y="1576" width="87" height="89"/>
  </objectgroup>
- <objectgroup name="2" width="90" height="90">
+ <objectgroup name="2" width="90" height="90" visible="0">
   <object name="2-Caisse01" type="Crate" x="3204" y="890" width="126" height="110"/>
   <object name="2-PatrollerPousseCaiisseDroite" type="Patroler" x="3462" y="924" width="138" height="74"/>
   <object name="2-PatrollerPousseCaiisseGauche" type="Patroler" x="2941" y="919" width="138" height="74"/>
  </objectgroup>
- <objectgroup name="3" width="90" height="90">
+ <objectgroup name="3" width="90" height="90" visible="0">
   <object name="1-caisse tueur de blob" type="Crate" x="3952" y="2543" width="97" height="99"/>
   <object name="1-caisse tueur de blob" type="Crate" x="3956" y="2415" width="97" height="99"/>
   <object name="1-caisse tueur de blob" type="Crate" x="3960" y="2287" width="97" height="99"/>
@@ -767,7 +767,7 @@
   <object name="1-caisse tueur de blob" type="Crate" x="4008" y="143" width="97" height="99"/>
   <object name="1-caisse tueur de blob" type="Crate" x="4008" y="6" width="97" height="99"/>
  </objectgroup>
- <objectgroup name="4" width="90" height="90">
+ <objectgroup name="4" width="90" height="90" visible="0">
   <object name="4-téléportIn" type="TeleportIn" x="3018" y="1509" width="49" height="55"/>
   <object name="4-TurretR" type="TurretR" x="3297" y="1400" width="55" height="33"/>
   <object name="4-TeleportOut" type="TeleportOut" x="3097" y="1733" width="64" height="58"/>
@@ -776,5 +776,14 @@
   <object name="4-TurretU" type="TurretU" x="3354" y="1306" width="55" height="33"/>
   <object name="4-BOutonSequence" type="SequencedBtn" x="3094" y="1364" width="24" height="37"/>
  </objectgroup>
- <objectgroup name="5" width="90" height="90"/>
+ <objectgroup name="5" width="90" height="90">
+  <object name="5-CaisseTeleport" type="Crate" x="864" y="1594" width="109" height="106"/>
+  <object name="5-CaisseTeleport" type="Crate" x="1368" y="1591" width="109" height="106"/>
+  <object name="5-Patroller01" type="Patroler" x="991" y="2349" width="230" height="97"/>
+  <object name="5-Crate" type="Crate" x="1021" y="2312" width="161" height="109"/>
+  <object name="5-Crate" type="Crate" x="2442" y="2512" width="161" height="109"/>
+  <object name="5-Patroller01" type="Patroler" x="2376" y="2606" width="230" height="97"/>
+  <object name="5-Crate" type="Crate" x="1936" y="2339" width="124" height="115"/>
+  <object x="2500" y="2397" width="58" height="115"/>
+ </objectgroup>
 </map>
