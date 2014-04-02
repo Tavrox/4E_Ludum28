@@ -4,24 +4,24 @@ using System.Collections.Generic;
 
 public class PhpLeaderboards : MonoBehaviour
 {
-	private string secretKey = "lp4edges"; // Edit this value and make sure it's the same as the one stored on the server
-	public string addScoreURL = "http://4edges-games.com/games/lavapools/log.php"; //be sure to add a ? to your url
+	private string secretKey = "lp4edges";
+
+	public string addScoreURL = "http://4edges-games.com/games/lavapools/log.php";
 	public string highscoreURL = "http://4edges-games.com/games/lavapools/display.php";
+
 	public List<UserLeaderboard> ListUser;
 	public List<LBEntry> ListEntries;
 	private int lbLength =  15;
-	/*
+	
 	void Awake()
 	{
-
-		GameEventManager.Respawn += Respawn;
 		ListUser = new List<UserLeaderboard>();
 		ListEntries = new List<LBEntry>();
 		for (int i = 0 ; i <= 14 ; i++) 
 		{
 			ListUser.Add(ScriptableObject.CreateInstance("UserLeaderboard") as UserLeaderboard);
 		}
-		for (int i = 1 ; i <= 15 ; i++)
+		for (int i = 1 ; i <= lbLength ; i++)
 		{
 			LBEntry _lb = FETool.findWithinChildren(gameObject, i.ToString()).GetComponent<LBEntry>();
 			_lb.Setup();
@@ -45,27 +45,28 @@ public class PhpLeaderboards : MonoBehaviour
 		}
 	}
 
-	public void SendScore(string _name, float _score)
+	public void SendScore(string _name, float _score, int _lvl)
 	{
 		string nm = _name;
 		float sco = _score;
-		StartCoroutine(PostScores(nm, sco));
+		int lvlID = _lvl;
+		StartCoroutine(PostScores(nm, sco, _lvl));
 	}
 	
 	// remember to use StartCoroutine when calling this function!
-	IEnumerator PostScores(string name, float score)
+	IEnumerator PostScores(string name, float score, int level_id)
 	{
-		//This connects to a server side php script that will add the name and score to a MySQL DB.
-		// Supply it with a string representing the players name and the players score.
 		string hash = FETool.Md5Sum(name + score + secretKey);
-//		string hash = "";
 		int prse = Mathf.RoundToInt(score);
-		string post_url = addScoreURL + "?name=" + WWW.EscapeURL(name) + "&score=" + prse.ToString() + "&hash=" + hash;
-//		print (post_url);
-		
-		// Post the URL to the site and create a download object to get the result.
+		string post_url = 
+			addScoreURL + 
+				"?name=" + WWW.EscapeURL(name) +
+				"&levelid=" + level_id.ToString() +
+				"&score=" + prse.ToString() +
+				"&hash=" + hash;
+
 		WWW hs_post = new WWW(post_url);
-		yield return hs_post; // Wait until the download is done
+		yield return hs_post;
 		
 		if (hs_post.error != null)
 		{
@@ -73,7 +74,10 @@ public class PhpLeaderboards : MonoBehaviour
 		}
 		else
 		{
-			print ("Record envoyé [" + name +"]["+ score+"]");
+			print ("Record envoyé"
+			       + level_id.ToString() + "]["
+			       + name  + "]["
+			       + score + "]");
 		}
 	}
 	
@@ -96,15 +100,11 @@ public class PhpLeaderboards : MonoBehaviour
 				ListUser[i].ranking = i+1;
 				ListUser[i].userName = entries[i].Split('|')[0];
 				ListUser[i].userBestScore = int.Parse(entries[i].Split('|')[1]);
-
+//				Debug.Log (ListUser[i].ranking +""+ ListUser[i].userName +""+ ListUser[i].userBestScore);
 			}
 		}
 	}
 
-	private void Respawn()
-	{
-		GatherScores();
-	}
 	
 	public void sortLeaderboard(ref List<UserLeaderboard> _listLb, int length)
 	{
@@ -129,7 +129,6 @@ public class PhpLeaderboards : MonoBehaviour
 
 	public void displayLeaderboard(List<UserLeaderboard> _listLb, ref TextUI[] _lines)
 	{
-
 		int _lengthLb = lbLength;
 		if (_listLb.Count < _lengthLb )
 		{
@@ -139,9 +138,6 @@ public class PhpLeaderboards : MonoBehaviour
 		{
 			_lines[i].text = _listLb[i].ranking + " - " + _listLb[i].userName + " - " + _listLb[i].userBestScore;
 		}
-
 	}
-
-	*/
 	
 }

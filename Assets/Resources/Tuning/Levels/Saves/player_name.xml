@@ -1,0 +1,20 @@
+<player>
+	<name value=""/>
+	<twitterName value=""/>
+	<twitterPin value=""/>
+	<FacebookPin value=""/>
+</player>
+<save>
+	<level name="Grensdalur" id="1">
+		<BestScore value="100"> </BestScore>
+		<Unlocked value="true"> <Unlocked>
+	</level>
+	<level name="Vesuvio" id="2">
+		<BestScore value="100"> </BestScore>
+		<Unlocked value="true"> <Unlocked>
+	</level>
+	<level name="Etna" id="3">
+		<BestScore value="100"> </BestScore>
+		<Unlocked value="true"> <Unlocked>
+	</level>
+</save>

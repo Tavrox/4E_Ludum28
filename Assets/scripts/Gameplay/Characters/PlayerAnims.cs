@@ -16,6 +16,7 @@ public class PlayerAnims : MonoBehaviour
 		CrounchLeft, CrounchRight,
 		AttackLeft, AttackRight,
 		PushCrateLeft, PushCrateRight,
+		GrabCrateLeft, GrabCrateRight,
 		DeathBlobLeft, DeathBlobRight,
 		TeleportINRight, TeleportINLeft,
 		TeleportOUTRight, TeleportOUTLeft
@@ -43,12 +44,13 @@ public class PlayerAnims : MonoBehaviour
 	{
 		// Order of action matters, they need to have priorities. //
 		if(animSprite.frameIndex == 23) {animPlaying=false;anim.fps = 12.66667f;_player.locked=false;} //stop teleport
-		if(animSprite.frameIndex == 28 && !stopped) {stopped=true;animSprite.Pauze();StartCoroutine("waitB4Restart",2.5f);} //deathBlob pause
-		if(animSprite.frameIndex == 36 && !stopped) {stopped=true;animSprite.Pauze();StartCoroutine("waitB4Restart",1f);} //iddle pause 1
-		if(animSprite.frameIndex == 38 && !stopped) {stopped=true;animSprite.Pauze();StartCoroutine("waitB4Restart",1f);} //iddle pause 2
-		if(animSprite.frameIndex == 33 && !stopped) {stopped=true;animSprite.Stop();StartCoroutine("waitB4Restart",0.09f);} //deathBlob pause
+		if(animSprite.frameIndex == 38 && !stopped) {stopped=true;animSprite.Pauze();StartCoroutine("waitB4Restart",2.5f);} //deathBlob pause
+		if(animSprite.frameIndex == 46 && !stopped) {stopped=true;animSprite.Pauze();StartCoroutine("waitB4Restart",1f);} //iddle pause 1
+		if(animSprite.frameIndex == 48 && !stopped) {stopped=true;animSprite.Pauze();StartCoroutine("waitB4Restart",1f);} //iddle pause 2
+		//if(animSprite.frameIndex == 43 && !stopped) {stopped=true;animSprite.Stop();StartCoroutine("waitB4Restart",0.09f);} //deathBlob pause
 		TeleportIN();
 		Run();
+		GrabCrate();
 		PushCrate();
 		Walk();
 		Stand();
@@ -134,13 +136,13 @@ public class PlayerAnims : MonoBehaviour
 	}
 	private void Run()
 	{
-		if(_character.isRight && _character.grounded && currentAnim!=animDef.WalkRight && !_player.pushCrate)
+		if(_character.isRight && _character.grounded && currentAnim!=animDef.WalkRight && !_player.pushCrate && !_player.grabCrate)
 		{
 			currentAnim = animDef.WalkRight;
 			animSprite.Play("run");
 			NormalScaleSprite();
 		}
-		if(_character.isLeft && _character.grounded && currentAnim!=animDef.WalkLeft && !_player.pushCrate)
+		if(_character.isLeft && _character.grounded && currentAnim!=animDef.WalkLeft && !_player.pushCrate && !_player.grabCrate)
 		{
 			currentAnim = animDef.WalkLeft;
 			animSprite.Play("run");
@@ -159,6 +161,21 @@ public class PlayerAnims : MonoBehaviour
 		{
 			currentAnim = animDef.PushCrateLeft;
 			animSprite.Play("pushCrate");
+			InvertSprite();
+		}
+	}
+	private void GrabCrate()
+	{
+		if(_character.isRight && _character.grounded && currentAnim!=animDef.GrabCrateRight && _player.grabCrate)
+		{
+			currentAnim = animDef.GrabCrateRight;
+			animSprite.Play("grabCrate");
+			NormalScaleSprite();
+		}
+		if(_character.isLeft && _character.grounded && currentAnim!=animDef.GrabCrateLeft && _player.grabCrate)
+		{
+			currentAnim = animDef.GrabCrateLeft;
+			animSprite.Play("grabCrate");
 			InvertSprite();
 		}
 	}

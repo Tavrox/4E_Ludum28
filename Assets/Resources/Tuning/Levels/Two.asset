@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56288962d909be84db10064bda7aa51b, type: 3}
+  m_Name: Two
+  m_EditorClassIdentifier: 
+  levelID: 4
+  LvlName: 3
+  player_best_score: 0
+  locked: 1

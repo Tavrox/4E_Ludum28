@@ -28,7 +28,7 @@ public class Enemy : Character {
 	//	private float powerPebble;
 	//	private GameObject pebbleBar;
 	
-	[HideInInspector] public bool paused = false;
+	[HideInInspector] public bool paused = false,splashed=false;
 	
 	// Use this for initialization
 	public override void Start () 

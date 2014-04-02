@@ -20,7 +20,7 @@ public class LevelManager : MonoBehaviour {
 
 	void Awake()
 	{
-		TuningDocument  = Instantiate(Resources.Load("Tuning/BMTuning")) as BMTuning;
+		TuningDocument  = Instantiate(Resources.Load("Tuning/Global")) as BMTuning;
 	}
 //	void Update () {
 //		print (chosenVariation);

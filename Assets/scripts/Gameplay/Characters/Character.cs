@@ -34,7 +34,7 @@ public class Character : MonoBehaviour
 	[HideInInspector] public bool isPass;
 	
 	[HideInInspector] public bool jumping = false;
-	[HideInInspector] public bool falling = false,chute, onCrate, pushCrate;
+	[HideInInspector] public bool falling = false,chute, onCrate, pushCrate, grabCrate;
 	[HideInInspector] public bool grounded = false;
 	[HideInInspector] public bool passingPlatform;
 	[HideInInspector] public bool onPlatform;
@@ -75,7 +75,7 @@ public class Character : MonoBehaviour
 	[SerializeField] private float halfMyX;
 	[SerializeField] private float halfMyY;
 	
-	[SerializeField] protected float spriteScaleX, spriteScaleY;
+	protected float spriteScaleX, spriteScaleY;
 	
 //	[SerializeField] private float absVel2X;
 //	[SerializeField] private float absVel2Y;

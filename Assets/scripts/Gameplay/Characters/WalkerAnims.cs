@@ -13,6 +13,7 @@ public class WalkerAnims : MonoBehaviour
 		HangLeft, HangRight,
 		FallLeft, FallRight ,
 		ShootLeft, ShootRight,
+		SplashLeft, SplashRight,
 		CrounchLeft, CrounchRight,
 		AttackLeft, AttackRight,
 	}
@@ -25,6 +26,7 @@ public class WalkerAnims : MonoBehaviour
 	private animDef currentAnim;
 	private Character _character;
 	private Player _player;
+	private Enemy _enemy;
 	
 	private bool animPlaying = false;
 	
@@ -34,25 +36,26 @@ public class WalkerAnims : MonoBehaviour
 		_character 	= GetComponent<Character>();
 		GameEventManager.GameStart += GameStart;
 		_player 	= GameObject.FindObjectOfType<Player>();
+		_enemy = GetComponent<Enemy>();
 		if(lookLeft) {InvertSprite();currentAnim = animDef.StandLeft;_character.facingDir = Character.facing.Left;}
 		animSprite.Play("stand");
 	}
 	void Update() 
 	{
-		animSprite.looping = true;
 		// Order of action matters, they need to have priorities. //
 		Run();
 		Stand();
+		Splash();
 	}
 	private void Run()
 	{
-		if(_character.isRight && /*_character.grounded &&*/ currentAnim!=animDef.WalkRight)
+		if(_character.isRight && /*_character.grounded &&*/ currentAnim!=animDef.WalkRight && !_enemy.splashed)
 		{
 			currentAnim = animDef.WalkRight;
 			animSprite.Play("run");
 			NormalScaleSprite();
 		}
-		if(_character.isLeft && /*_character.grounded &&*/ currentAnim!=animDef.WalkLeft)
+		if(_character.isLeft && /*_character.grounded &&*/ currentAnim!=animDef.WalkLeft && !_enemy.splashed)
 		{
 			currentAnim = animDef.WalkLeft;
 			animSprite.Play("run");
@@ -61,16 +64,31 @@ public class WalkerAnims : MonoBehaviour
 	}
 	private void Stand()
 	{	
-		if(!_character.isLeft && /*_character.grounded == true &&*/ currentAnim != animDef.StandLeft && _character.facingDir == Character.facing.Left && animPlaying == false)
+		if(!_character.isLeft && /*_character.grounded == true &&*/ currentAnim != animDef.StandLeft && _character.facingDir == Character.facing.Left && animPlaying == false && !_enemy.splashed)
 		{
 			currentAnim = animDef.StandLeft;
 			animSprite.Play("stand"); // stand left
 			InvertSprite();
 		}
-		if(!_character.isRight && /*_character.grounded &&*/ currentAnim != animDef.StandRight && _character.facingDir == Character.facing.Right && animPlaying == false)
+		if(!_character.isRight && /*_character.grounded &&*/ currentAnim != animDef.StandRight && _character.facingDir == Character.facing.Right && animPlaying == false && !_enemy.splashed)
 		{
 			currentAnim = animDef.StandRight;
 			animSprite.Play("stand"); // stand left
+			NormalScaleSprite();
+		}
+	}
+	private void Splash()
+	{	
+		if(/*!_character.isLeft && _character.grounded == true &&*/ currentAnim != animDef.SplashLeft && _character.facingDir == Character.facing.Left && _enemy.splashed)
+		{
+			currentAnim = animDef.SplashLeft;
+			animSprite.PlayOnce("splash"); // stand left
+			InvertSprite();
+		}
+		if(/*!_character.isRight && _character.grounded &&*/ currentAnim != animDef.SplashRight && _character.facingDir == Character.facing.Right && _enemy.splashed)
+		{
+			currentAnim = animDef.SplashRight;
+			animSprite.PlayOnce("splash"); // stand left
 			NormalScaleSprite();
 		}
 	}
