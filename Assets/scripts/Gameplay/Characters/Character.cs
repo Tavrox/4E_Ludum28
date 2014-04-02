@@ -34,7 +34,7 @@ public class Character : MonoBehaviour
 	[HideInInspector] public bool isPass;
 	
 	[HideInInspector] public bool jumping = false;
-	[HideInInspector] public bool falling = false,chute, onCrate, pushCrate, grabCrate;
+	[HideInInspector] public bool falling = false,chute, onCrate, pushCrate, grabCrate, jumpLocked;
 	[HideInInspector] public bool grounded = false;
 	[HideInInspector] public bool passingPlatform;
 	[HideInInspector] public bool onPlatform;
@@ -75,7 +75,7 @@ public class Character : MonoBehaviour
 	[SerializeField] private float halfMyX;
 	[SerializeField] private float halfMyY;
 	
-	protected float spriteScaleX, spriteScaleY;
+	protected float spriteScaleX, spriteScaleY, raycastWidthRatio=0f;
 	
 //	[SerializeField] private float absVel2X;
 //	[SerializeField] private float absVel2Y;
@@ -171,7 +171,9 @@ public class Character : MonoBehaviour
 		addForce = 1;
 		if((!grounded && (!Input.GetKey(InputMan.Up)) || Input.GetKey(InputMan.PadJump) ) || blockedUp) chute = true;
 		if(blockedUp) {addForce=hitUpBounceForce;/*gravityY += 150f;StartCoroutine("resetGravity");*/}
-		if(chute && grounded) {chute = false;MasterAudio.PlaySound("player_fall");}
+		if(chute && grounded) {
+			if(Input.GetKey(InputMan.Up)  || Input.GetKey(KeyCode.Z) || Input.GetKey(InputMan.PadJump))jumpLocked=true;//StartCoroutine("lockJump");
+			chute = false;MasterAudio.PlaySound("player_fall");}
 
 		// landed from fall/jump
 		if(grounded == true && vectorMove.y == 0)
@@ -250,11 +252,11 @@ public class Character : MonoBehaviour
 //				BlockedDown();	
 //			}
 		//		}
-		Debug.DrawRay (new Vector3(mypos.x+0.25f, mypos.y), Vector3.down*halfMyY, Color.yellow);
-		Debug.DrawRay (new Vector3(mypos.x-0.25f, mypos.y), Vector3.down*halfMyY, Color.yellow);
+		Debug.DrawRay (new Vector3(mypos.x+0.25f+raycastWidthRatio, mypos.y), Vector3.down*halfMyY, Color.yellow);
+		Debug.DrawRay (new Vector3(mypos.x-0.25f-raycastWidthRatio, mypos.y), Vector3.down*halfMyY, Color.yellow);
 		if (Physics.Raycast(mypos, Vector3.down, out hitInfo, halfMyY, groundMask) 
-		    || Physics.Raycast(new Vector3(mypos.x+0.25f, mypos.y), Vector3.down, out hitInfo, halfMyY, groundMask)
-		    || Physics.Raycast(new Vector3(mypos.x-0.25f, mypos.y), Vector3.down, out hitInfo, halfMyY, groundMask)
+		    || Physics.Raycast(new Vector3(mypos.x+0.25f+raycastWidthRatio, mypos.y), Vector3.down, out hitInfo, halfMyY, groundMask)
+		    || Physics.Raycast(new Vector3(mypos.x-0.25f-raycastWidthRatio, mypos.y), Vector3.down, out hitInfo, halfMyY, groundMask)
 		    )
 		{
 //			print ("blocked down");
@@ -377,7 +379,10 @@ public class Character : MonoBehaviour
 		Debug.DrawRay (new Vector3(mypos.x, mypos.y-halfMyY+0.4f), Vector3.right*(halfMyX-0.5f), Color.red);
 
 	}
-
+//	IEnumerator lockJump () {
+//		yield return new WaitForSeconds(0.5f);
+//		jumpLocked = false;
+//	}
 	void BlockedUp()
 	{
 		if(vectorMove.y > 0)

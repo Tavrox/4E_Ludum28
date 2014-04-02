@@ -35,6 +35,7 @@ public class PatrolerAnims : MonoBehaviour
 		_character 	= GetComponent<Character>();
 		_player 	= GameObject.FindObjectOfType<Player>();
 		_enemy = GetComponent<Patroler>();
+		GameEventManager.GameStart += GameStart;
 		animSprite.Play("run");
 	}
 	void Update() 
@@ -73,6 +74,9 @@ public class PatrolerAnims : MonoBehaviour
 			animSprite.PlayOnce("splash"); // stand left
 			NormalScaleSprite();
 		}
+	}
+	void GameStart () {
+		animSprite.Play("run");
 	}
 	
 	private void AnimationFinished()

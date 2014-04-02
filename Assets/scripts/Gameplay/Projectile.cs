@@ -18,6 +18,7 @@ public class Projectile : MonoBehaviour {
 	void Start () {
 		myTransform = transform;
 		animSprite.Play("default");
+		GameEventManager.GameStart += GameStart;
 //		player = GameObject.FindWithTag("Player").GetComponent<PlayerPop>();
 //		if(player.shootLeft == true) direction = Vector3.left;
 //		else direction = Vector3.right;
@@ -58,6 +59,9 @@ public class Projectile : MonoBehaviour {
 //	    {
 //			Destroy(gameObject);
 //		}
+	}
+	void GameStart () {
+		Destroy(gameObject);
 	}
 	IEnumerator delayDestroy(float delay) {
 		yield return new WaitForSeconds(delay);

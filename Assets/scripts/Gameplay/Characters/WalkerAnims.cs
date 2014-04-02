@@ -93,8 +93,9 @@ public class WalkerAnims : MonoBehaviour
 		}
 	}
 	
-	protected void GameStart () {
+	void GameStart () {
 		if(lookLeft) InvertSprite();
+		animSprite.Play("stand");
 	}
 	private void AnimationFinished()
 	{

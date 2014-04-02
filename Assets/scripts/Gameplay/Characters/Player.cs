@@ -65,6 +65,7 @@ public class Player : Character {
 		isGoDown = false;
 		isPass = false;
 		isCrounch = false;
+		raycastWidthRatio = 0f;
 		//pushCrate = false;
 		
 		col.size = new Vector3(1f, col.size.y, col.size.z);
@@ -79,6 +80,7 @@ public class Player : Character {
 		if(Input.GetKey(InputMan.Left) || Input.GetKey(KeyCode.Q) || Input.GetAxisRaw("X axis") > InputMan.X_AxisPos_Sensibility ) 
 		{ 
 			isLeft = true;
+			raycastWidthRatio = 0.25f;
 			shootLeft = true;
 			facingDir = facing.Left;
 		}
@@ -87,19 +89,20 @@ public class Player : Character {
 			    && !isLeft) 
 		{ 
 			isRight = true; 
+			raycastWidthRatio = 0.25f;
 			facingDir = facing.Right;
 			shootLeft = false;
 			//if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");
 		}
-		if (Input.GetKey(InputMan.Up)  || Input.GetKey(KeyCode.Z) || Input.GetKey(InputMan.PadJump)) 
+		if (!jumpLocked && (Input.GetKey(InputMan.Up)  || Input.GetKey(KeyCode.Z) || Input.GetKey(InputMan.PadJump))) 
 		{
 			isJump = true;
 		}
-		if (Input.GetKeyDown(InputMan.Up)  || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(InputMan.PadJump) /* && grounded*/) 
+		if (!jumpLocked && (Input.GetKeyDown(InputMan.Up)  || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(InputMan.PadJump)) /* && grounded*/) 
 		{ 
 			MasterAudio.PlaySound("player_jump");
 		}
-		if (Input.GetKeyUp(InputMan.Up) || Input.GetKeyUp(KeyCode.Z) || Input.GetKeyUp(InputMan.PadJump) ) chute=true;
+		if (Input.GetKeyUp(InputMan.Up) || Input.GetKeyUp(KeyCode.Z) || Input.GetKeyUp(InputMan.PadJump) ) {jumpLocked = false;chute=true;}
 		
 		if(Input.GetKeyDown(InputMan.Action))
 		{
