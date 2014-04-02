@@ -2881,6 +2881,44 @@ MonoBehaviour:
   delayBegin: 0
   muted: 0
   activeState: 0
+--- !u!21 &65060074
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: OTMaterial-transparent
+  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 190095c4b6829db468d2234cb7fb6fdd, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _InvFade
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &66115302
 GameObject:
   m_ObjectHideFlags: 0
@@ -3449,6 +3487,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -4354,7 +4393,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1610725907}
+  - {fileID: 65060074}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -4464,7 +4503,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1320261260}
+  - {fileID: 402619003}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -5899,6 +5938,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -6254,6 +6294,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -6796,7 +6837,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1610725907}
+  - {fileID: 65060074}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -8305,7 +8346,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 955500904}
+  - {fileID: 1354734175}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -8635,6 +8676,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -9133,7 +9175,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1320261260}
+  - {fileID: 402619003}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -10008,7 +10050,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1610725907}
+  - {fileID: 65060074}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -10460,44 +10502,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 238220567}
   m_Mesh: {fileID: 357886742}
---- !u!21 &238222725
-Material:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: OTMaterial-transparent
-  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
-  m_ShaderKeywords: []
-  m_CustomRenderQueue: -1
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-      data:
-        first:
-          name: _MainTex
-        second:
-          m_Texture: {fileID: 2800000, guid: 6b11688477fc9784aafc923f5b54eb0a, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-    m_Floats:
-      data:
-        first:
-          name: _InvFade
-        second: 1
-    m_Colors:
-      data:
-        first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _TintColor
-        second: {r: .5, g: .5, b: .5, a: .5}
-      data:
-        first:
-          name: _EmisColor
-        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &238844749
 GameObject:
   m_ObjectHideFlags: 0
@@ -10992,7 +10996,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1610725907}
+  - {fileID: 65060074}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -12305,7 +12309,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1610725907}
+  - {fileID: 65060074}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -13601,6 +13605,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -14754,6 +14759,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -17346,6 +17352,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -18308,7 +18315,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 575036705}
+  - {fileID: 1864380375}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -18680,6 +18687,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -19136,6 +19144,44 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!21 &402619003
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: OTMaterial-transparent
+  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 006f7bf6c41bf374b9a9d760c6ae18df, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _InvFade
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &404073626
 GameObject:
   m_ObjectHideFlags: 0
@@ -20806,7 +20852,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1610725907}
+  - {fileID: 65060074}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -22599,7 +22645,7 @@ Prefab:
     - target: {fileID: 2300006, guid: 91b838f1f91c9ee49b76a61700f615b6, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 575036705}
+      objectReference: {fileID: 1864380375}
     - target: {fileID: 100014, guid: 91b838f1f91c9ee49b76a61700f615b6, type: 2}
       propertyPath: m_Name
       value: spr-15-1
@@ -22611,11 +22657,11 @@ Prefab:
     - target: {fileID: 2300010, guid: 91b838f1f91c9ee49b76a61700f615b6, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 575036705}
+      objectReference: {fileID: 1864380375}
     - target: {fileID: 2300000, guid: 91b838f1f91c9ee49b76a61700f615b6, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 509509112}
+      objectReference: {fileID: 1395017822}
     - target: {fileID: 3300000, guid: 91b838f1f91c9ee49b76a61700f615b6, type: 2}
       propertyPath: m_Mesh
       value: 
@@ -22675,7 +22721,7 @@ Prefab:
     - target: {fileID: 2300014, guid: 91b838f1f91c9ee49b76a61700f615b6, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1627862462}
+      objectReference: {fileID: 773829219}
     - target: {fileID: 3300014, guid: 91b838f1f91c9ee49b76a61700f615b6, type: 2}
       propertyPath: m_Mesh
       value: 
@@ -23167,7 +23213,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1610725907}
+  - {fileID: 65060074}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -23504,44 +23550,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 506346969}
   m_Mesh: {fileID: 1474697675}
---- !u!21 &509509112
-Material:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: OTMaterial-transparent
-  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
-  m_ShaderKeywords: []
-  m_CustomRenderQueue: -1
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-      data:
-        first:
-          name: _MainTex
-        second:
-          m_Texture: {fileID: 2800000, guid: 15d30b27af903494c8bb73094772a372, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-    m_Floats:
-      data:
-        first:
-          name: _InvFade
-        second: 1
-    m_Colors:
-      data:
-        first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _TintColor
-        second: {r: .5, g: .5, b: .5, a: .5}
-      data:
-        first:
-          name: _EmisColor
-        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &511356782
 GameObject:
   m_ObjectHideFlags: 0
@@ -24825,7 +24833,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 682412401}
+  - {fileID: 1493918526}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -26477,44 +26485,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 572791321}
   m_Mesh: {fileID: 361521752}
---- !u!21 &575036705
-Material:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: OTMaterial-transparent
-  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
-  m_ShaderKeywords: []
-  m_CustomRenderQueue: -1
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-      data:
-        first:
-          name: _MainTex
-        second:
-          m_Texture: {fileID: 2800000, guid: 3673517278aed7c458a4fa630396ea11, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-    m_Floats:
-      data:
-        first:
-          name: _InvFade
-        second: 1
-    m_Colors:
-      data:
-        first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _TintColor
-        second: {r: .5, g: .5, b: .5, a: .5}
-      data:
-        first:
-          name: _EmisColor
-        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &575462741
 GameObject:
   m_ObjectHideFlags: 0
@@ -27720,7 +27690,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 682412401}
+  - {fileID: 1493918526}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -27842,6 +27812,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -28251,7 +28222,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 575036705}
+  - {fileID: 1864380375}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -29138,7 +29109,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1320261260}
+  - {fileID: 402619003}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -30046,7 +30017,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 682412401}
+  - {fileID: 1493918526}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -30168,6 +30139,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -30818,6 +30790,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -31010,44 +30983,6 @@ Transform:
   m_Children:
   - {fileID: 802055623}
   m_Father: {fileID: 2021599348}
---- !u!21 &682412401
-Material:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: OTMaterial-transparent
-  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
-  m_ShaderKeywords: []
-  m_CustomRenderQueue: -1
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-      data:
-        first:
-          name: _MainTex
-        second:
-          m_Texture: {fileID: 2800000, guid: e85ad46854bab1e4dae79ffada6cebb1, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-    m_Floats:
-      data:
-        first:
-          name: _InvFade
-        second: 1
-    m_Colors:
-      data:
-        first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _TintColor
-        second: {r: .5, g: .5, b: .5, a: .5}
-      data:
-        first:
-          name: _EmisColor
-        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &684651913
 GameObject:
   m_ObjectHideFlags: 0
@@ -31221,6 +31156,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -32249,6 +32185,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -33307,7 +33244,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1320261260}
+  - {fileID: 402619003}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -33995,7 +33932,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1610725907}
+  - {fileID: 65060074}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -35458,6 +35395,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -35676,6 +35614,44 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 772312981}
   m_Mesh: {fileID: 1437734470}
+--- !u!21 &773829219
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: OTMaterial-transparent
+  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 2fc676781c9fe6b4ca6286caad1f7cbd, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _InvFade
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!43 &778288226
 Mesh:
   m_ObjectHideFlags: 0
@@ -38020,6 +37996,44 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!21 &834297006
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: OTMaterial-transparent
+  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: e26e1cf59ca572d49a7bf76b465b2d9d, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _InvFade
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &836085328
 GameObject:
   m_ObjectHideFlags: 0
@@ -38359,7 +38373,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1610725907}
+  - {fileID: 65060074}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -39892,6 +39906,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -40607,6 +40622,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -41200,6 +41216,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -41450,6 +41467,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -41620,7 +41638,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1610725907}
+  - {fileID: 65060074}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -41740,7 +41758,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1167074034}
+  - {fileID: 1594524633}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -42583,7 +42601,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1627862462}
+  - {fileID: 773829219}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -43317,44 +43335,6 @@ Mesh:
     m_Extent: {x: .5, y: .5, z: 0}
   m_MeshUsageFlags: 0
   m_MeshOptimized: 0
---- !u!21 &955500904
-Material:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: OTMaterial-transparent
-  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
-  m_ShaderKeywords: []
-  m_CustomRenderQueue: -1
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-      data:
-        first:
-          name: _MainTex
-        second:
-          m_Texture: {fileID: 2800000, guid: 69b4745a57d9590439ff9b3af0627b97, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-    m_Floats:
-      data:
-        first:
-          name: _InvFade
-        second: 1
-    m_Colors:
-      data:
-        first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _TintColor
-        second: {r: .5, g: .5, b: .5, a: .5}
-      data:
-        first:
-          name: _EmisColor
-        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &957077487
 GameObject:
   m_ObjectHideFlags: 0
@@ -43475,6 +43455,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -43584,7 +43565,7 @@ Prefab:
     - target: {fileID: 2300000, guid: cd2d05b06fc22b04f88fa8ab270a8000, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1320261260}
+      objectReference: {fileID: 402619003}
     - target: {fileID: 3300000, guid: cd2d05b06fc22b04f88fa8ab270a8000, type: 2}
       propertyPath: m_Mesh
       value: 
@@ -43867,6 +43848,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -46541,7 +46523,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1167074034}
+  - {fileID: 1594524633}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -47822,6 +47804,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -51262,7 +51245,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 955500904}
+  - {fileID: 1354734175}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -54557,7 +54540,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1610725907}
+  - {fileID: 65060074}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -54573,44 +54556,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1165775669}
   m_Mesh: {fileID: 1440543800}
---- !u!21 &1167074034
-Material:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: OTMaterial-transparent
-  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
-  m_ShaderKeywords: []
-  m_CustomRenderQueue: -1
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-      data:
-        first:
-          name: _MainTex
-        second:
-          m_Texture: {fileID: 2800000, guid: c1f764155ee03694884b505ed53beb28, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-    m_Floats:
-      data:
-        first:
-          name: _InvFade
-        second: 1
-    m_Colors:
-      data:
-        first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _TintColor
-        second: {r: .5, g: .5, b: .5, a: .5}
-      data:
-        first:
-          name: _EmisColor
-        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!43 &1168922065
 Mesh:
   m_ObjectHideFlags: 0
@@ -57046,6 +56991,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -58393,6 +58339,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -58543,6 +58490,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -60596,6 +60544,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -61618,44 +61567,6 @@ Mesh:
     m_Extent: {x: .5, y: .5, z: 0}
   m_MeshUsageFlags: 0
   m_MeshOptimized: 0
---- !u!21 &1320261260
-Material:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: OTMaterial-transparent
-  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
-  m_ShaderKeywords: []
-  m_CustomRenderQueue: -1
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-      data:
-        first:
-          name: _MainTex
-        second:
-          m_Texture: {fileID: 2800000, guid: 006f7bf6c41bf374b9a9d760c6ae18df, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-    m_Floats:
-      data:
-        first:
-          name: _InvFade
-        second: 1
-    m_Colors:
-      data:
-        first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _TintColor
-        second: {r: .5, g: .5, b: .5, a: .5}
-      data:
-        first:
-          name: _EmisColor
-        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &1323378753
 GameObject:
   m_ObjectHideFlags: 0
@@ -62183,6 +62094,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -62621,6 +62533,44 @@ MonoBehaviour:
   delayBegin: 0
   muted: 0
   activeState: 0
+--- !u!21 &1354734175
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: OTMaterial-transparent
+  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 69b4745a57d9590439ff9b3af0627b97, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _InvFade
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &1357554275
 GameObject:
   m_ObjectHideFlags: 0
@@ -63071,7 +63021,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 509509112}
+  - {fileID: 1395017822}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -64492,6 +64442,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   action: 0
+--- !u!21 &1395017822
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: OTMaterial-transparent
+  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 15d30b27af903494c8bb73094772a372, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _InvFade
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &1395556215
 GameObject:
   m_ObjectHideFlags: 0
@@ -65339,6 +65327,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -67471,44 +67460,6 @@ Mesh:
     m_Extent: {x: .5, y: .5, z: 0}
   m_MeshUsageFlags: 0
   m_MeshOptimized: 0
---- !u!21 &1437585971
-Material:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: OTMaterial-transparent
-  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
-  m_ShaderKeywords: []
-  m_CustomRenderQueue: -1
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-      data:
-        first:
-          name: _MainTex
-        second:
-          m_Texture: {fileID: 2800000, guid: e26e1cf59ca572d49a7bf76b465b2d9d, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-    m_Floats:
-      data:
-        first:
-          name: _InvFade
-        second: 1
-    m_Colors:
-      data:
-        first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _TintColor
-        second: {r: .5, g: .5, b: .5, a: .5}
-      data:
-        first:
-          name: _EmisColor
-        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!43 &1437734470
 Mesh:
   m_ObjectHideFlags: 0
@@ -71079,6 +71030,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -71123,6 +71075,44 @@ MonoBehaviour:
   isVertical: 0
   splashed: 0
   paused: 0
+--- !u!21 &1493918526
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: OTMaterial-transparent
+  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: e85ad46854bab1e4dae79ffada6cebb1, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _InvFade
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &1499060368
 GameObject:
   m_ObjectHideFlags: 0
@@ -72481,6 +72471,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -74217,7 +74208,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 682412401}
+  - {fileID: 1493918526}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -75561,6 +75552,44 @@ MonoBehaviour:
     singleDuration: 0
     startIndex: 0
     _containerName: invasionSheet
+--- !u!21 &1594524633
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: OTMaterial-transparent
+  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: c1f764155ee03694884b505ed53beb28, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _InvFade
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &1595681080
 GameObject:
   m_ObjectHideFlags: 0
@@ -76098,44 +76127,6 @@ MonoBehaviour:
   shootFrequency: 2.29999995
   shootSpeed: 3.5
   myShootDir: 3
---- !u!21 &1610725907
-Material:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: OTMaterial-transparent
-  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
-  m_ShaderKeywords: []
-  m_CustomRenderQueue: -1
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-      data:
-        first:
-          name: _MainTex
-        second:
-          m_Texture: {fileID: 2800000, guid: 190095c4b6829db468d2234cb7fb6fdd, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-    m_Floats:
-      data:
-        first:
-          name: _InvFade
-        second: 1
-    m_Colors:
-      data:
-        first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _TintColor
-        second: {r: .5, g: .5, b: .5, a: .5}
-      data:
-        first:
-          name: _EmisColor
-        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &1613159078
 GameObject:
   m_ObjectHideFlags: 0
@@ -77668,44 +77659,6 @@ Mesh:
     m_Extent: {x: .5, y: .5, z: 0}
   m_MeshUsageFlags: 0
   m_MeshOptimized: 0
---- !u!21 &1627862462
-Material:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: OTMaterial-transparent
-  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
-  m_ShaderKeywords: []
-  m_CustomRenderQueue: -1
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-      data:
-        first:
-          name: _MainTex
-        second:
-          m_Texture: {fileID: 2800000, guid: 2fc676781c9fe6b4ca6286caad1f7cbd, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-    m_Floats:
-      data:
-        first:
-          name: _InvFade
-        second: 1
-    m_Colors:
-      data:
-        first:
-          name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _TintColor
-        second: {r: .5, g: .5, b: .5, a: .5}
-      data:
-        first:
-          name: _EmisColor
-        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &1627910487
 GameObject:
   m_ObjectHideFlags: 0
@@ -79963,6 +79916,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -82288,6 +82242,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -83576,7 +83531,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1437585971}
+  - {fileID: 834297006}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -84245,7 +84200,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1610725907}
+  - {fileID: 65060074}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -84594,6 +84549,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -85290,6 +85246,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -86908,6 +86865,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -87487,6 +87445,44 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 5, z: 2}
   m_Center: {x: 55.5, y: -27.5, z: 0}
+--- !u!21 &1864380375
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: OTMaterial-transparent
+  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 3673517278aed7c458a4fa630396ea11, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _InvFade
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &1869336965
 GameObject:
   m_ObjectHideFlags: 0
@@ -88060,7 +88056,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 1167074034}
+  - {fileID: 1594524633}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -89277,6 +89273,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -89927,7 +89924,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 238222725}
+  - {fileID: 1967810338}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -91165,6 +91162,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -92021,6 +92019,44 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.04166698, y: 2.14583302, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!21 &1967810338
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: OTMaterial-transparent
+  m_Shader: {fileID: 4800000, guid: 7a035098fd5643f4aaa8b4110a2d3207, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 6b11688477fc9784aafc923f5b54eb0a, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _InvFade
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
 --- !u!1 &1973287649
 GameObject:
   m_ObjectHideFlags: 0
@@ -92777,6 +92813,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -93908,6 +93945,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -96137,7 +96175,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 955500904}
+  - {fileID: 1354734175}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -96259,6 +96297,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -96409,6 +96448,7 @@ MonoBehaviour:
   onCrate: 0
   pushCrate: 0
   grabCrate: 0
+  jumpLocked: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
