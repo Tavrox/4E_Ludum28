@@ -188,6 +188,7 @@ public class LevelManager : MonoBehaviour {
 		MasterAudio.StopAllOfSound("level_theme_4");
 		MasterAudio.StopAllOfSound("level_theme_5");
 		MasterAudio.StopAllOfSound("boss_theme");
+		MasterAudio.StopAllPlaylists();
 		}
 	}
 	private void GameStart()
