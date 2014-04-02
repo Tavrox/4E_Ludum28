@@ -118,38 +118,60 @@ public class LevelManager : MonoBehaviour {
 			MasterAudio.PlaySound("intro");
 			break;
 		case 1:
-			MasterAudio.PlaySound("intro");
+			MasterAudio.PlaySound("tuto");
 			break;
 		case 2:
-			MasterAudio.PlaySound("level_theme_1");
+			playVariationMusic();
 			break;
 		case 3:
 			MasterAudio.PlaySound("boss_theme");
 			break;
 		case 4:
-			MasterAudio.PlaySound("level_theme_2");
+			playVariationMusic();
 			break;
 		case 5:
 			MasterAudio.PlaySound("boss_theme");
 			break;
 		case 6:
-			MasterAudio.PlaySound("level_theme_3");
+			playVariationMusic();
 			break;
 		case 7:
-			MasterAudio.PlaySound("level_theme_2");
+			MasterAudio.PlaySound("boss_theme");
 			break;
 		case 8:
-			MasterAudio.PlaySound("level_theme_3");
+			playVariationMusic();
 			break;
 		case 9:
-			MasterAudio.PlaySound("level_theme_2");
+			MasterAudio.PlaySound("boss_theme");
 			break;
 		case 10:
-			MasterAudio.PlaySound("level_theme_3");
+			playVariationMusic();
 			break;
 		case 11:
-			MasterAudio.PlaySound("level_theme_2");
+			MasterAudio.PlaySound("boss_theme");
 			break;
+		}
+	}
+	private void playVariationMusic() {
+		switch(chosenVariation) {
+			case 0:
+				MasterAudio.PlaySound("level_theme_1");
+				break;
+			case 1:
+				MasterAudio.PlaySound("level_theme_1");
+				break;
+			case 2:
+				MasterAudio.PlaySound("level_theme_2");
+				break;
+			case 3:
+				MasterAudio.PlaySound("level_theme_3");
+				break;
+			case 4:
+				MasterAudio.PlaySound("level_theme_4");
+				break;
+			case 5:
+				MasterAudio.PlaySound("level_theme_5");
+				break;
 		}
 	}
 	private void GameOver()
@@ -158,12 +180,13 @@ public class LevelManager : MonoBehaviour {
 		//playerDies();
 		MasterAudio.StopAllOfSound("bg");
 		MasterAudio.StopAllOfSound("intro");
+		MasterAudio.StopAllOfSound("tuto");
 		MasterAudio.StopAllOfSound("jam");
 		MasterAudio.StopAllOfSound("level_theme_1");
 		MasterAudio.StopAllOfSound("level_theme_2");
 		MasterAudio.StopAllOfSound("level_theme_3");
-		//	MasterAudio.StopAllOfSound("level_theme_4");
-		//	MasterAudio.StopAllOfSound("level_theme_5");
+		MasterAudio.StopAllOfSound("level_theme_4");
+		MasterAudio.StopAllOfSound("level_theme_5");
 		MasterAudio.StopAllOfSound("boss_theme");
 		}
 	}
