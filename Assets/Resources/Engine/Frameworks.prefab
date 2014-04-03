@@ -2948,6 +2948,38 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &100308
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400308}
+  - 114: {fileID: 11400316}
+  m_Layer: 0
+  m_Name: patrolerBossSheet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100310
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400310}
+  - 114: {fileID: 11400318}
+  m_Layer: 0
+  m_Name: patrolerBossAnims
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -4281,6 +4313,7 @@ Transform:
   - {fileID: 400190}
   - {fileID: 400130}
   - {fileID: 400230}
+  - {fileID: 400308}
   - {fileID: 400008}
   - {fileID: 400206}
   - {fileID: 400074}
@@ -4454,6 +4487,7 @@ Transform:
   - {fileID: 400118}
   - {fileID: 400064}
   - {fileID: 400218}
+  - {fileID: 400310}
   - {fileID: 400030}
   - {fileID: 400052}
   - {fileID: 400176}
@@ -4795,6 +4829,28 @@ Transform:
   m_Children:
   - {fileID: 400304}
   m_Father: {fileID: 400042}
+--- !u!4 &400308
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100308}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400222}
+--- !u!4 &400310
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100310}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400250}
 --- !u!82 &8200000
 AudioSource:
   m_ObjectHideFlags: 1
@@ -9374,7 +9430,7 @@ MonoBehaviour:
   _atlasDataFile: {fileID: 4900000, guid: 97ec9a62edd99374180f3fff603fa54c, type: 3}
   reloadData: 0
   bytesDataFile: 10505
-  id: 21
+  id: 20
 --- !u!114 &11400020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11100,7 +11156,7 @@ MonoBehaviour:
   _atlasDataFile: {fileID: 4900000, guid: 296c2c57bc61dcf4987fb2476c391a97, type: 3}
   reloadData: 0
   bytesDataFile: 36311
-  id: 27
+  id: 29
 --- !u!114 &11400090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11902,7 +11958,7 @@ MonoBehaviour:
   _atlasDataFile: {fileID: 4900000, guid: 75b52c69325b04049a60503013905d94, type: 3}
   reloadData: 0
   bytesDataFile: 3651
-  id: 10
+  id: 8
 --- !u!114 &11400130
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12177,7 +12233,7 @@ MonoBehaviour:
   _atlasDataFile: {fileID: 4900000, guid: 10e0a2f44c359ee479baf37ffd639020, type: 3}
   reloadData: 0
   bytesDataFile: 6940
-  id: 5
+  id: 6
 --- !u!114 &11400144
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12617,7 +12673,7 @@ MonoBehaviour:
   _atlasDataFile: {fileID: 4900000, guid: b022cc3be52659240bd2e98b4918c507, type: 3}
   reloadData: 0
   bytesDataFile: 8135
-  id: 34
+  id: 16
 --- !u!114 &11400150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13112,7 +13168,7 @@ MonoBehaviour:
   _atlasDataFile: {fileID: 4900000, guid: 9ff3c9b410a921041b2193fd126f0d24, type: 3}
   reloadData: 0
   bytesDataFile: 31352
-  id: 18
+  id: 17
 --- !u!114 &11400154
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13788,7 +13844,7 @@ MonoBehaviour:
   _atlasDataFile: {fileID: 4900000, guid: dfdf5ce969754c5439e9576d7a8363be, type: 3}
   reloadData: 0
   bytesDataFile: 1727
-  id: 15
+  id: 13
 --- !u!114 &11400202
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14595,7 +14651,7 @@ MonoBehaviour:
   _atlasDataFile: {fileID: 4900000, guid: 296c2c57bc61dcf4987fb2476c391a97, type: 3}
   reloadData: 0
   bytesDataFile: 36311
-  id: 39
+  id: 32
 --- !u!114 &11400220
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14851,7 +14907,7 @@ MonoBehaviour:
   _atlasDataFile: {fileID: 4900000, guid: 7f3d3e1d167181a4ba7dd771bf70b6b4, type: 3}
   reloadData: 0
   bytesDataFile: 15087
-  id: 26
+  id: 24
 --- !u!114 &11400224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14903,7 +14959,7 @@ MonoBehaviour:
   _atlasDataFile: {fileID: 4900000, guid: cfd96d83056ea9948a78df2c62e4305c, type: 3}
   reloadData: 0
   bytesDataFile: 2680
-  id: 16
+  id: 14
 --- !u!114 &11400226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15217,7 +15273,7 @@ MonoBehaviour:
   _atlasDataFile: {fileID: 4900000, guid: 954ba3237fd8f9c459ca218263d0ba3a, type: 3}
   reloadData: 0
   bytesDataFile: 9922
-  id: 24
+  id: 14
 --- !u!114 &11400240
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15353,7 +15409,7 @@ MonoBehaviour:
   _atlasDataFile: {fileID: 4900000, guid: 6e3138e5e5d36374baf1fada3978c7c6, type: 3}
   reloadData: 0
   bytesDataFile: 8456
-  id: 13
+  id: 14
 --- !u!114 &11400242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16318,6 +16374,221 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2f16942eb37f3245a18aa88437d9877, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11400316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd220758bd0b8b4685199267909af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: patrolerBossSheet
+  _sheetSize: {x: 2048, y: 4096}
+  texture: {fileID: 2800000, guid: 5999b77be5545e2428d8a240a304cec7, type: 3}
+  sizeTextures: []
+  generateSprites: 0
+  atlasData:
+  - name: blob_patrolBOSSDead0001
+    position: {x: 1, y: 1}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 1600, y: 250}
+    frameSize: {x: 1600, y: 250}
+    metaData: []
+  - name: blob_patrolBOSSDead0002
+    position: {x: 1, y: 252}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 1600, y: 250}
+    frameSize: {x: 1600, y: 250}
+    metaData: []
+  - name: blob_patrolBOSSDead0003
+    position: {x: 1, y: 503}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 1600, y: 250}
+    frameSize: {x: 1600, y: 250}
+    metaData: []
+  - name: blob_patrolBOSSDead0004
+    position: {x: 1, y: 754}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 1600, y: 250}
+    frameSize: {x: 1600, y: 250}
+    metaData: []
+  - name: blob_patrolBOSSDead0005
+    position: {x: 1, y: 1005}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 1600, y: 250}
+    frameSize: {x: 1600, y: 250}
+    metaData: []
+  - name: blob_patrolBOSSDead0006
+    position: {x: 1, y: 1256}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 1600, y: 250}
+    frameSize: {x: 1600, y: 250}
+    metaData: []
+  - name: blob_patrolBOSSDead0007
+    position: {x: 1, y: 1507}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 1600, y: 250}
+    frameSize: {x: 1600, y: 250}
+    metaData: []
+  - name: blob_patrolBOSSDead0008
+    position: {x: 1, y: 1758}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 1600, y: 250}
+    frameSize: {x: 1600, y: 250}
+    metaData: []
+  - name: blob_patrolBOSSDead0009
+    position: {x: 1, y: 2009}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 1600, y: 250}
+    frameSize: {x: 1600, y: 250}
+    metaData: []
+  - name: blob_patrolBOSSDead0010
+    position: {x: 1, y: 2260}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 1600, y: 250}
+    frameSize: {x: 1600, y: 250}
+    metaData: []
+  - name: blob_patrolBoss0001
+    position: {x: 1, y: 2511}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 250}
+    frameSize: {x: 500, y: 250}
+    metaData: []
+  - name: blob_patrolBoss0002
+    position: {x: 502, y: 2511}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 250}
+    frameSize: {x: 500, y: 250}
+    metaData: []
+  - name: blob_patrolBoss0003
+    position: {x: 1003, y: 2511}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 250}
+    frameSize: {x: 500, y: 250}
+    metaData: []
+  - name: blob_patrolBoss0004
+    position: {x: 1504, y: 2511}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 250}
+    frameSize: {x: 500, y: 250}
+    metaData: []
+  - name: blob_patrolBoss0005
+    position: {x: 1, y: 2762}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 250}
+    frameSize: {x: 500, y: 250}
+    metaData: []
+  - name: blob_patrolBoss0006
+    position: {x: 502, y: 2762}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 250}
+    frameSize: {x: 500, y: 250}
+    metaData: []
+  - name: blob_patrolBoss0007
+    position: {x: 1003, y: 2762}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 250}
+    frameSize: {x: 500, y: 250}
+    metaData: []
+  - name: blob_patrolBoss0008
+    position: {x: 1504, y: 2762}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 250}
+    frameSize: {x: 500, y: 250}
+    metaData: []
+  - name: blob_patrolBoss0009
+    position: {x: 1, y: 3013}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 250}
+    frameSize: {x: 500, y: 250}
+    metaData: []
+  - name: blob_patrolBoss0010
+    position: {x: 502, y: 3013}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 250}
+    frameSize: {x: 500, y: 250}
+    metaData: []
+  offsetSizing: 1
+  metaType: 
+  metaData: []
+  _atlasDataFile: {fileID: 4900000, guid: 068ce9f4ca4782245b341845b8d17750, type: 3}
+  reloadData: 0
+  bytesDataFile: 10802
+  id: 3
+--- !u!114 &11400318
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf791b8ec508eb4a94c7295007afe68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: patrolerBossAnims
+  _fps: 12.666667
+  _duration: 1.89473677
+  framesets:
+  - name: splash
+    container: {fileID: 11400316}
+    startFrame: 0
+    endFrame: 9
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 0
+    _containerName: patrolerBossSheet
+  - name: run
+    container: {fileID: 11400316}
+    startFrame: 10
+    endFrame: 19
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 10
+    _containerName: patrolerBossSheet
+  - name: teleportOUT
+    container: {fileID: 11400020}
+    startFrame: 8
+    endFrame: 11
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 20
+    _containerName: teleportContainer
 --- !u!132 &13200000
 GUIText:
   m_ObjectHideFlags: 1

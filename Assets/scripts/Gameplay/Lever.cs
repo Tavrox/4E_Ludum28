@@ -27,7 +27,8 @@ public class Lever : MonoBehaviour {
 			//GUI.Label(_myTimer, _myRemainingTime.ToString());
 			//myPos = Camera.main.WorldToScreenPoint(transform.position);
 			/*print(myPos);_myTimer = new Rect(15,15,20,20);*/}
-		if(myButtonType == btnType.TimedBtn) { animSprite.Play("timedlock");}
+		if(myButtonType == btnType.Lever || myButtonType == btnType.SequenceBtn) { animSprite.frameIndex=2;}
+		if(myButtonType == btnType.TimedBtn) { animSprite.frameIndex=1;animSprite.Play("timedlock");}
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
 		GameEventManager.GameStart += GameStart;
 	}
@@ -113,9 +114,12 @@ public class Lever : MonoBehaviour {
 			StopCoroutine("delayRetrigg");
 			StopCoroutine("resetLever");
 			collider.enabled=true;
+			
+			if(myButtonType == btnType.Lever || myButtonType == btnType.SequenceBtn) { animSprite.frameIndex=2;}
 			if(myButtonType == btnType.TimedBtn) { 
 				_myRemainingTime = delay;
 				_myTimer.text = _myRemainingTime.ToString();
+				animSprite.frameIndex=1;
 				animSprite.Play("timedlock");
 			}
 			else animSprite.Play("lock");
