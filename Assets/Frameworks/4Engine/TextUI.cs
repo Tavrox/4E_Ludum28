@@ -8,7 +8,7 @@ public class TextUI : MonoBehaviour {
 	[HideInInspector] public TextMesh _mesh;
 	public string DIALOG_ID = "NONE";
 	public string text;
-	public bool dontTranslate = false;
+	public bool dontTranslate = false, twinkleMessage;
 	public bool hasBeenTranslated = false;
 	[HideInInspector] public Color initColor;
 	public Color color;
@@ -25,8 +25,18 @@ public class TextUI : MonoBehaviour {
 			text = SETUP.TextSheet.TranslateSingle(this);
 			hasBeenTranslated = true;
 		}
+		if(twinkleMessage) {
+			//OTTween _tween = new OTTween(prefabSprite, 1f).Tween("alpha", 1f).PingPong();
+			//StartCoroutine("twinkle");
+			InvokeRepeating("twinkle",0,2f);
+		}
 	}
-	
+	private void twinkle () {
+	//IEnumerator twinkle() {
+		//yield return new WaitForSeconds(1f);
+		gameObject.GetComponent<MeshRenderer>().enabled = !gameObject.GetComponent<MeshRenderer>().enabled;
+		//StartCoroutine("twinkle");
+	}
 	void Update()
 	{
 		if (hasBeenTranslated == false)

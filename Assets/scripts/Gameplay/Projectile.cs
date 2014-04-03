@@ -61,7 +61,9 @@ public class Projectile : MonoBehaviour {
 //		}
 	}
 	void GameStart () {
-		Destroy(gameObject);
+		if(this != null && gameObject.activeInHierarchy) {
+			Destroy(gameObject);
+		}
 	}
 	IEnumerator delayDestroy(float delay) {
 		yield return new WaitForSeconds(delay);

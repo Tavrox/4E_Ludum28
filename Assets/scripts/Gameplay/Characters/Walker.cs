@@ -9,6 +9,7 @@ public class Walker : Enemy {
 	private Transform myspawnpos;
 	private bool walkSoundSwitch;
 	private bool activated;
+	private BoxCollider [] tabCol;
 	/***** ENNEMI BEGIN *****/
 
 	void Start()
@@ -20,6 +21,7 @@ public class Walker : Enemy {
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.FinishLevel += FinishLevel;
 		StartCoroutine("waitB4Gravity");
+		tabCol = gameObject.GetComponents<BoxCollider>();
 	}
 	private IEnumerator waitB4Gravity() {
 		yield return new WaitForSeconds(0.5f);
@@ -41,8 +43,10 @@ public class Walker : Enemy {
 		if(this != null && gameObject.activeInHierarchy) {
 			transform.position = new Vector3(spawnPos.x,spawnPos.y,0f);
 			enabled = true;
-			collider.enabled = true;
-			chasingPlayer = activated = false;
+			foreach(BoxCollider box in tabCol) {
+				box.enabled = true;
+			}
+			splashed = chasingPlayer = activated = false;
 			StartCoroutine("waitB4Gravity");
 		//}
 		}
@@ -99,11 +103,14 @@ public class Walker : Enemy {
 	public void getDamage(int damage) {
 		HP -= damage;
 		if(HP <=0) {
-			splashed=true;
+			splashed=true;activated=false;
 			StartCoroutine("hideAfterSplash",0.79f);
 		}
 	}
 	IEnumerator hideAfterSplash(float delay) {
+		foreach(BoxCollider box in tabCol) {
+			box.enabled = false;
+		}
 		yield return new WaitForSeconds(delay);
 		gameObject.transform.parent.gameObject.SetActive(false);
 	}

@@ -172,7 +172,7 @@ public class Character : MonoBehaviour
 		if((!grounded && (!Input.GetKey(InputMan.Up)) || Input.GetKey(InputMan.PadJump) ) || blockedUp) chute = true;
 		if(blockedUp) {addForce=hitUpBounceForce;/*gravityY += 150f;StartCoroutine("resetGravity");*/}
 		if(chute && grounded) {
-			if(Input.GetKey(InputMan.Up)  || Input.GetKey(KeyCode.Z) || Input.GetKey(InputMan.PadJump))jumpLocked=true;//StartCoroutine("lockJump");
+			//if(Input.GetKey(InputMan.Up)  || Input.GetKey(KeyCode.Z) || Input.GetKey(InputMan.PadJump))jumpLocked=true;//StartCoroutine("lockJump");
 			chute = false;MasterAudio.PlaySound("player_fall");}
 
 		// landed from fall/jump

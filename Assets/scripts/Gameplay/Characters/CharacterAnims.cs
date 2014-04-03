@@ -14,6 +14,7 @@ public class CharacterAnims : MonoBehaviour
 		FallLeft, FallRight ,
 		ShootLeft, ShootRight,
 		CrounchLeft, CrounchRight,
+		VictoryLeft, VictoryRight,
 		AttackLeft, AttackRight,
 	}
 	
@@ -32,6 +33,7 @@ public class CharacterAnims : MonoBehaviour
 	{
 		_character 	= GetComponent<Character>();
 		_player 	= GetComponent<Player>();
+		GameEventManager.FinishLevel += FinishLevel;
 	}
 	void Update() 
 	{
@@ -46,6 +48,11 @@ public class CharacterAnims : MonoBehaviour
 		Hurt();
 		Fall();
 		Paused();
+	}
+	private void FinishLevel() {
+		if(this != null && gameObject.activeInHierarchy) {
+			Victory();
+		}
 	}
 	private void Run()
 	{
@@ -87,6 +94,22 @@ public class CharacterAnims : MonoBehaviour
 		{
 			currentAnim = animDef.CrounchLeft;
 			animSprite.Play("crounch");
+		}
+	}
+	
+	private void Victory()
+	{
+		if(currentAnim != animDef.VictoryLeft && _character.facingDir == Character.facing.Left)
+		{
+			currentAnim = animDef.VictoryLeft;
+			animSprite.Play("stand"); // fall left
+			InvertSprite();
+		}
+		if(currentAnim != animDef.VictoryRight && _character.facingDir == Character.facing.Right)
+		{
+			currentAnim = animDef.VictoryRight;
+			animSprite.Play("stand"); // fall right
+			NormalScaleSprite();
 		}
 	}
 	private void Jump()

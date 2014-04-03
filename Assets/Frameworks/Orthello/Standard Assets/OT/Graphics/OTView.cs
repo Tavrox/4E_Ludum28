@@ -718,6 +718,7 @@ public class OTView : MonoBehaviour
 				
 				if (!position.Equals(targetPos))
 				{
+					//targetPos = new Vector2(FETool.Round(targetPos.x,1),FETool.Round(targetPos.y,1));
 					position = targetPos;
 					UpdateWorldRect();
 					if (onScreenChange!=null)

@@ -69,9 +69,16 @@ public class TriggeredDoor : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(0.3f);collider.enabled = true;
 		animSprite.PlayBackward("unlock");
+		yield return new WaitForSeconds(0.2f);		
+		if((_player.transform.position.x-thisTransform.position.x)<0 && (_player.transform.position.x-thisTransform.position.x)>-0.77f
+		   && Mathf.Abs(Vector2.Distance(_player.transform.position, thisTransform.position))<(5.812499f*this.transform.localScale.y))
+			_player.transform.position -= new Vector3(0.77f,0,0);
+		else if((_player.transform.position.x-thisTransform.position.x)>=0 && (_player.transform.position.x-thisTransform.position.x)<0.77f
+		        && Mathf.Abs(Vector2.Distance(_player.transform.position, thisTransform.position))<(5.812499f*this.transform.localScale.y)) 
+			_player.transform.position += new Vector3(0.77f,0,0);
 	}
 	public void explode() {
-		print ("EXPLOOOOOODE");
+		//print ("EXPLOOOOOODE");
 		collider.enabled = false;
 		animSprite.Play("destroy");
 	}

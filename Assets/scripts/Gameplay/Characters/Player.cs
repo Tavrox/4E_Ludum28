@@ -12,6 +12,9 @@ public class Player : Character {
 	public int angleRotation;
 	public bool isDead = false, locked = false, killedByBlob;
 	private bool walkSoundLeft;
+	//private Camera _mainCam;
+	//private LevelManager _lvlManager;
+	//private Vector3 _spawnVariation;
 	
 	private BoxCollider col;
 	// Use this for initialization
@@ -20,9 +23,10 @@ public class Player : Character {
 		base.Start();
 
 		StartCoroutine ("Wait");
-
+		//_mainCam = GameObject.Find("UI/Main Camera").GetComponent<Camera>();
 		OTAnimatingSprite _sprite = GetComponentInChildren<Transform>().GetComponentInChildren<OTAnimatingSprite>();
-
+		//_lvlManager = GameObject.Find("Level").GetComponent<LevelManager>();
+		//_spawnVariation = GameObject.Find("playerspawn"+_lvlManager.chosenVariation).transform.position;
 		_sprite.alpha = 0f;
 		OTTween _tween = new OTTween(_sprite,1f).Tween("alpha",1f);
 
@@ -40,12 +44,15 @@ public class Player : Character {
 		spawnPos = thisTransform.position;
 		isDead =false;
 		col = (BoxCollider)this.collider;
-		GameObject.Find("Frameworks/OT/View").GetComponent<OTView>().movementTarget = gameObject;
+		//GameObject.Find("Frameworks/OT/View").GetComponent<OTView>().movementTarget = gameObject;
+		
+		//_mainCam.transform.position = new Vector3(FETool.Round(_spawnVariation.x,2),FETool.Round(_spawnVariation.y,2),0f);
 
 	}
 	// Update is called once per frame
 	public void Update () 
 	{
+		//_mainCam.transform.position = new Vector3(FETool.Round(thisTransform.position.x,2),FETool.Round(thisTransform.position.y,2),0f);
 		if(!locked) checkInput();
 		UpdateMovement();
 		//		offsetCircles ();
@@ -101,6 +108,7 @@ public class Player : Character {
 		if (!jumpLocked && (Input.GetKeyDown(InputMan.Up)  || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(InputMan.PadJump)) /* && grounded*/) 
 		{ 
 			MasterAudio.PlaySound("player_jump");
+			jumpLocked=true;
 		}
 		if (Input.GetKeyUp(InputMan.Up) || Input.GetKeyUp(KeyCode.Z) || Input.GetKeyUp(InputMan.PadJump) ) {jumpLocked = false;chute=true;}
 		
@@ -135,7 +143,8 @@ public class Player : Character {
 		/*if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");*/
 		//if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");
 		
-		if(!grounded) {if(facingDir == facing.Right) col.center = new Vector3(0.2f, 0f, 0f);
+		if(!grounded && !(Input.GetKey("left shift") || Input.GetKey("right shift") || Input.GetKey(KeyCode.A))) {
+			if(facingDir == facing.Right) col.center = new Vector3(0.2f, 0f, 0f);
 			else col.center = new Vector3(-0.2f, 0f, 0f);
 			col.size = new Vector3(0.4f, col.size.y, col.size.z);
 		}

@@ -8,6 +8,12 @@ public class ArcBaseGroup : MonoBehaviour {
 	public List<BaseElectric> bases = new List<BaseElectric>();
 	public int nbCrates = 0;
 	
+	void Start () {
+		GameEventManager.GameStart += GameStart;
+		GameEventManager.GameOver += GameOver;
+		collider.enabled = false;
+		StartCoroutine("waitB4Restart");
+	}
 	void OnTriggerEnter(Collider _other)
 	{//print (_other.tag);
 		if (_other.CompareTag("Crate"))
@@ -27,5 +33,23 @@ public class ArcBaseGroup : MonoBehaviour {
 				foreach(BaseElectric _base in bases) _base.turnON();
 			}
 		}
+	}
+	
+	void GameStart() {
+		if(this != null && gameObject.activeInHierarchy) {
+			//active = false;
+			StartCoroutine("waitB4Restart");
+		}
+	}
+	void GameOver() {
+		if(this != null && gameObject.activeInHierarchy) {
+			//active = false;
+			collider.enabled = false;
+		}
+	}
+	IEnumerator waitB4Restart() {
+		yield return new WaitForSeconds(1f);
+		collider.enabled = true;
+		//active = true;
 	}
 }
