@@ -59,6 +59,8 @@ public class Lever : MonoBehaviour {
 		{
 			if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E)) && !seqLocked && !(myButtonType == btnType.TimedBtn && trigged))
 			{
+				collider.enabled=false;
+				StartCoroutine("delayReactivate");
 				FESound.playDistancedSound("lever",gameObject.transform, _player.transform,SND_minDist);//MasterAudio.PlaySound("lever");
 				trigged = !trigged;
 				if(trigged) {if(myButtonType == btnType.TimedBtn) animSprite.Play("timedunlock"); else animSprite.Play("unlock");}
@@ -74,6 +76,10 @@ public class Lever : MonoBehaviour {
 			}
 		}
 		
+	}
+	IEnumerator delayReactivate() {
+		yield return new WaitForSeconds(0.2f);
+		collider.enabled=true;
 	}
 	IEnumerator delayRetrigg() {
 		yield return new WaitForSeconds(delay);
@@ -106,6 +112,7 @@ public class Lever : MonoBehaviour {
 			StopCoroutine("waitB4Restart");
 			StopCoroutine("delayRetrigg");
 			StopCoroutine("resetLever");
+			collider.enabled=true;
 			if(myButtonType == btnType.TimedBtn) { 
 				_myRemainingTime = delay;
 				_myTimer.text = _myRemainingTime.ToString();

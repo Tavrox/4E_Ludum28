@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11400004}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400314}
   m_Layer: 0
   m_Name: FEEngine
   m_TagString: Untagged
@@ -9373,7 +9374,7 @@ MonoBehaviour:
   _atlasDataFile: {fileID: 4900000, guid: 97ec9a62edd99374180f3fff603fa54c, type: 3}
   reloadData: 0
   bytesDataFile: 10505
-  id: 20
+  id: 21
 --- !u!114 &11400020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16306,6 +16307,17 @@ MonoBehaviour:
   voiceLimitCount: 1
   isSoloed: 0
   isMuted: 0
+--- !u!114 &11400314
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f16942eb37f3245a18aa88437d9877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!132 &13200000
 GUIText:
   m_ObjectHideFlags: 1
