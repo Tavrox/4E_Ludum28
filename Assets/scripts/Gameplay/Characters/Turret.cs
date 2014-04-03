@@ -22,13 +22,15 @@ public class Turret : MonoBehaviour {
 
 	private void GameStart()
 	{
-		gameObject.GetComponent<TurretAnims>().animSprite.Play();
+		//gameObject.GetComponent<TurretAnims>().animSprite.Play();
 		//StartCoroutine("waitB4Shoot");
 	}
 
 	private void GameOver()
 	{
-		gameObject.GetComponent<TurretAnims>().animSprite.Stop();
+		//gameObject.GetComponent<TurretAnims>().animSprite.frameIndex=0;
+		//gameObject.GetComponent<TurretAnims>().animSprite.Stop();
+		//gameObject.GetComponent<TurretAnims>().animSprite.StopCoroutine("waitB4Restart");
 		//StopCoroutine("waitB4Shoot");
 		//StopCoroutine("shoot");
 	}
@@ -41,7 +43,6 @@ public class Turret : MonoBehaviour {
 		//yield return new WaitForSeconds(shootFrequency);
 		GameObject _proj = Instantiate (Resources.Load("Objects/Projectile")) as GameObject;
 		instProj = _proj.GetComponent<Projectile>();
-		Player _player = GameObject.Find("Player").GetComponent<Player>();
 //		if (transform.position.x < _player.transform.position.x - 800
 //		    && transform.position.x > _player.trans.position.x + 800
 //		    && transform.position.y < _player.trans.position.x - 600
@@ -74,9 +75,9 @@ public class Turret : MonoBehaviour {
 
 	void OnTriggerEnter(Collider _other)
 	{
-		if (_other.CompareTag("Player") == true && GameObject.Find("Player").GetComponent<Player>().isDead == false)
+		if (_other.CompareTag("Player") == true && _player.isDead == false)
 		{
-			GameObject.Find("Player").GetComponent<Player>().isDead = true;
+			_player.isDead = true;
 			GameEventManager.TriggerGameOver();
 		}
 	}

@@ -101,7 +101,7 @@ public class Player : Character {
 			shootLeft = false;
 			//if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");
 		}
-		if (!jumpLocked && (Input.GetKey(InputMan.Up)  || Input.GetKey(KeyCode.Z) || Input.GetKey(InputMan.PadJump))) 
+		if (/*!jumpLocked &&*/ (Input.GetKey(InputMan.Up)  || Input.GetKey(KeyCode.Z) || Input.GetKey(InputMan.PadJump))) 
 		{
 			isJump = true;
 		}

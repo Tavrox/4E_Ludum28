@@ -12,6 +12,8 @@ public class TurretAnims : MonoBehaviour {
 	{
 		animSprite.Play("attack");
 		turretShootFrequency = gameObject.GetComponent<Turret>().shootFrequency;
+		GameEventManager.GameOver += GameOver;
+		GameEventManager.GameStart += GameStart;
 		_myTurret = gameObject.GetComponent<Turret>();
 	}
 	void Update() 
@@ -25,5 +27,22 @@ public class TurretAnims : MonoBehaviour {
 		//print ("attendu");
 		stopped = false;
 		animSprite.Play(animSprite.frameIndex+1);
+	}
+	private void GameStart()
+	{
+		if(this != null && gameObject.activeInHierarchy) {
+		enabled = true;
+		animSprite.Play("attack");
+		//StartCoroutine("waitB4Shoot");
+		}
+	}
+	
+	private void GameOver()
+	{
+		if(this != null && gameObject.activeInHierarchy) {
+		enabled = false;
+		StopCoroutine("waitB4Restart");
+		animSprite.Stop();
+		}
 	}
 }
