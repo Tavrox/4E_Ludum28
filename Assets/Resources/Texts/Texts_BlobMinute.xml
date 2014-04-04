@@ -1,21 +1,22 @@
 <texts>	<info>			BLOBMINUTE							</info>		
 <info>	DIALOG_ID			ENGLISH			FRENCH			EN_COUNT	FR_COUNT	</info>	
 <entry id='	PLAY_BTN	'>	<english>	Play	</english>	<french>	Jouer	</french>	<info>	4	5	</info>	</entry>
-<entry id='	0-1_SPACE_INTERACT	'>	<english>	Press SPACE/nto interact	</english>	<french>	Appuyer sur/nEspace pour/ninteragir	</french>	<info>	24	35	</info>	</entry>
+<entry id='	0-1_SPACE_INTERACT	'>	<english>	Press E, S or DOWN/nto interact	</english>	<french>	Appuyer sur/nE, S ou BAS pour/ninteragir	</french>	<info>	31	40	</info>	</entry>
 <entry id='	0-2_SEQ_213	'>	<english>	SEQUENCED/nlever/n2 -> 1 -> 3	</english>	<french>	levier/nsequence/n2 -> 1 -> 3	</french>	<info>	29	29	</info>	</entry>
-<entry id='	0-2_SPACE_INTERACT	'>	<english>	Press SPACE/nto interact	</english>	<french>	Appuyer sur/nEspace pour/ninteragir	</french>	<info>	24	35	</info>	</entry>
+<entry id='	0-2_SPACE_INTERACT	'>	<english>	Press E, S or DOWN/nto interact	</english>	<french>	Appuyer sur/nE, S ou BAS pour/ninteragir	</french>	<info>	31	40	</info>	</entry>
 <entry id='	0-3_PULL_CRATE	'>	<english>	shift/n+ arrow/n= push	</english>	<french>	shift/n+ fleche/n= pousser	</french>	<info>	22	26	</info>	</entry>
 <entry id='	0-3_PUSH_CRATE	'>	<english>	shift/n+ arrow/n= pull	</english>	<french>	shift/n+ fleche/n= tirer	</french>	<info>	22	24	</info>	</entry>
-<entry id='	0-4_TELEPORT	'>	<english>	space/nto/teleport	</english>	<french>	espace/npour se/nteleporter	</french>	<info>	18	27	</info>	</entry>
+<entry id='	0-4_TELEPORT	'>	<english>	E,S or DOWN/nto/teleport	</english>	<french>	E, S ou BAS/npour se/nteleporter	</french>	<info>	24	32	</info>	</entry>
 <entry id='	0-4_RED_TELEPORT	'>	<english>	red/nteleport/= off	</english>	<french>	teleporteur/nrouge/n= inutilisable	</french>	<info>	19	34	</info>	</entry>
 <entry id='	0-5_JUMP	'>	<english>	jump !!	</english>	<french>	saute !!	</french>	<info>	7	8	</info>	</entry>
 <entry id='	0-5_FALL	'>	<english>	fall/nonly	</english>	<french>	juste une/nchute	</french>	<info>	10	16	</info>	</entry>
 <entry id='	0-5_SMALL_JUMP	'>	<english>	just a/nsmall/njump	</english>	<french>	juste un/npetit/nsaut	</french>	<info>	19	21	</info>	</entry>
-<entry id='	0-5_BLOB_IS_COMING	'>	<english>	The Blob/nis coming/nnow !	</english>	<french>	Le Blob/narrive/nmaintenant !	</french>	<info>	26	29	</info>	</entry>
+<entry id='	0-5_BLOB_IS_COMING	'>	<english>	Blob/nis coming/n !	</english>	<french>	Le Blob/narrive/nmaintenant !	</french>	<info>	19	29	</info>	</entry>
+<entry id='	0-5_WARNING	'>	<english>	WARNING	</english>	<french>	ATTENTION !	</french>	<info>	7	11	</info>	</entry>
 <entry id='	1-1_GG	'>	<english>	GG !	</english>	<french>	GG !	</french>	<info>	4	4	</info>	</entry>
 <entry id='	1-2_BLOB	'>	<english>	Bloooob !	</english>	<french>	Bloooob !	</french>	<info>	9	9	</info>	</entry>
+<entry id='	1-3_SEQ312	'>	<english>	3 -> 1 -> 2	</english>	<french>	3 -> 1 -> 2	</french>	<info>	11	11	</info>	</entry>
 <entry id='	1-3_RUNNING	'>	<english>	Blob is/n running out.	</english>	<french>	Blob is/n running out.	</french>	<info>	22	22	</info>	</entry>
-<entry id='	1-4_Toto	'>	<english>	0/0=0	</english>	<french>	0/0=0	</french>	<info>	5	5	</info>	</entry>
 <entry id='	1-4_RUSH	'>	<english>	R/nU/nS/nH	</english>	<french>	V/nI/nT/nE	</french>	<info>	10	10	</info>	</entry>
 <entry id='	1-5_LAST	'>	<english>	Last but not least.	</english>	<french>	Le meilleur pour la fin.	</french>	<info>	19	24	</info>	</entry>
 <entry id='	1-5_1SEQ123	'>	<english>	1 -> 2 -> 3	</english>	<french>	1 -> 2 -> 3	</french>	<info>	11	11	</info>	</entry>
@@ -25,14 +26,14 @@
 <entry id='	1BOSS_CUBE	'>	<english>	CUBE.	</english>	<french>	CUBE.	</french>	<info>	5	5	</info>	</entry>
 <entry id='	1BOSS_SEQ321	'>	<english>	3 -> 2 -> 1	</english>	<french>	3 -> 2 -> 1	</french>	<info>	11	11	</info>	</entry>
 <entry id='	1BOSS_TRAP	'>	<english>	TRAP.	</english>	<french>	PIEGE.	</french>	<info>	5	6	</info>	</entry>
-<entry id='	1BOSS_TOLDYOU	'>	<english>	I told you that it was a trap.	</english>	<french>	Je t'avais dit que c'était un piège.	</french>	<info>	30	36	</info>	</entry>
+<entry id='	1BOSS_TOLDYOU	'>	<english>	I told you that it was a trap.	</english>	<french>	Je t'avais dit que c'etait un piege.	</french>	<info>	30	36	</info>	</entry>
 <entry id='	2-1_CAB	'>	<english>	CAB	</english>	<french>	TAXI	</french>	<info>	3	4	</info>	</entry>
 <entry id='	2-2_SEQ_123	'>	<english>	SEQUENCED/nLever/n1 -> 2 -> 3	</english>	<french>	levier/nsequence/n1 -> 2 -> 3	</french>	<info>	29	29	</info>	</entry>
-<entry id='	2-4_DONT	'>	<english>	Don't killn/the blob	</english>	<french>	Ne tues pas/n le blob	</french>	<info>	20	21	</info>	</entry>
+<entry id='	2-4_DONT	'>	<english>	Don't killn/the blob	</english>	<french>	Ne tue pas/n le blob.	</french>	<info>	20	21	</info>	</entry>
 <entry id='	2-4_RUN	'>	<english>	RUN !	</english>	<french>	Cours !	</french>	<info>	5	7	</info>	</entry>
 <entry id='	2-5_SEQ_123	'>	<english>	SEQUENCED/nLever/n1 -> 2 -> 3	</english>	<french>	levier/nsequence/n1 -> 2 -> 3	</french>	<info>	29	29	</info>	</entry>
 <entry id='	2-5_FAST	'>	<english>	Be fast/n and smart !	</english>	<french>	Sois rapide/n et intelligent !	</french>	<info>	21	30	</info>	</entry>
-<entry id='	3-1_FAMOUS	'>	<english>	Blob me/nI'm famous	</english>	<french>	Blob me/nI'm famous	</french>	<info>	19	19	</info>	</entry>
+<entry id='	3-1_FAMOUS	'>	<english>	Blob me/nI'm famous.	</english>	<french>	Blob me/nI'm famous.	</french>	<info>	20	20	</info>	</entry>
 <entry id='	3-2_SEQ_123	'>	<english>	One, two, three go !	</english>	<french>	Et 1 et 2 et 3 !	</french>	<info>	20	16	</info>	</entry>
 <entry id='	3-2_CAKE	'>	<english>	The cake/nis a blob.	</english>	<french>	The cake/nis a blob.	</french>	<info>	20	20	</info>	</entry>
 <entry id='	3-3_PAIN	'>	<english>	No pain,/nno blob.	</english>	<french>	No pain,/nno blob.	</french>	<info>	18	18	</info>	</entry>
@@ -41,14 +42,15 @@
 <entry id='	3-5_SEQ_123	'>	<english>	Un, dos, tres, senor !	</english>	<french>	Un, dos, tres, senor !	</french>	<info>	22	22	</info>	</entry>
 <entry id='	3-5_LOVE	'>	<english>	AND IIIIII WILL ALWAYS/n BLOB YOUUUUUUU	</english>	<french>	AND IIIIII WILL ALWAYS/n BLOB YOUUUUUUU	</french>	<info>	39	39	</info>	</entry>
 <entry id='	3BOSS_RUN	'>	<english>	Run !	</english>	<french>	Cours !	</french>	<info>	5	7	</info>	</entry>
-<entry id='	3BOSS_BOUNCE	'>	<english>	Bounce !	</english>	<french>	Bondis !	</french>	<info>	8	8	</info>	</entry>
-<entry id='	3BOSS_ICARUS	'>	<english>	Be careful, Icarus !	</english>	<french>	Gaffe à tes ailes, Icare !	</french>	<info>	20	26	</info>	</entry>
-<entry id='	3BOSS_FAST	'>	<english>	Fast.	</english>	<french>	Court et rapide.	</french>	<info>	5	16	</info>	</entry>
-<entry id='	3BOSS_SAFE	'>	<english>	Safe.	</english>	<french>	Sécurité.	</french>	<info>	5	9	</info>	</entry>
+<entry id='	3BOSS_JUMP	'>	<english>	Jump !	</english>	<french>	Saute !	</french>	<info>	6	7	</info>	</entry>
+<entry id='	3BOSS_BOUNCE	'>	<english>	Bounce !/nDown ! Up !	</english>	<french>	Jump ! Bounce !	</french>	<info>	21	15	</info>	</entry>
+<entry id='	3BOSS_ICARUS	'>	<english>	Be careful, Icarus !	</english>	<french>	Gaffe a tes ailes, Icare !	</french>	<info>	20	26	</info>	</entry>
+<entry id='	3BOSS_FAST	'>	<english>	Fast	</english>	<french>	Court et/nrapide	</french>	<info>	4	16	</info>	</entry>
+<entry id='	3BOSS_SAFE	'>	<english>	Safe	</english>	<french>	Securite	</french>	<info>	4	8	</info>	</entry>
 <entry id='	3BOSS_LIE	'>	<english>	I lied.	</english>	<french>	J'ai menti.	</french>	<info>	7	11	</info>	</entry>
 <entry id='	3BOSS_STEPFAST	'>	<english>	That's one/n small step/n for a blob.	</english>	<french>	Un petit pas/n pour le blob.	</french>	<info>	37	28	</info>	</entry>
 <entry id='	3BOSS_STEPSAFE	'>	<english>	That's one/n small step for/n a blob.	</english>	<french>	Un petit pas/n pour le blob.	</french>	<info>	37	28	</info>	</entry>
-<entry id='	3BOSS_LEAP	'>	<english>	                   blob/nOne giant leap for blob/n                   blob	</english>	<french>	                    blob/nUn pas de géant pour blob/n                     blob.	</french>	<info>	73	79	</info>	</entry>
+<entry id='	3BOSS_LEAP	'>	<english>	                            blob/nOne giant leap for blob/n                            blob	</english>	<french>	                                blob/nUn pas de geant pour blob/n                                 blob.	</french>	<info>	91	103	</info>	</entry>
 <entry id='	BACK_BTN	'>	<english>	Back	</english>	<french>	Retour	</french>	<info>	4	6	</info>	</entry>
 <entry id='	CHOOSE_LVL	'>	<english>	Choose a level	</english>	<french>	Choisir un niveau	</french>	<info>	14	17	</info>	</entry>
 <entry id='	CREDITS_BTN	'>	<english>	Credits	</english>	<french>	Crédits	</french>	<info>	7	7	</info>	</entry>
