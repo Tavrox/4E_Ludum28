@@ -14068,7 +14068,7 @@ MonoBehaviour:
   deleteTexture: {fileID: 2800000, guid: f7ca255c7a49bbd42b6198828da08673, type: 3}
   busIndex: 0
   isExpanded: 1
-  groupMasterVolume: .615384638
+  groupMasterVolume: .349999994
   retriggerPercentage: 50
   curVariationMode: 0
   groupVariations:
@@ -17119,7 +17119,7 @@ MonoBehaviour:
   deleteTexture: {fileID: 2800000, guid: f7ca255c7a49bbd42b6198828da08673, type: 3}
   busIndex: 0
   isExpanded: 1
-  groupMasterVolume: .576923072
+  groupMasterVolume: .349999994
   retriggerPercentage: 50
   curVariationMode: 0
   groupVariations:
