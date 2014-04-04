@@ -58,7 +58,15 @@ public class MainTitleUI : MonoBehaviour
 		LevelChooser = FETool.findWithinChildren(gameObject, "LevelChooser");
 		Options = FETool.findWithinChildren(gameObject, "Options");
 		Cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-
+		TranslateAllInScene();
+	}
+	
+	public void TranslateAllInScene()
+	{
+		print ("translateScene");
+		SETUP.TextSheet.SetupTranslation(SETUP.ChosenLanguage);
+		TextUI[] allTxt = GameObject.FindObjectsOfType(typeof(TextUI)) as TextUI[];
+		SETUP.TextSheet.TranslateAll(ref allTxt);
 	}
 
 	public static GameSetup getSetup()

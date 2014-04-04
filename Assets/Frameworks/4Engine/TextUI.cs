@@ -19,30 +19,33 @@ public class TextUI : MonoBehaviour {
 		_mesh = GetComponent<TextMesh>();
 		initColor = color;
 		DIALOG_ID = gameObject.name;
-		if (hasBeenTranslated == false)
+	}
+
+	void Start()
+	{
+		if (hasBeenTranslated == false && dontTranslate == false)
 		{
-			SETUP.startTranslate(SETUP.ChosenLanguage);
-			text = SETUP.TextSheet.TranslateSingle(this);
-			hasBeenTranslated = true;
+			TranslateThis();
 		}
+		
 		if(twinkleMessage) {
 			//OTTween _tween = new OTTween(prefabSprite, 1f).Tween("alpha", 1f).PingPong();
 			//StartCoroutine("twinkle");
 			InvokeRepeating("twinkle",0,2f);
 		}
 	}
+	
 	private void twinkle () {
 	//IEnumerator twinkle() {
 		//yield return new WaitForSeconds(1f);
 		gameObject.GetComponent<MeshRenderer>().enabled = !gameObject.GetComponent<MeshRenderer>().enabled;
 		//StartCoroutine("twinkle");
-	}
+	}	
 	void Update()
 	{
-		if (hasBeenTranslated == false)
+		if (text != SETUP.TextSheet.TranslateSingle(this) && dontTranslate == false && hasBeenTranslated == true)
 		{
-			text = SETUP.TextSheet.TranslateSingle(this);
-			hasBeenTranslated = true;
+			hasBeenTranslated = false;
 		}
 		text = text.Replace("/n", "\n");
 		_mesh.text = text;
@@ -65,15 +68,17 @@ public class TextUI : MonoBehaviour {
 	}
 	public void TranslateThis()
 	{
-		SETUP.TextSheet.SetupTranslation(SETUP.ChosenLanguage);
-//		text = SETUP.TextSheet.TranslateSingle(this);
+		text = SETUP.TextSheet.TranslateSingle(this);
+//		print ("translateSingle" + DIALOG_ID);
 	}
 	public void TranslateAllInScene()
 	{
+		print ("translateScene");
 		SETUP.TextSheet.SetupTranslation(SETUP.ChosenLanguage);
 		TextUI[] allTxt = GameObject.FindObjectsOfType(typeof(TextUI)) as TextUI[];
 		SETUP.TextSheet.TranslateAll(ref allTxt);
 	}
+
 	public void resetAllDialogID()
 	{
 		TextUI[] allTxt = GameObject.FindObjectsOfType(typeof(TextUI)) as TextUI[];

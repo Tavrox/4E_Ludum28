@@ -15,12 +15,12 @@ public class DialogSheet : ScriptableObject {
 	{
 		currLanguage = _lang;
 		translated_texts = fillDicoText(currLanguage);
-//		Debug.Log (translated_texts +""+_lang);
+		Debug.Log (translated_texts +""+_lang);
 	}
 	public string TranslateSingle(TextUI _txt)
 	{
 		string result = _txt.text;
-		if (translateGame == true)
+		if (translateGame == true && _txt.dontTranslate != true)
 		{
 			if ( translated_texts.ContainsKey(_txt.DIALOG_ID) != false && _txt.DIALOG_ID != null)
 			{
@@ -29,7 +29,7 @@ public class DialogSheet : ScriptableObject {
 			}
 			else
 			{
-				Debug.Log(_txt.gameObject.name + "/" +  _txt.DIALOG_ID + " couldn't be found");
+				Debug.Log(_txt.gameObject.name + "/" +  _txt.DIALOG_ID + " couldn't be foundSINGLE");
 				_txt.hasBeenTranslated = false;
 				result = "NOT FOUND";
 			}
@@ -52,11 +52,11 @@ public class DialogSheet : ScriptableObject {
 				{
 					if (_tx.dontTranslate == false)
 					{
-						Debug.Log(_tx.gameObject.name + "/" +  _tx.DIALOG_ID + " couldn't be found");
+						Debug.Log(_tx.gameObject.name + "/" +  _tx.DIALOG_ID + " couldn't be foundALL");
 						_tx.text = "NOT FOUND";
 						_tx.hasBeenTranslated = false;
 					}
-				}	
+				}
 			}
 		}
 	}

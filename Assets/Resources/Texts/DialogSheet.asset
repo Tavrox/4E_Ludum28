@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: DialogSheet
   m_EditorClassIdentifier: 
   dialog_file: {fileID: 4900000, guid: 3e6e53a765d0d7a4dbcc0d60b813d241, type: 3}
-  translateGame: 0
+  translateGame: 1
