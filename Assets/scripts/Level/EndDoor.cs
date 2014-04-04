@@ -29,7 +29,7 @@ public class EndDoor : MonoBehaviour {
 	{
 		if (other.gameObject.CompareTag("Player") && !triggered)
 		{
-			if ((Input.GetKeyDown(InputMan.Action) || Input.GetKeyDown(InputMan.Action2)) && _player.hasFinalKey == true)
+			if ((Input.GetKeyDown(InputMan.Action) || Input.GetKeyDown(InputMan.Action2) || Input.GetKey(InputMan.Action3)) && _player.hasFinalKey == true)
 			{
 				sprite.frameIndex += 1;
 				triggered = _player.finishedLevel = true;
@@ -39,7 +39,7 @@ public class EndDoor : MonoBehaviour {
 				FinishLevel();
 				MasterAudio.PlaySound("key_door");
 			}
-			else if ((Input.GetKeyDown(InputMan.Action) || Input.GetKeyDown(InputMan.Action2))  && _player.hasFinalKey == false)
+			else if ((Input.GetKeyDown(InputMan.Action) || Input.GetKeyDown(InputMan.Action2) || Input.GetKey(InputMan.Action3))  && _player.hasFinalKey == false)
 			{
 				_UINeedKey.GetComponent<IngameUI>().fadeOut();
 

@@ -101,18 +101,18 @@ public class Player : Character {
 			shootLeft = false;
 			//if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");
 		}
-		if (/*!jumpLocked &&*/ (Input.GetKey(InputMan.Up)  || Input.GetKey(InputMan.Up2) || Input.GetKey(InputMan.PadJump))) 
+		if (/*!jumpLocked &&*/ (Input.GetKey(InputMan.Up)  || Input.GetKey(InputMan.Up2) || Input.GetKey(InputMan.Up3) || Input.GetKey(InputMan.PadJump))) 
 		{
 			isJump = true;
 		}
-		if (!jumpLocked && (Input.GetKeyDown(InputMan.Up)  || Input.GetKeyDown(InputMan.Up2) || Input.GetKeyDown(InputMan.PadJump)) /* && grounded*/) 
+		if (!jumpLocked && (Input.GetKeyDown(InputMan.Up)  || Input.GetKeyDown(InputMan.Up2) || Input.GetKey(InputMan.Up3) || Input.GetKeyDown(InputMan.PadJump)) /* && grounded*/) 
 		{ 
 			MasterAudio.PlaySound("player_jump");
 			jumpLocked=true;
 		}
-		if (Input.GetKeyUp(InputMan.Up) || Input.GetKeyUp(InputMan.Up2) || Input.GetKeyUp(InputMan.PadJump) ) {jumpLocked = false;chute=true;}
+		if (Input.GetKeyUp(InputMan.Up) || Input.GetKeyUp(InputMan.Up2) || Input.GetKey(InputMan.Up3) || Input.GetKeyUp(InputMan.PadJump) ) {jumpLocked = false;chute=true;}
 		
-		if(Input.GetKeyDown(InputMan.Action))
+		if(Input.GetKeyDown(InputMan.Action) || Input.GetKey(InputMan.Action2) || Input.GetKey(InputMan.Action3))
 		{
 			isPass = true;
 		}
@@ -124,7 +124,7 @@ public class Player : Character {
 		{
 			triggerPause();
 		}
-		if (Input.GetKeyDown(InputMan.Reset)) 
+		if (Input.GetKeyDown(InputMan.Reset) || Input.GetKey(InputMan.Reset2)) 
 		{
 			resetLevel();
 		}

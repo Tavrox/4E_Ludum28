@@ -9,9 +9,10 @@ public class Enemy : Character {
 	/***** ENNEMI BEGIN *****/
 	protected Transform target; //the enemy's target
 	
-	protected bool chasingPlayer, endChasingPlayer, patroling,canChangeDir=true;
+	protected bool endChasingPlayer, patroling,canChangeDir=true;
 	protected Vector3 direction;
-	
+	public bool chasingPlayer;
+
 	public float targetDetectionArea = 3f;
 	public float blockDetectionArea = 2f;
 	protected RaycastHit hitInfo; //infos de collision

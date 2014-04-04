@@ -21,17 +21,21 @@ public class InputManager : ScriptableObject {
 	[HideInInspector] public KeyCode Down = KeyCode.DownArrow;
 	[HideInInspector] public KeyCode Left = KeyCode.LeftArrow;
 	[HideInInspector] public KeyCode Right = KeyCode.RightArrow;
-	[HideInInspector] public KeyCode Action =  KeyCode.Space;
+	[HideInInspector] public KeyCode Action =  KeyCode.DownArrow;
 	[HideInInspector] public KeyCode Hold =  KeyCode.LeftShift;
 	[HideInInspector] public KeyCode Reset =  KeyCode.Backspace;
+	[HideInInspector] public KeyCode Reset2 =  KeyCode.R;
 	[HideInInspector] public KeyCode Pause =  KeyCode.Escape;
 	[HideInInspector] public KeyCode Up2 = KeyCode.Z;
 	[HideInInspector] public KeyCode Down2 = KeyCode.S;
 	[HideInInspector] public KeyCode Left2 = KeyCode.Q;
 	[HideInInspector] public KeyCode Right2 = KeyCode.D;
 	[HideInInspector] public KeyCode Action2 =  KeyCode.E;
+	[HideInInspector] public KeyCode Action3 =  KeyCode.S;
 	[HideInInspector] public KeyCode Hold2 =  KeyCode.A;
 	[HideInInspector] public KeyCode Hold3 =  KeyCode.RightShift;
+	
+	[HideInInspector] public KeyCode Up3 = KeyCode.Space;
 	[HideInInspector] public KeyCode PauseMenu =  KeyCode.Escape;
 
 	[HideInInspector] public string PadAction;
