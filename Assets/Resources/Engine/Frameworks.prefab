@@ -2980,6 +2980,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &100312
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400312}
+  - 114: {fileID: 11400320}
+  m_Layer: 0
+  m_Name: screen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -4318,6 +4334,7 @@ Transform:
   - {fileID: 400206}
   - {fileID: 400074}
   - {fileID: 400102}
+  - {fileID: 400312}
   - {fileID: 400010}
   - {fileID: 400188}
   - {fileID: 400136}
@@ -4851,6 +4868,17 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400250}
+--- !u!4 &400312
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100312}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400222}
 --- !u!82 &8200000
 AudioSource:
   m_ObjectHideFlags: 1
@@ -9430,7 +9458,7 @@ MonoBehaviour:
   _atlasDataFile: {fileID: 4900000, guid: 97ec9a62edd99374180f3fff603fa54c, type: 3}
   reloadData: 0
   bytesDataFile: 10505
-  id: 20
+  id: 21
 --- !u!114 &11400020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11155,8 +11183,8 @@ MonoBehaviour:
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: 296c2c57bc61dcf4987fb2476c391a97, type: 3}
   reloadData: 0
-  bytesDataFile: 36311
-  id: 29
+  bytesDataFile: 37295
+  id: 28
 --- !u!114 &11400090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -14650,8 +14678,8 @@ MonoBehaviour:
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: 296c2c57bc61dcf4987fb2476c391a97, type: 3}
   reloadData: 0
-  bytesDataFile: 36311
-  id: 32
+  bytesDataFile: 37295
+  id: 40
 --- !u!114 &11400220
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16589,6 +16617,37 @@ MonoBehaviour:
     singleDuration: 0
     startIndex: 20
     _containerName: teleportContainer
+--- !u!114 &11400320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd220758bd0b8b4685199267909af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: screen
+  _sheetSize: {x: 512, y: 256}
+  texture: {fileID: 2800000, guid: 57752911204291141ba5f531e9a48504, type: 3}
+  sizeTextures: []
+  generateSprites: 0
+  atlasData:
+  - name: screenOne
+    position: {x: 0, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 300, y: 200}
+    frameSize: {x: 300, y: 200}
+    metaData: []
+  offsetSizing: 1
+  metaType: 
+  metaData: []
+  _atlasDataFile: {fileID: 4900000, guid: 1834b466331634c44af27d0f8f96d1f7, type: 3}
+  reloadData: 0
+  bytesDataFile: 1276
+  id: 3
 --- !u!132 &13200000
 GUIText:
   m_ObjectHideFlags: 1

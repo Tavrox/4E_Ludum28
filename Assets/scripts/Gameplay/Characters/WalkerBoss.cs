@@ -8,7 +8,7 @@ public class WalkerBoss : Enemy {
 	private Player _player;
 	private Transform myspawnpos;
 	private bool walkSoundSwitch;
-	private bool activated;
+	public bool activated;
 	private float moveVelIni;
 	/***** ENNEMI BEGIN *****/
 
