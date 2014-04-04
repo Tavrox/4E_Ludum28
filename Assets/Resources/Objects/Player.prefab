@@ -45,7 +45,6 @@ GameObject:
   - 114: {fileID: 11400004}
   - 54: {fileID: 5400000}
   - 65: {fileID: 6500000}
-  - 114: {fileID: 11400028}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -337,7 +336,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.3955574, y: -10.8101788, z: -2}
+  m_LocalPosition: {x: 34.4556961, y: -31.4897366, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -507,7 +506,7 @@ Transform:
   m_GameObject: {fileID: 100032}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.99999619, y: 4.09999752, z: 1}
+  m_LocalScale: {x: 6.01999617, y: 4.09999752, z: 1}
   m_Children: []
   m_Father: {fileID: 400034}
 --- !u!4 &400034
@@ -1338,23 +1337,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   action: 0
---- !u!114 &11400028
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd119fcfaf9f6394ca6ce278cd6354ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PROFILE: {fileID: 0}
-  SETUP: {fileID: 0}
-  GlobalVolume: 1
-  globalVolMuted: 0
-  musicVolume: 1
-  musicVolMuted: 0
 --- !u!114 &11400032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1368,7 +1350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: spr-HUDLevels
   _position: {x: 0, y: 0}
-  _size: {x: 5.99999619, y: 4.09999752}
+  _size: {x: 6.01999617, y: 4.09999752}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -1390,8 +1372,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: spr-HUDLevels
-  oSize: {x: 6.25, y: 4.27083349}
-  imageSize: {x: 5.99999619, y: 4.09999752}
+  oSize: {x: 6.27083349, y: 4.27083349}
+  imageSize: {x: 6.01999617, y: 4.09999752}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -1403,8 +1385,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 0
-  _frameName: Camera_02
+  _frameIndex: 4
+  _frameName: Camera_12
   _spriteContainer: {fileID: 0}
   _containerName: HUDLevels
   _newSprite: 0

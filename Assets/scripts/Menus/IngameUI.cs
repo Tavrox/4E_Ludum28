@@ -62,6 +62,8 @@ public class IngameUI : MonoBehaviour {
 		gameObject.SetActive(false);
 	}
 	void GameStart () {		
+		if(this != null && gameObject.activeInHierarchy) {
 		gameObject.SetActive(true);
+		}
 	}
 }

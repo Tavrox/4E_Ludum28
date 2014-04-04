@@ -100,7 +100,8 @@ public class LevelManager : MonoBehaviour {
 					_gameo.gameObject.SetActive(false);
 				}
 			}
-			if(player.gameObject != null) player.transform.position = player.spawnPos = GameObject.Find("playerspawn"+chosenVariation).transform.position;
+			if(player.gameObject != null) {player.transform.position = player.spawnPos = GameObject.Find("playerspawn"+chosenVariation).transform.position;
+				player.enabled=true;}
 			
 			TranslateAllInScene();
 			GameEventManager.TriggerGameStart();
@@ -109,7 +110,8 @@ public class LevelManager : MonoBehaviour {
 			//chosenVariation = 0;
 			GameEventManager.TriggerNextLevel();
 			GameEventManager.NextInstance -= NextInstance;
-			DestroyImmediate(this.gameObject);}
+			DestroyImmediate(this.gameObject);
+		}
 	}
 	private void NextLevel ()
 	{
@@ -212,7 +214,8 @@ public class LevelManager : MonoBehaviour {
 	public void TranslateAllInScene()
 	{
 		print ("translateScene");
-		_pdata = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerData>();
+		_pdata = GameObject.FindGameObjectWithTag("PlayerData").GetComponent<PlayerData>();
+		_pdata.trans();
 		_pdata.SETUP.TextSheet.SetupTranslation(_pdata.SETUP.ChosenLanguage);
 		TextUI[] allTxt = GameObject.FindObjectsOfType(typeof(TextUI)) as TextUI[];
 		_pdata.SETUP.TextSheet.TranslateAll(ref allTxt);

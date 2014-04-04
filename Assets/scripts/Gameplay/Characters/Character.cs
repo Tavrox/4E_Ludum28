@@ -267,7 +267,7 @@ public class Character : MonoBehaviour
 			}
 			BlockedDown();
 		}
-
+		//print(Physics.Raycast(mypos, Vector3.up, out hitInfo, halfMyY, groundMask));
 		// BLOCKED TO UP
 		if (Physics.Raycast(mypos, Vector3.up, out hitInfo, halfMyY, groundMask))
 		{

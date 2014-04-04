@@ -208,13 +208,11 @@ public class Player : Character {
 			enabled = true;
 		
 			finishedLevel=killedByBlob = false;
-		enabled = true;
 		collider.enabled=true;
 		isJump = false;
 		chute = true;
 		vectorMove.y = 0;
 		angleRotation = 0;
-		enabled = true;
 		isDead = false;
 		}
 	}
