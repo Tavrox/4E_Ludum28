@@ -3056,7 +3056,7 @@ GameObject:
   - 164: {fileID: 16400140}
   - 166: {fileID: 16600140}
   m_Layer: 0
-  m_Name: boss_moaning_1
+  m_Name: boss_moaning_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3079,7 +3079,7 @@ GameObject:
   - 164: {fileID: 16400142}
   - 166: {fileID: 16600142}
   m_Layer: 0
-  m_Name: boss_moaning_2
+  m_Name: boss_moaning_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3409,8 +3409,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 400318}
   - {fileID: 400320}
+  - {fileID: 400318}
   - {fileID: 400316}
   - {fileID: 400314}
   m_Father: {fileID: 400042}
@@ -9405,7 +9405,7 @@ AudioSource:
   m_GameObject: {fileID: 100318}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 0f05217d807c85c43a5a5c19bb64d79c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1ff5bcfb603244a4f9250b556ca14fb3, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -9463,7 +9463,7 @@ AudioSource:
   m_GameObject: {fileID: 100320}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 1ff5bcfb603244a4f9250b556ca14fb3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0f05217d807c85c43a5a5c19bb64d79c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -9665,7 +9665,7 @@ MonoBehaviour:
   weight: 1
   randomPitch: 0
   randomVolume: 0
-  possibleName: boss_moaning_1
+  possibleName: boss_moaning_2
   audLocation: 0
   resourceFileName: 
   useFades: 0
@@ -10731,8 +10731,8 @@ MonoBehaviour:
   retriggerPercentage: 50
   curVariationMode: 0
   groupVariations:
-  - {fileID: 11400010}
   - {fileID: 11400322}
+  - {fileID: 11400010}
   - {fileID: 11400004}
   - {fileID: 11400002}
   bulkVariationMode: 0
@@ -15293,7 +15293,7 @@ MonoBehaviour:
   _atlasDataFile: {fileID: 4900000, guid: 296c2c57bc61dcf4987fb2476c391a97, type: 3}
   reloadData: 0
   bytesDataFile: 36311
-  id: 43
+  id: 34
 --- !u!114 &11400220
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17277,7 +17277,7 @@ MonoBehaviour:
   weight: 1
   randomPitch: 0
   randomVolume: 0
-  possibleName: boss_moaning_2
+  possibleName: boss_moaning_1
   audLocation: 0
   resourceFileName: 
   useFades: 0
