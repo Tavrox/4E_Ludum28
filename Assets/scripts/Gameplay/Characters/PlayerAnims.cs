@@ -18,6 +18,7 @@ public class PlayerAnims : MonoBehaviour
 		PushCrateLeft, PushCrateRight,
 		GrabCrateLeft, GrabCrateRight,
 		DeathBlobLeft, DeathBlobRight,
+		VictoryLeft, VictoryRight,
 		TeleportINRight, TeleportINLeft,
 		TeleportOUTRight, TeleportOUTLeft
 	}
@@ -29,7 +30,7 @@ public class PlayerAnims : MonoBehaviour
 	private animDef currentAnim;
 	private Character _character;
 	private Player _player;
-	private bool stopped;
+	private bool stopped, victoryAnim;
 	
 	private bool animPlaying = false;
 	
@@ -39,9 +40,12 @@ public class PlayerAnims : MonoBehaviour
 		_character 	= GetComponent<Character>();
 		_player 	= GetComponent<Player>();
 		anim = GameObject.Find("playerAnims").GetComponent<OTAnimation>();
+		GameEventManager.FinishLevel += FinishLevel;
+		GameEventManager.GameStart += GameStart;
 	}
 	void Update() 
 	{
+		if(!victoryAnim) {
 		// Order of action matters, they need to have priorities. //
 		if(animSprite.frameIndex == 23) {animPlaying=false;anim.fps = 12.66667f;_player.locked=false;} //stop teleport
 		if(animSprite.frameIndex == 38 && !stopped) {stopped=true;animSprite.Pauze();StartCoroutine("waitB4Restart",2.5f);} //deathBlob pause
@@ -63,6 +67,36 @@ public class PlayerAnims : MonoBehaviour
 		DeathBlob();
 		//print (currentAnim);
 		if(_character.grounded) animSprite.looping = true;
+		}
+	}
+	
+	private void GameStart() {
+		victoryAnim = false;
+	}
+	private void FinishLevel() {
+		if(this != null && gameObject.activeInHierarchy) {
+			Victory();
+		}
+	}
+	
+	private void Victory()
+	{
+		if(currentAnim != animDef.VictoryLeft && _character.facingDir == Character.facing.Left)
+		{
+			victoryAnim = true;
+			currentAnim = animDef.VictoryLeft;
+			animSprite.Play("stand"); // fall left
+			InvertSprite();
+			_player.isRight = _player.isLeft = false;
+		}
+		if(currentAnim != animDef.VictoryRight && _character.facingDir == Character.facing.Right)
+		{
+			victoryAnim = true;
+			currentAnim = animDef.VictoryRight;
+			animSprite.Play("stand"); // fall right
+			NormalScaleSprite();
+			_player.isRight = _player.isLeft = false;
+		}
 	}
 	private IEnumerator waitB4Restart (float delayRestart) {//print ("attend");
 		yield return new WaitForSeconds(delayRestart);

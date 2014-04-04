@@ -10,7 +10,8 @@ public class EndDoor : MonoBehaviour {
 	private GameObject _UINeedKey;
 	private Timer _lvlTimer;
 	//private PlayerData _playerdata;
-
+	
+	public InputManager InputMan;
 
 	void Start() {
 		_player = GameObject.Find("Player").GetComponent<Player>();
@@ -20,23 +21,25 @@ public class EndDoor : MonoBehaviour {
 		GameEventManager.NextLevel += NextLevel;
 		GameEventManager.NextInstance += NextInstance;
 		GameEventManager.FinishLevel += FinishLevel;
+		InputMan = Instantiate(Resources.Load("Tuning/InputManager")) as InputManager;
+		InputMan.Setup();
 	}
 
 	void OnTriggerStay(Collider other)
 	{
 		if (other.gameObject.CompareTag("Player") && !triggered)
 		{
-			if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E)) && _player.hasFinalKey == true)
+			if ((Input.GetKeyDown(InputMan.Action) || Input.GetKeyDown(InputMan.Action2)) && _player.hasFinalKey == true)
 			{
 				sprite.frameIndex += 1;
-				triggered = true;
+				triggered = _player.finishedLevel = true;
 				StartCoroutine("lastFrameBuzzer");
 				//Destroy (_UINeedKey);
 				GameEventManager.TriggerFinishLevel();
 				FinishLevel();
 				MasterAudio.PlaySound("key_door");
 			}
-			else if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E))  && _player.hasFinalKey == false)
+			else if ((Input.GetKeyDown(InputMan.Action) || Input.GetKeyDown(InputMan.Action2))  && _player.hasFinalKey == false)
 			{
 				_UINeedKey.GetComponent<IngameUI>().fadeOut();
 

@@ -19,6 +19,8 @@ public class Lever : MonoBehaviour {
 	//public Vector3 myPos;
 	//public GUIText _myCpt;
 	public TextMesh _myTimer;
+	public InputManager InputMan;
+
 	void Start () {
 		if(myButtonType == btnType.TimedBtn) {
 			_myTimer = gameObject.GetComponentInChildren<TextMesh>();
@@ -31,6 +33,8 @@ public class Lever : MonoBehaviour {
 		if(myButtonType == btnType.TimedBtn) { animSprite.frameIndex=1;animSprite.Play("timedlock");}
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
 		GameEventManager.GameStart += GameStart;
+		InputMan = Instantiate(Resources.Load("Tuning/InputManager")) as InputManager;
+		InputMan.Setup();
 	}
 	void Update () {
 		//_myTimer= new Rect(myPos.x,myPos.y,20,20);
@@ -58,7 +62,7 @@ public class Lever : MonoBehaviour {
 	{
 		if (other.gameObject.CompareTag("Player"))
 		{
-			if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E)) && !seqLocked && !(myButtonType == btnType.TimedBtn && trigged))
+			if ((Input.GetKeyDown(InputMan.Action) || Input.GetKeyDown(InputMan.Action2)) && !seqLocked && !(myButtonType == btnType.TimedBtn && trigged))
 			{
 				collider.enabled=false;
 				StartCoroutine("delayReactivate");

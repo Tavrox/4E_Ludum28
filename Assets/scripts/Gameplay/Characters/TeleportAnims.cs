@@ -29,6 +29,7 @@ public class TeleportAnims : MonoBehaviour
 	public bool isOUT;
 	
 	private bool animPlaying = false, playerCollision;
+	public InputManager InputMan;
 	
 	// Use this for initialization
 	void Start () 
@@ -40,6 +41,9 @@ public class TeleportAnims : MonoBehaviour
 		else animSprite.Play("default");
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GameOver += GameOver;
+		
+		InputMan = Instantiate(Resources.Load("Tuning/InputManager")) as InputManager;
+		InputMan.Setup();
 	}
 	void Update() 
 	{
@@ -59,7 +63,7 @@ public class TeleportAnims : MonoBehaviour
 	{
 		if(other.gameObject.CompareTag("Player") && !isOUT) 
 		{
-			if (Input.GetKeyDown(KeyCode.Space) && !_player.locked) {
+			if ((Input.GetKeyDown(InputMan.Action) || Input.GetKeyDown(InputMan.Action2)) && !_player.locked) {
 				FESound.playDistancedSound("teleport_in",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("teleport_in");
 				animSprite.Play("teleport");
 				//_player.enabled = false;
