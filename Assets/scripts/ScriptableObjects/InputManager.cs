@@ -58,6 +58,27 @@ public class InputManager : ScriptableObject {
 		PadAction = Xpad_X;
 		PadHold = Xpad_B;
 		PadReset = Xpad_BACK;
+
+		Up = KeyCode.UpArrow;
+		Down = KeyCode.DownArrow;
+		Left = KeyCode.LeftArrow;
+		Right = KeyCode.RightArrow;
+		Action =  KeyCode.DownArrow;
+		Hold =  KeyCode.LeftShift;
+		Reset =  KeyCode.Backspace;
+		Reset2 =  KeyCode.R;
+		Pause =  KeyCode.Escape;
+		Up2 = KeyCode.Z;
+		Down2 = KeyCode.S;
+		Left2 = KeyCode.Q;
+		Right2 = KeyCode.D;
+		Action2 =  KeyCode.E;
+		Action3 =  KeyCode.S;
+		Hold2 =  KeyCode.A;
+		Hold3 =  KeyCode.RightShift;
+		
+		Up3 = KeyCode.Space;
+		PauseMenu =  KeyCode.Escape;
 	}
 
 }
