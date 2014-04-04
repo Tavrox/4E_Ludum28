@@ -9,6 +9,7 @@ public class Projectile : MonoBehaviour {
 	private Transform myTransform;
 	public Vector3 posIni;
 	private bool killedPlay = false;
+	private Player _player;
 
 	//[HideInInspector] public Player player;
 	
@@ -18,6 +19,7 @@ public class Projectile : MonoBehaviour {
 	void Start () {
 		myTransform = transform;
 		animSprite.Play("default");
+		_player = GameObject.Find("Player").GetComponent<Player>();
 		GameEventManager.GameOver += GameOver;
 //		player = GameObject.FindWithTag("Player").GetComponent<PlayerPop>();
 //		if(player.shootLeft == true) direction = Vector3.left;
@@ -27,6 +29,7 @@ public class Projectile : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+		if (animSprite.frameIndex == 5) Destroy(gameObject);
 		if(myTransform.position.x > (posIni.x + 70f) || myTransform.position.x < (posIni.x - 70f)) {
 			Destroy(gameObject);
 		}
@@ -35,7 +38,6 @@ public class Projectile : MonoBehaviour {
 		}
 		
 		if(!killedPlay) myTransform.Translate(direction * ProjectileSpeed * Time.deltaTime);
-		if (animSprite.frameIndex == 5) Destroy(gameObject);
 	}
 
 	void OnTriggerEnter(Collider _other)
@@ -48,12 +50,15 @@ public class Projectile : MonoBehaviour {
 			GameEventManager.TriggerGameOver();
 		}
 		if (_other.CompareTag("Crate") == true) {
-			StartCoroutine("delayDestroy",0.04f);
+			StartCoroutine("delayDestroy",0f);
+			this.transform.parent = _other.transform;
+			//killedPlay = true;
 			animSprite.PlayOnce("splash");
 		}
 		if(_other.CompareTag("Blocker") == true)  {
 			StartCoroutine("delayDestroy",0f);
 			animSprite.PlayOnce("splash");
+			//killedPlay = true;
 		}
 //		if (_other.CompareTag("Turret") != true)
 //	    {

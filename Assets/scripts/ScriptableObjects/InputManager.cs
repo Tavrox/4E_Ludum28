@@ -21,10 +21,18 @@ public class InputManager : ScriptableObject {
 	[HideInInspector] public KeyCode Down = KeyCode.DownArrow;
 	[HideInInspector] public KeyCode Left = KeyCode.LeftArrow;
 	[HideInInspector] public KeyCode Right = KeyCode.RightArrow;
-	[HideInInspector] public KeyCode Action =  KeyCode.Return;
-	[HideInInspector] public KeyCode Hold =  KeyCode.Return;
+	[HideInInspector] public KeyCode Action =  KeyCode.Space;
+	[HideInInspector] public KeyCode Hold =  KeyCode.LeftShift;
 	[HideInInspector] public KeyCode Reset =  KeyCode.Backspace;
 	[HideInInspector] public KeyCode Pause =  KeyCode.Escape;
+	[HideInInspector] public KeyCode Up2 = KeyCode.Z;
+	[HideInInspector] public KeyCode Down2 = KeyCode.S;
+	[HideInInspector] public KeyCode Left2 = KeyCode.Q;
+	[HideInInspector] public KeyCode Right2 = KeyCode.D;
+	[HideInInspector] public KeyCode Action2 =  KeyCode.E;
+	[HideInInspector] public KeyCode Hold2 =  KeyCode.A;
+	[HideInInspector] public KeyCode Hold3 =  KeyCode.RightShift;
+	[HideInInspector] public KeyCode PauseMenu =  KeyCode.Escape;
 
 	[HideInInspector] public string PadAction;
 	[HideInInspector] public string PadHold;
@@ -43,9 +51,9 @@ public class InputManager : ScriptableObject {
 		Xpad_START = "joystick button 7";
 		
 		PadJump = Xpad_A;
-		PadAction = Xpad_B;
-		PadHold = Xpad_RB;
-		PadReset = Xpad_START;
+		PadAction = Xpad_X;
+		PadHold = Xpad_B;
+		PadReset = Xpad_BACK;
 	}
 
 }

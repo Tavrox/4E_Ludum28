@@ -37,6 +37,7 @@ public class PatrolerAnims : MonoBehaviour
 		_enemy = GetComponent<Patroler>();
 		GameEventManager.GameStart += GameStart;
 		animSprite.Play("run");
+		animSprite.alpha = 0.8f;
 	}
 	void Update() 
 	{

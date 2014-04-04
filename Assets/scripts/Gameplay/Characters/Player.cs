@@ -10,7 +10,7 @@ public class Player : Character {
 	public bool hasFinalKey = false;
 
 	public int angleRotation;
-	public bool isDead = false, locked = false, killedByBlob;
+	public bool isDead = false, locked = false, killedByBlob, finishedLevel;
 	private bool walkSoundLeft;
 	//private Camera _mainCam;
 	//private LevelManager _lvlManager;
@@ -65,6 +65,7 @@ public class Player : Character {
 	
 	private void checkInput()
 	{
+		if(finishedLevel && grounded) enabled = false; //bloque le perso quand il touche le sol à la fin du niveau
 		// these are false unless one of keys is pressed
 		isLeft = false;
 		isRight = false;
@@ -78,13 +79,13 @@ public class Player : Character {
 		col.size = new Vector3(1f, col.size.y, col.size.z);
 		col.center = new Vector3(0f, 0f, 0f);
 		movingDir = moving.None;
-		if(Input.GetKey("left shift") || Input.GetKey("right shift") || Input.GetKey(KeyCode.A)) {
+		if(Input.GetKey(InputMan.Hold) || Input.GetKey(InputMan.Hold2) || Input.GetKey(InputMan.Hold3)) {
 			col.size = new Vector3(1.75f, col.size.y, col.size.z);
 			//collider.bounds.size.Set(1.75f, 1.75f, 10f);
 			holdCrate();
 		}
-		if(Input.GetKeyUp("left shift") || Input.GetKeyUp("right shift") || Input.GetKeyUp(KeyCode.A)) pushCrate = grabCrate = false;
-		if(Input.GetKey(InputMan.Left) || Input.GetKey(KeyCode.Q) || Input.GetAxisRaw("X axis") > InputMan.X_AxisPos_Sensibility ) 
+		if(Input.GetKeyUp(InputMan.Hold) || Input.GetKeyUp(InputMan.Hold2) || Input.GetKeyUp(InputMan.Hold3)) pushCrate = grabCrate = false;
+		if((Input.GetKey(InputMan.Left) || Input.GetKey(InputMan.Left2) || Input.GetAxisRaw("X axis") > InputMan.X_AxisPos_Sensibility ) && !finishedLevel)
 		{ 
 			isLeft = true;
 			raycastWidthRatio = 0.25f;
@@ -92,8 +93,7 @@ public class Player : Character {
 			facingDir = facing.Left;
 		}
 		
-		if ((Input.GetKey(InputMan.Right) || Input.GetKey(KeyCode.D) || Input.GetAxisRaw("X axis") < InputMan.X_AxisNeg_Sensibility)
-			    && !isLeft) 
+		if ((Input.GetKey(InputMan.Right) || Input.GetKey(InputMan.Right2) || Input.GetAxisRaw("X axis") < InputMan.X_AxisNeg_Sensibility) && !finishedLevel && !isLeft) 
 		{ 
 			isRight = true; 
 			raycastWidthRatio = 0.25f;
@@ -101,16 +101,16 @@ public class Player : Character {
 			shootLeft = false;
 			//if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");
 		}
-		if (/*!jumpLocked &&*/ (Input.GetKey(InputMan.Up)  || Input.GetKey(KeyCode.Z) || Input.GetKey(InputMan.PadJump))) 
+		if (/*!jumpLocked &&*/ (Input.GetKey(InputMan.Up)  || Input.GetKey(InputMan.Up2) || Input.GetKey(InputMan.PadJump))) 
 		{
 			isJump = true;
 		}
-		if (!jumpLocked && (Input.GetKeyDown(InputMan.Up)  || Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(InputMan.PadJump)) /* && grounded*/) 
+		if (!jumpLocked && (Input.GetKeyDown(InputMan.Up)  || Input.GetKeyDown(InputMan.Up2) || Input.GetKeyDown(InputMan.PadJump)) /* && grounded*/) 
 		{ 
 			MasterAudio.PlaySound("player_jump");
 			jumpLocked=true;
 		}
-		if (Input.GetKeyUp(InputMan.Up) || Input.GetKeyUp(KeyCode.Z) || Input.GetKeyUp(InputMan.PadJump) ) {jumpLocked = false;chute=true;}
+		if (Input.GetKeyUp(InputMan.Up) || Input.GetKeyUp(InputMan.Up2) || Input.GetKeyUp(InputMan.PadJump) ) {jumpLocked = false;chute=true;}
 		
 		if(Input.GetKeyDown(InputMan.Action))
 		{
@@ -143,7 +143,7 @@ public class Player : Character {
 		/*if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");*/
 		//if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");
 		
-		if(!grounded && !(Input.GetKey("left shift") || Input.GetKey("right shift") || Input.GetKey(KeyCode.A))) {
+		if(!grounded && !(Input.GetKey(InputMan.Hold) || Input.GetKey(InputMan.Hold2) || Input.GetKey(InputMan.Hold3))) {
 			if(facingDir == facing.Right) col.center = new Vector3(0.2f, 0f, 0f);
 			else col.center = new Vector3(-0.2f, 0f, 0f);
 			col.size = new Vector3(0.4f, col.size.y, col.size.z);
@@ -177,7 +177,7 @@ public class Player : Character {
 
 	private void playFootstep()
 	{
-		if ((isLeft || isRight) && grounded )
+		if ((isLeft || isRight) && grounded && !finishedLevel)
 		{
 			if(walkSoundLeft) MasterAudio.PlaySound ("player_runL1");
 			else MasterAudio.PlaySound ("player_runR1");
@@ -207,7 +207,7 @@ public class Player : Character {
 			transform.localPosition = spawnPos;
 			enabled = true;
 		
-			killedByBlob = false;
+			finishedLevel=killedByBlob = false;
 		enabled = true;
 		collider.enabled=true;
 		isJump = false;
@@ -220,7 +220,7 @@ public class Player : Character {
 	}
 	private void FinishLevel() {
 		if(FindObjectOfType(typeof(Player)) && this != null) {
-			enabled = false;
+			//enabled = false;
 			collider.enabled=false;
 		}
 	}

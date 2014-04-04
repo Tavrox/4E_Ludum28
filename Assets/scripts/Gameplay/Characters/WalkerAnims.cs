@@ -39,6 +39,7 @@ public class WalkerAnims : MonoBehaviour
 		_enemy = GetComponent<Enemy>();
 		if(lookLeft) {InvertSprite();currentAnim = animDef.StandLeft;_character.facingDir = Character.facing.Left;}
 		animSprite.Play("stand");
+		animSprite.alpha = 0.8f;
 	}
 	void Update() 
 	{

@@ -19,6 +19,7 @@ public class Crate : MonoBehaviour {
 	public List<Crate> linkedCrates = new List<Crate>();
 	public List<Crate> linkedCratesTMP = new List<Crate>();
 	public Crate cakeCrate;
+	public InputManager InputMan;
 //	private FESound testSon;
 	//RaycastHit hitInfo;
 	//Ray landingRay;	
@@ -43,6 +44,8 @@ public class Crate : MonoBehaviour {
 			spriteScaleY = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.y*thisTransform.localScale.y*gameObject.transform.parent.transform.localScale.y;
 		}
 		GameEventManager.GameStart += GameStart;
+		InputMan = Instantiate(Resources.Load("Tuning/InputManager")) as InputManager;
+		InputMan.Setup();
 	}
 	
 	IEnumerator StartGravity()
@@ -91,7 +94,7 @@ public class Crate : MonoBehaviour {
 //		if(other.gameObject.name=="Crate" || other.gameObject.name=="Crate(Clone)") {
 //			/*if(detectPlayer())*/ other.gameObject.GetComponent<Crate>().transform.position += new Vector3(crateMove*1.5f/*+0.1f*/,0f,0f);
 //		}
-			if((Input.GetKey("left shift") || Input.GetKey("left shift") || Input.GetKey(KeyCode.A)) && (_player.transform.position.x < thisTransform.position.x) /*&& !_player.isRight*/) {
+			if((Input.GetKey(InputMan.Hold) || Input.GetKey(InputMan.Hold2) || Input.GetKey(InputMan.Hold3)) && (_player.transform.position.x < thisTransform.position.x) /*&& !_player.isRight*/) {
 				//print("Je m'accroche à gauche");
 				if(_player.isLeft && !_player.blockedLeft) {//Tire Gauche
 					//print("Je tire à gauche");
@@ -112,7 +115,7 @@ public class Crate : MonoBehaviour {
 				else crateMove = 0;
 				thisTransform.position += new Vector3(crateMove,0f,0f);
 			}
-			else if((Input.GetKey("left shift") || Input.GetKey("left shift") || Input.GetKey(KeyCode.A)) && (_player.transform.position.x > thisTransform.position.x) /*&& !_player.isLeft*/) {
+			else if((Input.GetKey(InputMan.Hold) || Input.GetKey(InputMan.Hold2) || Input.GetKey(InputMan.Hold3)) && (_player.transform.position.x > thisTransform.position.x) /*&& !_player.isLeft*/) {
 				//print("Je m'accroche à droite");
 				if(_player.isRight && !_player.blockedRight) {//Tire Droite
 				//	print("Je tire à droite");

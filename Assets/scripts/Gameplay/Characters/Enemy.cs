@@ -404,7 +404,7 @@ public class Enemy : Character {
 		//		{
 		//			
 		//		}
-		if (Input.GetKeyDown(KeyCode.Escape))
+		if (Input.GetKeyDown(InputMan.PauseMenu))
 		{
 			if (GameEventManager.gamePaused == false)
 			{
