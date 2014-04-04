@@ -32,6 +32,7 @@ public class TurretAnims : MonoBehaviour {
 	{
 		if(this != null && gameObject.activeInHierarchy) {
 		enabled = true;
+		stopped = shooting=false;
 		animSprite.Play("attack");
 		//StartCoroutine("waitB4Shoot");
 		}

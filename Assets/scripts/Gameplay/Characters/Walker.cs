@@ -40,12 +40,20 @@ public class Walker : Enemy {
 
 	protected void GameStart () {
 		//if(FindObjectOfType(typeof(Enemy)) && this != null) {
+		
+//		if(this != null && !gameObject.activeInHierarchy && splashed) {
+//			splashed = false;
+//			//gameObject.transform.parent.gameObject.SetActive(true);
+//			gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
+//		}
 		if(this != null && gameObject.activeInHierarchy) {
 			transform.position = new Vector3(spawnPos.x,spawnPos.y,0f);
 			enabled = true;
 			foreach(BoxCollider box in tabCol) {
 				box.enabled = true;
 			}
+			gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
+			gameObject.GetComponentInChildren<BoxCollider>().enabled = true;
 			splashed = chasingPlayer = activated = false;
 			StartCoroutine("waitB4Gravity");
 		//}
@@ -112,7 +120,9 @@ public class Walker : Enemy {
 			box.enabled = false;
 		}
 		yield return new WaitForSeconds(delay);
-		gameObject.transform.parent.gameObject.SetActive(false);
+		gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
+		gameObject.GetComponentInChildren<BoxCollider>().enabled = false;
+		//gameObject.transform.parent.gameObject.SetActive(false);
 	}
 	/************************
 	 *						*
