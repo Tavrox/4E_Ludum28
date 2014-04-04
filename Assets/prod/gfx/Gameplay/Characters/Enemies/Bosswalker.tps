@@ -171,38 +171,38 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>AnimeBossWalker/blob_follow_Bossidle0001.png</filename>
-            <filename>AnimeBossWalker/blob_follow_Bossidle0002.png</filename>
-            <filename>AnimeBossWalker/blob_follow_Bossidle0003.png</filename>
-            <filename>AnimeBossWalker/blob_follow_Bossidle0004.png</filename>
-            <filename>AnimeBossWalker/blob_follow_Bossidle0005.png</filename>
-            <filename>AnimeBossWalker/blob_follow_Bossidle0006.png</filename>
-            <filename>AnimeBossWalker/blob_follow_Bossidle0007.png</filename>
-            <filename>AnimeBossWalker/blob_follow_Bossidle0008.png</filename>
-            <filename>AnimeBossWalker/blob_follow_Bossidle0009.png</filename>
-            <filename>AnimeBossWalker/blob_follow_Bossidle0010.png</filename>
-            <filename>AnimeBossWalker/blob_follow_Bossidle0011.png</filename>
-            <filename>AnimeBossWalker/blob_follow_Bossidle0012.png</filename>
-            <filename>AnimeBossWalker/blob_followBoss0001.png</filename>
-            <filename>AnimeBossWalker/blob_followBoss0002.png</filename>
-            <filename>AnimeBossWalker/blob_followBoss0003.png</filename>
-            <filename>AnimeBossWalker/blob_followBoss0004.png</filename>
-            <filename>AnimeBossWalker/blob_followBoss0005.png</filename>
-            <filename>AnimeBossWalker/blob_followBoss0006.png</filename>
-            <filename>AnimeBossWalker/blob_followBoss0007.png</filename>
-            <filename>AnimeBossWalker/blob_followBoss0008.png</filename>
-            <filename>AnimeBossWalker/blob_followBoss0009.png</filename>
-            <filename>AnimeBossWalker/blob_followBoss0010.png</filename>
-            <filename>AnimeBossWalker/blob_followDead0001.png</filename>
-            <filename>AnimeBossWalker/blob_followDead0002.png</filename>
-            <filename>AnimeBossWalker/blob_followDead0003.png</filename>
-            <filename>AnimeBossWalker/blob_followDead0004.png</filename>
-            <filename>AnimeBossWalker/blob_followDead0005.png</filename>
-            <filename>AnimeBossWalker/blob_followDead0006.png</filename>
-            <filename>AnimeBossWalker/blob_followDead0007.png</filename>
-            <filename>AnimeBossWalker/blob_followDead0008.png</filename>
-            <filename>AnimeBossWalker/blob_followDead0009.png</filename>
-            <filename>AnimeBossWalker/blob_followDead0010.png</filename>
+            <filename>AnimeBossWalker/follow_Idle0001.png</filename>
+            <filename>AnimeBossWalker/follow_Idle0002.png</filename>
+            <filename>AnimeBossWalker/follow_Idle0003.png</filename>
+            <filename>AnimeBossWalker/follow_Idle0004.png</filename>
+            <filename>AnimeBossWalker/follow_Idle0005.png</filename>
+            <filename>AnimeBossWalker/follow_Idle0006.png</filename>
+            <filename>AnimeBossWalker/follow_Idle0007.png</filename>
+            <filename>AnimeBossWalker/follow_Idle0008.png</filename>
+            <filename>AnimeBossWalker/follow_Idle0009.png</filename>
+            <filename>AnimeBossWalker/follow_Idle0010.png</filename>
+            <filename>AnimeBossWalker/follow_Idle0011.png</filename>
+            <filename>AnimeBossWalker/follow_Idle0012.png</filename>
+            <filename>AnimeBossWalker/follow_walk0001.png</filename>
+            <filename>AnimeBossWalker/follow_walk0002.png</filename>
+            <filename>AnimeBossWalker/follow_walk0003.png</filename>
+            <filename>AnimeBossWalker/follow_walk0004.png</filename>
+            <filename>AnimeBossWalker/follow_walk0005.png</filename>
+            <filename>AnimeBossWalker/follow_walk0006.png</filename>
+            <filename>AnimeBossWalker/follow_walk0007.png</filename>
+            <filename>AnimeBossWalker/follow_walk0008.png</filename>
+            <filename>AnimeBossWalker/follow_walk0009.png</filename>
+            <filename>AnimeBossWalker/follow_walk0010.png</filename>
+            <filename>AnimeBossWalker/walker_dead0001.png</filename>
+            <filename>AnimeBossWalker/walker_dead0002.png</filename>
+            <filename>AnimeBossWalker/walker_dead0003.png</filename>
+            <filename>AnimeBossWalker/walker_dead0004.png</filename>
+            <filename>AnimeBossWalker/walker_dead0005.png</filename>
+            <filename>AnimeBossWalker/walker_dead0006.png</filename>
+            <filename>AnimeBossWalker/walker_dead0007.png</filename>
+            <filename>AnimeBossWalker/walker_dead0008.png</filename>
+            <filename>AnimeBossWalker/walker_dead0009.png</filename>
+            <filename>AnimeBossWalker/walker_dead0010.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
