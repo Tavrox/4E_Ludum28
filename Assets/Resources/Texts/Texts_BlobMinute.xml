@@ -1,303 +1,125 @@
-<texts>								
-	<info>			Pour créer un espace, entrez /n				</info>
-<entry id='	4EDGESGAMES	'>						
-			<english>	4EdgesGames	</english>	<help>	11	</help>
-			<french>	4EdgesGames	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	CREDITS_BTN	'>						
-			<english>	Credits	</english>	<help>	7	</help>
-			<french>	Crédits	</french>	<help>	7	</help>
-	</entry>							
-<entry id='	CREDITS_LABEL	'>						
-			<english>	Credits	</english>	<help>	7	</help>
-			<french>	Crédits	</french>	<help>	7	</help>
-	</entry>							
-<entry id='	EXIT_BTN	'>						
-			<english>	Exit	</english>	<help>	4	</help>
-			<french>	Quitter	</french>	<help>	7	</help>
-	</entry>							
-<entry id='	GAME_VERSION	'>						
-			<english>	Free version /nAlphav2	</english>	<help>	22	</help>
-			<french>	Version gratuite /nAlphav2	</french>	<help>	26	</help>
-	</entry>							
-<entry id='	JULIEN_LABEL	'>						
-			<english>	Music	</english>	<help>	5	</help>
-			<french>	Musique	</french>	<help>	7	</help>
-	</entry>							
-<entry id='	YANNICK_LABEL	'>						
-			<english>	Game design - code	</english>	<help>	18	</help>
-			<french>	Game design - code	</french>	<help>	18	</help>
-	</entry>							
-<entry id='	PAUL_LABEL	'>						
-			<english>	Sound design - music	</english>	<help>	20	</help>
-			<french>	Sound design - musique	</french>	<help>	22	</help>
-	</entry>							
-<entry id='	LUDOVIC_LABEL	'>						
-			<english>	Game design - Graphic art	</english>	<help>	25	</help>
-			<french>	Game design - Graphiste	</french>	<help>	23	</help>
-	</entry>							
-<entry id='	LEVEL_NAME	'>						
-			<english>	Grensdalur	</english>	<help>	10	</help>
-			<french>	Grensdalur	</french>	<help>	10	</help>
-	</entry>							
-<entry id='	MUTE_MUSIC_BTN	'>						
-			<english>	Muted	</english>	<help>	5	</help>
-			<french>	Muet	</french>	<help>	4	</help>
-	</entry>							
-<entry id='	MUTE_GLOBAL_BTN	'>						
-			<english>	Muted	</english>	<help>	5	</help>
-			<french>	Muet	</french>	<help>	4	</help>
-	</entry>							
-<entry id='	MUTE_GLOBAL_LABEL	'>						
-			<english>	All sounds	</english>	<help>	10	</help>
-			<french>	Global	</french>	<help>	6	</help>
-	</entry>							
-<entry id='	MUTE_MUSIC_LABEL	'>						
-			<english>	Music	</english>	<help>	5	</help>
-			<french>	Musique	</french>	<help>	7	</help>
-	</entry>							
-<entry id='	OPTIONS_BTN	'>						
-			<english>	Options	</english>	<help>	7	</help>
-			<french>	Options	</french>	<help>	7	</help>
-	</entry>							
-<entry id='	START_BTN	'>						
-			<english>	Play	</english>	<help>	4	</help>
-			<french>	Jouer	</french>	<help>	5	</help>
-	</entry>							
-<entry id='	LUDOVIC	'>						
-			<english>	Ludovic Servat	</english>	<help>	14	</help>
-			<french>	Ludovic Servat	</french>	<help>	14	</help>
-	</entry>							
-<entry id='	JULIEN	'>						
-			<english>	Julien Commerenc	</english>	<help>	16	</help>
-			<french>	Julien Commerenc	</french>	<help>	16	</help>
-	</entry>							
-<entry id='	PAUL	'>						
-			<english>	Paul Lagarrigue	</english>	<help>	15	</help>
-			<french>	Paul Lagarrigue	</french>	<help>	15	</help>
-	</entry>							
-<entry id='	YANNICK	'>						
-			<english>	Yannick Elahee	</english>	<help>	14	</help>
-			<french>	Yannick Elahee	</french>	<help>	14	</help>
-	</entry>							
-<entry id='	PLAY_LABEL	'>						
-			<english>	Play	</english>	<help>	4	</help>
-			<french>	Jouer	</french>	<help>	5	</help>
-	</entry>							
-<entry id='	MUTE_MUSIC_ALT	'>						
-			<english>	Unmuted	</english>	<help>	7	</help>
-			<french>	Non-muet	</french>	<help>	8	</help>
-	</entry>							
-<entry id='	MUTE_GLOBAL_ALT	'>						
-			<english>	Unmuted	</english>	<help>	7	</help>
-			<french>	Non-muet	</french>	<help>	8	</help>
-	</entry>							
-<entry id='	___TRANSLATE_MEE___	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_ME____	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_MEE___	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_ME____	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_MEE___	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_ME____	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_MEE___	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_ME____	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_MEE___	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_ME____	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_MEE___	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_ME____	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_MEE___	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_ME____	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_MEE___	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_ME____	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_MEE___	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_ME____	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_MEE___	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_ME____	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_MEE___	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_ME____	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_MEE___	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_ME____	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_MEE___	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_ME____	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_MEE___	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_ME____	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_MEE___	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_ME____	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_MEE___	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_ME____	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_MEE___	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_ME____	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_MEE___	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_ME____	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_MEE___	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_ME____	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_MEE___	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_ME____	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_MEE___	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_ME____	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_MEE___	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_ME____	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_MEE___	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_ME____	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_MEE___	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_ME____	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_MEE___	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_ME____	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_MEE___	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-<entry id='	___TRANSLATE_ME____	'>						
-			<english>	Placeholder	</english>	<help>	11	</help>
-			<french>	Placeholder	</french>	<help>	11	</help>
-	</entry>							
-</texts>								
+<texts>	<info>			BLOBMINUTE							</info>		
+<info>	DIALOG_ID			ENGLISH			FRENCH			EN_COUNT	FR_COUNT	</info>	
+<entry id='	PLAY_BTN	'>	<english>	Play	</english>	<french>	Jouer	</french>	<info>	4	5	</info>	</entry>
+<entry id='	0-1_SPACE_INTERACT	'>	<english>	Press SPACE/nto interact	</english>	<french>	Appuyer sur/nEspace pour/ninteragir	</french>	<info>	24	35	</info>	</entry>
+<entry id='	0-2_SEQ_213	'>	<english>	SEQUENCED/nlever/n2 -> 1 -> 3	</english>	<french>	levier/nsequence/n2 -> 1 -> 3	</french>	<info>	29	29	</info>	</entry>
+<entry id='	0-2_SPACE_INTERACT	'>	<english>	Press SPACE/nto interact	</english>	<french>	Appuyer sur/nEspace pour/ninteragir	</french>	<info>	24	35	</info>	</entry>
+<entry id='	0-3_PULL_CRATE	'>	<english>	shift/n+ arrow/n= push	</english>	<french>	shift/n+ fleche/n= pousser	</french>	<info>	22	26	</info>	</entry>
+<entry id='	0-3_PUSH_CRATE	'>	<english>	shift/n+ arrow/n= pull	</english>	<french>	shift/n+ fleche/n= tirer	</french>	<info>	22	24	</info>	</entry>
+<entry id='	0-4_TELEPORT	'>	<english>	space/nto/teleport	</english>	<french>	espace/npour se/nteleporter	</french>	<info>	18	27	</info>	</entry>
+<entry id='	0-4_RED_TELEPORT	'>	<english>	red/nteleport/= off	</english>	<french>	teleporteur/nrouge/n= inutilisable	</french>	<info>	19	34	</info>	</entry>
+<entry id='	0-5_JUMP	'>	<english>	jump !!	</english>	<french>	saute !!	</french>	<info>	7	8	</info>	</entry>
+<entry id='	0-5_FALL	'>	<english>	fall/nonly	</english>	<french>	juste une/nchute	</french>	<info>	10	16	</info>	</entry>
+<entry id='	0-5_SMALL_JUMP	'>	<english>	just a/nsmall/njump	</english>	<french>	juste un/npetit/nsaut	</french>	<info>	19	21	</info>	</entry>
+<entry id='	0-5_BLOB_IS_COMING	'>	<english>	The Blob/nis coming/nnow !	</english>	<french>	Le Blob/narrive/nmaintenant !	</french>	<info>	26	29	</info>	</entry>
+<entry id='	1-1_GG	'>	<english>	GG !	</english>	<french>	GG !	</french>	<info>	4	4	</info>	</entry>
+<entry id='	1-2_BLOB	'>	<english>	Bloooob !	</english>	<french>	Bloooob !	</french>	<info>	9	9	</info>	</entry>
+<entry id='	1-3_RUNNING	'>	<english>	Blob is/n running out.	</english>	<french>	Blob is/n running out.	</french>	<info>	22	22	</info>	</entry>
+<entry id='	1-4_Toto	'>	<english>	0/0=0	</english>	<french>	0/0=0	</french>	<info>	5	5	</info>	</entry>
+<entry id='	1-4_RUSH	'>	<english>	R/nU/nS/nH	</english>	<french>	V/nI/nT/nE	</french>	<info>	10	10	</info>	</entry>
+<entry id='	1-5_LAST	'>	<english>	Last but not least.	</english>	<french>	Le meilleur pour la fin.	</french>	<info>	19	24	</info>	</entry>
+<entry id='	1-5_1SEQ123	'>	<english>	1 -> 2 -> 3	</english>	<french>	1 -> 2 -> 3	</french>	<info>	11	11	</info>	</entry>
+<entry id='	1-5_2SEQ123	'>	<english>	1 -> 2 -> 3	</english>	<french>	1 -> 2 -> 3	</french>	<info>	11	11	</info>	</entry>
+<entry id='	1-5_3SEQ123	'>	<english>	1 -> 2 -> 3	</english>	<french>	1 -> 2 -> 3	</french>	<info>	11	11	</info>	</entry>
+<entry id='	1-5_SEQ789	'>	<english>	7 -> 8 -> 9	</english>	<french>	7 -> 8 -> 9	</french>	<info>	11	11	</info>	</entry>
+<entry id='	1BOSS_CUBE	'>	<english>	CUBE.	</english>	<french>	CUBE.	</french>	<info>	5	5	</info>	</entry>
+<entry id='	1BOSS_SEQ321	'>	<english>	3 -> 2 -> 1	</english>	<french>	3 -> 2 -> 1	</french>	<info>	11	11	</info>	</entry>
+<entry id='	1BOSS_TRAP	'>	<english>	TRAP.	</english>	<french>	PIEGE.	</french>	<info>	5	6	</info>	</entry>
+<entry id='	1BOSS_TOLDYOU	'>	<english>	I told you that it was a trap.	</english>	<french>	Je t'avais dit que c'était un piège.	</french>	<info>	30	36	</info>	</entry>
+<entry id='	2-1_CAB	'>	<english>	CAB	</english>	<french>	TAXI	</french>	<info>	3	4	</info>	</entry>
+<entry id='	2-2_SEQ_123	'>	<english>	SEQUENCED/nLever/n1 -> 2 -> 3	</english>	<french>	levier/nsequence/n1 -> 2 -> 3	</french>	<info>	29	29	</info>	</entry>
+<entry id='	2-4_DONT	'>	<english>	Don't killn/the blob	</english>	<french>	Ne tues pas/n le blob	</french>	<info>	20	21	</info>	</entry>
+<entry id='	2-4_RUN	'>	<english>	RUN !	</english>	<french>	Cours !	</french>	<info>	5	7	</info>	</entry>
+<entry id='	2-5_SEQ_123	'>	<english>	SEQUENCED/nLever/n1 -> 2 -> 3	</english>	<french>	levier/nsequence/n1 -> 2 -> 3	</french>	<info>	29	29	</info>	</entry>
+<entry id='	2-5_FAST	'>	<english>	Be fast/n and smart !	</english>	<french>	Sois rapide/n et intelligent !	</french>	<info>	21	30	</info>	</entry>
+<entry id='	3-1_FAMOUS	'>	<english>	Blob me/nI'm famous	</english>	<french>	Blob me/nI'm famous	</french>	<info>	19	19	</info>	</entry>
+<entry id='	3-2_SEQ_123	'>	<english>	One, two, three go !	</english>	<french>	Et 1 et 2 et 3 !	</french>	<info>	20	16	</info>	</entry>
+<entry id='	3-2_CAKE	'>	<english>	The cake/nis a blob.	</english>	<french>	The cake/nis a blob.	</french>	<info>	20	20	</info>	</entry>
+<entry id='	3-3_PAIN	'>	<english>	No pain,/nno blob.	</english>	<french>	No pain,/nno blob.	</french>	<info>	18	18	</info>	</entry>
+<entry id='	3-4_NOPE	'>	<english>	Nope.	</english>	<french>	Nope.	</french>	<info>	5	5	</info>	</entry>
+<entry id='	3-4_FEEL	'>	<english>	Can you feel/n the blob tonight ?	</english>	<french>	Can you feel/n the blob tonight ?	</french>	<info>	33	33	</info>	</entry>
+<entry id='	3-5_SEQ_123	'>	<english>	Un, dos, tres, senor !	</english>	<french>	Un, dos, tres, senor !	</french>	<info>	22	22	</info>	</entry>
+<entry id='	3-5_LOVE	'>	<english>	AND IIIIII WILL ALWAYS/n BLOB YOUUUUUUU	</english>	<french>	AND IIIIII WILL ALWAYS/n BLOB YOUUUUUUU	</french>	<info>	39	39	</info>	</entry>
+<entry id='	3BOSS_RUN	'>	<english>	Run !	</english>	<french>	Cours !	</french>	<info>	5	7	</info>	</entry>
+<entry id='	3BOSS_BOUNCE	'>	<english>	Bounce !	</english>	<french>	Bondis !	</french>	<info>	8	8	</info>	</entry>
+<entry id='	3BOSS_ICARUS	'>	<english>	Be careful, Icarus !	</english>	<french>	Gaffe à tes ailes, Icare !	</french>	<info>	20	26	</info>	</entry>
+<entry id='	3BOSS_FAST	'>	<english>	Fast.	</english>	<french>	Court et rapide.	</french>	<info>	5	16	</info>	</entry>
+<entry id='	3BOSS_SAFE	'>	<english>	Safe.	</english>	<french>	Sécurité.	</french>	<info>	5	9	</info>	</entry>
+<entry id='	3BOSS_LIE	'>	<english>	I lied.	</english>	<french>	J'ai menti.	</french>	<info>	7	11	</info>	</entry>
+<entry id='	3BOSS_STEPFAST	'>	<english>	That's one/n small step/n for a blob.	</english>	<french>	Un petit pas/n pour le blob.	</french>	<info>	37	28	</info>	</entry>
+<entry id='	3BOSS_STEPSAFE	'>	<english>	That's one/n small step for/n a blob.	</english>	<french>	Un petit pas/n pour le blob.	</french>	<info>	37	28	</info>	</entry>
+<entry id='	3BOSS_LEAP	'>	<english>	                   blob/nOne giant leap for blob/n                   blob	</english>	<french>	                    blob/nUn pas de géant pour blob/n                     blob.	</french>	<info>	73	79	</info>	</entry>
+<entry id='	BACK_BTN	'>	<english>	Back	</english>	<french>	Retour	</french>	<info>	4	6	</info>	</entry>
+<entry id='	CHOOSE_LVL	'>	<english>	Choose a level	</english>	<french>	Choisir un niveau	</french>	<info>	14	17	</info>	</entry>
+<entry id='	CREDITS_BTN	'>	<english>	Credits	</english>	<french>	Crédits	</french>	<info>	7	7	</info>	</entry>
+<entry id='	EXIT_BTN	'>	<english>	Exit	</english>	<french>	Quitter	</french>	<info>	4	7	</info>	</entry>
+<entry id='	GFX_CONT	'>	<english>	Adrian Jacques/n	</english>	<french>	Adrian Jacques/nThomas Goffinet	</french>	<info>	16	31	</info>	</entry>
+<entry id='	GFX_LABEL	'>	<english>	Graphic art	</english>	<french>	Art graphique	</french>	<info>	11	13	</info>	</entry>
+<entry id='	HEADER_TITLE	'>	<english>	The Blob/nMinute	</english>	<french>	The Blob/nMinute	</french>	<info>	16	16	</info>	</entry>
+<entry id='	LVL	'>	<english>	One	</english>	<french>	Un	</french>	<info>	3	2	</info>	</entry>
+<entry id='	OPTIONS_BTN	'>	<english>	Options	</english>	<french>	Options	</french>	<info>	7	7	</info>	</entry>
+<entry id='	PLAY_BTN	'>	<english>	Play	</english>	<french>	Jouer	</french>	<info>	4	5	</info>	</entry>
+<entry id='	PROG_CONT	'>	<english>	Bastien Nanceau/nYannick Elahee	</english>	<french>	Bastien Nanceau/nYannick Elahee	</french>	<info>	31	31	</info>	</entry>
+<entry id='	PROG_LABEL	'>	<english>	Programming	</english>	<french>	Programmation	</french>	<info>	11	13	</info>	</entry>
+<entry id='	SD_CONT	'>	<english>	Paul Lagarrigue	</english>	<french>	Paul Lagarrigue	</french>	<info>	15	15	</info>	</entry>
+<entry id='	SD_LABEL	'>	<english>	Sound design	</english>	<french>	Sound design	</french>	<info>	12	12	</info>	</entry>
+<entry id='	DESIGN_CONT	'>	<english>	Thomas Goffinet/nJulien Lebon/nBastien Nanceau/nPaul Lagarrigue	</english>	<french>	Thomas Goffinet/nJulien Lebon/nBastien Nanceau/nPaul Lagarrigue	</french>	<info>	63	63	</info>	</entry>
+<entry id='	DESIGN_LABEL	'>	<english>	Game and Level design	</english>	<french>	Game and Level design	</french>	<info>	21	21	</info>	</entry>
+<entry id='	MUSIC_LABEL	'>	<english>	Music	</english>	<french>	Musique	</french>	<info>	5	7	</info>	</entry>
+<entry id='	MUSIC_CONT	'>	<english>	Stéphane Damo	</english>	<french>	Stéphane Damo	</french>	<info>	13	13	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+</texts>													

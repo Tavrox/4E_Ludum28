@@ -14,4 +14,4 @@ MonoBehaviour:
   levelID: 2
   LvlName: 2
   player_best_score: 0
-  locked: 1
+  locked: 0

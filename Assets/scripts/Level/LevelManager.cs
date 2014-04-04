@@ -55,6 +55,7 @@ public class LevelManager : MonoBehaviour {
 				_gameo.gameObject.SetActive(true);
 			}
 		}
+		TranslateAllInScene();
 
 		spawnPoint = GameObject.Find("playerspawn"+chosenVariation).transform.position;
 		player.transform.position = player.spawnPos = new Vector3(spawnPoint.x,spawnPoint.y,-1f);
@@ -99,6 +100,8 @@ public class LevelManager : MonoBehaviour {
 				}
 			}
 			if(player.gameObject != null) player.transform.position = player.spawnPos = GameObject.Find("playerspawn"+chosenVariation).transform.position;
+			
+			TranslateAllInScene();
 			GameEventManager.TriggerGameStart();
 		}
 		else {
@@ -203,6 +206,15 @@ public class LevelManager : MonoBehaviour {
 	private void GameUnpause()
 	{
 
+	}
+	
+	public void TranslateAllInScene()
+	{
+		print ("translateScene");
+		_pdata = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerData>();
+		_pdata.SETUP.TextSheet.SetupTranslation(_pdata.SETUP.ChosenLanguage);
+		TextUI[] allTxt = GameObject.FindObjectsOfType(typeof(TextUI)) as TextUI[];
+		_pdata.SETUP.TextSheet.TranslateAll(ref allTxt);
 	}
 
 	private void launchScene()
