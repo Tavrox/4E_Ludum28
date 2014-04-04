@@ -26,6 +26,7 @@ public class Patroler : Character {
 	private Player _player;
 	private bool walkSoundSwitch;
 	public bool isVertical,splashed;
+	private BoxCollider [] tabCol;
 	
 	//	private WaveCreator soundEmitt1, soundEmitt2, soundInstru1, soundInstru2,soundEmitt3;
 	//	private int cptWave=1, pebbleDirection = 1;
@@ -74,6 +75,7 @@ public class Patroler : Character {
 		res_phys = 10;
 		runSpeed = 0.5f;
 		
+		tabCol = gameObject.GetComponents<BoxCollider>();
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>(); //target the player
 		patroling = true;
 		//spriteScaleX = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.x;
@@ -193,16 +195,44 @@ public class Patroler : Character {
 		}
 	}
 	IEnumerator hideAfterSplash(float delay) {
+		foreach(BoxCollider box in tabCol) {
+			box.enabled = false;
+		}
 		yield return new WaitForSeconds(delay);
-		gameObject.transform.parent.gameObject.SetActive(false);
+		
+		gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
+		gameObject.GetComponentInChildren<BoxCollider>().enabled = false;
+//		foreach(BoxCollider box in gameObject.GetComponents<BoxCollider>()) {
+//			box.enabled = false;
+//		}	
+//		foreach(MeshRenderer mesh in gameObject.GetComponents<MeshRenderer>()) {
+//			mesh.enabled = false;
+//		}
+		//gameObject.transform.parent.gameObject.SetActive(false);
 	}
 
 	protected void GameStart () {
+//		if(this != null && !gameObject.activeInHierarchy && splashed) {
+//			splashed = false;
+//			gameObject.transform.parent.gameObject.SetActive(true);
+//		}
 		if(this != null && gameObject.activeInHierarchy) {
 		//if(FindObjectOfType(typeof(Enemy)) && this != null) {
-		//transform.localPosition = new Vector3(0f,0f,0f);
+			//transform.localPosition = new Vector3(0f,0f,0f);
+			foreach(BoxCollider box in tabCol) {
+				box.enabled = false;
+			}
+			
+			gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
+			gameObject.GetComponentInChildren<BoxCollider>().enabled = true;
+//		foreach(BoxCollider box in gameObject.GetComponents<BoxCollider>()) {
+//			box.enabled = true;
+//		}	
+//		foreach(MeshRenderer mesh in gameObject.GetComponents<MeshRenderer>()) {
+//			mesh.enabled = true;
+//		}
 		transform.position = new Vector3(spawnPos.x,spawnPos.y,0f);
-		gameObject.transform.parent.gameObject.SetActive(true);
+		splashed = false;
 		enabled = true;go = true;
 		collider.enabled = true;
 		touchingCrate = false;waypointId=0;
