@@ -8,6 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
+  - 114: {fileID: 11400022}
   m_Layer: 0
   m_Name: PackBoss
   m_TagString: Untagged
@@ -260,7 +261,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 119.400444, y: -15.7976398, z: 0}
+  m_LocalPosition: {x: 119.400444, y: -15.7976398, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400014}
@@ -297,7 +298,7 @@ Transform:
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.7557621, y: 3.7557621, z: 1}
+  m_LocalScale: {x: 7.70275927, y: 7.70275927, z: .203691766}
   m_Children: []
   m_Father: {fileID: 400008}
 --- !u!4 &400008
@@ -319,7 +320,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.72212219, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400008}
@@ -357,7 +358,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.72212219, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400018}
@@ -382,7 +383,7 @@ Transform:
   m_GameObject: {fileID: 100020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.75576234, y: 3.7557621, z: 1}
+  m_LocalScale: {x: 7.70275927, y: 7.70275927, z: .203691766}
   m_Children: []
   m_Father: {fileID: 400018}
 --- !u!4 &400022
@@ -393,7 +394,7 @@ Transform:
   m_GameObject: {fileID: 100022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.75576258, y: 3.75576234, z: 1.8778826}
+  m_LocalScale: {x: 7.70275927, y: 7.70275927, z: .203691766}
   m_Children: []
   m_Father: {fileID: 400024}
 --- !u!4 &400024
@@ -415,7 +416,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.72212601, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400024}
@@ -595,8 +596,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .850000024, y: 1.29999995, z: 30}
-  m_Center: {x: .810000002, y: -.0299999993, z: 0}
+  m_Size: {x: 1.72000003, y: 3.07999992, z: 30}
+  m_Center: {x: 1.47000003, y: -.0299999993, z: 0}
 --- !u!65 &6500006
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -607,8 +608,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.07999992, y: 1.28999996, z: 30}
-  m_Center: {x: .200000003, y: -1.25999999, z: 0}
+  m_Size: {x: 5.07000017, y: 2.46000004, z: 30}
+  m_Center: {x: .189999998, y: -2.66000009, z: 0}
 --- !u!65 &6500008
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -619,8 +620,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.07999992, y: 1.28999996, z: 30}
-  m_Center: {x: .200000003, y: -1.25999999, z: 0}
+  m_Size: {x: 5.07000017, y: 2.46000004, z: 30}
+  m_Center: {x: .189999998, y: -2.66000009, z: 0}
 --- !u!65 &6500010
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -631,8 +632,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .850000024, y: 1.29999995, z: 30}
-  m_Center: {x: .810000002, y: -.0299999993, z: 0}
+  m_Size: {x: 1.72000003, y: 3.07999992, z: 30}
+  m_Center: {x: 1.47000003, y: -.0299999993, z: 0}
 --- !u!65 &6500012
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -643,8 +644,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .850000024, y: 1.29999995, z: 30}
-  m_Center: {x: .810000002, y: -.0299999993, z: 0}
+  m_Size: {x: 1.72000003, y: 3.07999992, z: 30}
+  m_Center: {x: 1.47000003, y: -.0299999993, z: 0}
 --- !u!65 &6500014
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -655,8 +656,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.07999992, y: 1.28999996, z: 30}
-  m_Center: {x: .200000003, y: -1.25999999, z: 0}
+  m_Size: {x: 5.07000017, y: 2.46000004, z: 30}
+  m_Center: {x: .189999998, y: -2.66000009, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -694,7 +695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: walkerSprite-2
   _position: {x: 0, y: 0}
-  _size: {x: 3.7557621, y: 3.7557621}
+  _size: {x: 7.70275927, y: 7.70275927}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -716,8 +717,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: walkerSprite
-  oSize: {x: 2.08333349, y: 2.08333349}
-  imageSize: {x: 3.7557621, y: 3.7557621}
+  oSize: {x: 10.416667, y: 10.416667}
+  imageSize: {x: 37.8157539, y: 37.8157539}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -730,9 +731,9 @@ MonoBehaviour:
   _image: {fileID: 0}
   sizeImages: []
   _frameIndex: 0
-  _frameName: follow_idle0001
+  _frameName: follow_Idle0001
   _spriteContainer: {fileID: 0}
-  _containerName: walkerSheet
+  _containerName: walkerBossSheet
   _newSprite: 0
   _animation: {fileID: 0}
   _animationFrameset: 
@@ -743,7 +744,7 @@ MonoBehaviour:
   _startAtRandomFrame: 0
   _destroyWhenFinished: 0
   animationPreview: 0
-  _animationName: walkerAnims
+  _animationName: walkerBossAnims
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -939,7 +940,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: walkerSprite-1
   _position: {x: 0, y: 0}
-  _size: {x: 3.75576234, y: 3.7557621}
+  _size: {x: 7.70275927, y: 7.70275927}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -961,8 +962,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: walkerSprite
-  oSize: {x: 2.08333349, y: 2.08333349}
-  imageSize: {x: 3.75576234, y: 3.7557621}
+  oSize: {x: 10.416667, y: 10.416667}
+  imageSize: {x: 37.8157539, y: 37.8157539}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -975,9 +976,9 @@ MonoBehaviour:
   _image: {fileID: 0}
   sizeImages: []
   _frameIndex: 0
-  _frameName: follow_idle0001
+  _frameName: follow_Idle0001
   _spriteContainer: {fileID: 0}
-  _containerName: walkerSheet
+  _containerName: walkerBossSheet
   _newSprite: 0
   _animation: {fileID: 0}
   _animationFrameset: 
@@ -988,7 +989,7 @@ MonoBehaviour:
   _startAtRandomFrame: 0
   _destroyWhenFinished: 0
   animationPreview: 0
-  _animationName: walkerAnims
+  _animationName: walkerBossAnims
 --- !u!114 &11400016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1002,7 +1003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: walkerSprite-3
   _position: {x: 0, y: 0}
-  _size: {x: 3.75576258, y: 3.75576234}
+  _size: {x: 7.70275927, y: 7.70275927}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -1024,8 +1025,8 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: walkerSprite
-  oSize: {x: 2.08333349, y: 2.08333349}
-  imageSize: {x: 1.99999881, y: 1.99999869}
+  oSize: {x: 10.416667, y: 10.416667}
+  imageSize: {x: 37.8157539, y: 37.8157539}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -1038,9 +1039,9 @@ MonoBehaviour:
   _image: {fileID: 0}
   sizeImages: []
   _frameIndex: 0
-  _frameName: follow_idle0001
+  _frameName: follow_Idle0001
   _spriteContainer: {fileID: 0}
-  _containerName: walkerSheet
+  _containerName: walkerBossSheet
   _newSprite: 0
   _animation: {fileID: 0}
   _animationFrameset: 
@@ -1051,7 +1052,7 @@ MonoBehaviour:
   _startAtRandomFrame: 0
   _destroyWhenFinished: 0
   animationPreview: 0
-  _animationName: walkerAnims
+  _animationName: walkerBossAnims
 --- !u!114 &11400018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1143,6 +1144,17 @@ MonoBehaviour:
   paused: 0
   splashed: 0
   activated: 0
+--- !u!114 &11400022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0f48c80cced3c544b688dc5d154c397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

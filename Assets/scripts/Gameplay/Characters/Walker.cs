@@ -111,6 +111,7 @@ public class Walker : Enemy {
 	public void getDamage(int damage) {
 		HP -= damage;
 		if(HP <=0) {
+			FESound.playDistancedSound("blob_explosion",gameObject.transform, _player.transform,0f);
 			splashed=true;activated=false;
 			StartCoroutine("hideAfterSplash",0.79f);
 		}

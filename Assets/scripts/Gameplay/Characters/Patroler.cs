@@ -189,6 +189,7 @@ public class Patroler : Character {
 	public void getDamage(int damage) {
 		HP -= damage;
 		if(HP <=0) {
+			FESound.playDistancedSound("blob_explosion",gameObject.transform, _player.transform,0f);
 			splashed=true;
 			collider.enabled = false;
 			StartCoroutine("hideAfterSplash",0.42f);
