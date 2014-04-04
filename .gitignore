@@ -205,3 +205,4 @@ pip-log.txt
  
 # Server.dat
 server.dat
+*.meta
