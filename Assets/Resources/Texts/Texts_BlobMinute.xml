@@ -43,14 +43,14 @@
 <entry id='	3-5_LOVE	'>	<english>	AND IIIIII WILL ALWAYS/n BLOB YOUUUUUUU	</english>	<french>	AND IIIIII WILL ALWAYS/n BLOB YOUUUUUUU	</french>	<info>	39	39	</info>	</entry>
 <entry id='	3BOSS_RUN	'>	<english>	Run !	</english>	<french>	Cours !	</french>	<info>	5	7	</info>	</entry>
 <entry id='	3BOSS_JUMP	'>	<english>	Jump !	</english>	<french>	Saute !	</french>	<info>	6	7	</info>	</entry>
-<entry id='	3BOSS_BOUNCE	'>	<english>	Bounce !/nDown ! Up !	</english>	<french>	Jump ! Bounce !	</french>	<info>	21	15	</info>	</entry>
+<entry id='	3BOSS_BOUNCE	'>	<english>	Bounce !/nDown ! Up !	</english>	<french>	Jump !/nBounce !	</french>	<info>	21	16	</info>	</entry>
 <entry id='	3BOSS_ICARUS	'>	<english>	Be careful, Icarus !	</english>	<french>	Gaffe a tes ailes, Icare !	</french>	<info>	20	26	</info>	</entry>
 <entry id='	3BOSS_FAST	'>	<english>	Fast	</english>	<french>	Court et/nrapide	</french>	<info>	4	16	</info>	</entry>
 <entry id='	3BOSS_SAFE	'>	<english>	Safe	</english>	<french>	Securite	</french>	<info>	4	8	</info>	</entry>
 <entry id='	3BOSS_LIE	'>	<english>	I lied.	</english>	<french>	J'ai menti.	</french>	<info>	7	11	</info>	</entry>
 <entry id='	3BOSS_STEPFAST	'>	<english>	That's one/n small step/n for a blob.	</english>	<french>	Un petit pas/n pour le blob.	</french>	<info>	37	28	</info>	</entry>
 <entry id='	3BOSS_STEPSAFE	'>	<english>	That's one/n small step for/n a blob.	</english>	<french>	Un petit pas/n pour le blob.	</french>	<info>	37	28	</info>	</entry>
-<entry id='	3BOSS_LEAP	'>	<english>	                            blob/nOne giant leap for blob/n                            blob	</english>	<french>	                                blob/nUn pas de geant pour blob/n                                 blob.	</french>	<info>	91	103	</info>	</entry>
+<entry id='	3BOSS_LEAP	'>	<english>	                            blob/nOne giant leap for blob/n                            blob	</english>	<french>	                                blob/nUn pas de geant pour blob/n                                 blob 	</french>	<info>	91	103	</info>	</entry>
 <entry id='	BACK_BTN	'>	<english>	Back	</english>	<french>	Retour	</french>	<info>	4	6	</info>	</entry>
 <entry id='	CHOOSE_LVL	'>	<english>	Choose a level	</english>	<french>	Choisir un niveau	</french>	<info>	14	17	</info>	</entry>
 <entry id='	CREDITS_BTN	'>	<english>	Credits	</english>	<french>	Crédits	</french>	<info>	7	7	</info>	</entry>
