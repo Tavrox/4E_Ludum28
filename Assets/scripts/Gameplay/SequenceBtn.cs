@@ -28,6 +28,12 @@ public class SequenceBtn : MonoBehaviour {
 			if(btn.trigged && cptBtn > 0) {
 				if(seqBtns[cptBtn-1].trigged == false) {
 					rightCombo = false;errorDetected = true;
+					if(errorDetected == true) {
+						foreach (Lever btn2 in seqBtns) {
+							btn2.StartCoroutine("resetLever");
+						}
+						if(!errorLaunched) StartCoroutine("resetRightCombo");
+					}
 				}
 			}
 			cptBtn++;
