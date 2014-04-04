@@ -41,7 +41,6 @@ public class LevelManager : MonoBehaviour {
 //		Player _Player  = GameObject.Find("Player").GetComponent<Player>();
 		ID = Application.loadedLevel;
 		//print("ID : ---*-*-***---"+ID);
-		playLevelMusic();
 		//MasterAudio.PlaySound("jam");
 
 		//if(chosenVariation==0) _rand = Random.Range(_tileImporter.minVariation, _tileImporter.maxVariation).ToString();
@@ -67,6 +66,8 @@ public class LevelManager : MonoBehaviour {
 		GameEventManager.GameUnpause += GameUnpause;
 		GameEventManager.NextLevel += NextLevel;
 		GameEventManager.NextInstance += NextInstance;
+		
+		playLevelMusic();
 	}
 	
 	// Update is called once per frame
