@@ -27,7 +27,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: spr
+  m_Name: spr-6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ GameObject:
   - 23: {fileID: 2300002}
   - 102: {fileID: 10200000}
   m_Layer: 0
-  m_Name: DIALOG_ID
+  m_Name: 3BOSS_STEPFAST
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,7 +58,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.7223797, y: -7.98552656, z: -20}
+  m_LocalPosition: {x: 85.7307358, y: -23.6451149, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -142,10 +142,10 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
-  m_Text: NOT FOUND
+  m_Text: "Un petit pas\n pour le blob."
   m_OffsetZ: 0
   m_CharacterSize: .239999995
-  m_LineSpacing: 1
+  m_LineSpacing: 1.5
   m_Anchor: 4
   m_Alignment: 1
   m_TabSize: 0
@@ -155,7 +155,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: c11cb685577830947a2ed65a4d01a540, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4285988608
+    rgba: 3022119168
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18d0574a4fa59946a49ede6640a1f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: spr
+  _name: spr-6
   _position: {x: 1.29561234, y: 2.85928059}
   _size: {x: 4.97224665, y: 3.31483078}
   _rotation: 0
@@ -222,13 +222,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SETUP: {fileID: 11400000, guid: 9fd6816172d82d14c94710ec2677f930, type: 2}
   _mesh: {fileID: 10200000}
-  DIALOG_ID: GameObject
-  text: NOT FOUND
+  DIALOG_ID: 3BOSS_STEPFAST
+  text: "Un petit pas\n pour le blob."
   dontTranslate: 0
   twinkleMessage: 0
-  hasBeenTranslated: 0
+  hasBeenTranslated: 1
   initColor: {r: 0, g: 1, b: .462069035, a: 1}
-  color: {r: 0, g: 1, b: .462069035, a: 1}
+  color: {r: 0, g: .882352948, b: .129411772, a: .70588237}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
