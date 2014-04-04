@@ -122,7 +122,7 @@ public class Player : Character {
 		}
 		if (Input.GetKeyDown(InputMan.Pause))
 		{
-			triggerPause();
+			//triggerPause();
 		}
 		if (Input.GetKeyDown(InputMan.Reset) || Input.GetKey(InputMan.Reset2)) 
 		{

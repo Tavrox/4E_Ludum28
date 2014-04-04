@@ -67,9 +67,11 @@ public class Timer : MonoBehaviour {
 
 	private void GameStart()
 	{
+		if(this != null) {
 		pauseTimer = false;
 		triggeredEnd = false;
 		resetTimer();
+		}
 	}
 	private void GamePause()
 	{

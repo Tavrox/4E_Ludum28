@@ -431,11 +431,13 @@ public class Enemy : Character {
 	}
 	
 	protected void GameStart () {
+		
+		if(this != null) {
 		//if(FindObjectOfType(typeof(Enemy)) && this != null) {
 //			transform.localPosition = spawnPos;
 			gameObject.transform.parent.gameObject.SetActive(true);
 			enabled = true;
-		//}
+		}
 	}
 	
 	protected void GameOver () {

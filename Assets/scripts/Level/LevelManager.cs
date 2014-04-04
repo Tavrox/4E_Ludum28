@@ -88,6 +88,7 @@ public class LevelManager : MonoBehaviour {
 	
 	private void NextInstance ()
 	{
+		if(this != null) {
 		if(chosenVariation<5 && !isBoss) {
 			chosenVariation += 1;
 			foreach (Transform _gameo in GameObject.Find("Level/ObjectImporter").transform)
@@ -112,11 +113,14 @@ public class LevelManager : MonoBehaviour {
 			GameEventManager.NextInstance -= NextInstance;
 			DestroyImmediate(this.gameObject);
 		}
+		}
 	}
 	private void NextLevel ()
-	{
+	{		
+		if(this != null) {
 		Application.ExternalEval("document.cookie = \""+"Level"+(ID+1)+"Unlocked"+"=1; \"");
 		Application.LoadLevel((ID+1));
+		}
 	}
 	private void playLevelMusic () {
 		switch(ID) {
@@ -199,8 +203,10 @@ public class LevelManager : MonoBehaviour {
 	}
 	private void GameStart()
 	{
-		MasterAudio.StopAllPlaylists();
-		playLevelMusic();
+		if(this != null) {
+			MasterAudio.StopAllPlaylists();
+			playLevelMusic();
+		}
 	}
 	private void GamePause()
 	{

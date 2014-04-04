@@ -59,7 +59,9 @@ public class IngameUI : MonoBehaviour {
 	}
 	private void GameOver()
 	{
-		gameObject.SetActive(false);
+		if(this != null) {
+			gameObject.SetActive(false);
+		}
 	}
 	void GameStart () {		
 		if(this != null) {
