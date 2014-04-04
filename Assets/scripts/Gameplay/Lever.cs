@@ -62,7 +62,7 @@ public class Lever : MonoBehaviour {
 	{
 		if (other.gameObject.CompareTag("Player"))
 		{
-			if ((Input.GetKeyDown(InputMan.Action) || Input.GetKeyDown(InputMan.Action2)) && !seqLocked && !(myButtonType == btnType.TimedBtn && trigged))
+			if ((Input.GetKeyDown(InputMan.Action) || Input.GetKeyDown(InputMan.Action2) || Input.GetKey(InputMan.Action3)) && !seqLocked && !(myButtonType == btnType.TimedBtn && trigged))
 			{
 				collider.enabled=false;
 				StartCoroutine("delayReactivate");
