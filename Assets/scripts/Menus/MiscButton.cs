@@ -133,6 +133,7 @@ public class MiscButton : MonoBehaviour {
 			{
 				if (_animBlob != null)
 				{
+					MasterAudio.PlaySound("blob_explosion");
 					_animBtn.PlayOnce(_animBlob.ACTIVATED);
 					_animBtn.speed = 1.5f;
 				}
@@ -143,6 +144,7 @@ public class MiscButton : MonoBehaviour {
 			{
 				if (_animBlob != null)
 				{
+					MasterAudio.PlaySound("blob_explosion");
 					_animBtn.PlayOnce(_animBlob.ACTIVATED);
 					_animBtn.speed = 1.5f;
 				}
@@ -153,6 +155,7 @@ public class MiscButton : MonoBehaviour {
 			{
 				if (_animBlob != null)
 				{
+					MasterAudio.PlaySound("blob_explosion");
 					_animBtn.PlayOnce(_animBlob.ACTIVATED);
 					_animBtn.speed = 1.5f;
 				}
@@ -168,6 +171,7 @@ public class MiscButton : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(0.75f);
 		mainUi.makeTransition(_thing);
+		yield return new WaitForSeconds(0.4f);
 		StartCoroutine("resetBlob");
 	}
 

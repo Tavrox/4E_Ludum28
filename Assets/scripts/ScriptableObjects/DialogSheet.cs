@@ -22,7 +22,7 @@ public class DialogSheet : ScriptableObject {
 		string result = _txt.text;
 		if (translateGame == true && _txt.dontTranslate != true)
 		{
-			if ( translated_texts.ContainsKey(_txt.DIALOG_ID) != false && _txt.DIALOG_ID != null)
+			if ( translated_texts != null && translated_texts.ContainsKey(_txt.DIALOG_ID) != false && _txt.DIALOG_ID != null)
 			{
 				result = translated_texts[_txt.DIALOG_ID];
 				_txt.hasBeenTranslated = true;

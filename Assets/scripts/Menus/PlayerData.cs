@@ -15,6 +15,7 @@ public class PlayerData : MonoBehaviour {
 	{
 		PROFILE = Resources.Load("Tuning/PlayerProfile") as PlayerProfile;
 		SETUP = Resources.Load("Tuning/GameSetup") as GameSetup;
+		//Screen.SetResolution(800,600, false);
 	}
 	public void trans () 
 	{

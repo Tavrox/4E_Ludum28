@@ -29,7 +29,7 @@
 <entry id='	1BOSS_TOLDYOU	'>	<english>	I told you that it was a trap.	</english>	<french>	Je t'avais dit que c'etait un piege.	</french>	<info>	30	36	</info>	</entry>
 <entry id='	2-1_CAB	'>	<english>	CAB	</english>	<french>	TAXI	</french>	<info>	3	4	</info>	</entry>
 <entry id='	2-2_SEQ_123	'>	<english>	SEQUENCED/nLever/n1 -> 2 -> 3	</english>	<french>	levier/nsequence/n1 -> 2 -> 3	</french>	<info>	29	29	</info>	</entry>
-<entry id='	2-4_DONT	'>	<english>	Don't killn/the blob	</english>	<french>	Ne tue pas/n le blob.	</french>	<info>	20	21	</info>	</entry>
+<entry id='	2-4_DONT	'>	<english>	Don't kill/nthe blob	</english>	<french>	Ne tue pas/n le blob.	</french>	<info>	20	21	</info>	</entry>
 <entry id='	2-4_RUN	'>	<english>	RUN !	</english>	<french>	Cours !	</french>	<info>	5	7	</info>	</entry>
 <entry id='	2-5_SEQ_123	'>	<english>	SEQUENCED/nLever/n1 -> 2 -> 3	</english>	<french>	levier/nsequence/n1 -> 2 -> 3	</french>	<info>	29	29	</info>	</entry>
 <entry id='	2-5_FAST	'>	<english>	Be fast/n and smart !	</english>	<french>	Sois rapide/n et intelligent !	</french>	<info>	21	30	</info>	</entry>
@@ -69,7 +69,7 @@
 <entry id='	DESIGN_LABEL	'>	<english>	Game and Level design	</english>	<french>	Game and Level design	</french>	<info>	21	21	</info>	</entry>
 <entry id='	MUSIC_LABEL	'>	<english>	Music	</english>	<french>	Musique	</french>	<info>	5	7	</info>	</entry>
 <entry id='	MUSIC_CONT	'>	<english>	Stéphane Damo	</english>	<french>	Stéphane Damo	</french>	<info>	13	13	</info>	</entry>
-<entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
+<entry id='	VERSION_LABEL	'>	<english>	Alpha/nV1.2	</english>	<french>	Aplha/nV1.2	</french>	<info>	11	11	</info>	</entry>
 <entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
 <entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
 <entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>

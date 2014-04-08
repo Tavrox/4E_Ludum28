@@ -14,7 +14,7 @@ MonoBehaviour:
   GameSize: {x: 0, y: 0}
   OrthelloSize: 0
   gameversion: Alpha v0.1
-  ChosenLanguage: 0
+  ChosenLanguage: 1
   twitter_url: 
   facebook_url: 
   website_url: 
