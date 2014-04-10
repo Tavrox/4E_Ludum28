@@ -50,7 +50,7 @@ public class Player : Character {
 
 	}
 	// Update is called once per frame
-	public void Update () 
+	public void FixedUpdate () 
 	{
 		//_mainCam.transform.position = new Vector3(FETool.Round(thisTransform.position.x,2),FETool.Round(thisTransform.position.y,2),0f);
 		if(!locked) checkInput();

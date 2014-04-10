@@ -18,7 +18,7 @@ public class Patroler : Character {
 	//private float spriteScaleX;
 	protected RaycastHit hitInfo; //infos de collision
 	protected Ray detectTargetLeft, detectTargetRight, detectBlockLeft, detectBlockRight, detectEndPFLeft, detectEndPFRight; //point de départ, direction
-	[Range (0,2.25f)] public float myCORRECTSPEED = 10f;
+	[Range (0,10f)] public float myCORRECTSPEED = 10f;
 	public bool go = true, touchingCrate;
 	public Crate touchedCrate;
 	protected int waypointId = 0;
@@ -78,6 +78,7 @@ public class Patroler : Character {
 		tabCol = gameObject.GetComponents<BoxCollider>();
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>(); //target the player
 		patroling = true;
+		myCORRECTSPEED = myCORRECTSPEED * 50 * Time.deltaTime;
 		//spriteScaleX = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.x;
 	}
 	// Update is called once per frame

@@ -56,7 +56,7 @@ public class Crate : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () 
+	void FixedUpdate () 
 	{
 		//print(grounded);
 		if(!grounded && !isObjChild/*&& _player.grounded*/)
@@ -68,6 +68,7 @@ public class Crate : MonoBehaviour {
 		}
 		detectEndPlatform();
 		if(isObjChild) moveCakeOnSurfPatroler();
+		blockCrate = false;
 		//if(!blockCrate) detectPlayer();
 
 		//landingRay = new Ray(thisTransform.position, Vector3.down);
@@ -90,6 +91,8 @@ public class Crate : MonoBehaviour {
 //	}
 	void OnTriggerStay(Collider other) 
 	{
+		if(other.gameObject.name=="ColliBox" || other.gameObject.CompareTag("Blocker") || other.gameObject.CompareTag("Crate")) 
+		{/*print("GAUUUUUUCHE");*/blockCrate = true;}
 		if(other.gameObject.tag=="Player") {
 //		if(other.gameObject.name=="Crate" || other.gameObject.name=="Crate(Clone)") {
 //			/*if(detectPlayer())*/ other.gameObject.GetComponent<Crate>().transform.position += new Vector3(crateMove*1.5f/*+0.1f*/,0f,0f);

@@ -68,6 +68,8 @@ public class TriggeredDoor : MonoBehaviour {
 	IEnumerator WaitLock()
 	{
 		yield return new WaitForSeconds(0.3f);collider.enabled = true;
+		transform.Translate (Vector3.up * 10000);
+		transform.Translate (Vector3.down * 10000);
 		animSprite.PlayBackward("unlock");
 		yield return new WaitForSeconds(0.2f);		
 		if((_player.transform.position.x-thisTransform.position.x)<0 && (_player.transform.position.x-thisTransform.position.x)>-0.77f

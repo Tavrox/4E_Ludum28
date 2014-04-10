@@ -59,7 +59,7 @@ public class Character : MonoBehaviour
 	private Vector3 mypos;
 	public InputManager InputMan;
 
-	public float jumpSpeed = 12f, jumpDuration = 0.028f, jumpState; //0.036
+	public float jumpSpeed = 12f, jumpDuration = 0.025f, jumpState; //0.036
 	[Range (0,2000)] 	public float 	moveVel = 10f;
 	[Range (0,2000)] 	public float 	jumpVel = 80f;
 	[Range (0,2000)] 	public float 	jump2Vel = 14f;
@@ -159,7 +159,7 @@ public class Character : MonoBehaviour
 //				}
 			}
 			jumpSpeed=13f;
-			if(jumpState>0.028f) jumpSpeed=jumpSpeed+1f;
+			if(jumpState>0.025f) jumpSpeed=jumpSpeed+1f;
 			vectorMove.y = jumpSpeed;
 			jumpState += 0.001f;
 			//print (jumpState);
