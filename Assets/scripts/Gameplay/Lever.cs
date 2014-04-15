@@ -11,7 +11,7 @@ public class Lever : MonoBehaviour {
 	public enum btnType { Lever, TimedBtn, SequenceBtn }
 	public btnType myButtonType;
 	public float delay = 0, SND_minDist;
-	public bool trigged, seqLocked, stopped;
+	public bool trigged, seqLocked, stopped, triggable;
 	private Player _player;
 	//private Label test;
 	//private Rect _myTimer;
@@ -43,6 +43,10 @@ public class Lever : MonoBehaviour {
 //			if(animSprite.frameIndex == 4 && stopped) {_myRemainingTime = delay;stopped = false;StopCoroutine("leverTimer");}
 //			if(animSprite.frameIndex == 5) {StopCoroutine("waitB4Restart");print ("POTS");}
 		}
+		if ((Input.GetKeyDown(InputMan.Action) || Input.GetKeyDown(InputMan.Action2) || Input.GetKey(InputMan.Action3)) && !seqLocked && triggable && !(myButtonType == btnType.TimedBtn && trigged))
+		{
+			inputDetected();
+		}
 	}
 	private IEnumerator leverTimer() {
 		_myRemainingTime -= 1;
@@ -58,29 +62,44 @@ public class Lever : MonoBehaviour {
 		StartCoroutine("waitB4Restart",delay/4);
 		//print ("attendu");
 	}
-	void OnTriggerStay(Collider other)
-	{
+	void OnTriggerEnter(Collider other) {
 		if (other.gameObject.CompareTag("Player"))
 		{
-			if ((Input.GetKeyDown(InputMan.Action) || Input.GetKeyDown(InputMan.Action2) || Input.GetKey(InputMan.Action3)) && !seqLocked && !(myButtonType == btnType.TimedBtn && trigged))
-			{
-				collider.enabled=false;
-				StartCoroutine("delayReactivate");
-				FESound.playDistancedSound("lever",gameObject.transform, _player.transform,SND_minDist);//MasterAudio.PlaySound("lever");
-				trigged = !trigged;
-				if(trigged) {if(myButtonType == btnType.TimedBtn) animSprite.Play("timedunlock"); else animSprite.Play("unlock");}
-				else {if(myButtonType == btnType.TimedBtn){/*MasterAudio.PlaySound("timer_button_alarm");*/ animSprite.Play("timedlock");} else animSprite.Play("lock");}
-
-				if(myButtonType == btnType.SequenceBtn) {seqLocked = true;}
-				else {
-					triggerLever();
-					if(myButtonType == btnType.TimedBtn) {
-						StartCoroutine("delayRetrigg");
-					}
-				}
+			triggable = true;
+		}
+	}
+	void OnTriggerExit(Collider other) {
+		if (other.gameObject.CompareTag("Player"))
+		{
+			triggable = false;
+		}
+	}
+//	void OnTriggerStay(Collider other)
+//	{
+//		if (other.gameObject.CompareTag("Player"))
+//		{
+//			if ((Input.GetKeyDown(InputMan.Action) || Input.GetKeyDown(InputMan.Action2) || Input.GetKey(InputMan.Action3)) && !seqLocked && !(myButtonType == btnType.TimedBtn && trigged))
+//			{
+//				inputDetected();
+//			}
+//		}
+//		
+//	}
+	void inputDetected () {
+		//collider.enabled=false;
+		//StartCoroutine("delayReactivate");
+		FESound.playDistancedSound("lever",gameObject.transform, _player.transform,SND_minDist);//MasterAudio.PlaySound("lever");
+		trigged = !trigged;
+		if(trigged) {if(myButtonType == btnType.TimedBtn) animSprite.Play("timedunlock"); else animSprite.Play("unlock");}
+		else {if(myButtonType == btnType.TimedBtn){/*MasterAudio.PlaySound("timer_button_alarm");*/ animSprite.Play("timedlock");} else animSprite.Play("lock");}
+		
+		if(myButtonType == btnType.SequenceBtn) {seqLocked = true;}
+		else {
+			triggerLever();
+			if(myButtonType == btnType.TimedBtn) {
+				StartCoroutine("delayRetrigg");
 			}
 		}
-		
 	}
 	IEnumerator delayReactivate() {
 		yield return new WaitForSeconds(0.2f);
