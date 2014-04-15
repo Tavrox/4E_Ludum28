@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Key : MonoBehaviour {
 
-	private Vector3 myPosINI;
+	private Vector3 myPosINI, _myScale;
 	private Transform _myGameParent, _playerUI;
 	
 	private LevelManager _levelM;
@@ -12,6 +12,7 @@ public class Key : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		myPosINI = transform.localPosition;
+		_myScale = transform.localScale;
 		_myGameParent = transform.parent.transform;
 		_playerUI = GameObject.Find("Player/IngameUI").transform;
 		GameEventManager.GameStart += GameStart;
@@ -22,8 +23,12 @@ public class Key : MonoBehaviour {
 		_KeySprite = gameObject.GetComponentInChildren<OTSprite>();
 		_KeySprite.frameIndex = _levelM.chosenVariation+4;
 		if(_levelM.isBoss == true) _KeySprite.frameIndex = 4;
+		InvokeRepeating("rotate",0,0.05f);
 	}
-
+	void rotate() {
+		_myScale.x = Mathf.PingPong(Time.time, 2)-1;
+		transform.localScale = _myScale;
+	}
 	void GameStart()
 	{
 		if(this != null && gameObject.activeInHierarchy) resetKey();

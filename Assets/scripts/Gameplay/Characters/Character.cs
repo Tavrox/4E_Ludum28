@@ -169,7 +169,7 @@ public class Character : MonoBehaviour
 //			else chute=true;
 		}
 		addForce = 1;
-		if((!grounded && !(Input.GetKey(InputMan.Up) || Input.GetKey(InputMan.Up2) || Input.GetKey(InputMan.UpSpace) || Input.GetKey(InputMan.PadJump)) ) || blockedUp) chute = true;
+		if((!grounded && !(Input.GetKey(InputMan.Up) || Input.GetKey(InputMan.Up2) || Input.GetKey(InputMan.Up3) || Input.GetKey(InputMan.PadJump)) ) || blockedUp) chute = true;
 		if(blockedUp) {addForce=hitUpBounceForce;/*gravityY += 150f;StartCoroutine("resetGravity");*/}
 		if(chute && grounded) {
 			//if(Input.GetKey(InputMan.Up)  || Input.GetKey(KeyCode.Z) || Input.GetKey(InputMan.PadJump))jumpLocked=true;//StartCoroutine("lockJump");

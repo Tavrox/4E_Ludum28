@@ -14,17 +14,23 @@ public class Timer : MonoBehaviour {
 	public bool pauseTimer = false;
 
 	public bool triggeredEnd = false;
+	private Transform _alertMask;
+	private Color alertColor;
 
 
 	// Use this for initialization
 	void Start () {
 		InvokeRepeating("updateTimer", 0, 0.01f);
+		_alertMask = GameObject.Find("Player/IngameUI/Timer/timerAlert").GetComponent<Transform>();
+		alertColor = _alertMask.renderer.material.color;
+		alertColor.a = 0f;
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GameOver += GameOver;
 		GameEventManager.GamePause += GamePause;
 		GameEventManager.GameUnpause += GameUnpause;
+		GameEventManager.FinishLevel += FinishLevel;
 	}
-	
+	//transform.renderer.material.color.a
 	private void updateTimer()
 	{
 		if (pauseTimer != true)
@@ -43,6 +49,10 @@ public class Timer : MonoBehaviour {
 			{
 				_skinTimer.label.normal.textColor = _colCritical;
 			}
+			if (secLeft < 5)
+			{
+				InvokeRepeating("timerAlert",0,0.2f);
+			}
 
 			if (microSecLeft == 0)
 			{
@@ -50,15 +60,20 @@ public class Timer : MonoBehaviour {
 				microSecLeft = 99;
 			}
 
-			if (secLeft == 0 && triggeredEnd == false)
+			if (secLeft == 0 && microSecLeft == 1 && triggeredEnd == false)
 			{
+				CancelInvoke();
 				GameEventManager.TriggerGameOver();
 				triggeredEnd = true;
 				secLeft = 59;
 			}
 		}
 	}
-
+	private void timerAlert () {
+		//alertColor.a = Mathf.PingPong(Time.time, 0.5f);
+		alertColor.a = (Mathf.Sin(Time.time*6.25f)+0.5f ) * 0.35f;
+		_alertMask.renderer.material.color = alertColor;
+	}
 	public void resetTimer()
 	{
 			secLeft = 59;
@@ -68,9 +83,18 @@ public class Timer : MonoBehaviour {
 	private void GameStart()
 	{
 		if(this != null) {
-		pauseTimer = false;
-		triggeredEnd = false;
-		resetTimer();
+			CancelInvoke();
+			pauseTimer = false;
+			triggeredEnd = false;
+			resetTimer();
+			alertColor.a = 0f;_alertMask.renderer.material.color = alertColor;
+			InvokeRepeating("updateTimer", 0, 0.01f);
+		}
+	}
+	private void FinishLevel() {
+		if(this != null && gameObject.activeInHierarchy) {
+			CancelInvoke();
+			alertColor.a = 0f;_alertMask.renderer.material.color = alertColor;
 		}
 	}
 	private void GamePause()
@@ -85,7 +109,7 @@ public class Timer : MonoBehaviour {
 	private void GameOver()
 	{
 		if(this != null && gameObject.activeInHierarchy) {
-		pauseTimer = true;
+			pauseTimer = true;
 		}
 	}
 

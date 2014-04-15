@@ -35,7 +35,7 @@ public class InputManager : ScriptableObject {
 	[HideInInspector] public KeyCode Hold2 =  KeyCode.A;
 	[HideInInspector] public KeyCode Hold3 =  KeyCode.RightShift;
 	
-	[HideInInspector] public KeyCode UpSpace = KeyCode.Space;
+	[HideInInspector] public KeyCode Up3 = KeyCode.Space;
 	[HideInInspector] public KeyCode PauseMenu =  KeyCode.Escape;
 
 	[HideInInspector] public string PadAction;
@@ -77,7 +77,7 @@ public class InputManager : ScriptableObject {
 		Hold2 =  KeyCode.A;
 		Hold3 =  KeyCode.RightShift;
 		
-		UpSpace = KeyCode.Space;
+		Up3 = KeyCode.Space;
 		PauseMenu =  KeyCode.Escape;
 	}
 
