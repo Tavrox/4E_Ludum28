@@ -29,6 +29,9 @@ public class Timer : MonoBehaviour {
 		GameEventManager.GamePause += GamePause;
 		GameEventManager.GameUnpause += GameUnpause;
 		GameEventManager.FinishLevel += FinishLevel;
+		if(FETool.Round(((float) Screen.width/(float) Screen.height),1)!=1.3) {
+			posX = posY = 30;
+		}
 	}
 	//transform.renderer.material.color.a
 	private void updateTimer()
@@ -71,7 +74,7 @@ public class Timer : MonoBehaviour {
 	}
 	private void timerAlert () {
 		//alertColor.a = Mathf.PingPong(Time.time, 0.5f);
-		alertColor.a = (Mathf.Sin(Time.time*6.25f)+0.5f ) * 0.35f;
+		alertColor.a = (Mathf.Sin(Time.time*6.25f)+0.5f ) * 0.2f;
 		_alertMask.renderer.material.color = alertColor;
 	}
 	public void resetTimer()

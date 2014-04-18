@@ -33,7 +33,7 @@ public class MainTitleUI : MonoBehaviour
 		SETUP.startTranslate(SETUP.ChosenLanguage);
 		SETUP.translateSceneText();	
 		levelInformations = new List<LevelInfo> ();
-		Screen.SetResolution(800,600, false);
+		//Screen.SetResolution(800,600, false);
 		Application.targetFrameRate = 60;
 
 		if (GameObject.FindGameObjectWithTag("PlayerData") == null)

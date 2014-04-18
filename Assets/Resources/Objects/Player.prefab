@@ -1019,7 +1019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   posX: 18
-  posY: 22
+  posY: 18
   secLeft: 59
   microSecLeft: 99
   _skinTimer: {fileID: 11400000, guid: 902381b5099917f45af994a30de2b15e, type: 2}
