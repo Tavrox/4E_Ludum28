@@ -68,7 +68,7 @@ public class Crate : MonoBehaviour {
 		}
 		detectEndPlatform();
 		if(isObjChild) moveCakeOnSurfPatroler();
-		blockCrate = false;
+		//blockCrate = false;
 		//if(!blockCrate) detectPlayer();
 
 		//landingRay = new Ray(thisTransform.position, Vector3.down);

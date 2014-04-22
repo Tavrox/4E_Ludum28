@@ -158,7 +158,7 @@ public class Character : MonoBehaviour
 //					vectorMove.y = jump2Vel;
 //				}
 			}
-			jumpSpeed=13f;
+			jumpSpeed=10f;
 			if(jumpState>0.025f) jumpSpeed=jumpSpeed+1f;
 			vectorMove.y = jumpSpeed;
 			jumpState += 0.001f;
@@ -221,7 +221,7 @@ public class Character : MonoBehaviour
 	{
 		blockedRight = false;
 		blockedLeft = false;
-		blockedUp = false;
+		//blockedUp = false;
 		blockedDown = false;
 		onCrate = false;
 		grounded = false;
@@ -321,7 +321,7 @@ public class Character : MonoBehaviour
 	{
 		blockedRight = false;
 		blockedLeft = false;
-		blockedUp = false;
+		//blockedUp = false;
 		blockedDown = false;
 		onCrate = false;
 		grounded = false;
@@ -389,11 +389,16 @@ public class Character : MonoBehaviour
 		{
 			vectorMove.y = 0f;
 			blockedUp = true;
+			StartCoroutine ("unblockUp");
 		}
+	}
+	IEnumerator unblockUp() {
+		yield return new WaitForSeconds(0.04f);
+		blockedUp = false;
 	}
 	void BlockedDown()
 	{
-		if (vectorMove.y <= 0)
+		if (vectorMove.y <= 0 && !blockedUp)
 		{
 			grounded = true;
 			isJump = false;

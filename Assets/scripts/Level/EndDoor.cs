@@ -36,7 +36,7 @@ public class EndDoor : MonoBehaviour {
 				StartCoroutine("lastFrameBuzzer");
 				//Destroy (_UINeedKey);
 				GameEventManager.TriggerFinishLevel();
-				FinishLevel();
+				//FinishLevel();
 				MasterAudio.PlaySound("key_door");
 			}
 			else if ((Input.GetKeyDown(InputMan.Action) || Input.GetKeyDown(InputMan.Action2) || Input.GetKey(InputMan.Action3))  && _player.hasFinalKey == false)

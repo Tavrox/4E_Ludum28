@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 
 public class TriggeredDoor : MonoBehaviour {
 	
@@ -9,7 +10,8 @@ public class TriggeredDoor : MonoBehaviour {
 	private bool memoryLock;
 	private Player _player;
 	private Transform thisTransform;
-
+	public List<Crate> touchingCrates = new List<Crate>();
+	private BoxCollider _myCol;
 	public virtual void Awake()
 	{
 		thisTransform = transform;	
@@ -19,6 +21,7 @@ public class TriggeredDoor : MonoBehaviour {
 		animSprite.Play("closed");
 		//if(!isLocked) Unlock();
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
+		_myCol = (BoxCollider)this.collider;
 		GameEventManager.GameStart += GameStart;
 		if (isLocked)
 			memoryLock = true;
@@ -59,10 +62,15 @@ public class TriggeredDoor : MonoBehaviour {
 		StartCoroutine("WaitUnlock");
 		//		}
 	}
-
+	void OnTriggerEnter(Collider other) {
+		if(other.gameObject.CompareTag("Crate")) 
+			touchingCrates.Add(other.collider.gameObject.GetComponent<Crate>());
+	}
 	IEnumerator WaitUnlock()
 	{
 		yield return new WaitForSeconds(0.3f);collider.enabled = false;
+		foreach(Crate c in touchingCrates) c.SendMessage("OnTriggerExit",this.collider); //c.blockCrate = false;
+		//touchingCrates.Clear();
 		animSprite.Play("unlock");
 	}
 	IEnumerator WaitLock()
@@ -70,6 +78,10 @@ public class TriggeredDoor : MonoBehaviour {
 		yield return new WaitForSeconds(0.3f);collider.enabled = true;
 		transform.Translate (Vector3.up * 10000);
 		transform.Translate (Vector3.down * 10000);
+//		foreach(Crate c in touchingCrates) {
+//			c.SendMessage("OnTriggerEnter",this.collider);
+//			c.blockCrate = false;
+//		}
 		animSprite.PlayBackward("unlock");
 		yield return new WaitForSeconds(0.2f);		
 		if((_player.transform.position.x-thisTransform.position.x)<0 && (_player.transform.position.x-thisTransform.position.x)>-0.77f

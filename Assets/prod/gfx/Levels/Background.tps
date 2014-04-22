@@ -56,7 +56,7 @@
             <key>width</key>
             <int>150</int>
             <key>height</key>
-            <int>1100</int>
+            <int>2100</int>
         </QSize>
         <key>fixedTextureSize</key>
         <QSize>
@@ -126,7 +126,7 @@
             <string></string>
         </struct>
         <key>autoAliasEnabled</key>
-        <true/>
+        <false/>
         <key>trimSpriteNames</key>
         <false/>
         <key>globalSpriteSettings</key>
@@ -211,6 +211,51 @@
             <filename>letters/backgroundNumLetter24.png</filename>
             <filename>letters/backgroundNumLetter25.png</filename>
             <filename>numbers/backgroundNum15.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleBD1-1.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleBD1-2.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleBD1-3.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleBD2-1.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleBD2-2.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleBD2-3.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleBD3-1.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleBD3-2.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleBD3-3.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleBG1-1.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleBG1-2.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleBG1-3.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleBG2-1.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleBG2-2.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleBG2-3.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleBG3-1.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleBG3-2.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleBG3-3.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleHD1-1.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleHD1-2.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleHD1-3.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleHD2-1.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleHD2-2.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleHD2-3.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleHD3-1.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleHD3-2.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleHD3-3.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleHG1-1.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleHG1-2.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleHG1-3.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleHG2-1.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleHG2-2.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleHG2-3.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleHG3-1.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleHG3-2.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/trianbleHG3-3.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/window1-1.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/window1-2.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/window1-3.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/window2-1.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/window2-2.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/window2-3.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/window3-1.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/window3-2.png</filename>
+            <filename>../../../../../../../Desktop/exportsWindows/images/window3-3.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

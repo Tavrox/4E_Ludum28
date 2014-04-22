@@ -6,6 +6,7 @@ public class InvasionAnims : MonoBehaviour {
 	public OTAnimatingSprite animSprite;
 	private Player _player;
 	private bool stopped;
+	private float ratio;
 	// Use this for initialization
 	void Start ()
 	{
@@ -14,6 +15,10 @@ public class InvasionAnims : MonoBehaviour {
 		stopped = false;
 		invade();
 		if(!_player.killedByBlob) animSprite.renderer.enabled = false;
+		if(FETool.Round(((float) Screen.width/(float) Screen.height),1)!=1.3) {
+			ratio = FETool.Round(((float) Screen.width/(float) Screen.height),1) - 1.3f;
+			gameObject.transform.localScale += new Vector3(ratio,ratio,0f);
+		}
 	}
 	void Update () {
 		if(animSprite.frameIndex == 18 && !stopped) {
