@@ -971,7 +971,7 @@ MonoBehaviour:
   vectorFixed: {x: 0, y: 0, z: 0}
   InputMan: {fileID: 0}
   jumpSpeed: 14
-  jumpDuration: .0250000004
+  jumpDuration: .0270000007
   jumpState: 0
   moveVel: 10
   jumpVel: 600
@@ -1018,8 +1018,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba1c2b58ee186c40ab5a237eea662e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  posX: 18
-  posY: 18
+  posX: 10
+  posY: 20
   secLeft: 59
   microSecLeft: 99
   _skinTimer: {fileID: 11400000, guid: 902381b5099917f45af994a30de2b15e, type: 2}

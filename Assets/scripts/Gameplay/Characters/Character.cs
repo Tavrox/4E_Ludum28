@@ -158,9 +158,10 @@ public class Character : MonoBehaviour
 //					vectorMove.y = jump2Vel;
 //				}
 			}
-			jumpSpeed=12f;
+			jumpSpeed=13f;
 			//if(jumpState>0.025f) jumpSpeed=jumpSpeed+1f;
-			vectorMove.y = jumpSpeed;
+			if(jumpState<0.005f) vectorMove.y = jumpSpeed*0.5f;
+			else vectorMove.y = jumpSpeed;
 			jumpState += 0.001f;
 			//print (jumpState);
 			if(jumpState > jumpDuration) chute=true;
@@ -205,7 +206,7 @@ public class Character : MonoBehaviour
 		{
 			vectorMove.y = -maxVelY;
 		}
-		
+
 		// apply movement
 		vectorMove.x = vectorMove.x * runSpeed; //ADD
 		vectorFixed = vectorMove * Time.deltaTime;

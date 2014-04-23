@@ -11,7 +11,8 @@ public class PlayerAnims : MonoBehaviour
 		Climb, ClimbStop,
 		StandLeft, StandRight,
 		HangLeft, HangRight,
-		FallLeft, FallRight ,
+		JumpLeft, JumpRight ,
+		FallLeft, FallRight,
 		ShootLeft, ShootRight,
 		CrounchLeft, CrounchRight,
 		AttackLeft, AttackRight,
@@ -242,21 +243,40 @@ public class PlayerAnims : MonoBehaviour
 	}
 	private void Jump()
 	{
-		if(!_player.locked && !_player.isDead && _character.grounded == false && currentAnim != animDef.FallLeft && _character.facingDir == Character.facing.Left)
+		if(!_player.locked && !_player.isDead && _player.chute == false && _character.grounded == false && currentAnim != animDef.JumpLeft && _character.facingDir == Character.facing.Left)
 		{
 			animSprite.looping = false;
 			MasterAudio.StopAllOfSound("player_runL1");
-			currentAnim = animDef.FallLeft;
+			currentAnim = animDef.JumpLeft;
 			animSprite.Play("jump"); // fall left
 			//print (_character.falling);
 			InvertSprite();
 		}
-		if(!_player.locked && !_player.isDead && _character.grounded == false && currentAnim != animDef.FallRight && _character.facingDir == Character.facing.Right)
+		if(!_player.locked && !_player.isDead && _player.chute == false && _character.grounded == false && currentAnim != animDef.JumpRight && _character.facingDir == Character.facing.Right)
 		{
 			animSprite.looping = false;
 			MasterAudio.StopAllOfSound("player_runL1");
-			currentAnim = animDef.FallRight;
+			currentAnim = animDef.JumpRight;
 			animSprite.Play("jump"); // fall right
+			//print (_character.falling);
+			NormalScaleSprite();
+		}
+	}
+	private void Fall()
+	{
+		if(!_player.locked && !_player.isDead && _player.chute == true && _character.grounded == false && currentAnim != animDef.FallLeft && _character.facingDir == Character.facing.Left)
+		{
+			animSprite.looping = false;
+			currentAnim = animDef.FallLeft;
+			animSprite.PlayOnce("fall"); // fall left
+			//print (_character.falling);
+			InvertSprite();
+		}
+		if(!_player.locked && !_player.isDead && _player.chute == true && _character.grounded == false && currentAnim != animDef.FallRight && _character.facingDir == Character.facing.Right)
+		{
+			animSprite.looping = false;
+			currentAnim = animDef.FallRight;
+			animSprite.PlayOnce("fall"); // fall right
 			//print (_character.falling);
 			NormalScaleSprite();
 		}
@@ -299,10 +319,6 @@ public class PlayerAnims : MonoBehaviour
 			StartCoroutine( WaitAndCallback( anim.GetDuration(anim.framesets[2]) ) );
 			NormalScaleSprite();
 		}
-	}
-	private void Fall()
-	{
-		
 	}
 	private void Paused()
 	{
