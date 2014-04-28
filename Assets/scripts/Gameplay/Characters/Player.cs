@@ -9,7 +9,7 @@ public class Player : Character {
 
 	public bool hasFinalKey = false;
 
-	public int angleRotation;
+	public int angleRotation, nbKey;
 	public bool isDead = false, locked = false, killedByBlob, finishedLevel;
 	private bool walkSoundLeft;
 	//private Camera _mainCam;
@@ -40,7 +40,7 @@ public class Player : Character {
 		
 //		GetComponent<BoxCollider>().size = new Vector3(1.3f,2f,30f);
 //		GetComponent<BoxCollider>().center = new Vector3(0f,0f,0f);
-		
+		nbKey = 0;
 		spawnPos = thisTransform.position;
 		isDead =false;
 		col = (BoxCollider)this.collider;
@@ -213,6 +213,7 @@ public class Player : Character {
 		chute = true;
 		vectorMove.y = 0;
 		angleRotation = 0;
+		nbKey = 0;
 		isDead = false;
 		}
 	}

@@ -34,7 +34,7 @@ public class Character : MonoBehaviour
 	[HideInInspector] public bool isPass;
 	
 	[HideInInspector] public bool jumping = false;
-	[HideInInspector] public bool falling = false,chute, onCrate, pushCrate, grabCrate, jumpLocked;
+	[HideInInspector] public bool falling = false,chute, onCrate, pushCrate, grabCrate, jumpLocked, fallApproachGround;
 	[HideInInspector] public bool grounded = false;
 	[HideInInspector] public bool passingPlatform;
 	[HideInInspector] public bool onPlatform;
@@ -226,6 +226,7 @@ public class Character : MonoBehaviour
 		blockedDown = false;
 		onCrate = false;
 		grounded = false;
+		fallApproachGround = false;
 		myCrate = null;
 //		absVel2X = Mathf.Abs(vectorFixed.x);
 //		absVel2Y = Mathf.Abs(vectorFixed.y);
@@ -267,6 +268,11 @@ public class Character : MonoBehaviour
 				myCrateX = myCrate.transform.position.x;
 			}
 			BlockedDown();
+		}
+		Debug.DrawRay (new Vector3(mypos.x, mypos.y), Vector3.down*4, Color.yellow);
+		if(Physics.Raycast(new Vector3(mypos.x, mypos.y), Vector3.down, out hitInfo, 4, groundMask) && chute){
+			fallApproachGround = true;
+			//print (fallApproachGround);
 		}
 		//print(Physics.Raycast(mypos, Vector3.up, out hitInfo, halfMyY, groundMask));
 		// BLOCKED TO UP

@@ -19,7 +19,7 @@ public class ArcElectric : MonoBehaviour {
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GameOver += GameOver;
 		GameEventManager.FinishLevel += FinishLevel;
-		if(delayBegin != 0) collider.enabled=false;
+		/*if(delayBegin != 0)*/ collider.enabled=false;
 		//MasterAudio.PlaySound("piston_idle");
 	}
 	
@@ -90,7 +90,7 @@ public class ArcElectric : MonoBehaviour {
 	void GameStart() {
 		if(this != null && gameObject.activeInHierarchy) {
 		animSprite.Play("arcDefault");
-		if(delayBegin != 0) collider.enabled=false;
+		/*if(delayBegin != 0)*/ collider.enabled=false;
 		activeState = true;
 		if(inactiveTime==0) StartCoroutine("waitB4Active",false);
 		else if(activeTime!=0) StartCoroutine("waitB4Active",true);

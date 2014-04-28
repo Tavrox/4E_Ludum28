@@ -52,7 +52,7 @@ public class Crate : MonoBehaviour {
 	{
 		// wait for things to settle before applying gravity
 		yield return new WaitForSeconds(0.1f);
-		gravityY = 0.2f;
+		gravityY = 0.7f;
 	}
 	
 	// Update is called once per frame

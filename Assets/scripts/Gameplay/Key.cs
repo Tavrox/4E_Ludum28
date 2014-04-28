@@ -5,12 +5,13 @@ public class Key : MonoBehaviour {
 
 	private Vector3 myPosINI, _myScale;
 	private Transform _myGameParent, _playerUI;
-	
+	private Player _player;
 	private LevelManager _levelM;
 	private OTSprite _KeySprite;
 
 	// Use this for initialization
 	void Start () {
+		_player = GameObject.Find("Player").GetComponent<Player>();
 		myPosINI = transform.localPosition;
 		_myScale = transform.localScale;
 		_myGameParent = transform.parent.transform;
@@ -48,7 +49,7 @@ public class Key : MonoBehaviour {
 			gameObject.transform.parent = _myGameParent;
 			transform.localPosition = myPosINI;
 			//GetComponentInChildren<OTSprite>().renderer.enabled = true;
-			GameObject.Find("Player").GetComponent<Player>().hasFinalKey = false;
+			_player.hasFinalKey = false;
 		}
 	}
 	void OnTriggerEnter(Collider _coll)
@@ -58,7 +59,8 @@ public class Key : MonoBehaviour {
 			gameObject.transform.parent = _playerUI;
 			transform.localPosition = new Vector3(-8.3f,4f,0f);
 			MasterAudio.PlaySound("key_collecting");
-			GameObject.Find("Player").GetComponent<Player>().hasFinalKey = true;
+			_player.nbKey++;
+			if(_player.nbKey>2)	_player.hasFinalKey = true;
 			//GetComponentInChildren<OTSprite>().renderer.enabled = false;
 		}
 

@@ -10516,8 +10516,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: playerAnims
-  _fps: 12.666667
-  _duration: 6.78947353
+  _fps: 12.6666698
+  _duration: 6.7894721
   framesets:
   - name: run
     container: {fileID: 11400088}
@@ -10570,7 +10570,7 @@ MonoBehaviour:
   - name: jump
     container: {fileID: 11400088}
     startFrame: 49
-    endFrame: 53
+    endFrame: 51
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -10589,7 +10589,7 @@ MonoBehaviour:
     playCount: 1
     pingPong: 0
     singleDuration: 0
-    startIndex: 56
+    startIndex: 54
     _containerName: playerSheet
   - name: grabCrate
     container: {fileID: 11400088}
@@ -10601,7 +10601,7 @@ MonoBehaviour:
     playCount: 1
     pingPong: 0
     singleDuration: 0
-    startIndex: 66
+    startIndex: 64
     _containerName: playerSheet
   - name: pushCrate
     container: {fileID: 11400088}
@@ -10613,7 +10613,19 @@ MonoBehaviour:
     playCount: 1
     pingPong: 0
     singleDuration: 0
-    startIndex: 76
+    startIndex: 74
+    _containerName: playerSheet
+  - name: fall
+    container: {fileID: 11400088}
+    startFrame: 52
+    endFrame: 53
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 84
     _containerName: playerSheet
 --- !u!114 &11400046
 MonoBehaviour:
@@ -13362,7 +13374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: Background
-  _sheetSize: {x: 150, y: 1050}
+  _sheetSize: {x: 150, y: 1800}
   texture: {fileID: 2800000, guid: 091fb6c9c45b3b84a98bb331f91fee89, type: 3}
   sizeTextures: []
   generateSprites: 0
@@ -13808,13 +13820,328 @@ MonoBehaviour:
     size: {x: 50, y: 50}
     frameSize: {x: 50, y: 50}
     metaData: []
+  - name: trianbleBD1-1
+    position: {x: 0, y: 1050}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleBD1-2
+    position: {x: 50, y: 1050}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleBD1-3
+    position: {x: 100, y: 1050}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleBD2-1
+    position: {x: 0, y: 1100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleBD2-2
+    position: {x: 50, y: 1100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleBD2-3
+    position: {x: 100, y: 1100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleBD3-1
+    position: {x: 0, y: 1150}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleBD3-2
+    position: {x: 50, y: 1150}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleBD3-3
+    position: {x: 100, y: 1150}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleBG1-1
+    position: {x: 0, y: 1200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleBG1-2
+    position: {x: 50, y: 1200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleBG1-3
+    position: {x: 100, y: 1200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleBG2-1
+    position: {x: 0, y: 1250}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleBG2-2
+    position: {x: 50, y: 1250}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleBG2-3
+    position: {x: 100, y: 1250}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleBG3-1
+    position: {x: 0, y: 1300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleBG3-2
+    position: {x: 50, y: 1300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleBG3-3
+    position: {x: 100, y: 1300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleHD1-1
+    position: {x: 0, y: 1350}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleHD1-2
+    position: {x: 50, y: 1350}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleHD1-3
+    position: {x: 100, y: 1350}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleHD2-1
+    position: {x: 0, y: 1400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleHD2-2
+    position: {x: 50, y: 1400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleHD2-3
+    position: {x: 100, y: 1400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleHD3-1
+    position: {x: 0, y: 1450}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleHD3-2
+    position: {x: 50, y: 1450}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleHD3-3
+    position: {x: 100, y: 1450}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleHG1-1
+    position: {x: 0, y: 1500}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleHG1-2
+    position: {x: 50, y: 1500}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleHG1-3
+    position: {x: 100, y: 1500}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleHG2-1
+    position: {x: 0, y: 1550}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleHG2-2
+    position: {x: 50, y: 1550}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleHG2-3
+    position: {x: 100, y: 1550}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleHG3-1
+    position: {x: 0, y: 1600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleHG3-2
+    position: {x: 50, y: 1600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: trianbleHG3-3
+    position: {x: 100, y: 1600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: window1-1
+    position: {x: 0, y: 1650}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: window1-2
+    position: {x: 50, y: 1650}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: window1-3
+    position: {x: 100, y: 1650}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: window2-1
+    position: {x: 0, y: 1700}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: window2-2
+    position: {x: 50, y: 1700}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: window2-3
+    position: {x: 100, y: 1700}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: window3-1
+    position: {x: 0, y: 1750}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: window3-2
+    position: {x: 50, y: 1750}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
+  - name: window3-3
+    position: {x: 100, y: 1750}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 50, y: 50}
+    frameSize: {x: 50, y: 50}
+    metaData: []
   offsetSizing: 1
   metaType: 
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: 9ff3c9b410a921041b2193fd126f0d24, type: 3}
   reloadData: 0
-  bytesDataFile: 31352
-  id: 16
+  bytesDataFile: 51625
+  id: 21
 --- !u!114 &11400154
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15297,7 +15624,7 @@ MonoBehaviour:
   _atlasDataFile: {fileID: 4900000, guid: 296c2c57bc61dcf4987fb2476c391a97, type: 3}
   reloadData: 0
   bytesDataFile: 36311
-  id: 44
+  id: 43
 --- !u!114 &11400220
 MonoBehaviour:
   m_ObjectHideFlags: 1
