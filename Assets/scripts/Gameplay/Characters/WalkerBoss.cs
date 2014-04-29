@@ -98,7 +98,7 @@ public class WalkerBoss : Enemy {
 			getDamage(1);
 		}
 		if(_other.gameObject.GetComponent<TriggeredDoor>() != null) {
-			moveVel = 0;
+			moveVel = 5;
 			StartCoroutine("speedAfterSlowed");
 			_other.gameObject.GetComponent<TriggeredDoor>().explode();
 		}

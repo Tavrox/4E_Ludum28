@@ -24,7 +24,7 @@ public class Key : MonoBehaviour {
 		_KeySprite = gameObject.GetComponentInChildren<OTSprite>();
 		_KeySprite.frameIndex = _levelM.chosenVariation+4;
 		if(_levelM.isBoss == true) _KeySprite.frameIndex = 4;
-		InvokeRepeating("rotate",0,0.05f);
+		//InvokeRepeating("rotate",0,0.05f);
 	}
 	void rotate() {
 		_myScale.x = Mathf.PingPong(Time.time, 2)-1;
@@ -60,7 +60,7 @@ public class Key : MonoBehaviour {
 			transform.localPosition = new Vector3(-8.3f,4f,0f);
 			MasterAudio.PlaySound("key_collecting");
 			_player.nbKey++;
-			if(_player.nbKey>2)	_player.hasFinalKey = true;
+			if(_player.nbKey>0)	_player.hasFinalKey = true;
 			//GetComponentInChildren<OTSprite>().renderer.enabled = false;
 		}
 

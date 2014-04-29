@@ -59,7 +59,7 @@ public class PlayerAnims : MonoBehaviour
 		Jump();
 		Attack();
 		Hurt();
-		Fall();
+		//Fall();
 		Paused();
 		DeathBlob();
 			//	}
@@ -67,7 +67,7 @@ public class PlayerAnims : MonoBehaviour
 			if(animSprite.frameIndex == 38 && !stopped) {stopped=true;animSprite.Pauze();StartCoroutine("waitB4Restart",2.5f);} //deathBlob pause
 			if(animSprite.frameIndex == 46 && !stopped) {stopped=true;animSprite.Pauze();StartCoroutine("waitB4Restart",1f);} //iddle pause 1
 			if(animSprite.frameIndex == 48 && !stopped) {stopped=true;animSprite.Pauze();StartCoroutine("waitB4Restart",1f);} //iddle pause 2
-			if(animSprite.frameIndex == 51 && !stopped) {print("phfibzobf zouzhogubiuh iuh ouh** ** ** **");stopped=true;animSprite.Stop();StartCoroutine("waitB4Restart",1f);} //jump
+			//if(animSprite.frameIndex == 51 && !stopped) {stopped=true;animSprite.Stop();StartCoroutine("waitB4Restart",1f);} //jump
 			//if(animSprite.frameIndex == 51 && stopped && _player.chute == true) {stopped=false;animSprite.Resume();} //fall
 			//if(animSprite.frameIndex == 43 && !stopped) {stopped=true;animSprite.Stop();StartCoroutine("waitB4Restart",0.09f);} //deathBlob pause
 			print (animSprite.frameIndex);
@@ -193,16 +193,16 @@ public class PlayerAnims : MonoBehaviour
 	}
 	private void PushCrate()
 	{
-		if(_character.grounded && currentAnim!=animDef.PushCrateRight && _player.pushCrate)
-		{
-			animSprite.frameIndex = 57;
-			NormalScaleSprite();
-		}
-		if(_character.grounded && currentAnim!=animDef.PushCrateLeft && _player.pushCrate)
-		{
-			animSprite.frameIndex = 57;
-			InvertSprite();
-		}
+//		if(_character.grounded && currentAnim!=animDef.PushCrateRight && _player.pushCrate)
+//		{
+//			animSprite.frameIndex = 57;
+//			NormalScaleSprite();
+//		}
+//		if(_character.grounded && currentAnim!=animDef.PushCrateLeft && _player.pushCrate)
+//		{
+//			animSprite.frameIndex = 57;
+//			InvertSprite();
+//		}
 		if(_character.isRight && _character.grounded && currentAnim!=animDef.PushCrateRight && _player.pushCrate)
 		{
 			currentAnim = animDef.PushCrateRight;
@@ -218,16 +218,16 @@ public class PlayerAnims : MonoBehaviour
 	}
 	private void GrabCrate()
 	{
-		if(_character.grounded && currentAnim!=animDef.GrabCrateRight && _player.grabCrate)
-		{
-			animSprite.frameIndex = 27;
-			NormalScaleSprite();
-		}
-		if(_character.isLeft && _character.grounded && currentAnim!=animDef.GrabCrateLeft && _player.grabCrate)
-		{
-			animSprite.frameIndex = 27;
-			InvertSprite();
-		}
+//		if(_character.grounded && currentAnim!=animDef.GrabCrateRight && _player.grabCrate)
+//		{
+//			animSprite.frameIndex = 27;
+//			NormalScaleSprite();
+//		}
+//		if(_character.isLeft && _character.grounded && currentAnim!=animDef.GrabCrateLeft && _player.grabCrate)
+//		{
+//			animSprite.frameIndex = 27;
+//			InvertSprite();
+//		}
 		if(_character.isRight && _character.grounded && currentAnim!=animDef.GrabCrateRight && _player.grabCrate)
 		{
 			currentAnim = animDef.GrabCrateRight;

@@ -9119,7 +9119,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Priority: 128
   DopplerLevel: 1
@@ -14141,7 +14141,7 @@ MonoBehaviour:
   _atlasDataFile: {fileID: 4900000, guid: 9ff3c9b410a921041b2193fd126f0d24, type: 3}
   reloadData: 0
   bytesDataFile: 51625
-  id: 21
+  id: 20
 --- !u!114 &11400154
 MonoBehaviour:
   m_ObjectHideFlags: 1

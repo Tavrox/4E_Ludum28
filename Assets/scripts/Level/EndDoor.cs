@@ -58,7 +58,7 @@ public class EndDoor : MonoBehaviour {
 		MasterAudio.FadeAllPlaylistsToVolume(0f, 2f);
 			MasterAudio.FadeOutAllOfSound("bg",2f);
 			MasterAudio.FadeOutAllOfSound("intro",2f);
-			MasterAudio.FadeOutAllOfSound("tuto",2f);
+			//MasterAudio.FadeOutAllOfSound("tuto",2f);
 			MasterAudio.FadeOutAllOfSound("jam",2f);
 			MasterAudio.FadeOutAllOfSound("level_theme_1",2f);
 			MasterAudio.FadeOutAllOfSound("level_theme_2",2f);
@@ -78,7 +78,7 @@ public class EndDoor : MonoBehaviour {
 		yield return new WaitForSeconds(3f);
 		MasterAudio.StopAllOfSound("bg");
 		MasterAudio.StopAllOfSound("intro");
-		MasterAudio.StopAllOfSound("tuto");
+		//MasterAudio.StopAllOfSound("tuto");
 		MasterAudio.StopAllOfSound("jam");
 		MasterAudio.StopAllOfSound("level_theme_1");
 		MasterAudio.StopAllOfSound("level_theme_2");

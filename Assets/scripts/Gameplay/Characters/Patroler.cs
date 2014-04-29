@@ -52,8 +52,8 @@ public class Patroler : Character {
 
 		spawnPos = gameObject.transform.position;
 		if (gameObject.name != "PatrolerBoss") {
-						GetComponent<BoxCollider> ().size = new Vector3 (1.3f, 0.7f, 30f);
-						GetComponent<BoxCollider> ().center = new Vector3 (0, -0.1f, 0f);
+//						GetComponent<BoxCollider> ().size = new Vector3 (1.3f, 0.7f, 30f);
+//						GetComponent<BoxCollider> ().center = new Vector3 (0, -0.1f, 0f);
 				}
 		//		soundEmitt1 = Instantiate(instFootWave) as WaveCreator;
 		//		soundEmitt2 = Instantiate(instFootWave) as WaveCreator;
