@@ -10360,8 +10360,8 @@ MonoBehaviour:
   framesets:
   - name: destroy
     container: {fileID: 11400238}
-    startFrame: 36
-    endFrame: 42
+    startFrame: 47
+    endFrame: 53
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -16045,7 +16045,7 @@ MonoBehaviour:
   _atlasDataFile: {fileID: 4900000, guid: cfd96d83056ea9948a78df2c62e4305c, type: 3}
   reloadData: 0
   bytesDataFile: 5890
-  id: 15
+  id: 16
 --- !u!114 &11400226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16402,120 +16402,197 @@ MonoBehaviour:
     size: {x: 98, y: 98}
     frameSize: {x: 100, y: 100}
     metaData: []
-  - name: end_1
+  - name: endDoor_0000
     position: {x: 680, y: 62}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 214, y: 158}
+    frameSize: {x: 216, y: 158}
+    metaData: []
+  - name: endDoor_0001
+    position: {x: 0, y: 220}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 214, y: 158}
+    frameSize: {x: 216, y: 158}
+    metaData: []
+  - name: endDoor_0002
+    position: {x: 214, y: 220}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 214, y: 158}
+    frameSize: {x: 216, y: 158}
+    metaData: []
+  - name: endDoor_0003
+    position: {x: 428, y: 220}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 214, y: 158}
+    frameSize: {x: 216, y: 158}
+    metaData: []
+  - name: endDoor_0004
+    position: {x: 642, y: 220}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 214, y: 158}
+    frameSize: {x: 216, y: 158}
+    metaData: []
+  - name: endDoor_0005
+    position: {x: 0, y: 378}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 214, y: 158}
+    frameSize: {x: 216, y: 158}
+    metaData: []
+  - name: end_1
+    position: {x: 214, y: 378}
     offset: {x: 12, y: 0}
     rotated: 0
     size: {x: 38, y: 100}
     frameSize: {x: 50, y: 100}
     metaData: []
   - name: end_2
-    position: {x: 718, y: 62}
+    position: {x: 252, y: 378}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 50, y: 100}
     frameSize: {x: 50, y: 100}
     metaData: []
   - name: end_3
-    position: {x: 768, y: 62}
+    position: {x: 302, y: 378}
     offset: {x: 0, y: 10}
     rotated: 0
     size: {x: 50, y: 90}
     frameSize: {x: 50, y: 100}
     metaData: []
   - name: kEY
-    position: {x: 818, y: 62}
+    position: {x: 352, y: 378}
     offset: {x: 4, y: 9}
     rotated: 0
     size: {x: 44, y: 28}
     frameSize: {x: 50, y: 50}
     metaData: []
   - name: kEY1Jaune
-    position: {x: 862, y: 62}
+    position: {x: 396, y: 378}
     offset: {x: 0, y: 6}
     rotated: 0
     size: {x: 50, y: 34}
     frameSize: {x: 50, y: 50}
     metaData: []
   - name: kEY2Violet
-    position: {x: 912, y: 62}
+    position: {x: 446, y: 378}
     offset: {x: 0, y: 5}
     rotated: 0
     size: {x: 50, y: 36}
     frameSize: {x: 50, y: 50}
     metaData: []
   - name: kEY3Vert
-    position: {x: 962, y: 62}
+    position: {x: 496, y: 378}
     offset: {x: 0, y: 5}
     rotated: 0
     size: {x: 50, y: 36}
     frameSize: {x: 50, y: 50}
     metaData: []
   - name: kEY4Bleu
-    position: {x: 0, y: 162}
+    position: {x: 546, y: 378}
     offset: {x: 0, y: 5}
     rotated: 0
     size: {x: 50, y: 36}
     frameSize: {x: 50, y: 50}
     metaData: []
   - name: kEY5Rouge
-    position: {x: 50, y: 162}
+    position: {x: 596, y: 378}
     offset: {x: 0, y: 4}
     rotated: 0
     size: {x: 50, y: 38}
     frameSize: {x: 50, y: 50}
     metaData: []
   - name: key
-    position: {x: 100, y: 162}
+    position: {x: 646, y: 378}
     offset: {x: 0, y: 4}
     rotated: 0
     size: {x: 30, y: 20}
     frameSize: {x: 30, y: 30}
     metaData: []
+  - name: mask1Yellow
+    position: {x: 676, y: 378}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 23, y: 23}
+    frameSize: {x: 23, y: 23}
+    metaData: []
+  - name: mask2Purple
+    position: {x: 699, y: 378}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 23, y: 23}
+    frameSize: {x: 23, y: 23}
+    metaData: []
+  - name: mask3Green
+    position: {x: 722, y: 378}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 23, y: 23}
+    frameSize: {x: 23, y: 23}
+    metaData: []
+  - name: mask4Blue
+    position: {x: 745, y: 378}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 23, y: 23}
+    frameSize: {x: 23, y: 23}
+    metaData: []
+  - name: mask5Red
+    position: {x: 768, y: 378}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 23, y: 23}
+    frameSize: {x: 23, y: 23}
+    metaData: []
   - name: zcrate_exploo0001
-    position: {x: 130, y: 162}
+    position: {x: 791, y: 378}
     offset: {x: 48, y: 104}
     rotated: 0
     size: {x: 98, y: 96}
     frameSize: {x: 200, y: 200}
     metaData: []
   - name: zcrate_exploo0002
-    position: {x: 228, y: 162}
+    position: {x: 889, y: 378}
     offset: {x: 48, y: 104}
     rotated: 0
     size: {x: 98, y: 96}
     frameSize: {x: 200, y: 200}
     metaData: []
   - name: zcrate_exploo0003
-    position: {x: 326, y: 162}
+    position: {x: 0, y: 536}
     offset: {x: 51, y: 92}
     rotated: 0
     size: {x: 126, y: 108}
     frameSize: {x: 200, y: 200}
     metaData: []
   - name: zcrate_exploo0004
-    position: {x: 452, y: 162}
+    position: {x: 126, y: 536}
     offset: {x: 27, y: 82}
     rotated: 0
     size: {x: 166, y: 118}
     frameSize: {x: 200, y: 200}
     metaData: []
   - name: zcrate_exploo0005
-    position: {x: 618, y: 162}
+    position: {x: 292, y: 536}
     offset: {x: 13, y: 90}
     rotated: 0
     size: {x: 184, y: 110}
     frameSize: {x: 200, y: 200}
     metaData: []
   - name: zcrate_exploo0006
-    position: {x: 802, y: 162}
+    position: {x: 476, y: 536}
     offset: {x: 7, y: 88}
     rotated: 0
     size: {x: 190, y: 112}
     frameSize: {x: 200, y: 200}
     metaData: []
   - name: zcrate_exploo0007
-    position: {x: 0, y: 280}
+    position: {x: 666, y: 536}
     offset: {x: 0, y: 88}
     rotated: 0
     size: {x: 200, y: 112}
@@ -16526,8 +16603,8 @@ MonoBehaviour:
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: 954ba3237fd8f9c459ca218263d0ba3a, type: 3}
   reloadData: 0
-  bytesDataFile: 21034
-  id: 17
+  bytesDataFile: 26229
+  id: 19
 --- !u!114 &11400240
 MonoBehaviour:
   m_ObjectHideFlags: 1

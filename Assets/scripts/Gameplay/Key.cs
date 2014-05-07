@@ -9,9 +9,12 @@ public class Key : MonoBehaviour {
 	private LevelManager _levelM;
 	//private OTSprite _KeySprite;
 	public OTAnimatingSprite _KeySprite;
+	public EndDoor _myEndDoor;
+	private int _nbKeyRequired;
 
 	// Use this for initialization
 	void Start () {
+		_nbKeyRequired = _myEndDoor._nbKeyRequired;
 		_player = GameObject.Find("Player").GetComponent<Player>();
 		myPosINI = transform.localPosition;
 		_myScale = transform.localScale;
@@ -45,7 +48,6 @@ public class Key : MonoBehaviour {
 	}
 	void resetKey() {
 		if(this != null) {
-			
 			//_KeySprite.frameIndex = _levelM.chosenVariation+4+25;
 			_KeySprite.Play("keyBattery");
 			if(_levelM.isBoss == true) _KeySprite.frameIndex = 29;
@@ -60,10 +62,13 @@ public class Key : MonoBehaviour {
 		if (_coll.name == "Player")
 		{
 			gameObject.transform.parent = _playerUI;
-			transform.localPosition = new Vector3(-8.3f,4f,0f);
 			MasterAudio.PlaySound("key_collecting");
 			_player.nbKey++;
-			if(_player.nbKey>0)	_player.hasFinalKey = true;
+			transform.localPosition = new Vector3(-11f,5f-_player.nbKey,0f);
+			_myEndDoor.nextState();
+			if(_player.nbKey>_nbKeyRequired) {
+				_myEndDoor.activeStateReached();
+			}
 			//GetComponentInChildren<OTSprite>().renderer.enabled = false;
 		}
 

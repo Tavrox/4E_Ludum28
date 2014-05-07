@@ -22,6 +22,7 @@ public class Lever : MonoBehaviour {
 	public InputManager InputMan;
 
 	void Start () {
+		gameObject.GetComponentInChildren<OTAnimatingSprite>().transform.localScale = new Vector3 (2.006f,3.112758f,1);
 		if(myButtonType == btnType.TimedBtn) {
 			_myTimer = gameObject.GetComponentInChildren<TextMesh>();
 			_myRemainingTime = delay;
@@ -31,7 +32,7 @@ public class Lever : MonoBehaviour {
 			/*print(myPos);_myTimer = new Rect(15,15,20,20);*/}
 		animSprite.Stop();
 		if(myButtonType == btnType.Lever) { animSprite.frameIndex=4;}
-		if(myButtonType == btnType.SequenceBtn) { animSprite.frameIndex=6;}
+		if(myButtonType == btnType.SequenceBtn) { animSprite.frameIndex=6;_myTimer.transform.localPosition= new Vector3(-0.1669464f,0.6263504f,-0.5f);}
 		if(myButtonType == btnType.TimedBtn) { animSprite.frameIndex=8;animSprite.Play("timedlock");}
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
 		GameEventManager.GameStart += GameStart;
@@ -92,11 +93,22 @@ public class Lever : MonoBehaviour {
 		//StartCoroutine("delayReactivate");
 		FESound.playDistancedSound("lever",gameObject.transform, _player.transform,SND_minDist);//MasterAudio.PlaySound("lever");
 		trigged = !trigged;
-		if(trigged) {if(myButtonType == btnType.TimedBtn) animSprite.Play("timedunlock"); 
-					else if(myButtonType == btnType.SequenceBtn) animSprite.Play("unlockSeq");
-					else animSprite.Play("unlock");}
-		else {if(myButtonType == btnType.TimedBtn){/*MasterAudio.PlaySound("timer_button_alarm");*/ animSprite.Play("timedlock");} else if(myButtonType == btnType.SequenceBtn) animSprite.Play("lockSeq"); else animSprite.Play("lock");}
-		
+		if(trigged) {
+			print(animSprite.frameIndex);
+			if(myButtonType == btnType.TimedBtn) animSprite.Play("timedunlock");
+			else if(myButtonType == btnType.SequenceBtn) {
+				if(animSprite.frameIndex==6) _myTimer.transform.localPosition= new Vector3(-0.1669464f,-0.7766533f,-0.5f);
+				animSprite.Play("unlockSeq");}
+			else animSprite.Play("unlock");
+		}
+		else {
+			if(myButtonType == btnType.TimedBtn){/*MasterAudio.PlaySound("timer_button_alarm");*/animSprite.Play("timedlock");}
+			else if(myButtonType == btnType.SequenceBtn) {
+				if(animSprite.frameIndex==7) _myTimer.transform.localPosition= new Vector3(-0.1669464f,0.6263504f,-0.5f);
+				animSprite.Play("lockSeq");}
+			else animSprite.Play("lock");
+		}
+
 		if(myButtonType == btnType.SequenceBtn) {seqLocked = true;}
 		else {
 			triggerLever();
@@ -132,7 +144,7 @@ public class Lever : MonoBehaviour {
 		yield return new WaitForSeconds(1f);
 		seqLocked = false;
 		trigged = false;
-		if(myButtonType == btnType.TimedBtn) animSprite.Play("timedlock"); else if(myButtonType == btnType.SequenceBtn) animSprite.Play("lockSeq"); else animSprite.Play("lock");
+		if(myButtonType == btnType.TimedBtn) animSprite.Play("timedlock"); else if(myButtonType == btnType.SequenceBtn) {if(animSprite.frameIndex==7)_myTimer.transform.localPosition= new Vector3(-0.1669464f,0.6263504f,-0.5f); animSprite.Play("lockSeq");} else animSprite.Play("lock");
 	}
 	void GameStart () {
 		if(this != null && gameObject.activeInHierarchy) {
@@ -143,7 +155,7 @@ public class Lever : MonoBehaviour {
 			collider.enabled=true;
 			
 			if(myButtonType == btnType.Lever) { animSprite.frameIndex=4;}			
-			if(myButtonType == btnType.SequenceBtn) { animSprite.frameIndex=6;}
+			if(myButtonType == btnType.SequenceBtn) { animSprite.frameIndex=6;_myTimer.transform.localPosition= new Vector3(-0.1669464f,0.6263504f,-0.5f);}
 			if(myButtonType == btnType.TimedBtn) { 
 				_myRemainingTime = delay;
 				_myTimer.text = _myRemainingTime.ToString();

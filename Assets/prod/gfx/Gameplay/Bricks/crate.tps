@@ -191,6 +191,17 @@
             <filename>Key/kEY3Vert.png</filename>
             <filename>Key/kEY4Bleu.png</filename>
             <filename>Key/kEY5Rouge.png</filename>
+            <filename>generatorV2/images/endDoor_0000.png</filename>
+            <filename>Key/mask1Yellow.png</filename>
+            <filename>Key/mask2Purple.png</filename>
+            <filename>Key/mask3Green.png</filename>
+            <filename>Key/mask4Blue.png</filename>
+            <filename>Key/mask5Red.png</filename>
+            <filename>generatorV2/images/endDoor_0001.png</filename>
+            <filename>generatorV2/images/endDoor_0002.png</filename>
+            <filename>generatorV2/images/endDoor_0003.png</filename>
+            <filename>generatorV2/images/endDoor_0004.png</filename>
+            <filename>generatorV2/images/endDoor_0005.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

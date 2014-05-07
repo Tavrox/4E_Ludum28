@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class EndDoor : MonoBehaviour {
 
@@ -9,6 +10,8 @@ public class EndDoor : MonoBehaviour {
 	private Player _player;
 	private GameObject _UINeedKey;
 	private Timer _lvlTimer;
+	public int _nbKeyRequired=3;
+	public List<BatteryLevels> batteriesColor = new List<BatteryLevels>();
 	//private PlayerData _playerdata;
 	
 	public InputManager InputMan;
@@ -25,14 +28,20 @@ public class EndDoor : MonoBehaviour {
 		InputMan.Setup();
 		sprite.frameIndex = 26;
 	}
-
+	public void nextState() {
+		sprite.frameIndex += 1;
+		batteriesColor[_player.nbKey-1].batteryOK();
+	}
+	public void activeStateReached() {
+		_player.hasFinalKey = true;
+	}
 	void OnTriggerStay(Collider other)
 	{
 		if (other.gameObject.CompareTag("Player") && !triggered)
 		{
 			if ((Input.GetKeyDown(InputMan.Action) || Input.GetKeyDown(InputMan.Action2) || Input.GetKey(InputMan.Action3)) && _player.hasFinalKey == true)
 			{
-				sprite.frameIndex += 1;
+				//sprite.frameIndex += 1;
 				triggered = _player.finishedLevel = true;
 				StartCoroutine("lastFrameBuzzer");
 				//Destroy (_UINeedKey);
@@ -49,7 +58,7 @@ public class EndDoor : MonoBehaviour {
 	}
 	private IEnumerator lastFrameBuzzer () {
 		yield return new WaitForSeconds(1f);
-		sprite.frameIndex += 1;
+		//sprite.frameIndex += 1;
 	}
 	private void FinishLevel() {
 		if(this != null && gameObject.activeInHierarchy) {
