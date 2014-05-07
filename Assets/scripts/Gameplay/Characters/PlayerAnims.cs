@@ -70,7 +70,7 @@ public class PlayerAnims : MonoBehaviour
 			//if(animSprite.frameIndex == 51 && !stopped) {stopped=true;animSprite.Stop();StartCoroutine("waitB4Restart",1f);} //jump
 			//if(animSprite.frameIndex == 51 && stopped && _player.chute == true) {stopped=false;animSprite.Resume();} //fall
 			//if(animSprite.frameIndex == 43 && !stopped) {stopped=true;animSprite.Stop();StartCoroutine("waitB4Restart",0.09f);} //deathBlob pause
-			print (animSprite.frameIndex);
+//			print (animSprite.frameIndex);
 			//print (currentAnim);
 		if(_character.grounded) animSprite.looping = true;
 		}

@@ -2,19 +2,17 @@
 <data version="1.0">
     <struct type="Settings">
         <key>fileFormatVersion</key>
-        <int>3</int>
-        <key>texturePackerVersion</key>
-        <string>3.3.1</string>
-        <key>fileName</key>
-        <string>C:/Users/Tavrox/Documents/GitHub/4E_Ludum28/Assets/prod/gfx/IngameUI/Ecran/screenig.tps</string>
+        <int>1</int>
+        <key>variation</key>
+        <string>main</string>
+        <key>verbose</key>
+        <false/>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
                 <key>scale</key>
                 <double>1</double>
                 <key>extension</key>
-                <string></string>
-                <key>spriteFilter</key>
                 <string></string>
                 <key>acceptFractionalValues</key>
                 <false/>
@@ -28,6 +26,8 @@
             </struct>
         </array>
         <key>allowRotation</key>
+        <false/>
+        <key>quiet</key>
         <false/>
         <key>premultiplyAlpha</key>
         <false/>
@@ -61,8 +61,6 @@
         <uint>80</uint>
         <key>pngOptimizationLevel</key>
         <uint>0</uint>
-        <key>webpQualityLevel</key>
-        <uint>101</uint>
         <key>textureSubPath</key>
         <string></string>
         <key>textureFormat</key>
@@ -116,6 +114,8 @@
             <enum type="AndEngine::MinFilter">Linear</enum>
             <key>packageName</key>
             <string>Texture</string>
+            <key>javaFileName</key>
+            <filename>../../../../gfx/IngameUI/screenig.java</filename>
             <key>wrap</key>
             <struct type="AndEngineWrap">
                 <key>s</key>
@@ -126,16 +126,12 @@
             <key>magFilter</key>
             <enum type="AndEngine::MagFilter">MagLinear</enum>
         </struct>
-        <key>dataFileNames</key>
-        <map type="GFileNameMap">
-            <key>data</key>
-            <struct type="DataFile">
-                <key>name</key>
-                <filename>../../../../gfx/IngameUI/screenig.xml</filename>
-            </struct>
-        </map>
+        <key>dataFileName</key>
+        <filename>../../../../gfx/IngameUI/screenig.xml</filename>
         <key>multiPack</key>
         <false/>
+        <key>mainExtension</key>
+        <string></string>
         <key>forceIdenticalLayout</key>
         <false/>
         <key>outputFormat</key>
@@ -149,8 +145,6 @@
         <true/>
         <key>trimSpriteNames</key>
         <false/>
-        <key>cleanTransparentPixels</key>
-        <true/>
         <key>globalSpriteSettings</key>
         <struct type="SpriteSettings">
             <key>scale</key>
@@ -171,6 +165,10 @@
         <key>fileList</key>
         <array>
             <filename>screenOne.png</filename>
+            <filename>screens_01.png</filename>
+            <filename>screens_02.png</filename>
+            <filename>screens_03.png</filename>
+            <filename>screens_04.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

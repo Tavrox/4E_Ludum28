@@ -29,8 +29,10 @@ public class Lever : MonoBehaviour {
 			//GUI.Label(_myTimer, _myRemainingTime.ToString());
 			//myPos = Camera.main.WorldToScreenPoint(transform.position);
 			/*print(myPos);_myTimer = new Rect(15,15,20,20);*/}
-		if(myButtonType == btnType.Lever || myButtonType == btnType.SequenceBtn) { animSprite.frameIndex=2;}
-		if(myButtonType == btnType.TimedBtn) { animSprite.frameIndex=1;animSprite.Play("timedlock");}
+		animSprite.Stop();
+		if(myButtonType == btnType.Lever) { animSprite.frameIndex=4;}
+		if(myButtonType == btnType.SequenceBtn) { animSprite.frameIndex=6;}
+		if(myButtonType == btnType.TimedBtn) { animSprite.frameIndex=8;animSprite.Play("timedlock");}
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
 		GameEventManager.GameStart += GameStart;
 		InputMan = Instantiate(Resources.Load("Tuning/InputManager")) as InputManager;
@@ -39,7 +41,7 @@ public class Lever : MonoBehaviour {
 	void Update () {
 		//_myTimer= new Rect(myPos.x,myPos.y,20,20);
 		if(myButtonType == btnType.TimedBtn) {
-			if(animSprite.frameIndex == 0 && !stopped) {stopped=true;animSprite.Stop();StartCoroutine("leverTimer");/*StartCoroutine("waitB4Restart",delay/4);*/}
+			if(animSprite.frameIndex == 9 && !stopped) {stopped=true;animSprite.Stop();StartCoroutine("leverTimer");/*StartCoroutine("waitB4Restart",delay/4);*/}
 //			if(animSprite.frameIndex == 4 && stopped) {_myRemainingTime = delay;stopped = false;StopCoroutine("leverTimer");}
 //			if(animSprite.frameIndex == 5) {StopCoroutine("waitB4Restart");print ("POTS");}
 		}
@@ -90,8 +92,10 @@ public class Lever : MonoBehaviour {
 		//StartCoroutine("delayReactivate");
 		FESound.playDistancedSound("lever",gameObject.transform, _player.transform,SND_minDist);//MasterAudio.PlaySound("lever");
 		trigged = !trigged;
-		if(trigged) {if(myButtonType == btnType.TimedBtn) animSprite.Play("timedunlock"); else animSprite.Play("unlock");}
-		else {if(myButtonType == btnType.TimedBtn){/*MasterAudio.PlaySound("timer_button_alarm");*/ animSprite.Play("timedlock");} else animSprite.Play("lock");}
+		if(trigged) {if(myButtonType == btnType.TimedBtn) animSprite.Play("timedunlock"); 
+					else if(myButtonType == btnType.SequenceBtn) animSprite.Play("unlockSeq");
+					else animSprite.Play("unlock");}
+		else {if(myButtonType == btnType.TimedBtn){/*MasterAudio.PlaySound("timer_button_alarm");*/ animSprite.Play("timedlock");} else if(myButtonType == btnType.SequenceBtn) animSprite.Play("lockSeq"); else animSprite.Play("lock");}
 		
 		if(myButtonType == btnType.SequenceBtn) {seqLocked = true;}
 		else {
@@ -128,7 +132,7 @@ public class Lever : MonoBehaviour {
 		yield return new WaitForSeconds(1f);
 		seqLocked = false;
 		trigged = false;
-		if(myButtonType == btnType.TimedBtn) animSprite.Play("timedlock"); else animSprite.Play("lock");
+		if(myButtonType == btnType.TimedBtn) animSprite.Play("timedlock"); else if(myButtonType == btnType.SequenceBtn) animSprite.Play("lockSeq"); else animSprite.Play("lock");
 	}
 	void GameStart () {
 		if(this != null && gameObject.activeInHierarchy) {
@@ -138,13 +142,15 @@ public class Lever : MonoBehaviour {
 			StopCoroutine("resetLever");
 			collider.enabled=true;
 			
-			if(myButtonType == btnType.Lever || myButtonType == btnType.SequenceBtn) { animSprite.frameIndex=2;}
+			if(myButtonType == btnType.Lever) { animSprite.frameIndex=4;}			
+			if(myButtonType == btnType.SequenceBtn) { animSprite.frameIndex=6;}
 			if(myButtonType == btnType.TimedBtn) { 
 				_myRemainingTime = delay;
 				_myTimer.text = _myRemainingTime.ToString();
-				animSprite.frameIndex=1;
+				animSprite.frameIndex=8;
 				animSprite.Play("timedlock");
 			}
+			else if(myButtonType == btnType.SequenceBtn) animSprite.Play("lockSeq");
 			else animSprite.Play("lock");
 			stopped = trigged = seqLocked = false;
 		}

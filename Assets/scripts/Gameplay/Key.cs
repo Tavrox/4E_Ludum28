@@ -7,7 +7,8 @@ public class Key : MonoBehaviour {
 	private Transform _myGameParent, _playerUI;
 	private Player _player;
 	private LevelManager _levelM;
-	private OTSprite _KeySprite;
+	//private OTSprite _KeySprite;
+	public OTAnimatingSprite _KeySprite;
 
 	// Use this for initialization
 	void Start () {
@@ -21,9 +22,10 @@ public class Key : MonoBehaviour {
 		GameEventManager.GameOver += GameOver;
 
 		_levelM = GameObject.FindObjectOfType<LevelManager>();
-		_KeySprite = gameObject.GetComponentInChildren<OTSprite>();
-		_KeySprite.frameIndex = _levelM.chosenVariation+4;
-		if(_levelM.isBoss == true) _KeySprite.frameIndex = 4;
+		_KeySprite = gameObject.GetComponentInChildren<OTAnimatingSprite>();
+		//_KeySprite.frameIndex = _levelM.chosenVariation+4+25;
+		_KeySprite.Play("keyBattery");
+		if(_levelM.isBoss == true) _KeySprite.frameIndex = 29;
 		//InvokeRepeating("rotate",0,0.05f);
 	}
 	void rotate() {
@@ -44,8 +46,9 @@ public class Key : MonoBehaviour {
 	void resetKey() {
 		if(this != null) {
 			
-			_KeySprite.frameIndex = _levelM.chosenVariation+4;
-			if(_levelM.isBoss == true) _KeySprite.frameIndex = 5;
+			//_KeySprite.frameIndex = _levelM.chosenVariation+4+25;
+			_KeySprite.Play("keyBattery");
+			if(_levelM.isBoss == true) _KeySprite.frameIndex = 29;
 			gameObject.transform.parent = _myGameParent;
 			transform.localPosition = myPosINI;
 			//GetComponentInChildren<OTSprite>().renderer.enabled = true;

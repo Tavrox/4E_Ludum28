@@ -10356,12 +10356,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: crateAnims
   _fps: 12.6666698
-  _duration: .631578803
+  _duration: 2.52631521
   framesets:
   - name: destroy
     container: {fileID: 11400238}
-    startFrame: 11
-    endFrame: 18
+    startFrame: 36
+    endFrame: 42
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -10369,6 +10369,18 @@ MonoBehaviour:
     pingPong: 0
     singleDuration: 0
     startIndex: 0
+    _containerName: objects
+  - name: keyBattery
+    container: {fileID: 11400238}
+    startFrame: 0
+    endFrame: 24
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 7
     _containerName: objects
 --- !u!114 &11400034
 MonoBehaviour:
@@ -10517,7 +10529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: playerAnims
   _fps: 12.6666698
-  _duration: 6.7894721
+  _duration: 6.94736671
   framesets:
   - name: run
     container: {fileID: 11400088}
@@ -10570,7 +10582,7 @@ MonoBehaviour:
   - name: jump
     container: {fileID: 11400088}
     startFrame: 49
-    endFrame: 51
+    endFrame: 53
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -10589,7 +10601,7 @@ MonoBehaviour:
     playCount: 1
     pingPong: 0
     singleDuration: 0
-    startIndex: 54
+    startIndex: 56
     _containerName: playerSheet
   - name: grabCrate
     container: {fileID: 11400088}
@@ -10601,7 +10613,7 @@ MonoBehaviour:
     playCount: 1
     pingPong: 0
     singleDuration: 0
-    startIndex: 64
+    startIndex: 66
     _containerName: playerSheet
   - name: pushCrate
     container: {fileID: 11400088}
@@ -10613,7 +10625,7 @@ MonoBehaviour:
     playCount: 1
     pingPong: 0
     singleDuration: 0
-    startIndex: 74
+    startIndex: 76
     _containerName: playerSheet
   - name: fall
     container: {fileID: 11400088}
@@ -10625,7 +10637,7 @@ MonoBehaviour:
     playCount: 1
     pingPong: 0
     singleDuration: 0
-    startIndex: 84
+    startIndex: 86
     _containerName: playerSheet
 --- !u!114 &11400046
 MonoBehaviour:
@@ -11119,12 +11131,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: leverAnims
   _fps: 12.666667
-  _duration: .315789461
+  _duration: .473684192
   framesets:
   - name: unlock
     container: {fileID: 11400224}
-    startFrame: 3
-    endFrame: 3
+    startFrame: 5
+    endFrame: 5
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -11135,8 +11147,8 @@ MonoBehaviour:
     _containerName: leverSheet
   - name: timedunlock
     container: {fileID: 11400224}
-    startFrame: 0
-    endFrame: 0
+    startFrame: 9
+    endFrame: 9
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -11147,8 +11159,8 @@ MonoBehaviour:
     _containerName: leverSheet
   - name: timedlock
     container: {fileID: 11400224}
-    startFrame: 1
-    endFrame: 1
+    startFrame: 8
+    endFrame: 8
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -11159,8 +11171,8 @@ MonoBehaviour:
     _containerName: leverSheet
   - name: lock
     container: {fileID: 11400224}
-    startFrame: 2
-    endFrame: 2
+    startFrame: 4
+    endFrame: 4
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -11168,6 +11180,30 @@ MonoBehaviour:
     pingPong: 0
     singleDuration: 0
     startIndex: 3
+    _containerName: leverSheet
+  - name: lockSeq
+    container: {fileID: 11400224}
+    startFrame: 6
+    endFrame: 6
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 4
+    _containerName: leverSheet
+  - name: unlockSeq
+    container: {fileID: 11400224}
+    startFrame: 7
+    endFrame: 7
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 5
     _containerName: leverSheet
 --- !u!114 &11400080
 MonoBehaviour:
@@ -13153,12 +13189,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: triggeredDoorAnims
   _fps: 12.666667
-  _duration: 1.34210527
+  _duration: 1.65789473
   framesets:
   - name: unlock
     container: {fileID: 11400148}
-    startFrame: 10
-    endFrame: 14
+    startFrame: 14
+    endFrame: 18
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -13169,8 +13205,8 @@ MonoBehaviour:
     _containerName: triggeredDoorSheet
   - name: lock
     container: {fileID: 11400148}
-    startFrame: 14
-    endFrame: 14
+    startFrame: 18
+    endFrame: 18
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -13181,8 +13217,8 @@ MonoBehaviour:
     _containerName: triggeredDoorSheet
   - name: closed
     container: {fileID: 11400148}
-    startFrame: 10
-    endFrame: 10
+    startFrame: 14
+    endFrame: 14
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -13194,7 +13230,7 @@ MonoBehaviour:
   - name: destroy
     container: {fileID: 11400148}
     startFrame: 0
-    endFrame: 9
+    endFrame: 13
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -13290,36 +13326,64 @@ MonoBehaviour:
     size: {x: 300, y: 300}
     frameSize: {x: 300, y: 300}
     metaData: []
-  - name: porte_1
+  - name: PorteExplose0011
     position: {x: 1204, y: 301}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 300, y: 300}
+    frameSize: {x: 300, y: 300}
+    metaData: []
+  - name: PorteExplose0012
+    position: {x: 1505, y: 301}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 300, y: 300}
+    frameSize: {x: 300, y: 300}
+    metaData: []
+  - name: PorteExplose0013
+    position: {x: 0, y: 602}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 300, y: 300}
+    frameSize: {x: 300, y: 300}
+    metaData: []
+  - name: PorteExplose0014
+    position: {x: 301, y: 602}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 300, y: 300}
+    frameSize: {x: 300, y: 300}
+    metaData: []
+  - name: porte_1
+    position: {x: 602, y: 602}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 50, y: 300}
     frameSize: {x: 50, y: 300}
     metaData: []
   - name: porte_2
-    position: {x: 1255, y: 301}
+    position: {x: 653, y: 602}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 50, y: 300}
     frameSize: {x: 50, y: 300}
     metaData: []
   - name: porte_3
-    position: {x: 1306, y: 301}
+    position: {x: 704, y: 602}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 50, y: 300}
     frameSize: {x: 50, y: 300}
     metaData: []
   - name: porte_4
-    position: {x: 1357, y: 301}
+    position: {x: 755, y: 602}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 50, y: 300}
     frameSize: {x: 50, y: 300}
     metaData: []
   - name: porte_5
-    position: {x: 1408, y: 301}
+    position: {x: 806, y: 602}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 50, y: 300}
@@ -13330,8 +13394,8 @@ MonoBehaviour:
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: b022cc3be52659240bd2e98b4918c507, type: 3}
   reloadData: 0
-  bytesDataFile: 8135
-  id: 16
+  bytesDataFile: 10098
+  id: 17
 --- !u!114 &11400150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15893,7 +15957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: leverSheet
-  _sheetSize: {x: 128, y: 256}
+  _sheetSize: {x: 512, y: 512}
   texture: {fileID: 2800000, guid: c1f764155ee03694884b505ed53beb28, type: 3}
   sizeTextures: []
   generateSprites: 0
@@ -15913,26 +15977,75 @@ MonoBehaviour:
     frameSize: {x: 50, y: 100}
     metaData: []
   - name: levier_1
-    position: {x: 1, y: 102}
+    position: {x: 103, y: 1}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 50, y: 100}
     frameSize: {x: 50, y: 100}
     metaData: []
   - name: levier_2
-    position: {x: 52, y: 102}
+    position: {x: 154, y: 1}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 50, y: 100}
     frameSize: {x: 50, y: 100}
+    metaData: []
+  - name: normalOFF
+    position: {x: 205, y: 1}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 150}
+    frameSize: {x: 100, y: 150}
+    metaData: []
+  - name: normalON
+    position: {x: 306, y: 1}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 150}
+    frameSize: {x: 100, y: 150}
+    metaData: []
+  - name: seqOFF
+    position: {x: 407, y: 1}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 150}
+    frameSize: {x: 100, y: 150}
+    metaData: []
+  - name: seqON
+    position: {x: 1, y: 152}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 150}
+    frameSize: {x: 100, y: 150}
+    metaData: []
+  - name: timedOFF
+    position: {x: 102, y: 152}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 150}
+    frameSize: {x: 100, y: 150}
+    metaData: []
+  - name: timedON1
+    position: {x: 203, y: 152}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 150}
+    frameSize: {x: 100, y: 150}
+    metaData: []
+  - name: timedON2
+    position: {x: 304, y: 152}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 150}
+    frameSize: {x: 100, y: 150}
     metaData: []
   offsetSizing: 1
   metaType: 
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: cfd96d83056ea9948a78df2c62e4305c, type: 3}
   reloadData: 0
-  bytesDataFile: 2680
-  id: 14
+  bytesDataFile: 5890
+  id: 15
 --- !u!114 &11400226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16107,146 +16220,314 @@ MonoBehaviour:
   sizeTextures: []
   generateSprites: 0
   atlasData:
-  - name: crate
+  - name: Comp 2_00000
     position: {x: 0, y: 0}
-    offset: {x: 0, y: 0}
+    offset: {x: 23, y: 28}
     rotated: 0
-    size: {x: 100, y: 100}
+    size: {x: 52, y: 54}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00001
+    position: {x: 52, y: 0}
+    offset: {x: 19, y: 28}
+    rotated: 0
+    size: {x: 56, y: 54}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00002
+    position: {x: 108, y: 0}
+    offset: {x: 15, y: 27}
+    rotated: 0
+    size: {x: 60, y: 54}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00003
+    position: {x: 168, y: 0}
+    offset: {x: 13, y: 21}
+    rotated: 0
+    size: {x: 62, y: 60}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00004
+    position: {x: 230, y: 0}
+    offset: {x: 11, y: 18}
+    rotated: 0
+    size: {x: 64, y: 62}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00005
+    position: {x: 294, y: 0}
+    offset: {x: 11, y: 18}
+    rotated: 0
+    size: {x: 64, y: 62}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00006
+    position: {x: 358, y: 0}
+    offset: {x: 13, y: 19}
+    rotated: 0
+    size: {x: 62, y: 62}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00007
+    position: {x: 420, y: 0}
+    offset: {x: 16, y: 22}
+    rotated: 0
+    size: {x: 64, y: 60}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00008
+    position: {x: 484, y: 0}
+    offset: {x: 16, y: 24}
+    rotated: 0
+    size: {x: 70, y: 62}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00009
+    position: {x: 554, y: 0}
+    offset: {x: 20, y: 26}
+    rotated: 0
+    size: {x: 68, y: 62}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00010
+    position: {x: 622, y: 0}
+    offset: {x: 23, y: 31}
+    rotated: 0
+    size: {x: 68, y: 58}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00011
+    position: {x: 690, y: 0}
+    offset: {x: 23, y: 29}
+    rotated: 0
+    size: {x: 68, y: 60}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00012
+    position: {x: 758, y: 0}
+    offset: {x: 24, y: 28}
+    rotated: 0
+    size: {x: 62, y: 56}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00013
+    position: {x: 820, y: 0}
+    offset: {x: 23, y: 28}
+    rotated: 0
+    size: {x: 52, y: 54}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00014
+    position: {x: 872, y: 0}
+    offset: {x: 23, y: 27}
+    rotated: 0
+    size: {x: 52, y: 54}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00015
+    position: {x: 924, y: 0}
+    offset: {x: 24, y: 24}
+    rotated: 0
+    size: {x: 60, y: 56}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00016
+    position: {x: 0, y: 62}
+    offset: {x: 24, y: 17}
+    rotated: 0
+    size: {x: 66, y: 64}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00017
+    position: {x: 66, y: 62}
+    offset: {x: 24, y: 17}
+    rotated: 0
+    size: {x: 66, y: 64}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00018
+    position: {x: 132, y: 62}
+    offset: {x: 24, y: 16}
+    rotated: 0
+    size: {x: 66, y: 66}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00019
+    position: {x: 198, y: 62}
+    offset: {x: 24, y: 21}
+    rotated: 0
+    size: {x: 62, y: 62}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00020
+    position: {x: 260, y: 62}
+    offset: {x: 18, y: 22}
+    rotated: 0
+    size: {x: 66, y: 62}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00021
+    position: {x: 326, y: 62}
+    offset: {x: 12, y: 24}
+    rotated: 0
+    size: {x: 70, y: 62}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00022
+    position: {x: 396, y: 62}
+    offset: {x: 10, y: 29}
+    rotated: 0
+    size: {x: 66, y: 58}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00023
+    position: {x: 462, y: 62}
+    offset: {x: 15, y: 30}
+    rotated: 0
+    size: {x: 60, y: 54}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00024
+    position: {x: 522, y: 62}
+    offset: {x: 15, y: 28}
+    rotated: 0
+    size: {x: 60, y: 56}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: crate
+    position: {x: 582, y: 62}
+    offset: {x: 1, y: 0}
+    rotated: 0
+    size: {x: 98, y: 98}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: end_1
-    position: {x: 100, y: 0}
-    offset: {x: 0, y: 0}
+    position: {x: 680, y: 62}
+    offset: {x: 12, y: 0}
     rotated: 0
-    size: {x: 50, y: 100}
+    size: {x: 38, y: 100}
     frameSize: {x: 50, y: 100}
     metaData: []
   - name: end_2
-    position: {x: 150, y: 0}
+    position: {x: 718, y: 62}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 50, y: 100}
     frameSize: {x: 50, y: 100}
     metaData: []
   - name: end_3
-    position: {x: 200, y: 0}
-    offset: {x: 0, y: 0}
+    position: {x: 768, y: 62}
+    offset: {x: 0, y: 10}
     rotated: 0
-    size: {x: 50, y: 100}
+    size: {x: 50, y: 90}
     frameSize: {x: 50, y: 100}
     metaData: []
   - name: kEY
-    position: {x: 250, y: 0}
-    offset: {x: 0, y: 0}
+    position: {x: 818, y: 62}
+    offset: {x: 4, y: 9}
     rotated: 0
-    size: {x: 50, y: 50}
+    size: {x: 44, y: 28}
     frameSize: {x: 50, y: 50}
     metaData: []
-  - name: kEYBleu
-    position: {x: 300, y: 0}
-    offset: {x: 0, y: 0}
+  - name: kEY1Jaune
+    position: {x: 862, y: 62}
+    offset: {x: 0, y: 6}
     rotated: 0
-    size: {x: 50, y: 50}
+    size: {x: 50, y: 34}
     frameSize: {x: 50, y: 50}
     metaData: []
-  - name: kEYJaune
-    position: {x: 350, y: 0}
-    offset: {x: 0, y: 0}
+  - name: kEY2Violet
+    position: {x: 912, y: 62}
+    offset: {x: 0, y: 5}
     rotated: 0
-    size: {x: 50, y: 50}
+    size: {x: 50, y: 36}
     frameSize: {x: 50, y: 50}
     metaData: []
-  - name: kEYRouge
-    position: {x: 400, y: 0}
-    offset: {x: 0, y: 0}
+  - name: kEY3Vert
+    position: {x: 962, y: 62}
+    offset: {x: 0, y: 5}
     rotated: 0
-    size: {x: 50, y: 50}
+    size: {x: 50, y: 36}
     frameSize: {x: 50, y: 50}
     metaData: []
-  - name: kEYVert
-    position: {x: 450, y: 0}
-    offset: {x: 0, y: 0}
+  - name: kEY4Bleu
+    position: {x: 0, y: 162}
+    offset: {x: 0, y: 5}
     rotated: 0
-    size: {x: 50, y: 50}
+    size: {x: 50, y: 36}
     frameSize: {x: 50, y: 50}
     metaData: []
-  - name: kEYViolet
-    position: {x: 500, y: 0}
-    offset: {x: 0, y: 0}
+  - name: kEY5Rouge
+    position: {x: 50, y: 162}
+    offset: {x: 0, y: 4}
     rotated: 0
-    size: {x: 50, y: 50}
+    size: {x: 50, y: 38}
     frameSize: {x: 50, y: 50}
     metaData: []
   - name: key
-    position: {x: 550, y: 0}
-    offset: {x: 0, y: 0}
+    position: {x: 100, y: 162}
+    offset: {x: 0, y: 4}
     rotated: 0
-    size: {x: 30, y: 30}
+    size: {x: 30, y: 20}
     frameSize: {x: 30, y: 30}
     metaData: []
   - name: zcrate_exploo0001
-    position: {x: 580, y: 0}
-    offset: {x: 0, y: 0}
+    position: {x: 130, y: 162}
+    offset: {x: 48, y: 104}
     rotated: 0
-    size: {x: 200, y: 200}
+    size: {x: 98, y: 96}
     frameSize: {x: 200, y: 200}
     metaData: []
   - name: zcrate_exploo0002
-    position: {x: 780, y: 0}
-    offset: {x: 0, y: 0}
+    position: {x: 228, y: 162}
+    offset: {x: 48, y: 104}
     rotated: 0
-    size: {x: 200, y: 200}
+    size: {x: 98, y: 96}
     frameSize: {x: 200, y: 200}
     metaData: []
   - name: zcrate_exploo0003
-    position: {x: 0, y: 200}
-    offset: {x: 0, y: 0}
+    position: {x: 326, y: 162}
+    offset: {x: 51, y: 92}
     rotated: 0
-    size: {x: 200, y: 200}
+    size: {x: 126, y: 108}
     frameSize: {x: 200, y: 200}
     metaData: []
   - name: zcrate_exploo0004
-    position: {x: 200, y: 200}
-    offset: {x: 0, y: 0}
+    position: {x: 452, y: 162}
+    offset: {x: 27, y: 82}
     rotated: 0
-    size: {x: 200, y: 200}
+    size: {x: 166, y: 118}
     frameSize: {x: 200, y: 200}
     metaData: []
   - name: zcrate_exploo0005
-    position: {x: 400, y: 200}
-    offset: {x: 0, y: 0}
+    position: {x: 618, y: 162}
+    offset: {x: 13, y: 90}
     rotated: 0
-    size: {x: 200, y: 200}
+    size: {x: 184, y: 110}
     frameSize: {x: 200, y: 200}
     metaData: []
   - name: zcrate_exploo0006
-    position: {x: 600, y: 200}
-    offset: {x: 0, y: 0}
+    position: {x: 802, y: 162}
+    offset: {x: 7, y: 88}
     rotated: 0
-    size: {x: 200, y: 200}
+    size: {x: 190, y: 112}
     frameSize: {x: 200, y: 200}
     metaData: []
   - name: zcrate_exploo0007
-    position: {x: 800, y: 200}
-    offset: {x: 0, y: 0}
+    position: {x: 0, y: 280}
+    offset: {x: 0, y: 88}
     rotated: 0
-    size: {x: 200, y: 200}
+    size: {x: 200, y: 112}
     frameSize: {x: 200, y: 200}
-    metaData: []
-  - name: zcrate_exploo0008
-    position: {x: 800, y: 200}
-    offset: {x: 0, y: 0}
-    rotated: 0
-    size: {x: -1, y: -1}
-    frameSize: {x: -1, y: -1}
     metaData: []
   offsetSizing: 1
   metaType: 
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: 954ba3237fd8f9c459ca218263d0ba3a, type: 3}
   reloadData: 0
-  bytesDataFile: 9922
-  id: 15
+  bytesDataFile: 21034
+  id: 17
 --- !u!114 &11400240
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17566,8 +17847,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: screen
-  _sheetSize: {x: 512, y: 256}
-  texture: {fileID: 2800000, guid: 57752911204291141ba5f531e9a48504, type: 3}
+  _sheetSize: {x: 512, y: 1024}
+  texture: {fileID: 2800000, guid: 4b620d0ad7f82c74b9b841c4cf561d56, type: 3}
   sizeTextures: []
   generateSprites: 0
   atlasData:
@@ -17578,13 +17859,41 @@ MonoBehaviour:
     size: {x: 300, y: 200}
     frameSize: {x: 300, y: 200}
     metaData: []
+  - name: screens_01
+    position: {x: 0, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 250, y: 100}
+    frameSize: {x: 250, y: 100}
+    metaData: []
+  - name: screens_02
+    position: {x: 250, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 250, y: 150}
+    frameSize: {x: 250, y: 150}
+    metaData: []
+  - name: screens_03
+    position: {x: 0, y: 350}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 400, y: 150}
+    frameSize: {x: 400, y: 150}
+    metaData: []
+  - name: screens_04
+    position: {x: 0, y: 500}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 400, y: 100}
+    frameSize: {x: 400, y: 100}
+    metaData: []
   offsetSizing: 1
   metaType: 
   metaData: []
-  _atlasDataFile: {fileID: 4900000, guid: 1834b466331634c44af27d0f8f96d1f7, type: 3}
+  _atlasDataFile: {fileID: 4900000, guid: 84ef6288f6ee9cc45aa71435cf00cc4a, type: 3}
   reloadData: 0
-  bytesDataFile: 1311
-  id: 4
+  bytesDataFile: 3101
+  id: 12
 --- !u!114 &11400322
 MonoBehaviour:
   m_ObjectHideFlags: 1

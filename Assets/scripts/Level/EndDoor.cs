@@ -23,6 +23,7 @@ public class EndDoor : MonoBehaviour {
 		GameEventManager.FinishLevel += FinishLevel;
 		InputMan = Instantiate(Resources.Load("Tuning/InputManager")) as InputManager;
 		InputMan.Setup();
+		sprite.frameIndex = 26;
 	}
 
 	void OnTriggerStay(Collider other)
