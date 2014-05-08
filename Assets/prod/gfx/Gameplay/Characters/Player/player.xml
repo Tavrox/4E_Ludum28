@@ -953,18 +953,31 @@
                 <key>sourceSize</key>
                 <string>{100,120}</string>
             </dict>
-            <key>perso_run0010.png</key>
+            <key>perso_zMortElectro0001 (1).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1685,380},{100,120}}</string>
+                <string>{{1685,380},{150,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{100,120}}</string>
+                <string>{{0,0},{150,120}}</string>
                 <key>sourceSize</key>
-                <string>{100,120}</string>
+                <string>{150,120}</string>
+            </dict>
+            <key>perso_zMortElectro0001 (2).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1840,380},{150,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{150,120}}</string>
+                <key>sourceSize</key>
+                <string>{150,120}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -976,7 +989,7 @@
             <key>size</key>
             <string>{2048,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:c5c450187c861f521bda10f4b039dfa7:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:c88191fa051f92bc82336e93fd0d89af:24c24d042892d2eff59a3104aa6387dc:5bc3a5a04d19c5c0ed553c2fc6a26e36$</string>
             <key>textureFileName</key>
             <string>player.png</string>
         </dict>
