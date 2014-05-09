@@ -17,19 +17,71 @@
                 <key>sourceSize</key>
                 <string>{300,200}</string>
             </dict>
+            <key>screens_01.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,200},{250,100}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,100}}</string>
+                <key>sourceSize</key>
+                <string>{250,100}</string>
+            </dict>
+            <key>screens_02.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{250,200},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>screens_03.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,350},{400,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{400,150}}</string>
+                <key>sourceSize</key>
+                <string>{400,150}</string>
+            </dict>
+            <key>screens_04.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,500},{400,100}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{400,100}}</string>
+                <key>sourceSize</key>
+                <string>{400,100}</string>
+            </dict>
         </dict>
         <key>metadata</key>
         <dict>
             <key>format</key>
             <integer>2</integer>
             <key>realTextureFileName</key>
-            <string>Ecran.png</string>
+            <string>screenig.png</string>
             <key>size</key>
-            <string>{512,256}</string>
+            <string>{512,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:e9f1398b043b8c45c4f3de6602379ced:14df99dcfc508f682ad08ef417a333c1:b40f6e69289e956206150d3c93ebb15e$</string>
+            <string>$TexturePacker:SmartUpdate:63de699e42a72ef31b5ba1ca21c7c142:1/1$</string>
             <key>textureFileName</key>
-            <string>Ecran.png</string>
+            <string>screenig.png</string>
         </dict>
     </dict>
 </plist>

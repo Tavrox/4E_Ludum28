@@ -260,7 +260,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 119.400444, y: -15.7976398, z: -1}
+  m_LocalPosition: {x: 119.400444, y: -15.7976398, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400014}
@@ -297,7 +297,7 @@ Transform:
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7.95016766, y: 7.95016766, z: .210234269}
+  m_LocalScale: {x: 7.95016766, y: 7.95016766, z: 1}
   m_Children: []
   m_Father: {fileID: 400008}
 --- !u!4 &400008
@@ -382,7 +382,7 @@ Transform:
   m_GameObject: {fileID: 100020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7.95016766, y: 7.95016766, z: .210234269}
+  m_LocalScale: {x: 7.95016766, y: 7.95016766, z: 1}
   m_Children: []
   m_Father: {fileID: 400018}
 --- !u!4 &400022
@@ -393,7 +393,7 @@ Transform:
   m_GameObject: {fileID: 100022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7.95016766, y: 7.95016766, z: .210234269}
+  m_LocalScale: {x: 7.95016766, y: 7.95016766, z: 1}
   m_Children: []
   m_Father: {fileID: 400024}
 --- !u!4 &400024
@@ -717,7 +717,7 @@ MonoBehaviour:
   protoType: 
   baseName: walkerSprite
   oSize: {x: 10.416667, y: 10.416667}
-  imageSize: {x: 37.8157539, y: 37.8157539}
+  imageSize: {x: 7.95016766, y: 7.95016766}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -794,6 +794,7 @@ MonoBehaviour:
   pushCrate: 0
   grabCrate: 0
   jumpLocked: 0
+  fallApproachGround: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -813,7 +814,7 @@ MonoBehaviour:
   jumpSpeed: 12
   jumpDuration: .0280000009
   jumpState: 0
-  moveVel: 13
+  moveVel: 14
   jumpVel: 16
   jump2Vel: 14
   maxJumps: 2
@@ -870,6 +871,7 @@ MonoBehaviour:
   pushCrate: 0
   grabCrate: 0
   jumpLocked: 0
+  fallApproachGround: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -889,14 +891,14 @@ MonoBehaviour:
   jumpSpeed: 12
   jumpDuration: .0280000009
   jumpState: 0
-  moveVel: 13
+  moveVel: 14
   jumpVel: 16
   jump2Vel: 14
   maxJumps: 2
   fallVel: 10
   hitUpBounceForce: 5
   jumps: 0
-  gravityY: 15
+  gravityY: 30
   maxVelY: 20
   halfMyX: 0
   halfMyY: 0
@@ -904,7 +906,7 @@ MonoBehaviour:
   trans: {fileID: 0}
   chasingPlayer: 0
   targetDetectionArea: 4.09000015
-  blockDetectionArea: 2
+  blockDetectionArea: 1
   waypoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -962,7 +964,7 @@ MonoBehaviour:
   protoType: 
   baseName: walkerSprite
   oSize: {x: 10.416667, y: 10.416667}
-  imageSize: {x: 37.8157539, y: 37.8157539}
+  imageSize: {x: 7.95016766, y: 7.95016766}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -1025,7 +1027,7 @@ MonoBehaviour:
   protoType: 
   baseName: walkerSprite
   oSize: {x: 10.416667, y: 10.416667}
-  imageSize: {x: 37.8157539, y: 37.8157539}
+  imageSize: {x: 7.95016766, y: 7.95016766}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -1102,6 +1104,7 @@ MonoBehaviour:
   pushCrate: 0
   grabCrate: 0
   jumpLocked: 0
+  fallApproachGround: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -1121,14 +1124,14 @@ MonoBehaviour:
   jumpSpeed: 12
   jumpDuration: .0280000009
   jumpState: 0
-  moveVel: 13
+  moveVel: 14
   jumpVel: 16
   jump2Vel: 14
   maxJumps: 2
   fallVel: 10
   hitUpBounceForce: 5
   jumps: 0
-  gravityY: 15
+  gravityY: 30
   maxVelY: 20
   halfMyX: 0
   halfMyY: 0

@@ -5,12 +5,23 @@ public class Key : MonoBehaviour {
 
 	private Vector3 myPosINI, _myScale;
 	private Transform _myGameParent, _playerUI;
-	
+	private Player _player;
 	private LevelManager _levelM;
-	private OTSprite _KeySprite;
+	//private OTSprite _KeySprite;
+	public OTAnimatingSprite _KeySprite;
+	public EndDoor _myEndDoor;
+	private int _nbKeyRequired;
 
-	// Use this for initialization
+	[ContextMenu ("Setup Frame")]
+	private void setFrame()
+	{
+		_KeySprite = gameObject.GetComponentInChildren<OTAnimatingSprite>();
+		_KeySprite.frameIndex = 0;
+	}
+		// Use this for initialization
 	void Start () {
+		_nbKeyRequired = _myEndDoor._nbKeyRequired;
+		_player = GameObject.Find("Player").GetComponent<Player>();
 		myPosINI = transform.localPosition;
 		_myScale = transform.localScale;
 		_myGameParent = transform.parent.transform;
@@ -20,10 +31,11 @@ public class Key : MonoBehaviour {
 		GameEventManager.GameOver += GameOver;
 
 		_levelM = GameObject.FindObjectOfType<LevelManager>();
-		_KeySprite = gameObject.GetComponentInChildren<OTSprite>();
-		_KeySprite.frameIndex = _levelM.chosenVariation+4;
-		if(_levelM.isBoss == true) _KeySprite.frameIndex = 4;
-		InvokeRepeating("rotate",0,0.05f);
+		_KeySprite = gameObject.GetComponentInChildren<OTAnimatingSprite>();
+		//_KeySprite.frameIndex = _levelM.chosenVariation+4+25;
+		_KeySprite.Play("keyBattery");
+		if(_levelM.isBoss == true) _KeySprite.frameIndex = 29;
+		//InvokeRepeating("rotate",0,0.05f);
 	}
 	void rotate() {
 		_myScale.x = Mathf.PingPong(Time.time, 2)-1;
@@ -42,13 +54,13 @@ public class Key : MonoBehaviour {
 	}
 	void resetKey() {
 		if(this != null) {
-			
-			_KeySprite.frameIndex = _levelM.chosenVariation+4;
-			if(_levelM.isBoss == true) _KeySprite.frameIndex = 5;
+			//_KeySprite.frameIndex = _levelM.chosenVariation+4+25;
+			_KeySprite.Play("keyBattery");
+			if(_levelM.isBoss == true) _KeySprite.frameIndex = 29;
 			gameObject.transform.parent = _myGameParent;
 			transform.localPosition = myPosINI;
 			//GetComponentInChildren<OTSprite>().renderer.enabled = true;
-			GameObject.Find("Player").GetComponent<Player>().hasFinalKey = false;
+			_player.hasFinalKey = false;
 		}
 	}
 	void OnTriggerEnter(Collider _coll)
@@ -56,9 +68,13 @@ public class Key : MonoBehaviour {
 		if (_coll.name == "Player")
 		{
 			gameObject.transform.parent = _playerUI;
-			transform.localPosition = new Vector3(-8.3f,4f,0f);
 			MasterAudio.PlaySound("key_collecting");
-			GameObject.Find("Player").GetComponent<Player>().hasFinalKey = true;
+			_player.nbKey++;
+			transform.localPosition = new Vector3(-11f,5f-_player.nbKey,0f);
+			_myEndDoor.nextState();
+			if(_player.nbKey>=_nbKeyRequired) {
+				_myEndDoor.activeStateReached();
+			}
 			//GetComponentInChildren<OTSprite>().renderer.enabled = false;
 		}
 

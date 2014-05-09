@@ -190,7 +190,7 @@ public class LevelManager : MonoBehaviour {
 		//playerDies();
 		MasterAudio.StopAllOfSound("bg");
 		MasterAudio.StopAllOfSound("intro");
-		MasterAudio.StopAllOfSound("tuto");
+		//MasterAudio.StopAllOfSound("tuto");
 		MasterAudio.StopAllOfSound("jam");
 		MasterAudio.StopAllOfSound("level_theme_1");
 		MasterAudio.StopAllOfSound("level_theme_2");
@@ -198,14 +198,16 @@ public class LevelManager : MonoBehaviour {
 		MasterAudio.StopAllOfSound("level_theme_4");
 		MasterAudio.StopAllOfSound("level_theme_5");
 		MasterAudio.StopAllOfSound("boss_theme");
-		MasterAudio.StopAllPlaylists();
+		if(ID != 1) MasterAudio.StopAllPlaylists();
 		}
 	}
 	private void GameStart()
 	{
 		if(this != null) {
-			MasterAudio.StopAllPlaylists();
-			playLevelMusic();
+			if(ID != 1) {
+				MasterAudio.StopAllPlaylists();
+				playLevelMusic();
+			}
 		}
 	}
 	private void GamePause()

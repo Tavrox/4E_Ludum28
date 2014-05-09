@@ -126,7 +126,7 @@
             <string></string>
         </struct>
         <key>autoAliasEnabled</key>
-        <true/>
+        <false/>
         <key>trimSpriteNames</key>
         <false/>
         <key>globalSpriteSettings</key>
@@ -142,18 +142,13 @@
             <key>trimThreshold</key>
             <uint>1</uint>
             <key>trimMode</key>
-            <enum type="SpriteSettings::TrimMode">None</enum>
+            <enum type="SpriteSettings::TrimMode">Trim</enum>
             <key>heuristicMask</key>
             <false/>
         </struct>
         <key>fileList</key>
         <array>
             <filename>Key/kEY.png</filename>
-            <filename>Key/kEYBleu.png</filename>
-            <filename>Key/kEYJaune.png</filename>
-            <filename>Key/kEYRouge.png</filename>
-            <filename>Key/kEYVert.png</filename>
-            <filename>Key/kEYViolet.png</filename>
             <filename>../../Levels/crate.png</filename>
             <filename>../../Levels/Adrian/end_3.png</filename>
             <filename>../../Levels/Adrian/end_1.png</filename>
@@ -166,6 +161,47 @@
             <filename>../../Levels/zcrate_exploo0005.png</filename>
             <filename>../../Levels/zcrate_exploo0006.png</filename>
             <filename>../../Levels/zcrate_exploo0007.png</filename>
+            <filename>Key/battery/Comp 2_00000.png</filename>
+            <filename>Key/battery/Comp 2_00001.png</filename>
+            <filename>Key/battery/Comp 2_00002.png</filename>
+            <filename>Key/battery/Comp 2_00003.png</filename>
+            <filename>Key/battery/Comp 2_00004.png</filename>
+            <filename>Key/battery/Comp 2_00005.png</filename>
+            <filename>Key/battery/Comp 2_00006.png</filename>
+            <filename>Key/battery/Comp 2_00007.png</filename>
+            <filename>Key/battery/Comp 2_00008.png</filename>
+            <filename>Key/battery/Comp 2_00009.png</filename>
+            <filename>Key/battery/Comp 2_00010.png</filename>
+            <filename>Key/battery/Comp 2_00011.png</filename>
+            <filename>Key/battery/Comp 2_00012.png</filename>
+            <filename>Key/battery/Comp 2_00013.png</filename>
+            <filename>Key/battery/Comp 2_00014.png</filename>
+            <filename>Key/battery/Comp 2_00015.png</filename>
+            <filename>Key/battery/Comp 2_00016.png</filename>
+            <filename>Key/battery/Comp 2_00017.png</filename>
+            <filename>Key/battery/Comp 2_00018.png</filename>
+            <filename>Key/battery/Comp 2_00019.png</filename>
+            <filename>Key/battery/Comp 2_00020.png</filename>
+            <filename>Key/battery/Comp 2_00021.png</filename>
+            <filename>Key/battery/Comp 2_00022.png</filename>
+            <filename>Key/battery/Comp 2_00023.png</filename>
+            <filename>Key/battery/Comp 2_00024.png</filename>
+            <filename>Key/kEY1Jaune.png</filename>
+            <filename>Key/kEY2Violet.png</filename>
+            <filename>Key/kEY3Vert.png</filename>
+            <filename>Key/kEY4Bleu.png</filename>
+            <filename>Key/kEY5Rouge.png</filename>
+            <filename>generatorV2/images/endDoor_0000.png</filename>
+            <filename>Key/mask1Yellow.png</filename>
+            <filename>Key/mask2Purple.png</filename>
+            <filename>Key/mask3Green.png</filename>
+            <filename>Key/mask4Blue.png</filename>
+            <filename>Key/mask5Red.png</filename>
+            <filename>generatorV2/images/endDoor_0001.png</filename>
+            <filename>generatorV2/images/endDoor_0002.png</filename>
+            <filename>generatorV2/images/endDoor_0003.png</filename>
+            <filename>generatorV2/images/endDoor_0004.png</filename>
+            <filename>generatorV2/images/endDoor_0005.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

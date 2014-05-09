@@ -186,6 +186,10 @@
             <filename>../../Levels/Adrian/PorteExplose0008.png</filename>
             <filename>../../Levels/Adrian/PorteExplose0009.png</filename>
             <filename>../../Levels/Adrian/PorteExplose0010.png</filename>
+            <filename>../../Levels/Adrian/PorteExplose0011.png</filename>
+            <filename>../../Levels/Adrian/PorteExplose0012.png</filename>
+            <filename>../../Levels/Adrian/PorteExplose0013.png</filename>
+            <filename>../../Levels/Adrian/PorteExplose0014.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

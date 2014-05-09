@@ -20,6 +20,7 @@ public class Crate : MonoBehaviour {
 	public List<Crate> linkedCratesTMP = new List<Crate>();
 	public Crate cakeCrate;
 	public InputManager InputMan;
+	public OTSprite sprite;
 //	private FESound testSon;
 	//RaycastHit hitInfo;
 	//Ray landingRay;	
@@ -46,13 +47,15 @@ public class Crate : MonoBehaviour {
 		GameEventManager.GameStart += GameStart;
 		InputMan = Instantiate(Resources.Load("Tuning/InputManager")) as InputManager;
 		InputMan.Setup();
+		sprite = gameObject.GetComponentInChildren<OTSprite>();
+		sprite.frameIndex = 25;
 	}
 	
 	IEnumerator StartGravity()
 	{
 		// wait for things to settle before applying gravity
 		yield return new WaitForSeconds(0.1f);
-		gravityY = 0.2f;
+		gravityY = 0.7f;
 	}
 	
 	// Update is called once per frame

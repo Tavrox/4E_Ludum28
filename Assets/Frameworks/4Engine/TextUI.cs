@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Text;
 [ExecuteInEditMode]
 
 public class TextUI : MonoBehaviour {
@@ -7,11 +8,16 @@ public class TextUI : MonoBehaviour {
 	[HideInInspector] public GameSetup SETUP;
 	[HideInInspector] public TextMesh _mesh;
 	public string DIALOG_ID = "NONE";
-	public string text;
-	public bool dontTranslate = false, twinkleMessage;
+	public string text, displayedText;
+	public bool dontTranslate = false, twinkleMessage, noScrollMessage;
 	public bool hasBeenTranslated = false;
 	[HideInInspector] public Color initColor;
 	public Color color;
+	private char tempLetter;
+	private int cpt;
+	private StringBuilder textArray;
+	public int lettersToDisplay=12;
+	[Range (0,0.5f)] public float scrollSpeed=0.2f;
 
 	public void Awake()
 	{
@@ -33,6 +39,8 @@ public class TextUI : MonoBehaviour {
 			//StartCoroutine("twinkle");
 			InvokeRepeating("twinkle",0,2f);
 		}
+		if(lettersToDisplay>text.Length) lettersToDisplay=text.Length;
+		if(!noScrollMessage) InvokeRepeating("scrollText",0,scrollSpeed);
 	}
 	
 	private void twinkle () {
@@ -41,15 +49,27 @@ public class TextUI : MonoBehaviour {
 		gameObject.GetComponent<MeshRenderer>().enabled = !gameObject.GetComponent<MeshRenderer>().enabled;
 		//StartCoroutine("twinkle");
 	}	
+	private void scrollText() {
+		//text = text.Replace("/n", "\n");
+		tempLetter = text[0];
+		textArray = new StringBuilder(text);
+		for (cpt = 0; cpt<text.Length-1;cpt++) {
+			textArray[cpt]=textArray[cpt+1];
+		}
+		textArray[text.Length-1]=tempLetter;
+		text=textArray.ToString();
+		displayedText=textArray.ToString(0,lettersToDisplay);
+		
+		_mesh.text = displayedText;
+		_mesh.color = color;
+	}
 	void Update()
 	{
 		if (text != SETUP.TextSheet.TranslateSingle(this) && dontTranslate == false && hasBeenTranslated == true)
 		{
 			hasBeenTranslated = false;
 		}
-		text = text.Replace("/n", "\n");
-		_mesh.text = text;
-		_mesh.color = color;
+
 	}
 
 	public void makeFadeOut()

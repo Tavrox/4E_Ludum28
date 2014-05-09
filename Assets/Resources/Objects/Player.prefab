@@ -547,7 +547,7 @@ Transform:
   m_GameObject: {fileID: 100036}
   m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106829}
   m_LocalPosition: {x: 0, y: -6.5, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 1.5}
+  m_LocalScale: {x: 3, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 400024}
 --- !u!23 &2300000
@@ -954,6 +954,7 @@ MonoBehaviour:
   pushCrate: 0
   grabCrate: 0
   jumpLocked: 0
+  fallApproachGround: 0
   grounded: 0
   passingPlatform: 0
   onPlatform: 0
@@ -989,6 +990,7 @@ MonoBehaviour:
   paused: 0
   hasFinalKey: 0
   angleRotation: 0
+  nbKey: 0
   isDead: 0
   locked: 0
   killedByBlob: 0
@@ -1132,7 +1134,7 @@ MonoBehaviour:
   _frameIndex: 15
   _frameName: transi
   _spriteContainer: {fileID: 0}
-  _containerName: ingameui
+  _containerName: 
   _newSprite: 0
 --- !u!114 &11400012
 MonoBehaviour:

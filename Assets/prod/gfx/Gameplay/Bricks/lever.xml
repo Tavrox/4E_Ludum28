@@ -33,7 +33,7 @@
             <key>levier_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1,102},{50,100}}</string>
+                <string>{{103,1},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -46,7 +46,7 @@
             <key>levier_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{52,102},{50,100}}</string>
+                <string>{{154,1},{50,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -56,6 +56,97 @@
                 <key>sourceSize</key>
                 <string>{50,100}</string>
             </dict>
+            <key>normalOFF.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{205,1},{100,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,150}}</string>
+                <key>sourceSize</key>
+                <string>{100,150}</string>
+            </dict>
+            <key>normalON.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{306,1},{100,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,150}}</string>
+                <key>sourceSize</key>
+                <string>{100,150}</string>
+            </dict>
+            <key>seqOFF.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{407,1},{100,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,150}}</string>
+                <key>sourceSize</key>
+                <string>{100,150}</string>
+            </dict>
+            <key>seqON.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1,152},{100,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,150}}</string>
+                <key>sourceSize</key>
+                <string>{100,150}</string>
+            </dict>
+            <key>timedOFF.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{102,152},{100,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,150}}</string>
+                <key>sourceSize</key>
+                <string>{100,150}</string>
+            </dict>
+            <key>timedON1.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{203,152},{100,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,150}}</string>
+                <key>sourceSize</key>
+                <string>{100,150}</string>
+            </dict>
+            <key>timedON2.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{304,152},{100,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{100,150}}</string>
+                <key>sourceSize</key>
+                <string>{100,150}</string>
+            </dict>
         </dict>
         <key>metadata</key>
         <dict>
@@ -64,9 +155,9 @@
             <key>realTextureFileName</key>
             <string>lever.png</string>
             <key>size</key>
-            <string>{128,256}</string>
+            <string>{512,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:613cb06d894aa8e10a1a383ebc60c1de:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:3516e6a0055adb142673a7d5cf4b8703:1/1$</string>
             <key>textureFileName</key>
             <string>lever.png</string>
         </dict>

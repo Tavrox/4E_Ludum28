@@ -134,10 +134,62 @@
                 <key>sourceSize</key>
                 <string>{300,300}</string>
             </dict>
+            <key>PorteExplose0011.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1204,301},{300,300}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{300,300}}</string>
+                <key>sourceSize</key>
+                <string>{300,300}</string>
+            </dict>
+            <key>PorteExplose0012.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1505,301},{300,300}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{300,300}}</string>
+                <key>sourceSize</key>
+                <string>{300,300}</string>
+            </dict>
+            <key>PorteExplose0013.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,602},{300,300}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{300,300}}</string>
+                <key>sourceSize</key>
+                <string>{300,300}</string>
+            </dict>
+            <key>PorteExplose0014.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{301,602},{300,300}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{300,300}}</string>
+                <key>sourceSize</key>
+                <string>{300,300}</string>
+            </dict>
             <key>porte_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1204,301},{50,300}}</string>
+                <string>{{602,602},{50,300}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -150,7 +202,7 @@
             <key>porte_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1255,301},{50,300}}</string>
+                <string>{{653,602},{50,300}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -163,7 +215,7 @@
             <key>porte_3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1306,301},{50,300}}</string>
+                <string>{{704,602},{50,300}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -176,7 +228,7 @@
             <key>porte_4.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1357,301},{50,300}}</string>
+                <string>{{755,602},{50,300}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -189,7 +241,7 @@
             <key>porte_5.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1408,301},{50,300}}</string>
+                <string>{{806,602},{50,300}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -209,7 +261,7 @@
             <key>size</key>
             <string>{2048,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:8b535cd6a2054db6070ac01571bb2484:c338c2f11935889db9d0bc7c2f31bddf:94eb888170255f99fae4aad77917705e$</string>
+            <string>$TexturePacker:SmartUpdate:021dafefff34c5cab74d1b33b2674a54:a2e69b1249a20f40a6957b88f4d66dac:94eb888170255f99fae4aad77917705e$</string>
             <key>textureFileName</key>
             <string>door.png</string>
         </dict>

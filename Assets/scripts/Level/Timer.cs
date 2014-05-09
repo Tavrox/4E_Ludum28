@@ -16,10 +16,13 @@ public class Timer : MonoBehaviour {
 	public bool triggeredEnd = false;
 	private Transform _alertMask;
 	private Color alertColor;
+	private Player _player;
 
 
 	// Use this for initialization
 	void Start () {
+		pauseTimer = true;
+		_player = GameObject.Find("Player").GetComponent<Player>();
 		InvokeRepeating("updateTimer", 0, 0.01f);
 		_alertMask = GameObject.Find("Player/IngameUI/Timer/timerAlert").GetComponent<Transform>();
 		alertColor = _alertMask.renderer.material.color;
@@ -71,6 +74,10 @@ public class Timer : MonoBehaviour {
 				secLeft = 59;
 			}
 		}
+		else {
+			if (_player.isLeft || _player.isRight || _player.isJump || _player.isCrounch)
+			pauseTimer = false;
+		}
 	}
 	private void timerAlert () {
 		//alertColor.a = Mathf.PingPong(Time.time, 0.5f);
@@ -87,7 +94,7 @@ public class Timer : MonoBehaviour {
 	{
 		if(this != null) {
 			CancelInvoke();
-			pauseTimer = false;
+			pauseTimer = true;
 			triggeredEnd = false;
 			resetTimer();
 			alertColor.a = 0f;_alertMask.renderer.material.color = alertColor;

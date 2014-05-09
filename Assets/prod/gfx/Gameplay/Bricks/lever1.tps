@@ -152,6 +152,13 @@
             <filename>../../Levels/Adrian/leverUp00.png</filename>
             <filename>../../Levels/Adrian/levier_1.png</filename>
             <filename>../../Levels/Adrian/levier_2.png</filename>
+            <filename>../../Levels/levers/normalOFF.png</filename>
+            <filename>../../Levels/levers/normalON.png</filename>
+            <filename>../../Levels/levers/seqOFF.png</filename>
+            <filename>../../Levels/levers/seqON.png</filename>
+            <filename>../../Levels/levers/timedOFF.png</filename>
+            <filename>../../Levels/levers/timedON1.png</filename>
+            <filename>../../Levels/levers/timedON2.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
