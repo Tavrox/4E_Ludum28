@@ -94,7 +94,6 @@ public class Lever : MonoBehaviour {
 		FESound.playDistancedSound("lever",gameObject.transform, _player.transform,SND_minDist);//MasterAudio.PlaySound("lever");
 		trigged = !trigged;
 		if(trigged) {
-			print(animSprite.frameIndex);
 			if(myButtonType == btnType.TimedBtn) animSprite.Play("timedunlock");
 			else if(myButtonType == btnType.SequenceBtn) {
 				if(animSprite.frameIndex==6) _myTimer.transform.localPosition= new Vector3(-0.1669464f,-0.7766533f,-0.5f);

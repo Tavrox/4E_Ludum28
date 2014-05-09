@@ -29,7 +29,7 @@ GameObject:
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
   m_Layer: 0
-  m_Name: color-4
+  m_Name: color-11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ GameObject:
   - 23: {fileID: 2300002}
   - 114: {fileID: 11400006}
   m_Layer: 0
-  m_Name: keySpriteAnim
+  m_Name: keySpriteAnim-5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -4.76430893, y: 15.4444904, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400006}
@@ -112,8 +112,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0200000107, y: -.0833332539, z: .0020833374}
-  m_LocalScale: {x: 1.03999913, y: 1.125, z: 1}
+  m_LocalPosition: {x: -.0600000024, y: -1.06249988, z: .0020833374}
+  m_LocalScale: {x: 1.95999837, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
 --- !u!23 &2300000
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18d0574a4fa59946a49ede6640a1f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: color-4
+  _name: color-11
   _position: {x: .019230783, y: .0925925374}
   _size: {x: .442307502, y: .425925821}
   _rotation: 0
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44a3d5287236bb84e93073d786f36118, type: 3}
+  m_Script: {fileID: 11500000, guid: da6b17f01b88ffc4e92cb8ab5334abaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _batteryColorSprite: {fileID: 0}
@@ -274,9 +274,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e0774980171c514ea93208b47048a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: keySpriteAnim
+  _name: keySpriteAnim-5
   _position: {x: 0, y: .0208333731}
-  _size: {x: 1.03999913, y: 1.125}
+  _size: {x: 1.95999837, y: 2}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -298,10 +298,10 @@ MonoBehaviour:
     height: 0
   protoType: 
   baseName: keySpriteAnim
-  oSize: {x: 1.08333337, y: 1.125}
-  imageSize: {x: 1.99999833, y: 2.08333349}
-  _offset: {x: -.0200000107, y: .104166627}
-  _baseOffset: {x: .459999591, y: .583333373}
+  oSize: {x: 2.04166675, y: 2}
+  imageSize: {x: 3.99999666, y: 4.16666698}
+  _offset: {x: -.0600000024, y: 1.08333325}
+  _baseOffset: {x: .959999144, y: 2.16666675}
   _flipHorizontal: 0
   _flipVertical: 0
   _transparent: 1
@@ -311,8 +311,8 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 0
-  _frameName: Comp 2_00000
+  _frameIndex: 47
+  _frameName: zcrate_exploo0001
   _spriteContainer: {fileID: 0}
   _containerName: objects
   _newSprite: 0

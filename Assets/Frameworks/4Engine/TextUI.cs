@@ -39,6 +39,9 @@ public class TextUI : MonoBehaviour {
 			//StartCoroutine("twinkle");
 			InvokeRepeating("twinkle",0,2f);
 		}
+	}
+	private IEnumerator launchScroll() {
+		yield return new WaitForSeconds(0.5f);
 		if(lettersToDisplay>text.Length) lettersToDisplay=text.Length;
 		if(!noScrollMessage) InvokeRepeating("scrollText",0,scrollSpeed);
 	}
@@ -89,6 +92,7 @@ public class TextUI : MonoBehaviour {
 	public void TranslateThis()
 	{
 		text = SETUP.TextSheet.TranslateSingle(this);
+		StartCoroutine("launchScroll");
 //		print ("translateSingle" + DIALOG_ID);
 	}
 	public void TranslateAllInScene()

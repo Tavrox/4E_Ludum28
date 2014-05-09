@@ -13,10 +13,10 @@ public class BatteryLevels : MonoBehaviour {
 		_batteryColorSprite = gameObject.GetComponentInChildren<OTSprite>();
 		_batteryColorSprite.frameIndex = _levelM.chosenVariation+41;
 		if(_levelM.isBoss == true) _batteryColorSprite.frameIndex = 46;
-		GameEventManager.GameStart += GameStart;
+		GameEventManager.NextInstance += NextInstance;
 		if(twinkle) StartCoroutine("twinkleLittleStar");
 	}
-	void GameStart () {	
+	void NextInstance () {	
 		_batteryColorSprite.frameIndex = _levelM.chosenVariation-1;
 		if(_levelM.isBoss == true) _batteryColorSprite.frameIndex = 5;
 	}
