@@ -23,6 +23,13 @@ public class ArcElectric : MonoBehaviour {
 		//MasterAudio.PlaySound("piston_idle");
 	}
 	
+	[ContextMenu ("Setup Frame")]
+	private void setFrame()
+	{
+		animSprite = gameObject.GetComponentInChildren<OTAnimatingSprite>();
+		animSprite.frameIndex = 21;
+	}
+
 	private IEnumerator waitB4Active(bool alternate) {
 		yield return new WaitForSeconds(delayBegin);
 		if(alternate) StartCoroutine("active");

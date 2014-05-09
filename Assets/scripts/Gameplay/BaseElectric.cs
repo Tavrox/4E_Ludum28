@@ -20,6 +20,14 @@ public class BaseElectric : MonoBehaviour {
 		GameEventManager.FinishLevel += FinishLevel;
 		/*if(delayBegin != 0)*/ collider.enabled=false;
 	}
+	
+	[ContextMenu ("Setup Frame")]
+	private void setFrame()
+	{
+		animSprite = gameObject.GetComponentInChildren<OTAnimatingSprite>();
+		animSprite.frameIndex = 24;
+	}
+
 	private IEnumerator waitB4Active(bool alternate) {
 		yield return new WaitForSeconds(delayBegin);
 		if(alternate) StartCoroutine("active");

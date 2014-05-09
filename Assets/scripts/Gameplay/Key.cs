@@ -12,7 +12,13 @@ public class Key : MonoBehaviour {
 	public EndDoor _myEndDoor;
 	private int _nbKeyRequired;
 
-	// Use this for initialization
+	[ContextMenu ("Setup Frame")]
+	private void setFrame()
+	{
+		_KeySprite = gameObject.GetComponentInChildren<OTAnimatingSprite>();
+		_KeySprite.frameIndex = 0;
+	}
+		// Use this for initialization
 	void Start () {
 		_nbKeyRequired = _myEndDoor._nbKeyRequired;
 		_player = GameObject.Find("Player").GetComponent<Player>();
@@ -66,7 +72,7 @@ public class Key : MonoBehaviour {
 			_player.nbKey++;
 			transform.localPosition = new Vector3(-11f,5f-_player.nbKey,0f);
 			_myEndDoor.nextState();
-			if(_player.nbKey>_nbKeyRequired) {
+			if(_player.nbKey>=_nbKeyRequired) {
 				_myEndDoor.activeStateReached();
 			}
 			//GetComponentInChildren<OTSprite>().renderer.enabled = false;
