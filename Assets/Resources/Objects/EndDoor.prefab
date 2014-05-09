@@ -536,7 +536,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da6b17f01b88ffc4e92cb8ab5334abaf, type: 3}
+  m_Script: {fileID: 11500000, guid: 44a3d5287236bb84e93073d786f36118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _batteryColorSprite: {fileID: 0}
@@ -783,7 +783,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100012}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da6b17f01b88ffc4e92cb8ab5334abaf, type: 3}
+  m_Script: {fileID: 11500000, guid: 44a3d5287236bb84e93073d786f36118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _batteryColorSprite: {fileID: 0}
@@ -796,7 +796,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da6b17f01b88ffc4e92cb8ab5334abaf, type: 3}
+  m_Script: {fileID: 11500000, guid: 44a3d5287236bb84e93073d786f36118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _batteryColorSprite: {fileID: 0}
@@ -862,7 +862,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100018}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da6b17f01b88ffc4e92cb8ab5334abaf, type: 3}
+  m_Script: {fileID: 11500000, guid: 44a3d5287236bb84e93073d786f36118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _batteryColorSprite: {fileID: 0}
@@ -928,7 +928,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da6b17f01b88ffc4e92cb8ab5334abaf, type: 3}
+  m_Script: {fileID: 11500000, guid: 44a3d5287236bb84e93073d786f36118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _batteryColorSprite: {fileID: 0}

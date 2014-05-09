@@ -119,7 +119,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: c7de85b402aee314c9834c4b2ee53be2, type: 3}
+  - {fileID: 2100000, guid: b41654aa768f3684ba594622b1808edc, type: 3}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -152,7 +152,7 @@ TextMesh:
   m_FontSize: 46
   m_FontStyle: 0
   m_RichText: 0
-  m_Font: {fileID: 12800000, guid: c7de85b402aee314c9834c4b2ee53be2, type: 3}
+  m_Font: {fileID: 12800000, guid: b41654aa768f3684ba594622b1808edc, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 3022119168
@@ -227,6 +227,7 @@ MonoBehaviour:
   displayedText: r sur E pour in
   dontTranslate: 0
   twinkleMessage: 0
+  noScrollMessage: 0
   hasBeenTranslated: 0
   initColor: {r: 0, g: .882352948, b: .129411772, a: .70588237}
   color: {r: 0, g: .882352948, b: .129411772, a: .70588237}
