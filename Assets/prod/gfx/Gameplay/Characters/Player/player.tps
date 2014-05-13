@@ -263,6 +263,9 @@
             <filename>perso_Tiragecaissemoisi0008.png</filename>
             <filename>perso_zMortElectro0001 (1).png</filename>
             <filename>perso_zMortElectro0001 (2).png</filename>
+            <filename>perso_zzidle_Bas0001.png</filename>
+            <filename>perso_zzidle_Bas0002.png</filename>
+            <filename>perso_zzidle_Bas0003.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
