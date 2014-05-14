@@ -231,16 +231,6 @@
             <filename>pero_teleport0022.png</filename>
             <filename>pero_teleport0023.png</filename>
             <filename>pero_teleport0024.png</filename>
-            <filename>perso_Ymort0006.png</filename>
-            <filename>perso_Ymort0007.png</filename>
-            <filename>perso_Ymort0008.png</filename>
-            <filename>perso_Ymort0009.png</filename>
-            <filename>perso_Ymort0010.png</filename>
-            <filename>perso_Ymort0001.png</filename>
-            <filename>perso_Ymort0002.png</filename>
-            <filename>perso_Ymort0003.png</filename>
-            <filename>perso_Ymort0004.png</filename>
-            <filename>perso_Ymort0005.png</filename>
             <filename>perso_poussecaisse0002.png</filename>
             <filename>perso_poussecaisse0003.png</filename>
             <filename>perso_poussecaisse0004.png</filename>
@@ -266,6 +256,11 @@
             <filename>perso_zzidle_Bas0001.png</filename>
             <filename>perso_zzidle_Bas0002.png</filename>
             <filename>perso_zzidle_Bas0003.png</filename>
+            <filename>perso_ymortblob (1).png</filename>
+            <filename>perso_ymortblob (2).png</filename>
+            <filename>perso_ymortblob (3).png</filename>
+            <filename>perso_ymortblob (4).png</filename>
+            <filename>perso_ymortblob (5).png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
