@@ -25,13 +25,18 @@ public class TextUI : MonoBehaviour {
 		_mesh = GetComponent<TextMesh>();
 		initColor = color;
 		DIALOG_ID = gameObject.name;
+		if (/*hasBeenTranslated == false &&*/ dontTranslate == false)
+		{
+			TranslateThis();
+		}
 	}
 
 	void Start()
 	{
-		if (hasBeenTranslated == false && dontTranslate == false)
+		if (/*hasBeenTranslated == false &&*/ dontTranslate == false)
 		{
 			TranslateThis();
+			//if(lettersToDisplay>displayedText.Length) lettersToDisplay=displayedText.Length;
 		}
 		
 		if(twinkleMessage) {
@@ -43,6 +48,7 @@ public class TextUI : MonoBehaviour {
 	private IEnumerator launchScroll() {
 		yield return new WaitForSeconds(0.5f);
 		if(lettersToDisplay>text.Length) lettersToDisplay=text.Length;
+		_mesh.text = displayedText = text;
 		if(!noScrollMessage) InvokeRepeating("scrollText",0,scrollSpeed);
 	}
 	
@@ -93,6 +99,7 @@ public class TextUI : MonoBehaviour {
 	{
 		text = SETUP.TextSheet.TranslateSingle(this);
 		StartCoroutine("launchScroll");
+
 //		print ("translateSingle" + DIALOG_ID);
 	}
 	public void TranslateAllInScene()

@@ -17,10 +17,13 @@ public class LevelManager : MonoBehaviour {
 	private PlayerData _pdata;
 	private string _rand;
 	private Vector3 spawnPoint;
+	private PartyData _partyData;
 
 	void Awake()
 	{
 		TuningDocument  = Instantiate(Resources.Load("Tuning/Global")) as BMTuning;
+		if(GameObject.Find("PartyData") != null){_partyData = GameObject.Find("PartyData").GetComponent<PartyData>();
+			chosenVariation = _partyData.choixOccurence;}
 	}
 //	void Update () {
 //		print (chosenVariation);
