@@ -52,10 +52,11 @@ public class ArcElectric : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider _other)
 	{
-		if (_other.CompareTag("Player") == true && GameObject.Find("Player").GetComponent<Player>().isDead == false)
+		if (_other.CompareTag("Player") == true && _player.isDead == false)
 		{
 			FESound.playDistancedSound("hole",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("hole");
-			GameObject.Find("Player").GetComponent<Player>().isDead = true;
+			_player.isDead = true;
+			_player.killedByLaser = true;
 			GameEventManager.TriggerGameOver();
 		}
 	}

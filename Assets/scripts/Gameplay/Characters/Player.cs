@@ -10,14 +10,20 @@ public class Player : Character {
 	public bool hasFinalKey = false;
 
 	public int angleRotation, nbKey;
-	public bool isDead = false, locked = false, killedByBlob, finishedLevel;
+	public bool isDead = false, locked = false, isTeleport, standing, unCrouch, killedByBlob, killedByLaser, finishedLevel;
 	private bool walkSoundLeft;
 	//private Camera _mainCam;
 	//private LevelManager _lvlManager;
 	//private Vector3 _spawnVariation;
-	
+	public Transform Cam;
+	public Vector3 _camPos;
+	private OTTween _crouchTween;
+//	public delegate void TweenDelegate();
+//	public TweenDelegate otweenFinish;
+
 	private BoxCollider col;
 	// Use this for initialization
+
 	public override void Start () 
 	{
 		base.Start();
@@ -29,12 +35,13 @@ public class Player : Character {
 		//_spawnVariation = GameObject.Find("playerspawn"+_lvlManager.chosenVariation).transform.position;
 		_sprite.alpha = 0f;
 		OTTween _tween = new OTTween(_sprite,1f).Tween("alpha",1f);
-
+		_crouchTween = new OTTween(_crouchTween,0f);
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GameOver += GameOver;
 		GameEventManager.GamePause += GamePause;
 		GameEventManager.GameUnpause += GameUnpause;
 		GameEventManager.FinishLevel += FinishLevel;
+		Cam = GameObject.Find("UI").GetComponent<Transform>();
 
 		InvokeRepeating("playFootstep",0f,0.4f);
 		
@@ -44,19 +51,41 @@ public class Player : Character {
 		spawnPos = thisTransform.position;
 		isDead =false;
 		col = (BoxCollider)this.collider;
+		//otweenFinish = test;
+		//_crouchTween.onTweenFinish = test;
+		//otweenFinish();
 		//GameObject.Find("Frameworks/OT/View").GetComponent<OTView>().movementTarget = gameObject;
 		
 		//_mainCam.transform.position = new Vector3(FETool.Round(_spawnVariation.x,2),FETool.Round(_spawnVariation.y,2),0f);
 
 	}
+	//public delegate void truc(OTTween tween);
+//	public void onTweenFinish() {
+//		print("TESTTETST");
+//	}
 	// Update is called once per frame
 	public void FixedUpdate () 
 	{
+		unCrouch = false;
 		//_mainCam.transform.position = new Vector3(FETool.Round(thisTransform.position.x,2),FETool.Round(thisTransform.position.y,2),0f);
-		if(!locked) checkInput();
-		UpdateMovement();
+		if (!Input.GetKey(InputMan.Down) && !Input.GetKey(InputMan.Down2) && !isTeleport && standing)
+		{
+			standing = false;
+			unCrouch = true;
+			_crouchTween = new OTTween(Cam.transform ,.4f, OTEasing.QuadInOut).Tween("position", new Vector3( _camPos.x, _camPos.y, _camPos.z ));
+			_crouchTween.OnFinish(unlockCrouch);
+			//locked = false;
+		}
+
+		if(!locked && !isCrounch) {checkInput();}
+			UpdateMovement();
 		//		offsetCircles ();
 	}
+	private void unlockCrouch (OTTween tween) {
+		isCrounch = false;
+
+	}
+
 	IEnumerator Wait()
 	{
 		yield return new WaitForSeconds (6f);
@@ -87,6 +116,8 @@ public class Player : Character {
 		if(Input.GetKeyUp(InputMan.Hold) || Input.GetKeyUp(InputMan.Hold2) || Input.GetKeyUp(InputMan.Hold3)) pushCrate = grabCrate = false;
 		if((Input.GetKey(InputMan.Left) || Input.GetKey(InputMan.Left2) || Input.GetAxisRaw("X axis") > InputMan.X_AxisPos_Sensibility ) && !finishedLevel)
 		{ 
+			_crouchTween.Stop();
+			Cam.transform.position = _camPos;
 			isLeft = true;
 			raycastWidthRatio = 0.25f;
 			shootLeft = true;
@@ -95,6 +126,8 @@ public class Player : Character {
 		
 		if ((Input.GetKey(InputMan.Right) || Input.GetKey(InputMan.Right2) || Input.GetAxisRaw("X axis") < InputMan.X_AxisNeg_Sensibility) && !finishedLevel && !isLeft) 
 		{ 
+			_crouchTween.Stop();
+			Cam.transform.position = _camPos;
 			isRight = true; 
 			raycastWidthRatio = 0.25f;
 			facingDir = facing.Right;
@@ -103,6 +136,8 @@ public class Player : Character {
 		}
 		if (/*!jumpLocked &&*/ (Input.GetKey(InputMan.Up)  || Input.GetKey(InputMan.Up2) || Input.GetKey(InputMan.Up3) || Input.GetKey(InputMan.PadJump))) 
 		{
+			_crouchTween.Stop();
+			Cam.transform.position = _camPos;
 			isJump = true;
 		}
 		if (!jumpLocked && (Input.GetKeyDown(InputMan.Up)  || Input.GetKeyDown(InputMan.Up2) || Input.GetKeyDown(InputMan.Up3) || Input.GetKeyDown(InputMan.PadJump)) /* && grounded*/) 
@@ -129,11 +164,13 @@ public class Player : Character {
 			resetLevel();
 		}
 			
-		//		if (Input.GetKey(KeyCode.DownArrow))
-		//		{
-		//			isCrounch = true;
-		//			facingDir = facing.Down;
-		//		}
+		if ((Input.GetKey(InputMan.Down) || Input.GetKey(InputMan.Down2)) && grounded)
+		{
+			_camPos = Cam.transform.position;
+			_crouchTween = new OTTween(Cam.transform ,.4f, OTEasing.QuadInOut).Tween("position", new Vector3( Cam.transform.position.x, Cam.transform.position.y-4, Cam.transform.position.z ));
+			isCrounch = standing = true;
+			isRight = isLeft = false;
+		}
 
 		/*
 		 * if((Input.GetKeyUp("left") && !specialCast) || (Input.GetKeyUp("right") && !isLeft && !specialCast)) {
@@ -171,13 +208,13 @@ public class Player : Character {
 
 	private void resetLevel()
 	{
-		GameObject.Find("Player").GetComponent<Player>().isDead = true;
+		isDead = true;
 		GameEventManager.TriggerGameOver();
 	}
 
 	private void playFootstep()
 	{
-		if ((isLeft || isRight) && grounded && !finishedLevel)
+		if ((isLeft || isRight) && grounded && !finishedLevel && !isCrounch)
 		{
 			if(walkSoundLeft) MasterAudio.PlaySound ("player_runL1");
 			else MasterAudio.PlaySound ("player_runR1");
@@ -207,7 +244,7 @@ public class Player : Character {
 			transform.localPosition = spawnPos;
 			enabled = true;
 		
-			finishedLevel=killedByBlob = false;
+			finishedLevel=killedByBlob = killedByLaser = false;
 		collider.enabled=true;
 		isJump = false;
 		chute = true;

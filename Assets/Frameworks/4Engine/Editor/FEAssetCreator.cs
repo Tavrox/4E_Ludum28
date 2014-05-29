@@ -34,6 +34,16 @@ public class FEAssetCreator {
 	{
 		ScriptableObjectUtility.CreateAsset<PlayerProfile>();
 	}
+	[MenuItem("Assets/Create/GameSaveLoad")]
+	public static void CreateGameSaveLoad ()
+	{
+		ScriptableObjectUtility.CreateAsset<GameSaveLoad>();
+	}
+	[MenuItem("Assets/Create/LevelParam")]
+	public static void CreateLevelParam ()
+	{
+		ScriptableObjectUtility.CreateAsset<LevelParam>();
+	}
 
 
 

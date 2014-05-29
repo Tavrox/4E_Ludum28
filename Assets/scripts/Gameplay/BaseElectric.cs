@@ -54,6 +54,7 @@ public class BaseElectric : MonoBehaviour {
 		{
 			FESound.playDistancedSound("hole",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("hole");
 			_player.isDead = true;
+			_player.killedByLaser = true;
 			GameEventManager.TriggerGameOver();
 		}
 	}

@@ -1,0 +1,32 @@
+<userCollection>
+	<users>
+		<user name="b">
+			<level num="1" unlocked="false" gold="15000" silver="10000" bronze="5000">
+				<scorePlayer>00000</scorePlayer>
+				<nbDeaths>0</nbDeaths>
+				<occurences>
+					<occ1 id="1" unlocked="false" gold="15000" silver="10000" bronze="5000">
+						<scorePlayer>00000</scorePlayer>
+						<nbDeaths>0</nbDeaths>
+					</occ1>
+					<occ2 id="2" unlocked="false" gold="15000" silver="10000" bronze="5000">
+						<scorePlayer>00000</scorePlayer>
+						<nbDeaths>0</nbDeaths>
+					</occ2>
+					<occ3 id="3" unlocked="false" gold="15000" silver="10000" bronze="5000">
+						<scorePlayer>00000</scorePlayer>
+						<nbDeaths>0</nbDeaths>
+					</occ3>
+					<occ4 id="4" unlocked="false" gold="15000" silver="10000" bronze="5000">
+						<scorePlayer>00000</scorePlayer>
+						<nbDeaths>0</nbDeaths>
+					</occ4>
+					<occ5 id="5" unlocked="false" gold="15000" silver="10000" bronze="5000">
+						<scorePlayer>00000</scorePlayer>
+						<nbDeaths>0</nbDeaths>
+					</occ5>
+				</occurences>
+			</level>
+		</user>
+	</users>
+</userCollection>

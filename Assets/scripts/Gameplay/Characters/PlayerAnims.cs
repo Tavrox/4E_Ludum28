@@ -15,10 +15,13 @@ public class PlayerAnims : MonoBehaviour
 		FallLeft, FallRight,
 		ShootLeft, ShootRight,
 		CrounchLeft, CrounchRight,
+		unCrounchLeft, unCrounchRight,
 		AttackLeft, AttackRight,
 		PushCrateLeft, PushCrateRight,
 		GrabCrateLeft, GrabCrateRight,
 		DeathBlobLeft, DeathBlobRight,
+		DeathTimeLeft, DeathTimeRight,
+		DeathLaserLeft, DeathLaserRight,
 		VictoryLeft, VictoryRight,
 		TeleportINRight, TeleportINLeft,
 		TeleportOUTRight, TeleportOUTLeft
@@ -32,6 +35,7 @@ public class PlayerAnims : MonoBehaviour
 	private Character _character;
 	private Player _player;
 	private bool stopped, victoryAnim;
+	private int fEndTP = 23, fDeathB=67, fMiddleIdle=36, fEndIdle=38, crouched =72,endUnCrouch=70;
 	
 	private bool animPlaying = false;
 	
@@ -55,24 +59,26 @@ public class PlayerAnims : MonoBehaviour
 		PushCrate();
 		Walk();
 		Stand();
-		Crounch();
 		Jump();
 		Attack();
 		Hurt();
 		//Fall();
 		Paused();
-		DeathBlob();
+			Death();
+			Crounch();
 			//	}
-			if(animSprite.frameIndex == 23) {animPlaying=false;anim.fps = 12.66667f;_player.locked=false;} //stop teleport
-			if(animSprite.frameIndex == 38 && !stopped) {stopped=true;animSprite.Pauze();StartCoroutine("waitB4Restart",2.5f);} //deathBlob pause
-			if(animSprite.frameIndex == 46 && !stopped) {stopped=true;animSprite.Pauze();StartCoroutine("waitB4Restart",1f);} //iddle pause 1
-			if(animSprite.frameIndex == 48 && !stopped) {stopped=true;animSprite.Pauze();StartCoroutine("waitB4Restart",1f);} //iddle pause 2
+			//if(animSprite.frameIndex == crouched) {animPlaying=false;_player.isLeft = _player.isRight = false; _player.locked = true;}
+			if(animSprite.frameIndex == fEndTP) {animPlaying=false;anim.fps = 12.5f;_player.locked=false;_player.isTeleport = false;} //stop teleport
+			if(animSprite.frameIndex == fDeathB && !stopped) {stopped=true;animSprite.Pauze();StartCoroutine("waitB4Restart",2.5f);} //deathBlob pause
+			if(animSprite.frameIndex == fMiddleIdle && !stopped) {stopped=true;animSprite.Pauze();StartCoroutine("waitB4Restart",1f);} //iddle pause 1
+			if(animSprite.frameIndex == fEndIdle && !stopped) {stopped=true;animSprite.Pauze();StartCoroutine("waitB4Restart",1f);} //iddle pause 2
+			if((currentAnim == animDef.unCrounchLeft || currentAnim == animDef.unCrounchRight) && animSprite.frameIndex == endUnCrouch) {stopped=true;animSprite.Stop();StartCoroutine("waitB4Restart",0.075f);/*animSprite.Play("stand");*/} //stand
 			//if(animSprite.frameIndex == 51 && !stopped) {stopped=true;animSprite.Stop();StartCoroutine("waitB4Restart",1f);} //jump
 			//if(animSprite.frameIndex == 51 && stopped && _player.chute == true) {stopped=false;animSprite.Resume();} //fall
 			//if(animSprite.frameIndex == 43 && !stopped) {stopped=true;animSprite.Stop();StartCoroutine("waitB4Restart",0.09f);} //deathBlob pause
-//			print (animSprite.frameIndex);
+			//print (animSprite.frameIndex);
 			//print (currentAnim);
-		if(_character.grounded) animSprite.looping = true;
+			if(_character.grounded && !_character.isCrounch) animSprite.looping = true;
 		}
 	}
 	
@@ -85,10 +91,32 @@ public class PlayerAnims : MonoBehaviour
 		}
 	}
 	
+	private IEnumerator waitB4Restart (float delayRestart) {//print ("attend");
+		yield return new WaitForSeconds(delayRestart);
+		//print ("attendu");
+		stopped = false;//print (animSprite.frameIndex+1);
+		if(animSprite.frameIndex == fDeathB) { //Reprend anim mort
+			//animSprite.frameIndex=animSprite.frameIndex+1;
+			animSprite.PlayOnceBackward("deathBlob");
+			//if(animSprite.frameIndex == 28) { //Reprend anim mort
+			//if(animSprite.frameIndex != 38) animSprite.frameIndex=animSprite.frameIndex+1;
+			animSprite.Resume();
+		}
+		else if(animSprite.frameIndex == endUnCrouch) {
+			animSprite.Play("stand");
+			//animSprite.Resume();
+		}
+		//		else if (animSprite.frameIndex == 33) {
+		//			animSprite.frameIndex = 40;
+		//		}
+		else //Reprend autres anims
+			animSprite.Play(animSprite.frameIndex+1);
+	}
 	private void Victory()
 	{
 		if(currentAnim != animDef.VictoryLeft && _character.facingDir == Character.facing.Left)
 		{
+			StopCoroutine("waitB4Restart");
 			victoryAnim = true;
 			currentAnim = animDef.VictoryLeft;
 			animSprite.Play("stand"); // fall left
@@ -97,6 +125,7 @@ public class PlayerAnims : MonoBehaviour
 		}
 		if(currentAnim != animDef.VictoryRight && _character.facingDir == Character.facing.Right)
 		{
+			StopCoroutine("waitB4Restart");
 			victoryAnim = true;
 			currentAnim = animDef.VictoryRight;
 			animSprite.Play("stand"); // fall right
@@ -104,26 +133,11 @@ public class PlayerAnims : MonoBehaviour
 			_player.isRight = _player.isLeft = false;
 		}
 	}
-	private IEnumerator waitB4Restart (float delayRestart) {//print ("attend");
-		yield return new WaitForSeconds(delayRestart);
-		//print ("attendu");
-		stopped = false;//print (animSprite.frameIndex+1);
-		if(animSprite.frameIndex == 38) { //Reprend anim mort
-			animSprite.frameIndex=animSprite.frameIndex+1;
-		//if(animSprite.frameIndex == 28) { //Reprend anim mort
-			//if(animSprite.frameIndex != 38) animSprite.frameIndex=animSprite.frameIndex+1;
-			animSprite.Resume();
-		}
-//		else if (animSprite.frameIndex == 33) {
-//			animSprite.frameIndex = 40;
-//		}
-		else //Reprend autres anims
-			animSprite.Play(animSprite.frameIndex+1);
-	}
 	private void TeleportIN()
 	{
 		if(_player.locked && _character.grounded && currentAnim!=animDef.TeleportINRight && _character.facingDir == Character.facing.Right)
 		{
+			StopCoroutine("waitB4Restart");
 			currentAnim = animDef.TeleportINRight;
 			animSprite.PlayOnce("teleportIN");
 			NormalScaleSprite();
@@ -133,6 +147,7 @@ public class PlayerAnims : MonoBehaviour
 		}
 		if(_player.locked && _character.grounded && currentAnim!=animDef.TeleportINLeft && _character.facingDir == Character.facing.Left)
 		{
+			StopCoroutine("waitB4Restart");
 			currentAnim = animDef.TeleportINLeft;
 			animSprite.PlayOnce("teleportIN");
 			animPlaying = true;
@@ -161,17 +176,47 @@ public class PlayerAnims : MonoBehaviour
 //		}
 //	}
 	
-	private void DeathBlob()
+	private void Death()
 	{
-		if(_character.facingDir == Character.facing.Right && currentAnim!=animDef.DeathBlobRight && _player.isDead)
+		if(_character.facingDir == Character.facing.Right && currentAnim!=animDef.DeathBlobRight && _player.isDead && _player.killedByBlob)
 		{
+			StopCoroutine("waitB4Restart");
 			currentAnim = animDef.DeathBlobRight;
 			animSprite.Play("deathBlob");
 			NormalScaleSprite();
 		}
-		if(_character.facingDir == Character.facing.Left && currentAnim!=animDef.DeathBlobLeft && _player.isDead)
+		if(_character.facingDir == Character.facing.Left && currentAnim!=animDef.DeathBlobLeft && _player.isDead && _player.killedByBlob)
 		{
+			StopCoroutine("waitB4Restart");
 			currentAnim = animDef.DeathBlobLeft;
+			animSprite.Play("deathBlob");
+			InvertSprite();
+		}
+		if(_character.facingDir == Character.facing.Right && currentAnim!=animDef.DeathLaserRight && _player.isDead && _player.killedByLaser)
+		{
+			StopCoroutine("waitB4Restart");
+			currentAnim = animDef.DeathLaserRight;
+			animSprite.PlayLoop("deathElectric");
+			NormalScaleSprite();
+		}
+		if(_character.facingDir == Character.facing.Left && currentAnim!=animDef.DeathLaserLeft && _player.isDead && _player.killedByLaser)
+		{
+			StopCoroutine("waitB4Restart");
+			currentAnim = animDef.DeathLaserLeft;
+			animSprite.PlayLoop("deathElectric");
+			InvertSprite();
+		}
+		if(_character.facingDir == Character.facing.Right && currentAnim!=animDef.DeathTimeRight && _player.isDead && !_player.killedByLaser && !_player.killedByBlob)
+		{
+			StopCoroutine("waitB4Restart");
+			currentAnim = animDef.DeathTimeRight;
+			animSprite.Play("deathBlob");
+			NormalScaleSprite();
+		}
+		if(_character.facingDir == Character.facing.Left && currentAnim!=animDef.DeathTimeLeft && _player.isDead && !_player.killedByLaser && !_player.killedByBlob)
+		{
+			StopCoroutine("waitB4Restart");
+			currentAnim = animDef.DeathTimeLeft;
 			animSprite.Play("deathBlob");
 			InvertSprite();
 		}
@@ -180,12 +225,14 @@ public class PlayerAnims : MonoBehaviour
 	{
 		if(_character.isRight && _character.grounded && currentAnim!=animDef.WalkRight && !_player.pushCrate && !_player.grabCrate)
 		{
+			StopCoroutine("waitB4Restart");
 			currentAnim = animDef.WalkRight;
 			animSprite.Play("run");
 			NormalScaleSprite();
 		}
 		if(_character.isLeft && _character.grounded && currentAnim!=animDef.WalkLeft && !_player.pushCrate && !_player.grabCrate)
 		{
+			StopCoroutine("waitB4Restart");
 			currentAnim = animDef.WalkLeft;
 			animSprite.Play("run");
 			InvertSprite();
@@ -205,12 +252,14 @@ public class PlayerAnims : MonoBehaviour
 //		}
 		if(_character.isRight && _character.grounded && currentAnim!=animDef.PushCrateRight && _player.pushCrate)
 		{
+			StopCoroutine("waitB4Restart");
 			currentAnim = animDef.PushCrateRight;
 			animSprite.Play("pushCrate");
 			NormalScaleSprite();
 		}
 		if(_character.isLeft && _character.grounded && currentAnim!=animDef.PushCrateLeft && _player.pushCrate)
 		{
+			StopCoroutine("waitB4Restart");
 			currentAnim = animDef.PushCrateLeft;
 			animSprite.Play("pushCrate");
 			InvertSprite();
@@ -230,12 +279,14 @@ public class PlayerAnims : MonoBehaviour
 //		}
 		if(_character.isRight && _character.grounded && currentAnim!=animDef.GrabCrateRight && _player.grabCrate)
 		{
+			StopCoroutine("waitB4Restart");
 			currentAnim = animDef.GrabCrateRight;
 			animSprite.Play("grabCrate");
 			NormalScaleSprite();
 		}
 		if(_character.isLeft && _character.grounded && currentAnim!=animDef.GrabCrateLeft && _player.grabCrate)
 		{
+			StopCoroutine("waitB4Restart");
 			currentAnim = animDef.GrabCrateLeft;
 			animSprite.Play("grabCrate");
 			InvertSprite();
@@ -247,14 +298,16 @@ public class PlayerAnims : MonoBehaviour
 	}
 	private void Stand()
 	{	
-		if(!_character.isLeft && _character.grounded == true && currentAnim != animDef.StandLeft && _character.facingDir == Character.facing.Left && animPlaying == false)
+		if(!_character.isCrounch && !_character.isLeft && _character.grounded == true && currentAnim != animDef.StandLeft && _character.facingDir == Character.facing.Left && animPlaying == false)
 		{
+			StopCoroutine("waitB4Restart");
 			currentAnim = animDef.StandLeft;
 			animSprite.Play("stand"); // stand left
 			InvertSprite();
 		}
-		if(!_character.isRight && _character.grounded && currentAnim != animDef.StandRight && _character.facingDir == Character.facing.Right && animPlaying == false)
+		if(!_character.isCrounch && !_character.isRight && _character.grounded && currentAnim != animDef.StandRight && _character.facingDir == Character.facing.Right && animPlaying == false)
 		{
+			StopCoroutine("waitB4Restart");
 			currentAnim = animDef.StandRight;
 			animSprite.Play("stand"); // stand left
 			NormalScaleSprite();
@@ -262,16 +315,44 @@ public class PlayerAnims : MonoBehaviour
 	}
 	private void Crounch()
 	{
-		if (_character.isCrounch == true)
+		if (_character.isCrounch && _character.grounded && currentAnim != animDef.CrounchLeft && currentAnim != animDef.unCrounchLeft && _character.facingDir == Character.facing.Left)
 		{
+			StopCoroutine("waitB4Restart");
+			animSprite.looping = false;
 			currentAnim = animDef.CrounchLeft;
-			animSprite.Play("crounch");
+			animSprite.PlayOnce("sit");
+			InvertSprite();
+		}
+		if (_character.isCrounch && _character.grounded && currentAnim != animDef.CrounchRight && currentAnim != animDef.unCrounchRight && _character.facingDir == Character.facing.Right)
+		{
+			StopCoroutine("waitB4Restart");
+			animSprite.looping = false;
+			currentAnim = animDef.CrounchRight;
+			animSprite.PlayOnce("sit");
+			NormalScaleSprite();
+		}
+		if (_player.unCrouch && _character.grounded && currentAnim != animDef.unCrounchLeft && _character.facingDir == Character.facing.Left)
+		{
+			StopCoroutine("waitB4Restart");
+			animSprite.looping = false;
+			currentAnim = animDef.unCrounchLeft;
+			animSprite.PlayOnceBackward("sit");
+			InvertSprite();
+		}
+		if (_player.unCrouch && _character.grounded && currentAnim != animDef.unCrounchRight && _character.facingDir == Character.facing.Right)
+		{
+			StopCoroutine("waitB4Restart");
+			animSprite.looping = false;
+			currentAnim = animDef.unCrounchRight;
+			animSprite.PlayOnceBackward("sit");
+			NormalScaleSprite();
 		}
 	}
 	private void Jump()
 	{
 		if(!_player.locked && !_player.isDead && _character.grounded == false && currentAnim != animDef.JumpLeft && _character.facingDir == Character.facing.Left)
 		{
+			StopCoroutine("waitB4Restart");
 			animSprite.looping = false;
 			//MasterAudio.StopAllOfSound("player_runL1");
 			currentAnim = animDef.JumpLeft;
@@ -281,6 +362,7 @@ public class PlayerAnims : MonoBehaviour
 		}
 		if(!_player.locked && !_player.isDead && _character.grounded == false && currentAnim != animDef.JumpRight && _character.facingDir == Character.facing.Right)
 		{
+			StopCoroutine("waitB4Restart");
 			animSprite.looping = false;
 			//MasterAudio.StopAllOfSound("player_runL1");
 			currentAnim = animDef.JumpRight;
@@ -336,6 +418,7 @@ public class PlayerAnims : MonoBehaviour
 		//ENEMIES SPECIFIC ANIMS
 		if (_character.isShot == true && _character.facingDir == Character.facing.Left)
 		{
+			StopCoroutine("waitB4Restart");
 			animPlaying = true;
 			animSprite.Play("hurt");
 			StartCoroutine( WaitAndCallback( anim.GetDuration(anim.framesets[2]) ) );
@@ -343,6 +426,7 @@ public class PlayerAnims : MonoBehaviour
 		}
 		if (_character.isShot == true && _character.facingDir == Character.facing.Right)
 		{
+			StopCoroutine("waitB4Restart");
 			animPlaying = true;
 			animSprite.Play("hurt");
 			StartCoroutine( WaitAndCallback( anim.GetDuration(anim.framesets[2]) ) );
@@ -353,6 +437,7 @@ public class PlayerAnims : MonoBehaviour
 	{
 		if (_player.paused == true)
 		{
+			StopCoroutine("waitB4Restart");
 			currentAnim = animDef.None;
 			animSprite.looping = false;
 		}

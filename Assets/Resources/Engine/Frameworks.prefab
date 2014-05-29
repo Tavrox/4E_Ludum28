@@ -3172,6 +3172,38 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &100332
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400332}
+  - 114: {fileID: 11400334}
+  m_Layer: 0
+  m_Name: shieldActivationAnims
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100334
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400334}
+  - 114: {fileID: 11400336}
+  m_Layer: 0
+  m_Name: shieldActivationSheet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -4517,6 +4549,7 @@ Transform:
   - {fileID: 400074}
   - {fileID: 400102}
   - {fileID: 400312}
+  - {fileID: 400334}
   - {fileID: 400010}
   - {fileID: 400188}
   - {fileID: 400136}
@@ -4691,6 +4724,7 @@ Transform:
   - {fileID: 400030}
   - {fileID: 400052}
   - {fileID: 400176}
+  - {fileID: 400332}
   - {fileID: 400002}
   - {fileID: 400178}
   - {fileID: 400134}
@@ -5163,6 +5197,28 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400328}
+--- !u!4 &400332
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100332}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 55.1014633, y: -34.8481903, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400250}
+--- !u!4 &400334
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100334}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 55.1014633, y: -34.8481903, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400222}
 --- !u!82 &8200000
 AudioSource:
   m_ObjectHideFlags: 1
@@ -10528,13 +10584,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: playerAnims
-  _fps: 12.6666698
-  _duration: 6.94736671
+  _fps: 12.5
+  _duration: 6.96000004
   framesets:
   - name: run
     container: {fileID: 11400088}
-    startFrame: 64
-    endFrame: 73
+    startFrame: 54
+    endFrame: 62
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
@@ -10545,15 +10601,15 @@ MonoBehaviour:
     _containerName: playerSheet
   - name: stand
     container: {fileID: 11400088}
-    startFrame: 44
-    endFrame: 48
+    startFrame: 34
+    endFrame: 38
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
     playCount: 1
     pingPong: 0
     singleDuration: 0
-    startIndex: 10
+    startIndex: 9
     _containerName: playerSheet
   - name: teleportIN
     container: {fileID: 11400088}
@@ -10565,7 +10621,7 @@ MonoBehaviour:
     playCount: 1
     pingPong: 0
     singleDuration: 0
-    startIndex: 15
+    startIndex: 14
     _containerName: playerSheet
   - name: teleportOUT
     container: {fileID: 11400088}
@@ -10577,23 +10633,11 @@ MonoBehaviour:
     playCount: 1
     pingPong: 0
     singleDuration: 0
-    startIndex: 39
+    startIndex: 38
     _containerName: playerSheet
   - name: jump
     container: {fileID: 11400088}
-    startFrame: 49
-    endFrame: 53
-    frameNames: []
-    frameNameMask: 
-    sortFrameNames: 0
-    playCount: 1
-    pingPong: 0
-    singleDuration: 0
-    startIndex: 51
-    _containerName: playerSheet
-  - name: deathBlob
-    container: {fileID: 11400088}
-    startFrame: 34
+    startFrame: 39
     endFrame: 43
     frameNames: []
     frameNameMask: 
@@ -10601,7 +10645,19 @@ MonoBehaviour:
     playCount: 1
     pingPong: 0
     singleDuration: 0
-    startIndex: 56
+    startIndex: 50
+    _containerName: playerSheet
+  - name: deathBlob
+    container: {fileID: 11400088}
+    startFrame: 63
+    endFrame: 67
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 55
     _containerName: playerSheet
   - name: grabCrate
     container: {fileID: 11400088}
@@ -10613,19 +10669,19 @@ MonoBehaviour:
     playCount: 1
     pingPong: 0
     singleDuration: 0
-    startIndex: 66
+    startIndex: 60
     _containerName: playerSheet
   - name: pushCrate
     container: {fileID: 11400088}
-    startFrame: 54
-    endFrame: 63
+    startFrame: 44
+    endFrame: 53
     frameNames: []
     frameNameMask: 
     sortFrameNames: 0
     playCount: 1
     pingPong: 0
     singleDuration: 0
-    startIndex: 76
+    startIndex: 70
     _containerName: playerSheet
   - name: fall
     container: {fileID: 11400088}
@@ -10637,7 +10693,31 @@ MonoBehaviour:
     playCount: 1
     pingPong: 0
     singleDuration: 0
-    startIndex: 86
+    startIndex: 80
+    _containerName: playerSheet
+  - name: deathElectric
+    container: {fileID: 11400088}
+    startFrame: 68
+    endFrame: 69
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 82
+    _containerName: playerSheet
+  - name: sit
+    container: {fileID: 11400088}
+    startFrame: 70
+    endFrame: 72
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 84
     _containerName: playerSheet
 --- !u!114 &11400046
 MonoBehaviour:
@@ -11564,281 +11644,274 @@ MonoBehaviour:
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_Ymort0001
+  - name: perso_idle0001
     position: {x: 1580, y: 130}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_Ymort0002
+  - name: perso_idle0002
     position: {x: 1685, y: 130}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_Ymort0003
+  - name: perso_idle0003
     position: {x: 1790, y: 130}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_Ymort0004
+  - name: perso_idle0004
     position: {x: 1895, y: 130}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_Ymort0005
+  - name: perso_idle0005
     position: {x: 5, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_Ymort0006
+  - name: perso_jump0001
     position: {x: 110, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_Ymort0007
+  - name: perso_jump0002
     position: {x: 215, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_Ymort0008
+  - name: perso_jump0003
     position: {x: 320, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_Ymort0009
+  - name: perso_jump0004
     position: {x: 425, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_Ymort0010
+  - name: perso_jump0005
     position: {x: 530, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_idle0001
+  - name: perso_poussecaisse0001
     position: {x: 635, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_idle0002
+  - name: perso_poussecaisse0002
     position: {x: 740, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_idle0003
+  - name: perso_poussecaisse0003
     position: {x: 845, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_idle0004
+  - name: perso_poussecaisse0004
     position: {x: 950, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_idle0005
+  - name: perso_poussecaisse0005
     position: {x: 1055, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_jump0001
+  - name: perso_poussecaisse0006
     position: {x: 1160, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_jump0002
+  - name: perso_poussecaisse0007
     position: {x: 1265, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_jump0003
+  - name: perso_poussecaisse0008
     position: {x: 1370, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_jump0004
+  - name: perso_poussecaisse0009
     position: {x: 1475, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_jump0005
+  - name: perso_poussecaisse0010
     position: {x: 1580, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_poussecaisse0001
+  - name: perso_run0001
     position: {x: 1685, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_poussecaisse0002
+  - name: perso_run0002
     position: {x: 1790, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_poussecaisse0003
+  - name: perso_run0003
     position: {x: 1895, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_poussecaisse0004
+  - name: perso_run0004
     position: {x: 5, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_poussecaisse0005
+  - name: perso_run0005
     position: {x: 110, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_poussecaisse0006
+  - name: perso_run0006
     position: {x: 215, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_poussecaisse0007
+  - name: perso_run0007
     position: {x: 320, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_poussecaisse0008
+  - name: perso_run0008
     position: {x: 425, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_poussecaisse0009
+  - name: perso_run0009
     position: {x: 530, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_poussecaisse0010
+  - name: perso_ymortblob (1)
     position: {x: 635, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0001
+  - name: perso_ymortblob (2)
     position: {x: 740, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0002
+  - name: perso_ymortblob (3)
     position: {x: 845, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0003
+  - name: perso_ymortblob (4)
     position: {x: 950, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0004
+  - name: perso_ymortblob (5)
     position: {x: 1055, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0005
+  - name: perso_zMortElectro0001 (1)
     position: {x: 1160, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
-    size: {x: 100, y: 120}
-    frameSize: {x: 100, y: 120}
+    size: {x: 150, y: 120}
+    frameSize: {x: 150, y: 120}
     metaData: []
-  - name: perso_run0006
-    position: {x: 1265, y: 380}
+  - name: perso_zMortElectro0001 (2)
+    position: {x: 1315, y: 380}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 120}
+    frameSize: {x: 150, y: 120}
+    metaData: []
+  - name: perso_zzidle_Bas0001
+    position: {x: 1470, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0007
-    position: {x: 1370, y: 380}
+  - name: perso_zzidle_Bas0002
+    position: {x: 1575, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0008
-    position: {x: 1475, y: 380}
-    offset: {x: 0, y: 0}
-    rotated: 0
-    size: {x: 100, y: 120}
-    frameSize: {x: 100, y: 120}
-    metaData: []
-  - name: perso_run0009
-    position: {x: 1580, y: 380}
-    offset: {x: 0, y: 0}
-    rotated: 0
-    size: {x: 100, y: 120}
-    frameSize: {x: 100, y: 120}
-    metaData: []
-  - name: perso_run0010
-    position: {x: 1685, y: 380}
+  - name: perso_zzidle_Bas0003
+    position: {x: 1680, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
@@ -11849,8 +11922,8 @@ MonoBehaviour:
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: 296c2c57bc61dcf4987fb2476c391a97, type: 3}
   reloadData: 0
-  bytesDataFile: 36311
-  id: 29
+  bytesDataFile: 35891
+  id: 30
 --- !u!114 &11400090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15402,281 +15475,274 @@ MonoBehaviour:
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_Ymort0001
+  - name: perso_idle0001
     position: {x: 1580, y: 130}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_Ymort0002
+  - name: perso_idle0002
     position: {x: 1685, y: 130}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_Ymort0003
+  - name: perso_idle0003
     position: {x: 1790, y: 130}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_Ymort0004
+  - name: perso_idle0004
     position: {x: 1895, y: 130}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_Ymort0005
+  - name: perso_idle0005
     position: {x: 5, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_Ymort0006
+  - name: perso_jump0001
     position: {x: 110, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_Ymort0007
+  - name: perso_jump0002
     position: {x: 215, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_Ymort0008
+  - name: perso_jump0003
     position: {x: 320, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_Ymort0009
+  - name: perso_jump0004
     position: {x: 425, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_Ymort0010
+  - name: perso_jump0005
     position: {x: 530, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_idle0001
+  - name: perso_poussecaisse0001
     position: {x: 635, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_idle0002
+  - name: perso_poussecaisse0002
     position: {x: 740, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_idle0003
+  - name: perso_poussecaisse0003
     position: {x: 845, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_idle0004
+  - name: perso_poussecaisse0004
     position: {x: 950, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_idle0005
+  - name: perso_poussecaisse0005
     position: {x: 1055, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_jump0001
+  - name: perso_poussecaisse0006
     position: {x: 1160, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_jump0002
+  - name: perso_poussecaisse0007
     position: {x: 1265, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_jump0003
+  - name: perso_poussecaisse0008
     position: {x: 1370, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_jump0004
+  - name: perso_poussecaisse0009
     position: {x: 1475, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_jump0005
+  - name: perso_poussecaisse0010
     position: {x: 1580, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_poussecaisse0001
+  - name: perso_run0001
     position: {x: 1685, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_poussecaisse0002
+  - name: perso_run0002
     position: {x: 1790, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_poussecaisse0003
+  - name: perso_run0003
     position: {x: 1895, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_poussecaisse0004
+  - name: perso_run0004
     position: {x: 5, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_poussecaisse0005
+  - name: perso_run0005
     position: {x: 110, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_poussecaisse0006
+  - name: perso_run0006
     position: {x: 215, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_poussecaisse0007
+  - name: perso_run0007
     position: {x: 320, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_poussecaisse0008
+  - name: perso_run0008
     position: {x: 425, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_poussecaisse0009
+  - name: perso_run0009
     position: {x: 530, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_poussecaisse0010
+  - name: perso_ymortblob (1)
     position: {x: 635, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0001
+  - name: perso_ymortblob (2)
     position: {x: 740, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0002
+  - name: perso_ymortblob (3)
     position: {x: 845, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0003
+  - name: perso_ymortblob (4)
     position: {x: 950, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0004
+  - name: perso_ymortblob (5)
     position: {x: 1055, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0005
+  - name: perso_zMortElectro0001 (1)
     position: {x: 1160, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
-    size: {x: 100, y: 120}
-    frameSize: {x: 100, y: 120}
+    size: {x: 150, y: 120}
+    frameSize: {x: 150, y: 120}
     metaData: []
-  - name: perso_run0006
-    position: {x: 1265, y: 380}
+  - name: perso_zMortElectro0001 (2)
+    position: {x: 1315, y: 380}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 120}
+    frameSize: {x: 150, y: 120}
+    metaData: []
+  - name: perso_zzidle_Bas0001
+    position: {x: 1470, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0007
-    position: {x: 1370, y: 380}
+  - name: perso_zzidle_Bas0002
+    position: {x: 1575, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
     frameSize: {x: 100, y: 120}
     metaData: []
-  - name: perso_run0008
-    position: {x: 1475, y: 380}
-    offset: {x: 0, y: 0}
-    rotated: 0
-    size: {x: 100, y: 120}
-    frameSize: {x: 100, y: 120}
-    metaData: []
-  - name: perso_run0009
-    position: {x: 1580, y: 380}
-    offset: {x: 0, y: 0}
-    rotated: 0
-    size: {x: 100, y: 120}
-    frameSize: {x: 100, y: 120}
-    metaData: []
-  - name: perso_run0010
-    position: {x: 1685, y: 380}
+  - name: perso_zzidle_Bas0003
+    position: {x: 1680, y: 380}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 100, y: 120}
@@ -15687,8 +15753,8 @@ MonoBehaviour:
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: 296c2c57bc61dcf4987fb2476c391a97, type: 3}
   reloadData: 0
-  bytesDataFile: 36311
-  id: 43
+  bytesDataFile: 35891
+  id: 44
 --- !u!114 &11400220
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18374,6 +18440,225 @@ MonoBehaviour:
   fadeInTime: 0
   fadeOutTime: 0
   originalPitch: 0
+--- !u!114 &11400334
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf791b8ec508eb4a94c7295007afe68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: shieldActivationAnims
+  _fps: 12
+  _duration: 2
+  framesets:
+  - name: activate
+    container: {fileID: 11400336}
+    startFrame: 0
+    endFrame: 23
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 0
+    _containerName: shieldActivationSheet
+--- !u!114 &11400336
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd220758bd0b8b4685199267909af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: shieldActivationSheet
+  _sheetSize: {x: 2048, y: 4096}
+  texture: {fileID: 2800000, guid: dff6c41c260bda842b8fd912526031ce, type: 3}
+  sizeTextures: []
+  generateSprites: 0
+  atlasData:
+  - name: "VaisseauAttack\xE90001"
+    position: {x: 0, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 400}
+    frameSize: {x: 500, y: 400}
+    metaData: []
+  - name: "VaisseauAttack\xE90002"
+    position: {x: 500, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 400}
+    frameSize: {x: 500, y: 400}
+    metaData: []
+  - name: "VaisseauAttack\xE90003"
+    position: {x: 1000, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 400}
+    frameSize: {x: 500, y: 400}
+    metaData: []
+  - name: "VaisseauAttack\xE90004"
+    position: {x: 1500, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 400}
+    frameSize: {x: 500, y: 400}
+    metaData: []
+  - name: "VaisseauAttack\xE90005"
+    position: {x: 0, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 400}
+    frameSize: {x: 500, y: 400}
+    metaData: []
+  - name: "VaisseauAttack\xE90006"
+    position: {x: 500, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 400}
+    frameSize: {x: 500, y: 400}
+    metaData: []
+  - name: "VaisseauAttack\xE90007"
+    position: {x: 1000, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 400}
+    frameSize: {x: 500, y: 400}
+    metaData: []
+  - name: "VaisseauAttack\xE90008"
+    position: {x: 1500, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 400}
+    frameSize: {x: 500, y: 400}
+    metaData: []
+  - name: "VaisseauAttack\xE90009"
+    position: {x: 0, y: 800}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 400}
+    frameSize: {x: 500, y: 400}
+    metaData: []
+  - name: "VaisseauAttack\xE90010"
+    position: {x: 500, y: 800}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 400}
+    frameSize: {x: 500, y: 400}
+    metaData: []
+  - name: "VaisseauAttack\xE90011"
+    position: {x: 1000, y: 800}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 400}
+    frameSize: {x: 500, y: 400}
+    metaData: []
+  - name: "VaisseauAttack\xE90012"
+    position: {x: 1500, y: 800}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 400}
+    frameSize: {x: 500, y: 400}
+    metaData: []
+  - name: "VaisseauAttack\xE90013"
+    position: {x: 0, y: 1200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 400}
+    frameSize: {x: 500, y: 400}
+    metaData: []
+  - name: "VaisseauAttack\xE90014"
+    position: {x: 500, y: 1200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 400}
+    frameSize: {x: 500, y: 400}
+    metaData: []
+  - name: "VaisseauAttack\xE90015"
+    position: {x: 1000, y: 1200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 400}
+    frameSize: {x: 500, y: 400}
+    metaData: []
+  - name: "VaisseauAttack\xE90016"
+    position: {x: 1500, y: 1200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 400}
+    frameSize: {x: 500, y: 400}
+    metaData: []
+  - name: "VaisseauAttack\xE90017"
+    position: {x: 0, y: 1600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 400}
+    frameSize: {x: 500, y: 400}
+    metaData: []
+  - name: "VaisseauAttack\xE90018"
+    position: {x: 500, y: 1600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 400}
+    frameSize: {x: 500, y: 400}
+    metaData: []
+  - name: "VaisseauAttack\xE90019"
+    position: {x: 1000, y: 1600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 400}
+    frameSize: {x: 500, y: 400}
+    metaData: []
+  - name: "VaisseauAttack\xE90020"
+    position: {x: 1500, y: 1600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 400}
+    frameSize: {x: 500, y: 400}
+    metaData: []
+  - name: "VaisseauAttack\xE90021"
+    position: {x: 0, y: 2000}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 400}
+    frameSize: {x: 500, y: 400}
+    metaData: []
+  - name: "VaisseauAttack\xE90022"
+    position: {x: 500, y: 2000}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 400}
+    frameSize: {x: 500, y: 400}
+    metaData: []
+  - name: "VaisseauAttack\xE90023"
+    position: {x: 1000, y: 2000}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 400}
+    frameSize: {x: 500, y: 400}
+    metaData: []
+  - name: "VaisseauAttack\xE90024"
+    position: {x: 1500, y: 2000}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 500, y: 400}
+    frameSize: {x: 500, y: 400}
+    metaData: []
+  offsetSizing: 1
+  metaType: 
+  metaData: []
+  _atlasDataFile: {fileID: 4900000, guid: a287a642c7baf0b4fbb5f0f265a5b8e5, type: 3}
+  reloadData: 0
+  bytesDataFile: 12366
+  id: 4
 --- !u!132 &13200000
 GUIText:
   m_ObjectHideFlags: 1

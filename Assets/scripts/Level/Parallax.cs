@@ -21,7 +21,7 @@ public class Parallax : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(!player.isDead) {
+		if(!player.isDead && !player.isCrounch) {
 			scrollVector.x = player.getVectorFixed().x; //Need vectorFixed to be public
 			scrollVector.y = player.getVectorFixed().y;
 			scrollVector.x = scrollVector.x/scrollSpeed;

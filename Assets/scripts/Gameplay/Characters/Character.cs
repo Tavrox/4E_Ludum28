@@ -89,6 +89,7 @@ public class Character : MonoBehaviour
 	public virtual void Awake()
 	{
 		thisTransform = transform;
+
 	}
 	
 	// Use this for initialization
@@ -102,12 +103,12 @@ public class Character : MonoBehaviour
 		
 		spriteScaleX = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.x;
 		spriteScaleY = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.y;
+		
+		InputMan = Instantiate(Resources.Load("Tuning/InputManager")) as InputManager;
+		InputMan.Setup();
 
 		StartCoroutine(StartGravity());
 		spawnPos = mypos = new Vector3(thisTransform.position.x,thisTransform.position.y,thisTransform.position.z);
-
-		InputMan = Instantiate(Resources.Load("Tuning/InputManager")) as InputManager;
-		InputMan.Setup();
 	}
 	
 	IEnumerator StartGravity()

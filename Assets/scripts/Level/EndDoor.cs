@@ -12,6 +12,7 @@ public class EndDoor : MonoBehaviour {
 	private Timer _lvlTimer;
 	public int _nbKeyRequired=3;
 	public List<BatteryLevels> batteriesColor = new List<BatteryLevels>();
+	public OTAnimatingSprite _shieldActivateAnim;
 	//private PlayerData _playerdata;
 	
 	public InputManager InputMan;
@@ -20,6 +21,7 @@ public class EndDoor : MonoBehaviour {
 		_player = GameObject.Find("Player").GetComponent<Player>();
 		_UINeedKey = GameObject.Find("Player/IngameUI/NeedKey").gameObject;
 		_lvlTimer = GameObject.Find("Player/IngameUI/Timer").GetComponent<Timer>();
+		_shieldActivateAnim = GameObject.Find(this.name +"/shieldActivation").GetComponent<OTAnimatingSprite>();
 		//_playerdata = _player.GetComponent<PlayerData>();
 		GameEventManager.NextLevel += NextLevel;
 		GameEventManager.NextInstance += NextInstance;
@@ -44,8 +46,9 @@ public class EndDoor : MonoBehaviour {
 				//sprite.frameIndex += 1;
 				triggered = _player.finishedLevel = true;
 				StartCoroutine("lastFrameBuzzer");
-				//Destroy (_UINeedKey);
+				_shieldActivateAnim.PlayOnce("activate");
 				GameEventManager.TriggerFinishLevel();
+				//Destroy (_UINeedKey);
 				//FinishLevel();
 				MasterAudio.PlaySound("key_door");
 			}
