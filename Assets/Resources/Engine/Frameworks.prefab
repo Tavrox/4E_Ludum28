@@ -1530,7 +1530,7 @@ GameObject:
   - 4: {fileID: 400162}
   - 114: {fileID: 11400174}
   m_Layer: 0
-  m_Name: Container (id=-2749774)
+  m_Name: Container (id=-2749774)IUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14612,7 +14612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acc190f792e38f049ba23d3fe25546c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Container (id=-2749774)
+  _name: Container (id=-2749774)IUI
   _sheetSize: {x: 0, y: 0}
   texture: {fileID: 0}
   sizeTextures: []
