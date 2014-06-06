@@ -11,6 +11,7 @@ public class LevelThumbnail : MonoBehaviour
 	public bool Locked = false;
 	public LevelInfo Info;
 	private TextUI linkedText;
+	public GameSaveLoad _playerDataLoader;
 
 	public void Setup()
 	{
@@ -18,20 +19,20 @@ public class LevelThumbnail : MonoBehaviour
 		animSpr = GetComponentInChildren<OTAnimatingSprite>();
 		animThumb = GetComponentInChildren<ThumbnailAnimations>();
 		animThumb.Setup();
+		_playerDataLoader = ScriptableObject.CreateInstance<GameSaveLoad>();
+		_playerDataLoader.LoadXMLToList("blob_minute-players");
+		Info.locked = (_playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+Info.levelNumName,"locked")=="true")?true:false;
+		
 		linkedText = GetComponentInChildren<TextUI>();
-	}
-
-	void Update()
-	{
 		if (Info.locked == true)
 		{
 			animSpr.animation = animThumb.BtnNoLvl;
-			animSpr.PlayLoop(animThumb.ACTIVATED);
+			//animSpr.PlayLoop("static");
 		}
 		else
 		{
 			animSpr.animation = animThumb.BtnLvl;
-			animSpr.PlayLoop(animThumb.ACTIVATED);
+			//animSpr.PlayLoop("static");
 		}
 	}
 }

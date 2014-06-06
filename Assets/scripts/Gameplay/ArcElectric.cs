@@ -11,6 +11,7 @@ public class ArcElectric : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		animSprite = gameObject.GetComponentInChildren<OTAnimatingSprite>();
 		animSprite.Play("arcDefault");
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
 		activeState = true;
@@ -67,7 +68,7 @@ public class ArcElectric : MonoBehaviour {
 		StopCoroutine("activateInfinite");
 		StopCoroutine("SND_activateThenOff");
 		if(!muted) {MasterAudio.FadeOutAllOfSound("piston_idle",0.43f);
-			FESound.playDistancedSound("piston_off",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_off");
+			if(gameObject.transform!=null && _player.transform!=null) FESound.playDistancedSound("piston_off",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_off");
 		}
 	}
 	public void turnON () {
