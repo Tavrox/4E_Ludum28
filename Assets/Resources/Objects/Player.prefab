@@ -353,7 +353,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.5714264, y: -30.7457733, z: -1}
+  m_LocalPosition: {x: 45, y: -32, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -904,7 +904,7 @@ MonoBehaviour:
   _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
-  _frameIndex: 64
+  _frameIndex: 54
   _frameName: perso_run0001
   _spriteContainer: {fileID: 0}
   _containerName: playerSheet
@@ -993,8 +993,14 @@ MonoBehaviour:
   nbKey: 0
   isDead: 0
   locked: 0
+  isTeleport: 0
+  standing: 0
+  unCrouch: 0
   killedByBlob: 0
+  killedByLaser: 0
   finishedLevel: 0
+  Cam: {fileID: 0}
+  _camPos: {x: 0, y: 0, z: 0}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1015,7 +1021,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100024}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bba1c2b58ee186c40ab5a237eea662e7, type: 3}
   m_Name: 

@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 276.670624, y: -15.0754004, z: -17.6875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -44,11 +44,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf791b8ec508eb4a94c7295007afe68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: teleportAnims
-  _fps: 12.666667
-  _duration: .947368383
+  _name: btnLvl
+  _fps: 9.60000038
+  _duration: .833333313
   framesets:
-  - name: default
+  - name: activated
+    container: {fileID: 0}
+    startFrame: 3
+    endFrame: 6
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 0
+    _containerName: btnLvl
+  - name: static
     container: {fileID: 0}
     startFrame: 0
     endFrame: 3
@@ -58,32 +70,8 @@ MonoBehaviour:
     playCount: 1
     pingPong: 0
     singleDuration: 0
-    startIndex: 0
-    _containerName: teleportContainer
-  - name: teleport
-    container: {fileID: 0}
-    startFrame: 4
-    endFrame: 7
-    frameNames: []
-    frameNameMask: 
-    sortFrameNames: 0
-    playCount: 1
-    pingPong: 0
-    singleDuration: 0
     startIndex: 4
-    _containerName: teleportContainer
-  - name: teleportOUT
-    container: {fileID: 0}
-    startFrame: 8
-    endFrame: 11
-    frameNames: []
-    frameNameMask: 
-    sortFrameNames: 0
-    playCount: 1
-    pingPong: 0
-    singleDuration: 0
-    startIndex: 8
-    _containerName: teleportContainer
+    _containerName: btnLvl
 --- !u!1002 &11400001
 EditorExtensionImpl:
   serializedVersion: 6

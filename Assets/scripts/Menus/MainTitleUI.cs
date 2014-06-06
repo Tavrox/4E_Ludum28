@@ -24,6 +24,7 @@ public class MainTitleUI : MonoBehaviour
 	public GameObject LevelChooser;
 	public GameObject Options;
 	public Camera Cam;
+	public bool lvlSplashed;
 	
 	void Awake () 
 	{

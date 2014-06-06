@@ -10,6 +10,7 @@ public class BaseElectric : MonoBehaviour {
 	public Player _player;
 	// Use this for initialization
 	void Start () {
+		animSprite = gameObject.GetComponentInChildren<OTAnimatingSprite>();
 		animSprite.Play("baseDefault");
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
 		activeState = true;
@@ -64,7 +65,7 @@ public class BaseElectric : MonoBehaviour {
 		StopCoroutine("waitB4Active");
 		StopCoroutine("activateInfinite");
 		StopCoroutine("SND_activateThenOff");
-		if(!muted) {FESound.playDistancedSound("piston_idle",gameObject.transform, _player.transform,0f,"fade",0.43f);//MasterAudio.FadeOutAllOfSound("piston_idle",0.43f);
+		if(!muted && gameObject.transform!=null && _player.transform!=null) {FESound.playDistancedSound("piston_idle",gameObject.transform, _player.transform,0f,"fade",0.43f);//MasterAudio.FadeOutAllOfSound("piston_idle",0.43f);
 			FESound.playDistancedSound("piston_off",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_off");
 		}
 	}
