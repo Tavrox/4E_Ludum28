@@ -32,9 +32,9 @@ public class Timer : MonoBehaviour {
 		GameEventManager.GamePause += GamePause;
 		GameEventManager.GameUnpause += GameUnpause;
 		GameEventManager.FinishLevel += FinishLevel;
-		if(FETool.Round(((float) Screen.width/(float) Screen.height),1)!=1.3) {
-			posX = posY = 30;
-		}
+//		if(FETool.Round(((float) Screen.width/(float) Screen.height),1)!=1.3) {
+//			posX = posY = 30;
+//		}
 	}
 	//transform.renderer.material.color.a
 	private void updateTimer()

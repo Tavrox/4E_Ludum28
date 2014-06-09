@@ -11,6 +11,8 @@ public class Key : MonoBehaviour {
 	public OTAnimatingSprite _KeySprite;
 	public EndDoor _myEndDoor;
 	private int _nbKeyRequired;
+	private Camera _camera;
+	private HUDLevels _myHUDTarget;
 
 	[ContextMenu ("Setup Frame")]
 	private void setFrame()
@@ -29,7 +31,9 @@ public class Key : MonoBehaviour {
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.NextInstance += NextInstance;
 		GameEventManager.GameOver += GameOver;
-
+		
+		_myHUDTarget = GameObject.Find("HUDLevels").GetComponent<HUDLevels>();
+		_camera = GameObject.Find("Main Camera").GetComponent<Camera>();
 		_levelM = GameObject.FindObjectOfType<LevelManager>();
 		_KeySprite = gameObject.GetComponentInChildren<OTAnimatingSprite>();
 		//_KeySprite.frameIndex = _levelM.chosenVariation+4+25;
@@ -75,7 +79,8 @@ public class Key : MonoBehaviour {
 //			
 //			GameObject StargatePlace = GameObject.FindGameObjectWithTag("SpaceGate");
 			new OTTween(gameObject.transform, 1f, OTEasing.BackOut).Tween("localScale", new Vector3(1.5f, 1.5f, 1f)).PingPong();
-			new OTTween(gameObject.transform, 1f, OTEasing.CircInOut).Tween("localPosition", new Vector3(-11f+_player.nbKey-(0.3f*_player.nbKey),4f,gameObject.transform.position.z));
+//			new OTTween(gameObject.transform, 1f, OTEasing.CircInOut).Tween("localPosition", new Vector3(_player.nbKey-(0.3f*_player.nbKey),4f,gameObject.transform.position.z));
+			new OTTween(gameObject.transform, 1f, OTEasing.CircInOut).Tween("localPosition", new Vector3(_myHUDTarget.transform.localPosition.x-2f+_player.nbKey-(0.35f*_player.nbKey), _myHUDTarget.transform.localPosition.y-1.4f,gameObject.transform.position.z));
 			StartCoroutine("waitB4rescale");
 			_myEndDoor.nextState();
 			if(_player.nbKey>=_nbKeyRequired) {
