@@ -4,70 +4,83 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>Camera_02.png</key>
+            <key>occ1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,0},{300,205}}</string>
+                <string>{{0,0},{350,255}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{300,205}}</string>
+                <string>{{0,0},{350,255}}</string>
                 <key>sourceSize</key>
-                <string>{300,205}</string>
+                <string>{350,255}</string>
             </dict>
-            <key>Camera_04.png</key>
+            <key>occ2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{300,0},{300,205}}</string>
+                <string>{{350,0},{350,255}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{300,205}}</string>
+                <string>{{0,0},{350,255}}</string>
                 <key>sourceSize</key>
-                <string>{300,205}</string>
+                <string>{350,255}</string>
             </dict>
-            <key>Camera_06.png</key>
+            <key>occ3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{600,0},{301,205}}</string>
+                <string>{{0,255},{350,255}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{301,205}}</string>
+                <string>{{0,0},{350,255}}</string>
                 <key>sourceSize</key>
-                <string>{301,205}</string>
+                <string>{350,255}</string>
             </dict>
-            <key>Camera_11.png</key>
+            <key>occ4.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,205},{300,205}}</string>
+                <string>{{350,255},{350,255}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{300,205}}</string>
+                <string>{{0,0},{350,255}}</string>
                 <key>sourceSize</key>
-                <string>{300,205}</string>
+                <string>{350,255}</string>
             </dict>
-            <key>Camera_12.png</key>
+            <key>occ5.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{300,205},{301,205}}</string>
+                <string>{{0,510},{350,255}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{301,205}}</string>
+                <string>{{0,0},{350,255}}</string>
                 <key>sourceSize</key>
-                <string>{301,205}</string>
+                <string>{350,255}</string>
+            </dict>
+            <key>occ6.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{350,510},{350,255}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{350,255}}</string>
+                <key>sourceSize</key>
+                <string>{350,255}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -77,9 +90,9 @@
             <key>realTextureFileName</key>
             <string>HUDLevels.png</string>
             <key>size</key>
-            <string>{1024,512}</string>
+            <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:afe9c1d7cd154f31936545630c294420:8284f83751d955a9d04611be69dff577:f22b502dc906ef7152b7a2bcfcfb8989$</string>
+            <string>$TexturePacker:SmartUpdate:a9770b07da80f54067a69b520111ce82:1/1$</string>
             <key>textureFileName</key>
             <string>HUDLevels.png</string>
         </dict>

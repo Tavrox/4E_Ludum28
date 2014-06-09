@@ -70,7 +70,11 @@ public class Key : MonoBehaviour {
 			gameObject.transform.parent = _playerUI;
 			MasterAudio.PlaySound("key_collecting");
 			_player.nbKey++;
-			transform.localPosition = new Vector3(-11f,5f-_player.nbKey,0f);
+//			transform.localPosition = new Vector3(-11f,5f-_player.nbKey,0f);
+//			
+//					GameObject StargatePlace = GameObject.FindGameObjectWithTag("SpaceGate");
+					new OTTween(gameObject.transform, 1f, OTEasing.BackOut).Tween("localScale", new Vector3(1.5f, 1.5f, 1f)).PingPong();
+					new OTTween(gameObject.transform, 1f, OTEasing.CircInOut).Tween("localPosition", new Vector3(-11f,5f-_player.nbKey,gameObject.transform.position.z));
 			_myEndDoor.nextState();
 			if(_player.nbKey>=_nbKeyRequired) {
 				_myEndDoor.activeStateReached();

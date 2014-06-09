@@ -241,10 +241,12 @@ public class LevelManager : MonoBehaviour {
 	public void TranslateAllInScene()
 	{
 		print ("translateScene");
-		_pdata.trans();
-		_pdata.SETUP.TextSheet.SetupTranslation(_pdata.SETUP.ChosenLanguage);
-		TextUI[] allTxt = GameObject.FindObjectsOfType(typeof(TextUI)) as TextUI[];
-		_pdata.SETUP.TextSheet.TranslateAll(ref allTxt);
+		if(_pdata!=null) {
+			_pdata.trans();
+			_pdata.SETUP.TextSheet.SetupTranslation(_pdata.SETUP.ChosenLanguage);
+			TextUI[] allTxt = GameObject.FindObjectsOfType(typeof(TextUI)) as TextUI[];
+			_pdata.SETUP.TextSheet.TranslateAll(ref allTxt);
+		}
 	}
 
 	private void launchScene()
