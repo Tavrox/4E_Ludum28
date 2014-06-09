@@ -68,7 +68,7 @@ public class Player : Character {
 	{
 		unCrouch = false;
 		//_mainCam.transform.position = new Vector3(FETool.Round(thisTransform.position.x,2),FETool.Round(thisTransform.position.y,2),0f);
-		if (!Input.GetKey(InputMan.Down) && !Input.GetKey(InputMan.Down2) && !isTeleport && standing)
+		if (!Input.GetKey(InputMan.Down) && !Input.GetKey(InputMan.Down2) && !isTeleport && standing && !locked)
 		{
 			standing = false;
 			unCrouch = true;

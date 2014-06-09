@@ -14,6 +14,7 @@
 <entry id='	0-5_SMALL_JUMP	'>	<english>	Just a small jump	</english>	<french>	Juste un petit saut	</french>	<info>	19	21	</info>	</entry>
 <entry id='	0-5_BLOB_IS_COMING	'>	<english>	Blob is coming  !	</english>	<french>	Le Blob arrive maintenant !	</french>	<info>	19	29	</info>	</entry>
 <entry id='	0-5_WARNING	'>	<english>	WARNING	</english>	<french>	ATTENTION !	</french>	<info>	7	11	</info>	</entry>
+<entry id='	1-1_TUTO	'>	<english>	Alert !/nBlobs have/ninvaded the ship !/nYou have 1 minute/nto find at least/n3 keys to activate/nthe shield generator !	</english>	<french>	Alerte !/nLes Blobs ont envahi le vaisseau !/nTu as 1 minutes pour trouver au moins/n3 clés pour activer le générateur de bouclier !	</french>	<info>	117	135	</info>	</entry>
 <entry id='	1-1_GG	'>	<english>	GG !	</english>	<french>	GG !	</french>	<info>	4	4	</info>	</entry>
 <entry id='	1-2_BLOB	'>	<english>	Bloooob !	</english>	<french>	Bloooob !	</french>	<info>	9	9	</info>	</entry>
 <entry id='	1-3_SEQ312	'>	<english>	3 -> 1 -> 2	</english>	<french>	3 -> 1 -> 2	</french>	<info>	11	11	</info>	</entry>

@@ -19,6 +19,7 @@ public class LevelManager : MonoBehaviour {
 	private Vector3 spawnPoint;
 	private PartyData _partyData;
 	public GameSaveLoad _playerDataLoader;
+	public Transform _bulleTuto;
 
 	void Awake()
 	{
@@ -77,6 +78,9 @@ public class LevelManager : MonoBehaviour {
 		playLevelMusic();
 		_playerDataLoader = ScriptableObject.CreateInstance<GameSaveLoad>();
 		_playerDataLoader.LoadXMLToList("blob_minute-players");
+		if(_realID==1 && chosenVariation==1 && _bulleTuto!=null) {
+			_bulleTuto.gameObject.SetActive(true);
+		}
 	}
 	
 	// Update is called once per frame

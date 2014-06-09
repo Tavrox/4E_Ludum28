@@ -59,6 +59,7 @@ public class Key : MonoBehaviour {
 			if(_levelM.isBoss == true) _KeySprite.frameIndex = 29;
 			gameObject.transform.parent = _myGameParent;
 			transform.localPosition = myPosINI;
+			transform.localScale = _myScale;
 			//GetComponentInChildren<OTSprite>().renderer.enabled = true;
 			_player.hasFinalKey = false;
 		}
@@ -72,9 +73,10 @@ public class Key : MonoBehaviour {
 			_player.nbKey++;
 //			transform.localPosition = new Vector3(-11f,5f-_player.nbKey,0f);
 //			
-//					GameObject StargatePlace = GameObject.FindGameObjectWithTag("SpaceGate");
-					new OTTween(gameObject.transform, 1f, OTEasing.BackOut).Tween("localScale", new Vector3(1.5f, 1.5f, 1f)).PingPong();
-					new OTTween(gameObject.transform, 1f, OTEasing.CircInOut).Tween("localPosition", new Vector3(-11f,5f-_player.nbKey,gameObject.transform.position.z));
+//			GameObject StargatePlace = GameObject.FindGameObjectWithTag("SpaceGate");
+			new OTTween(gameObject.transform, 1f, OTEasing.BackOut).Tween("localScale", new Vector3(1.5f, 1.5f, 1f)).PingPong();
+			new OTTween(gameObject.transform, 1f, OTEasing.CircInOut).Tween("localPosition", new Vector3(-11f+_player.nbKey-(0.3f*_player.nbKey),4f,gameObject.transform.position.z));
+			StartCoroutine("waitB4rescale");
 			_myEndDoor.nextState();
 			if(_player.nbKey>=_nbKeyRequired) {
 				_myEndDoor.activeStateReached();
@@ -82,5 +84,9 @@ public class Key : MonoBehaviour {
 			//GetComponentInChildren<OTSprite>().renderer.enabled = false;
 		}
 
+	}
+	IEnumerator waitB4rescale () {
+		yield return new WaitForSeconds(1.005f);
+		new OTTween(gameObject.transform, .5f, OTEasing.Linear).Tween("localScale", new Vector3(0.65f,0.65f, 1f));
 	}
 }

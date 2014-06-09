@@ -17527,53 +17527,60 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: HUDLevels
-  _sheetSize: {x: 1024, y: 512}
+  _sheetSize: {x: 1024, y: 1024}
   texture: {fileID: 2800000, guid: 2fc676781c9fe6b4ca6286caad1f7cbd, type: 3}
   sizeTextures: []
   generateSprites: 0
   atlasData:
-  - name: Camera_02
+  - name: occ1
     position: {x: 0, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
-    size: {x: 300, y: 205}
-    frameSize: {x: 300, y: 205}
+    size: {x: 350, y: 255}
+    frameSize: {x: 350, y: 255}
     metaData: []
-  - name: Camera_04
-    position: {x: 300, y: 0}
+  - name: occ2
+    position: {x: 350, y: 0}
     offset: {x: 0, y: 0}
     rotated: 0
-    size: {x: 300, y: 205}
-    frameSize: {x: 300, y: 205}
+    size: {x: 350, y: 255}
+    frameSize: {x: 350, y: 255}
     metaData: []
-  - name: Camera_06
-    position: {x: 600, y: 0}
+  - name: occ3
+    position: {x: 0, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
-    size: {x: 301, y: 205}
-    frameSize: {x: 301, y: 205}
+    size: {x: 350, y: 255}
+    frameSize: {x: 350, y: 255}
     metaData: []
-  - name: Camera_11
-    position: {x: 0, y: 205}
+  - name: occ4
+    position: {x: 350, y: 255}
     offset: {x: 0, y: 0}
     rotated: 0
-    size: {x: 300, y: 205}
-    frameSize: {x: 300, y: 205}
+    size: {x: 350, y: 255}
+    frameSize: {x: 350, y: 255}
     metaData: []
-  - name: Camera_12
-    position: {x: 300, y: 205}
+  - name: occ5
+    position: {x: 0, y: 510}
     offset: {x: 0, y: 0}
     rotated: 0
-    size: {x: 301, y: 205}
-    frameSize: {x: 301, y: 205}
+    size: {x: 350, y: 255}
+    frameSize: {x: 350, y: 255}
+    metaData: []
+  - name: occ6
+    position: {x: 350, y: 510}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 350, y: 255}
+    frameSize: {x: 350, y: 255}
     metaData: []
   offsetSizing: 1
   metaType: 
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: 07c012495d6d7014fae5acbf94551b14, type: 3}
   reloadData: 0
-  bytesDataFile: 3248
-  id: 6
+  bytesDataFile: 3542
+  id: 7
 --- !u!114 &11400300
 MonoBehaviour:
   m_ObjectHideFlags: 1
