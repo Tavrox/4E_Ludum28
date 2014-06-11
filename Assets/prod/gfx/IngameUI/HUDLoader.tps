@@ -228,6 +228,9 @@
             <filename>UInew/swatch2_30.png</filename>
             <filename>UInew/swatch2_31.png</filename>
             <filename>zbg_swatch.psd</filename>
+            <filename>UInew/zrotate_00.png</filename>
+            <filename>UInew/zrotate_01.png</filename>
+            <filename>UInew/zrotate_03.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

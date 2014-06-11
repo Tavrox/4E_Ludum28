@@ -20,10 +20,12 @@ public class Timer : MonoBehaviour {
 	private Camera _camera;
 	private Vector3 _HUDLevelsPosition;
 	private TextMesh _txtTimer;
+	public OTAnimatingSprite _clock, _minute;
 
 
 	// Use this for initialization
 	void Start () {
+		
 		pauseTimer = true;
 		lockTimerStart = true;
 		_player = GameObject.Find("Player").GetComponent<Player>();
@@ -39,6 +41,7 @@ public class Timer : MonoBehaviour {
 		GameEventManager.GamePause += GamePause;
 		GameEventManager.GameUnpause += GameUnpause;
 		GameEventManager.FinishLevel += FinishLevel;
+		_minute.frameIndex = 65;_clock.frameIndex=64;
 //		if(FETool.Round(((float) Screen.width/(float) Screen.height),1)!=1.3) {
 //			posX = posY = 30;
 //		}
@@ -88,6 +91,8 @@ public class Timer : MonoBehaviour {
 			}
 			_player._scorePlayer= System.Convert.ToInt32(System.Convert.ToDouble(secLeft.ToString()+"."+microSecLeft.ToString())*_player._COEFF_TEMPS + _player.nbKey*_player._COEFF_BATTERY);
 			_txtTimer.text = ((secLeft<10)?"0"+secLeft.ToString():secLeft.ToString()) + " " + ((microSecLeft<10)?"0"+microSecLeft.ToString():microSecLeft.ToString());
+			_minute.rotation = 360 + (30 * secLeft/5);// 1 Tour = 1 minute
+			_clock.rotation -= 3.63636363f;//1 Tour = 1 Seconde
 			//_txtTimer.gameObject.transform.position = _camera.ScreenToWorldPoint(new Vector3(Screen.width*0.1f, Screen.height - (Screen.height*0.09f), _camera.nearClipPlane));
 			//print(_player._scorePlayer);
 		}
@@ -115,6 +120,8 @@ public class Timer : MonoBehaviour {
 			triggeredEnd = false;
 			resetTimer();
 			_txtTimer.text = "59 99";
+			_minute.rotation = 0;
+			_clock.rotation = 0;
 			_txtTimer.color = _colSafe;
 			alertColor.a = 0f;_alertMask.renderer.material.color = alertColor;
 			InvokeRepeating("updateTimer", 0, 0.01f);
