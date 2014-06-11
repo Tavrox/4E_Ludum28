@@ -32,6 +32,8 @@ public class CharacterAnims : MonoBehaviour
 	{
 		_character 	= GetComponent<Character>();
 		_player 	= GetComponent<Player>();
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
 	}
 	void Update() 
 	{
@@ -172,5 +174,13 @@ public class CharacterAnims : MonoBehaviour
 	{
 	    yield return new WaitForSeconds(waitTime);
 	    AnimationFinished();
+	}
+	void GamePause()
+	{
+		
+	}
+	void GameUnpause()
+	{
+		
 	}
 }

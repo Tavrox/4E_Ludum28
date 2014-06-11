@@ -4,7 +4,7 @@ using System.Collections;
 public class FETool : MonoBehaviour {
 
 	public static BMTuning TuningDoc;
-
+	
 	public static BMTuning setupDoc()
 	{
 		TuningDoc = Instantiate(Resources.Load("Tuning/Global")) as BMTuning;
@@ -114,7 +114,6 @@ public class FETool : MonoBehaviour {
 		float mult = Mathf.Round(value*4)/4f;
 		return mult;
 	}
-
 
 
 }

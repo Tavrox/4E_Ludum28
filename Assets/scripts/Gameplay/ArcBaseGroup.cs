@@ -11,6 +11,8 @@ public class ArcBaseGroup : MonoBehaviour {
 	void Start () {
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GameOver += GameOver;
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
 		collider.enabled = false;
 		StartCoroutine("waitB4Restart");
 	}
@@ -49,7 +51,19 @@ public class ArcBaseGroup : MonoBehaviour {
 	}
 	IEnumerator waitB4Restart() {
 		yield return new WaitForSeconds(1f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		collider.enabled = true;
 		//active = true;
+	}
+	void GamePause()
+	{
+		
+	}
+	void GameUnpause()
+	{
+		
 	}
 }

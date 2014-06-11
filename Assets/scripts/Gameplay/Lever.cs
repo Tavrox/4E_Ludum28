@@ -36,6 +36,8 @@ public class Lever : MonoBehaviour {
 		if(myButtonType == btnType.TimedBtn) { animSprite.frameIndex=8;animSprite.Play("timedlock");}
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
 		GameEventManager.GameStart += GameStart;
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
 		InputMan = Instantiate(Resources.Load("Tuning/InputManager")) as InputManager;
 		InputMan.Setup();
 	}
@@ -55,10 +57,18 @@ public class Lever : MonoBehaviour {
 		_myRemainingTime -= 1;
 		_myTimer.text = _myRemainingTime.ToString();
 		yield return new WaitForSeconds(1f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		StartCoroutine("leverTimer");
 	}
 	private IEnumerator waitB4Restart (float delayRestart) {
 		yield return new WaitForSeconds(delayRestart);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		//animSprite.Play(animSprite.frameIndex+1);
 		animSprite.frameIndex = animSprite.frameIndex+1;
 		//animSprite.Stop();
@@ -118,10 +128,18 @@ public class Lever : MonoBehaviour {
 	}
 	IEnumerator delayReactivate() {
 		yield return new WaitForSeconds(0.2f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		collider.enabled=true;
 	}
 	IEnumerator delayRetrigg() {
 		yield return new WaitForSeconds(delay);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		triggerLever();
 		trigged = false;
 		_myRemainingTime = delay;
@@ -141,6 +159,10 @@ public class Lever : MonoBehaviour {
 	}
 	public IEnumerator resetLever () {
 		yield return new WaitForSeconds(1f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		seqLocked = false;
 		trigged = false;
 		if(myButtonType == btnType.TimedBtn) animSprite.Play("timedlock"); else if(myButtonType == btnType.SequenceBtn) {if(animSprite.frameIndex==7)_myTimer.transform.localPosition= new Vector3(-0.1669464f,0.6263504f,-0.5f); animSprite.Play("lockSeq");} else animSprite.Play("lock");
@@ -165,5 +187,13 @@ public class Lever : MonoBehaviour {
 			else animSprite.Play("lock");
 			stopped = trigged = seqLocked = false;
 		}
+	}
+	void GamePause()
+	{
+		
+	}
+	void GameUnpause()
+	{
+		
 	}
 }

@@ -15,7 +15,7 @@ public class DialogSheet : ScriptableObject {
 	{
 		currLanguage = _lang;
 		translated_texts = fillDicoText(currLanguage);
-		Debug.Log (translated_texts +""+_lang);
+//		Debug.Log (translated_texts +""+_lang);
 	}
 	public string TranslateSingle(TextUI _txt)
 	{

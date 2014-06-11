@@ -25,6 +25,8 @@ public class EndDoor : MonoBehaviour {
 		_shieldActivateAnim = GameObject.Find(this.name +"/shieldActivation").GetComponent<OTAnimatingSprite>();
 		_shieldActivateAnim.gameObject.name = "shieldActivation"+Random.Range(0,20).ToString();//}
 		//_playerdata = _player.GetComponent<PlayerData>();
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
 		GameEventManager.NextLevel += NextLevel;
 		GameEventManager.NextInstance += NextInstance;
 		GameEventManager.FinishLevel += FinishLevel;
@@ -41,7 +43,7 @@ public class EndDoor : MonoBehaviour {
 	}
 	void OnTriggerStay(Collider other)
 	{
-		if (other.gameObject.CompareTag("Player") && !triggered)
+		if (other.gameObject.CompareTag("Player") && !triggered && !GameEventManager.gamePaused)
 		{
 			if ((Input.GetKeyDown(InputMan.Action) || Input.GetKeyDown(InputMan.Action2) || Input.GetKey(InputMan.Action3)) && _player.hasFinalKey == true)
 			{
@@ -63,6 +65,10 @@ public class EndDoor : MonoBehaviour {
 	}
 	private IEnumerator lastFrameBuzzer () {
 		yield return new WaitForSeconds(1f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		//sprite.frameIndex += 1;
 	}
 	private void FinishLevel() {
@@ -91,6 +97,10 @@ public class EndDoor : MonoBehaviour {
 	IEnumerator EndGame()
 	{
 		yield return new WaitForSeconds(3f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		MasterAudio.StopAllOfSound("bg");
 		MasterAudio.StopAllOfSound("intro");
 		//MasterAudio.StopAllOfSound("tuto");
@@ -110,5 +120,13 @@ public class EndDoor : MonoBehaviour {
 	}
 	private void NextLevel ()
 	{
+	}
+	void GamePause()
+	{
+		
+	}
+	void GameUnpause()
+	{
+		
 	}
 }

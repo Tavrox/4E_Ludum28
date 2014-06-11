@@ -118,7 +118,7 @@ public class GameSaveLoad: ScriptableObject {
 	{ 
 		StreamWriter writer; 
 		FileInfo t = new FileInfo(FileLocation+"/Resources"+"\\"+ FileName+".xml"); 
-		Debug.Log(FileLocation+"/Resources"+"\\"+ FileName+".xml");
+//		Debug.Log(FileLocation+"/Resources"+"\\"+ FileName+".xml");
 		if(!t.Exists) 
 		{ 
 			writer = t.CreateText(); 
@@ -189,7 +189,7 @@ public class GameSaveLoad: ScriptableObject {
 		//tempDoc = new XmlDocument();
 		//searchResult = "-1";
 		_xmlNodeSearch = doc.SelectNodes(xmlPath);
-		Debug.Log(_xmlNodeSearch[0].OuterXml);
+//		Debug.Log(_xmlNodeSearch[0].OuterXml);
 		foreach (XmlAttribute attr in _xmlNodeSearch[0].Attributes)
 		{
 			if(attr.Name == attributeName) {

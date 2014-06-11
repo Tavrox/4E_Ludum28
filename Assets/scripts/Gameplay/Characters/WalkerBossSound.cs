@@ -7,6 +7,8 @@ public class WalkerBossSound : MonoBehaviour {
 	void Start () {
 		InvokeRepeating("bossMoaning",0f,10f);
 		GameEventManager.GameStart += GameStart;
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
 	}
 	
 	private void bossMoaning()
@@ -23,5 +25,13 @@ public class WalkerBossSound : MonoBehaviour {
 		if(this != null && gameObject.activeInHierarchy) {
 			//InvokeRepeating("bossMoaning",0f,15f);
 		}
+	}
+	void GamePause()
+	{
+		
+	}
+	void GameUnpause()
+	{
+		
 	}
 }

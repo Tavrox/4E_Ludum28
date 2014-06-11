@@ -72,6 +72,16 @@
 <entry id='	MUSIC_LABEL	'>	<english>	Music	</english>	<french>	Musique	</french>	<info>	5	7	</info>	</entry>
 <entry id='	MUSIC_CONT	'>	<english>	Stéphane Damo	</english>	<french>	Stéphane Damo	</french>	<info>	13	13	</info>	</entry>
 <entry id='	VERSION_LABEL	'>	<english>	Alpha/nV1.4	</english>	<french>	Aplha/nV1.4	</french>	<info>	11	11	</info>	</entry>
+<entry id='	PAUSE_0	'>	<english>	Pause	</english>	<french>	Pause	</french>	<info>	5	5	</info>	</entry>
+<entry id='	PAUSE_1	'>	<english>	Resume	</english>	<french>	Reprendre	</french>	<info>	6	9	</info>	</entry>
+<entry id='	PAUSE_2	'>	<english>	---WIP---	</english>	<french>	---WIP---	</french>	<info>	4	11	</info>	</entry>
+<entry id='	PAUSE_2-1	'>	<english>	Score Saved	</english>	<french>	Score Sauvegardé	</french>	<info>	11	17	</info>	</entry>
+<entry id='	PAUSE_3	'>	<english>	Main Menu	</english>	<french>	Menu Principal	</french>	<info>	9	14	</info>	</entry>
+<entry id='	PAUSE_3-1	'>	<english>	Do you really want to go the Main Menu ?/nYour progression in this occurence/nwill be lost.	</english>	<french>	Voulez-vous vraiment aller au Menu Principal ?/nVotre progression dans cette occurence/nsera perdue.	</french>	<info>	91	100	</info>	</entry>
+<entry id='	PAUSE_4	'>	<english>	Exit Game	</english>	<french>	Quitter le jeu	</french>	<info>	9	14	</info>	</entry>
+<entry id='	PAUSE_4-1	'>	<english>	Do you really want to exit the game ?/nYour progression in this occurence/nwill be lost.	</english>	<french>	Voulez-vous vraiment quitter le jeu ?/nVotre progression dans cette occurence/nsera perdue.	</french>	<info>	88	91	</info>	</entry>
+<entry id='	YES	'>	<english>	Yes	</english>	<french>	Oui	</french>	<info>	3	3	</info>	</entry>
+<entry id='	NO	'>	<english>	No	</english>	<french>	Non	</french>	<info>	2	3	</info>	</entry>
 <entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
 <entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
 <entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>

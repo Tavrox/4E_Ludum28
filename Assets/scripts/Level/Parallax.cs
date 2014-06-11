@@ -17,11 +17,13 @@ public class Parallax : MonoBehaviour {
 		thisTransform = transform;
 		posIni = gameObject.transform.position;
 		GameEventManager.GameStart += GameStart;
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(!player.isDead && !player.isCrounch) {
+		if(!player.isDead && !player.isCrounch && !GameEventManager.gamePaused) {
 			scrollVector.x = player.getVectorFixed().x; //Need vectorFixed to be public
 			scrollVector.y = player.getVectorFixed().y;
 			scrollVector.x = scrollVector.x/scrollSpeed;
@@ -34,5 +36,13 @@ public class Parallax : MonoBehaviour {
 		if(this != null && gameObject.activeInHierarchy) {
 			transform.position = posIni;
 		}
+	}
+	void GamePause()
+	{
+		
+	}
+	void GameUnpause()
+	{
+		
 	}
 }

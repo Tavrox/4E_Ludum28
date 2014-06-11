@@ -47,6 +47,10 @@ public class TextUI : MonoBehaviour {
 	}
 	private IEnumerator launchScroll() {
 		yield return new WaitForSeconds(0.5f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		if(lettersToDisplay>text.Length) lettersToDisplay=text.Length;
 		_mesh.text = displayedText = text;
 		if(!noScrollMessage) InvokeRepeating("scrollText",0,scrollSpeed);

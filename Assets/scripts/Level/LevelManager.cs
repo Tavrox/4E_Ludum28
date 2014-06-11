@@ -12,7 +12,7 @@ public class LevelManager : MonoBehaviour {
 	public bool isBoss;
 	public static BMTuning TuningDocument;
 
-	private int _secLeft;
+	private int _secLeft, _scoreTotalLvl;
 	private TileImporter _tileImporter;
 	private PlayerData _pdata;
 	private string _rand;
@@ -103,7 +103,9 @@ public class LevelManager : MonoBehaviour {
 	{
 		if(this != null) {
 		if(chosenVariation<5 && !isBoss) { //Si occurence 1 à 4
-			_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"score","123456", false);
+//			print (scoreTotalLevel(_realID));
+			_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"score",player._scorePlayer.ToString(), false);
+				print (scoreTotalLevel(_realID));
 			chosenVariation += 1; //On affiche l'occurence suivante
 			foreach (Transform _gameo in GameObject.Find("Level/ObjectImporter").transform)
 			{
@@ -117,26 +119,38 @@ public class LevelManager : MonoBehaviour {
 			}
 			if(player.gameObject != null) {player.transform.position = player.spawnPos = GameObject.Find("playerspawn"+chosenVariation).transform.position;
 				player.enabled=true;}
+			_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString(),"score",scoreTotalLevel(_realID).ToString(), false);
 			_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"locked","false", true);
 			TranslateAllInScene();
 			GameEventManager.TriggerGameStart();
 		}
 		else {
 			//chosenVariation = 0;
-			if(isBoss) {
-					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occBoss","score","123456", false);
+			if(isBoss) { //occurence Boss
+					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occBoss","score",player._scorePlayer.ToString(), false);
+					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString(),"score",scoreTotalLevel(_realID).ToString(), false);
 					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+(_realID+1).ToString(),"locked","false", false);
-					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+(_realID+1).ToString()+"/occ1","locked","false");
+					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+(_realID+1).ToString()+"/occ1","locked","false", true);
 			}
-			else {
-					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"score","123456", false);
-					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occBoss","locked","false");
+			else { //occurence 5
+					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"score",player._scorePlayer.ToString(), false);
+					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString(),"score",scoreTotalLevel(_realID).ToString(), false);
+					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occBoss","locked","false", true);
 			}
 			GameEventManager.TriggerNextLevel();
 			GameEventManager.NextInstance -= NextInstance;
 			DestroyImmediate(this.gameObject);
 		}
 		}
+	}
+	private int scoreTotalLevel(int numLevel) {
+		_scoreTotalLvl = System.Convert.ToInt32(_playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+numLevel.ToString()+"/occ1","score"));
+		_scoreTotalLvl += System.Convert.ToInt32(_playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+numLevel.ToString()+"/occ2","score"));
+		_scoreTotalLvl += System.Convert.ToInt32(_playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+numLevel.ToString()+"/occ3","score"));
+		_scoreTotalLvl += System.Convert.ToInt32(_playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+numLevel.ToString()+"/occ4","score"));
+		_scoreTotalLvl += System.Convert.ToInt32(_playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+numLevel.ToString()+"/occ5","score"));
+		_scoreTotalLvl += System.Convert.ToInt32(_playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+numLevel.ToString()+"/occBoss","score"));
+		return _scoreTotalLvl;
 	}
 	private void NextLevel ()
 	{		

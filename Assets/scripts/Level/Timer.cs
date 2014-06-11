@@ -7,26 +7,33 @@ public class Timer : MonoBehaviour {
 	public int posY;
 	public int secLeft = 60;
 	public int microSecLeft = 99;
-	public GUISkin _skinTimer;
+	//public GUISkin _skinTimer;
 	public Color _colSafe;
 	public Color _colorWarning;
 	public Color _colCritical;
-	public bool pauseTimer = false;
+	public bool pauseTimer = false, lockTimerStart = false;
 
 	public bool triggeredEnd = false;
 	private Transform _alertMask;
 	private Color alertColor;
 	private Player _player;
+	private Camera _camera;
+	private Vector3 _HUDLevelsPosition;
+	private TextMesh _txtTimer;
 
 
 	// Use this for initialization
 	void Start () {
 		pauseTimer = true;
+		lockTimerStart = true;
 		_player = GameObject.Find("Player").GetComponent<Player>();
 		InvokeRepeating("updateTimer", 0, 0.01f);
+		_camera = GameObject.Find("Main Camera").GetComponent<Camera>();
+		_txtTimer = gameObject.GetComponentInChildren<TextMesh>();
 		_alertMask = GameObject.Find("Player/IngameUI/Timer/timerAlert").GetComponent<Transform>();
 		alertColor = _alertMask.renderer.material.color;
 		alertColor.a = 0f;
+		_txtTimer.color = _colSafe;
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GameOver += GameOver;
 		GameEventManager.GamePause += GamePause;
@@ -36,24 +43,30 @@ public class Timer : MonoBehaviour {
 //			posX = posY = 30;
 //		}
 	}
+	void FixedUpdate() {
+		_txtTimer.gameObject.transform.position = _camera.ScreenToWorldPoint(new Vector3(Screen.width*0.1f-_txtTimer.text.Length*11.4f, Screen.height - (Screen.height*0.09f), _camera.nearClipPlane));
+	}
 	//transform.renderer.material.color.a
 	private void updateTimer()
 	{
-		if (pauseTimer != true)
+		if (pauseTimer != true && !lockTimerStart)
 		{
 			microSecLeft -= 1;
 
 			if (secLeft < 60)
 			{
-				_skinTimer.label.normal.textColor = _colSafe;
+				//_skinTimer.label.normal.textColor = _colSafe;
+				_txtTimer.color = _colSafe;
 			}
 			if (secLeft < 30)
 			{
-				_skinTimer.label.normal.textColor = _colorWarning;
+				//_skinTimer.label.normal.textColor = _colorWarning;
+				_txtTimer.color = _colorWarning;
 			}
 			if (secLeft < 15)
 			{
-				_skinTimer.label.normal.textColor = _colCritical;
+				//_skinTimer.label.normal.textColor = _colCritical;
+				_txtTimer.color = _colCritical;
 			}
 			if (secLeft < 5)
 			{
@@ -73,10 +86,14 @@ public class Timer : MonoBehaviour {
 				triggeredEnd = true;
 				secLeft = 59;
 			}
+			_player._scorePlayer= System.Convert.ToInt32(System.Convert.ToDouble(secLeft.ToString()+"."+microSecLeft.ToString())*_player._COEFF_TEMPS + _player.nbKey*_player._COEFF_BATTERY);
+			_txtTimer.text = ((secLeft<10)?"0"+secLeft.ToString():secLeft.ToString()) + " " + ((microSecLeft<10)?"0"+microSecLeft.ToString():microSecLeft.ToString());
+			//_txtTimer.gameObject.transform.position = _camera.ScreenToWorldPoint(new Vector3(Screen.width*0.1f, Screen.height - (Screen.height*0.09f), _camera.nearClipPlane));
+			//print(_player._scorePlayer);
 		}
 		else {
 			if (_player.isLeft || _player.isRight || _player.isJump || _player.isCrounch)
-			pauseTimer = false;
+			lockTimerStart = pauseTimer = false;
 		}
 	}
 	private void timerAlert () {
@@ -94,9 +111,11 @@ public class Timer : MonoBehaviour {
 	{
 		if(this != null) {
 			CancelInvoke();
-			pauseTimer = true;
+			lockTimerStart = pauseTimer = true;
 			triggeredEnd = false;
 			resetTimer();
+			_txtTimer.text = "59 99";
+			_txtTimer.color = _colSafe;
 			alertColor.a = 0f;_alertMask.renderer.material.color = alertColor;
 			InvokeRepeating("updateTimer", 0, 0.01f);
 		}
@@ -119,13 +138,15 @@ public class Timer : MonoBehaviour {
 	private void GameOver()
 	{
 		if(this != null && gameObject.activeInHierarchy) {
-			pauseTimer = true;
+			lockTimerStart = pauseTimer = true;
 		}
 	}
 
-	private void OnGUI()
-	{
-		GUI.skin = _skinTimer;
-		GUI.Label(new Rect(posX, posY, 400, 400), secLeft.ToString() + " " + microSecLeft.ToString());
-	}
+//	private void OnGUI()
+//	{
+		//GUI.skin = _skinTimer;
+		//gameObject.transform.position = _camera.ScreenToWorldPoint(new Vector3(Screen.width*0.1f, Screen.height - (Screen.height*0.09f), _camera.nearClipPlane));
+		
+		//GUI.Label(new Rect(posX, posY, 400, 400), secLeft.ToString() + " " + microSecLeft.ToString());
+//	}
 }

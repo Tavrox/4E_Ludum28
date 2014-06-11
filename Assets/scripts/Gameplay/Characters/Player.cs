@@ -18,6 +18,9 @@ public class Player : Character {
 	public Transform Cam;
 	public Vector3 _camPos;
 	private OTTween _crouchTween;
+	public int _COEFF_TEMPS, _COEFF_BATTERY;
+	public int _scorePlayer;
+	public Transform HUDPause;
 //	public delegate void TweenDelegate();
 //	public TweenDelegate otweenFinish;
 
@@ -42,7 +45,8 @@ public class Player : Character {
 		GameEventManager.GameUnpause += GameUnpause;
 		GameEventManager.FinishLevel += FinishLevel;
 		Cam = GameObject.Find("UI").GetComponent<Transform>();
-
+		//HUDPause = GameObject.Find("Pause").GetComponent<Transform>();
+		//HUDPause.gameObject.SetActive(false);
 		InvokeRepeating("playFootstep",0f,0.4f);
 		
 //		GetComponent<BoxCollider>().size = new Vector3(1.3f,2f,30f);
@@ -66,6 +70,7 @@ public class Player : Character {
 	// Update is called once per frame
 	public void FixedUpdate () 
 	{
+		if(!GameEventManager.gamePaused) {
 		unCrouch = false;
 		//_mainCam.transform.position = new Vector3(FETool.Round(thisTransform.position.x,2),FETool.Round(thisTransform.position.y,2),0f);
 		if (!Input.GetKey(InputMan.Down) && !Input.GetKey(InputMan.Down2) && !isTeleport && standing && !locked)
@@ -80,6 +85,8 @@ public class Player : Character {
 		if(!locked && !isCrounch) {checkInput();}
 			UpdateMovement();
 		//		offsetCircles ();
+		}
+		
 	}
 	private void unlockCrouch (OTTween tween) {
 		isCrounch = false;
@@ -151,13 +158,13 @@ public class Player : Character {
 		{
 			isPass = true;
 		}
+		if (Input.GetKeyDown(InputMan.Pause))
+		{
+			triggerPause();
+		}
 		if (Input.GetKeyDown(KeyCode.Alpha2))
 		{
 			GameObject.Find("Invasion").GetComponent<InvasionAnims>().invade();
-		}
-		if (Input.GetKeyDown(InputMan.Pause))
-		{
-			//triggerPause();
 		}
 		if (Input.GetKeyDown(InputMan.Reset) || Input.GetKey(InputMan.Reset2)) 
 		{
@@ -194,7 +201,7 @@ public class Player : Character {
 		//collider.bounds.size.Set(1.75f, 1.75f, 10f);
 	}
 
-	private void triggerPause()
+	public void triggerPause()
 	{
 		if (GameEventManager.gamePaused == false)
 		{
@@ -227,11 +234,19 @@ public class Player : Character {
 	}
 	public IEnumerator rewind () {
 		yield return new WaitForSeconds(0.01f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		thisTransform.Rotate(0f,0f,angleRotation++);
 		StartCoroutine("rewind");
 	}
 	public IEnumerator stopRewind (float duree) {
 		yield return new WaitForSeconds(duree);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		StopCoroutine("rewind");
 		thisTransform.Rotate(0f,0f,angleRotation--);
 		if(angleRotation<5) {StopCoroutine("stopRewind");thisTransform.rotation = Quaternion.Euler(new Vector3(0f,0f,0f));}
@@ -244,6 +259,7 @@ public class Player : Character {
 			transform.localPosition = spawnPos;
 			enabled = true;
 		
+		HUDPause.gameObject.SetActive(false);
 			finishedLevel=killedByBlob = killedByLaser = false;
 		collider.enabled=true;
 		isJump = false;
@@ -277,24 +293,32 @@ public class Player : Character {
 	}
 	private void GamePause()
 	{
-		enabled = false;
+		//enabled = false;
 		isLeft = false;
 		isRight = false;
 		isJump = false;
 		isPass = false;
 		paused = true;
 		movingDir = moving.None;
-		
+		HUDPause.gameObject.SetActive(true);
+		GameEventManager.gamePaused = true;		
 	}
 	private void GameUnpause()
 	{
 		paused = false;
-		enabled = true;	
+		//enabled = true;	
+		HUDPause.gameObject.SetActive(false);
+		GameEventManager.gamePaused = false;	
+		
 	}
 	
 	IEnumerator resetGame()
 	{
 		Instantiate(Resources.Load("Objects/Invasion"));
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		yield return new WaitForSeconds(4f);
 		GameEventManager.TriggerGameStart();
 	}

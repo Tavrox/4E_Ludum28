@@ -174,6 +174,10 @@ public class MenuUI : MonoBehaviour {
 	IEnumerator loadLevel(int _lvl)
 	{
 		yield return new WaitForSeconds(2f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		Application.LoadLevel(_lvl);
 	}
 

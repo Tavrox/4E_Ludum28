@@ -11,6 +11,10 @@ public class HUDBulleBegin : MonoBehaviour {
 	}
 	IEnumerator lockPlayer() {
 		yield return new WaitForSeconds(0.5f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		launched = true;
 		//_player.gameObject.SetActive(false);
 	}

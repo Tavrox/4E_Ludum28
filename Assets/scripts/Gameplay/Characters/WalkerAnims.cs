@@ -35,6 +35,8 @@ public class WalkerAnims : MonoBehaviour
 	{
 		_character 	= GetComponent<Character>();
 		GameEventManager.GameStart += GameStart;
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
 		_player 	= GameObject.FindObjectOfType<Player>();
 		_enemy = GetComponent<Enemy>();
 		if(lookLeft) {InvertSprite();currentAnim = animDef.StandLeft;_character.facingDir = Character.facing.Left;}
@@ -113,6 +115,18 @@ public class WalkerAnims : MonoBehaviour
 	IEnumerator WaitAndCallback(float waitTime)
 	{
 		yield return new WaitForSeconds(waitTime);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		AnimationFinished();
+	}
+	void GamePause()
+	{
+		
+	}
+	void GameUnpause()
+	{
+		
 	}
 }

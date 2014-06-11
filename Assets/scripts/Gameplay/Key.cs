@@ -70,7 +70,7 @@ public class Key : MonoBehaviour {
 	}
 	void OnTriggerEnter(Collider _coll)
 	{
-		if (_coll.name == "Player")
+		if (_coll.name == "Player" && !GameEventManager.gamePaused)
 		{
 			gameObject.transform.parent = _playerUI;
 			MasterAudio.PlaySound("key_collecting");
@@ -92,6 +92,11 @@ public class Key : MonoBehaviour {
 	}
 	IEnumerator waitB4rescale () {
 		yield return new WaitForSeconds(1.005f);
+		
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		new OTTween(gameObject.transform, .5f, OTEasing.Linear).Tween("localScale", new Vector3(0.65f,0.65f, 1f));
 	}
 }

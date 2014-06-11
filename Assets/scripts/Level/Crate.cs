@@ -45,6 +45,8 @@ public class Crate : MonoBehaviour {
 			spriteScaleY = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.y*thisTransform.localScale.y*gameObject.transform.parent.transform.localScale.y;
 		}
 		GameEventManager.GameStart += GameStart;
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
 		InputMan = Instantiate(Resources.Load("Tuning/InputManager")) as InputManager;
 		InputMan.Setup();
 		sprite = gameObject.GetComponentInChildren<OTSprite>();
@@ -55,6 +57,10 @@ public class Crate : MonoBehaviour {
 	{
 		// wait for things to settle before applying gravity
 		yield return new WaitForSeconds(0.1f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		gravityY = 0.7f;
 	}
 	
@@ -62,7 +68,7 @@ public class Crate : MonoBehaviour {
 	void FixedUpdate () 
 	{
 		//print(grounded);
-		if(!grounded && !isObjChild/*&& _player.grounded*/)
+		if(!grounded && !isObjChild && !GameEventManager.gamePaused/*&& _player.grounded*/)
 		{
 			touchFloor = false;
 			vectorMove.y -= gravityY * Time.deltaTime;
@@ -316,6 +322,14 @@ public class Crate : MonoBehaviour {
 //		}
 //	}
 	void GameStart () {
-		if(this != null && !isObjChild && gameObject.activeInHierarchy)	transform.position = new Vector3(spawnPos.x,spawnPos.y,spawnPos.z);
+		if(this != null && !isObjChild && gameObject.activeInHierarchy)	{_player.moveVel = playerMoveVel;transform.position = new Vector3(spawnPos.x,spawnPos.y,spawnPos.z);}
+	}
+	void GamePause()
+	{
+		
+	}
+	void GameUnpause()
+	{
+		
 	}
 }
