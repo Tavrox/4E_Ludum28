@@ -21,6 +21,7 @@ public class Timer : MonoBehaviour {
 	private Vector3 _HUDLevelsPosition;
 	private TextMesh _txtTimer;
 	public OTAnimatingSprite _clock, _minute;
+	public OTSprite _circleClock;
 
 
 	// Use this for initialization
@@ -41,7 +42,7 @@ public class Timer : MonoBehaviour {
 		GameEventManager.GamePause += GamePause;
 		GameEventManager.GameUnpause += GameUnpause;
 		GameEventManager.FinishLevel += FinishLevel;
-		_minute.frameIndex = 65;_clock.frameIndex=64;
+		_minute.frameIndex = 65;_clock.frameIndex=64;_circleClock.frameIndex=66;
 //		if(FETool.Round(((float) Screen.width/(float) Screen.height),1)!=1.3) {
 //			posX = posY = 30;
 //		}
@@ -60,20 +61,27 @@ public class Timer : MonoBehaviour {
 			{
 				//_skinTimer.label.normal.textColor = _colSafe;
 				_txtTimer.color = _colSafe;
+				new OTTween(_circleClock, 0.4f).Tween("tintColor", _colSafe);
+				new OTTween(_minute, 0.4f).Tween("tintColor", _colSafe);
 			}
 			if (secLeft < 30)
 			{
 				//_skinTimer.label.normal.textColor = _colorWarning;
 				_txtTimer.color = _colorWarning;
+				new OTTween(_circleClock, 0.4f).Tween("tintColor", _colorWarning);
+				new OTTween(_minute, 0.4f).Tween("tintColor", _colorWarning);
 			}
 			if (secLeft < 15)
 			{
 				//_skinTimer.label.normal.textColor = _colCritical;
 				_txtTimer.color = _colCritical;
+				new OTTween(_circleClock, 0.4f).Tween("tintColor", _colCritical);
+				new OTTween(_minute, 0.4f).Tween("tintColor", _colCritical);
 			}
 			if (secLeft < 5)
 			{
 				InvokeRepeating("timerAlert",0,0.2f);
+				//InvokeRepeating("rescaleChrono",0,1f);
 			}
 
 			if (microSecLeft == 0)
@@ -105,6 +113,11 @@ public class Timer : MonoBehaviour {
 		//alertColor.a = Mathf.PingPong(Time.time, 0.5f);
 		alertColor.a = (Mathf.Sin(Time.time*6.25f)+0.5f ) * 0.2f;
 		_alertMask.renderer.material.color = alertColor;
+	}
+	private void rescaleChrono () {
+//		new OTTween(_circleClock.transform.localScale, 1f, OTEasing.BackOut).Tween("localScale", new Vector3(1.5f, 1.5f, 1f)).PingPong();
+//		new OTTween(_minute.transform.localScale, 1f, OTEasing.BackOut).Tween("localScale", new Vector3(1.5f, 1.5f, 1f)).PingPong();
+//		new OTTween(_clock.transform.localScale, 1f, OTEasing.BackOut).Tween("localScale", new Vector3(1.5f, 1.5f, 1f)).PingPong();	
 	}
 	public void resetTimer()
 	{
