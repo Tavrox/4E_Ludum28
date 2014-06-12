@@ -40,7 +40,7 @@
             </struct>
         </struct>
         <key>shapePadding</key>
-        <uint>0</uint>
+        <uint>2</uint>
         <key>jpgQuality</key>
         <uint>80</uint>
         <key>pngOptimizationLevel</key>
@@ -50,7 +50,7 @@
         <key>textureFormat</key>
         <enum type="SettingsBase::TextureFormat">png</enum>
         <key>borderPadding</key>
-        <uint>0</uint>
+        <uint>2</uint>
         <key>maxTextureSize</key>
         <QSize>
             <key>width</key>
@@ -161,6 +161,22 @@
             <filename>../../Levels/zcrate_exploo0005.png</filename>
             <filename>../../Levels/zcrate_exploo0006.png</filename>
             <filename>../../Levels/zcrate_exploo0007.png</filename>
+            <filename>Key/kEY1Jaune.png</filename>
+            <filename>Key/kEY2Violet.png</filename>
+            <filename>Key/kEY3Vert.png</filename>
+            <filename>Key/kEY4Bleu.png</filename>
+            <filename>Key/kEY5Rouge.png</filename>
+            <filename>generatorV2/images/endDoor_0000.png</filename>
+            <filename>Key/mask1Yellow.png</filename>
+            <filename>Key/mask2Purple.png</filename>
+            <filename>Key/mask3Green.png</filename>
+            <filename>Key/mask4Blue.png</filename>
+            <filename>Key/mask5Red.png</filename>
+            <filename>generatorV2/images/endDoor_0001.png</filename>
+            <filename>generatorV2/images/endDoor_0002.png</filename>
+            <filename>generatorV2/images/endDoor_0003.png</filename>
+            <filename>generatorV2/images/endDoor_0004.png</filename>
+            <filename>generatorV2/images/endDoor_0005.png</filename>
             <filename>Key/battery/Comp 2_00000.png</filename>
             <filename>Key/battery/Comp 2_00001.png</filename>
             <filename>Key/battery/Comp 2_00002.png</filename>
@@ -186,22 +202,6 @@
             <filename>Key/battery/Comp 2_00022.png</filename>
             <filename>Key/battery/Comp 2_00023.png</filename>
             <filename>Key/battery/Comp 2_00024.png</filename>
-            <filename>Key/kEY1Jaune.png</filename>
-            <filename>Key/kEY2Violet.png</filename>
-            <filename>Key/kEY3Vert.png</filename>
-            <filename>Key/kEY4Bleu.png</filename>
-            <filename>Key/kEY5Rouge.png</filename>
-            <filename>generatorV2/images/endDoor_0000.png</filename>
-            <filename>Key/mask1Yellow.png</filename>
-            <filename>Key/mask2Purple.png</filename>
-            <filename>Key/mask3Green.png</filename>
-            <filename>Key/mask4Blue.png</filename>
-            <filename>Key/mask5Red.png</filename>
-            <filename>generatorV2/images/endDoor_0001.png</filename>
-            <filename>generatorV2/images/endDoor_0002.png</filename>
-            <filename>generatorV2/images/endDoor_0003.png</filename>
-            <filename>generatorV2/images/endDoor_0004.png</filename>
-            <filename>generatorV2/images/endDoor_0005.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

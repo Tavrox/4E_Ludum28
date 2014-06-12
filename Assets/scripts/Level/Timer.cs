@@ -22,6 +22,7 @@ public class Timer : MonoBehaviour {
 	private TextMesh _txtTimer;
 	public OTAnimatingSprite _clock, _minute;
 	public OTSprite _circleClock;
+	private OTTween _rescaleClock, _rescaleCircleClock, _rescaleMinute;
 
 
 	// Use this for initialization
@@ -78,12 +79,15 @@ public class Timer : MonoBehaviour {
 				new OTTween(_circleClock, 0.4f).Tween("tintColor", _colCritical);
 				new OTTween(_minute, 0.4f).Tween("tintColor", _colCritical);
 			}
-			if (secLeft < 5)
+			if (secLeft < 6 && microSecLeft == 30)
 			{
-				InvokeRepeating("timerAlert",0,0.2f);
+				//InvokeRepeating("timerAlert",0f,1.0f);
+				timerAlert();
+			}
+			if (secLeft < 5 && microSecLeft == 98) {
+				rescaleChrono();
 				//InvokeRepeating("rescaleChrono",0,1f);
 			}
-
 			if (microSecLeft == 0)
 			{
 				secLeft -= 1 ;
@@ -111,13 +115,20 @@ public class Timer : MonoBehaviour {
 	}
 	private void timerAlert () {
 		//alertColor.a = Mathf.PingPong(Time.time, 0.5f);
-		alertColor.a = (Mathf.Sin(Time.time*6.25f)+0.5f ) * 0.2f;
-		_alertMask.renderer.material.color = alertColor;
+		print(Time.deltaTime);
+//		alertColor.a = (Mathf.Sin(Time.time*6.25f)+0.5f ) * 0.2f;
+//		_alertMask.renderer.material.color = alertColor;
+		_rescaleCircleClock = new OTTween(_alertMask.renderer.material, .49f, OTEasing.Linear).Tween("color", new Color(_alertMask.renderer.material.color.r,_alertMask.renderer.material.color.g,_alertMask.renderer.material.color.b,.4f));
+		StartCoroutine("resetAlert");
+	}
+	private IEnumerator resetAlert() {
+		yield return new WaitForSeconds(.50f);
+		_rescaleCircleClock = new OTTween(_alertMask.renderer.material, .5f, OTEasing.Linear).Tween("color", new Color(_alertMask.renderer.material.color.r,_alertMask.renderer.material.color.g,_alertMask.renderer.material.color.b,0f));
 	}
 	private void rescaleChrono () {
-//		new OTTween(_circleClock.transform.localScale, 1f, OTEasing.BackOut).Tween("localScale", new Vector3(1.5f, 1.5f, 1f)).PingPong();
-//		new OTTween(_minute.transform.localScale, 1f, OTEasing.BackOut).Tween("localScale", new Vector3(1.5f, 1.5f, 1f)).PingPong();
-//		new OTTween(_clock.transform.localScale, 1f, OTEasing.BackOut).Tween("localScale", new Vector3(1.5f, 1.5f, 1f)).PingPong();	
+		_rescaleClock = new OTTween(_circleClock.transform, .5f, OTEasing.BackOut).Tween("localScale", new Vector3(2.5f, 2.5f, 1f)).PingPong();
+		_rescaleClock = new OTTween(_minute.transform, .5f, OTEasing.BackOut).Tween("localScale", new Vector3(2.5f, 2.5f, 1f)).PingPong();
+		_rescaleClock = new OTTween(_clock.transform, .5f, OTEasing.BackOut).Tween("localScale", new Vector3(2.5f, 2.5f, 1f)).PingPong();	
 	}
 	public void resetTimer()
 	{
@@ -135,6 +146,7 @@ public class Timer : MonoBehaviour {
 			_txtTimer.text = "59 99";
 			_minute.rotation = 0;
 			_clock.rotation = 0;
+			_minute.frameIndex = 65;_clock.frameIndex=64;_circleClock.frameIndex=66;
 			_txtTimer.color = _colSafe;
 			alertColor.a = 0f;_alertMask.renderer.material.color = alertColor;
 			InvokeRepeating("updateTimer", 0, 0.01f);

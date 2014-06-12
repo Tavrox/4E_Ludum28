@@ -31,7 +31,7 @@ GameObject:
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
   m_Layer: 0
-  m_Name: color-9
+  m_Name: color-6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65,7 +65,7 @@ GameObject:
   - 23: {fileID: 2300002}
   - 114: {fileID: 11400006}
   m_Layer: 0
-  m_Name: keySpriteAnim-8
+  m_Name: keySpriteAnim-10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.6323357, y: -1.45459366, z: -6}
+  m_LocalPosition: {x: 30.2085609, y: 5.24331284, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400006}
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18d0574a4fa59946a49ede6640a1f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: color-9
+  _name: color-6
   _position: {x: .019230783, y: .0925925374}
   _size: {x: .442307502, y: .425925821}
   _rotation: 0
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e0774980171c514ea93208b47048a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: keySpriteAnim-8
+  _name: keySpriteAnim-10
   _position: {x: 0, y: .0208333731}
   _size: {x: 1.95999837, y: 2}
   _rotation: 0
