@@ -32,13 +32,13 @@ public class Key : MonoBehaviour {
 		GameEventManager.NextInstance += NextInstance;
 		GameEventManager.GameOver += GameOver;
 		
-		_myHUDTarget = GameObject.Find("HUDLevels").GetComponent<HUDLevels>();
 		_camera = GameObject.Find("Main Camera").GetComponent<Camera>();
 		_levelM = GameObject.FindObjectOfType<LevelManager>();
 		_KeySprite = gameObject.GetComponentInChildren<OTAnimatingSprite>();
 		//_KeySprite.frameIndex = _levelM.chosenVariation+4+25;
 		_KeySprite.Play("keyBattery");
 		if(_levelM.isBoss == true) _KeySprite.frameIndex = 29;
+		_myHUDTarget = GameObject.Find("Player/IngameUI/HUDLevels").GetComponent<HUDLevels>();
 		//InvokeRepeating("rotate",0,0.05f);
 	}
 	void rotate() {
