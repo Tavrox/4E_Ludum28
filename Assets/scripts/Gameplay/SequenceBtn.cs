@@ -56,6 +56,9 @@ public class SequenceBtn : MonoBehaviour {
 		if(allTriggered) {
 			if(errorDetected==false) {
 				seqBtns[1].triggerLever();
+				foreach (Lever btn in seqBtns) {
+					btn.launchLights();
+				}
 				solved = true;
 				MasterAudio.PlaySound ("sequence_succeed");
 				StartCoroutine("resetSequence");

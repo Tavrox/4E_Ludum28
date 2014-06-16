@@ -201,7 +201,7 @@ public class Lever : MonoBehaviour {
 	{
 		
 	}
-	void launchLights () {
+	public void launchLights () {
 		if(_myLights.Count!=0 && _myPaths.Count!=0 && _myLights.Count==_myPaths.Count) {
 			int cpt = 0;
 			for(cpt=0;cpt<_myLights.Count;cpt++) {
