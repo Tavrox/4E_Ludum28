@@ -20,6 +20,8 @@ public class Lever : MonoBehaviour {
 	//public GUIText _myCpt;
 	public TextMesh _myTimer;
 	public InputManager InputMan;
+	public List<LeverLight> _myLights = new List<LeverLight>();
+	public List<LeverLightPath> _myPaths = new List<LeverLightPath>();
 
 	void Start () {
 		gameObject.GetComponentInChildren<OTAnimatingSprite>().transform.localScale = new Vector3 (2.006f,3.112758f,1);
@@ -117,9 +119,10 @@ public class Lever : MonoBehaviour {
 				animSprite.Play("lockSeq");}
 			else animSprite.Play("lock");
 		}
-
+		
 		if(myButtonType == btnType.SequenceBtn) {seqLocked = true;}
 		else {
+			launchLights();
 			triggerLever();
 			if(myButtonType == btnType.TimedBtn) {
 				StartCoroutine("delayRetrigg");
@@ -152,7 +155,9 @@ public class Lever : MonoBehaviour {
 		if (gameObject != null)
 		{
 			foreach (TriggeredDoor door in doors) {
-				if(door.isLocked) {door.Unlock();}
+				if(door.isLocked) {
+					door.Unlock();
+				}
 				else {door.Lock();}
 			}
 		}
@@ -195,5 +200,19 @@ public class Lever : MonoBehaviour {
 	void GameUnpause()
 	{
 		
+	}
+	void launchLights () {
+		if(_myLights.Count!=0 && _myPaths.Count!=0 && _myLights.Count==_myPaths.Count) {
+			int cpt = 0;
+			for(cpt=0;cpt<_myLights.Count;cpt++) {
+				_myLights[cpt]._myPath = _myPaths[cpt];	
+			}
+		}
+		if(_myLights.Count!=0 && _myPaths.Count!=0 && _myLights.Count==_myPaths.Count) {
+			foreach(LeverLight _light in _myLights)
+			{
+				_light.initLight();	
+			}
+		}	
 	}
 }
