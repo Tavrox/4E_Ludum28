@@ -10,6 +10,9 @@ public class Walker : Enemy {
 	private bool walkSoundSwitch;
 	private bool activated;
 	private BoxCollider [] tabCol;
+	private walkerSmokeManager smokeLeft, smokeRight;
+	private float smokePosIni;
+	private int distanceToObject;
 	/***** ENNEMI BEGIN *****/
 
 	void Start()
@@ -23,6 +26,8 @@ public class Walker : Enemy {
 		GameEventManager.GamePause += GamePause;
 		GameEventManager.GameUnpause += GameUnpause;
 		StartCoroutine("waitB4Gravity");
+		smokeLeft = gameObject.GetComponentsInChildren<walkerSmokeManager>()[0];
+		smokeRight = gameObject.GetComponentsInChildren<walkerSmokeManager>()[1];
 		tabCol = gameObject.GetComponents<BoxCollider>();
 	}
 	private IEnumerator waitB4Gravity() {
@@ -40,6 +45,7 @@ public class Walker : Enemy {
 			if(chasingPlayer) {ChasePlayer();}
 			detectPlayer();
 			detectEndPlatform();
+			detectWall();
 			if(!chasingPlayer) {UpdateMovement();}
 		}
 	}
@@ -156,6 +162,60 @@ public class Walker : Enemy {
 			else checkPlayerRaycast();
 		}
 		else checkPlayerRaycast();
+	}
+	protected void detectWall() {
+		detectTargetLeft = new Ray(new Vector3(thisTransform.position.x,thisTransform.position.y,thisTransform.position.z), Vector3.left);
+		detectTargetRight = new Ray(new Vector3(thisTransform.position.x,thisTransform.position.y,thisTransform.position.z), Vector3.right);
+		Debug.DrawRay(new Vector3(thisTransform.position.x,thisTransform.position.y,thisTransform.position.z), Vector3.left*targetDetectionArea, Color.cyan);
+		Debug.DrawRay(new Vector3(thisTransform.position.x,thisTransform.position.y,thisTransform.position.z), Vector3.right*targetDetectionArea, Color.black);
+		
+		if (Physics.Raycast(detectTargetLeft, out hitInfo, targetDetectionArea)) {//A GAUCHE
+			if(hitInfo.collider.tag == "Crate" || hitInfo.collider.name == "ColliBox" || hitInfo.collider.tag=="Blocker") {
+				
+				if(hitInfo.collider.bounds.center.x < thisTransform.position.x) smokePosIni=hitInfo.collider.bounds.center.x+hitInfo.collider.bounds.size.x/2;
+				else smokePosIni=hitInfo.collider.bounds.center.x-hitInfo.collider.bounds.size.x/2;
+				
+				distanceToObject = (int) Mathf.Abs(smokePosIni+1f-thisTransform.position.x);
+//				print (distanceToObject);
+				if(smokeLeft.nbSpriteToDisplay!=distanceToObject) {
+//				print("GaucheTouche"+distanceToObject);
+					smokeLeft.nbSpriteToDisplay=distanceToObject;
+					smokeLeft.showNbSmoke();
+				}
+			}
+		}
+		else {
+			int distanceToObject = smokeLeft.nbSpriteTotal;
+			if(smokeLeft.nbSpriteToDisplay!=distanceToObject) {
+//				print("GauchePasTouche"+distanceToObject);
+				smokeLeft.nbSpriteToDisplay=distanceToObject;
+				smokeLeft.showNbSmoke();
+			}
+		}
+		if(Physics.Raycast(detectTargetRight, out hitInfo, targetDetectionArea)) { //A DROITE
+			if(hitInfo.collider.tag == "Crate" || hitInfo.collider.name == "ColliBox" || hitInfo.collider.tag=="Blocker") {
+				
+				if(hitInfo.collider.bounds.center.x < thisTransform.position.x) smokePosIni=hitInfo.collider.bounds.center.x+hitInfo.collider.bounds.size.x/2;
+				else smokePosIni=hitInfo.collider.bounds.center.x-hitInfo.collider.bounds.size.x/2;
+				
+				distanceToObject = (int) Mathf.Abs(smokePosIni-1f-thisTransform.position.x);
+//				print (distanceToObject);
+				if(smokeRight.nbSpriteToDisplay!=distanceToObject) {
+//					print("DroiteTouche"+distanceToObject);
+					smokeRight.nbSpriteToDisplay=distanceToObject;
+					smokeRight.showNbSmoke();
+				}
+			}
+		}
+		else {
+			int distanceToObject = smokeRight.nbSpriteTotal;
+			if(smokeRight.nbSpriteToDisplay!=distanceToObject) {
+//				print("DroitePasTouche"+distanceToObject);
+				smokeRight.nbSpriteToDisplay=distanceToObject;
+				smokeRight.showNbSmoke();
+			}
+		}
+		//else checkPlayerRaycast();
 	}
 	
 	private void checkPlayerRaycast() {

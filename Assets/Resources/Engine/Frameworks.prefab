@@ -3268,6 +3268,38 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &100344
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400344}
+  - 114: {fileID: 11400346}
+  m_Layer: 0
+  m_Name: zoneDetection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100346
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400346}
+  - 114: {fileID: 11400348}
+  m_Layer: 0
+  m_Name: zoneDetection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -4622,6 +4654,7 @@ Transform:
   - {fileID: 400014}
   - {fileID: 400326}
   - {fileID: 400132}
+  - {fileID: 400346}
   m_Father: {fileID: 400026}
 --- !u!4 &400224
 Transform:
@@ -4799,6 +4832,7 @@ Transform:
   - {fileID: 400104}
   - {fileID: 400060}
   - {fileID: 400324}
+  - {fileID: 400344}
   m_Father: {fileID: 400026}
 --- !u!4 &400252
 Transform:
@@ -5331,6 +5365,28 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400250}
+--- !u!4 &400344
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100344}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 25.3887901, y: -35.6659355, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400250}
+--- !u!4 &400346
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100346}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 25.3887901, y: -35.6659355, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400222}
 --- !u!82 &8200000
 AudioSource:
   m_ObjectHideFlags: 1
@@ -16399,378 +16455,378 @@ MonoBehaviour:
   generateSprites: 0
   atlasData:
   - name: Comp 2_00000
-    position: {x: 0, y: 0}
-    offset: {x: 23, y: 28}
+    position: {x: 2, y: 2}
+    offset: {x: 22, y: 28}
     rotated: 0
-    size: {x: 52, y: 54}
+    size: {x: 54, y: 54}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: Comp 2_00001
-    position: {x: 52, y: 0}
-    offset: {x: 19, y: 28}
+    position: {x: 58, y: 2}
+    offset: {x: 22, y: 26}
     rotated: 0
-    size: {x: 56, y: 54}
+    size: {x: 56, y: 56}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: Comp 2_00002
-    position: {x: 108, y: 0}
-    offset: {x: 15, y: 27}
+    position: {x: 116, y: 2}
+    offset: {x: 20, y: 23}
     rotated: 0
-    size: {x: 60, y: 54}
+    size: {x: 58, y: 58}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: Comp 2_00003
-    position: {x: 168, y: 0}
-    offset: {x: 13, y: 21}
+    position: {x: 176, y: 2}
+    offset: {x: 18, y: 21}
     rotated: 0
     size: {x: 62, y: 60}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: Comp 2_00004
-    position: {x: 230, y: 0}
-    offset: {x: 11, y: 18}
+    position: {x: 240, y: 2}
+    offset: {x: 15, y: 20}
     rotated: 0
-    size: {x: 64, y: 62}
+    size: {x: 60, y: 60}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: Comp 2_00005
-    position: {x: 294, y: 0}
-    offset: {x: 11, y: 18}
+    position: {x: 302, y: 2}
+    offset: {x: 13, y: 17}
     rotated: 0
-    size: {x: 64, y: 62}
+    size: {x: 62, y: 66}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: Comp 2_00006
-    position: {x: 358, y: 0}
-    offset: {x: 13, y: 19}
+    position: {x: 366, y: 2}
+    offset: {x: 13, y: 17}
     rotated: 0
-    size: {x: 62, y: 62}
+    size: {x: 62, y: 70}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: Comp 2_00007
-    position: {x: 420, y: 0}
-    offset: {x: 16, y: 22}
+    position: {x: 430, y: 2}
+    offset: {x: 11, y: 15}
     rotated: 0
-    size: {x: 64, y: 60}
+    size: {x: 64, y: 74}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: Comp 2_00008
-    position: {x: 484, y: 0}
-    offset: {x: 16, y: 24}
+    position: {x: 496, y: 2}
+    offset: {x: 9, y: 14}
     rotated: 0
-    size: {x: 70, y: 62}
+    size: {x: 66, y: 68}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: Comp 2_00009
-    position: {x: 554, y: 0}
-    offset: {x: 20, y: 26}
+    position: {x: 564, y: 2}
+    offset: {x: 9, y: 13}
     rotated: 0
-    size: {x: 68, y: 62}
+    size: {x: 66, y: 70}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: Comp 2_00010
-    position: {x: 622, y: 0}
-    offset: {x: 23, y: 31}
+    position: {x: 632, y: 2}
+    offset: {x: 9, y: 11}
     rotated: 0
-    size: {x: 68, y: 58}
+    size: {x: 68, y: 74}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: Comp 2_00011
-    position: {x: 690, y: 0}
-    offset: {x: 23, y: 29}
-    rotated: 0
-    size: {x: 68, y: 60}
-    frameSize: {x: 100, y: 100}
-    metaData: []
-  - name: Comp 2_00012
-    position: {x: 758, y: 0}
-    offset: {x: 24, y: 28}
-    rotated: 0
-    size: {x: 62, y: 56}
-    frameSize: {x: 100, y: 100}
-    metaData: []
-  - name: Comp 2_00013
-    position: {x: 820, y: 0}
-    offset: {x: 23, y: 28}
-    rotated: 0
-    size: {x: 52, y: 54}
-    frameSize: {x: 100, y: 100}
-    metaData: []
-  - name: Comp 2_00014
-    position: {x: 872, y: 0}
-    offset: {x: 23, y: 27}
-    rotated: 0
-    size: {x: 52, y: 54}
-    frameSize: {x: 100, y: 100}
-    metaData: []
-  - name: Comp 2_00015
-    position: {x: 924, y: 0}
-    offset: {x: 24, y: 24}
-    rotated: 0
-    size: {x: 60, y: 56}
-    frameSize: {x: 100, y: 100}
-    metaData: []
-  - name: Comp 2_00016
-    position: {x: 0, y: 62}
-    offset: {x: 24, y: 17}
-    rotated: 0
-    size: {x: 66, y: 64}
-    frameSize: {x: 100, y: 100}
-    metaData: []
-  - name: Comp 2_00017
-    position: {x: 66, y: 62}
-    offset: {x: 24, y: 17}
-    rotated: 0
-    size: {x: 66, y: 64}
-    frameSize: {x: 100, y: 100}
-    metaData: []
-  - name: Comp 2_00018
-    position: {x: 132, y: 62}
-    offset: {x: 24, y: 16}
+    position: {x: 702, y: 2}
+    offset: {x: 12, y: 20}
     rotated: 0
     size: {x: 66, y: 66}
     frameSize: {x: 100, y: 100}
     metaData: []
-  - name: Comp 2_00019
-    position: {x: 198, y: 62}
-    offset: {x: 24, y: 21}
+  - name: Comp 2_00012
+    position: {x: 770, y: 2}
+    offset: {x: 23, y: 19}
     rotated: 0
-    size: {x: 62, y: 62}
+    size: {x: 56, y: 64}
     frameSize: {x: 100, y: 100}
     metaData: []
-  - name: Comp 2_00020
-    position: {x: 260, y: 62}
-    offset: {x: 18, y: 22}
-    rotated: 0
-    size: {x: 66, y: 62}
-    frameSize: {x: 100, y: 100}
-    metaData: []
-  - name: Comp 2_00021
-    position: {x: 326, y: 62}
-    offset: {x: 12, y: 24}
-    rotated: 0
-    size: {x: 70, y: 62}
-    frameSize: {x: 100, y: 100}
-    metaData: []
-  - name: Comp 2_00022
-    position: {x: 396, y: 62}
-    offset: {x: 10, y: 29}
-    rotated: 0
-    size: {x: 66, y: 58}
-    frameSize: {x: 100, y: 100}
-    metaData: []
-  - name: Comp 2_00023
-    position: {x: 462, y: 62}
-    offset: {x: 15, y: 30}
-    rotated: 0
-    size: {x: 60, y: 54}
-    frameSize: {x: 100, y: 100}
-    metaData: []
-  - name: Comp 2_00024
-    position: {x: 522, y: 62}
-    offset: {x: 15, y: 28}
+  - name: Comp 2_00013
+    position: {x: 828, y: 2}
+    offset: {x: 20, y: 28}
     rotated: 0
     size: {x: 60, y: 56}
     frameSize: {x: 100, y: 100}
     metaData: []
+  - name: Comp 2_00014
+    position: {x: 890, y: 2}
+    offset: {x: 24, y: 27}
+    rotated: 0
+    size: {x: 56, y: 56}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00015
+    position: {x: 948, y: 2}
+    offset: {x: 22, y: 26}
+    rotated: 0
+    size: {x: 58, y: 54}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00016
+    position: {x: 2, y: 78}
+    offset: {x: 20, y: 27}
+    rotated: 0
+    size: {x: 62, y: 56}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00017
+    position: {x: 66, y: 78}
+    offset: {x: 20, y: 27}
+    rotated: 0
+    size: {x: 64, y: 60}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00018
+    position: {x: 132, y: 78}
+    offset: {x: 16, y: 26}
+    rotated: 0
+    size: {x: 70, y: 64}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00019
+    position: {x: 204, y: 78}
+    offset: {x: 14, y: 27}
+    rotated: 0
+    size: {x: 74, y: 60}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00020
+    position: {x: 280, y: 78}
+    offset: {x: 11, y: 25}
+    rotated: 0
+    size: {x: 78, y: 62}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00021
+    position: {x: 360, y: 78}
+    offset: {x: 9, y: 26}
+    rotated: 0
+    size: {x: 74, y: 62}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00022
+    position: {x: 436, y: 78}
+    offset: {x: 7, y: 27}
+    rotated: 0
+    size: {x: 78, y: 64}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00023
+    position: {x: 516, y: 78}
+    offset: {x: 5, y: 27}
+    rotated: 0
+    size: {x: 74, y: 60}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Comp 2_00024
+    position: {x: 592, y: 78}
+    offset: {x: 5, y: 26}
+    rotated: 0
+    size: {x: 76, y: 62}
+    frameSize: {x: 100, y: 100}
+    metaData: []
   - name: crate
-    position: {x: 582, y: 62}
+    position: {x: 670, y: 78}
     offset: {x: 1, y: 0}
     rotated: 0
     size: {x: 98, y: 98}
     frameSize: {x: 100, y: 100}
     metaData: []
   - name: endDoor_0000
-    position: {x: 680, y: 62}
+    position: {x: 770, y: 78}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 214, y: 158}
     frameSize: {x: 216, y: 158}
     metaData: []
   - name: endDoor_0001
-    position: {x: 0, y: 220}
+    position: {x: 2, y: 238}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 214, y: 158}
     frameSize: {x: 216, y: 158}
     metaData: []
   - name: endDoor_0002
-    position: {x: 214, y: 220}
+    position: {x: 218, y: 238}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 214, y: 158}
     frameSize: {x: 216, y: 158}
     metaData: []
   - name: endDoor_0003
-    position: {x: 428, y: 220}
+    position: {x: 434, y: 238}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 214, y: 158}
     frameSize: {x: 216, y: 158}
     metaData: []
   - name: endDoor_0004
-    position: {x: 642, y: 220}
+    position: {x: 650, y: 238}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 214, y: 158}
     frameSize: {x: 216, y: 158}
     metaData: []
   - name: endDoor_0005
-    position: {x: 0, y: 378}
+    position: {x: 2, y: 398}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 214, y: 158}
     frameSize: {x: 216, y: 158}
     metaData: []
   - name: end_1
-    position: {x: 214, y: 378}
+    position: {x: 218, y: 398}
     offset: {x: 12, y: 0}
     rotated: 0
     size: {x: 38, y: 100}
     frameSize: {x: 50, y: 100}
     metaData: []
   - name: end_2
-    position: {x: 252, y: 378}
+    position: {x: 258, y: 398}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 50, y: 100}
     frameSize: {x: 50, y: 100}
     metaData: []
   - name: end_3
-    position: {x: 302, y: 378}
+    position: {x: 310, y: 398}
     offset: {x: 0, y: 10}
     rotated: 0
     size: {x: 50, y: 90}
     frameSize: {x: 50, y: 100}
     metaData: []
   - name: kEY
-    position: {x: 352, y: 378}
+    position: {x: 362, y: 398}
     offset: {x: 4, y: 9}
     rotated: 0
     size: {x: 44, y: 28}
     frameSize: {x: 50, y: 50}
     metaData: []
   - name: kEY1Jaune
-    position: {x: 396, y: 378}
+    position: {x: 408, y: 398}
     offset: {x: 0, y: 6}
     rotated: 0
     size: {x: 50, y: 34}
     frameSize: {x: 50, y: 50}
     metaData: []
   - name: kEY2Violet
-    position: {x: 446, y: 378}
+    position: {x: 460, y: 398}
     offset: {x: 0, y: 5}
     rotated: 0
     size: {x: 50, y: 36}
     frameSize: {x: 50, y: 50}
     metaData: []
   - name: kEY3Vert
-    position: {x: 496, y: 378}
+    position: {x: 512, y: 398}
     offset: {x: 0, y: 5}
     rotated: 0
     size: {x: 50, y: 36}
     frameSize: {x: 50, y: 50}
     metaData: []
   - name: kEY4Bleu
-    position: {x: 546, y: 378}
+    position: {x: 564, y: 398}
     offset: {x: 0, y: 5}
     rotated: 0
     size: {x: 50, y: 36}
     frameSize: {x: 50, y: 50}
     metaData: []
   - name: kEY5Rouge
-    position: {x: 596, y: 378}
+    position: {x: 616, y: 398}
     offset: {x: 0, y: 4}
     rotated: 0
     size: {x: 50, y: 38}
     frameSize: {x: 50, y: 50}
     metaData: []
   - name: key
-    position: {x: 646, y: 378}
+    position: {x: 668, y: 398}
     offset: {x: 0, y: 4}
     rotated: 0
     size: {x: 30, y: 20}
     frameSize: {x: 30, y: 30}
     metaData: []
   - name: mask1Yellow
-    position: {x: 676, y: 378}
+    position: {x: 700, y: 398}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 23, y: 23}
     frameSize: {x: 23, y: 23}
     metaData: []
   - name: mask2Purple
-    position: {x: 699, y: 378}
+    position: {x: 725, y: 398}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 23, y: 23}
     frameSize: {x: 23, y: 23}
     metaData: []
   - name: mask3Green
-    position: {x: 722, y: 378}
+    position: {x: 750, y: 398}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 23, y: 23}
     frameSize: {x: 23, y: 23}
     metaData: []
   - name: mask4Blue
-    position: {x: 745, y: 378}
+    position: {x: 775, y: 398}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 23, y: 23}
     frameSize: {x: 23, y: 23}
     metaData: []
   - name: mask5Red
-    position: {x: 768, y: 378}
+    position: {x: 800, y: 398}
     offset: {x: 0, y: 0}
     rotated: 0
     size: {x: 23, y: 23}
     frameSize: {x: 23, y: 23}
     metaData: []
   - name: zcrate_exploo0001
-    position: {x: 791, y: 378}
+    position: {x: 825, y: 398}
     offset: {x: 48, y: 104}
     rotated: 0
     size: {x: 98, y: 96}
     frameSize: {x: 200, y: 200}
     metaData: []
   - name: zcrate_exploo0002
-    position: {x: 889, y: 378}
+    position: {x: 2, y: 558}
     offset: {x: 48, y: 104}
     rotated: 0
     size: {x: 98, y: 96}
     frameSize: {x: 200, y: 200}
     metaData: []
   - name: zcrate_exploo0003
-    position: {x: 0, y: 536}
+    position: {x: 102, y: 558}
     offset: {x: 51, y: 92}
     rotated: 0
     size: {x: 126, y: 108}
     frameSize: {x: 200, y: 200}
     metaData: []
   - name: zcrate_exploo0004
-    position: {x: 126, y: 536}
+    position: {x: 230, y: 558}
     offset: {x: 27, y: 82}
     rotated: 0
     size: {x: 166, y: 118}
     frameSize: {x: 200, y: 200}
     metaData: []
   - name: zcrate_exploo0005
-    position: {x: 292, y: 536}
+    position: {x: 398, y: 558}
     offset: {x: 13, y: 90}
     rotated: 0
     size: {x: 184, y: 110}
     frameSize: {x: 200, y: 200}
     metaData: []
   - name: zcrate_exploo0006
-    position: {x: 476, y: 536}
+    position: {x: 584, y: 558}
     offset: {x: 7, y: 88}
     rotated: 0
     size: {x: 190, y: 112}
     frameSize: {x: 200, y: 200}
     metaData: []
   - name: zcrate_exploo0007
-    position: {x: 666, y: 536}
+    position: {x: 776, y: 558}
     offset: {x: 0, y: 88}
     rotated: 0
     size: {x: 200, y: 112}
@@ -16781,8 +16837,8 @@ MonoBehaviour:
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: 954ba3237fd8f9c459ca218263d0ba3a, type: 3}
   reloadData: 0
-  bytesDataFile: 26229
-  id: 21
+  bytesDataFile: 26947
+  id: 24
 --- !u!114 &11400240
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -19270,13 +19326,34 @@ MonoBehaviour:
     size: {x: 135, y: 82}
     frameSize: {x: 135, y: 82}
     metaData: []
+  - name: zrotate_00
+    position: {x: 285, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: zrotate_01
+    position: {x: 385, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: zrotate_03
+    position: {x: 0, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
   offsetSizing: 1
   metaType: 
   metaData: []
   _atlasDataFile: {fileID: 4900000, guid: 3b5eee47d00c70243bc56270ce493a32, type: 3}
   reloadData: 0
-  bytesDataFile: 30557
-  id: 5
+  bytesDataFile: 31974
+  id: 12
 --- !u!114 &11400342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -19417,6 +19494,585 @@ MonoBehaviour:
     singleDuration: 0
     startIndex: 4
     _containerName: blobBtn
+--- !u!114 &11400346
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf791b8ec508eb4a94c7295007afe68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: zoneDetection
+  _fps: 24
+  _duration: 3
+  framesets:
+  - name: flow
+    container: {fileID: 11400348}
+    startFrame: 0
+    endFrame: 23
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 0
+    _containerName: zoneDetection
+  - name: left
+    container: {fileID: 11400348}
+    startFrame: 24
+    endFrame: 47
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 24
+    _containerName: zoneDetection
+  - name: right
+    container: {fileID: 11400348}
+    startFrame: 48
+    endFrame: 71
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 48
+    _containerName: zoneDetection
+--- !u!114 &11400348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd220758bd0b8b4685199267909af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: zoneDetection
+  _sheetSize: {x: 1024, y: 1024}
+  texture: {fileID: 2800000, guid: 8877472609b45e84699d007d845c149d, type: 3}
+  sizeTextures: []
+  generateSprites: 0
+  atlasData:
+  - name: Final_00000
+    position: {x: 0, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Final_00001
+    position: {x: 100, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Final_00002
+    position: {x: 200, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Final_00003
+    position: {x: 300, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Final_00004
+    position: {x: 400, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Final_00005
+    position: {x: 500, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Final_00006
+    position: {x: 600, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Final_00007
+    position: {x: 700, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Final_00008
+    position: {x: 800, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Final_00009
+    position: {x: 900, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Final_00010
+    position: {x: 0, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Final_00011
+    position: {x: 100, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Final_00012
+    position: {x: 200, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Final_00013
+    position: {x: 300, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Final_00014
+    position: {x: 400, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Final_00015
+    position: {x: 500, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Final_00016
+    position: {x: 600, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Final_00017
+    position: {x: 700, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Final_00018
+    position: {x: 800, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Final_00019
+    position: {x: 900, y: 100}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Final_00020
+    position: {x: 0, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Final_00021
+    position: {x: 100, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Final_00022
+    position: {x: 200, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: Final_00023
+    position: {x: 300, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endLeft_Final_00000
+    position: {x: 400, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endLeft_Final_00001
+    position: {x: 500, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endLeft_Final_00002
+    position: {x: 600, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endLeft_Final_00003
+    position: {x: 700, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endLeft_Final_00004
+    position: {x: 800, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endLeft_Final_00005
+    position: {x: 900, y: 200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endLeft_Final_00006
+    position: {x: 0, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endLeft_Final_00007
+    position: {x: 100, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endLeft_Final_00008
+    position: {x: 200, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endLeft_Final_00009
+    position: {x: 300, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endLeft_Final_00010
+    position: {x: 400, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endLeft_Final_00011
+    position: {x: 500, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endLeft_Final_00012
+    position: {x: 600, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endLeft_Final_00013
+    position: {x: 700, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endLeft_Final_00014
+    position: {x: 800, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endLeft_Final_00015
+    position: {x: 900, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endLeft_Final_00016
+    position: {x: 0, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endLeft_Final_00017
+    position: {x: 100, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endLeft_Final_00018
+    position: {x: 200, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endLeft_Final_00019
+    position: {x: 300, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endLeft_Final_00020
+    position: {x: 400, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endLeft_Final_00021
+    position: {x: 500, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endLeft_Final_00022
+    position: {x: 600, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endLeft_Final_00023
+    position: {x: 700, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endRight_Final_00000
+    position: {x: 800, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endRight_Final_00001
+    position: {x: 900, y: 400}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endRight_Final_00002
+    position: {x: 0, y: 500}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endRight_Final_00003
+    position: {x: 100, y: 500}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endRight_Final_00004
+    position: {x: 200, y: 500}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endRight_Final_00005
+    position: {x: 300, y: 500}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endRight_Final_00006
+    position: {x: 400, y: 500}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endRight_Final_00007
+    position: {x: 500, y: 500}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endRight_Final_00008
+    position: {x: 600, y: 500}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endRight_Final_00009
+    position: {x: 700, y: 500}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endRight_Final_00010
+    position: {x: 800, y: 500}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endRight_Final_00011
+    position: {x: 900, y: 500}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endRight_Final_00012
+    position: {x: 0, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endRight_Final_00013
+    position: {x: 100, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endRight_Final_00014
+    position: {x: 200, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endRight_Final_00015
+    position: {x: 300, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endRight_Final_00016
+    position: {x: 400, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endRight_Final_00017
+    position: {x: 500, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endRight_Final_00018
+    position: {x: 600, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endRight_Final_00019
+    position: {x: 700, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endRight_Final_00020
+    position: {x: 800, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endRight_Final_00021
+    position: {x: 900, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endRight_Final_00022
+    position: {x: 0, y: 700}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  - name: endRight_Final_00023
+    position: {x: 100, y: 700}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 100, y: 100}
+    frameSize: {x: 100, y: 100}
+    metaData: []
+  offsetSizing: 1
+  metaType: 
+  metaData: []
+  _atlasDataFile: {fileID: 4900000, guid: d67e6b0e66b932d4090cb6952c77e759, type: 3}
+  reloadData: 0
+  bytesDataFile: 35258
+  id: 8
 --- !u!132 &13200000
 GUIText:
   m_ObjectHideFlags: 1
