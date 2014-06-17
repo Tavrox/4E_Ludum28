@@ -40,6 +40,9 @@ Temp
 *.csproj
 *.pidb
 *.sln
+build
+*.goutputstream*
+*.userprefs
  
 #################
 ## Eclipse
