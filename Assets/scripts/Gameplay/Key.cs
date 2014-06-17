@@ -13,6 +13,7 @@ public class Key : MonoBehaviour {
 	private int _nbKeyRequired;
 	private Camera _camera;
 	private HUDLevels _myHUDTarget;
+	public ParticleSystem _myParticle;
 
 	[ContextMenu ("Setup Frame")]
 	private void setFrame()
@@ -39,6 +40,7 @@ public class Key : MonoBehaviour {
 		_KeySprite.Play("keyBattery");
 		if(_levelM.isBoss == true) _KeySprite.frameIndex = 29;
 		_myHUDTarget = GameObject.Find("Player/IngameUI/HUDLevels").GetComponent<HUDLevels>();
+		_myParticle = gameObject.GetComponent<ParticleSystem>();
 		//InvokeRepeating("rotate",0,0.05f);
 	}
 	void rotate() {
@@ -64,6 +66,8 @@ public class Key : MonoBehaviour {
 			gameObject.transform.parent = _myGameParent;
 			transform.localPosition = myPosINI;
 			transform.localScale = _myScale;
+			_myParticle.simulationSpace = UnityEngine.ParticleSystemSimulationSpace.World;
+			_myParticle.enableEmission = true;
 			//GetComponentInChildren<OTSprite>().renderer.enabled = true;
 			_player.hasFinalKey = false;
 		}
@@ -98,5 +102,13 @@ public class Key : MonoBehaviour {
 			yield return new WaitForFixedUpdate();	
 		}
 		new OTTween(gameObject.transform, .5f, OTEasing.Linear).Tween("localScale", new Vector3(0.65f,0.65f, 1f));
+		_myParticle.enableEmission = false;
+		_myParticle.simulationSpace = UnityEngine.ParticleSystemSimulationSpace.Local;
+		if(_player.nbKey ==5) {				
+			foreach(Key k in _player.GetComponentsInChildren<Key>())
+			{
+				k._myParticle.enableEmission = true;
+			}
+		}
 	}
 }
