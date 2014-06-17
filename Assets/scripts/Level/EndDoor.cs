@@ -22,7 +22,7 @@ public class EndDoor : MonoBehaviour {
 		_UINeedKey = GameObject.Find("Player/IngameUI/NeedKey").gameObject;
 		_lvlTimer = GameObject.Find("Player/IngameUI/Timer").GetComponent<Timer>();
 		//if(GameObject.Find(this.name +"/shieldActivation")!=null) {
-		_shieldActivateAnim = GameObject.Find(this.name +"/shieldActivation").GetComponent<OTAnimatingSprite>();
+		if(_shieldActivateAnim==null) _shieldActivateAnim = GameObject.Find(this.name +"/shieldActivation").GetComponent<OTAnimatingSprite>();
 		_shieldActivateAnim.gameObject.name = "shieldActivation"+Random.Range(0,20).ToString();//}
 		//_playerdata = _player.GetComponent<PlayerData>();
 		GameEventManager.GamePause += GamePause;
