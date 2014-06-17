@@ -1090,6 +1090,7 @@ MonoBehaviour:
   nbSpriteTotal: 0
   positionX: 0
   positionSpace: 0
+  opacity: .75
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1135,7 +1136,7 @@ MonoBehaviour:
   _additive: 0
   _materialReference: transparent
   _tintColor: {r: 1, g: 1, b: 1, a: 1}
-  _alpha: .400000006
+  _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
   _frameIndex: 0
@@ -1198,7 +1199,7 @@ MonoBehaviour:
   _additive: 0
   _materialReference: transparent
   _tintColor: {r: 1, g: 1, b: 1, a: 1}
-  _alpha: .400000006
+  _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
   _frameIndex: 0
@@ -1261,7 +1262,7 @@ MonoBehaviour:
   _additive: 0
   _materialReference: transparent
   _tintColor: {r: 1, g: 1, b: 1, a: 1}
-  _alpha: .400000006
+  _alpha: 14
   _image: {fileID: 0}
   sizeImages: []
   _frameIndex: 0
@@ -1297,6 +1298,7 @@ MonoBehaviour:
   nbSpriteTotal: 0
   positionX: 0
   positionSpace: 0
+  opacity: .75
 --- !u!114 &11400016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1342,7 +1344,7 @@ MonoBehaviour:
   _additive: 0
   _materialReference: transparent
   _tintColor: {r: 1, g: 1, b: 1, a: 1}
-  _alpha: .400000006
+  _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
   _frameIndex: 0
@@ -1405,7 +1407,7 @@ MonoBehaviour:
   _additive: 0
   _materialReference: transparent
   _tintColor: {r: 1, g: 1, b: 1, a: 1}
-  _alpha: .400000006
+  _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
   _frameIndex: 0
@@ -1468,7 +1470,7 @@ MonoBehaviour:
   _additive: 0
   _materialReference: transparent
   _tintColor: {r: 1, g: 1, b: 1, a: 1}
-  _alpha: .400000006
+  _alpha: 14
   _image: {fileID: 0}
   sizeImages: []
   _frameIndex: 0
@@ -1531,7 +1533,7 @@ MonoBehaviour:
   _additive: 0
   _materialReference: transparent
   _tintColor: {r: 1, g: 1, b: 1, a: 1}
-  _alpha: .400000006
+  _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
   _frameIndex: 0
@@ -1594,7 +1596,7 @@ MonoBehaviour:
   _additive: 0
   _materialReference: transparent
   _tintColor: {r: 1, g: 1, b: 1, a: 1}
-  _alpha: .400000006
+  _alpha: 1
   _image: {fileID: 0}
   sizeImages: []
   _frameIndex: 0

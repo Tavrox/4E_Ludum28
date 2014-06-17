@@ -13,6 +13,7 @@ public class walkerSmokeManager : MonoBehaviour {
 	public int nbSpriteToDisplay=0, nbSpriteTotal=0;
 	public float positionX, positionSpace;
 	private OTTween _rescale, _slideScaled, _replace;
+	public float opacity;
 	
 	// Use this for initialization
 	void Start () {
@@ -25,6 +26,7 @@ public class walkerSmokeManager : MonoBehaviour {
 		{
 			if(i%2==0)	anim.Play("flow");
 			else anim.Play("flow");
+			anim.alpha=opacity;
 			anim.transform.parent.transform.localPosition = new Vector3(positionX,anim.transform.parent.transform.localPosition.y,anim.transform.parent.transform.localPosition.z);
 			positionX=(_mySide==sideSmoke.Left)?positionX-positionSpace:positionX+positionSpace;
 			nbSpriteTotal++;
@@ -33,6 +35,7 @@ public class walkerSmokeManager : MonoBehaviour {
 		if(i%2==0) {_endSmoke.Play((_mySide==sideSmoke.Left)?"left":"right");_endSmoke.transform.parent.transform.localScale=new Vector3(1f, _endSmoke.transform.parent.transform.localScale.y,_endSmoke.transform.parent.transform.localScale.z);}
 		else {_endSmoke.Play((_mySide==sideSmoke.Left)?"right":"left");_endSmoke.transform.parent.transform.localScale=new Vector3(-1f, _endSmoke.transform.parent.transform.localScale.y,_endSmoke.transform.parent.transform.localScale.z);}
 		_endSmoke.transform.parent.transform.localPosition = new Vector3((_mySide==sideSmoke.Left)?positionX:positionX,_tabSmoke[0].transform.parent.transform.localPosition.y,_endSmoke.transform.parent.transform.position.z);
+		_endSmoke.alpha=opacity;
 	}
 
 	public void showNbSmoke() {

@@ -20072,7 +20072,7 @@ MonoBehaviour:
   _atlasDataFile: {fileID: 4900000, guid: d67e6b0e66b932d4090cb6952c77e759, type: 3}
   reloadData: 0
   bytesDataFile: 35258
-  id: 8
+  id: 10
 --- !u!132 &13200000
 GUIText:
   m_ObjectHideFlags: 1

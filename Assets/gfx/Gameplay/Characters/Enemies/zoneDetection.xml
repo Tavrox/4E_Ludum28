@@ -316,75 +316,10 @@
                 <key>sourceSize</key>
                 <string>{100,100}</string>
             </dict>
-            <key>animBlobDetect_01.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{400,200},{79,92}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{79,92}}</string>
-                <key>sourceSize</key>
-                <string>{79,92}</string>
-            </dict>
-            <key>animBlobDetect_02.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{479,200},{79,92}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{79,92}}</string>
-                <key>sourceSize</key>
-                <string>{79,92}</string>
-            </dict>
-            <key>animBlobDetect_03.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{558,200},{79,92}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{79,92}}</string>
-                <key>sourceSize</key>
-                <string>{79,92}</string>
-            </dict>
-            <key>animBlobDetect_04.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{637,200},{79,92}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{79,92}}</string>
-                <key>sourceSize</key>
-                <string>{79,92}</string>
-            </dict>
-            <key>animBlobDetect_05.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{716,200},{79,92}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{79,92}}</string>
-                <key>sourceSize</key>
-                <string>{79,92}</string>
-            </dict>
             <key>endLeft_Final_00000.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{795,200},{100,100}}</string>
+                <string>{{400,200},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -397,7 +332,7 @@
             <key>endLeft_Final_00001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{895,200},{100,100}}</string>
+                <string>{{500,200},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -410,7 +345,7 @@
             <key>endLeft_Final_00002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,300},{100,100}}</string>
+                <string>{{600,200},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -423,7 +358,7 @@
             <key>endLeft_Final_00003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{100,300},{100,100}}</string>
+                <string>{{700,200},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -436,7 +371,7 @@
             <key>endLeft_Final_00004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{200,300},{100,100}}</string>
+                <string>{{800,200},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -449,7 +384,7 @@
             <key>endLeft_Final_00005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{300,300},{100,100}}</string>
+                <string>{{900,200},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -462,7 +397,7 @@
             <key>endLeft_Final_00006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{400,300},{100,100}}</string>
+                <string>{{0,300},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -475,7 +410,7 @@
             <key>endLeft_Final_00007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{500,300},{100,100}}</string>
+                <string>{{100,300},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -488,7 +423,7 @@
             <key>endLeft_Final_00008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{600,300},{100,100}}</string>
+                <string>{{200,300},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -501,7 +436,7 @@
             <key>endLeft_Final_00009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{700,300},{100,100}}</string>
+                <string>{{300,300},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -514,7 +449,7 @@
             <key>endLeft_Final_00010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{800,300},{100,100}}</string>
+                <string>{{400,300},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -527,7 +462,7 @@
             <key>endLeft_Final_00011.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{900,300},{100,100}}</string>
+                <string>{{500,300},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -540,7 +475,7 @@
             <key>endLeft_Final_00012.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,400},{100,100}}</string>
+                <string>{{600,300},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -553,7 +488,7 @@
             <key>endLeft_Final_00013.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{100,400},{100,100}}</string>
+                <string>{{700,300},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -566,7 +501,7 @@
             <key>endLeft_Final_00014.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{200,400},{100,100}}</string>
+                <string>{{800,300},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -579,7 +514,7 @@
             <key>endLeft_Final_00015.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{300,400},{100,100}}</string>
+                <string>{{900,300},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -592,7 +527,7 @@
             <key>endLeft_Final_00016.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{400,400},{100,100}}</string>
+                <string>{{0,400},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -605,7 +540,7 @@
             <key>endLeft_Final_00017.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{500,400},{100,100}}</string>
+                <string>{{100,400},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -618,7 +553,7 @@
             <key>endLeft_Final_00018.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{600,400},{100,100}}</string>
+                <string>{{200,400},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -631,7 +566,7 @@
             <key>endLeft_Final_00019.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{700,400},{100,100}}</string>
+                <string>{{300,400},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -644,7 +579,7 @@
             <key>endLeft_Final_00020.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{800,400},{100,100}}</string>
+                <string>{{400,400},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -657,7 +592,7 @@
             <key>endLeft_Final_00021.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{900,400},{100,100}}</string>
+                <string>{{500,400},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -670,7 +605,7 @@
             <key>endLeft_Final_00022.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,500},{100,100}}</string>
+                <string>{{600,400},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -683,7 +618,7 @@
             <key>endLeft_Final_00023.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{100,500},{100,100}}</string>
+                <string>{{700,400},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -696,7 +631,7 @@
             <key>endRight_Final_00000.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{200,500},{100,100}}</string>
+                <string>{{800,400},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -709,7 +644,7 @@
             <key>endRight_Final_00001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{300,500},{100,100}}</string>
+                <string>{{900,400},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -722,7 +657,7 @@
             <key>endRight_Final_00002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{400,500},{100,100}}</string>
+                <string>{{0,500},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -735,7 +670,7 @@
             <key>endRight_Final_00003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{500,500},{100,100}}</string>
+                <string>{{100,500},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -748,7 +683,7 @@
             <key>endRight_Final_00004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{600,500},{100,100}}</string>
+                <string>{{200,500},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -761,7 +696,7 @@
             <key>endRight_Final_00005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{700,500},{100,100}}</string>
+                <string>{{300,500},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -774,7 +709,7 @@
             <key>endRight_Final_00006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{800,500},{100,100}}</string>
+                <string>{{400,500},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -787,7 +722,7 @@
             <key>endRight_Final_00007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{900,500},{100,100}}</string>
+                <string>{{500,500},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -800,7 +735,7 @@
             <key>endRight_Final_00008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,600},{100,100}}</string>
+                <string>{{600,500},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -813,7 +748,7 @@
             <key>endRight_Final_00009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{100,600},{100,100}}</string>
+                <string>{{700,500},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -826,7 +761,7 @@
             <key>endRight_Final_00010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{200,600},{100,100}}</string>
+                <string>{{800,500},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -839,7 +774,7 @@
             <key>endRight_Final_00011.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{300,600},{100,100}}</string>
+                <string>{{900,500},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -852,7 +787,7 @@
             <key>endRight_Final_00012.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{400,600},{100,100}}</string>
+                <string>{{0,600},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -865,7 +800,7 @@
             <key>endRight_Final_00013.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{500,600},{100,100}}</string>
+                <string>{{100,600},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -878,7 +813,7 @@
             <key>endRight_Final_00014.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{600,600},{100,100}}</string>
+                <string>{{200,600},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -891,7 +826,7 @@
             <key>endRight_Final_00015.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{700,600},{100,100}}</string>
+                <string>{{300,600},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -904,7 +839,7 @@
             <key>endRight_Final_00016.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{800,600},{100,100}}</string>
+                <string>{{400,600},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -917,7 +852,7 @@
             <key>endRight_Final_00017.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{900,600},{100,100}}</string>
+                <string>{{500,600},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -930,7 +865,7 @@
             <key>endRight_Final_00018.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,700},{100,100}}</string>
+                <string>{{600,600},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -943,7 +878,7 @@
             <key>endRight_Final_00019.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{100,700},{100,100}}</string>
+                <string>{{700,600},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -956,7 +891,7 @@
             <key>endRight_Final_00020.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{200,700},{100,100}}</string>
+                <string>{{800,600},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -969,7 +904,7 @@
             <key>endRight_Final_00021.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{300,700},{100,100}}</string>
+                <string>{{900,600},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -982,7 +917,7 @@
             <key>endRight_Final_00022.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{400,700},{100,100}}</string>
+                <string>{{0,700},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -995,7 +930,7 @@
             <key>endRight_Final_00023.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{500,700},{100,100}}</string>
+                <string>{{100,700},{100,100}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -1015,7 +950,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:60e918f328cc97e71a3f2dc2e189d7e4:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:a53071ccea351d1e1db5ef233824279b:1/1$</string>
             <key>textureFileName</key>
             <string>zoneDetection.png</string>
         </dict>
