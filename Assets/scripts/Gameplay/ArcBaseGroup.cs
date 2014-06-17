@@ -22,10 +22,15 @@ public class ArcBaseGroup : MonoBehaviour {
 		if (_other.CompareTag("Crate") && lastEntered!=_other.GetInstanceID())
 		{
 			lastEntered = _other.GetInstanceID();
+			StartCoroutine("resetLastEntered");
 			foreach(ArcElectric _arc in arcs) _arc.turnOFF();
 			foreach(BaseElectric _base in bases) _base.turnOFF();
 			nbCrates++;
 		}
+	}
+	IEnumerator resetLastEntered() {
+		yield return new WaitForSeconds(0.25f);
+		lastEntered=0;
 	}
 	void OnTriggerExit(Collider _other)
 	{
