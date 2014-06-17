@@ -7,6 +7,7 @@ public class ArcBaseGroup : MonoBehaviour {
 	public List<ArcElectric> arcs = new List<ArcElectric>();
 	public List<BaseElectric> bases = new List<BaseElectric>();
 	public int nbCrates = 0;
+	private int lastEntered=0;
 	
 	void Start () {
 		GameEventManager.GameStart += GameStart;
@@ -18,8 +19,9 @@ public class ArcBaseGroup : MonoBehaviour {
 	}
 	void OnTriggerEnter(Collider _other)
 	{//print (_other.tag);
-		if (_other.CompareTag("Crate"))
+		if (_other.CompareTag("Crate") && lastEntered!=_other.GetInstanceID())
 		{
+			lastEntered = _other.GetInstanceID();
 			foreach(ArcElectric _arc in arcs) _arc.turnOFF();
 			foreach(BaseElectric _base in bases) _base.turnOFF();
 			nbCrates++;
