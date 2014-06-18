@@ -43,7 +43,10 @@ Temp
 build
 *.goutputstream*
 *.userprefs
- 
+
+# include meta files
+!*.*.meta
+
 #################
 ## Eclipse
 #################
