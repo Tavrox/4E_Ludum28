@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
-  - 114: {fileID: 11400000}
+  - 114: {fileID: 11400022}
   m_Layer: 0
   m_Name: BatteryColor
   m_TagString: Untagged
@@ -28,7 +28,7 @@ GameObject:
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
   m_Layer: 0
-  m_Name: color-8
+  m_Name: color-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,7 +46,7 @@ GameObject:
   - 33: {fileID: 3300002}
   - 23: {fileID: 2300002}
   m_Layer: 0
-  m_Name: color-9
+  m_Name: color-21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ GameObject:
   - 33: {fileID: 3300004}
   - 23: {fileID: 2300004}
   m_Layer: 0
-  m_Name: color-6
+  m_Name: color-5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,7 +149,7 @@ GameObject:
   - 33: {fileID: 3300008}
   - 23: {fileID: 2300008}
   m_Layer: 0
-  m_Name: color-7
+  m_Name: color-10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -183,7 +183,7 @@ GameObject:
   - 33: {fileID: 3300010}
   - 23: {fileID: 2300010}
   m_Layer: 0
-  m_Name: color-10
+  m_Name: color-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -197,7 +197,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400022}
-  - 114: {fileID: 11400022}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: BatteryColor
   m_TagString: Untagged
@@ -250,7 +250,7 @@ GameObject:
   - 33: {fileID: 3300014}
   - 23: {fileID: 2300014}
   m_Layer: 0
-  m_Name: shieldActivation
+  m_Name: shieldActivation-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -319,7 +319,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.1355972, y: .413650513, z: 0}
+  m_LocalPosition: {x: 22.3420677, y: -13.7691803, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400012}
@@ -432,7 +432,7 @@ Transform:
   m_GameObject: {fileID: 100028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .071308136, y: 1.76763535, z: .00176050456}
-  m_LocalScale: {x: 2.5, y: 2, z: 1}
+  m_LocalScale: {x: 2.5, y: 1.99999928, z: 1}
   m_Children: []
   m_Father: {fileID: 400010}
 --- !u!23 &2300000
@@ -676,14 +676,14 @@ MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
+  m_GameObject: {fileID: 100022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da6b17f01b88ffc4e92cb8ab5334abaf, type: 3}
+  m_Script: {fileID: 11500000, guid: 738293802846ed74faa13b1c2cf9b85e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _batteryColorSprite: {fileID: 0}
-  twinkle: 1
+  twinkle: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -695,7 +695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18d0574a4fa59946a49ede6640a1f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: color-8
+  _name: color-1
   _position: {x: .019230783, y: .0925925374}
   _size: {x: .442307502, y: .425925821}
   _rotation: 0
@@ -748,7 +748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18d0574a4fa59946a49ede6640a1f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: color-9
+  _name: color-21
   _position: {x: .019230783, y: .0925925374}
   _size: {x: .442307502, y: .425925821}
   _rotation: 0
@@ -801,7 +801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18d0574a4fa59946a49ede6640a1f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: color-6
+  _name: color-5
   _position: {x: .019230783, y: .0925925374}
   _size: {x: .442307502, y: .425925821}
   _rotation: 0
@@ -913,11 +913,11 @@ MonoBehaviour:
   _nbKeyRequired: 3
   batteriesColor:
   - {fileID: 11400012}
-  - {fileID: 11400022}
-  - {fileID: 11400018}
   - {fileID: 11400000}
+  - {fileID: 11400018}
   - {fileID: 11400014}
-  _shieldActivateAnim: {fileID: 0}
+  - {fileID: 11400022}
+  _shieldActivateAnim: {fileID: 11400026}
   InputMan: {fileID: 0}
 --- !u!114 &11400012
 MonoBehaviour:
@@ -927,11 +927,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 100012}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da6b17f01b88ffc4e92cb8ab5334abaf, type: 3}
+  m_Script: {fileID: 11500000, guid: 738293802846ed74faa13b1c2cf9b85e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _batteryColorSprite: {fileID: 0}
-  twinkle: 1
+  twinkle: 0
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -940,11 +940,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 100014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da6b17f01b88ffc4e92cb8ab5334abaf, type: 3}
+  m_Script: {fileID: 11500000, guid: 738293802846ed74faa13b1c2cf9b85e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _batteryColorSprite: {fileID: 0}
-  twinkle: 1
+  twinkle: 0
 --- !u!114 &11400016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -956,7 +956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18d0574a4fa59946a49ede6640a1f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: color-7
+  _name: color-10
   _position: {x: .019230783, y: .0925925374}
   _size: {x: .442307502, y: .425925821}
   _rotation: 0
@@ -1006,11 +1006,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 100018}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da6b17f01b88ffc4e92cb8ab5334abaf, type: 3}
+  m_Script: {fileID: 11500000, guid: 738293802846ed74faa13b1c2cf9b85e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _batteryColorSprite: {fileID: 0}
-  twinkle: 1
+  twinkle: 0
 --- !u!114 &11400020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1022,7 +1022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18d0574a4fa59946a49ede6640a1f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: color-10
+  _name: color-2
   _position: {x: .019230783, y: .0925925374}
   _size: {x: .442307502, y: .425925821}
   _rotation: 0
@@ -1069,14 +1069,14 @@ MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100022}
+  m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da6b17f01b88ffc4e92cb8ab5334abaf, type: 3}
+  m_Script: {fileID: 11500000, guid: 738293802846ed74faa13b1c2cf9b85e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _batteryColorSprite: {fileID: 0}
-  twinkle: 1
+  twinkle: 0
 --- !u!114 &11400024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1113,7 +1113,7 @@ MonoBehaviour:
   protoType: 
   baseName: spr-2
   oSize: {x: 5.20833349, y: 3.125}
-  imageSize: {x: 1.57470727, y: 2.56381369}
+  imageSize: {x: 5, y: 3}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
@@ -1141,9 +1141,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e0774980171c514ea93208b47048a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: shieldActivation
+  _name: shieldActivation-2
   _position: {x: .071308136, y: 1.76763535}
-  _size: {x: 2.5, y: 2}
+  _size: {x: 2.5, y: 1.99999928}
   _rotation: 0
   _pivot: 4
   _pivotPoint: {x: 0, y: 0}
@@ -1166,7 +1166,7 @@ MonoBehaviour:
   protoType: 
   baseName: shieldActivation
   oSize: {x: 10.416667, y: 8.33333397}
-  imageSize: {x: 500, y: 399.999969}
+  imageSize: {x: 2.5, y: 1.99999928}
   _offset: {x: 0, y: 0}
   _baseOffset: {x: 0, y: 0}
   _flipHorizontal: 0
