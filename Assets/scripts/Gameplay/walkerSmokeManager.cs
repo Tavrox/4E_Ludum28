@@ -20,7 +20,7 @@ public class walkerSmokeManager : MonoBehaviour {
 		_tabSmoke = gameObject.GetComponentsInChildren<OTAnimatingSprite>();
 		positionSpace = _tabSmoke[0].size.x;
 		positionX = (_mySide==sideSmoke.Left)?-_tabSmoke[0].size.x/2:_tabSmoke[0].size.x/2;
-		print(positionX);
+//		print(positionX);
 		int i = 0;
 		foreach(OTAnimatingSprite anim in _tabSmoke)
 		{

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class LeverLight : MonoBehaviour {
 	
-	public float speed;
+	private float speed;
 	public LeverLightPath _myPath;
 	[HideInInspector] public float initSpeed;
 	[HideInInspector] public Vector3 direction;
@@ -23,6 +23,7 @@ public class LeverLight : MonoBehaviour {
 	}
 	public void initLight() {
 		currentWaypoint = 0;
+		speed = _myPath.speed;
 		gameObject.transform.position =_myPath.path[currentWaypoint].position;
 		initPos = gameObject.transform.position;
 		finished = false;
@@ -33,7 +34,7 @@ public class LeverLight : MonoBehaviour {
 		if(!GameEventManager.gamePaused && !finished) { 
 			pos = gameObject.transform.position;
 			direction = Vector3.Normalize(target - pos);
-			if(Vector3.Distance(pos,target)<0.05f) {
+			if(Vector3.Distance(pos,target)<0.1f) {
 				if(currentWaypoint == _myPath.path.Count-1) {
 					finished=true;
 				}

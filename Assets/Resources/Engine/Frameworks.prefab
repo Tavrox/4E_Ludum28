@@ -3300,6 +3300,70 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &100348
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400348}
+  - 114: {fileID: 11400350}
+  m_Layer: 0
+  m_Name: alarmSheet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100350
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400350}
+  - 114: {fileID: 11400352}
+  m_Layer: 0
+  m_Name: alarmAnims
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100352
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400352}
+  - 114: {fileID: 11400356}
+  m_Layer: 0
+  m_Name: blobSplash
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100354
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400354}
+  - 114: {fileID: 11400354}
+  m_Layer: 0
+  m_Name: blobSplashAnims
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -4627,9 +4691,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 400348}
   - {fileID: 400078}
   - {fileID: 400140}
   - {fileID: 400340}
+  - {fileID: 400352}
   - {fileID: 400162}
   - {fileID: 400210}
   - {fileID: 400116}
@@ -4812,9 +4878,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 400350}
   - {fileID: 400098}
   - {fileID: 400196}
   - {fileID: 400342}
+  - {fileID: 400354}
   - {fileID: 400022}
   - {fileID: 400150}
   - {fileID: 400118}
@@ -5387,6 +5455,50 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400222}
+--- !u!4 &400348
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100348}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 31.277319, y: -34.0159645, z: -7.99536133}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400222}
+--- !u!4 &400350
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100350}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 31.277319, y: -34.0159645, z: -7.99536133}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400250}
+--- !u!4 &400352
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100352}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 34.9995689, y: -32.801754, z: -7.99707031}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400222}
+--- !u!4 &400354
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100354}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 34.9995689, y: -32.801754, z: -7.99707031}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400250}
 --- !u!82 &8200000
 AudioSource:
   m_ObjectHideFlags: 1
@@ -20073,6 +20185,576 @@ MonoBehaviour:
   reloadData: 0
   bytesDataFile: 36216
   id: 13
+--- !u!114 &11400350
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd220758bd0b8b4685199267909af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: alarmSheet
+  _sheetSize: {x: 2048, y: 512}
+  texture: {fileID: 2800000, guid: 4b247bb66bf503849882dcf84c3c7d4e, type: 3}
+  sizeTextures: []
+  generateSprites: 0
+  atlasData:
+  - name: LumDanger0000
+    position: {x: 0, y: 0}
+    offset: {x: 93, y: 97}
+    rotated: 0
+    size: {x: 18, y: 18}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: LumDanger0001
+    position: {x: 18, y: 0}
+    offset: {x: 93, y: 97}
+    rotated: 0
+    size: {x: 18, y: 18}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: LumDanger0002
+    position: {x: 36, y: 0}
+    offset: {x: 83, y: 59}
+    rotated: 0
+    size: {x: 38, y: 92}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: LumDanger0003
+    position: {x: 74, y: 0}
+    offset: {x: 75, y: 39}
+    rotated: 0
+    size: {x: 56, y: 134}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: LumDanger0004
+    position: {x: 130, y: 0}
+    offset: {x: 66, y: 19}
+    rotated: 0
+    size: {x: 74, y: 174}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: LumDanger0005
+    position: {x: 204, y: 0}
+    offset: {x: 71, y: 18}
+    rotated: 0
+    size: {x: 68, y: 178}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: LumDanger0006
+    position: {x: 272, y: 0}
+    offset: {x: 41, y: 18}
+    rotated: 0
+    size: {x: 128, y: 180}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: LumDanger0007
+    position: {x: 400, y: 0}
+    offset: {x: 20, y: 28}
+    rotated: 0
+    size: {x: 168, y: 162}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: LumDanger0008
+    position: {x: 568, y: 0}
+    offset: {x: 14, y: 52}
+    rotated: 0
+    size: {x: 178, y: 116}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: LumDanger0009
+    position: {x: 746, y: 0}
+    offset: {x: 12, y: 68}
+    rotated: 0
+    size: {x: 178, y: 84}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: LumDanger0010
+    position: {x: 924, y: 0}
+    offset: {x: 11, y: 41}
+    rotated: 0
+    size: {x: 176, y: 138}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: LumDanger0011
+    position: {x: 1100, y: 0}
+    offset: {x: 24, y: 24}
+    rotated: 0
+    size: {x: 150, y: 170}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: LumDanger0012
+    position: {x: 1250, y: 0}
+    offset: {x: 48, y: 20}
+    rotated: 0
+    size: {x: 100, y: 176}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: LumDanger0013
+    position: {x: 1350, y: 0}
+    offset: {x: 48, y: 18}
+    rotated: 0
+    size: {x: 100, y: 176}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: LumDanger0014
+    position: {x: 1450, y: 0}
+    offset: {x: 24, y: 19}
+    rotated: 0
+    size: {x: 150, y: 170}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: LumDanger0015
+    position: {x: 1600, y: 0}
+    offset: {x: 11, y: 34}
+    rotated: 0
+    size: {x: 176, y: 138}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: LumDanger0016
+    position: {x: 1776, y: 0}
+    offset: {x: 12, y: 61}
+    rotated: 0
+    size: {x: 178, y: 84}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: LumDanger0017
+    position: {x: 0, y: 180}
+    offset: {x: 14, y: 45}
+    rotated: 0
+    size: {x: 178, y: 116}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: LumDanger0018
+    position: {x: 178, y: 180}
+    offset: {x: 21, y: 22}
+    rotated: 0
+    size: {x: 166, y: 162}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: LumDanger0019
+    position: {x: 344, y: 180}
+    offset: {x: 41, y: 14}
+    rotated: 0
+    size: {x: 128, y: 180}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  - name: LumDanger0020
+    position: {x: 472, y: 180}
+    offset: {x: 71, y: 18}
+    rotated: 0
+    size: {x: 68, y: 178}
+    frameSize: {x: 200, y: 200}
+    metaData: []
+  offsetSizing: 1
+  metaType: 
+  metaData: []
+  _atlasDataFile: {fileID: 4900000, guid: 25f5a602fc0f6ba4985a2074a1f9bca0, type: 3}
+  reloadData: 0
+  bytesDataFile: 10752
+  id: 2
+--- !u!114 &11400352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf791b8ec508eb4a94c7295007afe68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: alarmAnims
+  _fps: 20
+  _duration: 1.04999995
+  framesets:
+  - name: off
+    container: {fileID: 11400350}
+    startFrame: 0
+    endFrame: 0
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 0
+    _containerName: alarmSheet
+  - name: on
+    container: {fileID: 11400350}
+    startFrame: 1
+    endFrame: 5
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 1
+    _containerName: alarmSheet
+  - name: rotate
+    container: {fileID: 11400350}
+    startFrame: 6
+    endFrame: 20
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 6
+    _containerName: alarmSheet
+--- !u!114 &11400354
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf791b8ec508eb4a94c7295007afe68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: blobSplashAnims
+  _fps: 20
+  _duration: 1.89999998
+  framesets:
+  - name: 1
+    container: {fileID: 11400356}
+    startFrame: 0
+    endFrame: 20
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 0
+    _containerName: blobSplash
+  - name: 2
+    container: {fileID: 11400356}
+    startFrame: 24
+    endFrame: 38
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 21
+    _containerName: blobSplash
+  - name: 1Slide
+    container: {fileID: 11400356}
+    startFrame: 18
+    endFrame: 19
+    frameNames: []
+    frameNameMask: 
+    sortFrameNames: 0
+    playCount: 1
+    pingPong: 0
+    singleDuration: 0
+    startIndex: 36
+    _containerName: blobSplash
+--- !u!114 &11400356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccd220758bd0b8b4685199267909af83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: blobSplash
+  _sheetSize: {x: 512, y: 2048}
+  texture: {fileID: 2800000, guid: 95ad78a7c6b79294c85ecf728f8df89b, type: 3}
+  sizeTextures: []
+  generateSprites: 0
+  atlasData:
+  - name: BlobdelespaceExport0001
+    position: {x: 0, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0002
+    position: {x: 150, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0003
+    position: {x: 300, y: 0}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0004
+    position: {x: 0, y: 150}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0005
+    position: {x: 150, y: 150}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0006
+    position: {x: 300, y: 150}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0007
+    position: {x: 0, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0008
+    position: {x: 150, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0009
+    position: {x: 300, y: 300}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0010
+    position: {x: 0, y: 450}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0011
+    position: {x: 150, y: 450}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0012
+    position: {x: 300, y: 450}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0013
+    position: {x: 0, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0014
+    position: {x: 150, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0015
+    position: {x: 300, y: 600}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0016
+    position: {x: 0, y: 750}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0017
+    position: {x: 150, y: 750}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0018
+    position: {x: 300, y: 750}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0019
+    position: {x: 0, y: 900}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0020
+    position: {x: 150, y: 900}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0021
+    position: {x: 300, y: 900}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0022
+    position: {x: 0, y: 1050}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0023
+    position: {x: 150, y: 1050}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0024
+    position: {x: 300, y: 1050}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0025
+    position: {x: 0, y: 1200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0026
+    position: {x: 150, y: 1200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0027
+    position: {x: 300, y: 1200}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0028
+    position: {x: 0, y: 1350}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0029
+    position: {x: 150, y: 1350}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0030
+    position: {x: 300, y: 1350}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0031
+    position: {x: 0, y: 1500}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0032
+    position: {x: 150, y: 1500}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0033
+    position: {x: 300, y: 1500}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0034
+    position: {x: 0, y: 1650}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0035
+    position: {x: 150, y: 1650}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0036
+    position: {x: 300, y: 1650}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0037
+    position: {x: 0, y: 1800}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0038
+    position: {x: 150, y: 1800}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  - name: BlobdelespaceExport0039
+    position: {x: 300, y: 1800}
+    offset: {x: 0, y: 0}
+    rotated: 0
+    size: {x: 150, y: 150}
+    frameSize: {x: 150, y: 150}
+    metaData: []
+  offsetSizing: 1
+  metaType: 
+  metaData: []
+  _atlasDataFile: {fileID: 4900000, guid: 4f3e212e1696fdf4985bd1094be785b9, type: 3}
+  reloadData: 0
+  bytesDataFile: 19691
+  id: 1
 --- !u!132 &13200000
 GUIText:
   m_ObjectHideFlags: 1
