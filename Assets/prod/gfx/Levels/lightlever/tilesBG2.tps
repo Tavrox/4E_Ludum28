@@ -22,7 +22,7 @@
         <key>dataFormat</key>
         <string>cocos2d</string>
         <key>textureFileName</key>
-        <filename>AnimeBouclierVsBlob.png</filename>
+        <filename>lightlever.png</filename>
         <key>flipPVR</key>
         <false/>
         <key>ditherType</key>
@@ -40,7 +40,7 @@
             </struct>
         </struct>
         <key>shapePadding</key>
-        <uint>0</uint>
+        <uint>2</uint>
         <key>jpgQuality</key>
         <uint>80</uint>
         <key>pngOptimizationLevel</key>
@@ -54,9 +54,9 @@
         <key>maxTextureSize</key>
         <QSize>
             <key>width</key>
-            <int>4096</int>
+            <int>2048</int>
             <key>height</key>
-            <int>4096</int>
+            <int>2048</int>
         </QSize>
         <key>fixedTextureSize</key>
         <QSize>
@@ -87,7 +87,7 @@
             <key>basic</key>
             <struct type="AlgorithmBasicSettings">
                 <key>sortBy</key>
-                <enum type="AlgorithmBasicSettings::SortBy">Best</enum>
+                <enum type="AlgorithmBasicSettings::SortBy">Name</enum>
                 <key>order</key>
                 <enum type="AlgorithmBasicSettings::Order">Ascending</enum>
             </struct>
@@ -99,7 +99,7 @@
             <key>packageName</key>
             <string>Texture</string>
             <key>javaFileName</key>
-            <filename>AnimeBouclierVsBlob.java</filename>
+            <filename>tilesBG2.java</filename>
             <key>wrap</key>
             <struct type="AndEngineWrap">
                 <key>s</key>
@@ -111,7 +111,7 @@
             <enum type="AndEngine::MagFilter">MagLinear</enum>
         </struct>
         <key>dataFileName</key>
-        <filename>AnimeBouclierVsBlob.xml</filename>
+        <filename>lightlever.xml</filename>
         <key>multiPack</key>
         <false/>
         <key>mainExtension</key>
@@ -126,7 +126,7 @@
             <string></string>
         </struct>
         <key>autoAliasEnabled</key>
-        <true/>
+        <false/>
         <key>trimSpriteNames</key>
         <false/>
         <key>globalSpriteSettings</key>
@@ -148,30 +148,17 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>VaisseauAttacké0005.png</filename>
-            <filename>VaisseauAttacké0006.png</filename>
-            <filename>VaisseauAttacké0007.png</filename>
-            <filename>VaisseauAttacké0008.png</filename>
-            <filename>VaisseauAttacké0009.png</filename>
-            <filename>VaisseauAttacké0010.png</filename>
-            <filename>VaisseauAttacké0011.png</filename>
-            <filename>VaisseauAttacké0012.png</filename>
-            <filename>VaisseauAttacké0013.png</filename>
-            <filename>VaisseauAttacké0014.png</filename>
-            <filename>VaisseauAttacké0015.png</filename>
-            <filename>VaisseauAttacké0016.png</filename>
-            <filename>VaisseauAttacké0017.png</filename>
-            <filename>VaisseauAttacké0018.png</filename>
-            <filename>VaisseauAttacké0019.png</filename>
-            <filename>VaisseauAttacké0020.png</filename>
-            <filename>VaisseauAttacké0021.png</filename>
-            <filename>VaisseauAttacké0022.png</filename>
-            <filename>VaisseauAttacké0023.png</filename>
-            <filename>VaisseauAttacké0024.png</filename>
-            <filename>VaisseauAttacké0001.png</filename>
-            <filename>VaisseauAttacké0002.png</filename>
-            <filename>VaisseauAttacké0003.png</filename>
-            <filename>VaisseauAttacké0004.png</filename>
+            <filename>lights_00.png</filename>
+            <filename>lights_01.png</filename>
+            <filename>lights_02.png</filename>
+            <filename>lights_03.png</filename>
+            <filename>lights_04.png</filename>
+            <filename>lights_05.png</filename>
+            <filename>lights_06.png</filename>
+            <filename>lights_07.png</filename>
+            <filename>lights_08.png</filename>
+            <filename>lights_09.png</filename>
+            <filename>lights_10.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
