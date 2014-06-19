@@ -16,7 +16,6 @@ Library\assetDatabase3
 # Git
 ######
 *.orig
-*.orig.meta
 *.BASE.*
 *.LOCAL.*
 *.REMOTE.*
@@ -33,7 +32,6 @@ Library/ScriptMapper
 Library/assetDatabase3
 Library/cache
 Library/expandedItems
-Library/metadata
 Library/previews
 Library/guidmapper
 Temp
@@ -44,16 +42,12 @@ build
 *.goutputstream*
 *.userprefs
 
-# include meta files
-!*.*.meta
-
 #################
 ## Eclipse
 #################
  
 *.pydevproject
 .project
-.metadata
 bin/
 tmp/
 *.tmp
@@ -211,4 +205,3 @@ pip-log.txt
  
 # Server.dat
 server.dat
-*.meta
