@@ -13,6 +13,7 @@ public class EndDoor : MonoBehaviour {
 	public int _nbKeyRequired=3;
 	public List<BatteryLevels> batteriesColor = new List<BatteryLevels>();
 	public OTAnimatingSprite _shieldActivateAnim;
+	public List<Transform> energyFX = new List<Transform>();
 	//private PlayerData _playerdata;
 	
 	public InputManager InputMan;
@@ -37,6 +38,7 @@ public class EndDoor : MonoBehaviour {
 	public void nextState() {
 		sprite.frameIndex += 1;
 		batteriesColor[_player.nbKey-1].batteryOK();
+		energyFX[_player.nbKey-1].gameObject.SetActive(true);
 	}
 	public void activeStateReached() {
 		_player.hasFinalKey = true;
