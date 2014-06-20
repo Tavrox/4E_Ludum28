@@ -49,7 +49,7 @@ public class Timer : MonoBehaviour {
 //		}
 	}
 	void FixedUpdate() {
-		_txtTimer.gameObject.transform.position = _camera.ScreenToWorldPoint(new Vector3(Screen.width*0.1f-_txtTimer.text.Length*11.4f, Screen.height - (Screen.height*0.09f), _camera.nearClipPlane));
+		_txtTimer.gameObject.transform.position = _camera.ScreenToWorldPoint(new Vector3(Screen.width*0.1f-_txtTimer.text.Length*16f, Screen.height - (Screen.height*0.075f), _camera.nearClipPlane));
 	}
 	//transform.renderer.material.color.a
 	private void updateTimer()

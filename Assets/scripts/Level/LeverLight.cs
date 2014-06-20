@@ -34,7 +34,7 @@ public class LeverLight : MonoBehaviour {
 		if(!GameEventManager.gamePaused && !finished) { 
 			pos = gameObject.transform.position;
 			direction = Vector3.Normalize(target - pos);
-			if(Vector3.Distance(pos,target)<0.1f) {
+			if(Vector3.Distance(pos,target)<0.15f) {
 				if(currentWaypoint == _myPath.path.Count-1) {
 					finished=true;
 				}

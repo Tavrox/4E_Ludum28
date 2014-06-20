@@ -4,7 +4,7 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>lights_00.png</key>
+            <key>lights2_00.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{0,0},{50,50}}</string>
@@ -17,7 +17,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>lights_01.png</key>
+            <key>lights2_01.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{52,0},{50,50}}</string>
@@ -30,7 +30,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>lights_02.png</key>
+            <key>lights2_02.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{104,0},{50,50}}</string>
@@ -43,7 +43,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>lights_03.png</key>
+            <key>lights2_03.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{156,0},{50,50}}</string>
@@ -56,7 +56,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>lights_04.png</key>
+            <key>lights2_04.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{0,52},{50,50}}</string>
@@ -69,7 +69,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>lights_05.png</key>
+            <key>lights2_05.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{52,52},{50,50}}</string>
@@ -82,7 +82,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>lights_06.png</key>
+            <key>lights2_06.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{104,52},{50,50}}</string>
@@ -95,7 +95,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>lights_07.png</key>
+            <key>lights2_07.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{156,52},{50,50}}</string>
@@ -108,7 +108,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>lights_08.png</key>
+            <key>lights2_08.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{0,104},{50,50}}</string>
@@ -121,7 +121,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>lights_09.png</key>
+            <key>lights2_09.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{52,104},{50,50}}</string>
@@ -134,7 +134,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>lights_10.png</key>
+            <key>lights2_10.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{104,104},{50,50}}</string>
@@ -153,13 +153,13 @@
             <key>format</key>
             <integer>2</integer>
             <key>realTextureFileName</key>
-            <string>lightlever.png</string>
+            <string>lightlever2.png</string>
             <key>size</key>
             <string>{256,256}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:64cc64fde02a5422b4a03df5b4fe5749:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:a1523dfb86d3b2954b3f5c3e2df2cf76:1/1$</string>
             <key>textureFileName</key>
-            <string>lightlever.png</string>
+            <string>lightlever2.png</string>
         </dict>
     </dict>
 </plist>
