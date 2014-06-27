@@ -12,13 +12,17 @@ public class SequenceBtn : MonoBehaviour {
 	void Start () {
 		//StartCoroutine("myUpdate");
 		GameEventManager.GameStart += GameStart;
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(!errorDetected) checkRightCombo();
-		if(!solved) checkAllBtnTriggered();
+		if(!GameEventManager.gamePaused) {
+			if(!errorDetected) checkRightCombo();
+			if(!solved) checkAllBtnTriggered();
+		}
 	}
 
 	private void checkRightCombo() {
@@ -52,6 +56,9 @@ public class SequenceBtn : MonoBehaviour {
 		if(allTriggered) {
 			if(errorDetected==false) {
 				seqBtns[1].triggerLever();
+				foreach (Lever btn in seqBtns) {
+					btn.launchLights();
+				}
 				solved = true;
 				MasterAudio.PlaySound ("sequence_succeed");
 				StartCoroutine("resetSequence");
@@ -69,12 +76,20 @@ public class SequenceBtn : MonoBehaviour {
 			btn.StartCoroutine("resetLever");//btn.triggerLever();
 		}
 		yield return new WaitForSeconds(1f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		rightCombo = allTriggered = true;
 		solved = rightComboChecked = errorDetected = false;
 	}
 	private IEnumerator resetRightCombo () {
 		errorLaunched = true;
 		yield return new WaitForSeconds(1.2f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		MasterAudio.PlaySound("sequence_fail");
 		errorDetected = false;
 		errorLaunched = false;
@@ -87,5 +102,13 @@ public class SequenceBtn : MonoBehaviour {
 			rightCombo = allTriggered = true;
 			solved = rightComboChecked = errorDetected = errorLaunched = false;
 		}
+	}
+	void GamePause()
+	{
+		
+	}
+	void GameUnpause()
+	{
+		
 	}
 }

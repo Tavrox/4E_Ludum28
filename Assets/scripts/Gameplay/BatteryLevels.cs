@@ -23,6 +23,10 @@ public class BatteryLevels : MonoBehaviour {
 	private IEnumerator twinkleLittleStar() {
 		_batteryColorSprite.GetComponent<MeshRenderer>().enabled = !_batteryColorSprite.GetComponent<MeshRenderer>().enabled;
 		yield return new WaitForSeconds(0.5f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		if(twinkle) StartCoroutine("twinkleLittleStar");
 	}
 	public void batteryOK() {

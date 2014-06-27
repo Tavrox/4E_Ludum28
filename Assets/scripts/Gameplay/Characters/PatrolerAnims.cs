@@ -36,6 +36,8 @@ public class PatrolerAnims : MonoBehaviour
 		_player 	= GameObject.FindObjectOfType<Player>();
 		_enemy = GetComponent<Patroler>();
 		GameEventManager.GameStart += GameStart;
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
 		animSprite.Play("run");
 		animSprite.alpha = 0.8f;
 	}
@@ -96,5 +98,13 @@ public class PatrolerAnims : MonoBehaviour
 	{
 		yield return new WaitForSeconds(waitTime);
 		AnimationFinished();
+	}
+	void GamePause()
+	{
+		
+	}
+	void GameUnpause()
+	{
+		
 	}
 }

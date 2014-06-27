@@ -11,6 +11,7 @@ public class ArcElectric : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		animSprite = gameObject.GetComponentInChildren<OTAnimatingSprite>();
 		animSprite.Play("arcDefault");
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
 		activeState = true;
@@ -18,6 +19,8 @@ public class ArcElectric : MonoBehaviour {
 		else if(activeTime!=0) StartCoroutine("waitB4Active",true);
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GameOver += GameOver;
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
 		GameEventManager.FinishLevel += FinishLevel;
 		/*if(delayBegin != 0)*/ collider.enabled=false;
 		//MasterAudio.PlaySound("piston_idle");
@@ -32,6 +35,10 @@ public class ArcElectric : MonoBehaviour {
 
 	private IEnumerator waitB4Active(bool alternate) {
 		yield return new WaitForSeconds(delayBegin);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		if(alternate) StartCoroutine("active");
 		else StartCoroutine("activateInfinite");
 	}
@@ -47,6 +54,10 @@ public class ArcElectric : MonoBehaviour {
 			//waitTime = inactiveTime;
 			animSprite.Play("arcDefault");collider.enabled=false; /*MasterAudio.PlaySound("piston_idle");*/}
 		yield return new WaitForSeconds(waitTime);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		StartCoroutine("active");
 	}
 	
@@ -67,7 +78,7 @@ public class ArcElectric : MonoBehaviour {
 		StopCoroutine("activateInfinite");
 		StopCoroutine("SND_activateThenOff");
 		if(!muted) {MasterAudio.FadeOutAllOfSound("piston_idle",0.43f);
-			FESound.playDistancedSound("piston_off",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_off");
+			if(gameObject.transform!=null && _player.transform!=null) FESound.playDistancedSound("piston_off",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_off");
 		}
 	}
 	public void turnON () {
@@ -106,9 +117,17 @@ public class ArcElectric : MonoBehaviour {
 	}
 	IEnumerator activateCollider () {
 		yield return new WaitForSeconds(0f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		collider.enabled=true;
 	}
 	IEnumerator activateInfinite() {
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		yield return new WaitForSeconds(.88f);
 			if(!muted) FESound.playDistancedSound("piston_on",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_on");
 		yield return new WaitForSeconds(0.12f);
@@ -118,18 +137,42 @@ public class ArcElectric : MonoBehaviour {
 			}
 	}
 	IEnumerator SND_activateThenOff() {
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		if(activeTime>=1) yield return new WaitForSeconds(.88f);
 		else if(activeTime<1) yield return new WaitForSeconds(.48f);
 		if(!muted) FESound.playDistancedSound("piston_on",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_on");
 		yield return new WaitForSeconds(0.12f);
 		animSprite.Play("arcON");StartCoroutine("activateCollider");
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		if(!muted) {yield return new WaitForSeconds(0.257f);
 		FESound.playDistancedSound("piston_idle",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_idle");
 		yield return new WaitForSeconds(activeTime-0.257f-0.43f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		FESound.playDistancedSound("piston_idle",gameObject.transform, _player.transform,0f,"fade",0.43f);//MasterAudio.FadeOutAllOfSound("piston_idle",0.43f);
 		FESound.playDistancedSound("piston_off",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_off");
 		yield return new WaitForSeconds(0.43f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		FESound.playDistancedSound("piston_idle",gameObject.transform, _player.transform,0f,"stop");//MasterAudio.StopAllOfSound("piston_idle");
 			}
+	}
+	void GamePause()
+	{
+		
+	}
+	void GameUnpause()
+	{
+		
 	}
 }

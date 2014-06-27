@@ -58,6 +58,10 @@ public class WaveElt : MonoBehaviour {
 	}
 	// Update is called once per frame
 	IEnumerator myUpdate () {
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		if(extendProj && !ligthOffing) StartCoroutine("lightsOff");
 		else {
 			if(myProjMaterial.color.a <= 0) endLife();

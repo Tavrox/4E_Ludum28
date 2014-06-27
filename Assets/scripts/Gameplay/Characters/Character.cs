@@ -109,6 +109,8 @@ public class Character : MonoBehaviour
 
 		StartCoroutine(StartGravity());
 		spawnPos = mypos = new Vector3(thisTransform.position.x,thisTransform.position.y,thisTransform.position.z);
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
 	}
 	
 	IEnumerator StartGravity()
@@ -465,5 +467,13 @@ public class Character : MonoBehaviour
 	public void getDamage(int damage) {
 		HP -= damage;
 		if(HP <=0) gameObject.transform.parent.gameObject.SetActive(false);
+	}
+	void GamePause()
+	{
+		
+	}
+	void GameUnpause()
+	{
+		
 	}
 }

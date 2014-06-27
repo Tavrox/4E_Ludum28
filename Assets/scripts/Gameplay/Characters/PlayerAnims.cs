@@ -47,6 +47,8 @@ public class PlayerAnims : MonoBehaviour
 		anim = GameObject.Find("playerAnims").GetComponent<OTAnimation>();
 		GameEventManager.FinishLevel += FinishLevel;
 		GameEventManager.GameStart += GameStart;
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
 	}
 	void Update() 
 	{
@@ -93,6 +95,10 @@ public class PlayerAnims : MonoBehaviour
 	
 	private IEnumerator waitB4Restart (float delayRestart) {//print ("attend");
 		yield return new WaitForSeconds(delayRestart);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		//print ("attendu");
 		stopped = false;//print (animSprite.frameIndex+1);
 		if(animSprite.frameIndex == fDeathB) { //Reprend anim mort
@@ -458,6 +464,18 @@ public class PlayerAnims : MonoBehaviour
 	IEnumerator WaitAndCallback(float waitTime)
 	{
 		yield return new WaitForSeconds(waitTime);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		AnimationFinished();
+	}
+	void GamePause()
+	{
+		
+	}
+	void GameUnpause()
+	{
+		
 	}
 }

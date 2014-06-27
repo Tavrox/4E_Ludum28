@@ -7,23 +7,28 @@ public class LevelManager : MonoBehaviour {
 	[SerializeField] private Player player;
 	[SerializeField] private Camera myCamera;
 	
-	public int ID;
+	public int ID, _realID;
 	public int chosenVariation;
 	public bool isBoss;
 	public static BMTuning TuningDocument;
 
-	private int _secLeft;
+	private int _secLeft, _scoreTotalLvl;
 	private TileImporter _tileImporter;
 	private PlayerData _pdata;
 	private string _rand;
 	private Vector3 spawnPoint;
 	private PartyData _partyData;
+	public GameSaveLoad _playerDataLoader;
+	public Transform _bulleTuto;
 
 	void Awake()
 	{
 		TuningDocument  = Instantiate(Resources.Load("Tuning/Global")) as BMTuning;
-		if(GameObject.Find("PartyData") != null){_partyData = GameObject.Find("PartyData").GetComponent<PartyData>();
-			chosenVariation = _partyData.choixOccurence;}
+		
+		if(GameObject.Find("PlayerData") != null){_pdata = GameObject.Find("PlayerData").GetComponent<PlayerData>();
+			chosenVariation = _pdata.choixOccurence;}
+//		if(GameObject.Find("PartyData") != null){_partyData = GameObject.Find("PartyData").GetComponent<PartyData>();
+//			chosenVariation = _partyData.choixOccurence;}
 	}
 //	void Update () {
 //		print (chosenVariation);
@@ -71,6 +76,11 @@ public class LevelManager : MonoBehaviour {
 		GameEventManager.NextInstance += NextInstance;
 		
 		playLevelMusic();
+		_playerDataLoader = ScriptableObject.CreateInstance<GameSaveLoad>();
+		_playerDataLoader.LoadXMLToList("blob_minute-players");
+		if(_realID==1 && chosenVariation==1 && _bulleTuto!=null) {
+			_bulleTuto.gameObject.SetActive(true);
+		}
 	}
 	
 	// Update is called once per frame
@@ -92,8 +102,11 @@ public class LevelManager : MonoBehaviour {
 	private void NextInstance ()
 	{
 		if(this != null) {
-		if(chosenVariation<5 && !isBoss) {
-			chosenVariation += 1;
+		if(chosenVariation<5 && !isBoss) { //Si occurence 1 à 4
+//			print (scoreTotalLevel(_realID));
+			_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"score",player._scorePlayer.ToString(), false);
+				print (scoreTotalLevel(_realID));
+			chosenVariation += 1; //On affiche l'occurence suivante
 			foreach (Transform _gameo in GameObject.Find("Level/ObjectImporter").transform)
 			{
 				if (_gameo.gameObject.name == chosenVariation.ToString() || _gameo.gameObject.name == "playerspawn"+chosenVariation)
@@ -106,17 +119,38 @@ public class LevelManager : MonoBehaviour {
 			}
 			if(player.gameObject != null) {player.transform.position = player.spawnPos = GameObject.Find("playerspawn"+chosenVariation).transform.position;
 				player.enabled=true;}
-			
+			_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString(),"score",scoreTotalLevel(_realID).ToString(), false);
+			_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"locked","false", true);
 			TranslateAllInScene();
 			GameEventManager.TriggerGameStart();
 		}
 		else {
 			//chosenVariation = 0;
+			if(isBoss) { //occurence Boss
+					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occBoss","score",player._scorePlayer.ToString(), false);
+					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString(),"score",scoreTotalLevel(_realID).ToString(), false);
+					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+(_realID+1).ToString(),"locked","false", false);
+					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+(_realID+1).ToString()+"/occ1","locked","false", true);
+			}
+			else { //occurence 5
+					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"score",player._scorePlayer.ToString(), false);
+					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString(),"score",scoreTotalLevel(_realID).ToString(), false);
+					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occBoss","locked","false", true);
+			}
 			GameEventManager.TriggerNextLevel();
 			GameEventManager.NextInstance -= NextInstance;
 			DestroyImmediate(this.gameObject);
 		}
 		}
+	}
+	private int scoreTotalLevel(int numLevel) {
+		_scoreTotalLvl = System.Convert.ToInt32(_playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+numLevel.ToString()+"/occ1","score"));
+		_scoreTotalLvl += System.Convert.ToInt32(_playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+numLevel.ToString()+"/occ2","score"));
+		_scoreTotalLvl += System.Convert.ToInt32(_playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+numLevel.ToString()+"/occ3","score"));
+		_scoreTotalLvl += System.Convert.ToInt32(_playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+numLevel.ToString()+"/occ4","score"));
+		_scoreTotalLvl += System.Convert.ToInt32(_playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+numLevel.ToString()+"/occ5","score"));
+		_scoreTotalLvl += System.Convert.ToInt32(_playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+numLevel.ToString()+"/occBoss","score"));
+		return _scoreTotalLvl;
 	}
 	private void NextLevel ()
 	{		
@@ -225,11 +259,12 @@ public class LevelManager : MonoBehaviour {
 	public void TranslateAllInScene()
 	{
 		print ("translateScene");
-		_pdata = GameObject.FindGameObjectWithTag("PlayerData").GetComponent<PlayerData>();
-		_pdata.trans();
-		_pdata.SETUP.TextSheet.SetupTranslation(_pdata.SETUP.ChosenLanguage);
-		TextUI[] allTxt = GameObject.FindObjectsOfType(typeof(TextUI)) as TextUI[];
-		_pdata.SETUP.TextSheet.TranslateAll(ref allTxt);
+		if(_pdata!=null) {
+			_pdata.trans();
+			_pdata.SETUP.TextSheet.SetupTranslation(_pdata.SETUP.ChosenLanguage);
+			TextUI[] allTxt = GameObject.FindObjectsOfType(typeof(TextUI)) as TextUI[];
+			_pdata.SETUP.TextSheet.TranslateAll(ref allTxt);
+		}
 	}
 
 	private void launchScene()

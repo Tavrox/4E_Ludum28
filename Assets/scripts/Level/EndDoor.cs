@@ -13,6 +13,7 @@ public class EndDoor : MonoBehaviour {
 	public int _nbKeyRequired=3;
 	public List<BatteryLevels> batteriesColor = new List<BatteryLevels>();
 	public OTAnimatingSprite _shieldActivateAnim;
+	public List<Transform> energyFX = new List<Transform>();
 	//private PlayerData _playerdata;
 	
 	public InputManager InputMan;
@@ -21,8 +22,12 @@ public class EndDoor : MonoBehaviour {
 		_player = GameObject.Find("Player").GetComponent<Player>();
 		_UINeedKey = GameObject.Find("Player/IngameUI/NeedKey").gameObject;
 		_lvlTimer = GameObject.Find("Player/IngameUI/Timer").GetComponent<Timer>();
-		_shieldActivateAnim = GameObject.Find(this.name +"/shieldActivation").GetComponent<OTAnimatingSprite>();
+		//if(GameObject.Find(this.name +"/shieldActivation")!=null) {
+		if(_shieldActivateAnim==null) _shieldActivateAnim = GameObject.Find(this.name +"/shieldActivation").GetComponent<OTAnimatingSprite>();
+		_shieldActivateAnim.gameObject.name = "shieldActivation"+Random.Range(0,20).ToString();//}
 		//_playerdata = _player.GetComponent<PlayerData>();
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
 		GameEventManager.NextLevel += NextLevel;
 		GameEventManager.NextInstance += NextInstance;
 		GameEventManager.FinishLevel += FinishLevel;
@@ -33,13 +38,14 @@ public class EndDoor : MonoBehaviour {
 	public void nextState() {
 		sprite.frameIndex += 1;
 		batteriesColor[_player.nbKey-1].batteryOK();
+		energyFX[_player.nbKey-1].gameObject.SetActive(true);
 	}
 	public void activeStateReached() {
 		_player.hasFinalKey = true;
 	}
 	void OnTriggerStay(Collider other)
 	{
-		if (other.gameObject.CompareTag("Player") && !triggered)
+		if (other.gameObject.CompareTag("Player") && !triggered && !GameEventManager.gamePaused)
 		{
 			if ((Input.GetKeyDown(InputMan.Action) || Input.GetKeyDown(InputMan.Action2) || Input.GetKey(InputMan.Action3)) && _player.hasFinalKey == true)
 			{
@@ -61,6 +67,10 @@ public class EndDoor : MonoBehaviour {
 	}
 	private IEnumerator lastFrameBuzzer () {
 		yield return new WaitForSeconds(1f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		//sprite.frameIndex += 1;
 	}
 	private void FinishLevel() {
@@ -89,6 +99,10 @@ public class EndDoor : MonoBehaviour {
 	IEnumerator EndGame()
 	{
 		yield return new WaitForSeconds(3f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		MasterAudio.StopAllOfSound("bg");
 		MasterAudio.StopAllOfSound("intro");
 		//MasterAudio.StopAllOfSound("tuto");
@@ -108,5 +122,13 @@ public class EndDoor : MonoBehaviour {
 	}
 	private void NextLevel ()
 	{
+	}
+	void GamePause()
+	{
+		
+	}
+	void GameUnpause()
+	{
+		
 	}
 }

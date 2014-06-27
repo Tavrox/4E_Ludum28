@@ -10,6 +10,8 @@ public class InvasionAnims : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
 		animSprite.frameIndex = 0;
 		_player = GameObject.Find("Player").GetComponent<Player>();
 		stopped = false;
@@ -34,6 +36,10 @@ public class InvasionAnims : MonoBehaviour {
 	public IEnumerator reset() {
 		//print ("reset");
 		yield return new WaitForSeconds(2.25f);//print ("DE-invade");
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		animSprite.PlayBackward("invade");
 		_player.transform.position = _player.spawnPos;
 		transform.position = new Vector3(_player.transform.position.x,_player.transform.position.y,-5f);
@@ -48,9 +54,21 @@ public class InvasionAnims : MonoBehaviour {
 	}
 	public IEnumerator finalReset() {
 		yield return new WaitForSeconds(1f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		stopped = false;
 		_player.StopCoroutine("rewind");
 		_player.StopCoroutine("stopRewind");
 		Destroy(gameObject);
+	}
+	void GamePause()
+	{
+		
+	}
+	void GameUnpause()
+	{
+		
 	}
 }

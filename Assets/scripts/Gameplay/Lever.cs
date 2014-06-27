@@ -20,6 +20,8 @@ public class Lever : MonoBehaviour {
 	//public GUIText _myCpt;
 	public TextMesh _myTimer;
 	public InputManager InputMan;
+	public List<LeverLight> _myLights = new List<LeverLight>();
+	public List<LeverLightPath> _myPaths = new List<LeverLightPath>();
 
 	void Start () {
 		gameObject.GetComponentInChildren<OTAnimatingSprite>().transform.localScale = new Vector3 (2.006f,3.112758f,1);
@@ -36,6 +38,8 @@ public class Lever : MonoBehaviour {
 		if(myButtonType == btnType.TimedBtn) { animSprite.frameIndex=8;animSprite.Play("timedlock");}
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
 		GameEventManager.GameStart += GameStart;
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
 		InputMan = Instantiate(Resources.Load("Tuning/InputManager")) as InputManager;
 		InputMan.Setup();
 	}
@@ -55,10 +59,18 @@ public class Lever : MonoBehaviour {
 		_myRemainingTime -= 1;
 		_myTimer.text = _myRemainingTime.ToString();
 		yield return new WaitForSeconds(1f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		StartCoroutine("leverTimer");
 	}
 	private IEnumerator waitB4Restart (float delayRestart) {
 		yield return new WaitForSeconds(delayRestart);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		//animSprite.Play(animSprite.frameIndex+1);
 		animSprite.frameIndex = animSprite.frameIndex+1;
 		//animSprite.Stop();
@@ -107,9 +119,10 @@ public class Lever : MonoBehaviour {
 				animSprite.Play("lockSeq");}
 			else animSprite.Play("lock");
 		}
-
+		
 		if(myButtonType == btnType.SequenceBtn) {seqLocked = true;}
 		else {
+			launchLights();
 			triggerLever();
 			if(myButtonType == btnType.TimedBtn) {
 				StartCoroutine("delayRetrigg");
@@ -118,10 +131,18 @@ public class Lever : MonoBehaviour {
 	}
 	IEnumerator delayReactivate() {
 		yield return new WaitForSeconds(0.2f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		collider.enabled=true;
 	}
 	IEnumerator delayRetrigg() {
 		yield return new WaitForSeconds(delay);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		triggerLever();
 		trigged = false;
 		_myRemainingTime = delay;
@@ -134,13 +155,19 @@ public class Lever : MonoBehaviour {
 		if (gameObject != null)
 		{
 			foreach (TriggeredDoor door in doors) {
-				if(door.isLocked) {door.Unlock();}
+				if(door.isLocked) {
+					door.Unlock();
+				}
 				else {door.Lock();}
 			}
 		}
 	}
 	public IEnumerator resetLever () {
 		yield return new WaitForSeconds(1f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		seqLocked = false;
 		trigged = false;
 		if(myButtonType == btnType.TimedBtn) animSprite.Play("timedlock"); else if(myButtonType == btnType.SequenceBtn) {if(animSprite.frameIndex==7)_myTimer.transform.localPosition= new Vector3(-0.1669464f,0.6263504f,-0.5f); animSprite.Play("lockSeq");} else animSprite.Play("lock");
@@ -165,5 +192,27 @@ public class Lever : MonoBehaviour {
 			else animSprite.Play("lock");
 			stopped = trigged = seqLocked = false;
 		}
+	}
+	void GamePause()
+	{
+		
+	}
+	void GameUnpause()
+	{
+		
+	}
+	public void launchLights () {
+		if(_myLights.Count!=0 && _myPaths.Count!=0 && _myLights.Count==_myPaths.Count) {
+			int cpt = 0;
+			for(cpt=0;cpt<_myLights.Count;cpt++) {
+				_myLights[cpt]._myPath = _myPaths[cpt];	
+			}
+		}
+		if(_myLights.Count!=0 && _myPaths.Count!=0 && _myLights.Count==_myPaths.Count) {
+			foreach(LeverLight _light in _myLights)
+			{
+				_light.initLight();	
+			}
+		}	
 	}
 }

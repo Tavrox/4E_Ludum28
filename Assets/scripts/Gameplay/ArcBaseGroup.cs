@@ -7,21 +7,30 @@ public class ArcBaseGroup : MonoBehaviour {
 	public List<ArcElectric> arcs = new List<ArcElectric>();
 	public List<BaseElectric> bases = new List<BaseElectric>();
 	public int nbCrates = 0;
+	private int lastEntered=0;
 	
 	void Start () {
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GameOver += GameOver;
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
 		collider.enabled = false;
 		StartCoroutine("waitB4Restart");
 	}
 	void OnTriggerEnter(Collider _other)
 	{//print (_other.tag);
-		if (_other.CompareTag("Crate"))
+		if (_other.CompareTag("Crate") && lastEntered!=_other.GetInstanceID())
 		{
+			lastEntered = _other.GetInstanceID();
+			StartCoroutine("resetLastEntered");
 			foreach(ArcElectric _arc in arcs) _arc.turnOFF();
 			foreach(BaseElectric _base in bases) _base.turnOFF();
 			nbCrates++;
 		}
+	}
+	IEnumerator resetLastEntered() {
+		yield return new WaitForSeconds(0.25f);
+		lastEntered=0;
 	}
 	void OnTriggerExit(Collider _other)
 	{
@@ -49,7 +58,19 @@ public class ArcBaseGroup : MonoBehaviour {
 	}
 	IEnumerator waitB4Restart() {
 		yield return new WaitForSeconds(1f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		collider.enabled = true;
 		//active = true;
+	}
+	void GamePause()
+	{
+		
+	}
+	void GameUnpause()
+	{
+		
 	}
 }

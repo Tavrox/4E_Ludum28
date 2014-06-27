@@ -9,5 +9,15 @@ public class TeleportOUTAnims : MonoBehaviour {
 	void Start ()
 	{
 		animSprite.Play("teleportOUT");
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
+	}
+	void GamePause()
+	{
+		
+	}
+	void GameUnpause()
+	{
+		
 	}
 }

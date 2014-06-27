@@ -20,17 +20,23 @@ public class WalkerBoss : Enemy {
 		//myspawnpos.position = new Vector3(gameObject.transform.position.x,gameObject.transform.position.z,0f);
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.FinishLevel += FinishLevel;
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
 		StartCoroutine("waitB4Gravity");
 		moveVelIni = moveVel;
 	}
 	private IEnumerator waitB4Gravity() {
 		yield return new WaitForSeconds(0.5f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		activated = true;
 	}
 	// Update is called once per frame
 	public void Update () 
 	{
-		if(activated) {
+		if(activated && !GameEventManager.gamePaused) {
 			chasingPlayer = true;
 			if(chasingPlayer) {ChasePlayer();}
 			//detectPlayer();
@@ -105,6 +111,10 @@ public class WalkerBoss : Enemy {
 	}
 	IEnumerator speedAfterSlowed() {
 		yield return new WaitForSeconds(0.2f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		if(moveVel<moveVelIni) {
 			moveVel++;
 			StartCoroutine("speedAfterSlowed");
@@ -196,6 +206,14 @@ public class WalkerBoss : Enemy {
 				}
 			}
 		}
+	}
+	void GamePause()
+	{
+		
+	}
+	void GameUnpause()
+	{
+		
 	}
 
 }

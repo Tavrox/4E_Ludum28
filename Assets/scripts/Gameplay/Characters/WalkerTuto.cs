@@ -10,6 +10,8 @@ public class WalkerTuto : MonoBehaviour {
 	void Start () {
 		//_walker = gameObject.GetComponent<Walker>();
 		GameEventManager.GameStart += GameStart;
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
 		_player = GameObject.Find("Player").GetComponent<Player>();
 	}
 	
@@ -30,5 +32,13 @@ public class WalkerTuto : MonoBehaviour {
 		if(this != null && gameObject.activeInHierarchy) {
 			trigged = false;
 		}
+	}
+	void GamePause()
+	{
+		
+	}
+	void GameUnpause()
+	{
+		
 	}
 }

@@ -70,16 +70,16 @@ public class CookieManager : MonoBehaviour {
 	void writeCommunicationFunction() {
 
 		//Application.ExternalEval("alert(\"lololol\");");//var u = new UnityObject2();u.initPlugin(jQuery(\"#unityPlayer\")[0], \"buildLudum28.unity3d\");");
-		Application.ExternalEval("function SaySomethingToUnity(cvalue){u.getUnity().SendMessage(\"CookieManager\", \"ShowRead\", cvalue);}");
+//		Application.ExternalEval("function SaySomethingToUnity(cvalue){u.getUnity().SendMessage(\"CookieManager\", \"ShowRead\", cvalue);}");
 		
-		Application.ExternalEval("function getCookie(cname){var name = cname + \"=\";var test=false;var ca = document.cookie.split(';');for(var i=0; i<ca.length; i++){var c = ca[i].trim();if (c.indexOf(name)==0) {test=true;SaySomethingToUnity(c.substring(name.length,c.length));}}if(test==false)SaySomethingToUnity(\"NULL\");}");
+//		Application.ExternalEval("function getCookie(cname){var name = cname + \"=\";var test=false;var ca = document.cookie.split(';');for(var i=0; i<ca.length; i++){var c = ca[i].trim();if (c.indexOf(name)==0) {test=true;SaySomethingToUnity(c.substring(name.length,c.length));}}if(test==false)SaySomethingToUnity(\"NULL\");}");
 		//Application.ExternalCall( "SaySomethingToUnity", "The game says hello!" );
 	}
 	void setCookie(string name, string value) {
-		Application.ExternalEval("document.cookie = \""+name+"="+value+"; \"");
+//		Application.ExternalEval("document.cookie = \""+name+"="+value+"; \"");
 	}
 	void getCookie(string name) {
-		Application.ExternalCall( "getCookie", name );
+//		Application.ExternalCall( "getCookie", name );
 	}
 	public void ShowRead(string param)
 	{

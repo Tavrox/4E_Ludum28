@@ -30,7 +30,14 @@ public class IngameUI : MonoBehaviour {
 
 		}
 	}
-
+//	void Update () {
+//		if(action == ListAction.PauseGame) {
+//			if (Input.GetKeyDown(InputMan.Pause))
+//			{
+//				triggerEscape();
+//			}
+//		}
+//	}
 	public void fadeOut()
 	{
 		if(prefabSprite.alpha == 0f) {
@@ -40,6 +47,10 @@ public class IngameUI : MonoBehaviour {
 	}
 	private IEnumerator hideItem() {
 		yield return new WaitForSeconds(1f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		prefabSprite.alpha = 0f;
 	}
 	private void OnMouseDown()

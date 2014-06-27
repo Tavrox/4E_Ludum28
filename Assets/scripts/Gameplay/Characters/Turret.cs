@@ -17,6 +17,8 @@ public class Turret : MonoBehaviour {
 		//StartCoroutine("waitB4Shoot");
 		GameEventManager.GameOver += GameOver;
 		GameEventManager.GameStart += GameStart;
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
 	}
 
@@ -80,6 +82,14 @@ public class Turret : MonoBehaviour {
 			_player.isDead = true;
 			GameEventManager.TriggerGameOver();
 		}
+	}
+	void GamePause()
+	{
+		
+	}
+	void GameUnpause()
+	{
+		
 	}
 
 }

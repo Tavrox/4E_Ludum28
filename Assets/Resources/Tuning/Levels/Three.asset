@@ -15,3 +15,4 @@ MonoBehaviour:
   LvlName: 4
   player_best_score: 0
   locked: 0
+  levelNumName: 3

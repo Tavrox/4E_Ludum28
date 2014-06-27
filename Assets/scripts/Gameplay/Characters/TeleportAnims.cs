@@ -41,6 +41,8 @@ public class TeleportAnims : MonoBehaviour
 		else animSprite.Play("default");
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GameOver += GameOver;
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
 		
 		InputMan = Instantiate(Resources.Load("Tuning/InputManager")) as InputManager;
 		InputMan.Setup();
@@ -75,12 +77,20 @@ public class TeleportAnims : MonoBehaviour
 	}
 	private IEnumerator stopPlayer () {
 		yield return new WaitForSeconds(0.15f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		//_player.enabled = false;
 		_player.locked = true;
 		_player.isLeft = _player.isRight = false;
 	}
 	private IEnumerator teleportTo(Transform destination) {
 		yield return new WaitForSeconds(delayB4Telep);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		//_player.position = new Vector3(0f,0f,0f);//destination.position;
 		_player.teleportTo( new Vector3(destination.position.x, destination.position.y, _player.transform.position.z));
 		//_player.enabled = true;
@@ -208,6 +218,10 @@ public class TeleportAnims : MonoBehaviour
 	IEnumerator WaitAndCallback(float waitTime)
 	{
 		yield return new WaitForSeconds(waitTime);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		AnimationFinished();
 	}
 	void GameOver () {		
@@ -228,5 +242,13 @@ public class TeleportAnims : MonoBehaviour
 		if(isOUT) animSprite.Play("teleportOUT");
 		else animSprite.Play("default");
 		}
+	}
+	void GamePause()
+	{
+		
+	}
+	void GameUnpause()
+	{
+		
 	}
 }

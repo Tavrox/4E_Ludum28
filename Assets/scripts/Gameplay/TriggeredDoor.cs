@@ -23,6 +23,8 @@ public class TriggeredDoor : MonoBehaviour {
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
 		_myCol = (BoxCollider)this.collider;
 		GameEventManager.GameStart += GameStart;
+		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameUnpause += GameUnpause;
 		if (isLocked)
 			memoryLock = true;
 		else {
@@ -68,14 +70,24 @@ public class TriggeredDoor : MonoBehaviour {
 	}
 	IEnumerator WaitUnlock()
 	{
-		yield return new WaitForSeconds(0.3f);collider.enabled = false;
+		yield return new WaitForSeconds(0.3f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
+		collider.enabled = false;
 		foreach(Crate c in touchingCrates) c.SendMessage("OnTriggerExit",this.collider); //c.blockCrate = false;
 		//touchingCrates.Clear();
 		animSprite.Play("unlock");
 	}
 	IEnumerator WaitLock()
 	{
-		yield return new WaitForSeconds(0.3f);collider.enabled = true;
+		yield return new WaitForSeconds(0.3f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
+		collider.enabled = true;
 		transform.Translate (Vector3.up * 10000);
 		transform.Translate (Vector3.down * 10000);
 //		foreach(Crate c in touchingCrates) {
@@ -95,5 +107,13 @@ public class TriggeredDoor : MonoBehaviour {
 		//print ("EXPLOOOOOODE");
 		collider.enabled = false;
 		animSprite.Play("destroy");
+	}
+	void GamePause()
+	{
+		
+	}
+	void GameUnpause()
+	{
+		
 	}
 }

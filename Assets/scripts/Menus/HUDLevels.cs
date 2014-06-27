@@ -6,7 +6,7 @@ public class HUDLevels : MonoBehaviour {
 	private LevelManager _levelM;
 	private OTSprite _HUDLevelsSprite;
 	private Camera _camera;
-	private int _leftPosition;
+//	private int _leftPosition;
 	// Use this for initialization
 	void Start () {
 		_levelM = GameObject.FindObjectOfType<LevelManager>();
@@ -17,12 +17,13 @@ public class HUDLevels : MonoBehaviour {
 		GameEventManager.GameStart += GameStart;
 	}
 	void FixedUpdate() {
-		if(FETool.Round(((float) Screen.width/(float) Screen.height),1)!=1.3) 
-			_leftPosition = 78;
-		else _leftPosition = 63;
-		if(Screen.width==800) _leftPosition = 61;
-		if(Screen.width==1152) _leftPosition = 90;
-		gameObject.transform.position = _camera.ScreenToWorldPoint(new Vector3(_leftPosition, Screen.height-Screen.height/10, _camera.nearClipPlane));
+//		if(FETool.Round(((float) Screen.width/(float) Screen.height),1)!=1.3) 
+//			_leftPosition = 78;
+//		else _leftPosition = 63;
+//		if(Screen.width==800) _leftPosition = 61;
+//		if(Screen.width==1152) _leftPosition = 90;
+//		gameObject.transform.position = _camera.ScreenToWorldPoint(new Vector3(100, Screen.height-Screen.height/11, _camera.nearClipPlane));
+		gameObject.transform.position = _camera.ScreenToWorldPoint(new Vector3(Screen.width*0.1f, Screen.height - (Screen.height*0.09f), _camera.nearClipPlane));
 	}
 	void GameStart () {	
 		_HUDLevelsSprite.frameIndex = _levelM.chosenVariation-1;
