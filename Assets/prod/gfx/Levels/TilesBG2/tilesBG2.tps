@@ -87,7 +87,7 @@
             <key>basic</key>
             <struct type="AlgorithmBasicSettings">
                 <key>sortBy</key>
-                <enum type="AlgorithmBasicSettings::SortBy">Best</enum>
+                <enum type="AlgorithmBasicSettings::SortBy">Name</enum>
                 <key>order</key>
                 <enum type="AlgorithmBasicSettings::Order">Descending</enum>
             </struct>
@@ -302,6 +302,29 @@
             <filename>images/light_0008.png</filename>
             <filename>images/light_0009.png</filename>
             <filename>images/light_0010.png</filename>
+            <filename>images/apotoGrill_0005.png</filename>
+            <filename>images/apotoGrill_0001.png</filename>
+            <filename>images/apotoGrill_0002.png</filename>
+            <filename>images/apotoGrill_0003.png</filename>
+            <filename>images/apotoGrill_0004.png</filename>
+            <filename>lightFilements/images/aFilaments (1).png</filename>
+            <filename>lightFilements/images/aFilaments (2).png</filename>
+            <filename>lightFilements/images/aFilaments (3).png</filename>
+            <filename>lightFilements/images/aFilaments (4).png</filename>
+            <filename>lightFilements/images/aFilaments (5).png</filename>
+            <filename>lightFilements/images/aFilaments (6).png</filename>
+            <filename>lightFilements/images/aFilaments (7).png</filename>
+            <filename>lightFilements/images/aFilaments (8).png</filename>
+            <filename>lightFilements/images/aFilaments (9).png</filename>
+            <filename>lightFilements/images/aFilaments (10).png</filename>
+            <filename>lightFilements/images/aFilaments (11).png</filename>
+            <filename>lightFilements/images/aFilaments (12).png</filename>
+            <filename>lightFilements/images/aFilaments (13).png</filename>
+            <filename>lightFilements/images/aFilaments (14).png</filename>
+            <filename>lightFilements/images/aFilaments (15).png</filename>
+            <filename>lightFilements/images/aFilaments (16).png</filename>
+            <filename>images/agrille_0002.png</filename>
+            <filename>images/agrille_0001.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
