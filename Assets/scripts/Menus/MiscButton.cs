@@ -41,7 +41,7 @@ public class MiscButton : MonoBehaviour {
 	public BlobBtnAnimations _animBlob;
 	public ThumbnailAnimations _animLvlBlob;
 	private PlayerData _playerData;
-	private TextMesh txtGoldLvl, txtSilverLvl, txtBronzeLvl, txtScoreLvl,
+	private TextMesh txtGoldLvl, txtSilverLvl, txtBronzeLvl, txtScoreLvl, txtNumLvl,
 						txtGold1, txtSilver1, txtBronze1, txtScore1,
 						txtGold2, txtSilver2, txtBronze2, txtScore2,
 						txtGold3, txtSilver3, txtBronze3, txtScore3,
@@ -49,6 +49,7 @@ public class MiscButton : MonoBehaviour {
 						txtGold5, txtSilver5, txtBronze5, txtScore5,
 						txtGoldBoss, txtSilverBoss, txtBronzeBoss, txtScoreBoss;
 	private Transform _levelDetails, _occurenceSelector;
+	private OTSprite _playerMedalLvl, _playerMedal1,_playerMedal2,_playerMedal3,_playerMedal4,_playerMedal5,_playerMedalBoss;
 //	void Awake() {
 //	
 //		_levelDataLoader = ScriptableObject.CreateInstance<GameSaveLoad>();
@@ -61,7 +62,7 @@ public class MiscButton : MonoBehaviour {
 	{
 		txtGoldLvl = GameObject.Find("goldlvl").GetComponent<TextMesh>();txtSilverLvl = GameObject.Find("silverlvl").GetComponent<TextMesh>();
 		txtBronzeLvl = GameObject.Find("bronzelvl").GetComponent<TextMesh>();txtScoreLvl = GameObject.Find("scorelvl").GetComponent<TextMesh>();
-		
+		txtNumLvl = GameObject.Find("txtNumLvl").GetComponent<TextMesh>();
 		txtGold1 = GameObject.Find("gold1").GetComponent<TextMesh>();txtSilver1 = GameObject.Find("silver1").GetComponent<TextMesh>();
 		txtBronze1 = GameObject.Find("bronze1").GetComponent<TextMesh>();txtScore1 = GameObject.Find("score1").GetComponent<TextMesh>();
 		
@@ -79,6 +80,14 @@ public class MiscButton : MonoBehaviour {
 		
 		txtGoldBoss = GameObject.Find("goldBoss").GetComponent<TextMesh>();txtSilverBoss = GameObject.Find("silverBoss").GetComponent<TextMesh>();
 		txtBronzeBoss = GameObject.Find("bronzeBoss").GetComponent<TextMesh>();txtScoreBoss = GameObject.Find("scoreBoss").GetComponent<TextMesh>();
+		
+		_playerMedalLvl = GameObject.Find("playerMedalLvl").GetComponent<OTSprite>();
+		_playerMedal1 = GameObject.Find("playerMedal1").GetComponent<OTSprite>();
+		_playerMedal2 = GameObject.Find("playerMedal2").GetComponent<OTSprite>();
+		_playerMedal3 = GameObject.Find("playerMedal3").GetComponent<OTSprite>();
+		_playerMedal4 = GameObject.Find("playerMedal4").GetComponent<OTSprite>();
+		_playerMedal5 = GameObject.Find("playerMedal5").GetComponent<OTSprite>();
+		_playerMedalBoss = GameObject.Find("playerMedalBoss").GetComponent<OTSprite>();
 		
 		_occurenceSelector = GameObject.Find("OccurenceSelector").GetComponent<Transform>();
 		_levelDetails = GameObject.Find("LevelDetails").GetComponent<Transform>();
@@ -155,7 +164,7 @@ public class MiscButton : MonoBehaviour {
 				_scoreTween = new OTTween(_levelDetails.transform ,.4f, OTEasing.QuadInOut).Tween("localPosition", new Vector3( _levelDetails.transform.localPosition.x, -4f, _levelDetails.transform.localPosition.z ));
 			}
 			
-			if(buttonType == buttonList.PlayOccurence) {
+			if(buttonType == buttonList.PlayOccurence && _spriteBtn.alpha !=0) {
 					_spriteBtn.alpha = .75f;
 					_spriteBtn.size -= new Vector2(0.3f,0.3f);
 			}
@@ -177,7 +186,8 @@ public class MiscButton : MonoBehaviour {
 				txtSilverLvl.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_thumb.Info.levelNumName,"silver");
 				txtBronzeLvl.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_thumb.Info.levelNumName,"bronze");
 				txtScoreLvl.text = _playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+_thumb.Info.levelNumName,"score");
-				
+				txtNumLvl.text = _thumb.Info.levelNumName;
+								
 				txtGold1.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_thumb.Info.levelNumName+"/occ1","gold");
 				txtSilver1.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_thumb.Info.levelNumName+"/occ1","silver");
 				txtBronze1.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_thumb.Info.levelNumName+"/occ1","bronze");
@@ -207,14 +217,30 @@ public class MiscButton : MonoBehaviour {
 				txtSilverBoss.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_thumb.Info.levelNumName+"/occBoss","silver");
 				txtBronzeBoss.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_thumb.Info.levelNumName+"/occBoss","bronze");
 				txtScoreBoss.text = _playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+_thumb.Info.levelNumName+"/occBoss","score");
+				
+				_playerMedalLvl.frameIndex = displayPlayerMedal(txtScoreLvl.text, txtGoldLvl.text, txtSilverLvl.text, txtBronzeLvl.text);
+				_playerMedal1.frameIndex = displayPlayerMedal(txtScore1.text, txtGold1.text, txtSilver1.text, txtBronze1.text);
+				_playerMedal2.frameIndex = displayPlayerMedal(txtScore2.text, txtGold2.text, txtSilver2.text, txtBronze2.text);
+				_playerMedal3.frameIndex = displayPlayerMedal(txtScore3.text, txtGold3.text, txtSilver3.text, txtBronze3.text);
+				_playerMedal4.frameIndex = displayPlayerMedal(txtScore4.text, txtGold4.text, txtSilver4.text, txtBronze4.text);
+				_playerMedal5.frameIndex = displayPlayerMedal(txtScore5.text, txtGold5.text, txtSilver5.text, txtBronze5.text);
+				_playerMedalBoss.frameIndex = displayPlayerMedal(txtScoreBoss.text, txtGoldBoss.text, txtSilverBoss.text, txtBronzeBoss.text);
 			}
 			
-			if(buttonType == buttonList.PlayOccurence) {
+			if(buttonType == buttonList.PlayOccurence && _spriteBtn.alpha !=0) {
 					_spriteBtn.alpha = 1f;
 					_spriteBtn.size += new Vector2(0.3f,0.3f);
 				//	print(_lvlToLoad + " - " + numOccurence);
 			}
 		}
+	}
+	int displayPlayerMedal(string playerScore, string goldScore, string silverScore, string bronzeScore) {
+		int numFrame = 0;
+		if(playerScore=="") playerScore="0";if(goldScore=="") goldScore="0";if(silverScore=="") silverScore="0";if(bronzeScore=="") bronzeScore="0";
+		if(System.Convert.ToInt32(playerScore) >= System.Convert.ToInt32(bronzeScore)) numFrame = 1;
+		if(System.Convert.ToInt32(playerScore) >= System.Convert.ToInt32(silverScore)) numFrame = 2;
+		if(System.Convert.ToInt32(playerScore) >= System.Convert.ToInt32(goldScore)) numFrame = 3;
+		return numFrame;
 	}
 	void OnMouseDown()
 	{
@@ -335,6 +361,10 @@ public class MiscButton : MonoBehaviour {
 			{
 //				if (_animBlob != null)
 //				{
+					_occurencesTween = new OTTween(_occurenceSelector.transform ,.4f, OTEasing.ExpoIn).Tween("localPosition", new Vector3( 1, 7.5f, _occurenceSelector.transform.localPosition.z ));
+					_scoreTween = new OTTween(_levelDetails.transform ,.4f, OTEasing.QuadInOut).Tween("localPosition", new Vector3( _levelDetails.transform.localPosition.x, -4f, _levelDetails.transform.localPosition.z ));	
+					chooser.unsplashLvlButtons();
+					mainUi.lvlSplashed = locked = false;
 					MasterAudio.PlaySound("blob_explosion");
 					_animBtn.PlayOnce("activate");
 					_animBtn.speed = 1.5f;
