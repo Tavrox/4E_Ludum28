@@ -38,12 +38,12 @@ public class TextUI : MonoBehaviour {
 			TranslateThis();
 			//if(lettersToDisplay>displayedText.Length) lettersToDisplay=displayedText.Length;
 		}
-		
 		if(twinkleMessage) {
 			//OTTween _tween = new OTTween(prefabSprite, 1f).Tween("alpha", 1f).PingPong();
 			//StartCoroutine("twinkle");
 			InvokeRepeating("twinkle",0,2f);
 		}
+		text=text+" ##### ";
 	}
 	private IEnumerator launchScroll() {
 		yield return new WaitForSeconds(0.5f);

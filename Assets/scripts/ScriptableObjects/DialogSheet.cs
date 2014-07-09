@@ -57,6 +57,7 @@ public class DialogSheet : ScriptableObject {
 						_tx.hasBeenTranslated = false;
 					}
 				}
+				_tx.text = _tx.text+" ##### ";
 			}
 		}
 	}
