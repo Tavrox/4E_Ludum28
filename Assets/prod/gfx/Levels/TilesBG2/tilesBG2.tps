@@ -325,6 +325,46 @@
             <filename>lightFilements/images/aFilaments (16).png</filename>
             <filename>images/agrille_0002.png</filename>
             <filename>images/agrille_0001.png</filename>
+            <filename>images/aFglightbg (20).png</filename>
+            <filename>images/aFglightbg (1).png</filename>
+            <filename>images/aFglightbg (2).png</filename>
+            <filename>images/aFglightbg (3).png</filename>
+            <filename>images/aFglightbg (4).png</filename>
+            <filename>images/aFglightbg (5).png</filename>
+            <filename>images/aFglightbg (6).png</filename>
+            <filename>images/aFglightbg (7).png</filename>
+            <filename>images/aFglightbg (8).png</filename>
+            <filename>images/aFglightbg (9).png</filename>
+            <filename>images/aFglightbg (10).png</filename>
+            <filename>images/aFglightbg (11).png</filename>
+            <filename>images/aFglightbg (12).png</filename>
+            <filename>images/aFglightbg (13).png</filename>
+            <filename>images/aFglightbg (14).png</filename>
+            <filename>images/aFglightbg (15).png</filename>
+            <filename>images/aFglightbg (16).png</filename>
+            <filename>images/aFglightbg (17).png</filename>
+            <filename>images/aFglightbg (18).png</filename>
+            <filename>images/aFglightbg (19).png</filename>
+            <filename>images/aFgdarkbg (1).png</filename>
+            <filename>images/aFgdarkbg (2).png</filename>
+            <filename>images/aFgdarkbg (3).png</filename>
+            <filename>images/aFgdarkbg (4).png</filename>
+            <filename>images/aFgdarkbg (5).png</filename>
+            <filename>images/aFgdarkbg (6).png</filename>
+            <filename>images/aFgdarkbg (7).png</filename>
+            <filename>images/aFgdarkbg (8).png</filename>
+            <filename>images/aFgdarkbg (9).png</filename>
+            <filename>images/aFgdarkbg (10).png</filename>
+            <filename>images/aFgdarkbg (11).png</filename>
+            <filename>images/aFgdarkbg (12).png</filename>
+            <filename>images/aFgdarkbg (13).png</filename>
+            <filename>images/aFgdarkbg (14).png</filename>
+            <filename>images/aFgdarkbg (15).png</filename>
+            <filename>images/aFgdarkbg (16).png</filename>
+            <filename>images/aFgdarkbg (17).png</filename>
+            <filename>images/aFgdarkbg (18).png</filename>
+            <filename>images/aFgdarkbg (19).png</filename>
+            <filename>images/aFgdarkbg (20).png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
