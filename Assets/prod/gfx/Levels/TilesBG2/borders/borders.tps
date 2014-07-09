@@ -169,24 +169,32 @@
             <filename>images/0019tiles2_39.png</filename>
             <filename>images/0020tiles2_57.png</filename>
             <filename>images/0021tiles2_31.png</filename>
-            <filename>images/0022tiles2_32.png</filename>
-            <filename>images/0023tiles2_33.png</filename>
             <filename>images/0024tiles2_34.png</filename>
             <filename>images/0025tiles2_34.png</filename>
-            <filename>images/0026tiles2_40.png</filename>
-            <filename>images/0027tiles2_41.png</filename>
-            <filename>images/0028tiles2_42.png</filename>
-            <filename>images/0029tiles2_43.png</filename>
             <filename>images/0030tiles2_31.png</filename>
-            <filename>images/0031tiles2_48.png</filename>
-            <filename>images/0032tiles2_49.png</filename>
-            <filename>images/0033tiles2_50.png</filename>
-            <filename>images/0034tiles2_51.png</filename>
             <filename>images/0035tiles2_31.png</filename>
             <filename>images/0036tiles2_54.png</filename>
+            <filename>images/0043tiles2_57.png</filename>
+            <filename>images/0045tiles2_29.png</filename>
+            <filename>images/0039tiles2_20.png</filename>
+            <filename>images/0040tiles2_21.png</filename>
+            <filename>images/0044tiles2_28.png</filename>
+            <filename>images/0041tiles2_63.png</filename>
+            <filename>images/0042tiles2_64.png</filename>
+            <filename>images/0046tiles2_67.png</filename>
+            <filename>images/0047tiles2_68.png</filename>
             <filename>images/0037tiles2_55.png</filename>
             <filename>images/0038tiles2_56.png</filename>
-            <filename>images/0039tiles2_57.png</filename>
+            <filename>images/0022tiles2_34.png</filename>
+            <filename>images/0023tiles2_35.png</filename>
+            <filename>images/0026tiles2_43.png</filename>
+            <filename>images/0027tiles2_44.png</filename>
+            <filename>images/0028tiles2_45.png</filename>
+            <filename>images/0029tiles2_46.png</filename>
+            <filename>images/0031tiles2_49.png</filename>
+            <filename>images/0032tiles2_50.png</filename>
+            <filename>images/0033tiles2_51.png</filename>
+            <filename>images/0034tiles2_52.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

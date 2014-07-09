@@ -277,7 +277,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>0022tiles2_32.png</key>
+            <key>0022tiles2_34.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{50,200},{50,50}}</string>
@@ -290,7 +290,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>0023tiles2_33.png</key>
+            <key>0023tiles2_35.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{100,200},{50,50}}</string>
@@ -329,7 +329,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>0026tiles2_40.png</key>
+            <key>0026tiles2_43.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{0,250},{50,50}}</string>
@@ -342,7 +342,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>0027tiles2_41.png</key>
+            <key>0027tiles2_44.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{50,250},{50,50}}</string>
@@ -355,7 +355,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>0028tiles2_42.png</key>
+            <key>0028tiles2_45.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{100,250},{50,50}}</string>
@@ -368,7 +368,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>0029tiles2_43.png</key>
+            <key>0029tiles2_46.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{150,250},{50,50}}</string>
@@ -394,7 +394,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>0031tiles2_48.png</key>
+            <key>0031tiles2_49.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{0,300},{50,50}}</string>
@@ -407,7 +407,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>0032tiles2_49.png</key>
+            <key>0032tiles2_50.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{50,300},{50,50}}</string>
@@ -420,7 +420,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>0033tiles2_50.png</key>
+            <key>0033tiles2_51.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{100,300},{50,50}}</string>
@@ -433,7 +433,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>0034tiles2_51.png</key>
+            <key>0034tiles2_52.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{150,300},{50,50}}</string>
@@ -498,10 +498,114 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>0039tiles2_57.png</key>
+            <key>0039tiles2_20.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{150,350},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>0040tiles2_21.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{200,350},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>0041tiles2_63.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,400},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>0042tiles2_64.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{50,400},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>0043tiles2_57.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{100,400},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>0044tiles2_28.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{150,400},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>0045tiles2_29.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{200,400},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>0046tiles2_67.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,450},{50,50}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{50,50}}</string>
+                <key>sourceSize</key>
+                <string>{50,50}</string>
+            </dict>
+            <key>0047tiles2_68.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{50,450},{50,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -521,7 +625,7 @@
             <key>size</key>
             <string>{256,512}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:a61c44c9511d2b8481dd02ca467441bb:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:b0d605794e2e77386e4a643dbd56b6e9:1/1$</string>
             <key>textureFileName</key>
             <string>borders.png</string>
         </dict>
