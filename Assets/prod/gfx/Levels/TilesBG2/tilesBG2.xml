@@ -2833,9 +2833,9 @@
             <key>realTextureFileName</key>
             <string>tilesBG2.png</string>
             <key>size</key>
-            <string>{512,1100}</string>
+            <string>{512,2048}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:00035413368a861e014cecb3f2acd405:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:c008d263e3ce386712664a1603d1716f:1/1$</string>
             <key>textureFileName</key>
             <string>tilesBG2.png</string>
         </dict>
