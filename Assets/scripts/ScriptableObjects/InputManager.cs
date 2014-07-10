@@ -34,13 +34,16 @@ public class InputManager : ScriptableObject {
 	[HideInInspector] public KeyCode Action3 =  KeyCode.S;
 	[HideInInspector] public KeyCode Hold2 =  KeyCode.A;
 	[HideInInspector] public KeyCode Hold3 =  KeyCode.RightShift;
+	[HideInInspector] public KeyCode Enter =  KeyCode.Return;
 	
 	[HideInInspector] public KeyCode Up3 = KeyCode.Space;
 	[HideInInspector] public KeyCode PauseMenu =  KeyCode.Escape;
-
+	
 	[HideInInspector] public string PadAction;
 	[HideInInspector] public string PadHold;
 	[HideInInspector] public string PadReset;
+	[HideInInspector] public string PadSkipDeath;
+	[HideInInspector] public string PadPause;
 	[HideInInspector] public string PadJump;
 
 	public void Setup()
@@ -58,7 +61,9 @@ public class InputManager : ScriptableObject {
 		PadAction = Xpad_X;
 		PadHold = Xpad_B;
 		PadReset = Xpad_BACK;
-
+		PadSkipDeath = Xpad_BACK;
+		PadPause = Xpad_START;
+			
 		Up = KeyCode.UpArrow;
 		Down = KeyCode.DownArrow;
 		Left = KeyCode.LeftArrow;
@@ -76,6 +81,7 @@ public class InputManager : ScriptableObject {
 		Action3 =  KeyCode.S;
 		Hold2 =  KeyCode.A;
 		Hold3 =  KeyCode.RightShift;
+		Enter =  KeyCode.Return;
 		
 		Up3 = KeyCode.Space;
 		PauseMenu =  KeyCode.Escape;

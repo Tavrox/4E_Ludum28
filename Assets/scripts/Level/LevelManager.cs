@@ -13,6 +13,7 @@ public class LevelManager : MonoBehaviour {
 	public static BMTuning TuningDocument;
 
 	private int _secLeft, _scoreTotalLvl;
+	private bool bestScore;
 	private TileImporter _tileImporter;
 	private PlayerData _pdata;
 	private string _rand;
@@ -99,48 +100,69 @@ public class LevelManager : MonoBehaviour {
 //		}
 //	}
 	
-	private void NextInstance ()
+	public void updateScore ()
 	{
 		if(this != null) {
+		bestScore = (player._scorePlayer>System.Convert.ToInt32(_playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"score")))?true:false;
+		print(player._scorePlayer.ToString() + " " + bestScore);
 		if(chosenVariation<5 && !isBoss) { //Si occurence 1 à 4
 //			print (scoreTotalLevel(_realID));
-			_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"score",player._scorePlayer.ToString(), false);
+			if(bestScore) _playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"score",player._scorePlayer.ToString(), false);
 				print (scoreTotalLevel(_realID));
 			chosenVariation += 1; //On affiche l'occurence suivante
-			foreach (Transform _gameo in GameObject.Find("Level/ObjectImporter").transform)
-			{
-				if (_gameo.gameObject.name == chosenVariation.ToString() || _gameo.gameObject.name == "playerspawn"+chosenVariation)
-				{
-					_gameo.gameObject.SetActive(true);
-				}
-				else {
-					_gameo.gameObject.SetActive(false);
-				}
-			}
-			if(player.gameObject != null) {player.transform.position = player.spawnPos = GameObject.Find("playerspawn"+chosenVariation).transform.position;
-				player.enabled=true;}
-			_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString(),"score",scoreTotalLevel(_realID).ToString(), false);
-			_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"locked","false", true);
-			TranslateAllInScene();
-			GameEventManager.TriggerGameStart();
+			
+			if(bestScore) {
+				_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString(),"score",scoreTotalLevel(_realID).ToString(), false);
+				_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"locked","false", true);}
+//			TranslateAllInScene();
+//			GameEventManager.TriggerGameStart();
 		}
 		else {
 			//chosenVariation = 0;
 			if(isBoss) { //occurence Boss
+					if(bestScore) {
 					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occBoss","score",player._scorePlayer.ToString(), false);
 					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString(),"score",scoreTotalLevel(_realID).ToString(), false);
+					}
 					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+(_realID+1).ToString(),"locked","false", false);
 					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+(_realID+1).ToString()+"/occ1","locked","false", true);
 			}
 			else { //occurence 5
+					if(bestScore) {
 					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"score",player._scorePlayer.ToString(), false);
 					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString(),"score",scoreTotalLevel(_realID).ToString(), false);
+					}
 					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occBoss","locked","false", true);
 			}
-			GameEventManager.TriggerNextLevel();
-			GameEventManager.NextInstance -= NextInstance;
-			DestroyImmediate(this.gameObject);
+//			GameEventManager.TriggerNextLevel();
+//			GameEventManager.NextInstance -= NextInstance;
+//			DestroyImmediate(this.gameObject);
 		}
+		}
+	}
+	private void NextInstance() {
+		if(this != null) {
+			if(chosenVariation<5 && !isBoss) {
+				foreach (Transform _gameo in GameObject.Find("Level/ObjectImporter").transform)
+				{
+					if (_gameo.gameObject.name == chosenVariation.ToString() || _gameo.gameObject.name == "playerspawn"+chosenVariation)
+					{
+						_gameo.gameObject.SetActive(true);
+					}
+					else {
+						_gameo.gameObject.SetActive(false);
+					}
+				}
+				if(player.gameObject != null) {player.transform.position = player.spawnPos = GameObject.Find("playerspawn"+chosenVariation).transform.position;
+				player.enabled=true;}
+				TranslateAllInScene();
+				GameEventManager.TriggerGameStart();
+			}
+			else {
+				GameEventManager.TriggerNextLevel();
+				GameEventManager.NextInstance -= NextInstance;
+				DestroyImmediate(this.gameObject);	
+			}
 		}
 	}
 	private int scoreTotalLevel(int numLevel) {

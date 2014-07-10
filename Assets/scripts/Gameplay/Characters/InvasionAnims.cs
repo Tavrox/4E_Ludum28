@@ -32,6 +32,10 @@ public class InvasionAnims : MonoBehaviour {
 			_player.StartCoroutine("stopRewind",1.3f);
 			StartCoroutine("reset");
 		}
+		if ((Input.GetKey(_player.InputMan.Enter)  || Input.GetKey(_player.InputMan.PadSkipDeath))) 
+		{
+			skipDeathAnim ();
+		}
 	}
 	public IEnumerator reset() {
 		//print ("reset");
@@ -70,5 +74,17 @@ public class InvasionAnims : MonoBehaviour {
 	void GameUnpause()
 	{
 		
+	}
+	void skipDeathAnim () {
+		MasterAudio.FadeOutAllOfSound("rewind", 0.5f);
+		StopCoroutine("reset");
+		StopCoroutine("finalReset");
+		_player.StopCoroutine("rewind");
+		_player.StopCoroutine("stopRewind");
+		_player.StopCoroutine("resetGame");
+		_player.thisTransform.rotation = new Quaternion(0f,0f,0f,0f);
+		_player.transform.position = _player.spawnPos;
+		Destroy(gameObject);
+		GameEventManager.TriggerGameStart();
 	}
 }

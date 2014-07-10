@@ -115,12 +115,12 @@ public class Player : Character {
 		col.size = new Vector3(1f, col.size.y, col.size.z);
 		col.center = new Vector3(0f, 0f, 0f);
 		movingDir = moving.None;
-		if(Input.GetKey(InputMan.Hold) || Input.GetKey(InputMan.Hold2) || Input.GetKey(InputMan.Hold3)) {
+		if(Input.GetKey(InputMan.Hold) || Input.GetKey(InputMan.Hold2) || Input.GetKey(InputMan.Hold3) || Input.GetKey(InputMan.PadHold)) {
 			col.size = new Vector3(1.75f, col.size.y, col.size.z);
 			//collider.bounds.size.Set(1.75f, 1.75f, 10f);
 			holdCrate();
 		}
-		if(Input.GetKeyUp(InputMan.Hold) || Input.GetKeyUp(InputMan.Hold2) || Input.GetKeyUp(InputMan.Hold3)) pushCrate = grabCrate = false;
+		if(Input.GetKeyUp(InputMan.Hold) || Input.GetKeyUp(InputMan.Hold2) || Input.GetKeyUp(InputMan.Hold3) || Input.GetKeyUp(InputMan.PadHold)) pushCrate = grabCrate = false;
 		if((Input.GetKey(InputMan.Left) || Input.GetKey(InputMan.Left2) || Input.GetAxisRaw("X axis") > InputMan.X_AxisPos_Sensibility ) && !finishedLevel)
 		{ 
 			_crouchTween.Stop();
@@ -154,11 +154,11 @@ public class Player : Character {
 		}
 		if (Input.GetKeyUp(InputMan.Up) || Input.GetKeyUp(InputMan.Up2) || Input.GetKeyUp(InputMan.Up3) || Input.GetKeyUp(InputMan.PadJump) ) {jumpLocked = false;chute=true;}
 		
-		if(Input.GetKeyDown(InputMan.Action) || Input.GetKey(InputMan.Action2) || Input.GetKey(InputMan.Action3))
+		if(Input.GetKeyDown(InputMan.Action) || Input.GetKey(InputMan.Action2) || Input.GetKey(InputMan.Action3) || Input.GetKey(InputMan.PadAction))
 		{
 			isPass = true;
 		}
-		if (Input.GetKeyDown(InputMan.Pause))
+		if (Input.GetKeyDown(InputMan.Pause) || Input.GetKeyDown(InputMan.PadPause))
 		{
 			triggerPause();
 		}
@@ -166,7 +166,7 @@ public class Player : Character {
 		{
 			GameObject.Find("Invasion").GetComponent<InvasionAnims>().invade();
 		}
-		if (Input.GetKeyDown(InputMan.Reset) || Input.GetKey(InputMan.Reset2)) 
+		if (Input.GetKeyDown(InputMan.Reset) || Input.GetKey(InputMan.Reset2) || Input.GetKey(InputMan.PadReset)) 
 		{
 			resetLevel();
 		}
@@ -187,7 +187,7 @@ public class Player : Character {
 		/*if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");*/
 		//if(!blockCoroutine && grounded) StartCoroutine("waitB4FootStep");
 		
-		if(!grounded && !(Input.GetKey(InputMan.Hold) || Input.GetKey(InputMan.Hold2) || Input.GetKey(InputMan.Hold3))) {
+		if(!grounded && !(Input.GetKey(InputMan.Hold) || Input.GetKey(InputMan.Hold2) || Input.GetKey(InputMan.Hold3) || Input.GetKey(InputMan.PadHold))) {
 			if(facingDir == facing.Right) col.center = new Vector3(0.2f, 0f, 0f);
 			else col.center = new Vector3(-0.2f, 0f, 0f);
 			col.size = new Vector3(0.4f, col.size.y, col.size.z);
@@ -213,7 +213,7 @@ public class Player : Character {
 		}
 	}
 
-	private void resetLevel()
+	public void resetLevel()
 	{
 		isDead = true;
 		GameEventManager.TriggerGameOver();

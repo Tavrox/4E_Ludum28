@@ -15,7 +15,8 @@ public class PauseButton : MonoBehaviour {
 		ExitYes,
 		ExitNo,
 		OptionYes,
-		OptionNo
+		OptionNo,
+		SkipEndLvl
 	};
 	public buttonList buttonType;
 	public OTAnimatingSprite _animBtn;
@@ -99,7 +100,8 @@ public class PauseButton : MonoBehaviour {
 	}
 	void OnMouseDown()
 	{
-		//print(buttonType.ToString());
+		//print(buttonType.ToString());		
+		txtButton.color = new Color(1f,1f,1f,1f);
 		switch (buttonType)
 		{
 			case buttonList.None :
