@@ -7,6 +7,7 @@ public class InvasionAnims : MonoBehaviour {
 	private Player _player;
 	private bool stopped;
 	private float ratio;
+	private GameObject _EndLvlPanel,_EndLvlContent;
 	// Use this for initialization
 	void Start ()
 	{
@@ -14,6 +15,9 @@ public class InvasionAnims : MonoBehaviour {
 		GameEventManager.GameUnpause += GameUnpause;
 		animSprite.frameIndex = 0;
 		_player = GameObject.Find("Player").GetComponent<Player>();
+		if(GameObject.Find("EndLVLPanel")!=null) _EndLvlPanel = GameObject.Find("EndLVLPanel").gameObject;
+		if(GameObject.Find("EndLVLPanel/content")!=null){ _EndLvlContent = GameObject.Find("EndLVLPanel/content").gameObject;
+		_EndLvlContent.gameObject.SetActive(false);}
 		stopped = false;
 		invade();
 		if(!_player.killedByBlob) animSprite.renderer.enabled = false;
@@ -45,8 +49,13 @@ public class InvasionAnims : MonoBehaviour {
 			yield return new WaitForFixedUpdate();	
 		}
 		animSprite.PlayBackward("invade");
+		
 		_player.transform.position = _player.spawnPos;
 		transform.position = new Vector3(_player.transform.position.x,_player.transform.position.y,-5f);
+		if(GameObject.Find("EndLVLPanel")!=null) {// _EndLvlPanel = GameObject.Find("EndLVLPanel").gameObject;
+		//_EndLvlPanel.transform.parent = GameObject.Find("Player").GetComponent<Transform>();
+		_EndLvlPanel.transform.position = new Vector3 (_player.transform.position.x,_player.transform.position.y,0f);
+		}
 		StartCoroutine("finalReset");
 
 	}
@@ -83,8 +92,14 @@ public class InvasionAnims : MonoBehaviour {
 		_player.StopCoroutine("stopRewind");
 		_player.StopCoroutine("resetGame");
 		_player.thisTransform.rotation = new Quaternion(0f,0f,0f,0f);
+		
 		_player.transform.position = _player.spawnPos;
 		Destroy(gameObject);
 		GameEventManager.TriggerGameStart();
+		if(GameObject.Find("EndLVLPanel")!=null) {// _EndLvlPanel = GameObject.Find("EndLVLPanel").gameObject;
+		//_EndLvlPanel.transform.parent = GameObject.Find("Player").GetComponent<Transform>();
+		_EndLvlPanel.transform.position = new Vector3 (_player.transform.position.x,_player.transform.position.y,0f);
+		_EndLvlPanel.transform.parent = GameObject.Find("Player/IngameUI").GetComponent<Transform>();
+		}
 	}
 }

@@ -173,7 +173,9 @@ public class Timer : MonoBehaviour {
 			lockTimerStart = pauseTimer = true;
 		}
 	}
-
+	public int getScoreTime () {
+		return System.Convert.ToInt32(System.Convert.ToDouble(secLeft.ToString()+"."+microSecLeft.ToString())*_player._COEFF_TEMPS);
+	}
 //	private void OnGUI()
 //	{
 		//GUI.skin = _skinTimer;

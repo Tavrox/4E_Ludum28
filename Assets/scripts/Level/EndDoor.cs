@@ -8,7 +8,7 @@ public class EndDoor : MonoBehaviour {
 	public bool triggered;
 	public int levelToGo = 0;
 	private Player _player;
-	private GameObject _UINeedKey, _EndLvlPanel, _EndLvlSprite;
+	private GameObject _UINeedKey, _EndLvlPanel, _EndLvlSprite, _EndLvlContent;
 	private Timer _lvlTimer;
 	public int _nbKeyRequired=3;
 	public List<BatteryLevels> batteriesColor = new List<BatteryLevels>();
@@ -25,10 +25,11 @@ public class EndDoor : MonoBehaviour {
 		_UINeedKey = GameObject.Find("Player/IngameUI/NeedKey").gameObject;
 		_EndLvlPanel = GameObject.Find("Player/IngameUI/EndLVLPanel").gameObject;
 		_EndLvlSprite = GameObject.Find("Player/IngameUI/EndLVLPanel/panel").gameObject;
+		_EndLvlContent = GameObject.Find("Player/IngameUI/EndLVLPanel/content").gameObject;
 		if(_EndLvlSprite.transform.localScale.x != 10f) {
 			OTTween _endLvlPanelTween = new OTTween(_EndLvlSprite.transform ,1f, OTEasing.QuartIn).Tween("localScale", new Vector3( 10f, 10f, 1f )).OnFinish(hideEndLvlPanel);
 		}
-		else _EndLvlPanel.gameObject.SetActive(false);
+		else {_EndLvlContent.gameObject.SetActive(false);_EndLvlPanel.gameObject.SetActive(false);}
 		_lvlManager = GameObject.Find("Level").GetComponent<LevelManager>();
 		_lvlTimer = GameObject.Find("Player/IngameUI/Timer").GetComponent<Timer>();
 		//if(GameObject.Find(this.name +"/shieldActivation")!=null) {
@@ -112,7 +113,7 @@ public class EndDoor : MonoBehaviour {
 //		print (_EndLvlPanel.GetComponentInChildren<Transform>().gameObject.GetComponentInChildren<Transform>().gameObject.name);
 		_EndLvlPanel.gameObject.SetActive(true);
 //		_EndLvlPanel.transform.position = new Vector3(_player.transform.position.x,_player.transform.position.y,_EndLvlPanel.transform.position.z);
-		OTTween _endLvlPanelTween = new OTTween(_EndLvlSprite.transform ,1f, OTEasing.QuartOut).Tween("localScale", new Vector3( 1f, 1f, 1f ));	
+		OTTween _endLvlPanelTween = new OTTween(_EndLvlSprite.transform ,1f, OTEasing.QuartOut).Tween("localScale", new Vector3( 1f, 1f, 1f )).OnFinish(displayEndLvlContent);	
 		_lvlManager.updateScore();
 		yield return new WaitForSeconds(3f);
 		while (GameEventManager.gamePaused) 
@@ -133,15 +134,22 @@ public class EndDoor : MonoBehaviour {
 		//GameEventManager.TriggerNextInstance();
 		//Application.LoadLevel(levelToGo);
 	}
+	private void displayEndLvlContent (OTTween tween) {
+		_EndLvlContent.gameObject.SetActive(true);
+	}
 	private void hideEndLvlPanel (OTTween tween) {
 		_EndLvlPanel.gameObject.SetActive(false);
 	}
 	void GameStart () {
 		if(this != null && gameObject.activeInHierarchy) {
+		if(GameObject.Find("EndLVLPanel")!=null) _EndLvlPanel.transform.parent = GameObject.Find("Player/IngameUI").GetComponent<Transform>();
 			if(_EndLvlSprite.transform.localScale.x != 10f) {
 //			_EndLvlPanel.transform.position = new Vector3(_player.transform.position.x,_player.transform.position.y,_EndLvlPanel.transform.position.z);
 			OTTween _endLvlPanelTween = new OTTween(_EndLvlSprite.transform ,1f, OTEasing.QuartIn).Tween("localScale", new Vector3( 10f, 10f, 1f )).OnFinish(hideEndLvlPanel);
-		}}
+		}
+		triggered = _player.finishedLevel = false;
+		sprite.frameIndex = 26;
+		}
 	}
 	private void NextInstance ()
 	{

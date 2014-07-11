@@ -11,7 +11,7 @@ public class EndLvlButton : MonoBehaviour {
 	};
 	public buttonList buttonType;
 	public OTAnimatingSprite _animBtn;
-	private GameObject _EndLvlPanel;
+	private GameObject _EndLvlPanel,_EndLvlContent;
 	private TextMesh txtButton;
 	private Player _player;
 	private Transform pauseDefault, pauseMainMenu, pauseExit, pauseOption;
@@ -27,6 +27,9 @@ public class EndLvlButton : MonoBehaviour {
 		_animBtn.PlayLoop("static");
 		_animBtn.speed = .8f;
 		_EndLvlPanel = GameObject.Find("Player/IngameUI/EndLVLPanel").gameObject;
+		_EndLvlContent = GameObject.Find("Player/IngameUI/EndLVLPanel/content").gameObject;
+		trigged=false;
+//		GameEventManager.GameStart += GameStart;
 	}
 	
 	void OnMouseExit()
@@ -39,6 +42,8 @@ public class EndLvlButton : MonoBehaviour {
 	}
 	void OnMouseDown()
 	{
+		if(!trigged) {
+		trigged=true;
 		txtButton.color = new Color(1f,1f,1f,1f);
 		//print(buttonType.ToString());
 		switch (buttonType)
@@ -51,14 +56,29 @@ public class EndLvlButton : MonoBehaviour {
 			case buttonList.SkipEndLvl :
 			{
 				//OTTween _endLvlPanelTween = new OTTween(transform.parent.GetComponentInChildren<SpriteRenderer>().gameObject.transform ,0.5f, OTEasing.BounceOut).Tween("localScale", new Vector3( 10f, 10f, 1f ));
+				//_EndLvlContent.gameObject.SetActive(false);	
 				GameEventManager.TriggerNextInstance();
 				break;
 			}
 			case buttonList.RestartLvl :
 			{
+				_EndLvlPanel.transform.parent = GameObject.Find("Level").GetComponent<Transform>();
 				_player.resetLevel();
 				break;
 			}
 		}
+//			StartCoroutine ("retriggBtn");
+		}
+	}
+	private IEnumerator hideEndLvlContent () {
+		yield return new WaitForSeconds(0.1f);
+		_EndLvlContent.gameObject.SetActive(false);
+	}
+//	private IEnumerator retriggBtn () {
+	void OnEnable() {
+//		yield return new WaitForSeconds(0.1f);
+		//if(this != null && gameObject.activeInHierarchy) {
+			trigged=false;
+		//}
 	}
 }

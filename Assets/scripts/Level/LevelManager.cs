@@ -19,8 +19,9 @@ public class LevelManager : MonoBehaviour {
 	private string _rand;
 	private Vector3 spawnPoint;
 	private PartyData _partyData;
-	public GameSaveLoad _playerDataLoader;
+	public GameSaveLoad _playerDataLoader,_levelDataLoader;
 	public Transform _bulleTuto;
+	private Timer _timer;
 
 	void Awake()
 	{
@@ -44,7 +45,8 @@ public class LevelManager : MonoBehaviour {
 			player = GameObject.FindWithTag("Player").GetComponent<Player>();
 //		}
 		myCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
-		_secLeft = GameObject.Find("Player/IngameUI/Timer").GetComponent<Timer>().secLeft;
+		_timer = GameObject.Find("Player/IngameUI/Timer").GetComponent<Timer>();
+		_secLeft = _timer.secLeft;
 		_tileImporter = GameObject.Find("Level/TileImporter").GetComponent<TileImporter>();
 //		_pdata = player.GetComponent<PlayerData>();
 //		Player _Player  = GameObject.Find("Player").GetComponent<Player>();
@@ -75,15 +77,61 @@ public class LevelManager : MonoBehaviour {
 		GameEventManager.GameUnpause += GameUnpause;
 		GameEventManager.NextLevel += NextLevel;
 		GameEventManager.NextInstance += NextInstance;
+		GameEventManager.FinishLevel += FinishLevel;
 		
 		playLevelMusic();
 		_playerDataLoader = ScriptableObject.CreateInstance<GameSaveLoad>();
 		_playerDataLoader.LoadXMLToList("blob_minute-players");
+		_levelDataLoader = ScriptableObject.CreateInstance<GameSaveLoad>();
+		_levelDataLoader.LoadXMLToList("blob_minute-levels");
 		if(_realID==1 && chosenVariation==1 && _bulleTuto!=null) {
 			_bulleTuto.gameObject.SetActive(true);
 		}
 	}
 	
+	private void FinishLevel() { //When end lvl panel display after endDoor Input
+		//lblLevel = _thumb.Info.levelNumName.ToString()+"."+chosenVariation.ToString();
+		//lblScoreGold = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_thumb.Info.levelNumName+"/occ"+chosenVariation.ToString(),"gold");
+		//lblScoreSilver = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_thumb.Info.levelNumName+"/occ"+chosenVariation.ToString(),"bronze");
+		//lblScoreBronze = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_thumb.Info.levelNumName+"/occ"+chosenVariation.ToString(),"silver");
+		//lblScoreOld = _playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"score");
+		//player.nbKey;
+		//_player._COEFF_BATTERY;
+		//player._scorePlayer;
+		//_timer.getScoreTime();
+		/*
+		
+		int numFrame = 0;
+		if(player._scorePlayer >= System.Convert.ToInt32(lblScoreGold)) numFrame = 1;
+		if(player._scorePlayer >= System.Convert.ToInt32(lblScoreSilver)) numFrame = 2;
+		if(player._scorePlayer >= System.Convert.ToInt32(lblScoreBronze)) numFrame = 3;
+		medal.anim.frameIndex = numFrame;
+		OTTween medalTween = new OTTween(medalTween.transform ,1f, OTEasing.ExpoIn).Tween("localPosition", new Vector3(0f,0f,0f);
+		*/
+	}
+	int displayPlayerMedal(string playerScore, string goldScore, string silverScore, string bronzeScore) {
+		int numFrame = 0;
+		if(playerScore=="") playerScore="0";if(goldScore=="") goldScore="0";if(silverScore=="") silverScore="0";if(bronzeScore=="") bronzeScore="0";
+		if(System.Convert.ToInt32(playerScore) >= System.Convert.ToInt32(bronzeScore)) numFrame = 1;
+		if(System.Convert.ToInt32(playerScore) >= System.Convert.ToInt32(silverScore)) numFrame = 2;
+		if(System.Convert.ToInt32(playerScore) >= System.Convert.ToInt32(goldScore)) numFrame = 3;
+		return numFrame;
+	}
+	IEnumerator incrementScore() {
+		for(int i=0; i<=_timer.getScoreTime();i++) {
+			yield return new WaitForSeconds(0.0005f);
+			//lblScoreTime.text = i.ToString();
+			//lblScoreTotal = i.ToString();
+		}
+	}
+	IEnumerator incrementBattery() {
+		for(int i=1; i<=player.nbKey;i++) {
+			yield return new WaitForSeconds(1f);
+			//lblNBKey.text = i.ToString();
+			//lblScoreKey = "="+ (i * _player._COEFF_BATTERY).ToString();
+			//lblScoreTotal = (_timer.getScoreTime()+i * _player._COEFF_BATTERY).ToString();
+		}
+	}
 	// Update is called once per frame
 //	void Update () 
 //	{
@@ -104,11 +152,11 @@ public class LevelManager : MonoBehaviour {
 	{
 		if(this != null) {
 		bestScore = (player._scorePlayer>System.Convert.ToInt32(_playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"score")))?true:false;
-		print(player._scorePlayer.ToString() + " " + bestScore);
+//		print(player._scorePlayer.ToString() + " " + bestScore);
 		if(chosenVariation<5 && !isBoss) { //Si occurence 1 à 4
 //			print (scoreTotalLevel(_realID));
 			if(bestScore) _playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"score",player._scorePlayer.ToString(), false);
-				print (scoreTotalLevel(_realID));
+//				print (scoreTotalLevel(_realID));
 			chosenVariation += 1; //On affiche l'occurence suivante
 			
 			if(bestScore) {
