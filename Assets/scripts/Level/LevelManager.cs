@@ -54,6 +54,8 @@ public class LevelManager : MonoBehaviour {
 		_EndLvlSprite = GameObject.Find("Player/IngameUI/EndLVLPanel/panel").gameObject;
 		_EndLvlContent = GameObject.Find("Player/IngameUI/EndLVLPanel/content").gameObject;
 		if(_EndLvlSprite.transform.localScale.x != 10f) {
+			_EndLvlContent.gameObject.SetActive(false);
+			OTTween _endLvlSpriteAlphaTween = new OTTween(_EndLvlSprite.GetComponent<SpriteRenderer>() ,0.8f, OTEasing.ExpoIn).Tween("color", new Color(1f,1f,1f,0));
 			OTTween _endLvlPanelTween = new OTTween(_EndLvlSprite.transform ,1f, OTEasing.QuartIn).Tween("localScale", new Vector3( 10f, 10f, 1f )).OnFinish(hideEndLvlPanel);
 		}
 		else {_EndLvlContent.gameObject.SetActive(false);_EndLvlPanel.gameObject.SetActive(false);}
@@ -114,6 +116,7 @@ public class LevelManager : MonoBehaviour {
 //		print (_EndLvlPanel.GetComponentInChildren<Transform>().gameObject.GetComponentInChildren<Transform>().gameObject.name);
 		_EndLvlPanel.gameObject.SetActive(true);
 //		_EndLvlPanel.transform.position = new Vector3(_player.transform.position.x,_player.transform.position.y,_EndLvlPanel.transform.position.z);
+		OTTween _endLvlSpriteAlphaTween = new OTTween(_EndLvlSprite.GetComponent<SpriteRenderer>() ,0.8f, OTEasing.ExpoOut).Tween("color", new Color(1f,1f,1f,1f));
 		OTTween _endLvlPanelTween = new OTTween(_EndLvlSprite.transform ,1f, OTEasing.QuartOut).Tween("localScale", new Vector3( 1f, 1f, 1f )).OnFinish(displayEndLvlContent);	
 		updateScore();
 		lblLevel.text = _realID.ToString()+"."+chosenVariation.ToString();
@@ -179,6 +182,7 @@ public class LevelManager : MonoBehaviour {
 		_EndLvlContent.gameObject.SetActive(true);
 	}
 	private void hideEndLvlPanel (OTTween tween) {
+		//_EndLvlContent.gameObject.SetActive(false); /****** ???? ******/
 		_EndLvlPanel.gameObject.SetActive(false);
 	}
 	public void updateScore ()
@@ -190,11 +194,11 @@ public class LevelManager : MonoBehaviour {
 //			print (scoreTotalLevel(_realID));
 			if(bestScore) _playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"score",player._scorePlayer.ToString(), false);
 //				print (scoreTotalLevel(_realID));
-			chosenVariation += 1; //On affiche l'occurence suivante
+			//chosenVariation += 1; //On affiche l'occurence suivante
 			
 			if(bestScore) {
 				_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString(),"score",scoreTotalLevel(_realID).ToString(), false);
-				_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"locked","false", true);}
+				_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+(chosenVariation+1).ToString(),"locked","false", true);}
 //			TranslateAllInScene();
 //			GameEventManager.TriggerGameStart();
 		}
@@ -223,6 +227,7 @@ public class LevelManager : MonoBehaviour {
 	}
 	private void NextInstance() {
 		if(this != null) {
+			chosenVariation += 1; //On affiche l'occurence suivante
 			if(chosenVariation<5 && !isBoss) {
 				foreach (Transform _gameo in GameObject.Find("Level/ObjectImporter").transform)
 				{
@@ -347,6 +352,8 @@ public class LevelManager : MonoBehaviour {
 			if(GameObject.Find("EndLVLPanel")!=null) _EndLvlPanel.transform.parent = GameObject.Find("Player/IngameUI").GetComponent<Transform>();
 			if(_EndLvlSprite.transform.localScale.x != 10f) {
 	//			_EndLvlPanel.transform.position = new Vector3(_player.transform.position.x,_player.transform.position.y,_EndLvlPanel.transform.position.z);
+				_EndLvlContent.gameObject.SetActive(false);
+			OTTween _endLvlSpriteAlphaTween = new OTTween(_EndLvlSprite.GetComponent<SpriteRenderer>() ,0.8f, OTEasing.ExpoIn).Tween("color", new Color(1f,1f,1f,0));
 				OTTween _endLvlPanelTween = new OTTween(_EndLvlSprite.transform ,1f, OTEasing.QuartIn).Tween("localScale", new Vector3( 10f, 10f, 1f )).OnFinish(hideEndLvlPanel);
 			}
 			if(ID != 1) {

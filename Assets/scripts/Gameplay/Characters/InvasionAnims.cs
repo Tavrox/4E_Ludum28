@@ -51,7 +51,7 @@ public class InvasionAnims : MonoBehaviour {
 		animSprite.PlayBackward("invade");
 		
 		_player.transform.position = _player.spawnPos;
-		transform.position = new Vector3(_player.transform.position.x,_player.transform.position.y,-5f);
+		transform.position = new Vector3(_player.transform.position.x,_player.transform.position.y,-4f);
 		if(GameObject.Find("EndLVLPanel")!=null) {// _EndLvlPanel = GameObject.Find("EndLVLPanel").gameObject;
 		//_EndLvlPanel.transform.parent = GameObject.Find("Player").GetComponent<Transform>();
 		_EndLvlPanel.transform.position = new Vector3 (_player.transform.position.x,_player.transform.position.y,0f);
@@ -61,8 +61,8 @@ public class InvasionAnims : MonoBehaviour {
 	}
 	public void invade () {
 		//print ("invade");
-		transform.position = new Vector3(_player.transform.position.x,_player.transform.position.y,-5f);
-		_player.transform.position = new Vector3 (_player.transform.position.x,_player.transform.position.y,-20f);
+		transform.position = new Vector3(_player.transform.position.x,_player.transform.position.y,-4f);
+		_player.transform.position = new Vector3 (_player.transform.position.x,_player.transform.position.y,-4.5f);
 		animSprite.Play("invade");
 	}
 	public IEnumerator finalReset() {
