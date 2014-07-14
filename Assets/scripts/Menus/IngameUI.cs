@@ -10,7 +10,8 @@ public class IngameUI : MonoBehaviour {
 		MuteSound,
 		ExplosionTimer,
 		GoToMenu,
-		Manager
+		Manager,
+		NeedKey
 	}
 	public ListAction action;
 	private OTSprite prefabSprite;
@@ -75,8 +76,8 @@ public class IngameUI : MonoBehaviour {
 		}
 	}
 	void GameStart () {		
-		if(this != null) {
-		gameObject.SetActive(true);
+		if(this != null && action != ListAction.PauseGame) {
+			gameObject.SetActive(true);
 		}
 	}
 }

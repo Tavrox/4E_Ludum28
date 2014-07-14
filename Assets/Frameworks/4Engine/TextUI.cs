@@ -43,7 +43,7 @@ public class TextUI : MonoBehaviour {
 			//StartCoroutine("twinkle");
 			InvokeRepeating("twinkle",0,2f);
 		}
-		text=text+" ##### ";
+		//text=text+" ##### ";
 	}
 	private IEnumerator launchScroll() {
 		yield return new WaitForSeconds(0.5f);

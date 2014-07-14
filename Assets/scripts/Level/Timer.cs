@@ -23,7 +23,7 @@ public class Timer : MonoBehaviour {
 	public OTAnimatingSprite _clock, _minute;
 	public OTSprite _circleClock;
 	private OTTween _rescaleClock, _rescaleCircleClock, _rescaleMinute;
-
+	private LevelManager _lvlManager;
 
 	// Use this for initialization
 	void Start () {
@@ -31,7 +31,10 @@ public class Timer : MonoBehaviour {
 		pauseTimer = true;
 		lockTimerStart = true;
 		_player = GameObject.Find("Player").GetComponent<Player>();
-		InvokeRepeating("updateTimer", 0, 0.01f);
+		
+		_lvlManager = GameObject.Find("Level").GetComponent<LevelManager>();
+		if(_lvlManager._realID==0) {_player._scorePlayer=secLeft=microSecLeft=0;} 
+		else InvokeRepeating("updateTimer", 0, 0.01f);
 		_camera = GameObject.Find("Main Camera").GetComponent<Camera>();
 		_txtTimer = gameObject.GetComponentInChildren<TextMesh>();
 		_alertMask = GameObject.Find("Player/IngameUI/Timer/timerAlert").GetComponent<Transform>();
@@ -54,7 +57,7 @@ public class Timer : MonoBehaviour {
 	//transform.renderer.material.color.a
 	private void updateTimer()
 	{
-		if (pauseTimer != true && !lockTimerStart)
+		if (pauseTimer != true && !lockTimerStart/* && _lvlManager._realID!=0*/)
 		{
 			microSecLeft -= 1;
 
@@ -115,7 +118,7 @@ public class Timer : MonoBehaviour {
 	}
 	private void timerAlert () {
 		//alertColor.a = Mathf.PingPong(Time.time, 0.5f);
-		print(Time.deltaTime);
+		//print(Time.deltaTime);
 //		alertColor.a = (Mathf.Sin(Time.time*6.25f)+0.5f ) * 0.2f;
 //		_alertMask.renderer.material.color = alertColor;
 		_rescaleCircleClock = new OTTween(_alertMask.renderer.material, .49f, OTEasing.Linear).Tween("color", new Color(_alertMask.renderer.material.color.r,_alertMask.renderer.material.color.g,_alertMask.renderer.material.color.b,.4f));
@@ -149,7 +152,9 @@ public class Timer : MonoBehaviour {
 			_minute.frameIndex = 65;_clock.frameIndex=64;_circleClock.frameIndex=66;
 			_txtTimer.color = _colSafe;
 			alertColor.a = 0f;_alertMask.renderer.material.color = alertColor;
-			InvokeRepeating("updateTimer", 0, 0.01f);
+			
+			if(_lvlManager._realID==0) {_player._scorePlayer=secLeft=microSecLeft=0;} 
+			else InvokeRepeating("updateTimer", 0, 0.01f);
 		}
 	}
 	private void FinishLevel() {
@@ -171,10 +176,13 @@ public class Timer : MonoBehaviour {
 	{
 		if(this != null && gameObject.activeInHierarchy) {
 			lockTimerStart = pauseTimer = true;
+			CancelInvoke();
+			alertColor.a = 0f;_alertMask.renderer.material.color = alertColor;
 		}
 	}
 	public int getScoreTime () {
-		return System.Convert.ToInt32(System.Convert.ToDouble(secLeft.ToString()+"."+microSecLeft.ToString())*_player._COEFF_TEMPS);
+		if(_lvlManager._realID==0) {secLeft=microSecLeft=0;}
+		return System.Convert.ToInt32(System.Convert.ToDouble(((secLeft<10)?"0"+secLeft.ToString():secLeft.ToString())+"."+((microSecLeft<10)?"0"+microSecLeft.ToString():microSecLeft.ToString()))*_player._COEFF_TEMPS);
 	}
 //	private void OnGUI()
 //	{

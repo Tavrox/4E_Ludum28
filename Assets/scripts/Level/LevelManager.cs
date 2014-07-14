@@ -20,8 +20,10 @@ public class LevelManager : MonoBehaviour {
 	private Vector3 spawnPoint;
 	private PartyData _partyData;
 	public GameSaveLoad _playerDataLoader,_levelDataLoader;
+	private GameObject _EndLvlPanel, _EndLvlSprite, _EndLvlContent;
 	public Transform _bulleTuto;
 	private Timer _timer;
+	private TextMesh lblLevel, lblScoreGold, lblScoreSilver, lblScoreBronze, lblScoreOld, lblScoreTime, lblScoreTotal, lblNBKey, lblScoreKey;
 
 	void Awake()
 	{
@@ -38,6 +40,24 @@ public class LevelManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
+		
+		lblLevel = GameObject.Find("Player/IngameUI/EndLVLPanel/content/LEVEL_ALL").GetComponent<TextMesh>();
+		lblScoreGold = GameObject.Find("Player/IngameUI/EndLVLPanel/content/lblScoreGold").GetComponent<TextMesh>();
+		lblScoreSilver = GameObject.Find("Player/IngameUI/EndLVLPanel/content/lblScoreSilver").GetComponent<TextMesh>();
+		lblScoreBronze = GameObject.Find("Player/IngameUI/EndLVLPanel/content/lblScoreBronze").GetComponent<TextMesh>();
+		lblScoreOld = GameObject.Find("Player/IngameUI/EndLVLPanel/content/lblScoreOld").GetComponent<TextMesh>();
+		lblScoreTime = GameObject.Find("Player/IngameUI/EndLVLPanel/content/lblScoreTime").GetComponent<TextMesh>();
+		lblScoreTotal = GameObject.Find("Player/IngameUI/EndLVLPanel/content/lblScoreTotal").GetComponent<TextMesh>();
+		lblNBKey = GameObject.Find("Player/IngameUI/EndLVLPanel/content/lblNBKey").GetComponent<TextMesh>();
+		lblScoreKey = GameObject.Find("Player/IngameUI/EndLVLPanel/content/lblScoreKey").GetComponent<TextMesh>();
+		_EndLvlPanel = GameObject.Find("Player/IngameUI/EndLVLPanel").gameObject;
+		_EndLvlSprite = GameObject.Find("Player/IngameUI/EndLVLPanel/panel").gameObject;
+		_EndLvlContent = GameObject.Find("Player/IngameUI/EndLVLPanel/content").gameObject;
+		if(_EndLvlSprite.transform.localScale.x != 10f) {
+			OTTween _endLvlPanelTween = new OTTween(_EndLvlSprite.transform ,1f, OTEasing.QuartIn).Tween("localScale", new Vector3( 10f, 10f, 1f )).OnFinish(hideEndLvlPanel);
+		}
+		else {_EndLvlContent.gameObject.SetActive(false);_EndLvlPanel.gameObject.SetActive(false);}
+		
 		//DontDestroyOnLoad(this);
 		if(chosenVariation==0 /*|| chosenVariation==5*/) chosenVariation = 1;//GameObject.Find("Level/TileImporter").GetComponent<TileImporter>().chosenVariation;
 //		if (GameObject.FindWithTag("Player") != null)
@@ -90,15 +110,22 @@ public class LevelManager : MonoBehaviour {
 	}
 	
 	private void FinishLevel() { //When end lvl panel display after endDoor Input
-		//lblLevel = _thumb.Info.levelNumName.ToString()+"."+chosenVariation.ToString();
-		//lblScoreGold = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_thumb.Info.levelNumName+"/occ"+chosenVariation.ToString(),"gold");
-		//lblScoreSilver = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_thumb.Info.levelNumName+"/occ"+chosenVariation.ToString(),"bronze");
-		//lblScoreBronze = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_thumb.Info.levelNumName+"/occ"+chosenVariation.ToString(),"silver");
-		//lblScoreOld = _playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"score");
+		
+//		print (_EndLvlPanel.GetComponentInChildren<Transform>().gameObject.GetComponentInChildren<Transform>().gameObject.name);
+		_EndLvlPanel.gameObject.SetActive(true);
+//		_EndLvlPanel.transform.position = new Vector3(_player.transform.position.x,_player.transform.position.y,_EndLvlPanel.transform.position.z);
+		OTTween _endLvlPanelTween = new OTTween(_EndLvlSprite.transform ,1f, OTEasing.QuartOut).Tween("localScale", new Vector3( 1f, 1f, 1f )).OnFinish(displayEndLvlContent);	
+		updateScore();
+		lblLevel.text = _realID.ToString()+"."+chosenVariation.ToString();
+		lblScoreGold.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"gold");
+		lblScoreSilver.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"bronze");
+		lblScoreBronze.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"silver");
+		lblScoreOld.text = _playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"score");
 		//player.nbKey;
 		//_player._COEFF_BATTERY;
 		//player._scorePlayer;
 		//_timer.getScoreTime();
+		StartCoroutine("incrementScore");
 		/*
 		
 		int numFrame = 0;
@@ -119,17 +146,18 @@ public class LevelManager : MonoBehaviour {
 	}
 	IEnumerator incrementScore() {
 		for(int i=0; i<=_timer.getScoreTime();i++) {
-			yield return new WaitForSeconds(0.0005f);
-			//lblScoreTime.text = i.ToString();
-			//lblScoreTotal = i.ToString();
+			yield return new WaitForSeconds(0.0001f);
+			lblScoreTime.text = i.ToString()+" ''";
+			lblScoreTotal.text = i.ToString();
+			if(i==_timer.getScoreTime()) StartCoroutine("incrementBattery");
 		}
 	}
 	IEnumerator incrementBattery() {
 		for(int i=1; i<=player.nbKey;i++) {
 			yield return new WaitForSeconds(1f);
-			//lblNBKey.text = i.ToString();
-			//lblScoreKey = "="+ (i * _player._COEFF_BATTERY).ToString();
-			//lblScoreTotal = (_timer.getScoreTime()+i * _player._COEFF_BATTERY).ToString();
+			lblNBKey.text = i.ToString();
+			lblScoreKey.text = "= "+ (i * player._COEFF_BATTERY).ToString();
+			lblScoreTotal.text = (_timer.getScoreTime()+i * player._COEFF_BATTERY).ToString();
 		}
 	}
 	// Update is called once per frame
@@ -147,7 +175,12 @@ public class LevelManager : MonoBehaviour {
 //			GameEventManager.TriggerGameOver();
 //		}
 //	}
-	
+	private void displayEndLvlContent (OTTween tween) {
+		_EndLvlContent.gameObject.SetActive(true);
+	}
+	private void hideEndLvlPanel (OTTween tween) {
+		_EndLvlPanel.gameObject.SetActive(false);
+	}
 	public void updateScore ()
 	{
 		if(this != null) {
@@ -311,6 +344,11 @@ public class LevelManager : MonoBehaviour {
 	private void GameStart()
 	{
 		if(this != null) {
+			if(GameObject.Find("EndLVLPanel")!=null) _EndLvlPanel.transform.parent = GameObject.Find("Player/IngameUI").GetComponent<Transform>();
+			if(_EndLvlSprite.transform.localScale.x != 10f) {
+	//			_EndLvlPanel.transform.position = new Vector3(_player.transform.position.x,_player.transform.position.y,_EndLvlPanel.transform.position.z);
+				OTTween _endLvlPanelTween = new OTTween(_EndLvlSprite.transform ,1f, OTEasing.QuartIn).Tween("localScale", new Vector3( 10f, 10f, 1f )).OnFinish(hideEndLvlPanel);
+			}
 			if(ID != 1) {
 				MasterAudio.StopAllPlaylists();
 				playLevelMusic();
