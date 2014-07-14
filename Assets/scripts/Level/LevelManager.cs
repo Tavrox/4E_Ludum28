@@ -12,7 +12,7 @@ public class LevelManager : MonoBehaviour {
 	public bool isBoss;
 	public static BMTuning TuningDocument;
 
-	private int _secLeft, _scoreTotalLvl;
+	private int _secLeft, _scoreTotalLvl,cptKey;
 	private bool bestScore;
 	private TileImporter _tileImporter;
 	private PlayerData _pdata;
@@ -24,7 +24,7 @@ public class LevelManager : MonoBehaviour {
 	public Transform _bulleTuto;
 	private Timer _timer;
 	private TextMesh lblLevel, lblScoreGold, lblScoreSilver, lblScoreBronze, lblScoreOld, lblScoreTime, lblScoreTotal, lblNBKey, lblScoreKey;
-
+	private Key [] _collectedKeys;
 	void Awake()
 	{
 		TuningDocument  = Instantiate(Resources.Load("Tuning/Global")) as BMTuning;
@@ -112,7 +112,13 @@ public class LevelManager : MonoBehaviour {
 	}
 	
 	private void FinishLevel() { //When end lvl panel display after endDoor Input
-		
+		_collectedKeys = player.GetComponentsInChildren<Key>();
+		int k = 0;
+		foreach(Key _k in _collectedKeys) {
+			
+			_k.transform.position = new Vector3 (_k.transform.position.x,_k.transform.position.y,-15f-0.1f*k);
+			k++;
+		}
 //		print (_EndLvlPanel.GetComponentInChildren<Transform>().gameObject.GetComponentInChildren<Transform>().gameObject.name);
 		_EndLvlPanel.gameObject.SetActive(true);
 //		_EndLvlPanel.transform.position = new Vector3(_player.transform.position.x,_player.transform.position.y,_EndLvlPanel.transform.position.z);
@@ -129,6 +135,7 @@ public class LevelManager : MonoBehaviour {
 		//player._scorePlayer;
 		//_timer.getScoreTime();
 		StartCoroutine("incrementScore");
+//		incrementScore();
 		/*
 		
 		int numFrame = 0;
@@ -149,6 +156,7 @@ public class LevelManager : MonoBehaviour {
 	}
 	IEnumerator incrementScore() {
 		for(int i=0; i<=_timer.getScoreTime();i++) {
+			if(i<_timer.getScoreTime()-10) i=i+3;
 			yield return new WaitForSeconds(0.0001f);
 			lblScoreTime.text = i.ToString()+" ''";
 			lblScoreTotal.text = i.ToString();
@@ -156,12 +164,18 @@ public class LevelManager : MonoBehaviour {
 		}
 	}
 	IEnumerator incrementBattery() {
-		for(int i=1; i<=player.nbKey;i++) {
+		for(cptKey=1; cptKey<=player.nbKey;cptKey++) {
+			new OTTween(_collectedKeys[cptKey-1].transform, 0.2f, OTEasing.BackOut).Tween("localScale", new Vector3(1.2f, 1.2f, 1f)).OnFinish(popKeyScore);
 			yield return new WaitForSeconds(1f);
-			lblNBKey.text = i.ToString();
-			lblScoreKey.text = "= "+ (i * player._COEFF_BATTERY).ToString();
-			lblScoreTotal.text = (_timer.getScoreTime()+i * player._COEFF_BATTERY).ToString();
+			OTTween _endLvlPanelTween = new OTTween(_EndLvlSprite.transform ,1f, OTEasing.QuartOut).Tween("localScale", new Vector3( 1f, 1f, 1f )).OnFinish(displayEndLvlContent);
+			lblNBKey.text = cptKey.ToString();
+			lblScoreKey.text = "= "+ (cptKey * player._COEFF_BATTERY).ToString();
+			lblScoreTotal.text = (_timer.getScoreTime()+cptKey * player._COEFF_BATTERY).ToString();
 		}
+	}
+	private void popKeyScore (OTTween tween) {
+		new OTTween(_collectedKeys[cptKey-1].transform, 1f, OTEasing.QuadInOut).Tween("position", new Vector3(lblNBKey.transform.position.x+1.25f, lblNBKey.transform.position.y+0.2f,_collectedKeys[cptKey-1].transform.position.z));
+		new OTTween(_collectedKeys[cptKey-1].transform, 1f, OTEasing.QuadInOut).Tween("localScale", new Vector3(2.5f, 2.5f, 1f)).PingPong();
 	}
 	// Update is called once per frame
 //	void Update () 
