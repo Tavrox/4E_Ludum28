@@ -159,6 +159,7 @@ public class Timer : MonoBehaviour {
 	}
 	private void FinishLevel() {
 		if(this != null && gameObject.activeInHierarchy) {
+			_player._scorePlayer= System.Convert.ToInt32(System.Convert.ToDouble(secLeft.ToString()+"."+microSecLeft.ToString())*_player._COEFF_TEMPS + _player.nbKey*_player._COEFF_BATTERY);
 			CancelInvoke();
 			alertColor.a = 0f;_alertMask.renderer.material.color = alertColor;
 		}

@@ -83,6 +83,9 @@
 <entry id='	PAUSE_4-1	'>	<english>	Do you really want to exit the game ?/nYour progression in this occurence/nwill be lost.	</english>	<french>	Voulez-vous vraiment quitter le jeu ?/nVotre progression dans cette occurence/nsera perdue.	</french>	<info>	88	91	</info>	</entry>
 <entry id='	YES	'>	<english>	Yes	</english>	<french>	Oui	</french>	<info>	3	3	</info>	</entry>
 <entry id='	NO	'>	<english>	No	</english>	<french>	Non	</french>	<info>	2	3	</info>	</entry>
+<entry id='	RESTART_LEVEL	'>	<english>	Restart Level	</english>	<french>	Recommencer	</french>	<info>	13	11	</info>	</entry>
+<entry id='	NEXT_LEVEL	'>	<english>	Next Level	</english>	<french>	Continuer	</french>	<info>	10	9	</info>	</entry>
+<entry id='	LEVEL_ALL	'>	<english>	Level	</english>	<french>	Niveau	</french>	<info>	5	6	</info>	</entry>
 <entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
 <entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
 <entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>

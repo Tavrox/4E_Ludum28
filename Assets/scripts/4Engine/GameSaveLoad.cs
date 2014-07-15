@@ -190,6 +190,7 @@ public class GameSaveLoad: ScriptableObject {
 		//searchResult = "-1";
 		_xmlNodeSearch = doc.SelectNodes(xmlPath);
 //		Debug.Log(_xmlNodeSearch[0].OuterXml);
+//		Debug.Log("setValueInXmlDoc");
 		foreach (XmlAttribute attr in _xmlNodeSearch[0].Attributes)
 		{
 			if(attr.Name == attributeName) {

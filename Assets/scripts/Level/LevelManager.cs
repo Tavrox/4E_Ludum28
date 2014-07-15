@@ -25,6 +25,9 @@ public class LevelManager : MonoBehaviour {
 	private Timer _timer;
 	private TextMesh lblLevel, lblScoreGold, lblScoreSilver, lblScoreBronze, lblScoreOld, lblScoreTime, lblScoreTotal, lblNBKey, lblScoreKey;
 	private Key [] _collectedKeys;
+	private OTSprite playerMedal, playerMedalFinal;
+	private OTTween _endLvlSpriteAlphaTween, _endLvlPanelTween, _rescaleKeyTw,_moveKeyTw,_scalePingKeyTw,_alphaMedalTw,_scaleMedalTw;
+	
 	void Awake()
 	{
 		TuningDocument  = Instantiate(Resources.Load("Tuning/Global")) as BMTuning;
@@ -40,7 +43,6 @@ public class LevelManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		
 		lblLevel = GameObject.Find("Player/IngameUI/EndLVLPanel/content/LEVEL_ALL").GetComponent<TextMesh>();
 		lblScoreGold = GameObject.Find("Player/IngameUI/EndLVLPanel/content/lblScoreGold").GetComponent<TextMesh>();
 		lblScoreSilver = GameObject.Find("Player/IngameUI/EndLVLPanel/content/lblScoreSilver").GetComponent<TextMesh>();
@@ -49,6 +51,8 @@ public class LevelManager : MonoBehaviour {
 		lblScoreTime = GameObject.Find("Player/IngameUI/EndLVLPanel/content/lblScoreTime").GetComponent<TextMesh>();
 		lblScoreTotal = GameObject.Find("Player/IngameUI/EndLVLPanel/content/lblScoreTotal").GetComponent<TextMesh>();
 		lblNBKey = GameObject.Find("Player/IngameUI/EndLVLPanel/content/lblNBKey").GetComponent<TextMesh>();
+		playerMedal = GameObject.Find("Player/IngameUI/EndLVLPanel/content/medalPlayer-parent/playerMedal-Small").GetComponent<OTSprite>();
+		playerMedalFinal = GameObject.Find("Player/IngameUI/EndLVLPanel/content/bigMedalPlayer-parent/playerMedal").GetComponent<OTSprite>();
 		lblScoreKey = GameObject.Find("Player/IngameUI/EndLVLPanel/content/lblScoreKey").GetComponent<TextMesh>();
 		_EndLvlPanel = GameObject.Find("Player/IngameUI/EndLVLPanel").gameObject;
 		_EndLvlSprite = GameObject.Find("Player/IngameUI/EndLVLPanel/panel").gameObject;
@@ -110,32 +114,37 @@ public class LevelManager : MonoBehaviour {
 			_bulleTuto.gameObject.SetActive(true);
 		}
 	}
-	
+	void Update () {
+		if(player.finishedLevel && (Input.GetKey(player.InputMan.Enter)  || Input.GetKey(player.InputMan.PadSkipDeath))) {
+			skipIncrementScore();
+		}
+	}
 	private void FinishLevel() { //When end lvl panel display after endDoor Input
 		_collectedKeys = player.GetComponentsInChildren<Key>();
 		int k = 0;
 		foreach(Key _k in _collectedKeys) {
 			
-			_k.transform.position = new Vector3 (_k.transform.position.x,_k.transform.position.y,-15f-0.1f*k);
+			_k.transform.position = new Vector3 (_k.transform.position.x,_k.transform.position.y,-25f-0.1f*k);
 			k++;
 		}
 //		print (_EndLvlPanel.GetComponentInChildren<Transform>().gameObject.GetComponentInChildren<Transform>().gameObject.name);
 		_EndLvlPanel.gameObject.SetActive(true);
 //		_EndLvlPanel.transform.position = new Vector3(_player.transform.position.x,_player.transform.position.y,_EndLvlPanel.transform.position.z);
-		OTTween _endLvlSpriteAlphaTween = new OTTween(_EndLvlSprite.GetComponent<SpriteRenderer>() ,0.8f, OTEasing.ExpoOut).Tween("color", new Color(1f,1f,1f,1f));
-		OTTween _endLvlPanelTween = new OTTween(_EndLvlSprite.transform ,1f, OTEasing.QuartOut).Tween("localScale", new Vector3( 1f, 1f, 1f )).OnFinish(displayEndLvlContent);	
-		updateScore();
+		_endLvlSpriteAlphaTween = new OTTween(_EndLvlSprite.GetComponent<SpriteRenderer>() ,0.8f, OTEasing.ExpoOut).Tween("color", new Color(1f,1f,1f,1f));
+		_endLvlPanelTween = new OTTween(_EndLvlSprite.transform ,1f, OTEasing.QuartOut).Tween("localScale", new Vector3( 1f, 1f, 1f )).OnFinish(displayEndLvlContent);	
 		lblLevel.text = _realID.ToString()+"."+chosenVariation.ToString();
 		lblScoreGold.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"gold");
 		lblScoreSilver.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"bronze");
 		lblScoreBronze.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"silver");
 		lblScoreOld.text = _playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"score");
+		playerMedal.frameIndex = displayPlayerMedal(lblScoreOld.text, lblScoreGold.text, lblScoreSilver.text, lblScoreBronze.text);
+		updateScore();
 		//player.nbKey;
 		//_player._COEFF_BATTERY;
 		//player._scorePlayer;
 		//_timer.getScoreTime();
 		StartCoroutine("incrementScore");
-//		incrementScore();
+//		skipIncrementScore();
 		/*
 		
 		int numFrame = 0;
@@ -154,28 +163,57 @@ public class LevelManager : MonoBehaviour {
 		if(System.Convert.ToInt32(playerScore) >= System.Convert.ToInt32(goldScore)) numFrame = 3;
 		return numFrame;
 	}
+	void skipIncrementScore() {
+		StopCoroutine("incrementScore");
+		StopCoroutine("incrementBattery");
+				
+//		if(_endLvlSpriteAlphaTween!=null) _endLvlSpriteAlphaTween.Stop();
+//		if(_endLvlPanelTween!=null) _endLvlPanelTween.Stop();
+		if(_rescaleKeyTw!=null) _rescaleKeyTw.Stop();
+		if(_moveKeyTw!=null) _moveKeyTw.Stop();
+		if(_scalePingKeyTw!=null) _scalePingKeyTw.Stop();
+		if(_alphaMedalTw!=null) _alphaMedalTw.Stop();
+		if(_scaleMedalTw!=null) _scaleMedalTw.Stop();
+		
+		lblScoreTime.text = _timer.getScoreTime().ToString()+" ''";
+		for(int k=1; k<=player.nbKey;k++) {
+			_collectedKeys[k-1].transform.localScale=new Vector3(1.2f, 1.2f, 1f);
+			_collectedKeys[k-1].transform.position=new Vector3(lblNBKey.transform.position.x+1.25f, lblNBKey.transform.position.y+0.2f,_collectedKeys[k-1].transform.position.z);
+		}
+		lblNBKey.text = player.nbKey.ToString();
+		lblScoreKey.text = "= "+ (player.nbKey * player._COEFF_BATTERY).ToString();
+		lblScoreTotal.text = (_timer.getScoreTime()+player.nbKey * player._COEFF_BATTERY).ToString();
+		playerMedalFinal.frameIndex = displayPlayerMedal(lblScoreTotal.text, lblScoreGold.text, lblScoreSilver.text, lblScoreBronze.text);
+		popMedalFinal();
+	}
 	IEnumerator incrementScore() {
 		for(int i=0; i<=_timer.getScoreTime();i++) {
 			if(i<_timer.getScoreTime()-10) i=i+3;
 			yield return new WaitForSeconds(0.0001f);
 			lblScoreTime.text = i.ToString()+" ''";
 			lblScoreTotal.text = i.ToString();
-			if(i==_timer.getScoreTime()) StartCoroutine("incrementBattery");
+			if(i==_timer.getScoreTime()) {yield return new WaitForSeconds(0.5f);StartCoroutine("incrementBattery");}
 		}
 	}
 	IEnumerator incrementBattery() {
 		for(cptKey=1; cptKey<=player.nbKey;cptKey++) {
-			new OTTween(_collectedKeys[cptKey-1].transform, 0.2f, OTEasing.BackOut).Tween("localScale", new Vector3(1.2f, 1.2f, 1f)).OnFinish(popKeyScore);
+			_rescaleKeyTw = new OTTween(_collectedKeys[cptKey-1].transform, 0.2f, OTEasing.BackOut).Tween("localScale", new Vector3(1.2f, 1.2f, 1f)).OnFinish(popKeyScore);
 			yield return new WaitForSeconds(1f);
-			OTTween _endLvlPanelTween = new OTTween(_EndLvlSprite.transform ,1f, OTEasing.QuartOut).Tween("localScale", new Vector3( 1f, 1f, 1f )).OnFinish(displayEndLvlContent);
+			//OTTween _endLvlPanelTween = new OTTween(_EndLvlSprite.transform ,1f, OTEasing.QuartOut).Tween("localScale", new Vector3( 1f, 1f, 1f )).OnFinish(displayEndLvlContent);
 			lblNBKey.text = cptKey.ToString();
 			lblScoreKey.text = "= "+ (cptKey * player._COEFF_BATTERY).ToString();
 			lblScoreTotal.text = (_timer.getScoreTime()+cptKey * player._COEFF_BATTERY).ToString();
+			playerMedalFinal.frameIndex = displayPlayerMedal(lblScoreTotal.text, lblScoreGold.text, lblScoreSilver.text, lblScoreBronze.text);
+			if(cptKey==player.nbKey) popMedalFinal();
 		}
 	}
 	private void popKeyScore (OTTween tween) {
-		new OTTween(_collectedKeys[cptKey-1].transform, 1f, OTEasing.QuadInOut).Tween("position", new Vector3(lblNBKey.transform.position.x+1.25f, lblNBKey.transform.position.y+0.2f,_collectedKeys[cptKey-1].transform.position.z));
-		new OTTween(_collectedKeys[cptKey-1].transform, 1f, OTEasing.QuadInOut).Tween("localScale", new Vector3(2.5f, 2.5f, 1f)).PingPong();
+		_moveKeyTw = new OTTween(_collectedKeys[cptKey-1].transform, 1f, OTEasing.QuadInOut).Tween("position", new Vector3(lblNBKey.transform.position.x+1.25f, lblNBKey.transform.position.y+0.2f,_collectedKeys[cptKey-1].transform.position.z));
+		_scalePingKeyTw = new OTTween(_collectedKeys[cptKey-1].transform, 1f, OTEasing.QuadInOut).Tween("localScale", new Vector3(2.5f, 2.5f, 1f)).PingPong();
+	}
+	private void popMedalFinal () {
+		_alphaMedalTw = new OTTween(playerMedalFinal, 0.4f, OTEasing.Linear).Tween("alpha", 1f);
+		_scaleMedalTw = new OTTween(playerMedalFinal.transform.parent.transform, 1f, OTEasing.QuadInOut).Tween("localScale", new Vector3(1f, 1f, 1f));
 	}
 	// Update is called once per frame
 //	void Update () 
@@ -203,7 +241,7 @@ public class LevelManager : MonoBehaviour {
 	{
 		if(this != null) {
 		bestScore = (player._scorePlayer>System.Convert.ToInt32(_playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"score")))?true:false;
-//		print(player._scorePlayer.ToString() + " " + bestScore);
+//		print(player._scorePlayer.ToString() + " ? " + bestScore);
 		if(chosenVariation<5 && !isBoss) { //Si occurence 1 à 4
 //			print (scoreTotalLevel(_realID));
 			if(bestScore) _playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"score",player._scorePlayer.ToString(), false);
