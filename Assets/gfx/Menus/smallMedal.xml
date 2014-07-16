@@ -4,57 +4,109 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>0smallMedal-None.png</key>
+            <key>00smallMedal-None.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1,1},{10,10}}</string>
+                <string>{{1,1},{11,13}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{10,10}}</string>
+                <string>{{0,0},{11,13}}</string>
                 <key>sourceSize</key>
-                <string>{10,10}</string>
+                <string>{11,13}</string>
             </dict>
-            <key>1smallMedal-Bronze.png</key>
+            <key>01smallMedal-Bronze.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{12,1},{10,10}}</string>
+                <string>{{13,1},{11,13}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{10,10}}</string>
+                <string>{{0,0},{11,13}}</string>
                 <key>sourceSize</key>
-                <string>{10,10}</string>
+                <string>{11,13}</string>
             </dict>
-            <key>2smallMedal-Silver.png</key>
+            <key>02smallMedal-Silver.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1,12},{10,10}}</string>
+                <string>{{25,1},{10,12}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{10,10}}</string>
+                <string>{{0,0},{10,12}}</string>
                 <key>sourceSize</key>
-                <string>{10,10}</string>
+                <string>{10,12}</string>
             </dict>
-            <key>3smallMedal-Gold.png</key>
+            <key>03smallMedal-Gold.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{12,12},{10,10}}</string>
+                <string>{{36,1},{10,12}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{10,10}}</string>
+                <string>{{0,0},{10,12}}</string>
                 <key>sourceSize</key>
-                <string>{10,10}</string>
+                <string>{10,12}</string>
+            </dict>
+            <key>04bigMedal-None.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{47,1},{36,44}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{36,44}}</string>
+                <key>sourceSize</key>
+                <string>{36,44}</string>
+            </dict>
+            <key>05bigMedal-Bronze.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{84,1},{36,44}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{36,44}}</string>
+                <key>sourceSize</key>
+                <string>{36,44}</string>
+            </dict>
+            <key>06bigMedal-Silver.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{121,1},{37,44}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{37,44}}</string>
+                <key>sourceSize</key>
+                <string>{37,44}</string>
+            </dict>
+            <key>07bigMedal-Gold.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{159,1},{36,44}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{36,44}}</string>
+                <key>sourceSize</key>
+                <string>{36,44}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -64,9 +116,9 @@
             <key>realTextureFileName</key>
             <string>smallMedal.png</string>
             <key>size</key>
-            <string>{32,32}</string>
+            <string>{256,64}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:f9cb69117577953ff638cbaa04b9d025:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:08506fc9f15201fce132d3d8136e68ab:1/1$</string>
             <key>textureFileName</key>
             <string>smallMedal.png</string>
         </dict>

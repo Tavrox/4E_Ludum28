@@ -86,6 +86,7 @@
 <entry id='	RESTART_LEVEL	'>	<english>	Restart Level	</english>	<french>	Recommencer	</french>	<info>	13	11	</info>	</entry>
 <entry id='	NEXT_LEVEL	'>	<english>	Next Level	</english>	<french>	Continuer	</french>	<info>	10	9	</info>	</entry>
 <entry id='	LEVEL_ALL	'>	<english>	Level	</english>	<french>	Niveau	</french>	<info>	5	6	</info>	</entry>
+<entry id='	NEW_SCORE	'>	<english>	New Score !	</english>	<french>	Nouveau Score !	</french>	<info>	-11	-15	</info>	</entry>
 <entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
 <entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
 <entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>

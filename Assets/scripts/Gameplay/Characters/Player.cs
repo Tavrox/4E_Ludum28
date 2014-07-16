@@ -12,6 +12,7 @@ public class Player : Character {
 	public int angleRotation, nbKey;
 	public bool isDead = false, locked = false, isTeleport, standing, unCrouch, killedByBlob, killedByLaser, finishedLevel;
 	private bool walkSoundLeft;
+	private float moveVelIni;
 	//private Camera _mainCam;
 	//private LevelManager _lvlManager;
 	//private Vector3 _spawnVariation;
@@ -55,6 +56,7 @@ public class Player : Character {
 		spawnPos = thisTransform.position;
 		isDead =false;
 		col = (BoxCollider)this.collider;
+		moveVelIni = moveVel;
 		//otweenFinish = test;
 		//_crouchTween.onTweenFinish = test;
 		//otweenFinish();
@@ -258,7 +260,10 @@ public class Player : Character {
 		if(FindObjectOfType(typeof(Player)) && this != null) {
 			transform.localPosition = spawnPos;
 			enabled = true;
-		
+			moveVel = moveVelIni;
+		pushCrate = grabCrate = false;
+		col.size = new Vector3(1f, col.size.y, col.size.z);
+		col.center = new Vector3(0f, 0f, 0f);
 		HUDPause.gameObject.SetActive(false);
 			finishedLevel=killedByBlob = killedByLaser = false;
 		collider.enabled=true;

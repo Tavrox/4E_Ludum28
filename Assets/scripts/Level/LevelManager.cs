@@ -23,7 +23,7 @@ public class LevelManager : MonoBehaviour {
 	private GameObject _EndLvlPanel, _EndLvlSprite, _EndLvlContent;
 	public Transform _bulleTuto;
 	private Timer _timer;
-	private TextMesh lblLevel, lblScoreGold, lblScoreSilver, lblScoreBronze, lblScoreOld, lblScoreTime, lblScoreTotal, lblNBKey, lblScoreKey;
+	private TextMesh lblLevel, lblScoreGold, lblScoreSilver, lblScoreBronze, lblScoreOld, lblScoreTime, lblScoreTotal, lblNBKey, lblScoreKey, lblRecord;
 	private Key [] _collectedKeys;
 	private OTSprite playerMedal, playerMedalFinal;
 	private OTTween _endLvlSpriteAlphaTween, _endLvlPanelTween, _rescaleKeyTw,_moveKeyTw,_scalePingKeyTw,_alphaMedalTw,_scaleMedalTw;
@@ -50,6 +50,8 @@ public class LevelManager : MonoBehaviour {
 		lblScoreOld = GameObject.Find("Player/IngameUI/EndLVLPanel/content/lblScoreOld").GetComponent<TextMesh>();
 		lblScoreTime = GameObject.Find("Player/IngameUI/EndLVLPanel/content/lblScoreTime").GetComponent<TextMesh>();
 		lblScoreTotal = GameObject.Find("Player/IngameUI/EndLVLPanel/content/lblScoreTotal").GetComponent<TextMesh>();
+		lblRecord = GameObject.Find("Player/IngameUI/EndLVLPanel/content/NEW_SCORE").GetComponent<TextMesh>();
+		lblRecord.gameObject.SetActive(false);
 		lblNBKey = GameObject.Find("Player/IngameUI/EndLVLPanel/content/lblNBKey").GetComponent<TextMesh>();
 		playerMedal = GameObject.Find("Player/IngameUI/EndLVLPanel/content/medalPlayer-parent/playerMedal-Small").GetComponent<OTSprite>();
 		playerMedalFinal = GameObject.Find("Player/IngameUI/EndLVLPanel/content/bigMedalPlayer-parent/playerMedal").GetComponent<OTSprite>();
@@ -183,7 +185,7 @@ public class LevelManager : MonoBehaviour {
 		lblNBKey.text = player.nbKey.ToString();
 		lblScoreKey.text = "= "+ (player.nbKey * player._COEFF_BATTERY).ToString();
 		lblScoreTotal.text = (_timer.getScoreTime()+player.nbKey * player._COEFF_BATTERY).ToString();
-		playerMedalFinal.frameIndex = displayPlayerMedal(lblScoreTotal.text, lblScoreGold.text, lblScoreSilver.text, lblScoreBronze.text);
+		playerMedalFinal.frameIndex = displayPlayerMedal(lblScoreTotal.text, lblScoreGold.text, lblScoreSilver.text, lblScoreBronze.text)+4;
 		popMedalFinal();
 	}
 	IEnumerator incrementScore() {
@@ -203,7 +205,7 @@ public class LevelManager : MonoBehaviour {
 			lblNBKey.text = cptKey.ToString();
 			lblScoreKey.text = "= "+ (cptKey * player._COEFF_BATTERY).ToString();
 			lblScoreTotal.text = (_timer.getScoreTime()+cptKey * player._COEFF_BATTERY).ToString();
-			playerMedalFinal.frameIndex = displayPlayerMedal(lblScoreTotal.text, lblScoreGold.text, lblScoreSilver.text, lblScoreBronze.text);
+			playerMedalFinal.frameIndex = displayPlayerMedal(lblScoreTotal.text, lblScoreGold.text, lblScoreSilver.text, lblScoreBronze.text)+4;
 			if(cptKey==player.nbKey) popMedalFinal();
 		}
 	}
@@ -213,7 +215,8 @@ public class LevelManager : MonoBehaviour {
 	}
 	private void popMedalFinal () {
 		_alphaMedalTw = new OTTween(playerMedalFinal, 0.4f, OTEasing.Linear).Tween("alpha", 1f);
-		_scaleMedalTw = new OTTween(playerMedalFinal.transform.parent.transform, 1f, OTEasing.QuadInOut).Tween("localScale", new Vector3(1f, 1f, 1f));
+		_scaleMedalTw = new OTTween(playerMedalFinal.transform.parent.transform, 1f, OTEasing.QuadInOut).Tween("localScale", new Vector3(.4f, .4f, 1f));
+		if(bestScore) {lblRecord.gameObject.SetActive(true);}
 	}
 	// Update is called once per frame
 //	void Update () 
@@ -280,7 +283,7 @@ public class LevelManager : MonoBehaviour {
 	private void NextInstance() {
 		if(this != null) {
 			chosenVariation += 1; //On affiche l'occurence suivante
-			if(chosenVariation<5 && !isBoss) {
+			if(chosenVariation<=5 && !isBoss) {
 				foreach (Transform _gameo in GameObject.Find("Level/ObjectImporter").transform)
 				{
 					if (_gameo.gameObject.name == chosenVariation.ToString() || _gameo.gameObject.name == "playerspawn"+chosenVariation)
@@ -401,6 +404,9 @@ public class LevelManager : MonoBehaviour {
 	private void GameStart()
 	{
 		if(this != null) {
+			playerMedalFinal.transform.parent.transform.localScale = new Vector3(20f, 20f, 1f);
+			playerMedalFinal.alpha = 0;
+			lblRecord.gameObject.SetActive(false);
 			if(GameObject.Find("EndLVLPanel")!=null) _EndLvlPanel.transform.parent = GameObject.Find("Player/IngameUI").GetComponent<Transform>();
 			if(_EndLvlSprite.transform.localScale.x != 10f) {
 	//			_EndLvlPanel.transform.position = new Vector3(_player.transform.position.x,_player.transform.position.y,_EndLvlPanel.transform.position.z);

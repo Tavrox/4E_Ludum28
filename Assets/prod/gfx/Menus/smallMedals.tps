@@ -54,9 +54,9 @@
         <key>maxTextureSize</key>
         <QSize>
             <key>width</key>
-            <int>32</int>
+            <int>256</int>
             <key>height</key>
-            <int>32</int>
+            <int>64</int>
         </QSize>
         <key>fixedTextureSize</key>
         <QSize>
@@ -148,11 +148,14 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>pause.png</filename>
-            <filename>0smallMedal-None.png</filename>
-            <filename>1smallMedal-Bronze.png</filename>
-            <filename>2smallMedal-Silver.png</filename>
-            <filename>3smallMedal-Gold.png</filename>
+            <filename>00smallMedal-None.png</filename>
+            <filename>01smallMedal-Bronze.png</filename>
+            <filename>02smallMedal-Silver.png</filename>
+            <filename>03smallMedal-Gold.png</filename>
+            <filename>04bigMedal-None.png</filename>
+            <filename>05bigMedal-Bronze.png</filename>
+            <filename>06bigMedal-Silver.png</filename>
+            <filename>07bigMedal-Gold.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
