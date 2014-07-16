@@ -78,7 +78,8 @@ public class Patroler : Character {
 		tabCol = gameObject.GetComponents<BoxCollider>();
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>(); //target the player
 		patroling = true;
-		myCORRECTSPEED = myCORRECTSPEED * 50 * Time.deltaTime;
+		//print("---"+myCORRECTSPEED);
+		//myCORRECTSPEED = myCORRECTSPEED * 50 * Time.deltaTime;print(myCORRECTSPEED+"---"); //WHY DID I DO THIS ?
 		//spriteScaleX = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.x;
 	}
 	// Update is called once per frame

@@ -30,6 +30,7 @@ public class LevelManager : MonoBehaviour {
 	
 	void Awake()
 	{
+		Application.targetFrameRate = 60;
 		TuningDocument  = Instantiate(Resources.Load("Tuning/Global")) as BMTuning;
 		
 		if(GameObject.Find("PlayerData") != null){_pdata = GameObject.Find("PlayerData").GetComponent<PlayerData>();
