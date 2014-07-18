@@ -163,6 +163,7 @@ public class Patroler : Character {
 				if(touchedCrate.transform.position.y>_other.gameObject.transform.position.y) {
 					touchedCrate = _other.gameObject.GetComponent<Crate>();
 					_other.gameObject.GetComponent<Crate>().StartCoroutine("SND_moveCrate");
+//					if(Vector3.Distance(_player.transform.position,_other.transform.position);
 				}
 			}
 			else {getDamage(1);}
@@ -234,6 +235,7 @@ public class Patroler : Character {
 //		foreach(MeshRenderer mesh in gameObject.GetComponents<MeshRenderer>()) {
 //			mesh.enabled = true;
 //		}
+		HP = maxHP;
 		transform.position = new Vector3(spawnPos.x,spawnPos.y,0f);
 		splashed = false;
 		enabled = true;go = true;

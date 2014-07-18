@@ -8,9 +8,11 @@ public class Turret : MonoBehaviour {
 	public float shootFrequency, shootSpeed;
 	private Projectile instProj;
 	private Player _player;
+	private bool splashed;
 	
 	public enum shootDir { Right, Left, Up, Down }
 	public shootDir myShootDir;
+	public int HP = 1;
 
 	// Use this for initialization
 	void Start () {
@@ -22,26 +24,13 @@ public class Turret : MonoBehaviour {
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
 	}
 
-	private void GameStart()
-	{
-		//gameObject.GetComponent<TurretAnims>().animSprite.Play();
-		//StartCoroutine("waitB4Shoot");
-	}
-
-	private void GameOver()
-	{
-		//gameObject.GetComponent<TurretAnims>().animSprite.frameIndex=0;
-		//gameObject.GetComponent<TurretAnims>().animSprite.Stop();
-		//gameObject.GetComponent<TurretAnims>().animSprite.StopCoroutine("waitB4Restart");
-		//StopCoroutine("waitB4Shoot");
-		//StopCoroutine("shoot");
-	}
 
 //	private IEnumerator waitB4Shoot () {
 //		yield return new WaitForSeconds(0.35f);
 //		StartCoroutine("shoot");
 //	}
 	public void shoot () {
+		if(!splashed) {
 		//yield return new WaitForSeconds(shootFrequency);
 		GameObject _proj = Instantiate (Resources.Load("Objects/Projectile")) as GameObject;
 		instProj = _proj.GetComponent<Projectile>();
@@ -73,6 +62,7 @@ public class Turret : MonoBehaviour {
 		instProj.ProjectileSpeed = shootSpeed;
 		instProj.posIni = instProj.transform.position;
 		/*StartCoroutine("shoot");*/
+		}
 	}
 
 	void OnTriggerEnter(Collider _other)
@@ -82,6 +72,40 @@ public class Turret : MonoBehaviour {
 			_player.isDead = true;
 			GameEventManager.TriggerGameOver();
 		}
+		if(_other.CompareTag("Crate")) {
+			getDamage(1);
+		}
+	}
+	public void getDamage(int damage) {
+		HP -= damage;
+		if(HP <=0) {
+			FESound.playDistancedSound("blob_explosion",gameObject.transform, _player.transform,0f);
+			splashed=true;
+			collider.enabled = false;
+//			StartCoroutine("hideAfterSplash",0.42f);
+			
+			gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
+			gameObject.GetComponentInChildren<BoxCollider>().enabled = false;
+		}
+	}
+	private void GameStart()
+	{
+		//gameObject.GetComponent<TurretAnims>().animSprite.Play();
+		//StartCoroutine("waitB4Shoot");
+		
+		collider.enabled = true;
+		splashed = false;
+		gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
+		gameObject.GetComponentInChildren<BoxCollider>().enabled = true;
+	}
+
+	private void GameOver()
+	{
+		//gameObject.GetComponent<TurretAnims>().animSprite.frameIndex=0;
+		//gameObject.GetComponent<TurretAnims>().animSprite.Stop();
+		//gameObject.GetComponent<TurretAnims>().animSprite.StopCoroutine("waitB4Restart");
+		//StopCoroutine("waitB4Shoot");
+		//StopCoroutine("shoot");
 	}
 	void GamePause()
 	{

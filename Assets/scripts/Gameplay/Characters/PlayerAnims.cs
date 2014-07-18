@@ -70,7 +70,7 @@ public class PlayerAnims : MonoBehaviour
 			Crounch();
 			//	}
 			//if(animSprite.frameIndex == crouched) {animPlaying=false;_player.isLeft = _player.isRight = false; _player.locked = true;}
-			if(animSprite.frameIndex == fEndTP) {animPlaying=false;anim.fps = 12.5f;_player.locked=false;_player.isTeleport = false;} //stop teleport
+			if(animSprite.frameIndex == fEndTP) {animPlaying=false;anim.fps = 12.5f;_player.locked=false;_player.isTeleport = false;_player.collider.enabled = true;} //stop teleport
 			if(animSprite.frameIndex == fDeathB && !stopped) {stopped=true;animSprite.Pauze();StartCoroutine("waitB4Restart",2.5f);} //deathBlob pause
 			if(animSprite.frameIndex == fMiddleIdle && !stopped) {stopped=true;animSprite.Pauze();StartCoroutine("waitB4Restart",1f);} //iddle pause 1
 			if(animSprite.frameIndex == fEndIdle && !stopped) {stopped=true;animSprite.Pauze();StartCoroutine("waitB4Restart",1f);} //iddle pause 2
@@ -85,6 +85,8 @@ public class PlayerAnims : MonoBehaviour
 	}
 	
 	private void GameStart() {
+		anim.fps = 12.5f;
+		_player.locked=false;_player.isTeleport = false;_player.collider.enabled = true;animPlaying=false;
 		victoryAnim = false;
 	}
 	private void FinishLevel() {

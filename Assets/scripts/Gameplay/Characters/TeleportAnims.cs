@@ -28,7 +28,7 @@ public class TeleportAnims : MonoBehaviour
 	public int delayB4Telep = 1;
 	public bool isOUT;
 	
-	private bool animPlaying = false, playerCollision;
+	private bool animPlaying = false, playerCollision, triggable;
 	public InputManager InputMan;
 	
 	// Use this for initialization
@@ -60,23 +60,40 @@ public class TeleportAnims : MonoBehaviour
 //		Hurt();
 //		Fall();
 		//		Paused();
+		if ((Input.GetKeyDown(InputMan.Action) || Input.GetKeyDown(InputMan.Action2) || Input.GetKey(InputMan.Action3)) && !isOUT && !_player.locked && triggable) {
+				inputDetected();
+		}
 	}
-	private void OnTriggerStay(Collider other) 
+	private void /*OnTriggerStay*/inputDetected(/*Collider other*/) 
 	{
-		if(other.gameObject.CompareTag("Player") && !isOUT) 
-		{
-			if ((Input.GetKeyDown(InputMan.Action) || Input.GetKeyDown(InputMan.Action2) || Input.GetKey(InputMan.Action3)) && !_player.locked) {
+		//if(other.gameObject.CompareTag("Player") && !isOUT) 
+		//{
+//			if ((Input.GetKeyDown(InputMan.Action) || Input.GetKeyDown(InputMan.Action2) || Input.GetKey(InputMan.Action3)) && !_player.locked) {
 				_player.isTeleport = true;
+				triggable = false;
 				FESound.playDistancedSound("teleport_in",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("teleport_in");
 				animSprite.Play("teleport");
 				//_player.enabled = false;
 				StartCoroutine("stopPlayer");
 				StartCoroutine("teleportTo",teleportDestination.transform);
-			}
+				_player.collider.enabled = false;
+//			}
+		//}
+	}
+	void OnTriggerEnter(Collider other) {
+		if (other.gameObject.CompareTag("Player"))
+		{
+			triggable = true;
+		}
+	}
+	void OnTriggerExit(Collider other) {
+		if (other.gameObject.CompareTag("Player"))
+		{
+			triggable = false;
 		}
 	}
 	private IEnumerator stopPlayer () {
-		yield return new WaitForSeconds(0.15f);
+		yield return new WaitForSeconds(0.05f);//0.15 ? Edit Bastien
 		while (GameEventManager.gamePaused) 
 		{
 			yield return new WaitForFixedUpdate();	
@@ -238,6 +255,7 @@ public class TeleportAnims : MonoBehaviour
 		StopCoroutine("stopPlayer");
 		StopCoroutine("teleportTo");
 		_player.locked = false;
+		_player.collider.enabled = true;
 		_player.isTeleport = false;
 		if(isOUT) animSprite.Play("teleportOUT");
 		else animSprite.Play("default");

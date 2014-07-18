@@ -64,6 +64,7 @@ public class Walker : Enemy {
 			foreach(BoxCollider box in tabCol) {
 				box.enabled = true;
 			}
+			HP = maxHP;
 			gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
 			gameObject.GetComponentInChildren<BoxCollider>().enabled = true;
 			splashed = chasingPlayer = activated = false;

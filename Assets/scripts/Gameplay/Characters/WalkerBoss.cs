@@ -50,6 +50,7 @@ public class WalkerBoss : Enemy {
 		if(this != null && gameObject.activeInHierarchy) {
 			transform.position = new Vector3(spawnPos.x,spawnPos.y,0f);
 			chasingPlayer = enabled = true;
+			HP = maxHP;
 			/*chasingPlayer =*/ activated = false;
 			StartCoroutine("waitB4Gravity");
 		//}

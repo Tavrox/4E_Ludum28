@@ -49,9 +49,11 @@ public class TurretAnims : MonoBehaviour {
 	private void GameOver()
 	{
 		if(this != null && gameObject.activeInHierarchy) {
-		enabled = false;
+		shooting=false;
 		StopCoroutine("waitB4Restart");
 		animSprite.Stop();
+		animSprite.frameIndex = 0; 
+		enabled = false;
 		}
 	}
 	void GamePause()
