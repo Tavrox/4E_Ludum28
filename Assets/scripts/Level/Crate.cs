@@ -12,7 +12,7 @@ public class Crate : MonoBehaviour {
 	public Ray detectEndPFLeft, detectEndPFRight, detectPlayerLeft, detectPlayerRight;
 	public int blockDetectionArea = 100;
 	public Player _player;
-	public bool blockCrate, isObjChild;
+	public bool blockCrate, isObjChild, touchingPlayer;
 	public float replaceCrate = 3f;
 	private Vector3 spawnPos;
 	private bool crateSoundPlaying, crateSoundStopping, touchFloor;
@@ -106,6 +106,7 @@ public class Crate : MonoBehaviour {
 //		if(other.gameObject.name=="Crate" || other.gameObject.name=="Crate(Clone)") {
 //			/*if(detectPlayer())*/ other.gameObject.GetComponent<Crate>().transform.position += new Vector3(crateMove*1.5f/*+0.1f*/,0f,0f);
 //		}
+			touchingPlayer=true;
 			if((Input.GetKey(InputMan.Hold) || Input.GetKey(InputMan.Hold2) || Input.GetKey(InputMan.Hold3)) && (_player.transform.position.x < thisTransform.position.x) /*&& !_player.isRight*/) {
 				//print("Je m'accroche à gauche");
 				if(_player.isLeft && !_player.blockedLeft) {//Tire Gauche
@@ -230,6 +231,7 @@ public class Crate : MonoBehaviour {
 		if(other.gameObject.tag=="Player") {
 			_player.pushCrate = _player.grabCrate = false;
 			_player.moveVel = playerMoveVel;
+			touchingPlayer=false;
 			if(crateSoundPlaying && !crateSoundStopping) StartCoroutine("SND_moveCrateEnd");
 		}
 		if(other.gameObject.name=="ColliBox" || other.gameObject.CompareTag("Blocker") || other.gameObject.CompareTag("Crate")) 

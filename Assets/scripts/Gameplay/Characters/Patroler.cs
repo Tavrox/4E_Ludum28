@@ -178,11 +178,23 @@ public class Patroler : Character {
 //	}
 	private void moveCrate(bool dirLeft) {
 		if(dirLeft) {
+			if(touchedCrate.touchingPlayer) {//Pousse le player si il est collé à la caisse
+				_player.transform.position -= new Vector3(myCORRECTSPEED,0f,0f);
+				if(_player.pushCrate) {_player.transform.position -= new Vector3(myCORRECTSPEED,0f,0f);//Pousse le player encore plus si il résiste
+			touchedCrate.transform.position -= new Vector3(myCORRECTSPEED,0f,0f);
+				}
+			}
 			touchedCrate.transform.position -= new Vector3(myCORRECTSPEED,0f,0f);
 			touchedCrate.moveCake(-myCORRECTSPEED);
 			//if(_player.myCrate == touchedCrate && _player.onCrate) _player.transform.position -= new Vector3(myCORRECTSPEED,0f,0f);
 		}
 		else {
+			if(touchedCrate.touchingPlayer) {
+				_player.blockedLeft=true;_player.transform.position += new Vector3(myCORRECTSPEED,0f,0f);
+				if(_player.pushCrate) {_player.transform.position -= new Vector3(myCORRECTSPEED,0f,0f);
+			touchedCrate.transform.position -= new Vector3(myCORRECTSPEED,0f,0f);
+				}
+			}
 			touchedCrate.transform.position += new Vector3(myCORRECTSPEED,0f,0f);
 			touchedCrate.moveCake(myCORRECTSPEED);
 			//if(_player.myCrate == touchedCrate && _player.onCrate) _player.transform.position += new Vector3(myCORRECTSPEED,0f,0f);
