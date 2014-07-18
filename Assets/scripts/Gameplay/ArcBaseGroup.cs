@@ -47,6 +47,7 @@ public class ArcBaseGroup : MonoBehaviour {
 	void GameStart() {
 		if(this != null && gameObject.activeInHierarchy) {
 			//active = false;
+			nbCrates = 0;
 			StartCoroutine("waitB4Restart");
 		}
 	}
