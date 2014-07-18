@@ -21,6 +21,8 @@ public class Projectile : MonoBehaviour {
 		animSprite.Play("default");
 		_player = GameObject.Find("Player").GetComponent<Player>();
 		GameEventManager.GameOver += GameOver;
+		GameEventManager.GameStart += GameStart;
+		GameEventManager.FinishLevel += FinishLevel;
 		GameEventManager.GamePause += GamePause;
 		GameEventManager.GameUnpause += GameUnpause;
 //		player = GameObject.FindWithTag("Player").GetComponent<PlayerPop>();
@@ -71,6 +73,16 @@ public class Projectile : MonoBehaviour {
 		if(this != null && gameObject.activeInHierarchy) {
 			StartCoroutine("delayDestroy",0.1f);
 			animSprite.PlayOnce("splash");
+		}
+	}
+	void GameStart () {
+		if(this != null && gameObject.activeInHierarchy) {
+			Destroy(gameObject);
+		}
+	}
+	void FinishLevel () {
+		if(this != null && gameObject.activeInHierarchy) {
+			Destroy(gameObject);
 		}
 	}
 	IEnumerator delayDestroy(float delay) {

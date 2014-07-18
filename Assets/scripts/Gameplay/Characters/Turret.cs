@@ -21,6 +21,7 @@ public class Turret : MonoBehaviour {
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GamePause += GamePause;
 		GameEventManager.GameUnpause += GameUnpause;
+		GameEventManager.FinishLevel += FinishLevel;
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
 	}
 
@@ -90,13 +91,20 @@ public class Turret : MonoBehaviour {
 	}
 	private void GameStart()
 	{
-		//gameObject.GetComponent<TurretAnims>().animSprite.Play();
-		//StartCoroutine("waitB4Shoot");
-		
-		collider.enabled = true;
-		splashed = false;
-		gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
-		gameObject.GetComponentInChildren<BoxCollider>().enabled = true;
+		if(this != null && gameObject.activeInHierarchy) {
+			//gameObject.GetComponent<TurretAnims>().animSprite.Play();
+			//StartCoroutine("waitB4Shoot");
+			collider.enabled = true;
+			splashed = false;
+			gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
+			gameObject.GetComponentInChildren<BoxCollider>().enabled = true;
+		}
+	}
+	void FinishLevel () {
+		if(this != null && gameObject.activeInHierarchy) {
+			splashed=true;
+			collider.enabled = false;
+		}
 	}
 
 	private void GameOver()

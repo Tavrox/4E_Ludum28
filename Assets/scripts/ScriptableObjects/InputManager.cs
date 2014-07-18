@@ -21,7 +21,7 @@ public class InputManager : ScriptableObject {
 	[HideInInspector] public KeyCode Down = KeyCode.DownArrow;
 	[HideInInspector] public KeyCode Left = KeyCode.LeftArrow;
 	[HideInInspector] public KeyCode Right = KeyCode.RightArrow;
-	[HideInInspector] public KeyCode Action =  KeyCode.DownArrow;
+	[HideInInspector] public KeyCode Action =  KeyCode.E;
 	[HideInInspector] public KeyCode Hold =  KeyCode.LeftShift;
 	[HideInInspector] public KeyCode Reset =  KeyCode.Backspace;
 	[HideInInspector] public KeyCode Reset2 =  KeyCode.R;
@@ -31,7 +31,7 @@ public class InputManager : ScriptableObject {
 	[HideInInspector] public KeyCode Left2 = KeyCode.Q;
 	[HideInInspector] public KeyCode Right2 = KeyCode.D;
 	[HideInInspector] public KeyCode Action2 =  KeyCode.E;
-	[HideInInspector] public KeyCode Action3 =  KeyCode.S;
+	[HideInInspector] public KeyCode Action3 =  KeyCode.E;
 	[HideInInspector] public KeyCode Hold2 =  KeyCode.A;
 	[HideInInspector] public KeyCode Hold3 =  KeyCode.RightShift;
 	[HideInInspector] public KeyCode Enter =  KeyCode.Return;
@@ -68,7 +68,7 @@ public class InputManager : ScriptableObject {
 		Down = KeyCode.DownArrow;
 		Left = KeyCode.LeftArrow;
 		Right = KeyCode.RightArrow;
-		Action =  KeyCode.DownArrow;
+		Action =  KeyCode.E;
 		Hold =  KeyCode.LeftShift;
 		Reset =  KeyCode.Backspace;
 		Reset2 =  KeyCode.R;
@@ -78,7 +78,7 @@ public class InputManager : ScriptableObject {
 		Left2 = KeyCode.Q;
 		Right2 = KeyCode.D;
 		Action2 =  KeyCode.E;
-		Action3 =  KeyCode.S;
+		Action3 =  KeyCode.E;
 		Hold2 =  KeyCode.A;
 		Hold3 =  KeyCode.RightShift;
 		Enter =  KeyCode.Return;
