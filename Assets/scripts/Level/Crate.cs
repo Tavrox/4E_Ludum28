@@ -14,13 +14,14 @@ public class Crate : MonoBehaviour {
 	public Player _player;
 	public bool blockCrate, isObjChild, touchingPlayer;
 	public float replaceCrate = 3f;
-	private Vector3 spawnPos;
+	public Vector3 spawnPos;
 	private bool crateSoundPlaying, crateSoundStopping, touchFloor;
 	public List<Crate> linkedCrates = new List<Crate>();
 	public List<Crate> linkedCratesTMP = new List<Crate>();
 	public Crate cakeCrate;
 	public InputManager InputMan;
-	public OTSprite sprite;
+	public OTAnimatingSprite sprite;
+	public OTSprite spriteS;
 //	private FESound testSon;
 	//RaycastHit hitInfo;
 	//Ray landingRay;	
@@ -49,8 +50,15 @@ public class Crate : MonoBehaviour {
 		GameEventManager.GameUnpause += GameUnpause;
 		InputMan = Instantiate(Resources.Load("Tuning/InputManager")) as InputManager;
 		InputMan.Setup();
-		sprite = gameObject.GetComponentInChildren<OTSprite>();
-		sprite.frameIndex = 25;
+		if(gameObject.GetComponentInChildren<OTAnimatingSprite>()) {
+			sprite = gameObject.GetComponentInChildren<OTAnimatingSprite>();
+			sprite.Stop();
+			sprite.frameIndex = 47;
+		}
+		else if(gameObject.GetComponentInChildren<OTSprite>()) {
+			spriteS = gameObject.GetComponentInChildren<OTSprite>();
+			spriteS.frameIndex = 25;
+		}
 	}
 	
 	IEnumerator StartGravity()
@@ -324,7 +332,22 @@ public class Crate : MonoBehaviour {
 //		}
 //	}
 	void GameStart () {
-		if(this != null && !isObjChild && gameObject.activeInHierarchy)	{_player.moveVel = playerMoveVel;transform.position = new Vector3(spawnPos.x,spawnPos.y,spawnPos.z);}
+		if(this != null && gameObject.activeInHierarchy)	{
+			_player.moveVel = playerMoveVel;transform.position = new Vector3(spawnPos.x,spawnPos.y,spawnPos.z);
+			
+			if(gameObject.GetComponentInChildren<OTAnimatingSprite>()) {
+				sprite.Stop();sprite.frameIndex = 47;sprite.alpha=1;
+			}
+			else if(gameObject.GetComponentInChildren<OTSprite>()) {
+				spriteS = gameObject.GetComponentInChildren<OTSprite>();
+				spriteS.frameIndex = 25;
+			}
+			foreach(OTAnimatingSprite spr in gameObject.GetComponentsInChildren<OTAnimatingSprite>()) {
+				//print(spr.name);
+				spr.alpha=1f;
+				//if(spr.transform.parent.transform.parent.GetComponent<Crate>()!=null || spr.transform.parent.GetComponent<Crate>()!=null) {sprite.Stop();sprite.frameIndex = 47;}
+			}
+		}
 	}
 	void GamePause()
 	{
@@ -333,5 +356,18 @@ public class Crate : MonoBehaviour {
 	void GameUnpause()
 	{
 		
+	}
+	public IEnumerator destroyOnGrounded() {
+		yield return new WaitForSeconds(0.1f);
+		if(grounded) {
+			sprite.PlayOnce("destroy");
+			foreach(ArcBaseGroup arcBaseGrp in gameObject.GetComponentsInChildren<ArcBaseGroup>()) {
+				arcBaseGrp.turnOFF();
+			}
+			foreach(OTAnimatingSprite spr in gameObject.GetComponentsInChildren<OTAnimatingSprite>()) {
+				new OTTween (spr, 1f, OTEasing.Linear).Tween("alpha",0f);
+			}
+		}
+		else StartCoroutine("destroyOnGrounded");
 	}
 }

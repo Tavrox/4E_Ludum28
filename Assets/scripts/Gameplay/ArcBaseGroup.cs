@@ -23,8 +23,7 @@ public class ArcBaseGroup : MonoBehaviour {
 		{
 			lastEntered = _other.GetInstanceID();
 			StartCoroutine("resetLastEntered");
-			foreach(ArcElectric _arc in arcs) _arc.turnOFF();
-			foreach(BaseElectric _base in bases) _base.turnOFF();
+			turnOFF();
 			nbCrates++;
 		}
 	}
@@ -37,13 +36,17 @@ public class ArcBaseGroup : MonoBehaviour {
 		if (_other.CompareTag("Crate"))
 		{
 			nbCrates--;
-			if(nbCrates==0) {
-				foreach(ArcElectric _arc in arcs) _arc.turnON();
-				foreach(BaseElectric _base in bases) _base.turnON();
-			}
+			if(nbCrates==0) turnON();
 		}
 	}
-	
+	public void turnOFF() {
+			foreach(ArcElectric _arc in arcs) _arc.turnOFF();
+			foreach(BaseElectric _base in bases) _base.turnOFF();
+	}
+	public void turnON() {
+				foreach(ArcElectric _arc in arcs) _arc.turnON();
+				foreach(BaseElectric _base in bases) _base.turnON();
+	}
 	void GameStart() {
 		if(this != null && gameObject.activeInHierarchy) {
 			//active = false;

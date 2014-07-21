@@ -37,6 +37,7 @@ public class LeverLight : MonoBehaviour {
 			if(Vector3.Distance(pos,target)<0.15f) {
 				if(currentWaypoint == _myPath.path.Count-1) {
 					finished=true;
+					transform.position = new Vector3 (0f,0f,50f);
 				}
 				else setNextTarget();
 			}

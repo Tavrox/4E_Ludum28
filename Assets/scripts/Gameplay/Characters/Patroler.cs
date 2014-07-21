@@ -20,7 +20,7 @@ public class Patroler : Character {
 	protected Ray detectTargetLeft, detectTargetRight, detectBlockLeft, detectBlockRight, detectEndPFLeft, detectEndPFRight; //point de départ, direction
 	[Range (0,10f)] public float myCORRECTSPEED = 10f;
 	public bool go = true, touchingCrate;
-	public Crate touchedCrate;
+	public Crate touchedCrate, childCrate;
 	protected int waypointId = 0;
 	public Transform[] waypoints;
 	private Player _player;
@@ -74,7 +74,7 @@ public class Patroler : Character {
 		res_mag = 50;
 		res_phys = 10;
 		runSpeed = 0.5f;
-		
+		if(gameObject.GetComponentInChildren<Crate>()!=null) childCrate = gameObject.GetComponentInChildren<Crate>();
 		tabCol = gameObject.GetComponents<BoxCollider>();
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>(); //target the player
 		patroling = true;
@@ -208,6 +208,10 @@ public class Patroler : Character {
 			splashed=true;
 			collider.enabled = false;
 			StartCoroutine("hideAfterSplash",0.42f);
+			if(childCrate!=null) {
+				childCrate.isObjChild=false;
+				if(childCrate.sprite!=null) {childCrate.StartCoroutine("destroyOnGrounded");}
+			}
 		}
 	}
 	IEnumerator hideAfterSplash(float delay) {
@@ -247,6 +251,9 @@ public class Patroler : Character {
 //		foreach(MeshRenderer mesh in gameObject.GetComponents<MeshRenderer>()) {
 //			mesh.enabled = true;
 //		}
+		if(childCrate!=null) {
+			childCrate.isObjChild=true;
+		}
 		HP = maxHP;
 		transform.position = new Vector3(spawnPos.x,spawnPos.y,0f);
 		splashed = false;
