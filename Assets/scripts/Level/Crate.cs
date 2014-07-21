@@ -334,7 +334,7 @@ public class Crate : MonoBehaviour {
 	void GameStart () {
 		if(this != null && gameObject.activeInHierarchy)	{
 			_player.moveVel = playerMoveVel;transform.position = new Vector3(spawnPos.x,spawnPos.y,spawnPos.z);
-			
+			collider.enabled = true;
 			if(gameObject.GetComponentInChildren<OTAnimatingSprite>()) {
 				sprite.Stop();sprite.frameIndex = 47;sprite.alpha=1;
 			}
@@ -361,6 +361,7 @@ public class Crate : MonoBehaviour {
 		yield return new WaitForSeconds(0.1f);
 		if(grounded) {
 			sprite.PlayOnce("destroy");
+			collider.enabled = false;
 			foreach(ArcBaseGroup arcBaseGrp in gameObject.GetComponentsInChildren<ArcBaseGroup>()) {
 				arcBaseGrp.turnOFF();
 			}
