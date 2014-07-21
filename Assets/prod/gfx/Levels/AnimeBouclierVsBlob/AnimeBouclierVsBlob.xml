@@ -4,317 +4,512 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>VaisseauAttacké0001.png</key>
+            <key>VaisseauAttacké_2etatV20001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,0},{500,400}}</string>
+                <string>{{0,0},{550,400}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{500,400}}</string>
+                <string>{{0,0},{550,400}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{550,400}</string>
             </dict>
-            <key>VaisseauAttacké0002.png</key>
+            <key>VaisseauAttacké_2etatV20002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{500,0},{500,400}}</string>
+                <string>{{550,0},{550,400}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{500,400}}</string>
+                <string>{{0,0},{550,400}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{550,400}</string>
             </dict>
-            <key>VaisseauAttacké0003.png</key>
+            <key>VaisseauAttacké_2etatV20003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1000,0},{500,400}}</string>
+                <string>{{1100,0},{550,400}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{500,400}}</string>
+                <string>{{0,0},{550,400}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{550,400}</string>
             </dict>
-            <key>VaisseauAttacké0004.png</key>
+            <key>VaisseauAttacké_2etatV20004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1500,0},{500,400}}</string>
+                <string>{{1650,0},{550,400}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{500,400}}</string>
+                <string>{{0,0},{550,400}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{550,400}</string>
             </dict>
-            <key>VaisseauAttacké0005.png</key>
+            <key>VaisseauAttacké_2etatV20005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,400},{500,400}}</string>
+                <string>{{2200,0},{550,400}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{500,400}}</string>
+                <string>{{0,0},{550,400}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{550,400}</string>
             </dict>
-            <key>VaisseauAttacké0006.png</key>
+            <key>VaisseauAttacké_2etatV20006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{500,400},{500,400}}</string>
+                <string>{{2750,0},{550,400}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{500,400}}</string>
+                <string>{{0,0},{550,400}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{550,400}</string>
             </dict>
-            <key>VaisseauAttacké0007.png</key>
+            <key>VaisseauAttacké_2etatV20007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1000,400},{500,400}}</string>
+                <string>{{3300,0},{550,400}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{500,400}}</string>
+                <string>{{0,0},{550,400}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{550,400}</string>
             </dict>
-            <key>VaisseauAttacké0008.png</key>
+            <key>VaisseauAttacké_2etatV20008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1500,400},{500,400}}</string>
+                <string>{{0,400},{550,400}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{500,400}}</string>
+                <string>{{0,0},{550,400}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{550,400}</string>
             </dict>
-            <key>VaisseauAttacké0009.png</key>
+            <key>VaisseauAttacké_2etatV20009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,800},{500,400}}</string>
+                <string>{{550,400},{550,400}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{500,400}}</string>
+                <string>{{0,0},{550,400}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{550,400}</string>
             </dict>
-            <key>VaisseauAttacké0010.png</key>
+            <key>VaisseauAttacké_2etatV20010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{500,800},{500,400}}</string>
+                <string>{{1100,400},{550,400}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{500,400}}</string>
+                <string>{{0,0},{550,400}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{550,400}</string>
             </dict>
-            <key>VaisseauAttacké0011.png</key>
+            <key>VaisseauAttacké_2etatV20011.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1000,800},{500,400}}</string>
+                <string>{{1650,400},{550,400}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{500,400}}</string>
+                <string>{{0,0},{550,400}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{550,400}</string>
             </dict>
-            <key>VaisseauAttacké0012.png</key>
+            <key>VaisseauAttacké_2etatV20012.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1500,800},{500,400}}</string>
+                <string>{{2200,400},{550,400}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{500,400}}</string>
+                <string>{{0,0},{550,400}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{550,400}</string>
             </dict>
-            <key>VaisseauAttacké0013.png</key>
+            <key>VaisseauAttacké_2etatV20013.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,1200},{500,400}}</string>
+                <string>{{2750,400},{550,400}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{500,400}}</string>
+                <string>{{0,0},{550,400}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{550,400}</string>
             </dict>
-            <key>VaisseauAttacké0014.png</key>
+            <key>VaisseauAttacké_2etatV20014.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{500,1200},{500,400}}</string>
+                <string>{{3300,400},{550,400}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{500,400}}</string>
+                <string>{{0,0},{550,400}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{550,400}</string>
             </dict>
-            <key>VaisseauAttacké0015.png</key>
+            <key>VaisseauAttacké_2etatV20015.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1000,1200},{500,400}}</string>
+                <string>{{0,800},{550,400}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{500,400}}</string>
+                <string>{{0,0},{550,400}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{550,400}</string>
             </dict>
-            <key>VaisseauAttacké0016.png</key>
+            <key>VaisseauAttacké_2etatV20016.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1500,1200},{500,400}}</string>
+                <string>{{550,800},{550,400}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{500,400}}</string>
+                <string>{{0,0},{550,400}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{550,400}</string>
             </dict>
-            <key>VaisseauAttacké0017.png</key>
+            <key>VaisseauAttacké_2etatV20017.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,1600},{500,400}}</string>
+                <string>{{1100,800},{550,400}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{500,400}}</string>
+                <string>{{0,0},{550,400}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{550,400}</string>
             </dict>
-            <key>VaisseauAttacké0018.png</key>
+            <key>VaisseauAttacké_2etatV20018.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{500,1600},{500,400}}</string>
+                <string>{{1650,800},{550,400}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{500,400}}</string>
+                <string>{{0,0},{550,400}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{550,400}</string>
             </dict>
-            <key>VaisseauAttacké0019.png</key>
+            <key>VaisseauAttacké_2etatV20019.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1000,1600},{500,400}}</string>
+                <string>{{2200,800},{550,400}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{500,400}}</string>
+                <string>{{0,0},{550,400}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{550,400}</string>
             </dict>
-            <key>VaisseauAttacké0020.png</key>
+            <key>VaisseauAttacké_2etatV20020.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1500,1600},{500,400}}</string>
+                <string>{{2750,800},{550,400}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{500,400}}</string>
+                <string>{{0,0},{550,400}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{550,400}</string>
             </dict>
-            <key>VaisseauAttacké0021.png</key>
+            <key>VaisseauAttacké_2etatV20021.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,2000},{500,400}}</string>
+                <string>{{3300,800},{550,400}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{500,400}}</string>
+                <string>{{0,0},{550,400}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{550,400}</string>
             </dict>
-            <key>VaisseauAttacké0022.png</key>
+            <key>VaisseauAttacké_2etatV20022.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{500,2000},{500,400}}</string>
+                <string>{{0,1200},{550,400}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{500,400}}</string>
+                <string>{{0,0},{550,400}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{550,400}</string>
             </dict>
-            <key>VaisseauAttacké0023.png</key>
+            <key>VaisseauAttacké_2etatV20023.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1000,2000},{500,400}}</string>
+                <string>{{550,1200},{550,400}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{500,400}}</string>
+                <string>{{0,0},{550,400}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{550,400}</string>
             </dict>
-            <key>VaisseauAttacké0024.png</key>
+            <key>VaisseauAttacké_2etatV20024.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1500,2000},{500,400}}</string>
+                <string>{{1100,1200},{550,400}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{500,400}}</string>
+                <string>{{0,0},{550,400}}</string>
                 <key>sourceSize</key>
-                <string>{500,400}</string>
+                <string>{550,400}</string>
+            </dict>
+            <key>VaisseauAttacké_2etatV20025.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1650,1200},{550,400}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{550,400}}</string>
+                <key>sourceSize</key>
+                <string>{550,400}</string>
+            </dict>
+            <key>VaisseauAttacké_2etatV20026.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2200,1200},{550,400}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{550,400}}</string>
+                <key>sourceSize</key>
+                <string>{550,400}</string>
+            </dict>
+            <key>VaisseauAttacké_2etatV20027.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2750,1200},{550,400}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{550,400}}</string>
+                <key>sourceSize</key>
+                <string>{550,400}</string>
+            </dict>
+            <key>VaisseauAttacké_2etatV20028.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{3300,1200},{550,400}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{550,400}}</string>
+                <key>sourceSize</key>
+                <string>{550,400}</string>
+            </dict>
+            <key>VaisseauAttacké_2etatV20029.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,1600},{550,400}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{550,400}}</string>
+                <key>sourceSize</key>
+                <string>{550,400}</string>
+            </dict>
+            <key>VaisseauAttacké_2etatV20030.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{550,1600},{550,400}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{550,400}}</string>
+                <key>sourceSize</key>
+                <string>{550,400}</string>
+            </dict>
+            <key>VaisseauAttacké_2etatV20031.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1100,1600},{550,400}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{550,400}}</string>
+                <key>sourceSize</key>
+                <string>{550,400}</string>
+            </dict>
+            <key>VaisseauAttacké_2etatV20032.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1650,1600},{550,400}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{550,400}}</string>
+                <key>sourceSize</key>
+                <string>{550,400}</string>
+            </dict>
+            <key>VaisseauAttacké_2etatV20033.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2200,1600},{550,400}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{550,400}}</string>
+                <key>sourceSize</key>
+                <string>{550,400}</string>
+            </dict>
+            <key>VaisseauAttacké_2etatV20034.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2750,1600},{550,400}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{550,400}}</string>
+                <key>sourceSize</key>
+                <string>{550,400}</string>
+            </dict>
+            <key>VaisseauAttacké_2etatV20035.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{3300,1600},{550,400}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{550,400}}</string>
+                <key>sourceSize</key>
+                <string>{550,400}</string>
+            </dict>
+            <key>VaisseauAttacké_2etatV20036.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,2000},{550,400}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{550,400}}</string>
+                <key>sourceSize</key>
+                <string>{550,400}</string>
+            </dict>
+            <key>VaisseauAttacké_2etatV20037.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{550,2000},{550,400}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{550,400}}</string>
+                <key>sourceSize</key>
+                <string>{550,400}</string>
+            </dict>
+            <key>VaisseauAttacké_2etatV20038.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1100,2000},{550,400}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{550,400}}</string>
+                <key>sourceSize</key>
+                <string>{550,400}</string>
+            </dict>
+            <key>VaisseauAttacké_2etatV20039.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1650,2000},{550,400}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{550,400}}</string>
+                <key>sourceSize</key>
+                <string>{550,400}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -324,9 +519,9 @@
             <key>realTextureFileName</key>
             <string>AnimeBouclierVsBlob.png</string>
             <key>size</key>
-            <string>{2048,4096}</string>
+            <string>{4096,4096}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:8812020ea1b2aa119bd89b187681fe09:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:430f1d4e0a0a4c5579498b24165c6ff4:1/1$</string>
             <key>textureFileName</key>
             <string>AnimeBouclierVsBlob.png</string>
         </dict>

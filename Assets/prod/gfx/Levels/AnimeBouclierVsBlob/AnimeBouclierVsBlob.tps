@@ -148,30 +148,45 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>VaisseauAttacké0005.png</filename>
-            <filename>VaisseauAttacké0006.png</filename>
-            <filename>VaisseauAttacké0007.png</filename>
-            <filename>VaisseauAttacké0008.png</filename>
-            <filename>VaisseauAttacké0009.png</filename>
-            <filename>VaisseauAttacké0010.png</filename>
-            <filename>VaisseauAttacké0011.png</filename>
-            <filename>VaisseauAttacké0012.png</filename>
-            <filename>VaisseauAttacké0013.png</filename>
-            <filename>VaisseauAttacké0014.png</filename>
-            <filename>VaisseauAttacké0015.png</filename>
-            <filename>VaisseauAttacké0016.png</filename>
-            <filename>VaisseauAttacké0017.png</filename>
-            <filename>VaisseauAttacké0018.png</filename>
-            <filename>VaisseauAttacké0019.png</filename>
-            <filename>VaisseauAttacké0020.png</filename>
-            <filename>VaisseauAttacké0021.png</filename>
-            <filename>VaisseauAttacké0022.png</filename>
-            <filename>VaisseauAttacké0023.png</filename>
-            <filename>VaisseauAttacké0024.png</filename>
-            <filename>VaisseauAttacké0001.png</filename>
-            <filename>VaisseauAttacké0002.png</filename>
-            <filename>VaisseauAttacké0003.png</filename>
-            <filename>VaisseauAttacké0004.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20001.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20002.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20003.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20004.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20005.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20006.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20007.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20008.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20009.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20010.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20011.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20012.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20013.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20014.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20015.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20016.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20017.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20018.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20019.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20020.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20021.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20022.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20023.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20024.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20025.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20026.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20027.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20028.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20029.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20030.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20031.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20032.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20033.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20034.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20035.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20036.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20037.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20038.png</filename>
+            <filename>Ecran/VaisseauAttacké_2etatV20039.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
