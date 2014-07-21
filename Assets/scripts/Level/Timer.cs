@@ -50,6 +50,14 @@ public class Timer : MonoBehaviour {
 //		if(FETool.Round(((float) Screen.width/(float) Screen.height),1)!=1.3) {
 //			posX = posY = 30;
 //		}
+		//StartCoroutine("freezeStart");
+	}
+	IEnumerator freezeStart() {
+		yield return new WaitForSeconds(0.1f);
+		_player.triggerPause();
+		_player.paused=false;
+		//GameEventManager.gamePaused = false;	
+//	_player.GameUnpause();
 	}
 	void FixedUpdate() {
 		_txtTimer.gameObject.transform.position = _camera.ScreenToWorldPoint(new Vector3(Screen.width*0.1f-_txtTimer.text.Length*16f, Screen.height - (Screen.height*0.075f), _camera.nearClipPlane));
@@ -113,7 +121,10 @@ public class Timer : MonoBehaviour {
 		}
 		else {
 			if (_player.isLeft || _player.isRight || _player.isJump || _player.isCrounch)
-			lockTimerStart = pauseTimer = false;
+			{
+				lockTimerStart = pauseTimer = false;
+				//_player.triggerPause();
+			}
 		}
 	}
 	private void timerAlert () {
@@ -155,6 +166,8 @@ public class Timer : MonoBehaviour {
 			
 			if(_lvlManager._realID==0) {_player._scorePlayer=secLeft=microSecLeft=0;} 
 			else InvokeRepeating("updateTimer", 0, 0.01f);
+			
+			//StartCoroutine("freezeStart");
 		}
 	}
 	private void FinishLevel() {

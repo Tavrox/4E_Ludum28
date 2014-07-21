@@ -72,7 +72,7 @@ public class Player : Character {
 	// Update is called once per frame
 	public void FixedUpdate () 
 	{
-		if(!GameEventManager.gamePaused) {
+		if(!paused /*GameEventManager.gamePaused*/) {
 		unCrouch = false;
 		//_mainCam.transform.position = new Vector3(FETool.Round(thisTransform.position.x,2),FETool.Round(thisTransform.position.y,2),0f);
 		if (!Input.GetKey(InputMan.Down) && !Input.GetKey(InputMan.Down2) && !isTeleport && standing && !locked)
@@ -163,6 +163,7 @@ public class Player : Character {
 		if (Input.GetKeyDown(InputMan.Pause) || Input.GetKeyDown(InputMan.PadPause))
 		{
 			triggerPause();
+			if (GameEventManager.gamePaused == false) HUDPause.gameObject.SetActive(true);
 		}
 		if (Input.GetKeyDown(KeyCode.Alpha2))
 		{
@@ -202,6 +203,7 @@ public class Player : Character {
 		col.size = new Vector3(1.75f, col.size.y, col.size.z);
 		//collider.bounds.size.Set(1.75f, 1.75f, 10f);
 	}
+	
 
 	public void triggerPause()
 	{
@@ -285,6 +287,7 @@ public class Player : Character {
 	private void GameOver () 
 	{
 		if(this != null && gameObject.activeInHierarchy) {
+			paused=false;
 			StartCoroutine("resetGame");
 			isLeft = false;
 			isRight = false;
@@ -305,10 +308,9 @@ public class Player : Character {
 		isPass = false;
 		paused = true;
 		movingDir = moving.None;
-		HUDPause.gameObject.SetActive(true);
 		GameEventManager.gamePaused = true;		
 	}
-	private void GameUnpause()
+	public void GameUnpause()
 	{
 		paused = false;
 		//enabled = true;	

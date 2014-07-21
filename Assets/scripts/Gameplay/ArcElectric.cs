@@ -86,6 +86,9 @@ public class ArcElectric : MonoBehaviour {
 		activeState = true;
 		if(inactiveTime==0) StartCoroutine("activateInfinite");
 		else if(activeTime!=0) StartCoroutine("active");
+		
+//		if(inactiveTime==0) StartCoroutine("waitB4Active",false);
+//		else if(activeTime!=0) StartCoroutine("waitB4Active",true);
 	}
 	void GameOver() {
 		if(this != null && gameObject.activeInHierarchy) {
