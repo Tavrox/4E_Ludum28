@@ -23,6 +23,8 @@ public class Projectile : MonoBehaviour {
 		GameEventManager.GameOver += GameOver;
 		GameEventManager.GamePause += GamePause;
 		GameEventManager.GameUnpause += GameUnpause;
+		GameEventManager.GameStart += GameStart;
+		GameEventManager.FinishLevel += FinishLevel;
 //		player = GameObject.FindWithTag("Player").GetComponent<PlayerPop>();
 //		if(player.shootLeft == true) direction = Vector3.left;
 //		else direction = Vector3.right;
@@ -71,6 +73,16 @@ public class Projectile : MonoBehaviour {
 		if(this != null && gameObject.activeInHierarchy) {
 			StartCoroutine("delayDestroy",0.1f);
 			animSprite.PlayOnce("splash");
+		}
+	}
+	void GameStart () {
+		if(this != null && gameObject.activeInHierarchy) {
+			Destroy(gameObject);
+		}
+	}
+	void FinishLevel () {
+		if(this != null && gameObject.activeInHierarchy) {
+			Destroy(gameObject);
 		}
 	}
 	IEnumerator delayDestroy(float delay) {

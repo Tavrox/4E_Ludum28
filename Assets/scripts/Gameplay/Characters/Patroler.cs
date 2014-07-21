@@ -215,13 +215,13 @@ public class Patroler : Character {
 		}
 	}
 	IEnumerator hideAfterSplash(float delay) {
+		gameObject.GetComponentInChildren<BoxCollider>().enabled = false;
 		foreach(BoxCollider box in tabCol) {
 			box.enabled = false;
 		}
 		yield return new WaitForSeconds(delay);
 		
 		gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
-		gameObject.GetComponentInChildren<BoxCollider>().enabled = false;
 //		foreach(BoxCollider box in gameObject.GetComponents<BoxCollider>()) {
 //			box.enabled = false;
 //		}	

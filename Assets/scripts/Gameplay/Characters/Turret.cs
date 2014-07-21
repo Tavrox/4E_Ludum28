@@ -21,6 +21,7 @@ public class Turret : MonoBehaviour {
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GamePause += GamePause;
 		GameEventManager.GameUnpause += GameUnpause;
+		GameEventManager.FinishLevel += FinishLevel;
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
 	}
 
@@ -82,21 +83,41 @@ public class Turret : MonoBehaviour {
 			FESound.playDistancedSound("blob_explosion",gameObject.transform, _player.transform,0f);
 			splashed=true;
 			collider.enabled = false;
-//			StartCoroutine("hideAfterSplash",0.42f);
-			
-			gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
-			gameObject.GetComponentInChildren<BoxCollider>().enabled = false;
+			StartCoroutine("hideAfterSplash",0.42f);
 		}
+	}
+	IEnumerator hideAfterSplash(float delay) {
+		gameObject.GetComponentInChildren<BoxCollider>().enabled = false;
+		foreach(BoxCollider box in tabCol) {
+			box.enabled = false;
+		}
+		yield return new WaitForSeconds(delay);
+		
+		gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
+//		foreach(BoxCollider box in gameObject.GetComponents<BoxCollider>()) {
+//			box.enabled = false;
+//		}	
+//		foreach(MeshRenderer mesh in gameObject.GetComponents<MeshRenderer>()) {
+//			mesh.enabled = false;
+//		}
+		//gameObject.transform.parent.gameObject.SetActive(false);
 	}
 	private void GameStart()
 	{
-		//gameObject.GetComponent<TurretAnims>().animSprite.Play();
-		//StartCoroutine("waitB4Shoot");
-		
-		collider.enabled = true;
-		splashed = false;
-		gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
-		gameObject.GetComponentInChildren<BoxCollider>().enabled = true;
+		if(this != null && gameObject.activeInHierarchy) {
+			//gameObject.GetComponent<TurretAnims>().animSprite.Play();
+			//StartCoroutine("waitB4Shoot");
+			collider.enabled = true;
+			splashed = false;
+			gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
+			gameObject.GetComponentInChildren<BoxCollider>().enabled = true;
+		}
+	}
+	void FinishLevel () {
+		if(this != null && gameObject.activeInHierarchy) {
+			splashed=true;
+			collider.enabled = false;
+		}
 	}
 
 	private void GameOver()

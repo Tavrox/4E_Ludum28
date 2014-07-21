@@ -130,12 +130,12 @@ public class Walker : Enemy {
 		}
 	}
 	IEnumerator hideAfterSplash(float delay) {
+		gameObject.GetComponentInChildren<BoxCollider>().enabled = false;
 		foreach(BoxCollider box in tabCol) {
 			box.enabled = false;
 		}
 		yield return new WaitForSeconds(delay);
 		gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
-		gameObject.GetComponentInChildren<BoxCollider>().enabled = false;
 		//gameObject.transform.parent.gameObject.SetActive(false);
 	}
 	/************************
