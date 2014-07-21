@@ -37,6 +37,7 @@ public class EndDoor : MonoBehaviour {
 		InputMan = Instantiate(Resources.Load("Tuning/InputManager")) as InputManager;
 		InputMan.Setup();
 		sprite.frameIndex = 26;
+		_shieldActivateAnim.PlayLoop("default");
 	}
 	public void nextState() {
 		sprite.frameIndex += 1;
