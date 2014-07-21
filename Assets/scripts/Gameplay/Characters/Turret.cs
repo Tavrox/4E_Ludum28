@@ -13,7 +13,9 @@ public class Turret : MonoBehaviour {
 	public enum shootDir { Right, Left, Up, Down }
 	public shootDir myShootDir;
 	public int HP = 1;
-
+	
+	private BoxCollider [] tabCol;
+	
 	// Use this for initialization
 	void Start () {
 		//StartCoroutine("waitB4Shoot");
@@ -23,6 +25,7 @@ public class Turret : MonoBehaviour {
 		GameEventManager.GameUnpause += GameUnpause;
 		GameEventManager.FinishLevel += FinishLevel;
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
+		tabCol = gameObject.GetComponents<BoxCollider>();
 	}
 
 
