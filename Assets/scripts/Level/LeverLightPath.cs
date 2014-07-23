@@ -38,8 +38,6 @@ public class LeverLightPath : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		updateLight();
-		//#if UNITY_EDITOR
-		//#endif
 	}
 	private static int CompareListByName(Transform i1, Transform i2)
 	{
