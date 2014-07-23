@@ -18,7 +18,6 @@ public class TextUI : MonoBehaviour {
 	private StringBuilder textArray;
 	public int lettersToDisplay=12;
 	[Range (0,0.5f)] public float scrollSpeed=0.2f;
-	public float twinkleSpeed=1f;
 
 	public void Awake()
 	{
@@ -42,7 +41,7 @@ public class TextUI : MonoBehaviour {
 		if(twinkleMessage) {
 			//OTTween _tween = new OTTween(prefabSprite, 1f).Tween("alpha", 1f).PingPong();
 			//StartCoroutine("twinkle");
-			InvokeRepeating("twinkle",0,twinkleSpeed);
+			InvokeRepeating("twinkle",0,2f);
 		}
 		//text=text+" ##### ";
 	}

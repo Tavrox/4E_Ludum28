@@ -60,7 +60,7 @@ public class TeleportAnims : MonoBehaviour
 //		Hurt();
 //		Fall();
 		//		Paused();
-		if ((Input.GetKeyDown(InputMan.Action) || Input.GetKeyDown(InputMan.Action2) || Input.GetKeyDown(InputMan.Action3)) && !isOUT && !_player.locked && triggable) {
+		if ((Input.GetKeyDown(InputMan.Action) || Input.GetKeyDown(InputMan.Action2) || Input.GetKey(InputMan.Action3)) && !isOUT && !_player.locked && triggable) {
 				inputDetected();
 		}
 	}
