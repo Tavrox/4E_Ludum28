@@ -50,7 +50,7 @@ public class Lever : MonoBehaviour {
 //			if(animSprite.frameIndex == 4 && stopped) {_myRemainingTime = delay;stopped = false;StopCoroutine("leverTimer");}
 //			if(animSprite.frameIndex == 5) {StopCoroutine("waitB4Restart");print ("POTS");}
 		}
-		if ((Input.GetKeyDown(InputMan.Action) || Input.GetKeyDown(InputMan.Action2) || Input.GetKey(InputMan.Action3)) && !seqLocked && triggable && !(myButtonType == btnType.TimedBtn && trigged))
+		if ((Input.GetKeyDown(InputMan.Action) || Input.GetKeyDown(InputMan.Action2) || Input.GetKeyDown(InputMan.Action3)) && !seqLocked && triggable && !(myButtonType == btnType.TimedBtn && trigged))
 		{
 			inputDetected();
 		}
@@ -202,6 +202,9 @@ public class Lever : MonoBehaviour {
 		
 	}
 	public void launchLights () {
+		foreach(LeverLightPath path in _myPaths) {
+			path.switchON();	
+		}
 		if(_myLights.Count!=0 && _myPaths.Count!=0 && _myLights.Count==_myPaths.Count) {
 			int cpt = 0;
 			for(cpt=0;cpt<_myLights.Count;cpt++) {
