@@ -9,7 +9,7 @@ public class Crate : MonoBehaviour {
 	[SerializeField] public float gravityY, crateMove, playerMoveVel, spriteScaleX, spriteScaleY;
 	[SerializeField] public Vector3 vectorMove;
 	[SerializeField] public RaycastHit hitInfo;
-	public Ray detectEndPFLeft, detectEndPFRight, detectPlayerLeft, detectPlayerRight;
+	public Ray detectEndPFLeft, detectEndPFRight, detectPlayerLeft, detectPlayerRight, detectBlockLeft, detectBlockRight;
 	public int blockDetectionArea = 100;
 	public Player _player;
 	public bool blockCrate, isObjChild, touchingPlayer;
@@ -117,42 +117,50 @@ public class Crate : MonoBehaviour {
 			touchingPlayer=true;
 			if((Input.GetKey(InputMan.Hold) || Input.GetKey(InputMan.Hold2) || Input.GetKey(InputMan.Hold3)) && (_player.transform.position.x < thisTransform.position.x) /*&& !_player.isRight*/) {
 				//print("Je m'accroche à gauche");
-				if(_player.isLeft && !_player.blockedLeft) {//Tire Gauche
-					//print("Je tire à gauche");
-					_player.grabCrate = true;
-					_player.pushCrate = false;
-					_player.moveVel = playerMoveVel/2; 
-					crateMove = -_player.moveVel*Time.deltaTime;moveCake(-_player.moveVel*Time.deltaTime);
-					if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
-				}
-				else if(!blockCrate && _player.isRight) {//Pousse Droite
+				if(!blockCrate && _player.isRight) {//Pousse Droite
 					//print("Je pousse à droite");
-					_player.moveVel = playerMoveVel/2; 
+					_player.moveVel = playerMoveVel*.5f; 
 					_player.pushCrate = true;
 					_player.grabCrate = false;
 					crateMove = _player.moveVel*Time.deltaTime;moveCake(_player.moveVel*Time.deltaTime);
 					if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
+				}
+				else if(_player.isLeft && !_player.blockedLeft && !_player.pushCrate) {//Tire Gauche
+					//print("Je tire à gauche");					
+		detectBlockLeft = new Ray(new Vector3 (thisTransform.position.x, thisTransform.position.y-spriteScaleY*.5f+0.5f, thisTransform.position.z), Vector3.left);
+						if(Physics.Raycast(detectBlockLeft, out hitInfo, spriteScaleX*.5f) && hitInfo.collider.CompareTag("Blocker")) {print (hitInfo.collider.CompareTag("Blocker"));
+						}
+					else {
+						_player.grabCrate = true;
+						_player.pushCrate = false;
+						_player.moveVel = playerMoveVel*.5f; 
+						crateMove = -_player.moveVel*Time.deltaTime;moveCake(-_player.moveVel*Time.deltaTime);
+						if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
+					}
 				}
 				else crateMove = 0;
 				thisTransform.position += new Vector3(crateMove,0f,0f);
 			}
 			else if((Input.GetKey(InputMan.Hold) || Input.GetKey(InputMan.Hold2) || Input.GetKey(InputMan.Hold3)) && (_player.transform.position.x > thisTransform.position.x) /*&& !_player.isLeft*/) {
 				//print("Je m'accroche à droite");
-				if(_player.isRight && !_player.blockedRight) {//Tire Droite
-				//	print("Je tire à droite");
-					_player.moveVel = playerMoveVel/2; 
-					_player.grabCrate = true;
-					_player.pushCrate = false;
-					crateMove = _player.moveVel*Time.deltaTime;moveCake(_player.moveVel*Time.deltaTime);
-					if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
-				}
-				else if(!blockCrate && _player.isLeft) {//Pousse Gauche
+				if(!blockCrate && _player.isLeft) {//Pousse Gauche
 				//	print("Je pousse à gauche");
-					_player.moveVel = playerMoveVel/2; 
+					_player.moveVel = playerMoveVel*.5f; 
 					_player.pushCrate = true;
 					_player.grabCrate = false;
 					crateMove = -_player.moveVel*Time.deltaTime;moveCake(-_player.moveVel*Time.deltaTime);
 					if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
+				}
+				else if(_player.isRight && !_player.blockedRight && !_player.pushCrate) {//Tire Droite
+				//	print("Je tire à droite");
+		detectBlockRight = new Ray(new Vector3 (thisTransform.position.x, thisTransform.position.y-spriteScaleY*.5f+0.5f, thisTransform.position.z), Vector3.right);
+					if(!Physics.Raycast(detectBlockRight, out hitInfo, spriteScaleY*.5f)) {
+					_player.moveVel = playerMoveVel*.5f; 
+					_player.grabCrate = true;
+					_player.pushCrate = false;
+					crateMove = _player.moveVel*Time.deltaTime;moveCake(_player.moveVel*Time.deltaTime);
+					if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
+					}
 				}
 				else crateMove = 0;
 				thisTransform.position += new Vector3(crateMove,0f,0f);
@@ -277,12 +285,14 @@ public class Crate : MonoBehaviour {
 	private void detectEndPlatform() {
 		detectEndPFLeft = new Ray(new Vector3 (thisTransform.position.x-(spriteScaleX/2.5f), thisTransform.position.y, thisTransform.position.z), Vector3.down);
 		detectEndPFRight = new Ray(new Vector3 (thisTransform.position.x+(spriteScaleX/2.5f), thisTransform.position.y, thisTransform.position.z), Vector3.down);
-
 		//print (blockDetectionArea);
-		Debug.DrawRay(new Vector3 (thisTransform.position.x-(spriteScaleX/2.5f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY/2f);
-		Debug.DrawRay(new Vector3 (thisTransform.position.x+(spriteScaleX/2.5f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY/2f);
+		Debug.DrawRay(new Vector3 (thisTransform.position.x-(spriteScaleX/2.5f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY*.5f);
+		Debug.DrawRay(new Vector3 (thisTransform.position.x+(spriteScaleX/2.5f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY*.5f);
+		Debug.DrawRay(new Vector3 (thisTransform.position.x, thisTransform.position.y-spriteScaleY*.5f+0.5f, thisTransform.position.z), Vector3.left*spriteScaleY*.5f, Color.red);
+		Debug.DrawRay(new Vector3 (thisTransform.position.x, thisTransform.position.y-spriteScaleY*.5f+0.5f, thisTransform.position.z), Vector3.right*spriteScaleY*.5f, Color.blue);
+		
 		if (!isObjChild) {
-			if (!Physics.Raycast(detectEndPFLeft, out hitInfo, spriteScaleY/2f) && !Physics.Raycast(detectEndPFRight, out hitInfo, spriteScaleY/2f)) {
+			if (!Physics.Raycast(detectEndPFLeft, out hitInfo, spriteScaleY*.5f) && !Physics.Raycast(detectEndPFRight, out hitInfo, spriteScaleY*.5f)) {
 				grounded = false;
 				cakeCrate = null;
 			}
