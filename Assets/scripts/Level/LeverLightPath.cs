@@ -20,7 +20,10 @@ public class LeverLightPath : MonoBehaviour {
 //		print ("hello");
 		first = true;
 		path = new List<Transform>();
-		cEnd = new Color (cEnd.r, cEnd.g, cEnd.b, 0f);
+		cBegin = new Color (1f, 0.898f, 0.784f, 1f);
+		cReduced = new Color (0f, 0.753f, 1f, 1f);
+		cTimed = new Color (1f, 0f, 0f, 1f);
+		cEnd = new Color (0.9686f, 0.5764f, 0.114f, 1f);
 		cDisplay = cEnd;
 		foreach(Transform _WP in gameObject.GetComponentsInChildren<Transform>())
 		{
@@ -32,6 +35,7 @@ public class LeverLightPath : MonoBehaviour {
 		if(gameObject.GetComponent<LineRenderer>()==null) _myLine = gameObject.AddComponent<LineRenderer>();
 		path.Sort(CompareListByName);
 		lengthOfLineRenderer = path.Count;
+		first = false;
 		//createLine();
 	}
 	
@@ -70,12 +74,19 @@ public class LeverLightPath : MonoBehaviour {
 		}
 	}
 	public void switchON() {
-		StopCoroutine("lightOFFDelay");
+		//StopCoroutine("lightOFFDelay");
 		if(_lightTransition != null) _lightTransition.Stop();
-		_lightTransition = new OTTween(this, .35f).Tween("cDisplay", cBegin).OnFinish(reduceBrightness);
-		//InvokeRepeating("updateLight",0f, 0.05f);
-		//cDisplay = cBegin;
-//		updateLight();
+//		if(first) cDisplay = cReduced;
+//		else cDisplay = cEnd;
+		first=!first;
+		if(gameObject.transform.parent.transform.GetComponent<Lever>().myButtonType.ToString()=="TimedBtn") {
+			print ("timed");
+//			yield return new WaitForSeconds(delay);
+//			_lightTransition = new OTTween(this, switchOFFSpeed).Tween("cDisplay", cEnd).OnFinish(stopUpdateLight);
+//			_lightTransition = new OTTween(this, gameObject.transform.parent.transform.GetComponent<Lever>().delay).Tween("cDisplay", cEnd).OnFinish(stopUpdateLight);
+			StartCoroutine("timedPulsation",gameObject.transform.parent.transform.GetComponent<Lever>().delay);
+		}
+			_lightTransition = new OTTween(this, .2f).Tween("cDisplay", cBegin).OnFinish(reduceBrightness);	
 	}
 	public void switchOFF() {
 		StartCoroutine("lightOFFDelay",duration);
@@ -94,7 +105,13 @@ public class LeverLightPath : MonoBehaviour {
 		}
 	}
 	void reduceBrightness(OTTween _t) {
-	    _t = new OTTween(this, .2f).Tween("cDisplay", cReduced).OnFinish(startSwitchOff);
+		
+//		if(gameObject.transform.parent.transform.GetComponent<Lever>().myButtonType.ToString()=="TimedBtn") {
+//			StartCoroutine("timedPulsation",gameObject.transform.parent.transform.GetComponent<Lever>().delay);
+//		}
+//		else {
+	   		_t = new OTTween(this, .2f).Tween("cDisplay", first?cReduced:cEnd);//.OnFinish(startSwitchOff);
+//		}
 	}
 	void startSwitchOff(OTTween _t) {
 	    StartCoroutine("lightOFFDelay",duration-(.2f+.35f));
@@ -104,25 +121,26 @@ public class LeverLightPath : MonoBehaviour {
 		CancelInvoke("pulseColor");	
 	}
 	IEnumerator timedPulsation (float timedDelay) {
-		yield return new WaitForSeconds(.4f); //calé sur le temps suite à la transition
+//		yield return new WaitForSeconds(.2f); //calé sur le temps suite à la transition
 		InvokeRepeating("pulseColor",0.1f, 1f);
 		InvokeRepeating("pulseColor",0.2f, 1f);
-		yield return new WaitForSeconds(timedDelay-timedDelay*0.3f); //attend 2/3
+//		yield return new WaitForSeconds(timedDelay-timedDelay*0.3f); //attend 2/3
+//		CancelInvoke("pulseColor");
+//		InvokeRepeating("pulseColor",0.1f, .5f);
+//		InvokeRepeating("pulseColor",0.2f, .5f);
+//		yield return new WaitForSeconds(timedDelay*0.15f);
+//		CancelInvoke("pulseColor");
+//		InvokeRepeating("pulseColor",0.1f, .25f);
+//		InvokeRepeating("pulseColor",0.2f, .25f);
+		yield return new WaitForSeconds(timedDelay+0.2f);
+		print ("ohuho");
 		CancelInvoke("pulseColor");
-		InvokeRepeating("pulseColor",0.1f, .5f);
-		InvokeRepeating("pulseColor",0.2f, .5f);
-		yield return new WaitForSeconds(timedDelay*0.15f);
-		CancelInvoke("pulseColor");
-		InvokeRepeating("pulseColor",0.1f, .25f);
-		InvokeRepeating("pulseColor",0.2f, .25f);
-		yield return new WaitForSeconds(timedDelay*0.1f);
-		CancelInvoke("pulseColor");
-		_lightTransition = new OTTween(this, switchOFFSpeed).Tween("cDisplay", cEnd).OnFinish(stopUpdateLight);
+		_lightTransition = new OTTween(this, switchOFFSpeed).Tween("cDisplay", first?cReduced:cEnd).OnFinish(stopUpdateLight);
 	}
 	void pulseColor() {
 //		if(pulseSpeed>.5f)	_lightTransition = new OTTween(this, pulseSpeed).Tween("cDisplay", cTimed).PingPong();
 //		else {
-			if(cDisplay==cTimed) cDisplay = cReduced;
+			if(cDisplay==cTimed) cDisplay = first?cReduced:cEnd;
 			else cDisplay = cTimed;
 //		}
 	}

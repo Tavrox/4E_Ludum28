@@ -171,6 +171,7 @@ public class Walker : Enemy {
 		Debug.DrawRay(new Vector3(thisTransform.position.x,thisTransform.position.y,thisTransform.position.z), Vector3.right*targetDetectionArea, Color.black);
 		
 		if (Physics.Raycast(detectTargetLeft, out hitInfo, targetDetectionArea)) {//A GAUCHE
+		
 			if(hitInfo.collider.tag == "Crate" || hitInfo.collider.name == "ColliBox" || hitInfo.collider.tag=="Blocker") {
 				
 				if(hitInfo.collider.bounds.center.x < thisTransform.position.x) smokePosIni=hitInfo.collider.bounds.center.x+hitInfo.collider.bounds.size.x/2;

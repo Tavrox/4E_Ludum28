@@ -47,6 +47,7 @@ public class Crate : MonoBehaviour {
 		}
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GamePause += GamePause;
+		GameEventManager.GameOver += GameOver;
 		GameEventManager.GameUnpause += GameUnpause;
 		InputMan = Instantiate(Resources.Load("Tuning/InputManager")) as InputManager;
 		InputMan.Setup();
@@ -127,16 +128,16 @@ public class Crate : MonoBehaviour {
 				}
 				else if(_player.isLeft && !_player.blockedLeft && !_player.pushCrate) {//Tire Gauche
 					//print("Je tire à gauche");					
-		detectBlockLeft = new Ray(new Vector3 (thisTransform.position.x, thisTransform.position.y-spriteScaleY*.5f+0.5f, thisTransform.position.z), Vector3.left);
-						if(Physics.Raycast(detectBlockLeft, out hitInfo, spriteScaleX*.5f) && hitInfo.collider.CompareTag("Blocker")) {print (hitInfo.collider.CompareTag("Blocker"));
-						}
-					else {
+//		detectBlockLeft = new Ray(new Vector3 (thisTransform.position.x, thisTransform.position.y-spriteScaleY*.5f+0.5f, thisTransform.position.z), Vector3.left);
+//						if(Physics.Raycast(detectBlockLeft, out hitInfo, spriteScaleX*.5f) && hitInfo.collider.CompareTag("Blocker")) {print (hitInfo.collider.CompareTag("Blocker"));
+//						}
+//					else {
 						_player.grabCrate = true;
 						_player.pushCrate = false;
 						_player.moveVel = playerMoveVel*.5f; 
 						crateMove = -_player.moveVel*Time.deltaTime;moveCake(-_player.moveVel*Time.deltaTime);
 						if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
-					}
+//					}
 				}
 				else crateMove = 0;
 				thisTransform.position += new Vector3(crateMove,0f,0f);
@@ -153,14 +154,14 @@ public class Crate : MonoBehaviour {
 				}
 				else if(_player.isRight && !_player.blockedRight && !_player.pushCrate) {//Tire Droite
 				//	print("Je tire à droite");
-		detectBlockRight = new Ray(new Vector3 (thisTransform.position.x, thisTransform.position.y-spriteScaleY*.5f+0.5f, thisTransform.position.z), Vector3.right);
-					if(!Physics.Raycast(detectBlockRight, out hitInfo, spriteScaleY*.5f)) {
+//		detectBlockRight = new Ray(new Vector3 (thisTransform.position.x, thisTransform.position.y-spriteScaleY*.5f+0.5f, thisTransform.position.z), Vector3.right);
+//					if(!Physics.Raycast(detectBlockRight, out hitInfo, spriteScaleY*.5f)) {
 					_player.moveVel = playerMoveVel*.5f; 
 					_player.grabCrate = true;
 					_player.pushCrate = false;
 					crateMove = _player.moveVel*Time.deltaTime;moveCake(_player.moveVel*Time.deltaTime);
 					if(!crateSoundPlaying) StartCoroutine("SND_moveCrate");
-					}
+//					}
 				}
 				else crateMove = 0;
 				thisTransform.position += new Vector3(crateMove,0f,0f);
@@ -288,8 +289,8 @@ public class Crate : MonoBehaviour {
 		//print (blockDetectionArea);
 		Debug.DrawRay(new Vector3 (thisTransform.position.x-(spriteScaleX/2.5f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY*.5f);
 		Debug.DrawRay(new Vector3 (thisTransform.position.x+(spriteScaleX/2.5f), thisTransform.position.y, thisTransform.position.z), Vector3.down*spriteScaleY*.5f);
-		Debug.DrawRay(new Vector3 (thisTransform.position.x, thisTransform.position.y-spriteScaleY*.5f+0.5f, thisTransform.position.z), Vector3.left*spriteScaleY*.5f, Color.red);
-		Debug.DrawRay(new Vector3 (thisTransform.position.x, thisTransform.position.y-spriteScaleY*.5f+0.5f, thisTransform.position.z), Vector3.right*spriteScaleY*.5f, Color.blue);
+//		Debug.DrawRay(new Vector3 (thisTransform.position.x, thisTransform.position.y-spriteScaleY*.5f+0.5f, thisTransform.position.z), Vector3.left*spriteScaleY*.5f, Color.red);
+//		Debug.DrawRay(new Vector3 (thisTransform.position.x, thisTransform.position.y-spriteScaleY*.5f+0.5f, thisTransform.position.z), Vector3.right*spriteScaleY*.5f, Color.blue);
 		
 		if (!isObjChild) {
 			if (!Physics.Raycast(detectEndPFLeft, out hitInfo, spriteScaleY*.5f) && !Physics.Raycast(detectEndPFRight, out hitInfo, spriteScaleY*.5f)) {
@@ -344,6 +345,7 @@ public class Crate : MonoBehaviour {
 	void GameStart () {
 		if(this != null && gameObject.activeInHierarchy)	{
 			_player.moveVel = playerMoveVel;transform.position = new Vector3(spawnPos.x,spawnPos.y,spawnPos.z);
+			touchingPlayer=false;	
 			
 			if(gameObject.GetComponentInChildren<OTAnimatingSprite>()) {
 				sprite.Stop();sprite.frameIndex = 47;sprite.alpha=1;
@@ -358,6 +360,10 @@ public class Crate : MonoBehaviour {
 				//if(spr.transform.parent.transform.parent.GetComponent<Crate>()!=null || spr.transform.parent.GetComponent<Crate>()!=null) {sprite.Stop();sprite.frameIndex = 47;}
 			}
 		}
+	}
+	void GameOver() {
+		if(this != null && gameObject.activeInHierarchy)
+			touchingPlayer=false;	
 	}
 	void GamePause()
 	{

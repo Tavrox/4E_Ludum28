@@ -12,7 +12,7 @@ public class LevelManager : MonoBehaviour {
 	public bool isBoss;
 	public static BMTuning TuningDocument;
 
-	private int _secLeft, _scoreTotalLvl,cptKey;
+	private int _secLeft, _scoreTotalLvl,cptKey, nbGoldMedalLVL, scoreGoldMedalLVL;
 	private bool bestScore;
 	private TileImporter _tileImporter;
 	private PlayerData _pdata;
@@ -140,6 +140,8 @@ public class LevelManager : MonoBehaviour {
 		lblScoreSilver.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"bronze");
 		lblScoreBronze.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"silver");
 		lblScoreOld.text = _playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"score");
+		nbGoldMedalLVL = System.Convert.ToInt32(_playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString(),"nbGold"));
+		scoreGoldMedalLVL = System.Convert.ToInt32(_levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_realID.ToString(),"gold"));
 		playerMedal.frameIndex = displayPlayerMedal(lblScoreOld.text, lblScoreGold.text, lblScoreSilver.text, lblScoreBronze.text);
 		updateScore();
 		//player.nbKey;
@@ -248,11 +250,12 @@ public class LevelManager : MonoBehaviour {
 //		print(player._scorePlayer.ToString() + " ? " + bestScore);
 		if(chosenVariation<5 && !isBoss) { //Si occurence 1 à 4
 //			print (scoreTotalLevel(_realID));
-			if(bestScore) _playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"score",player._scorePlayer.ToString(), false);
+//			if(bestScore) _playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"score",player._scorePlayer.ToString(), false);
 //				print (scoreTotalLevel(_realID));
 			//chosenVariation += 1; //On affiche l'occurence suivante
 			
 			if(bestScore) {
+				_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"score",player._scorePlayer.ToString(), false);
 				_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString(),"score",scoreTotalLevel(_realID).ToString(), false);
 				_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+(chosenVariation+1).ToString(),"locked","false", true);}
 //			TranslateAllInScene();
@@ -262,8 +265,8 @@ public class LevelManager : MonoBehaviour {
 			//chosenVariation = 0;
 			if(isBoss) { //occurence Boss
 					if(bestScore) {
-					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occBoss","score",player._scorePlayer.ToString(), false);
-					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString(),"score",scoreTotalLevel(_realID).ToString(), false);
+						_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occBoss","score",player._scorePlayer.ToString(), false);
+						_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString(),"score",scoreTotalLevel(_realID).ToString(), false);
 					}
 					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+(_realID+1).ToString(),"locked","false", false);
 					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+(_realID+1).ToString()+"/occ1","locked","false", true);
@@ -279,7 +282,27 @@ public class LevelManager : MonoBehaviour {
 //			GameEventManager.NextInstance -= NextInstance;
 //			DestroyImmediate(this.gameObject);
 		}
+			if(bestScore) {
+				if(checkNewGold() && nbGoldMedalLVL==6) {
+					_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString(),"locked","false", false);
+				}
+				unlockOccLevel6();
+			}
 		}
+	}
+	private void unlockOccLevel6() {
+		if(scoreTotalLevel(_realID) >= scoreGoldMedalLVL) {
+			_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level6","locked","false", true);
+			_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level6"+"/occ"+(_realID).ToString(),"locked","false", true);
+		}
+	}
+	private bool checkNewGold() {
+		if(System.Convert.ToInt32(lblScoreTotal.text) >= System.Convert.ToInt32(lblScoreGold.text) && System.Convert.ToInt32(lblScoreOld.text) < System.Convert.ToInt32(lblScoreGold.text)) {
+			nbGoldMedalLVL++;
+			_playerDataLoader.setValueInXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString(),"nbGold", nbGoldMedalLVL.ToString(), false);
+			return true;
+		}
+		else return false;
 	}
 	private void NextInstance() {
 		if(this != null) {

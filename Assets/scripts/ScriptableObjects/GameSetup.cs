@@ -12,7 +12,8 @@ public class GameSetup : ScriptableObject {
 		Two,
 		Three,
 		Four,
-		Five
+		Five,
+		Six
 	};
 	public enum languageList
 	{
