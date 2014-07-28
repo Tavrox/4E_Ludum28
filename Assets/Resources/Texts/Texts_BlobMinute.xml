@@ -29,8 +29,17 @@
 <entry id='	1BOSS_SEQ321	'>	<english>	3 -> 2 -> 1	</english>	<french>	3 -> 2 -> 1	</french>	<info>	11	11	</info>	</entry>
 <entry id='	1BOSS_TRAP	'>	<english>	TRAP.	</english>	<french>	PIÈGE.	</french>	<info>	5	6	</info>	</entry>
 <entry id='	1BOSS_TOLDYOU	'>	<english>	I told you that it was a trap.	</english>	<french>	Je t'avais dit que c'était un piège.	</french>	<info>	30	36	</info>	</entry>
+<entry id='	2-1_DoorG	'>	<english>	DoorG	</english>	<french>	Porte G	</french>	<info>	3	4	</info>	</entry>
+<entry id='	2-2_DoorG	'>	<english>	DoorG	</english>	<french>	Porte G	</french>	<info>	3	4	</info>	</entry>
+<entry id='	2-3_DoorG	'>	<english>	DoorG	</english>	<french>	Porte G	</french>	<info>	3	4	</info>	</entry>
+<entry id='	2-4_DoorG	'>	<english>	DoorG	</english>	<french>	Porte G	</french>	<info>	3	4	</info>	</entry>
+<entry id='	2-5_DoorG	'>	<english>	DoorG	</english>	<french>	Porte G	</french>	<info>	3	4	</info>	</entry>
 <entry id='	2-1_CAB	'>	<english>	CAB	</english>	<french>	TAXI	</french>	<info>	3	4	</info>	</entry>
 <entry id='	2-2_SEQ_123	'>	<english>	SEQUENCED Lever 1 -> 2 -> 3	</english>	<french>	Levier séquence 1 -> 2 -> 3	</french>	<info>	29	29	</info>	</entry>
+<entry id='	2-1_SEQ_123	'>	<english>	SEQUENCED Lever 1 -> 2 -> 3	</english>	<french>	Levier séquence 1 -> 2 -> 3	</french>	<info>	29	29	</info>	</entry>
+<entry id='	2-3_SEQ_123	'>	<english>	SEQUENCED Lever 1 -> 2 -> 3	</english>	<french>	Levier séquence 1 -> 2 -> 3	</french>	<info>	29	29	</info>	</entry>
+<entry id='	2-4_SEQ_123	'>	<english>	SEQUENCED Lever 1 -> 2 -> 3	</english>	<french>	Levier séquence 1 -> 2 -> 3	</french>	<info>	29	29	</info>	</entry>
+<entry id='	2-5_SEQ_123	'>	<english>	SEQUENCED Lever 1 -> 2 -> 3	</english>	<french>	Levier séquence 1 -> 2 -> 3	</french>	<info>	29	29	</info>	</entry>
 <entry id='	2-4_DONT	'>	<english>	Don't kill the blob	</english>	<french>	Ne tue pas le blob.	</french>	<info>	20	21	</info>	</entry>
 <entry id='	2-4_RUN	'>	<english>	RUN !	</english>	<french>	Cours !	</french>	<info>	5	7	</info>	</entry>
 <entry id='	2-5_SEQ_123	'>	<english>	SEQUENCED Lever 1 -> 2 -> 3	</english>	<french>	Levier séquence 1 -> 2 -> 3	</french>	<info>	29	29	</info>	</entry>
@@ -87,6 +96,7 @@
 <entry id='	NEXT_LEVEL	'>	<english>	Next Level	</english>	<french>	Continuer	</french>	<info>	10	9	</info>	</entry>
 <entry id='	LEVEL_ALL	'>	<english>	Level	</english>	<french>	Niveau	</french>	<info>	5	6	</info>	</entry>
 <entry id='	NEW_SCORE	'>	<english>	New Score !	</english>	<french>	Nouveau Score !	</french>	<info>	-11	-15	</info>	</entry>
+
 <entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
 <entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
 <entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
