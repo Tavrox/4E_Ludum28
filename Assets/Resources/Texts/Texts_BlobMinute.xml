@@ -53,12 +53,12 @@
 <entry id='	3-4_PRESS	'>	<english>	Pull/nMe &lt;3	</english>	<french>	Actionne/nmoi &lt;3	</french>	<info>	33	33	</info>	</entry>
 <entry id='	3-5_SEQ_123	'>	<english>	One Two Three and you're free !	</english>	<french>	Un deux trois. Ouvre toi !	</french>	<info>	22	22	</info>	</entry>
 <entry id='	3-5_LOVE	'>	<english>	AND IIIIII WILL ALWAYS BLOB YOUUUUUUU	</english>	<french>	AND IIIIII WILL ALWAYS BLOB YOUUUUUUU	</french>	<info>	39	39	</info>	</entry>
-<entry id='	3BOSS_RUN	'>	<english>	Run !	</english>	<french>	Cours !	</french>	<info>	5	7	</info>	</entry>
+<entry id='	3BOSS_RUN	'>	<english>	RUUUN !	</english>	<french>	COUUURS !	</french>	<info>	5	7	</info>	</entry>
 <entry id='	3BOSS_JUMP	'>	<english>	Jump !	</english>	<french>	Saute !	</french>	<info>	6	7	</info>	</entry>
 <entry id='	3BOSS_BOUNCE	'>	<english>	Bounce ! Down ! Up !	</english>	<french>	Jump ! Bounce !	</french>	<info>	21	16	</info>	</entry>
 <entry id='	3BOSS_ICARUS	'>	<english>	Be careful, Icarus !	</english>	<french>	Gaffe à tes ailes, Icare !	</french>	<info>	20	26	</info>	</entry>
-<entry id='	3BOSS_FAST	'>	<english>	Fast	</english>	<french>	Court et rapide	</french>	<info>	4	16	</info>	</entry>
-<entry id='	3BOSS_SAFE	'>	<english>	Safe	</english>	<french>	Securite	</french>	<info>	4	8	</info>	</entry>
+<entry id='	3BOSS_FAST	'>	<english>	SHORTCUT	</english>	<french>	RACCOURCI	</french>	<info>	4	16	</info>	</entry>
+<entry id='	3BOSS_SAFE	'>	<english>	SAFE/nWAY	</english>	<french>	SECURITE	</french>	<info>	4	8	</info>	</entry>
 <entry id='	3BOSS_LIE	'>	<english>	I lied.	</english>	<french>	J'ai menti.	</french>	<info>	7	11	</info>	</entry>
 <entry id='	3BOSS_STEPFAST	'>	<english>	That's one small step  for a blob.	</english>	<french>	Un petit pas pour le blob.	</french>	<info>	37	28	</info>	</entry>
 <entry id='	3BOSS_STEPSAFE	'>	<english>	That's one small step for a blob.	</english>	<french>	Un petit pas pour le blob.	</french>	<info>	37	28	</info>	</entry>
