@@ -27,6 +27,12 @@ public class ArcBaseGroup : MonoBehaviour {
 			nbCrates++;
 		}
 	}
+	void OnTriggerStay(Collider _other) {//EDIT ARG 31/07?
+		if (_other.CompareTag("Crate"))
+		{
+			turnOFF();
+		}
+	}
 	IEnumerator resetLastEntered() {
 		yield return new WaitForSeconds(0.25f);
 		lastEntered=0;
@@ -61,7 +67,7 @@ public class ArcBaseGroup : MonoBehaviour {
 		}
 	}
 	IEnumerator waitB4Restart() {
-		yield return new WaitForSeconds(1f);
+		//yield return new WaitForSeconds(1f);EDIT ARG 31/07?
 		while (GameEventManager.gamePaused) 
 		{
 			yield return new WaitForFixedUpdate();	

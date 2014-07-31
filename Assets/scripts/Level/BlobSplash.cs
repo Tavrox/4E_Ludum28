@@ -16,6 +16,7 @@ public class BlobSplash : MonoBehaviour {
 		activated = false;
 		thisTransform = transform;
 		posIni = gameObject.transform.position;
+		anim.onAnimationFinish = OnAnimationFinish;
 	}
 	
 	// Update is called once per frame
@@ -36,4 +37,9 @@ public class BlobSplash : MonoBehaviour {
 		activated = false;
 		delayBegin = 0;
 	}
+	public void OnAnimationFinish(OTObject owner)
+    {
+		if(owner == anim)
+        	anim.PlayLoop(numBlobAnim.ToString()+"Slide");
+    }
 }

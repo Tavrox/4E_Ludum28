@@ -187,6 +187,12 @@
             <filename>BlobdelespaceExport0037.png</filename>
             <filename>BlobdelespaceExport0038.png</filename>
             <filename>BlobdelespaceExport0039.png</filename>
+            <filename>BlobdelespaceExport0040.png</filename>
+            <filename>BlobdelespaceExport0041.png</filename>
+            <filename>BlobdelespaceExport0042.png</filename>
+            <filename>BlobdelespaceExport0043.png</filename>
+            <filename>BlobdelespaceExport0044.png</filename>
+            <filename>BlobdelespaceExport0045.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

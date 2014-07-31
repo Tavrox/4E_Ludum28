@@ -133,7 +133,7 @@ public class Timer : MonoBehaviour {
 //		alertColor.a = (Mathf.Sin(Time.time*6.25f)+0.5f ) * 0.2f;
 //		_alertMask.renderer.material.color = alertColor;
 		_rescaleCircleClock = new OTTween(_alertMask.renderer.material, .49f, OTEasing.Linear).Tween("color", new Color(_alertMask.renderer.material.color.r,_alertMask.renderer.material.color.g,_alertMask.renderer.material.color.b,.4f));
-		StartCoroutine("resetAlert");
+		if(!_player.isDead) StartCoroutine("resetAlert");
 	}
 	private IEnumerator resetAlert() {
 		yield return new WaitForSeconds(.50f);

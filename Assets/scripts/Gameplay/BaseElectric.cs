@@ -80,7 +80,7 @@ public class BaseElectric : MonoBehaviour {
 		}
 	}
 	public void turnON () {
-		animSprite.Play("baseON");StartCoroutine("activateCollider");
+		animSprite.Play("baseON");collider.enabled=true;//StartCoroutine("activateCollider");
 		activeState = true;
 		if(inactiveTime==0) StartCoroutine("displayInfinite");
 		else if(activeTime!=0) StartCoroutine("active");

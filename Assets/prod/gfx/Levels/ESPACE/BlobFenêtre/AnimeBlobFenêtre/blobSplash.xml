@@ -46,7 +46,7 @@
             <key>BlobdelespaceExport0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,150},{150,150}}</string>
+                <string>{{450,0},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -59,7 +59,7 @@
             <key>BlobdelespaceExport0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{150,150},{150,150}}</string>
+                <string>{{600,0},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -72,7 +72,7 @@
             <key>BlobdelespaceExport0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{300,150},{150,150}}</string>
+                <string>{{750,0},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -85,7 +85,7 @@
             <key>BlobdelespaceExport0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,300},{150,150}}</string>
+                <string>{{0,150},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -98,7 +98,7 @@
             <key>BlobdelespaceExport0008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{150,300},{150,150}}</string>
+                <string>{{150,150},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -111,7 +111,7 @@
             <key>BlobdelespaceExport0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{300,300},{150,150}}</string>
+                <string>{{300,150},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -124,7 +124,7 @@
             <key>BlobdelespaceExport0010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,450},{150,150}}</string>
+                <string>{{450,150},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -137,7 +137,7 @@
             <key>BlobdelespaceExport0011.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{150,450},{150,150}}</string>
+                <string>{{600,150},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -150,7 +150,7 @@
             <key>BlobdelespaceExport0012.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{300,450},{150,150}}</string>
+                <string>{{750,150},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -163,7 +163,7 @@
             <key>BlobdelespaceExport0013.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,600},{150,150}}</string>
+                <string>{{0,300},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -176,7 +176,7 @@
             <key>BlobdelespaceExport0014.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{150,600},{150,150}}</string>
+                <string>{{150,300},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -189,7 +189,7 @@
             <key>BlobdelespaceExport0015.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{300,600},{150,150}}</string>
+                <string>{{300,300},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -202,7 +202,7 @@
             <key>BlobdelespaceExport0016.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,750},{150,150}}</string>
+                <string>{{450,300},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -215,7 +215,7 @@
             <key>BlobdelespaceExport0017.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{150,750},{150,150}}</string>
+                <string>{{600,300},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -228,7 +228,7 @@
             <key>BlobdelespaceExport0018.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{300,750},{150,150}}</string>
+                <string>{{750,300},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -241,7 +241,7 @@
             <key>BlobdelespaceExport0019.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,900},{150,150}}</string>
+                <string>{{0,450},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -254,7 +254,7 @@
             <key>BlobdelespaceExport0020.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{150,900},{150,150}}</string>
+                <string>{{150,450},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -267,7 +267,7 @@
             <key>BlobdelespaceExport0021.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{300,900},{150,150}}</string>
+                <string>{{300,450},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -280,7 +280,7 @@
             <key>BlobdelespaceExport0022.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,1050},{150,150}}</string>
+                <string>{{450,450},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -293,7 +293,7 @@
             <key>BlobdelespaceExport0023.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{150,1050},{150,150}}</string>
+                <string>{{600,450},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -306,7 +306,7 @@
             <key>BlobdelespaceExport0024.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{300,1050},{150,150}}</string>
+                <string>{{750,450},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -319,7 +319,7 @@
             <key>BlobdelespaceExport0025.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,1200},{150,150}}</string>
+                <string>{{0,600},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -332,7 +332,7 @@
             <key>BlobdelespaceExport0026.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{150,1200},{150,150}}</string>
+                <string>{{150,600},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -345,7 +345,7 @@
             <key>BlobdelespaceExport0027.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{300,1200},{150,150}}</string>
+                <string>{{300,600},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -358,7 +358,7 @@
             <key>BlobdelespaceExport0028.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,1350},{150,150}}</string>
+                <string>{{450,600},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -371,7 +371,7 @@
             <key>BlobdelespaceExport0029.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{150,1350},{150,150}}</string>
+                <string>{{600,600},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -384,7 +384,7 @@
             <key>BlobdelespaceExport0030.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{300,1350},{150,150}}</string>
+                <string>{{750,600},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -397,7 +397,7 @@
             <key>BlobdelespaceExport0031.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,1500},{150,150}}</string>
+                <string>{{0,750},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -410,7 +410,7 @@
             <key>BlobdelespaceExport0032.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{150,1500},{150,150}}</string>
+                <string>{{150,750},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -423,7 +423,7 @@
             <key>BlobdelespaceExport0033.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{300,1500},{150,150}}</string>
+                <string>{{300,750},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -436,7 +436,7 @@
             <key>BlobdelespaceExport0034.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,1650},{150,150}}</string>
+                <string>{{450,750},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -449,7 +449,7 @@
             <key>BlobdelespaceExport0035.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{150,1650},{150,150}}</string>
+                <string>{{600,750},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -462,7 +462,7 @@
             <key>BlobdelespaceExport0036.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{300,1650},{150,150}}</string>
+                <string>{{750,750},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -475,7 +475,7 @@
             <key>BlobdelespaceExport0037.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,1800},{150,150}}</string>
+                <string>{{0,900},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -488,7 +488,7 @@
             <key>BlobdelespaceExport0038.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{150,1800},{150,150}}</string>
+                <string>{{150,900},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -501,7 +501,85 @@
             <key>BlobdelespaceExport0039.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{300,1800},{150,150}}</string>
+                <string>{{300,900},{150,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{150,150}}</string>
+                <key>sourceSize</key>
+                <string>{150,150}</string>
+            </dict>
+            <key>BlobdelespaceExport0040.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{450,900},{150,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{150,150}}</string>
+                <key>sourceSize</key>
+                <string>{150,150}</string>
+            </dict>
+            <key>BlobdelespaceExport0041.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{600,900},{150,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{150,150}}</string>
+                <key>sourceSize</key>
+                <string>{150,150}</string>
+            </dict>
+            <key>BlobdelespaceExport0042.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{750,900},{150,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{150,150}}</string>
+                <key>sourceSize</key>
+                <string>{150,150}</string>
+            </dict>
+            <key>BlobdelespaceExport0043.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,1050},{150,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{150,150}}</string>
+                <key>sourceSize</key>
+                <string>{150,150}</string>
+            </dict>
+            <key>BlobdelespaceExport0044.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{150,1050},{150,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{150,150}}</string>
+                <key>sourceSize</key>
+                <string>{150,150}</string>
+            </dict>
+            <key>BlobdelespaceExport0045.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{300,1050},{150,150}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -519,9 +597,9 @@
             <key>realTextureFileName</key>
             <string>blobSplash.png</string>
             <key>size</key>
-            <string>{512,2048}</string>
+            <string>{1024,2048}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:2e6b8e25ff2600411f8c55d2b8808a51:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:996f989a3fa493791e8abb548af55012:1/1$</string>
             <key>textureFileName</key>
             <string>blobSplash.png</string>
         </dict>
