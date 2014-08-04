@@ -105,7 +105,7 @@ public class TriggeredDoor : MonoBehaviour {
 	}
 	public void explode() {
 		//print ("EXPLOOOOOODE");
-		if(isResistant) {
+		if(!isResistant) {
 		collider.enabled = false;
 		animSprite.Play("destroy");
 		}
