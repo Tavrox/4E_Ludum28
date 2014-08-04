@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class TriggeredDoor : MonoBehaviour {
 	
 	public OTAnimatingSprite animSprite;
-	public bool isLocked = true ;
+	public bool isLocked = true, isResistant = false ;
 	private bool memoryLock;
 	private Player _player;
 	private Transform thisTransform;
@@ -105,8 +105,10 @@ public class TriggeredDoor : MonoBehaviour {
 	}
 	public void explode() {
 		//print ("EXPLOOOOOODE");
+		if(isResistant) {
 		collider.enabled = false;
 		animSprite.Play("destroy");
+		}
 	}
 	void GamePause()
 	{
