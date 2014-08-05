@@ -14,6 +14,7 @@ public class Key : MonoBehaviour {
 	private Camera _camera;
 	private HUDLevels _myHUDTarget;
 	public ParticleSystem _myParticle;
+	private OTTween resizeKey, moveKey, scaleKey;
 
 	[ContextMenu ("Setup Frame")]
 	private void setFrame()
@@ -61,6 +62,10 @@ public class Key : MonoBehaviour {
 	void resetKey() {
 		if(this != null) {
 			//_KeySprite.frameIndex = _levelM.chosenVariation+4+25;
+			if(resizeKey != null) resizeKey.Stop();
+			if(moveKey != null) moveKey.Stop();
+			if(scaleKey != null) scaleKey.Stop();
+			StopCoroutine("waitB4rescale");
 			_KeySprite.Play("keyBattery");
 			if(_levelM.isBoss == true) _KeySprite.frameIndex = 29;
 			gameObject.transform.parent = _myGameParent;
@@ -82,9 +87,9 @@ public class Key : MonoBehaviour {
 //			transform.localPosition = new Vector3(-11f,5f-_player.nbKey,0f);
 //			
 //			GameObject StargatePlace = GameObject.FindGameObjectWithTag("SpaceGate");
-			new OTTween(gameObject.transform, 1f, OTEasing.BackOut).Tween("localScale", new Vector3(1.5f, 1.5f, 1f)).PingPong();
+			resizeKey = new OTTween(gameObject.transform, 1f, OTEasing.BackOut).Tween("localScale", new Vector3(1.5f, 1.5f, 1f)).PingPong();
 //			new OTTween(gameObject.transform, 1f, OTEasing.CircInOut).Tween("localPosition", new Vector3(_player.nbKey-(0.3f*_player.nbKey),4f,gameObject.transform.position.z));
-			new OTTween(gameObject.transform, 1f, OTEasing.CircInOut).Tween("localPosition", new Vector3(_myHUDTarget.transform.localPosition.x-2f+_player.nbKey-(0.35f*_player.nbKey), _myHUDTarget.transform.localPosition.y-1.4f,gameObject.transform.position.z));
+			moveKey = new OTTween(gameObject.transform, 1f, OTEasing.CircInOut).Tween("localPosition", new Vector3(_myHUDTarget.transform.localPosition.x-2f+_player.nbKey-(0.35f*_player.nbKey), _myHUDTarget.transform.localPosition.y-1.4f,gameObject.transform.position.z));
 			StartCoroutine("waitB4rescale");
 			_myEndDoor.nextState();
 			if(_player.nbKey>=_nbKeyRequired) {
@@ -101,7 +106,7 @@ public class Key : MonoBehaviour {
 		{
 			yield return new WaitForFixedUpdate();	
 		}
-		new OTTween(gameObject.transform, .5f, OTEasing.Linear).Tween("localScale", new Vector3(0.65f,0.65f, 1f));
+		scaleKey = new OTTween(gameObject.transform, .5f, OTEasing.Linear).Tween("localScale", new Vector3(0.65f,0.65f, 1f));
 		_myParticle.enableEmission = false;
 		_myParticle.simulationSpace = UnityEngine.ParticleSystemSimulationSpace.Local;
 		if(_player.nbKey ==5) {				

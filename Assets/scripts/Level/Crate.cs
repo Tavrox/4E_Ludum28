@@ -36,7 +36,7 @@ public class Crate : MonoBehaviour {
 	{
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>();
 //		testSon = gameObject.AddComponent<FESound>();
-		spawnPos = transform.position;
+		spawnPos = transform.localPosition;
 		playerMoveVel = _player.moveVel;
 		StartCoroutine("StartGravity");
 		spriteScaleX = thisTransform.gameObject.GetComponentInChildren<Transform>().GetComponentInChildren<OTSprite>().transform.localScale.x*thisTransform.localScale.x;
@@ -344,7 +344,7 @@ public class Crate : MonoBehaviour {
 //	}
 	void GameStart () {
 		if(this != null && gameObject.activeInHierarchy)	{
-			_player.moveVel = playerMoveVel;transform.position = new Vector3(spawnPos.x,spawnPos.y,spawnPos.z);
+			_player.moveVel = playerMoveVel;transform.localPosition = new Vector3(spawnPos.x,spawnPos.y,spawnPos.z);
 			touchingPlayer=false;	
 			
 			if(gameObject.GetComponentInChildren<OTAnimatingSprite>()) {
