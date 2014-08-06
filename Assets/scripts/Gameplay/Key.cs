@@ -60,7 +60,7 @@ public class Key : MonoBehaviour {
 		resetKey();
 	}
 	void resetKey() {
-		if(this != null) {
+		if(this != null && gameObject.activeInHierarchy) {
 			//_KeySprite.frameIndex = _levelM.chosenVariation+4+25;
 			if(resizeKey != null) resizeKey.Stop();
 			if(moveKey != null) moveKey.Stop();

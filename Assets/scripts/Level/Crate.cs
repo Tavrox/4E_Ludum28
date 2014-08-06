@@ -348,6 +348,7 @@ public class Crate : MonoBehaviour {
 			touchingPlayer=false;	
 			
 			if(gameObject.GetComponentInChildren<OTAnimatingSprite>()) {
+				sprite = gameObject.GetComponentInChildren<OTAnimatingSprite>();
 				sprite.Stop();sprite.frameIndex = 47;sprite.alpha=1;
 			}
 			else if(gameObject.GetComponentInChildren<OTSprite>()) {
