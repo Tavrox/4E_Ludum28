@@ -63,6 +63,12 @@
 <entry id='	3BOSS_STEPFAST	'>	<english>	That's one small step  for a blob.	</english>	<french>	Un petit pas pour le blob.	</french>	<info>	37	28	</info>	</entry>
 <entry id='	3BOSS_STEPSAFE	'>	<english>	That's one small step for a blob.	</english>	<french>	Un petit pas pour le blob.	</french>	<info>	37	28	</info>	</entry>
 <entry id='	3BOSS_LEAP	'>	<english>	                            blob/nOne giant leap for blob/n                            blob	</english>	<french>	                                blob/nUn pas de geant pour blob/n                                 blob 	</french>	<info>	91	103	</info>	</entry>
+<entry id='	4-1RULE	'>	<english>	1st Rule of Blob	</english>	<french>	1st Rule of Blob	</french>	<info>	7	11	</info>	</entry>
+<entry id='	4-1RULECONTENT	'>	<english>	You do not talk about blob	</english>	<french>	You do not talk about blob	</french>	<info>	7	11	</info>	</entry>
+<entry id='	4-2RUN	'>	<english>	RUN AGAIN !	</english>	<french>	COURS ENCORE !	</french>	<info>	7	11	</info>	</entry>
+<entry id='	4-3FORCE	'>	<english>	May the blob be with you.	</english>	<french>	Que le blob soit avec toi.	</french>	<info>	7	11	</info>	</entry>
+<entry id='	4-5RULE	'>	<english>	2nd Rule of Blob	</english>	<french>	2nd Rule of Blob	</french>	<info>	7	11	</info>	</entry>
+<entry id='	4-5RULECONTENT	'>	<english>	You DO NOT talk about blob	</english>	<french>	You DO NOT talk about blob	</french>	<info>	7	11	</info>	</entry>
 <entry id='	BACK_BTN	'>	<english>	Back	</english>	<french>	Retour	</french>	<info>	4	6	</info>	</entry>
 <entry id='	CHOOSE_LVL	'>	<english>	Choose a level	</english>	<french>	Choisir un niveau	</french>	<info>	14	17	</info>	</entry>
 <entry id='	CREDITS_BTN	'>	<english>	Credits	</english>	<french>	Crédits	</french>	<info>	7	7	</info>	</entry>
