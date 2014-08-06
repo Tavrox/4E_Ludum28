@@ -104,7 +104,7 @@ public class WalkerBoss : Enemy {
 		if(_other.CompareTag("Crate")) {
 			getDamage(1);
 		}
-		if(_other.gameObject.GetComponent<TriggeredDoor>() != null && !_other.gameObject.GetComponent<TriggeredDoor>().isResistant) {
+		if(_other.gameObject.GetComponent<TriggeredDoor>() != null) {
 			moveVel = 5;
 			StartCoroutine("speedAfterSlowed");
 			_other.gameObject.GetComponent<TriggeredDoor>().explode();
