@@ -51,7 +51,7 @@ public class TriggeredDoor : MonoBehaviour {
 //		animSprite.PlayBackward("unlock");
 		isLocked = true;
 
-		FESound.playDistancedSound("door_close",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("door_close");
+		if(gameObject.transform!=null && _player.transform!=null) FESound.playDistancedSound("door_close",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("door_close");
 		StartCoroutine("WaitLock");
 	}
 	public void Unlock()
@@ -60,7 +60,7 @@ public class TriggeredDoor : MonoBehaviour {
 		//		{
 		isLocked = false;
 		//Destroy(collider);
-		FESound.playDistancedSound("door_open", gameObject.transform, _player.transform,0f,"play",0.3f);//MasterAudio.PlaySound("door_open", 1f, 1f, 0.3f);
+		if(gameObject.transform!=null && _player.transform!=null) FESound.playDistancedSound("door_open", gameObject.transform, _player.transform,0f,"play",0.3f);//MasterAudio.PlaySound("door_open", 1f, 1f, 0.3f);
 		StartCoroutine("WaitUnlock");
 		//		}
 	}

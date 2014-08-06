@@ -80,7 +80,7 @@ public class LeverLightPath : MonoBehaviour {
 //		else cDisplay = cEnd;
 		first=!first;
 		if(gameObject.transform.parent.transform.GetComponent<Lever>().myButtonType.ToString()=="TimedBtn") {
-			print ("timed");
+//			print ("timed");
 //			yield return new WaitForSeconds(delay);
 //			_lightTransition = new OTTween(this, switchOFFSpeed).Tween("cDisplay", cEnd).OnFinish(stopUpdateLight);
 //			_lightTransition = new OTTween(this, gameObject.transform.parent.transform.GetComponent<Lever>().delay).Tween("cDisplay", cEnd).OnFinish(stopUpdateLight);
@@ -133,7 +133,7 @@ public class LeverLightPath : MonoBehaviour {
 //		InvokeRepeating("pulseColor",0.1f, .25f);
 //		InvokeRepeating("pulseColor",0.2f, .25f);
 		yield return new WaitForSeconds(timedDelay+0.2f);
-		print ("ohuho");
+//		print ("ohuho");
 		CancelInvoke("pulseColor");
 		_lightTransition = new OTTween(this, switchOFFSpeed).Tween("cDisplay", first?cReduced:cEnd).OnFinish(stopUpdateLight);
 	}
