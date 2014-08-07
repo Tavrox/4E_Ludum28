@@ -55,7 +55,7 @@ public class SequenceBtn : MonoBehaviour {
 			}
 		if(allTriggered) {
 			if(errorDetected==false) {
-				seqBtns[1].triggerLever();
+				seqBtns[0].triggerLever();
 				foreach (Lever btn in seqBtns) {
 					btn.launchLights();
 				}
