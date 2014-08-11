@@ -27,6 +27,8 @@ public class Patroler : Character {
 	private bool walkSoundSwitch;
 	public bool isVertical,splashed;
 	private BoxCollider [] tabCol;
+	private ArcElectric [] tabArcs;
+	private BaseElectric [] tabBase;
 	
 	//	private WaveCreator soundEmitt1, soundEmitt2, soundInstru1, soundInstru2,soundEmitt3;
 	//	private int cptWave=1, pebbleDirection = 1;
@@ -76,6 +78,8 @@ public class Patroler : Character {
 		runSpeed = 0.5f;
 		if(gameObject.GetComponentInChildren<Crate>()!=null) childCrate = gameObject.GetComponentInChildren<Crate>();
 		tabCol = gameObject.GetComponents<BoxCollider>();
+		tabArcs = gameObject.GetComponentsInChildren<ArcElectric>();
+		tabBase = gameObject.GetComponentsInChildren<BaseElectric>();
 		_player = GameObject.FindWithTag("Player").GetComponent<Player>(); //target the player
 		patroling = true;
 		//print("---"+myCORRECTSPEED);
@@ -219,8 +223,13 @@ public class Patroler : Character {
 		foreach(BoxCollider box in tabCol) {
 			box.enabled = false;
 		}
+		if(tabArcs!=null) {
+			foreach(ArcElectric _arc in tabArcs) _arc.gameObject.SetActive(false);
+		}
+		if(tabBase!=null) {
+			foreach(BaseElectric _base in tabBase) _base.gameObject.SetActive(false);
+		}
 		yield return new WaitForSeconds(delay);
-		
 		gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
 //		foreach(BoxCollider box in gameObject.GetComponents<BoxCollider>()) {
 //			box.enabled = false;
@@ -242,7 +251,13 @@ public class Patroler : Character {
 			foreach(BoxCollider box in tabCol) {
 				box.enabled = false;
 			}
-			
+				
+			if(tabArcs!=null) {
+				foreach(ArcElectric _arc in tabArcs) _arc.gameObject.SetActive(true);
+			}
+			if(tabBase!=null) {
+				foreach(BaseElectric _base in tabBase) _base.gameObject.SetActive(true);
+			}
 			gameObject.GetComponentInChildren<MeshRenderer>().enabled = true;
 			gameObject.GetComponentInChildren<BoxCollider>().enabled = true;
 //		foreach(BoxCollider box in gameObject.GetComponents<BoxCollider>()) {

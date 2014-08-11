@@ -344,6 +344,7 @@ public class Crate : MonoBehaviour {
 //	}
 	void GameStart () {
 		if(this != null && gameObject.activeInHierarchy)	{
+			gravityY = 0f;StartCoroutine("StartGravity");
 			_player.moveVel = playerMoveVel;transform.localPosition = new Vector3(spawnPos.x,spawnPos.y,spawnPos.z);
 			touchingPlayer=false;	
 			
