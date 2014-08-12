@@ -90,7 +90,7 @@ public class Key : MonoBehaviour {
 			resizeKey = new OTTween(gameObject.transform, 1f, OTEasing.BackOut).Tween("localScale", new Vector3(1.5f, 1.5f, 1f)).PingPong();
 //			new OTTween(gameObject.transform, 1f, OTEasing.CircInOut).Tween("localPosition", new Vector3(_player.nbKey-(0.3f*_player.nbKey),4f,gameObject.transform.position.z));
 			moveKey = new OTTween(gameObject.transform, 1f, OTEasing.CircInOut).Tween("localPosition", new Vector3(_myHUDTarget.transform.localPosition.x-2f+_player.nbKey-(0.35f*_player.nbKey), _myHUDTarget.transform.localPosition.y-1.4f,gameObject.transform.position.z));
-			StartCoroutine("waitB4rescale");
+			if(this != null && gameObject.activeInHierarchy) StartCoroutine("waitB4rescale");
 			_myEndDoor.nextState();
 			if(_player.nbKey>=_nbKeyRequired) {
 				_myEndDoor.activeStateReached();
