@@ -150,7 +150,7 @@ public class LeverLightPath : MonoBehaviour {
 	
 	private void GameStart()
 	{
-		_lightTransition.Stop();
+		if(_lightTransition!=null) _lightTransition.Stop();
 		StopCoroutine("lightOFFDelay");
 		StopCoroutine("timedPulsation");
 		CancelInvoke("updateLight");
