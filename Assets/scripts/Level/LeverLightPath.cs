@@ -15,6 +15,7 @@ public class LeverLightPath : MonoBehaviour {
     public Color cBegin = Color.yellow, cReduced = Color.yellow, cTimed = Color.red, cEnd = Color.yellow,cDisplay;
     private int lengthOfLineRenderer;
 	private OTTween _lightTransition;
+	private Lever _myLever;
 	// Use this for initialization
 	void Start () {
 //		print ("hello");
@@ -36,6 +37,8 @@ public class LeverLightPath : MonoBehaviour {
 		path.Sort(CompareListByName);
 		lengthOfLineRenderer = path.Count;
 		first = false;
+		_myLever = gameObject.transform.parent.transform.GetComponent<Lever>();
+		GameEventManager.GameStart += GameStart;
 		//createLine();
 	}
 	
@@ -79,12 +82,12 @@ public class LeverLightPath : MonoBehaviour {
 //		if(first) cDisplay = cReduced;
 //		else cDisplay = cEnd;
 		first=!first;
-		if(gameObject.transform.parent.transform.GetComponent<Lever>().myButtonType.ToString()=="TimedBtn") {
+		if(_myLever.myButtonType.ToString()=="TimedBtn") {
 //			print ("timed");
 //			yield return new WaitForSeconds(delay);
 //			_lightTransition = new OTTween(this, switchOFFSpeed).Tween("cDisplay", cEnd).OnFinish(stopUpdateLight);
-//			_lightTransition = new OTTween(this, gameObject.transform.parent.transform.GetComponent<Lever>().delay).Tween("cDisplay", cEnd).OnFinish(stopUpdateLight);
-			StartCoroutine("timedPulsation",gameObject.transform.parent.transform.GetComponent<Lever>().delay);
+//			_lightTransition = new OTTween(this, _myLever.delay).Tween("cDisplay", cEnd).OnFinish(stopUpdateLight);
+			StartCoroutine("timedPulsation",_myLever.delay);
 		}
 			_lightTransition = new OTTween(this, .2f).Tween("cDisplay", cBegin).OnFinish(reduceBrightness);	
 	}
@@ -92,12 +95,12 @@ public class LeverLightPath : MonoBehaviour {
 		StartCoroutine("lightOFFDelay",duration);
 	}
 	IEnumerator lightOFFDelay(float delay) {
-		if(gameObject.transform.parent.transform.GetComponent<Lever>().myButtonType.ToString()=="TimedBtn") {
+		if(_myLever.myButtonType.ToString()=="TimedBtn") {
 			print ("timed");
 //			yield return new WaitForSeconds(delay);
 //			_lightTransition = new OTTween(this, switchOFFSpeed).Tween("cDisplay", cEnd).OnFinish(stopUpdateLight);
-//			_lightTransition = new OTTween(this, gameObject.transform.parent.transform.GetComponent<Lever>().delay).Tween("cDisplay", cEnd).OnFinish(stopUpdateLight);
-			StartCoroutine("timedPulsation",gameObject.transform.parent.transform.GetComponent<Lever>().delay);
+//			_lightTransition = new OTTween(this, _myLever.delay).Tween("cDisplay", cEnd).OnFinish(stopUpdateLight);
+			StartCoroutine("timedPulsation",_myLever.delay);
 		}
 		else {
 			yield return new WaitForSeconds(delay);
@@ -106,8 +109,8 @@ public class LeverLightPath : MonoBehaviour {
 	}
 	void reduceBrightness(OTTween _t) {
 		
-//		if(gameObject.transform.parent.transform.GetComponent<Lever>().myButtonType.ToString()=="TimedBtn") {
-//			StartCoroutine("timedPulsation",gameObject.transform.parent.transform.GetComponent<Lever>().delay);
+//		if(_myLever.myButtonType.ToString()=="TimedBtn") {
+//			StartCoroutine("timedPulsation",_myLever.delay);
 //		}
 //		else {
 	   		_t = new OTTween(this, .2f).Tween("cDisplay", first?cReduced:cEnd);//.OnFinish(startSwitchOff);
@@ -143,5 +146,19 @@ public class LeverLightPath : MonoBehaviour {
 			if(cDisplay==cTimed) cDisplay = first?cReduced:cEnd;
 			else cDisplay = cTimed;
 //		}
+	}
+	
+	private void GameStart()
+	{
+		_lightTransition.Stop();
+		StopCoroutine("lightOFFDelay");
+		StopCoroutine("timedPulsation");
+		CancelInvoke("updateLight");
+		CancelInvoke("pulseColor");	
+		cBegin = new Color (1f, 0.898f, 0.784f, 1f);
+		cReduced = new Color (0f, 0.753f, 1f, 1f);
+		cTimed = new Color (1f, 0f, 0f, 1f);
+		cEnd = new Color (0.9686f, 0.5764f, 0.114f, 1f);
+		cDisplay = cEnd;
 	}
 }
