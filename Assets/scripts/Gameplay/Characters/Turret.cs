@@ -8,11 +8,12 @@ public class Turret : MonoBehaviour {
 	public float shootFrequency, shootSpeed;
 	private Projectile instProj;
 	private Player _player;
-	public bool splashed;
+	public bool splashed, isBoss;
 	
 	public enum shootDir { Right, Left, Up, Down }
 	public shootDir myShootDir;
 	public int HP = 1;
+	private GameObject _proj;
 	
 	private BoxCollider [] tabCol;
 	
@@ -36,7 +37,8 @@ public class Turret : MonoBehaviour {
 	public void shoot () {
 		if(!splashed) {
 		//yield return new WaitForSeconds(shootFrequency);
-		GameObject _proj = Instantiate (Resources.Load("Objects/Projectile")) as GameObject;
+		if(isBoss) { _proj = Instantiate (Resources.Load("Objects/ProjectileBig")) as GameObject;}
+		else {_proj = Instantiate (Resources.Load("Objects/Projectile")) as GameObject;}
 		instProj = _proj.GetComponent<Projectile>();
 //		if (transform.position.x < _player.transform.position.x - 800
 //		    && transform.position.x > _player.trans.position.x + 800

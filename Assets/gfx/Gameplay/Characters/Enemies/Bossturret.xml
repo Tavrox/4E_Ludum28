@@ -7,169 +7,182 @@
             <key>blob_turretV2Boss0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,0},{400,460}}</string>
+                <string>{{0,0},{600,500}}</string>
                 <key>offset</key>
-                <string>{17,-20}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{117,40},{400,460}}</string>
+                <string>{{0,0},{600,500}}</string>
                 <key>sourceSize</key>
                 <string>{600,500}</string>
             </dict>
             <key>blob_turretV2Boss0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{400,0},{400,450}}</string>
+                <string>{{600,0},{600,500}}</string>
                 <key>offset</key>
-                <string>{12,-25}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{112,50},{400,450}}</string>
+                <string>{{0,0},{600,500}}</string>
                 <key>sourceSize</key>
                 <string>{600,500}</string>
             </dict>
             <key>blob_turretV2Boss0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{800,0},{400,440}}</string>
+                <string>{{1200,0},{600,500}}</string>
                 <key>offset</key>
-                <string>{12,-30}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{112,60},{400,440}}</string>
+                <string>{{0,0},{600,500}}</string>
                 <key>sourceSize</key>
                 <string>{600,500}</string>
             </dict>
             <key>blob_turretV2Boss0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1200,0},{404,452}}</string>
+                <string>{{0,500},{600,500}}</string>
                 <key>offset</key>
-                <string>{-4,-24}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{94,48},{404,452}}</string>
+                <string>{{0,0},{600,500}}</string>
                 <key>sourceSize</key>
                 <string>{600,500}</string>
             </dict>
             <key>blob_turretV2Boss0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1604,0},{398,452}}</string>
+                <string>{{600,500},{600,500}}</string>
                 <key>offset</key>
-                <string>{13,-24}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{114,48},{398,452}}</string>
+                <string>{{0,0},{600,500}}</string>
                 <key>sourceSize</key>
                 <string>{600,500}</string>
             </dict>
             <key>blob_turretV2Boss0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,460},{398,446}}</string>
+                <string>{{1200,500},{600,500}}</string>
                 <key>offset</key>
-                <string>{13,-27}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{114,54},{398,446}}</string>
+                <string>{{0,0},{600,500}}</string>
                 <key>sourceSize</key>
                 <string>{600,500}</string>
+            </dict>
+            <key>blob_turretV2Boss0007.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1200,500},{-1,-1}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{-1,-1}}</string>
+                <key>sourceSize</key>
+                <string>{-1,-1}</string>
             </dict>
             <key>blob_turretV2Boss0008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{398,460},{508,398}}</string>
+                <string>{{0,1000},{600,500}}</string>
                 <key>offset</key>
-                <string>{33,-51}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{79,102},{508,398}}</string>
+                <string>{{0,0},{600,500}}</string>
                 <key>sourceSize</key>
                 <string>{600,500}</string>
             </dict>
             <key>blob_turretV2Boss0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{906,460},{494,310}}</string>
+                <string>{{600,1000},{600,500}}</string>
                 <key>offset</key>
-                <string>{40,-95}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{93,190},{494,310}}</string>
+                <string>{{0,0},{600,500}}</string>
                 <key>sourceSize</key>
                 <string>{600,500}</string>
             </dict>
             <key>blob_turretV2Boss0010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1400,460},{576,256}}</string>
+                <string>{{1200,1000},{600,500}}</string>
                 <key>offset</key>
-                <string>{0,-122}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{12,244},{576,256}}</string>
+                <string>{{0,0},{600,500}}</string>
                 <key>sourceSize</key>
                 <string>{600,500}</string>
             </dict>
             <key>blob_turretV2Boss0011.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,906},{596,168}}</string>
+                <string>{{0,1500},{600,500}}</string>
                 <key>offset</key>
-                <string>{-2,-166}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,332},{596,168}}</string>
+                <string>{{0,0},{600,500}}</string>
                 <key>sourceSize</key>
                 <string>{600,500}</string>
             </dict>
             <key>blob_turretV2Boss0012.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{596,906},{586,102}}</string>
+                <string>{{600,1500},{600,500}}</string>
                 <key>offset</key>
-                <string>{-6,-199}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{1,398},{586,102}}</string>
+                <string>{{0,0},{600,500}}</string>
                 <key>sourceSize</key>
                 <string>{600,500}</string>
             </dict>
             <key>blob_turretV2Boss0013.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1182,906},{546,54}}</string>
+                <string>{{1200,1500},{600,500}}</string>
                 <key>offset</key>
-                <string>{-5,-223}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{22,446},{546,54}}</string>
+                <string>{{0,0},{600,500}}</string>
                 <key>sourceSize</key>
                 <string>{600,500}</string>
             </dict>
             <key>blob_turretV2Boss0014.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{0,1074},{344,36}}</string>
+                <string>{{0,2000},{600,500}}</string>
                 <key>offset</key>
-                <string>{-30,-232}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{98,464},{344,36}}</string>
+                <string>{{0,0},{600,500}}</string>
                 <key>sourceSize</key>
                 <string>{600,500}</string>
             </dict>
@@ -181,9 +194,9 @@
             <key>realTextureFileName</key>
             <string>Bossturret.png</string>
             <key>size</key>
-            <string>{2048,2048}</string>
+            <string>{2048,4096}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:9f2e5f0c71374a50e050aabbe5f10124:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:10e6625fc4cc6703a5fb15c01ba1bcd2:1/1$</string>
             <key>textureFileName</key>
             <string>Bossturret.png</string>
         </dict>

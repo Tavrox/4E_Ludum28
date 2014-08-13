@@ -63,7 +63,7 @@
             <key>width</key>
             <int>-1</int>
             <key>height</key>
-            <int>-1</int>
+            <int>4096</int>
         </QSize>
         <key>reduceBorderArtifacts</key>
         <false/>
@@ -142,7 +142,7 @@
             <key>trimThreshold</key>
             <uint>1</uint>
             <key>trimMode</key>
-            <enum type="SpriteSettings::TrimMode">Trim</enum>
+            <enum type="SpriteSettings::TrimMode">None</enum>
             <key>heuristicMask</key>
             <false/>
         </struct>
