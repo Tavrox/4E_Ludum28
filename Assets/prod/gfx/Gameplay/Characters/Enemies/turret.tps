@@ -154,6 +154,11 @@
             <filename>../../../Levels/Adrian/turret0003.png</filename>
             <filename>../../../Levels/Adrian/turret0004.png</filename>
             <filename>../../../Levels/Adrian/turret0005.png</filename>
+            <filename>AnimeTurretDead/zblob_turretBoum0002.png</filename>
+            <filename>AnimeTurretDead/zblob_turretBoum0003.png</filename>
+            <filename>AnimeTurretDead/zblob_turretBoum0004.png</filename>
+            <filename>AnimeTurretDead/zblob_turretBoum0005.png</filename>
+            <filename>AnimeTurretDead/zblob_turretBoum0006.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

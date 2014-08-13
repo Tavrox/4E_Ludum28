@@ -260,6 +260,7 @@ public class Player : Character {
 	private void GameStart () 
 	{
 		if(FindObjectOfType(typeof(Player)) && this != null) {
+			onCrate = false;
 			transform.localPosition = spawnPos;
 			enabled = true;
 			moveVel = moveVelIni;

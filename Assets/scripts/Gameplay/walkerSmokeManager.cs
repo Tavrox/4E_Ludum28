@@ -72,7 +72,17 @@ public class walkerSmokeManager : MonoBehaviour {
 	public void displayAll() {
 		foreach(OTAnimatingSprite anim in _tabSmoke)
 		{
-			anim.alpha=1;
+			//anim.alpha=1;
+			anim.gameObject.SetActive(true);
+			_endSmoke.gameObject.SetActive(true);
+		}
+	}
+	public void hideAll() {
+		foreach(OTAnimatingSprite anim in _tabSmoke)
+		{
+//			anim.alpha=0;
+			anim.gameObject.SetActive(false);
+			_endSmoke.gameObject.SetActive(false);
 		}
 	}
 }

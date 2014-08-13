@@ -10,13 +10,13 @@ public class TurretAnims : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
-		animSprite.Play("attack");
-		turretShootFrequency = gameObject.GetComponent<Turret>().shootFrequency;
+		animSprite.PlayLoop("attack");
+		_myTurret = gameObject.GetComponent<Turret>();
+		turretShootFrequency = _myTurret.shootFrequency;
 		GameEventManager.GameOver += GameOver;
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GamePause += GamePause;
 		GameEventManager.GameUnpause += GameUnpause;
-		_myTurret = gameObject.GetComponent<Turret>();
 	}
 	void Update() 
 	{
@@ -24,6 +24,7 @@ public class TurretAnims : MonoBehaviour {
 		// Order of action matters, they need to have priorities. //
 		if(animSprite.frameIndex == 2 && !stopped) {shooting=false;stopped=true;animSprite.Stop();StartCoroutine("waitB4Restart",(float)turretShootFrequency-0.435f);}
 		if(animSprite.frameIndex == 4 && !shooting) {shooting=true;_myTurret.shoot();}
+		if(_myTurret.splashed) Splash();
 		}
 	}
 	private IEnumerator waitB4Restart (float delayRestart) {
@@ -36,12 +37,18 @@ public class TurretAnims : MonoBehaviour {
 		stopped = false;
 		animSprite.Play(animSprite.frameIndex+1);
 	}
+	private void Splash()
+	{	
+		_myTurret.splashed = false;
+		animSprite.Stop();
+		animSprite.PlayOnce("splash");
+	}
 	private void GameStart()
 	{
 		if(this != null && gameObject.activeInHierarchy) {
 		enabled = true;
 		stopped = shooting=false;
-		animSprite.Play("attack");
+		animSprite.PlayLoop("attack");
 		//StartCoroutine("waitB4Shoot");
 		}
 	}

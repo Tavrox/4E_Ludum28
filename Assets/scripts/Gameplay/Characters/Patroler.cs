@@ -266,16 +266,16 @@ public class Patroler : Character {
 //		foreach(MeshRenderer mesh in gameObject.GetComponents<MeshRenderer>()) {
 //			mesh.enabled = true;
 //		}
-		if(childCrate!=null) {
-			childCrate.isObjChild=true;
-		}
-		HP = maxHP;
-		transform.position = new Vector3(spawnPos.x,spawnPos.y,0f);
 		splashed = false;
 		enabled = true;go = true;
 		collider.enabled = true;
 		touchingCrate = false;waypointId=0;
 		touchedCrate =null;
+		if(childCrate!=null) {
+			childCrate.isObjChild=true;
+		}
+		HP = maxHP;
+		transform.position = new Vector3(spawnPos.x,spawnPos.y,0f);
 		//}
 		}
 	}

@@ -344,9 +344,9 @@ public class Crate : MonoBehaviour {
 //	}
 	void GameStart () {
 		if(this != null && gameObject.activeInHierarchy)	{
+			touchingPlayer=false;	
 			_myGravity = 0f;StartCoroutine("StartGravity");
 			_player.moveVel = playerMoveVel;transform.localPosition = new Vector3(spawnPos.x,spawnPos.y,spawnPos.z);
-			touchingPlayer=false;	
 			
 			if(gameObject.GetComponentInChildren<OTAnimatingSprite>()) {
 				sprite = gameObject.GetComponentInChildren<OTAnimatingSprite>();

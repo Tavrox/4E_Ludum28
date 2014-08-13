@@ -8,7 +8,7 @@ public class Turret : MonoBehaviour {
 	public float shootFrequency, shootSpeed;
 	private Projectile instProj;
 	private Player _player;
-	private bool splashed;
+	public bool splashed;
 	
 	public enum shootDir { Right, Left, Up, Down }
 	public shootDir myShootDir;
