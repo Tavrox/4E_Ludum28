@@ -127,33 +127,41 @@ public class ArcElectric : MonoBehaviour {
 		collider.enabled=true;
 	}
 	IEnumerator activateInfinite() {
+		yield return new WaitForSeconds(.88f);
 		while (GameEventManager.gamePaused) 
 		{
 			yield return new WaitForFixedUpdate();	
 		}
-		yield return new WaitForSeconds(.88f);
 			if(!muted) FESound.playDistancedSound("piston_on",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_on");
 		yield return new WaitForSeconds(0.12f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		animSprite.Play("arcON");StartCoroutine("activateCollider");
 		if(!muted) {yield return new WaitForSeconds(0.257f);
 				FESound.playDistancedSound("piston_idle",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_idle");
 			}
 	}
 	IEnumerator SND_activateThenOff() {
-		while (GameEventManager.gamePaused) 
-		{
-			yield return new WaitForFixedUpdate();	
-		}
 		if(activeTime>=1) yield return new WaitForSeconds(.88f);
 		else if(activeTime<1) yield return new WaitForSeconds(.48f);
-		if(!muted) FESound.playDistancedSound("piston_on",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_on");
-		yield return new WaitForSeconds(0.12f);
-		animSprite.Play("arcON");StartCoroutine("activateCollider");
 		while (GameEventManager.gamePaused) 
 		{
 			yield return new WaitForFixedUpdate();	
 		}
+		if(!muted) FESound.playDistancedSound("piston_on",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_on");
+		yield return new WaitForSeconds(0.12f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
+		animSprite.Play("arcON");StartCoroutine("activateCollider");
 		if(!muted) {yield return new WaitForSeconds(0.257f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 		FESound.playDistancedSound("piston_idle",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_idle");
 		yield return new WaitForSeconds(activeTime-0.257f-0.43f);
 		while (GameEventManager.gamePaused) 

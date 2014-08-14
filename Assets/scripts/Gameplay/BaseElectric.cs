@@ -153,12 +153,12 @@ public class BaseElectric : MonoBehaviour {
 	}
 	IEnumerator displayInfinite() {
 		
+		if(!muted) FESound.playDistancedSound("piston_on",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_on");
+		yield return new WaitForSeconds(0.12f);
 		while (GameEventManager.gamePaused) 
 		{
 			yield return new WaitForFixedUpdate();	
 		}
-		if(!muted) FESound.playDistancedSound("piston_on",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_on");
-		yield return new WaitForSeconds(0.12f);
 		animSprite.animation.fps = 12.66667f;
 		animSprite.Play("baseON");StartCoroutine("activateCollider");
 		if(!muted) {yield return new WaitForSeconds(0.257f);
@@ -191,6 +191,10 @@ public class BaseElectric : MonoBehaviour {
 		animSprite.animation.fps = 12.66667f;
 		animSprite.Play("baseON");StartCoroutine("activateCollider");
 		if(!muted) {yield return new WaitForSeconds(0.257f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 			FESound.playDistancedSound("piston_idle",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_idle");
 		yield return new WaitForSeconds(activeTime-0.257f-0.43f);
 		while (GameEventManager.gamePaused) 
@@ -200,6 +204,10 @@ public class BaseElectric : MonoBehaviour {
 			FESound.playDistancedSound("piston_idle",gameObject.transform, _player.transform,0f,"fade",0.43f);//MasterAudio.FadeOutAllOfSound("piston_idle",0.43f);
 			FESound.playDistancedSound("piston_off",gameObject.transform, _player.transform,0f);//MasterAudio.PlaySound("piston_off");
 		yield return new WaitForSeconds(0.43f);
+		while (GameEventManager.gamePaused) 
+		{
+			yield return new WaitForFixedUpdate();	
+		}
 			FESound.playDistancedSound("piston_idle",gameObject.transform, _player.transform,0f,"stop");//MasterAudio.StopAllOfSound("piston_idle");
 		}
 	}
