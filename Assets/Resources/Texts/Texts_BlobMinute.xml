@@ -2,7 +2,7 @@
 <info>	DIALOG_ID			ENGLISH			FRENCH			EN_COUNT	FR_COUNT	</info>	
 <entry id='	PLAY_BTN	'>	<english>	Play	</english>	<french>	Jouer	</french>	<info>	4	5	</info>	</entry>
 <entry id='	0-1_SPACE_INTERACT	'>	<english>	Press E to interact	</english>	<french>	Appuyer sur E pour intéragir  	</french>	<info>	20	29	</info>	</entry>
-<entry id='	0-1_FIND_KEY	'>	<english>	Find the key !	</english>	<french>	Trouve la clé !  	</french>	<info>	14	15	</info>	</entry>
+<entry id='	0-1_FIND_KEY	'>	<english>	Find at least 3 keys !	</english>	<french>	Trouve au moins 3 clés !  	</french>	<info>	22	24	</info>	</entry>
 <entry id='	0-2_SEQ_213	'>	<english>	SEQUENCED lever 2 -> 1 -> 3	</english>	<french>	Levier séquence 2 -> 1 -> 3  	</french>	<info>	29	29	</info>	</entry>
 <entry id='	0-2_SPACE_INTERACT	'>	<english>	Press E to interact	</english>	<french>	Appuyer sur E pour intéragir  	</french>	<info>	20	29	</info>	</entry>
 <entry id='	0-3_PUSH_CRATE	'>	<english>	Shift + arrow = push	</english>	<french>	Shift + flèche = pousser  	</french>	<info>	22	26	</info>	</entry>
@@ -103,8 +103,8 @@
 <entry id='	RESTART_LEVEL	'>	<english>	Restart Level	</english>	<french>	Recommencer	</french>	<info>	13	11	</info>	</entry>
 <entry id='	NEXT_LEVEL	'>	<english>	Next Level	</english>	<french>	Continuer	</french>	<info>	10	9	</info>	</entry>
 <entry id='	LEVEL_ALL	'>	<english>	Level	</english>	<french>	Niveau	</french>	<info>	5	6	</info>	</entry>
-<entry id='	NEW_SCORE	'>	<english>	New Score !	</english>	<french>	Nouveau Score !	</french>	<info>	-11	-15	</info>	</entry>
-
+<entry id='	NEW_SCORE	'>	<english>	New Score !	</english>	<french>	Nouveau Score !	</french>	<info>	11	15	</info>	</entry>
+<entry id='	NEED_KEY	'>	<english>	I need more/n batteries !/n(3 minimum)	</english>	<french>	Il faut plus de batteries !/n(3 minimum)	</french>	<info>	36	40	</info>	</entry>
 <entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
 <entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>
 <entry id='		'>	<english>		</english>	<french>		</french>	<info>	0	0	</info>	</entry>

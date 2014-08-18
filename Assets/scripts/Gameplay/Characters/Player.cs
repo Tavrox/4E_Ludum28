@@ -162,8 +162,8 @@ public class Player : Character {
 		}
 		if (Input.GetKeyDown(InputMan.Pause) || Input.GetKeyDown(InputMan.PadPause))
 		{
-			triggerPause();
 			if (GameEventManager.gamePaused == false) HUDPause.gameObject.SetActive(true);
+			triggerPause();
 		}
 		if (Input.GetKeyDown(KeyCode.Alpha2))
 		{
@@ -260,6 +260,7 @@ public class Player : Character {
 	private void GameStart () 
 	{
 		if(FindObjectOfType(typeof(Player)) && this != null) {
+			onCrate = false;
 			transform.localPosition = spawnPos;
 			enabled = true;
 			moveVel = moveVelIni;

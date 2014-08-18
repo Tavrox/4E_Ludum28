@@ -6,7 +6,7 @@ public class Crate : MonoBehaviour {
 
 	public bool grounded;
 	[HideInInspector] public Transform thisTransform;
-	[SerializeField] public float gravityY, crateMove, playerMoveVel, spriteScaleX, spriteScaleY;
+	[SerializeField] public float gravityY, _myGravity, crateMove, playerMoveVel, spriteScaleX, spriteScaleY;
 	[SerializeField] public Vector3 vectorMove;
 	[SerializeField] public RaycastHit hitInfo;
 	public Ray detectEndPFLeft, detectEndPFRight, detectPlayerLeft, detectPlayerRight, detectBlockLeft, detectBlockRight;
@@ -70,7 +70,7 @@ public class Crate : MonoBehaviour {
 		{
 			yield return new WaitForFixedUpdate();	
 		}
-		gravityY = 0.7f;
+		_myGravity = gravityY; //= 0.7f;
 	}
 	
 	// Update is called once per frame
@@ -80,7 +80,7 @@ public class Crate : MonoBehaviour {
 		if(!grounded && !isObjChild && !GameEventManager.gamePaused/*&& _player.grounded*/)
 		{
 			touchFloor = false;
-			vectorMove.y -= gravityY * Time.deltaTime;
+			if(vectorMove.y > -1) vectorMove.y -= _myGravity * Time.deltaTime;
 			thisTransform.position += new Vector3(vectorMove.x,vectorMove.y,0f);
 			//print (vectorMove.y);
 		}
@@ -344,8 +344,9 @@ public class Crate : MonoBehaviour {
 //	}
 	void GameStart () {
 		if(this != null && gameObject.activeInHierarchy)	{
-			_player.moveVel = playerMoveVel;transform.localPosition = new Vector3(spawnPos.x,spawnPos.y,spawnPos.z);
 			touchingPlayer=false;	
+			_myGravity = 0f;StartCoroutine("StartGravity");
+			_player.moveVel = playerMoveVel;transform.localPosition = new Vector3(spawnPos.x,spawnPos.y,spawnPos.z);
 			
 			if(gameObject.GetComponentInChildren<OTAnimatingSprite>()) {
 				sprite = gameObject.GetComponentInChildren<OTAnimatingSprite>();

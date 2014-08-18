@@ -15,10 +15,12 @@ public class IngameUI : MonoBehaviour {
 	}
 	public ListAction action;
 	private OTSprite prefabSprite;
+	private TextMesh _moreKeyText;
 	
 	void Start () 
 	{
 		prefabSprite = GetComponentInChildren<OTSprite>();
+		if(GetComponentInChildren<TextMesh>()!=null) _moreKeyText = GetComponentInChildren<TextMesh>();
 		
 		GameEventManager.GameOver += GameOver;
 		GameEventManager.GamePause += GamePause;
@@ -43,6 +45,7 @@ public class IngameUI : MonoBehaviour {
 	{
 		if(prefabSprite.alpha == 0f) {
 			OTTween _tween = new OTTween(prefabSprite, 1f).Tween("alpha", 1f).PingPong();
+			OTTween _txtAlphaTween = new OTTween(_moreKeyText, 1f).Tween("color", new Color (_moreKeyText.color.r, _moreKeyText.color.g, _moreKeyText.color.b, 1f)).PingPong();
 			StartCoroutine("hideItem");
 		}
 	}
@@ -53,6 +56,7 @@ public class IngameUI : MonoBehaviour {
 			yield return new WaitForFixedUpdate();	
 		}
 		prefabSprite.alpha = 0f;
+		_moreKeyText.color = new Color (_moreKeyText.color.r, _moreKeyText.color.g, _moreKeyText.color.b, 0f);
 	}
 	private void OnMouseDown()
 	{

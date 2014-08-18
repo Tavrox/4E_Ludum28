@@ -60,6 +60,7 @@ public class Walker : Enemy {
 //		}
 		if(this != null && gameObject.activeInHierarchy) {
 			transform.position = new Vector3(spawnPos.x,spawnPos.y,0f);
+			smokeLeft.displayAll();smokeRight.displayAll();
 			enabled = true;
 			foreach(BoxCollider box in tabCol) {
 				box.enabled = true;
@@ -131,6 +132,7 @@ public class Walker : Enemy {
 	}
 	IEnumerator hideAfterSplash(float delay) {
 		gameObject.GetComponentInChildren<BoxCollider>().enabled = false;
+		smokeLeft.hideAll();smokeRight.hideAll();
 		foreach(BoxCollider box in tabCol) {
 			box.enabled = false;
 		}

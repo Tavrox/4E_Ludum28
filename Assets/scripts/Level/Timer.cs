@@ -162,6 +162,7 @@ public class Timer : MonoBehaviour {
 			_clock.rotation = 0;
 			_minute.frameIndex = 65;_clock.frameIndex=64;_circleClock.frameIndex=66;
 			_txtTimer.color = _colSafe;
+			if(_rescaleCircleClock!=null) _rescaleCircleClock.Stop();
 			alertColor.a = 0f;_alertMask.renderer.material.color = alertColor;
 			
 			if(_lvlManager._realID==0) {_player._scorePlayer=secLeft=microSecLeft=0;} 
@@ -174,6 +175,7 @@ public class Timer : MonoBehaviour {
 		if(this != null && gameObject.activeInHierarchy) {
 			_player._scorePlayer= System.Convert.ToInt32(System.Convert.ToDouble(secLeft.ToString()+"."+microSecLeft.ToString())*_player._COEFF_TEMPS + _player.nbKey*_player._COEFF_BATTERY);
 			CancelInvoke();
+			_rescaleCircleClock.Stop();
 			alertColor.a = 0f;_alertMask.renderer.material.color = alertColor;
 		}
 	}

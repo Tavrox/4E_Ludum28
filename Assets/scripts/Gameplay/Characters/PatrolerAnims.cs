@@ -50,13 +50,13 @@ public class PatrolerAnims : MonoBehaviour
 	}
 	private void Run()
 	{
-		if(_character.isRight && _character.grounded && currentAnim!=animDef.WalkRight && !_enemy.splashed)
+		if(_character.isRight && currentAnim!=animDef.WalkRight && !_enemy.splashed)
 		{
 			currentAnim = animDef.WalkRight;
 			animSprite.Play("run");
-			NormalScaleSprite();;
+			NormalScaleSprite();
 		}
-		if(_character.isLeft && _character.grounded && currentAnim!=animDef.WalkLeft && !_enemy.splashed)
+		if(_character.isLeft && currentAnim!=animDef.WalkLeft && !_enemy.splashed)
 		{
 			currentAnim = animDef.WalkLeft;
 			animSprite.Play("run");
