@@ -152,7 +152,7 @@ public class Timer : MonoBehaviour {
 
 	private void GameStart()
 	{
-		if(this != null) {
+		if(this != null && gameObject.activeInHierarchy) {
 			CancelInvoke();
 			lockTimerStart = pauseTimer = true;
 			triggeredEnd = false;
@@ -181,11 +181,15 @@ public class Timer : MonoBehaviour {
 	}
 	private void GamePause()
 	{
+		if(this != null && gameObject.activeInHierarchy) {
 		pauseTimer = true;
+		}
 	}
 	private void GameUnpause()
 	{
+		if(this != null && gameObject.activeInHierarchy) {
 		pauseTimer = false;
+		}
 	}
 	
 	private void GameOver()

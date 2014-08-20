@@ -62,6 +62,7 @@ public class Key : MonoBehaviour {
 	void resetKey() {
 		if(this != null && gameObject.activeInHierarchy) {
 			//_KeySprite.frameIndex = _levelM.chosenVariation+4+25;
+//			print (gameObject.name);
 			if(resizeKey != null) resizeKey.Stop();
 			if(moveKey != null) moveKey.Stop();
 			if(scaleKey != null) scaleKey.Stop();
@@ -87,9 +88,11 @@ public class Key : MonoBehaviour {
 //			transform.localPosition = new Vector3(-11f,5f-_player.nbKey,0f);
 //			
 //			GameObject StargatePlace = GameObject.FindGameObjectWithTag("SpaceGate");
+//			print(gameObject.name+"resize ping pong");
 			resizeKey = new OTTween(gameObject.transform, 1f, OTEasing.BackOut).Tween("localScale", new Vector3(1.5f, 1.5f, 1f)).PingPong();
 //			new OTTween(gameObject.transform, 1f, OTEasing.CircInOut).Tween("localPosition", new Vector3(_player.nbKey-(0.3f*_player.nbKey),4f,gameObject.transform.position.z));
 			moveKey = new OTTween(gameObject.transform, 1f, OTEasing.CircInOut).Tween("localPosition", new Vector3(_myHUDTarget.transform.localPosition.x-2f+_player.nbKey-(0.35f*_player.nbKey), _myHUDTarget.transform.localPosition.y-1.4f,gameObject.transform.position.z));
+//			print(gameObject.name+"place HUD");
 			if(this != null && gameObject.activeInHierarchy) StartCoroutine("waitB4rescale");
 			_myEndDoor.nextState();
 			if(_player.nbKey>=_nbKeyRequired) {
@@ -100,12 +103,14 @@ public class Key : MonoBehaviour {
 
 	}
 	IEnumerator waitB4rescale () {
+//		print(gameObject.name+"wait b4 rescale");
 		yield return new WaitForSeconds(1.005f);
 		
 		while (GameEventManager.gamePaused) 
 		{
 			yield return new WaitForFixedUpdate();	
 		}
+//		print(gameObject.name+"scale kEY");
 		scaleKey = new OTTween(gameObject.transform, .5f, OTEasing.Linear).Tween("localScale", new Vector3(0.65f,0.65f, 1f));
 		_myParticle.enableEmission = false;
 		_myParticle.simulationSpace = UnityEngine.ParticleSystemSimulationSpace.Local;

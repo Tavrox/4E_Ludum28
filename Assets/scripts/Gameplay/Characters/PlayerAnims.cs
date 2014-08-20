@@ -85,9 +85,11 @@ public class PlayerAnims : MonoBehaviour
 	}
 	
 	private void GameStart() {
-		anim.fps = 12.5f;
-		_player.locked=false;_player.isTeleport = false;_player.collider.enabled = true;animPlaying=false;
-		victoryAnim = false;
+		if(this != null && gameObject.activeInHierarchy) {
+			anim.fps = 12.5f;
+			_player.locked=false;_player.isTeleport = false;_player.collider.enabled = true;animPlaying=false;
+			victoryAnim = false;
+		}
 	}
 	private void FinishLevel() {
 		if(this != null && gameObject.activeInHierarchy) {

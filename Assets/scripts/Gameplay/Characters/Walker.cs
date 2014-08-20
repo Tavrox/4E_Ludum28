@@ -74,7 +74,7 @@ public class Walker : Enemy {
 		}
 	}
 	private void FinishLevel() {
-		if(this != null) {
+		if(this != null && gameObject.activeInHierarchy) {
 			enabled = false;
 			collider.enabled=false;
 		}

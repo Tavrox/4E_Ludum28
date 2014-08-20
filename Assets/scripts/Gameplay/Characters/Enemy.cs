@@ -432,7 +432,7 @@ public class Enemy : Character {
 	
 	protected void GameStart () {
 		
-		if(this != null) {
+		if(this != null && gameObject.activeInHierarchy) {
 		//if(FindObjectOfType(typeof(Enemy)) && this != null) {
 //			transform.localPosition = spawnPos;
 			gameObject.transform.parent.gameObject.SetActive(true);
@@ -452,6 +452,7 @@ public class Enemy : Character {
 	}
 	protected void GamePause()
 	{
+		if(this != null && gameObject.activeInHierarchy) {
 		enabled = false;
 		isLeft = false;
 		isRight = false;
@@ -459,11 +460,14 @@ public class Enemy : Character {
 		isPass = false;
 		paused = true;
 		movingDir = moving.None;	
+		}
 	}
 	protected void GameUnpause()
 	{
+		if(this != null && gameObject.activeInHierarchy) {
 		enabled = true;	
 		paused = false;
+		}
 	}
 }
 

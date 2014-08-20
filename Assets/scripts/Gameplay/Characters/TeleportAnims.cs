@@ -251,7 +251,7 @@ public class TeleportAnims : MonoBehaviour
 		}
 	}
 	void GameStart () {		
-		if(this != null) {
+		if(this != null && gameObject.activeInHierarchy) {
 		StopCoroutine("stopPlayer");
 		StopCoroutine("teleportTo");
 		_player.locked = false;

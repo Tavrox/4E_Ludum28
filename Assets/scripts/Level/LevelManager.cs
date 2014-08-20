@@ -123,6 +123,9 @@ public class LevelManager : MonoBehaviour {
 		}
 	}
 	private void FinishLevel() { //When end lvl panel display after endDoor Input
+		
+		if(this != null && gameObject.activeInHierarchy) {
+		//player = GameObject.FindWithTag("Player").GetComponent<Player>();
 		_collectedKeys = player.GetComponentsInChildren<Key>();
 		int k = 0;
 		foreach(Key _k in _collectedKeys) {
@@ -159,6 +162,7 @@ public class LevelManager : MonoBehaviour {
 		medal.anim.frameIndex = numFrame;
 		OTTween medalTween = new OTTween(medalTween.transform ,1f, OTEasing.ExpoIn).Tween("localPosition", new Vector3(0f,0f,0f);
 		*/
+		}
 	}
 	int displayPlayerMedal(string playerScore, string goldScore, string silverScore, string bronzeScore) {
 		int numFrame = 0;
@@ -427,7 +431,7 @@ public class LevelManager : MonoBehaviour {
 	}
 	private void GameStart()
 	{
-		if(this != null) {
+		if(this != null && gameObject.activeInHierarchy) {
 			playerMedalFinal.transform.parent.transform.localScale = new Vector3(20f, 20f, 1f);
 			playerMedalFinal.alpha = 0;
 			lblRecord.gameObject.SetActive(false);

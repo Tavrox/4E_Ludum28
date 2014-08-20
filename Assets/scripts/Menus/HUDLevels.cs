@@ -26,7 +26,9 @@ public class HUDLevels : MonoBehaviour {
 		gameObject.transform.position = _camera.ScreenToWorldPoint(new Vector3(Screen.width*0.1f, Screen.height - (Screen.height*0.09f), _camera.nearClipPlane));
 	}
 	void GameStart () {	
+		if(this != null && gameObject.activeInHierarchy) {
 		_HUDLevelsSprite.frameIndex = _levelM.chosenVariation-1;
 		if(_levelM.isBoss == true) _HUDLevelsSprite.frameIndex = 5;
+		}
 	}
 }

@@ -150,6 +150,7 @@ public class LeverLightPath : MonoBehaviour {
 	
 	private void GameStart()
 	{
+		if(this != null && gameObject.activeInHierarchy) {
 		if(_lightTransition!=null) _lightTransition.Stop();
 		StopCoroutine("lightOFFDelay");
 		StopCoroutine("timedPulsation");
@@ -160,5 +161,6 @@ public class LeverLightPath : MonoBehaviour {
 		cTimed = new Color (1f, 0f, 0f, 1f);
 		cEnd = new Color (0.9686f, 0.5764f, 0.114f, 1f);
 		cDisplay = cEnd;
+		}
 	}
 }

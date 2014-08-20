@@ -79,7 +79,9 @@ public class PatrolerAnims : MonoBehaviour
 		}
 	}
 	void GameStart () {
+		if(this != null && gameObject.activeInHierarchy) {
 		animSprite.Play("run");
+		}
 	}
 	
 	private void AnimationFinished()

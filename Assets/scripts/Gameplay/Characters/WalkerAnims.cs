@@ -97,8 +97,10 @@ public class WalkerAnims : MonoBehaviour
 	}
 	
 	void GameStart () {
+		if(this != null && gameObject.activeInHierarchy) {
 		if(lookLeft) InvertSprite();
 		animSprite.Play("stand");
+		}
 	}
 	private void AnimationFinished()
 	{

@@ -302,6 +302,7 @@ public class Player : Character {
 	}
 	private void GamePause()
 	{
+		if(this != null && gameObject.activeInHierarchy) {
 		//enabled = false;
 		isLeft = false;
 		isRight = false;
@@ -310,14 +311,16 @@ public class Player : Character {
 		paused = true;
 		movingDir = moving.None;
 		GameEventManager.gamePaused = true;		
+		}
 	}
 	public void GameUnpause()
 	{
+		if(this != null && gameObject.activeInHierarchy) {
 		paused = false;
 		//enabled = true;	
 		HUDPause.gameObject.SetActive(false);
 		GameEventManager.gamePaused = false;	
-		
+		}
 	}
 	
 	IEnumerator resetGame()
