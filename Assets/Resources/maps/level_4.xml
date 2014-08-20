@@ -388,7 +388,7 @@
   <object name="2EndDoor" type="EndDoor" x="4133" y="1896" width="50" height="100"/>
   <object name="3 écrire que c'est la fin" x="5696" y="723" width="108" height="54"/>
  </objectgroup>
- <objectgroup color="#ffffff" name="3" width="207" height="60" visible="0">
+ <objectgroup color="#ffffff" name="3" width="207" height="60">
   <object name="3Porte" type="TriggeredDoor" x="8000" y="1700" width="150" height="50"/>
   <object name="3BaseArcLA" type="BaseArcL" x="7200" y="950" width="100" height="50"/>
   <object name="3BaseArcRA" type="BaseArcR" x="7300" y="950" width="100" height="50"/>
@@ -494,7 +494,7 @@
   <object name="4patrouilleurD" type="Patroler" x="4700" y="950" width="50" height="50"/>
   <object name="ZONE PATROLER" x="4650" y="950" width="300" height="50"/>
  </objectgroup>
- <objectgroup color="#ffffff" name="5" width="207" height="60">
+ <objectgroup color="#ffffff" name="5" width="207" height="60" visible="0">
   <object name="5porteA" type="TriggeredDoor" x="3667" y="1950" width="66" height="264"/>
   <object name="5SeqBtA1" type="SequencedBtn" x="1050" y="2100" width="50" height="50"/>
   <object name="5TurretR" type="TurretR" x="3950" y="2100" width="50" height="100"/>
@@ -532,8 +532,8 @@
   <object name="5TourelleD4" type="TurretD" x="3150" y="1900" width="50" height="50"/>
   <object name="5TPStartOut" type="TeleportOut" x="7300" y="1350" width="50" height="100"/>
   <object name="5TPStartIn" type="TeleportOut" x="1250" y="900" width="50" height="100"/>
-  <object name="5BaseArcU" type="BaseArcU" x="1450" y="650" width="50" height="100"/>
-  <object name="5ArcVert1" type="ArcVertical" x="1450" y="750" width="50" height="150"/>
+  <object name="5BaseArcU" type="BaseArcU" x="1450" y="700" width="50" height="100"/>
+  <object name="5ArcVert1" type="ArcVertical" x="1450" y="800" width="50" height="100"/>
   <object name="5BaseArcD" type="BaseArcD" x="1450" y="900" width="50" height="100"/>
  </objectgroup>
 </map>
