@@ -60,9 +60,9 @@
 <entry id='	3BOSS_FAST	'>	<english>	SHORTCUT	</english>	<french>	RACCOURCI	</french>	<info>	4	16	</info>	</entry>
 <entry id='	3BOSS_SAFE	'>	<english>	SAFE/nWAY	</english>	<french>	SECURITE	</french>	<info>	4	8	</info>	</entry>
 <entry id='	3BOSS_LIE	'>	<english>	I lied.	</english>	<french>	J'ai menti.	</french>	<info>	7	11	</info>	</entry>
-<entry id='	3BOSS_STEPFAST	'>	<english>	That's one small step  for a blob.	</english>	<french>	Un petit pas pour le blob.	</french>	<info>	37	28	</info>	</entry>
-<entry id='	3BOSS_STEPSAFE	'>	<english>	That's one small step for a blob.	</english>	<french>	Un petit pas pour le blob.	</french>	<info>	37	28	</info>	</entry>
-<entry id='	3BOSS_LEAP	'>	<english>	                            blob/nOne giant leap for blob/n                            blob	</english>	<french>	                                blob/nUn pas de geant pour blob/n                                 blob 	</french>	<info>	91	103	</info>	</entry>
+<entry id='	3BOSS_STEPFAST	'>	<english>	That's one small/nstep for a blob.	</english>	<french>	Un petit pas/npour le blob.	</french>	<info>	37	28	</info>	</entry>
+<entry id='	3BOSS_STEPSAFE	'>	<english>	That's one small/nstep for a blob.	</english>	<french>	Un petit pas/npour le blob.	</french>	<info>	37	28	</info>	</entry>
+<entry id='	3BOSS_LEAP	'>	<english>	                   blob/nOne giant leap for blob/n                   blob	</english>	<french>	                     blob/nUn pas de geant pour blob/n                     blob 	</french>	<info>	91	103	</info>	</entry>
 <entry id='	4-1RULE	'>	<english>	1st Rule of Blob	</english>	<french>	1st Rule of Blob	</french>	<info>	7	11	</info>	</entry>
 <entry id='	4-1RULECONTENT	'>	<english>	You do not talk about blob	</english>	<french>	You do not talk about blob	</french>	<info>	7	11	</info>	</entry>
 <entry id='	4-2RUN	'>	<english>	RUN AGAIN !	</english>	<french>	COURS ENCORE !	</french>	<info>	7	11	</info>	</entry>
