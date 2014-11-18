@@ -1,38 +1,55 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class ArcBaseGroup : MonoBehaviour {
 	
 	public List<ArcElectric> arcs = new List<ArcElectric>();
 	public List<BaseElectric> bases = new List<BaseElectric>();
 	public int nbCrates = 0;
+	private List<Crate> myTouchingCrates = new List<Crate>();
 	private int lastEntered=0;
+	private bool addingCrate;
 	
 	void Start () {
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GameOver += GameOver;
 		GameEventManager.GamePause += GamePause;
 		GameEventManager.GameUnpause += GameUnpause;
-		collider.enabled = false;
+		collider.enabled = addingCrate = false;
+		lastEntered=0;
 		StartCoroutine("waitB4Restart");
 	}
 	void OnTriggerEnter(Collider _other)
 	{//print (_other.tag);
 		if (_other.CompareTag("Crate") && lastEntered!=_other.GetInstanceID())
 		{
-			lastEntered = _other.GetInstanceID();
-			StartCoroutine("resetLastEntered");
-			turnOFF();
-			nbCrates++;
+			addingCrate=true;
+				print ("++ "+lastEntered+" + "+_other.GetInstanceID());
+			foreach(Crate crt in myTouchingCrates) {
+			int t = crt.GetInstanceID() + 2;
+				if(crt.GetInstanceID() == _other.GetInstanceID() || t == _other.GetInstanceID()) {
+					addingCrate=false;
+				}
+			}
+			if(addingCrate || myTouchingCrates.Count==0) {
+				myTouchingCrates.Add(_other.GetComponent<Crate>());
+				//_other.name(_other.GetInstanceID());
+				turnOFF();
+				nbCrates++;
+			}
+				lastEntered = _other.GetInstanceID();
+				StartCoroutine("resetLastEntered");
+			addingCrate=true;
 		}
 	}
-	void OnTriggerStay(Collider _other) {//EDIT ARG 31/07?
-		if (_other.CompareTag("Crate"))
-		{
-			turnOFF();
-		}
-	}
+//	void OnTriggerStay(Collider _other) {//EDIT ARG 31/07?
+//		if (_other.CompareTag("Crate"))
+//		{
+//			turnOFF();
+//		}
+//	}
 	IEnumerator resetLastEntered() {
 		yield return new WaitForSeconds(0.25f);
 		lastEntered=0;
@@ -41,7 +58,16 @@ public class ArcBaseGroup : MonoBehaviour {
 	{
 		if (_other.CompareTag("Crate"))
 		{
-			nbCrates--;
+			bool removeCrate = false;
+			foreach(Crate crt in myTouchingCrates) {
+				int t = crt.GetInstanceID() + 2;
+				if(t == _other.GetInstanceID()) {
+					removeCrate = true;
+				}
+			}
+			if(removeCrate) {
+					nbCrates--; myTouchingCrates.Remove(_other.GetComponent<Crate>());
+			}
 			if(nbCrates==0) turnON();
 		}
 	}
@@ -57,6 +83,9 @@ public class ArcBaseGroup : MonoBehaviour {
 		if(this != null && gameObject.activeInHierarchy) {
 			//active = false;
 			nbCrates = 0;
+			myTouchingCrates = new List<Crate>();
+			addingCrate = false;
+			lastEntered=0;
 			StartCoroutine("waitB4Restart");
 		}
 	}
