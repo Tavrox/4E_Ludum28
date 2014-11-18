@@ -2,17 +2,19 @@
 <data version="1.0">
     <struct type="Settings">
         <key>fileFormatVersion</key>
-        <int>1</int>
-        <key>variation</key>
-        <string>main</string>
-        <key>verbose</key>
-        <false/>
+        <int>3</int>
+        <key>texturePackerVersion</key>
+        <string>3.3.1</string>
+        <key>fileName</key>
+        <string>C:/Users/Thomas/Documents/GitHub/4E_Ludum28/Assets/prod/gfx/Gameplay/Characters/Player/player.tps</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
                 <key>scale</key>
                 <double>1</double>
                 <key>extension</key>
+                <string></string>
+                <key>spriteFilter</key>
                 <string></string>
                 <key>acceptFractionalValues</key>
                 <false/>
@@ -28,6 +30,25 @@
                 <key>scale</key>
                 <double>1</double>
                 <key>extension</key>
+                <string></string>
+                <key>spriteFilter</key>
+                <string></string>
+                <key>acceptFractionalValues</key>
+                <false/>
+                <key>maxTextureSize</key>
+                <QSize>
+                    <key>width</key>
+                    <int>-1</int>
+                    <key>height</key>
+                    <int>-1</int>
+                </QSize>
+            </struct>
+            <struct type="AutoSDSettings">
+                <key>scale</key>
+                <double>1</double>
+                <key>extension</key>
+                <string></string>
+                <key>spriteFilter</key>
                 <string></string>
                 <key>acceptFractionalValues</key>
                 <false/>
@@ -41,8 +62,6 @@
             </struct>
         </array>
         <key>allowRotation</key>
-        <false/>
-        <key>quiet</key>
         <false/>
         <key>premultiplyAlpha</key>
         <false/>
@@ -76,6 +95,8 @@
         <uint>80</uint>
         <key>pngOptimizationLevel</key>
         <uint>0</uint>
+        <key>webpQualityLevel</key>
+        <uint>101</uint>
         <key>textureSubPath</key>
         <string></string>
         <key>textureFormat</key>
@@ -129,8 +150,6 @@
             <enum type="AndEngine::MinFilter">Linear</enum>
             <key>packageName</key>
             <string>Texture</string>
-            <key>javaFileName</key>
-            <filename>player.java</filename>
             <key>wrap</key>
             <struct type="AndEngineWrap">
                 <key>s</key>
@@ -141,12 +160,21 @@
             <key>magFilter</key>
             <enum type="AndEngine::MagFilter">MagLinear</enum>
         </struct>
-        <key>dataFileName</key>
-        <filename>player.xml</filename>
+        <key>dataFileNames</key>
+        <map type="GFileNameMap">
+            <key>data</key>
+            <struct type="DataFile">
+                <key>name</key>
+                <filename>player.xml</filename>
+            </struct>
+            <key>java</key>
+            <struct type="DataFile">
+                <key>name</key>
+                <filename>player.java</filename>
+            </struct>
+        </map>
         <key>multiPack</key>
         <false/>
-        <key>mainExtension</key>
-        <string></string>
         <key>forceIdenticalLayout</key>
         <false/>
         <key>outputFormat</key>
@@ -160,6 +188,8 @@
         <false/>
         <key>trimSpriteNames</key>
         <false/>
+        <key>cleanTransparentPixels</key>
+        <true/>
         <key>globalSpriteSettings</key>
         <struct type="SpriteSettings">
             <key>scale</key>
@@ -242,16 +272,29 @@
             <filename>perso_Tiragecaissemoisi0006.png</filename>
             <filename>perso_Tiragecaissemoisi0007.png</filename>
             <filename>perso_Tiragecaissemoisi0008.png</filename>
-            <filename>perso_zMortElectro0001 (1).png</filename>
-            <filename>perso_zMortElectro0001 (2).png</filename>
             <filename>perso_zzidle_Bas0001.png</filename>
             <filename>perso_zzidle_Bas0002.png</filename>
             <filename>perso_zzidle_Bas0003.png</filename>
-            <filename>perso_ymortblob (1).png</filename>
-            <filename>perso_ymortblob (2).png</filename>
-            <filename>perso_ymortblob (3).png</filename>
-            <filename>perso_ymortblob (4).png</filename>
-            <filename>perso_ymortblob (5).png</filename>
+            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_MortzElectroV50001 (2).png</filename>
+            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_MortzElectroV50001 (3).png</filename>
+            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_MortzElectroV50001 (4).png</filename>
+            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_MortzElectroV50001 (5).png</filename>
+            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_MortzElectroV50001 (6).png</filename>
+            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_MortzElectroV50001 (1).png</filename>
+            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (4).png</filename>
+            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (5).png</filename>
+            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (6).png</filename>
+            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (7).png</filename>
+            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (8).png</filename>
+            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (9).png</filename>
+            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (10).png</filename>
+            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (11).png</filename>
+            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (12).png</filename>
+            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (13).png</filename>
+            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (14).png</filename>
+            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (1).png</filename>
+            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (2).png</filename>
+            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (3).png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
