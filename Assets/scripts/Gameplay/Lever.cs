@@ -21,8 +21,8 @@ public class Lever : MonoBehaviour {
 	public TextMesh _myTimer;
 	public InputManager InputMan;
 	public List<LeverLight> _myLights = new List<LeverLight>();
-	public List<LeverLightPath> _myPaths = new List<LeverLightPath>();
-
+	public List<LeverLightPath > _myPaths = new List<LeverLightPath>();
+	
 	void Start () {
 		gameObject.GetComponentInChildren<OTAnimatingSprite>().transform.localScale = new Vector3 (2.006f,3.112758f,1);
 		if(myButtonType == btnType.TimedBtn) {
