@@ -50,7 +50,7 @@ public class LevelChooser : MonoBehaviour {
 			if(_mBtn.buttonType == MiscButton.buttonList.PlayOccurence) {
 				_mBtn.meLocked = _mBtn.locked = (_mBtn._playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+numLevel+"/occ"+((_mBtn.numOccurence==6)?"Boss":(_mBtn.numOccurence==7)?"6":_mBtn.numOccurence.ToString()) as string,"locked")=="true")?true:false;
 				_mBtn.setOccurenceFrame();
-				if(numLevel=="0" && _mBtn.numOccurence==6) _mBtn.alphaBoss(0);
+				if(numLevel=="0" && (_mBtn.numOccurence==6 || _mBtn.numOccurence==7)) _mBtn.alphaBoss(0);
 				else _mBtn.alphaBoss(.75f);
 			}
 		}	

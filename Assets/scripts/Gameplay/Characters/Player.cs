@@ -79,7 +79,7 @@ public class Player : Character {
 		{
 			standing = false;
 			unCrouch = true;
-			_crouchTween = new OTTween(Cam.transform ,.4f, OTEasing.QuadInOut).Tween("position", new Vector3( _camPos.x, _camPos.y, _camPos.z ));
+			_crouchTween = new OTTween(Cam.transform ,.25f, OTEasing.QuadInOut).Tween("position", new Vector3( _camPos.x, _camPos.y, _camPos.z ));
 			_crouchTween.OnFinish(unlockCrouch);
 			//locked = false;
 		}
@@ -177,7 +177,7 @@ public class Player : Character {
 		if ((Input.GetKey(InputMan.Down) || Input.GetKey(InputMan.Down2)) && grounded)
 		{
 			_camPos = Cam.transform.position;
-			_crouchTween = new OTTween(Cam.transform ,.4f, OTEasing.QuadInOut).Tween("position", new Vector3( Cam.transform.position.x, Cam.transform.position.y-4, Cam.transform.position.z ));
+			_crouchTween = new OTTween(Cam.transform ,.25f, OTEasing.QuadInOut).Tween("position", new Vector3( Cam.transform.position.x, Cam.transform.position.y-4, Cam.transform.position.z ));
 			isCrounch = standing = true;
 			isRight = isLeft = false;
 		}

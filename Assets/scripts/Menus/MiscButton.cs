@@ -47,9 +47,10 @@ public class MiscButton : MonoBehaviour {
 						txtGold3, txtSilver3, txtBronze3, txtScore3,
 						txtGold4, txtSilver4, txtBronze4, txtScore4,
 						txtGold5, txtSilver5, txtBronze5, txtScore5,
+						txtGold6, txtSilver6, txtBronze6, txtScore6,
 						txtGoldBoss, txtSilverBoss, txtBronzeBoss, txtScoreBoss;
 	private Transform _levelDetails, _occurenceSelector;
-	private OTSprite _playerMedalLvl, _playerMedal1,_playerMedal2,_playerMedal3,_playerMedal4,_playerMedal5,_playerMedalBoss;
+	private OTSprite _playerMedalLvl, _playerMedal1,_playerMedal2,_playerMedal3,_playerMedal4,_playerMedal5,_playerMedal6,_playerMedalBoss;
 //	void Awake() {
 //	
 //		_levelDataLoader = ScriptableObject.CreateInstance<GameSaveLoad>();
@@ -78,6 +79,9 @@ public class MiscButton : MonoBehaviour {
 		txtGold5 = GameObject.Find("gold5").GetComponent<TextMesh>();txtSilver5 = GameObject.Find("silver5").GetComponent<TextMesh>();
 		txtBronze5 = GameObject.Find("bronze5").GetComponent<TextMesh>();txtScore5 = GameObject.Find("score5").GetComponent<TextMesh>();
 		
+		txtGold6 = GameObject.Find("gold6").GetComponent<TextMesh>();txtSilver6 = GameObject.Find("silver6").GetComponent<TextMesh>();
+		txtBronze6 = GameObject.Find("bronze6").GetComponent<TextMesh>();txtScore6 = GameObject.Find("score6").GetComponent<TextMesh>();
+		
 		txtGoldBoss = GameObject.Find("goldBoss").GetComponent<TextMesh>();txtSilverBoss = GameObject.Find("silverBoss").GetComponent<TextMesh>();
 		txtBronzeBoss = GameObject.Find("bronzeBoss").GetComponent<TextMesh>();txtScoreBoss = GameObject.Find("scoreBoss").GetComponent<TextMesh>();
 		
@@ -87,6 +91,7 @@ public class MiscButton : MonoBehaviour {
 		_playerMedal3 = GameObject.Find("playerMedal3").GetComponent<OTSprite>();
 		_playerMedal4 = GameObject.Find("playerMedal4").GetComponent<OTSprite>();
 		_playerMedal5 = GameObject.Find("playerMedal5").GetComponent<OTSprite>();
+		_playerMedal6 = GameObject.Find("playerMedal6").GetComponent<OTSprite>();
 		_playerMedalBoss = GameObject.Find("playerMedalBoss").GetComponent<OTSprite>();
 		
 		_occurenceSelector = GameObject.Find("OccurenceSelector").GetComponent<Transform>();
@@ -151,7 +156,7 @@ public class MiscButton : MonoBehaviour {
 	}
 	public void setOccurenceFrame() {
 		if(locked) _spriteBtn.frameIndex = numOccurence-1;
-		else _spriteBtn.frameIndex = numOccurence+5;
+		else _spriteBtn.frameIndex = numOccurence+6;
 	}
 	public void alphaBoss(float opacity) {
 		_spriteBtn.alpha = opacity;	
@@ -213,6 +218,11 @@ public class MiscButton : MonoBehaviour {
 				txtBronze5.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_thumb.Info.levelNumName+"/occ5","bronze");
 				txtScore5.text = _playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+_thumb.Info.levelNumName+"/occ5","score");
 				
+				txtGold6.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_thumb.Info.levelNumName+"/occ6","gold");
+				txtSilver6.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_thumb.Info.levelNumName+"/occ6","silver");
+				txtBronze6.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_thumb.Info.levelNumName+"/occ6","bronze");
+				txtScore6.text = _playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+_thumb.Info.levelNumName+"/occ6","score");
+				
 				txtGoldBoss.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_thumb.Info.levelNumName+"/occBoss","gold");
 				txtSilverBoss.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_thumb.Info.levelNumName+"/occBoss","silver");
 				txtBronzeBoss.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_thumb.Info.levelNumName+"/occBoss","bronze");
@@ -224,6 +234,7 @@ public class MiscButton : MonoBehaviour {
 				_playerMedal3.frameIndex = displayPlayerMedal(txtScore3.text, txtGold3.text, txtSilver3.text, txtBronze3.text);
 				_playerMedal4.frameIndex = displayPlayerMedal(txtScore4.text, txtGold4.text, txtSilver4.text, txtBronze4.text);
 				_playerMedal5.frameIndex = displayPlayerMedal(txtScore5.text, txtGold5.text, txtSilver5.text, txtBronze5.text);
+				_playerMedal6.frameIndex = displayPlayerMedal(txtScore6.text, txtGold6.text, txtSilver6.text, txtBronze6.text);
 				_playerMedalBoss.frameIndex = displayPlayerMedal(txtScoreBoss.text, txtGoldBoss.text, txtSilverBoss.text, txtBronzeBoss.text);
 			}
 			

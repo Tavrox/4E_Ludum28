@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class TeleportAnims : MonoBehaviour 
 {
@@ -30,6 +31,8 @@ public class TeleportAnims : MonoBehaviour
 	
 	private bool animPlaying = false, playerCollision, triggable;
 	public InputManager InputMan;
+	private Vector3 ditanceToTarget;
+	private Parallax [] backgroundObjects;
 	
 	// Use this for initialization
 	void Start () 
@@ -46,6 +49,9 @@ public class TeleportAnims : MonoBehaviour
 		
 		InputMan = Instantiate(Resources.Load("Tuning/InputManager")) as InputManager;
 		InputMan.Setup();
+		
+		if(!isOUT) ditanceToTarget = new Vector3(teleportDestination.transform.position.x-gameObject.transform.position.x, teleportDestination.transform.position.y-gameObject.transform.position.y,0f); //.Distance(gameObject.transform.position, teleportDestination.transform.position);
+		backgroundObjects = FindObjectsOfType<Parallax>();
 	}
 	void Update() 
 	{
@@ -110,6 +116,16 @@ public class TeleportAnims : MonoBehaviour
 		}
 		//_player.position = new Vector3(0f,0f,0f);//destination.position;
 		_player.teleportTo( new Vector3(destination.position.x, destination.position.y, _player.transform.position.z));
+		print(gameObject.transform.position);
+		print(teleportDestination.transform.position);
+		print(ditanceToTarget);
+		foreach(Parallax _bg in backgroundObjects) {
+			_bg.gameObject.transform.position = new Vector3(
+				(_bg.gameObject.transform.position.x+ditanceToTarget.x/(/*_player.getVectorFixed().x/*/_bg.scrollSpeed*2.5f)),
+				(_bg.gameObject.transform.position.y+ditanceToTarget.y/(/*_player.getVectorFixed().y/*/_bg.scrollSpeed*2.5f))
+				,_bg.gameObject.transform.position.z) ;
+			//_bg.gameObject.transform.position.y += ditanceToTarget.y/(_player.getVectorFixed().y/_bg.scrollSpeed);
+		}
 		//_player.enabled = true;
 		//_player.locked = false;
 		//animSprite.Play("default");

@@ -175,7 +175,7 @@ public class Character : MonoBehaviour
 		addForce = 1;
 		if((!grounded && !(Input.GetKey(InputMan.Up) || Input.GetKey(InputMan.Up2) || Input.GetKey(InputMan.Up3) || Input.GetKey(InputMan.PadJump)) ) || blockedUp) chute = true;
 		if(blockedUp) {addForce=hitUpBounceForce;/*gravityY += 150f;StartCoroutine("resetGravity");*/}
-		if(chute && grounded) {
+		if(chute && grounded && gameObject.name != "WalkerBoss") {
 			//if(Input.GetKey(InputMan.Up)  || Input.GetKey(KeyCode.Z) || Input.GetKey(InputMan.PadJump))jumpLocked=true;//StartCoroutine("lockJump");
 			chute = false;MasterAudio.PlaySound("player_fall");}
 

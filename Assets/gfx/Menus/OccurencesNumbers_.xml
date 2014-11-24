@@ -82,7 +82,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>OFF_7.png</key>
+            <key>ON_1.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{50,50},{50,50}}</string>
@@ -95,7 +95,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>ON_1.png</key>
+            <key>ON_2.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{100,50},{50,50}}</string>
@@ -108,7 +108,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>ON_2.png</key>
+            <key>ON_3.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{150,50},{50,50}}</string>
@@ -121,7 +121,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>ON_3.png</key>
+            <key>ON_4.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{200,50},{50,50}}</string>
@@ -134,7 +134,7 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>ON_4.png</key>
+            <key>ON_5.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{0,100},{50,50}}</string>
@@ -147,36 +147,10 @@
                 <key>sourceSize</key>
                 <string>{50,50}</string>
             </dict>
-            <key>ON_5.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{50,100},{50,50}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{50,50}}</string>
-                <key>sourceSize</key>
-                <string>{50,50}</string>
-            </dict>
             <key>ON_6.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{100,100},{50,50}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{50,50}}</string>
-                <key>sourceSize</key>
-                <string>{50,50}</string>
-            </dict>
-            <key>ON_7.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{150,100},{50,50}}</string>
+                <string>{{50,100},{50,50}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -196,7 +170,7 @@
             <key>size</key>
             <string>{256,256}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:57ba578bf3dd897b6fc8e649b524428e:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:69dee6b71a119e91e2c2e393bac9b001:1/1$</string>
             <key>textureFileName</key>
             <string>OccurencesNumbers.png</string>
         </dict>

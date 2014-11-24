@@ -330,7 +330,7 @@ public class PlayerAnims : MonoBehaviour
 			StopCoroutine("waitB4Restart");
 			animSprite.looping = false;
 			currentAnim = animDef.CrounchLeft;
-			animSprite.PlayOnce("sit");
+			animSprite.Play("stand");
 			InvertSprite();
 		}
 		if (_character.isCrounch && _character.grounded && currentAnim != animDef.CrounchRight && currentAnim != animDef.unCrounchRight && _character.facingDir == Character.facing.Right)
@@ -338,7 +338,7 @@ public class PlayerAnims : MonoBehaviour
 			StopCoroutine("waitB4Restart");
 			animSprite.looping = false;
 			currentAnim = animDef.CrounchRight;
-			animSprite.PlayOnce("sit");
+			animSprite.Play("stand");
 			NormalScaleSprite();
 		}
 		if (_player.unCrouch && _character.grounded && currentAnim != animDef.unCrounchLeft && _character.facingDir == Character.facing.Left)
@@ -346,7 +346,7 @@ public class PlayerAnims : MonoBehaviour
 			StopCoroutine("waitB4Restart");
 			animSprite.looping = false;
 			currentAnim = animDef.unCrounchLeft;
-			animSprite.PlayOnceBackward("sit");
+			animSprite.Play("stand");
 			InvertSprite();
 		}
 		if (_player.unCrouch && _character.grounded && currentAnim != animDef.unCrounchRight && _character.facingDir == Character.facing.Right)
@@ -354,7 +354,8 @@ public class PlayerAnims : MonoBehaviour
 			StopCoroutine("waitB4Restart");
 			animSprite.looping = false;
 			currentAnim = animDef.unCrounchRight;
-			animSprite.PlayOnceBackward("sit");
+			animSprite.Play("stand");
+			//animSprite.PlayOnceBackward("sit");
 			NormalScaleSprite();
 		}
 	}

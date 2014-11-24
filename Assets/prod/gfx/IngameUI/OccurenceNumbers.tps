@@ -176,6 +176,8 @@
             <filename>UInew/ON_4.png</filename>
             <filename>UInew/ON_5.png</filename>
             <filename>UInew/ON_6.png</filename>
+            <filename>UInew/ON_7.png</filename>
+            <filename>UInew/OFF_7.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
