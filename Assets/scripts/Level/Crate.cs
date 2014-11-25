@@ -345,6 +345,7 @@ public class Crate : MonoBehaviour {
 	void GameStart () {
 		if(this != null && gameObject.activeInHierarchy)	{
 			touchingPlayer=false;	
+			collider.enabled = true;
 			_myGravity = 0f;StartCoroutine("StartGravity");
 			_player.moveVel = playerMoveVel;transform.localPosition = new Vector3(spawnPos.x,spawnPos.y,spawnPos.z);
 			
@@ -378,6 +379,7 @@ public class Crate : MonoBehaviour {
 	public IEnumerator destroyOnGrounded() {
 		yield return new WaitForSeconds(0.1f);
 		if(grounded) {
+			collider.enabled = false;
 			sprite.PlayOnce("destroy");
 			foreach(ArcBaseGroup arcBaseGrp in gameObject.GetComponentsInChildren<ArcBaseGroup>()) {
 				arcBaseGrp.turnOFF();

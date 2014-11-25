@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Patroler : Character {
 	
@@ -29,6 +30,7 @@ public class Patroler : Character {
 	private BoxCollider [] tabCol;
 	private ArcElectric [] tabArcs;
 	private BaseElectric [] tabBase;
+	private List<int> linkedCratesID = new List<int>();
 	
 	//	private WaveCreator soundEmitt1, soundEmitt2, soundInstru1, soundInstru2,soundEmitt3;
 	//	private int cptWave=1, pebbleDirection = 1;
@@ -122,7 +124,7 @@ public class Patroler : Character {
 			//UpdateMovement();
 			if(isVertical) thisTransform.position -= new Vector3(0f,myCORRECTSPEED,0f);
 			else thisTransform.position -= new Vector3(myCORRECTSPEED,0f,0f);
-			if(touchingCrate && touchedCrate!=null) moveCrate(go);
+			if(touchingCrate && touchedCrate!=null && touchedCrate != childCrate) moveCrate(go);
 		}
 		else {
 			isLeft = false;
@@ -132,7 +134,7 @@ public class Patroler : Character {
 			//UpdateMovement();
 			if(isVertical) thisTransform.position += new Vector3(0f,myCORRECTSPEED,0f);
 			else thisTransform.position += new Vector3(myCORRECTSPEED,0f,0f);
-			if(touchingCrate && touchedCrate!=null) moveCrate(go);
+			if(touchingCrate && touchedCrate!=null && touchedCrate != childCrate) moveCrate(go);
 		}
 	}
 	private void revertDirection() {
@@ -161,16 +163,23 @@ public class Patroler : Character {
 			GameEventManager.TriggerGameOver();
 		}
 		if(_other.CompareTag("Crate")) {
-			if(_other.gameObject.GetComponent<Crate>().grounded) {
-				touchingCrate = true;
-				if(touchedCrate == null) touchedCrate = _other.gameObject.GetComponent<Crate>();
-				if(touchedCrate.transform.position.y>_other.gameObject.transform.position.y) {
-					touchedCrate = _other.gameObject.GetComponent<Crate>();
-					_other.gameObject.GetComponent<Crate>().StartCoroutine("SND_moveCrate");
-//					if(Vector3.Distance(_player.transform.position,_other.transform.position);
+			if(_other.gameObject.GetComponent<Crate>() != childCrate) {
+				if(_other.gameObject.GetComponent<Crate>().grounded) {
+					touchingCrate = true;
+					if(touchedCrate == null) touchedCrate = _other.gameObject.GetComponent<Crate>();
+					if(touchedCrate.transform.position.y>_other.gameObject.transform.position.y) {
+						touchedCrate = _other.gameObject.GetComponent<Crate>();
+						_other.gameObject.GetComponent<Crate>().StartCoroutine("SND_moveCrate");
+	//					if(Vector3.Distance(_player.transform.position,_other.transform.position);
+					}
+				}
+				else {
+					if(!linkedCratesID.Contains(_other.GetInstanceID())) {
+						getDamage(1);
+						linkedCratesID.Add(_other.GetInstanceID());
+					}
 				}
 			}
-			else {getDamage(1);}
 		}
 	}
 //	protected void OnTriggerExit(Collider _other) 

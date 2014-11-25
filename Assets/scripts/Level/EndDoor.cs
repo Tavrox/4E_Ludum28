@@ -125,6 +125,7 @@ public class EndDoor : MonoBehaviour {
 		if(this != null && gameObject.activeInHierarchy) {
 		triggered = _player.finishedLevel = false;
 		sprite.frameIndex = 26;
+		_shieldActivateAnim.Play("default");
 		}
 	}
 	private void NextInstance ()
