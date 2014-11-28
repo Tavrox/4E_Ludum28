@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <BlobMinute>
    <levels>
-      <level0 gold="25000" silver="20000" bronze="15000" id="0" locked="false">
+      <level0 gold="25000" silver="20000" bronze="21000" id="0" locked="false">
          <occ1 id="0.1" gold="5000" silver="4000" bronze="3000" locked="false" />
          <occ2 id="0.2" gold="5000" silver="4000" bronze="3000" locked="false" />
          <occ3 id="0.3" gold="5000" silver="4000" bronze="3000" locked="false" />
@@ -10,59 +10,59 @@
          <occ6 id="0.6" gold="" silver="" bronze="" locked="false" />
          <occBoss id="0.B" gold="" silver="" bronze="" locked="false" />
       </level0>
-      <level1 gold="49000" silver="42000" bronze="35000" id="1" locked="false">
-         <occ1 id="1.1" gold="8000" silver="7000" bronze="6000" locked="false" />
-         <occ2 id="1.2" gold="8000" silver="7000" bronze="6000" locked="false" />
-         <occ3 id="1.3" gold="7000" silver="6000" bronze="5000" locked="false" />
-         <occ4 id="1.4" gold="6500" silver="5500" bronze="4500" locked="false" />
-         <occ5 id="1.5" gold="6000" silver="5000" bronze="4000" locked="false" />
-         <occ6 id="1.6" gold="6500" silver="5500" bronze="4500" locked="false" />
-         <occBoss id="1.B" gold="7000" silver="6000" bronze="5000" locked="false" />
+      <level1 gold="49000" silver="42000" bronze="21000" id="1" locked="false">
+         <occ1 id="1.1" gold="8000" silver="7000" bronze="3000" locked="false" />
+         <occ2 id="1.2" gold="8000" silver="7000" bronze="3000" locked="false" />
+         <occ3 id="1.3" gold="7000" silver="6000" bronze="3000" locked="false" />
+         <occ4 id="1.4" gold="6500" silver="5500" bronze="3000" locked="false" />
+         <occ5 id="1.5" gold="6000" silver="5000" bronze="3000" locked="false" />
+         <occ6 id="1.6" gold="6500" silver="5500" bronze="3000" locked="false" />
+         <occBoss id="1.B" gold="7000" silver="6000" bronze="3000" locked="false" />
       </level1>
-      <level2 gold="48500" silver="44100" bronze="39700" id="2" locked="false">
-         <occ1 id="2.1" gold="7000" silver="6500" bronze="6000" locked="false" />
-         <occ2 id="2.2" gold="7500" silver="7000" bronze="6500" locked="false" />
-         <occ3 id="2.3" gold="7500" silver="7000" bronze="6500" locked="false" />
-         <occ4 id="2.4" gold="6500" silver="6000" bronze="5500" locked="false" />
-         <occ5 id="2.5" gold="6000" silver="5600" bronze="5200" locked="false" />
-         <occ6 id="2.6" gold="7000" silver="6000" bronze="5000" locked="false" />
-         <occBoss id="2.B" gold="7000" silver="6000" bronze="5000" locked="false" />
+      <level2 gold="48500" silver="44100" bronze="21000" id="2" locked="false">
+         <occ1 id="2.1" gold="7000" silver="6500" bronze="3000" locked="false" />
+         <occ2 id="2.2" gold="7500" silver="7000" bronze="3000" locked="false" />
+         <occ3 id="2.3" gold="7500" silver="7000" bronze="3000" locked="false" />
+         <occ4 id="2.4" gold="6500" silver="6000" bronze="3000" locked="false" />
+         <occ5 id="2.5" gold="6000" silver="5600" bronze="3000" locked="false" />
+         <occ6 id="2.6" gold="7000" silver="6000" bronze="3000" locked="false" />
+         <occBoss id="2.B" gold="7000" silver="6000" bronze="3000" locked="false" />
       </level2>
-      <level3 gold="40850" silver="33200" bronze="26550" id="3" locked="false">
-         <occ1 id="3.1" gold="5300" silver="5000" bronze="4700" locked="false" />
-         <occ2 id="3.2" gold="5250" silver="4900" bronze="4550" locked="false" />
-         <occ3 id="3.3" gold="5800" silver="5500" bronze="5200" locked="false" />
-         <occ4 id="3.4" gold="6300" silver="4500" bronze="2700" locked="false" />
-         <occ5 id="3.5" gold="5600" silver="4000" bronze="2400" locked="false" />
-         <occ6 id="3.6" gold="7000" silver="6000" bronze="5000" locked="false" />
-         <occBoss id="3.B" gold="5600" silver="3300" bronze="1000" locked="false" />
+      <level3 gold="40850" silver="33200" bronze="21000" id="3" locked="false">
+         <occ1 id="3.1" gold="5300" silver="5000" bronze="3000" locked="false" />
+         <occ2 id="3.2" gold="5250" silver="4900" bronze="3000" locked="false" />
+         <occ3 id="3.3" gold="5800" silver="5500" bronze="3000" locked="false" />
+         <occ4 id="3.4" gold="6300" silver="4500" bronze="3000" locked="false" />
+         <occ5 id="3.5" gold="5600" silver="4000" bronze="3000" locked="false" />
+         <occ6 id="3.6" gold="7000" silver="6000" bronze="3000" locked="false" />
+         <occBoss id="3.B" gold="5600" silver="3300" bronze="3000" locked="false" />
       </level3>
-      <level4 gold="41400" silver="36000" bronze="30600" id="4" locked="false">
-         <occ1 id="4.1" gold="5200" silver="4300" bronze="3400" locked="false" />
-         <occ2 id="4.2" gold="6400" silver="5500" bronze="4600" locked="false" />
-         <occ3 id="4.3" gold="5800" silver="5500" bronze="5200" locked="false" />
-         <occ4 id="4.4" gold="5500" silver="5000" bronze="4500" locked="false" />
-         <occ5 id="4.5" gold="6000" silver="5700" bronze="5400" locked="false" />
-         <occ6 id="4.6" gold="7000" silver="6000" bronze="5000" locked="false" />
-         <occBoss id="4.B" gold="5500" silver="4000" bronze="2500" locked="false" />
+      <level4 gold="41400" silver="36000" bronze="21000" id="4" locked="false">
+         <occ1 id="4.1" gold="5200" silver="4300" bronze="3000" locked="false" />
+         <occ2 id="4.2" gold="6400" silver="5500" bronze="3000" locked="false" />
+         <occ3 id="4.3" gold="5800" silver="5500" bronze="3000" locked="false" />
+         <occ4 id="4.4" gold="5500" silver="5000" bronze="3000" locked="false" />
+         <occ5 id="4.5" gold="6000" silver="5700" bronze="3000" locked="false" />
+         <occ6 id="4.6" gold="7000" silver="6000" bronze="3000" locked="false" />
+         <occBoss id="4.B" gold="5500" silver="4000" bronze="3000" locked="false" />
       </level4>
-      <level5 gold="44200" silver="37200" bronze="30700" id="5" locked="false">
-         <occ1 id="5.1" gold="7200" silver="6200" bronze="5200" locked="false" />
-         <occ2 id="5.2" gold="6000" silver="5000" bronze="4000" locked="false" />
-         <occ3 id="5.3" gold="7000" silver="6000" bronze="5000" locked="false" />
-         <occ4 id="5.4" gold="6000" silver="5000" bronze="4000" locked="false" />
-         <occ5 id="5.5" gold="5500" silver="4500" bronze="3500" locked="false" />
-         <occ6 id="5.6" gold="6000" silver="5000" bronze="4000" locked="false" />
-         <occBoss id="5.B" gold="6500" silver="5500" bronze="5000" locked="false" />
+      <level5 gold="44200" silver="37200" bronze="21000" id="5" locked="false">
+         <occ1 id="5.1" gold="7200" silver="6200" bronze="3000" locked="false" />
+         <occ2 id="5.2" gold="6000" silver="5000" bronze="3000" locked="false" />
+         <occ3 id="5.3" gold="7000" silver="6000" bronze="3000" locked="false" />
+         <occ4 id="5.4" gold="6000" silver="5000" bronze="3000" locked="false" />
+         <occ5 id="5.5" gold="5500" silver="4500" bronze="3000" locked="false" />
+         <occ6 id="5.6" gold="6000" silver="5000" bronze="3000" locked="false" />
+         <occBoss id="5.B" gold="6500" silver="5500" bronze="3000" locked="false" />
       </level5>
-      <level6 gold="90000" silver="60000" bronze="30000" id="5" locked="false">
-         <occ1 id="6.1" gold="15000" silver="10000" bronze="5000" locked="false" />
-         <occ2 id="6.2" gold="15000" silver="10000" bronze="5000" locked="false" />
-         <occ3 id="6.3" gold="15000" silver="10000" bronze="5000" locked="false" />
-         <occ4 id="6.4" gold="15000" silver="10000" bronze="5000" locked="false" />
-         <occ5 id="6.5" gold="15000" silver="10000" bronze="5000" locked="false" />
-         <occ6 id="6.6" gold="15000" silver="10000" bronze="5000" locked="false" />
-         <occBoss id="6.B" gold="15000" silver="10000" bronze="5000" locked="false" />
+      <level6 gold="90000" silver="60000" bronze="21000" id="5" locked="false">
+         <occ1 id="6.1" gold="15000" silver="10000" bronze="3000" locked="false" />
+         <occ2 id="6.2" gold="15000" silver="10000" bronze="3000" locked="false" />
+         <occ3 id="6.3" gold="15000" silver="10000" bronze="3000" locked="false" />
+         <occ4 id="6.4" gold="15000" silver="10000" bronze="3000" locked="false" />
+         <occ5 id="6.5" gold="15000" silver="10000" bronze="3000" locked="false" />
+         <occ6 id="6.6" gold="15000" silver="10000" bronze="3000" locked="false" />
+         <occBoss id="6.B" gold="15000" silver="10000" bronze="3000" locked="false" />
       </level6>
    </levels>
 </BlobMinute>
