@@ -80,7 +80,7 @@ public class LevelManager : MonoBehaviour {
 //		_pdata = player.GetComponent<PlayerData>();
 //		Player _Player  = GameObject.Find("Player").GetComponent<Player>();
 		ID = Application.loadedLevel;
-		//print("ID : ---*-*-***---"+ID);
+		print("ID : ---*-*-***---"+ID);
 		//MasterAudio.PlaySound("jam");
 
 		//if(chosenVariation==0) _rand = Random.Range(_tileImporter.minVariation, _tileImporter.maxVariation).ToString();
@@ -387,6 +387,9 @@ public class LevelManager : MonoBehaviour {
 			break;
 		case 11:
 			MasterAudio.PlaySound("boss_theme");
+			break;
+		default:
+			MasterAudio.PlaySound("level_theme_5");
 			break;
 		}
 	}

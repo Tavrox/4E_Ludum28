@@ -35,6 +35,7 @@
 <entry id='	2-4_DoorG	'>	<english>	DoorG	</english>	<french>	Porte G	</french>	<info>	3	4	</info>	</entry>
 <entry id='	2-5_DoorG	'>	<english>	DoorG	</english>	<french>	Porte G	</french>	<info>	3	4	</info>	</entry>
 <entry id='	2-1_CAB	'>	<english>	CAB	</english>	<french>	TAXI	</french>	<info>	3	4	</info>	</entry>
+<entry id='	2-2_SEQ_231	'>	<english>	SEQUENCED lever 2 -> 3 -> 1	</english>	<french>	Levier séquence 2 -> 3 -> 1  	</french>	<info>	27	27	</info>	</entry>	
 <entry id='	2-2_SEQ_123	'>	<english>	SEQUENCED Lever 1 -> 2 -> 3	</english>	<french>	Levier séquence 1 -> 2 -> 3	</french>	<info>	29	29	</info>	</entry>
 <entry id='	2-1_SEQ_123	'>	<english>	SEQUENCED Lever 1 -> 2 -> 3	</english>	<french>	Levier séquence 1 -> 2 -> 3	</french>	<info>	29	29	</info>	</entry>
 <entry id='	2-3_SEQ_123	'>	<english>	SEQUENCED Lever 1 -> 2 -> 3	</english>	<french>	Levier séquence 1 -> 2 -> 3	</french>	<info>	29	29	</info>	</entry>
@@ -71,6 +72,9 @@
 <entry id='	4-3CODE	'>	<english>	1 2 - 4 5 6 - 8 - 10	</english>	<french>	1 2 - 4 5 6 - 8 - 10	</french>	<info>	7	11	</info>	</entry>
 <entry id='	4-5RULE	'>	<english>	2nd Rule of Blob	</english>	<french>	2nd Rule of Blob	</french>	<info>	7	11	</info>	</entry>
 <entry id='	4-5RULECONTENT	'>	<english>	You DO NOT talk about blob	</english>	<french>	You DO NOT talk about blob	</french>	<info>	7	11	</info>	</entry>
+<entry id='	5-1_SEQ_12	'>	<english>	SEQUENCED lever 1 -> 2	</english>	<french>	Levier séquence 1 -> 2  	</french>	<info>	24	24	</info>	</entry>
+<entry id='	5-2_SEQ_4123	'>	<english>	SEQUENCED lever 4 -> 1 -> 2 -> 3	</english>	<french>	Levier séquence 4 -> 1 -> 2 -> 3  	</french>	<info>	32	32	</info>	</entry>
+<entry id='	5-3_SEQ_123	'>	<english>	SEQUENCED lever 1 -> 2 -> 3	</english>	<french>	Levier séquence 1 -> 2 -> 3  	</french>	<info>	27	27	</info>	</entry>
 <entry id='	BACK_BTN	'>	<english>	Back	</english>	<french>	Retour	</french>	<info>	4	6	</info>	</entry>
 <entry id='	CHOOSE_LVL	'>	<english>	Choose a level	</english>	<french>	Choisir un niveau	</french>	<info>	14	17	</info>	</entry>
 <entry id='	CREDITS_BTN	'>	<english>	Credits	</english>	<french>	Crédits	</french>	<info>	7	7	</info>	</entry>
