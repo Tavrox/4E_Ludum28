@@ -38,10 +38,11 @@ public class LevelChooser : MonoBehaviour {
 			}
 		}	
 	}
-	public void setLvlOccButtons(int numLevel) {
+	public void setLvlOccButtons(int numLevel, string realNumLevel) {
 		foreach (MiscButton _mBtn in ArrMiscBtns) {
 			if(_mBtn.buttonType == MiscButton.buttonList.PlayOccurence) {
 					_mBtn._lvlToLoad = numLevel.ToString();
+                    _mBtn._realLvlNameToLoad = realNumLevel;
 			}
 		}	
 	}

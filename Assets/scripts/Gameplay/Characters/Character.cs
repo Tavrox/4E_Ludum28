@@ -93,7 +93,7 @@ public class Character : MonoBehaviour
 	}
 	
 	// Use this for initialization
-	public virtual void Start () 
+	public void Start () 
 	{
 		HP = maxHP;
 		//maxVelY = fallVel;

@@ -39,10 +39,10 @@ public class ArcElectric : MonoBehaviour {
 		{
 			yield return new WaitForFixedUpdate();	
 		}
-		if(alternate) StartCoroutine("active");
+        if (alternate) StartCoroutine("activation");
 		else StartCoroutine("activateInfinite");
 	}
-	private IEnumerator active() {
+	private IEnumerator activation() {
 		if(activeState) {activeState=!activeState;
 			if(activeTime>=1) waitTime = activeTime+0.88f;
 			else if(activeTime<1) waitTime = activeTime+0.48f;
@@ -58,7 +58,7 @@ public class ArcElectric : MonoBehaviour {
 		{
 			yield return new WaitForFixedUpdate();	
 		}
-		StartCoroutine("active");
+        StartCoroutine("activation");
 	}
 	
 	void OnTriggerEnter(Collider _other)
@@ -73,7 +73,7 @@ public class ArcElectric : MonoBehaviour {
 	}
 	public void turnOFF () {
 		animSprite.Play("arcDefault");collider.enabled=false;
-		StopCoroutine("active");
+        StopCoroutine("activation");
 		StopCoroutine("waitB4Active");
 		StopCoroutine("activateInfinite");
 		StopCoroutine("SND_activateThenOff");
@@ -85,7 +85,7 @@ public class ArcElectric : MonoBehaviour {
 		animSprite.Play("arcON");StartCoroutine("activateCollider");
 		activeState = true;
 		if(inactiveTime==0) StartCoroutine("activateInfinite");
-		else if(activeTime!=0) StartCoroutine("active");
+        else if (activeTime != 0) StartCoroutine("activation");
 		
 //		if(inactiveTime==0) StartCoroutine("waitB4Active",false);
 //		else if(activeTime!=0) StartCoroutine("waitB4Active",true);
@@ -93,7 +93,7 @@ public class ArcElectric : MonoBehaviour {
 	void GameOver() {
 		if(this != null && gameObject.activeInHierarchy) {
 		//turnOFF();
-		StopCoroutine("active");
+            StopCoroutine("activation");
 		StopCoroutine("waitB4Active");
 		StopCoroutine("activateInfinite");
 		StopCoroutine("SND_activateThenOff");
@@ -101,7 +101,7 @@ public class ArcElectric : MonoBehaviour {
 	}
 	private void FinishLevel() {
 		if(this != null) {
-		StopCoroutine("active");
+            StopCoroutine("activation");
 		StopCoroutine("waitB4Active");
 		StopCoroutine("activateInfinite");
 		StopCoroutine("SND_activateThenOff");

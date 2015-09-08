@@ -24,6 +24,7 @@ public class HUDLevels : MonoBehaviour {
 //		if(Screen.width==1152) _leftPosition = 90;
 //		gameObject.transform.position = _camera.ScreenToWorldPoint(new Vector3(100, Screen.height-Screen.height/11, _camera.nearClipPlane));
 		gameObject.transform.position = _camera.ScreenToWorldPoint(new Vector3(Screen.width*0.1f, Screen.height - (Screen.height*0.09f), _camera.nearClipPlane));
+		gameObject.transform.position = new Vector3(gameObject.transform.position.x,gameObject.transform.position.y,-500);
 	}
 	void GameStart () {	
 		if(this != null && gameObject.activeInHierarchy) {

@@ -42,7 +42,7 @@ public class Patroler : Character {
 	[HideInInspector] public bool paused = false;
 	
 	// Use this for initialization
-	public override void Start () 
+	public void Start () 
 	{
 		base.Start();
 		

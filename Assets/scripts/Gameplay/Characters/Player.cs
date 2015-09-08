@@ -28,7 +28,7 @@ public class Player : Character {
 	private BoxCollider col;
 	// Use this for initialization
 
-	public override void Start () 
+	public void Start () 
 	{
 		base.Start();
 
@@ -267,6 +267,7 @@ public class Player : Character {
 		pushCrate = grabCrate = false;
 		col.size = new Vector3(1f, col.size.y, col.size.z);
 		col.center = new Vector3(0f, 0f, 0f);
+		thisTransform.rotation = new Quaternion(0f,0f,0f,0f);
 		HUDPause.gameObject.SetActive(false);
 			finishedLevel=killedByBlob = killedByLaser = false;
 		collider.enabled=true;
@@ -333,4 +334,9 @@ public class Player : Character {
 		yield return new WaitForSeconds(4f);
 		GameEventManager.TriggerGameStart();
 	}
+	void OnLevelWasLoaded(int level) {
+        if (level == 0)
+            DestroyImmediate(gameObject);
+        
+    }
 }

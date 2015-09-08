@@ -50,7 +50,9 @@ public class Key : MonoBehaviour {
 	}
 	void GameStart()
 	{
-		if(this != null && gameObject.activeInHierarchy) resetKey();
+		if(this != null && gameObject.activeInHierarchy) {
+			resetKey();
+		}
 	}
 	void GameOver() {
 		if(this != null && gameObject.activeInHierarchy) 

@@ -219,6 +219,7 @@ public class OTContainer : MonoBehaviour
 		// remove all cached materials for this container
 		OT.ClearMaterials("spc:"+name.ToLower()+":");
 		List<OTSprite> sprites = OT.ContainerSprites(this);
+		
 		for (int s=0; s<sprites.Count; s++)
 			sprites[s].GetMat();
 		

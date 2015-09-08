@@ -20,6 +20,7 @@ public class ArcBaseGroup : MonoBehaviour {
 		collider.enabled = addingCrate = false;
 		lastEntered=0;
 		StartCoroutine("waitB4Restart");
+			if (GameEventManager.gamePaused) GameEventManager.TriggerGameUnpause(); /* BASTIEN FIX TGS */
 	}
 	void OnTriggerEnter(Collider _other)
 	{//print (_other.tag);
@@ -51,7 +52,7 @@ public class ArcBaseGroup : MonoBehaviour {
 //		}
 //	}
 	IEnumerator resetLastEntered() {
-		yield return new WaitForSeconds(0.25f);
+		yield return new WaitForSeconds(0.1f);
 		lastEntered=0;
 	}
 	void OnTriggerExit(Collider _other)

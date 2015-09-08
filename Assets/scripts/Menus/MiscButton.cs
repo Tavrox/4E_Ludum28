@@ -32,7 +32,7 @@ public class MiscButton : MonoBehaviour {
 	public MainTitleUI mainUi;
 	public LevelChooser chooser;
 	
-	public string _lvlToLoad = "0";
+	public string _lvlToLoad = "0", _realLvlNameToLoad = "0";
 	public bool locked = false,splashed, meLocked;
 	public int numOccurence;
 	public buttonList buttonType;
@@ -153,6 +153,16 @@ public class MiscButton : MonoBehaviour {
 	void Update() {
 		if(meLocked) locked=true;
 		else locked=false;
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            if (_animBlob != null)
+            {
+                MasterAudio.PlaySound("blob_explosion");
+                _animBtn.PlayOnce("activate");
+                _animBtn.speed = 1.5f;
+            }
+            StartCoroutine(DoTransition(mainUi.LevelChooser));
+        }
 	}
 	public void setOccurenceFrame() {
 		if(locked) _spriteBtn.frameIndex = numOccurence-1;
@@ -270,7 +280,7 @@ public class MiscButton : MonoBehaviour {
 					//_spriteBtn.alpha = 1f;
 				_playerData.choixOccurence = System.Convert.ToInt32(numOccurence);
 				if(numOccurence==6) _lvlToLoad = System.Convert.ToString(System.Convert.ToInt32(numOccurence)+1);
-				if(numOccurence==7) _lvlToLoad = System.Convert.ToString(System.Convert.ToInt32(numOccurence)+1);//_lvlToLoad = System.Convert.ToInt32(_lvlToLoad+?); NUM SCENE OCC 6
+                if (numOccurence == 7) _lvlToLoad = System.Convert.ToString(System.Convert.ToInt32(_realLvlNameToLoad) + 11);//_lvlToLoad = System.Convert.ToInt32(_lvlToLoad+?); NUM SCENE OCC 6
 				print(_lvlToLoad + " - " + numOccurence);
 				Application.LoadLevel(System.Convert.ToInt32(_lvlToLoad));
 				break;
@@ -288,7 +298,7 @@ public class MiscButton : MonoBehaviour {
 						_occurencesTween = new OTTween(_occurenceSelector.transform ,.4f, OTEasing.ExpoIn).Tween("localPosition", new Vector3( this.transform.localPosition.x, this.transform.localPosition.y, _occurenceSelector.transform.localPosition.z ));
 						chooser.unsplashLvlButtons();
 						splashed=true;
-						chooser.setLvlOccButtons(lvl);
+                        chooser.setLvlOccButtons(lvl, _thumb.Info.levelNumName);
 						chooser.lockOccButtons(_thumb.Info.levelNumName);
 						//Application.LoadLevel(lvl);
 					}
@@ -349,13 +359,14 @@ public class MiscButton : MonoBehaviour {
 			}
 			case buttonList.OpenLevel :
 			{
-//				if (_animBlob != null)
-//				{
+				if (_animBlob != null)
+				{
 					MasterAudio.PlaySound("blob_explosion");
 					_animBtn.PlayOnce("activate");
 					_animBtn.speed = 1.5f;
-//				}
+				}
 				StartCoroutine(DoTransition(mainUi.LevelChooser));
+				//DoTransition(mainUi.LevelChooser);
 				break;
 			}
 			case buttonList.OpenCredits :

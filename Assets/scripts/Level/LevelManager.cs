@@ -89,14 +89,14 @@ public class LevelManager : MonoBehaviour {
 		//print ("Level generated " + _rand);
 		foreach (Transform _gameo in GameObject.Find("Level/ObjectImporter").transform)
 		{
-			if (_gameo.gameObject.name == chosenVariation.ToString() )
+			if (_gameo.gameObject.name == chosenVariation.ToString() || (chosenVariation>5 && _gameo.gameObject.name == "1"))
 		    {
 				_gameo.gameObject.SetActive(true);
 			}
 		}
 		TranslateAllInScene();
 
-		spawnPoint = GameObject.Find("playerspawn"+chosenVariation).transform.position;
+        spawnPoint = GameObject.Find("playerspawn" + ((chosenVariation > 5) ? "1" : chosenVariation.ToString())).transform.position;
 		player.transform.position = player.spawnPos = new Vector3(spawnPoint.x,spawnPoint.y,-1f);
 //		_pdata.displayInput = false;
 

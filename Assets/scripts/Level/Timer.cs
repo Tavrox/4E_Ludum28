@@ -61,6 +61,7 @@ public class Timer : MonoBehaviour {
 	}
 	void FixedUpdate() {
 		_txtTimer.gameObject.transform.position = _camera.ScreenToWorldPoint(new Vector3(Screen.width*0.1f-_txtTimer.text.Length*16f, Screen.height - (Screen.height*0.075f), _camera.nearClipPlane));
+		_txtTimer.gameObject.transform.position = new Vector3(_txtTimer.gameObject.transform.position.x,_txtTimer.gameObject.transform.position.y,-1000);
 	}
 	//transform.renderer.material.color.a
 	private void updateTimer()
@@ -122,8 +123,8 @@ public class Timer : MonoBehaviour {
 		else {
 			if (_player.isLeft || _player.isRight || _player.isJump || _player.isCrounch)
 			{
-				lockTimerStart = pauseTimer = false;
-				//_player.triggerPause();
+				lockTimerStart = pauseTimer = false;				
+			if (GameEventManager.gamePaused) GameEventManager.TriggerGameUnpause(); /* BASTIEN FIX TGS */
 			}
 		}
 	}
