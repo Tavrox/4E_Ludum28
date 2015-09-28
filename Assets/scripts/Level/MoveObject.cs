@@ -14,7 +14,7 @@ public class MoveObject : MonoBehaviour {
 	void Start () {
 		player = GameObject.FindWithTag("Player").GetComponent<Player>();
 		thisTransform = transform;
-		posIni = gameObject.transform.position;
+        posIni = gameObject.transform.localPosition;
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GamePause += GamePause;
 		GameEventManager.GameUnpause += GameUnpause;
@@ -31,7 +31,7 @@ public class MoveObject : MonoBehaviour {
 	private void GameStart()
 	{
 		if(this != null && gameObject.activeInHierarchy) {
-			transform.position = posIni;
+            transform.localPosition = posIni;
 		}
 	}
 	void GamePause()

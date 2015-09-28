@@ -6,7 +6,7 @@ public class PartyData : MonoBehaviour {
 	public int choixOccurence;
 	// Use this for initialization
 	void Start () {
-		DontDestroyOnLoad(this.gameObject);
+		//DontDestroyOnLoad(this.gameObject);
 		choixOccurence = 2;
 	}
 

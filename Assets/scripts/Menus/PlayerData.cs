@@ -20,6 +20,20 @@ public class PlayerData : MonoBehaviour {
 		DontDestroyOnLoad(gameObject);
 		//Screen.SetResolution(800,600, false);
 	}
+    public void ToFrench()
+    {
+        Debug.Log("Lang FR");
+        SETUP.changeLang(GameSetup.languageList.french);
+        SETUP.startTranslate(GameSetup.languageList.french);
+        SETUP.translateSceneText();
+    }
+    public void ToEnglish()
+    {
+        Debug.Log("Lang EN");
+        SETUP.changeLang(GameSetup.languageList.english);
+        SETUP.startTranslate(GameSetup.languageList.english);
+        SETUP.translateSceneText();
+    }
 	public void trans () 
 	{
 		PROFILE = Resources.Load("Tuning/PlayerProfile") as PlayerProfile;

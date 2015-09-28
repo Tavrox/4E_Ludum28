@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="110" height="70" tilewidth="50" tileheight="50">
- <tileset firstgid="1" name="background" tilewidth="50" tileheight="50">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="110" height="70" tilewidth="50" tileheight="50" nextobjectid="263">
+ <tileset firstgid="1" name="background" tilewidth="50" tileheight="50" tilecount="108">
   <image source="tilesets/background.png" width="150" height="1800"/>
  </tileset>
- <tileset firstgid="109" name="tilesBG2" tilewidth="50" tileheight="50">
+ <tileset firstgid="109" name="tilesBG2" tilewidth="50" tileheight="50" tilecount="400">
   <image source="tilesets/tilesBG2.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="509" name="ecran" tilewidth="50" tileheight="50">
+ <tileset firstgid="509" name="ecran" tilewidth="50" tileheight="50" tilecount="25">
   <image source="tilesets/ecran.png" width="256" height="256"/>
  </tileset>
- <tileset firstgid="534" name="metal" tilewidth="50" tileheight="50">
+ <tileset firstgid="534" name="metal" tilewidth="50" tileheight="50" tilecount="15">
   <image source="tilesets/metal.png" width="150" height="250"/>
  </tileset>
- <tileset firstgid="549" name="lightlever" tilewidth="50" tileheight="50" spacing="2">
+ <tileset firstgid="549" name="lightlever" tilewidth="50" tileheight="50" spacing="2" tilecount="16">
   <image source="tilesets/lightlever.png" width="256" height="256"/>
  </tileset>
- <tileset firstgid="565" name="lightlever2" tilewidth="50" tileheight="50" spacing="2">
+ <tileset firstgid="565" name="lightlever2" tilewidth="50" tileheight="50" spacing="2" tilecount="16">
   <image source="tilesets/lightlever2.png" width="256" height="256"/>
  </tileset>
- <tileset firstgid="581" name="borders" tilewidth="50" tileheight="50">
+ <tileset firstgid="581" name="borders" tilewidth="50" tileheight="50" tilecount="50">
   <image source="tilesets/borders.png" width="256" height="512"/>
  </tileset>
- <tileset firstgid="631" name="bordersDark" tilewidth="50" tileheight="50">
+ <tileset firstgid="631" name="bordersDark" tilewidth="50" tileheight="50" tilecount="50">
   <image source="tilesets/bordersDark.png" width="256" height="512"/>
  </tileset>
  <layer name="Background" width="110" height="70">
@@ -2466,7 +2466,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Grille premier plan" width="110" height="70" visible="0">
+ <layer name="Grille premier plan" width="110" height="70">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -2540,7 +2540,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Grille premier plan entrée" width="110" height="70" visible="0">
+ <layer name="Grille premier plan entrée" width="110" height="70">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -2688,278 +2688,278 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup color="#ff0000" name="Collider_0" width="110" height="70">
-  <object x="1350" y="1250" width="300" height="50"/>
-  <object x="1700" y="1750" width="450" height="50"/>
-  <object x="2550" y="2150" width="100" height="100"/>
-  <object x="2050" y="2550" width="750" height="50"/>
-  <object x="650" y="1600" width="300" height="50"/>
-  <object x="900" y="1750" width="500" height="150"/>
-  <object x="950" y="2200" width="450" height="50"/>
-  <object x="2750" y="2700" width="350" height="50"/>
-  <object x="1600" y="1250" width="50" height="150"/>
-  <object x="1300" y="1850" width="150" height="100"/>
-  <object x="550" y="1800" width="50" height="450"/>
-  <object x="850" y="2150" width="100" height="100"/>
-  <object x="1350" y="2200" width="50" height="250"/>
-  <object x="1650" y="1800" width="550" height="150"/>
-  <object x="2750" y="2600" width="50" height="100"/>
-  <object x="3050" y="2350" width="50" height="400"/>
-  <object x="2650" y="1800" width="450" height="150"/>
-  <object x="3900" y="1350" width="50" height="200"/>
-  <object x="650" y="1450" width="50" height="200"/>
-  <object x="2150" y="1250" width="250" height="50"/>
-  <object x="3000" y="1450" width="650" height="50"/>
-  <object x="3300" y="1850" width="400" height="100"/>
-  <object x="3200" y="2450" width="350" height="50"/>
-  <object x="3350" y="2200" width="500" height="100"/>
-  <object x="3550" y="2300" width="50" height="200"/>
-  <object x="3000" y="1350" width="50" height="150"/>
-  <object x="2450" y="2250" width="750" height="100"/>
-  <object x="1600" y="2250" width="50" height="200"/>
-  <object x="3800" y="2150" width="100" height="50"/>
-  <object x="400" y="1450" width="300" height="50"/>
-  <object x="400" y="800" width="50" height="700"/>
-  <object x="400" y="800" width="600" height="50"/>
-  <object x="950" y="800" width="50" height="350"/>
-  <object x="650" y="1150" width="350" height="50"/>
-  <object x="1350" y="2450" width="300" height="50"/>
-  <object x="1600" y="2800" width="500" height="50"/>
-  <object x="2050" y="2600" width="50" height="200"/>
-  <object x="900" y="1650" width="50" height="100"/>
-  <object x="550" y="1800" width="350" height="50"/>
-  <object x="550" y="2200" width="350" height="50"/>
-  <object x="1600" y="2600" width="50" height="200"/>
-  <object x="1700" y="2200" width="450" height="50"/>
-  <object x="2150" y="2200" width="50" height="150"/>
-  <object x="1750" y="2300" width="450" height="50"/>
-  <object x="1600" y="2600" width="300" height="50"/>
-  <object x="1850" y="2500" width="50" height="100"/>
-  <object x="3900" y="2050" width="150" height="150"/>
-  <object x="1750" y="2300" width="50" height="250"/>
-  <object x="1750" y="2500" width="150" height="50"/>
-  <object x="3150" y="2300" width="50" height="200"/>
-  <object x="4000" y="2150" width="950" height="50"/>
-  <object x="3900" y="1500" width="150" height="50"/>
-  <object x="4000" y="1200" width="50" height="350"/>
-  <object x="4000" y="1200" width="750" height="50"/>
-  <object x="4700" y="1200" width="50" height="250"/>
-  <object x="4700" y="1400" width="250" height="50"/>
-  <object x="4900" y="1400" width="50" height="800"/>
-  <object x="3900" y="1750" width="150" height="150"/>
-  <object x="4050" y="1750" width="400" height="100"/>
-  <object x="4550" y="1850" width="200" height="100"/>
-  <object x="4250" y="1500" width="50" height="250"/>
-  <object x="4250" y="1500" width="250" height="50"/>
-  <object x="4450" y="1500" width="50" height="250"/>
-  <object x="4450" y="1700" width="200" height="150"/>
-  <object x="3600" y="1350" width="350" height="50"/>
-  <object x="3600" y="1350" width="50" height="150"/>
-  <object x="2600" y="1800" width="50" height="100"/>
-  <object x="2750" y="1250" width="50" height="250"/>
-  <object x="2750" y="1450" width="150" height="50"/>
-  <object x="2850" y="1350" width="50" height="150"/>
-  <object x="2900" y="1350" width="150" height="50"/>
-  <object x="1600" y="1350" width="600" height="50"/>
-  <object x="2150" y="1250" width="50" height="150"/>
-  <object x="1050" y="1300" width="350" height="50"/>
-  <object x="650" y="1250" width="450" height="50"/>
-  <object x="650" y="1150" width="50" height="150"/>
-  <object x="1600" y="2150" width="100" height="100"/>
-  <object x="2350" y="1150" width="50" height="150"/>
-  <object x="2350" y="1150" width="200" height="50"/>
-  <object x="2500" y="1150" width="50" height="150"/>
-  <object x="2500" y="1250" width="300" height="50"/>
+ <objectgroup color="#ff0000" name="Collider_0" visible="0">
+  <object id="1" x="1350" y="1250" width="300" height="50"/>
+  <object id="2" x="1700" y="1750" width="450" height="50"/>
+  <object id="3" x="2550" y="2150" width="100" height="100"/>
+  <object id="4" x="2050" y="2550" width="750" height="50"/>
+  <object id="5" x="650" y="1600" width="300" height="50"/>
+  <object id="6" x="900" y="1750" width="500" height="150"/>
+  <object id="7" x="950" y="2200" width="450" height="50"/>
+  <object id="8" x="2750" y="2700" width="350" height="50"/>
+  <object id="9" x="1600" y="1250" width="50" height="150"/>
+  <object id="10" x="1300" y="1850" width="150" height="100"/>
+  <object id="11" x="550" y="1800" width="50" height="450"/>
+  <object id="12" x="850" y="2150" width="100" height="100"/>
+  <object id="13" x="1350" y="2200" width="50" height="250"/>
+  <object id="14" x="1650" y="1800" width="550" height="150"/>
+  <object id="15" x="2750" y="2600" width="50" height="100"/>
+  <object id="16" x="3050" y="2350" width="50" height="400"/>
+  <object id="17" x="2650" y="1800" width="450" height="150"/>
+  <object id="18" x="3900" y="1350" width="50" height="200"/>
+  <object id="19" x="650" y="1450" width="50" height="200"/>
+  <object id="20" x="2150" y="1250" width="250" height="50"/>
+  <object id="21" x="3000" y="1450" width="650" height="50"/>
+  <object id="22" x="3300" y="1850" width="400" height="100"/>
+  <object id="23" x="3200" y="2450" width="350" height="50"/>
+  <object id="24" x="3350" y="2200" width="500" height="100"/>
+  <object id="25" x="3550" y="2300" width="50" height="200"/>
+  <object id="26" x="3000" y="1350" width="50" height="150"/>
+  <object id="27" x="2450" y="2250" width="750" height="100"/>
+  <object id="28" x="1600" y="2250" width="50" height="200"/>
+  <object id="29" x="3800" y="2150" width="100" height="50"/>
+  <object id="30" x="400" y="1450" width="300" height="50"/>
+  <object id="31" x="400" y="800" width="50" height="700"/>
+  <object id="32" x="400" y="800" width="600" height="50"/>
+  <object id="33" x="950" y="800" width="50" height="350"/>
+  <object id="34" x="650" y="1150" width="350" height="50"/>
+  <object id="35" x="1350" y="2450" width="300" height="50"/>
+  <object id="36" x="1600" y="2800" width="500" height="50"/>
+  <object id="37" x="2050" y="2600" width="50" height="200"/>
+  <object id="38" x="900" y="1650" width="50" height="100"/>
+  <object id="39" x="550" y="1800" width="350" height="50"/>
+  <object id="40" x="550" y="2200" width="350" height="50"/>
+  <object id="41" x="1600" y="2600" width="50" height="200"/>
+  <object id="42" x="1700" y="2200" width="450" height="50"/>
+  <object id="43" x="2150" y="2200" width="50" height="150"/>
+  <object id="44" x="1750" y="2300" width="450" height="50"/>
+  <object id="45" x="1600" y="2600" width="300" height="50"/>
+  <object id="46" x="1850" y="2500" width="50" height="100"/>
+  <object id="47" x="3900" y="2050" width="150" height="150"/>
+  <object id="48" x="1750" y="2300" width="50" height="250"/>
+  <object id="49" x="1750" y="2500" width="150" height="50"/>
+  <object id="50" x="3150" y="2300" width="50" height="200"/>
+  <object id="51" x="4000" y="2150" width="950" height="50"/>
+  <object id="52" x="3900" y="1500" width="150" height="50"/>
+  <object id="53" x="4000" y="1200" width="50" height="350"/>
+  <object id="54" x="4000" y="1200" width="750" height="50"/>
+  <object id="55" x="4700" y="1200" width="50" height="250"/>
+  <object id="56" x="4700" y="1400" width="250" height="50"/>
+  <object id="57" x="4900" y="1400" width="50" height="800"/>
+  <object id="58" x="3900" y="1750" width="150" height="150"/>
+  <object id="59" x="4050" y="1750" width="400" height="100"/>
+  <object id="60" x="4550" y="1850" width="200" height="100"/>
+  <object id="61" x="4250" y="1500" width="50" height="250"/>
+  <object id="62" x="4250" y="1500" width="250" height="50"/>
+  <object id="63" x="4450" y="1500" width="50" height="250"/>
+  <object id="64" x="4450" y="1700" width="200" height="150"/>
+  <object id="65" x="3600" y="1350" width="350" height="50"/>
+  <object id="66" x="3600" y="1350" width="50" height="150"/>
+  <object id="67" x="2600" y="1800" width="50" height="100"/>
+  <object id="68" x="2750" y="1250" width="50" height="250"/>
+  <object id="69" x="2750" y="1450" width="150" height="50"/>
+  <object id="70" x="2850" y="1350" width="50" height="150"/>
+  <object id="71" x="2900" y="1350" width="150" height="50"/>
+  <object id="72" x="1600" y="1350" width="600" height="50"/>
+  <object id="73" x="2150" y="1250" width="50" height="150"/>
+  <object id="74" x="1050" y="1300" width="350" height="50"/>
+  <object id="75" x="650" y="1250" width="450" height="50"/>
+  <object id="76" x="650" y="1150" width="50" height="150"/>
+  <object id="77" x="1600" y="2150" width="100" height="100"/>
+  <object id="78" x="2350" y="1150" width="50" height="150"/>
+  <object id="79" x="2350" y="1150" width="200" height="50"/>
+  <object id="80" x="2500" y="1150" width="50" height="150"/>
+  <object id="81" x="2500" y="1250" width="300" height="50"/>
  </objectgroup>
- <objectgroup color="#f9f9ff" name="1" width="110" height="70" visible="0">
-  <object name="1Patrol1" type="Patroler" x="950" y="1700" width="48" height="48"/>
-  <object name="1Patrol2" type="Patroler" x="1800" y="1700" width="48" height="48"/>
-  <object name="1Patrol3" type="Patroler" x="2000" y="1700" width="48" height="48"/>
-  <object name="1BaseArcUB" type="BaseArcU" x="2050" y="1650" width="50" height="100"/>
-  <object name="1ArcVertB1" type="ArcVertical" x="2050" y="1450" width="50" height="100"/>
-  <object name="1BaseArcDB" type="BaseArcD" x="2050" y="1350" width="50" height="100"/>
-  <object name="1Caisse1" type="Crate" x="1950" y="2100" width="100" height="100"/>
-  <object name="1porteA" type="TriggeredDoor" x="1900" y="1900" width="50" height="300"/>
-  <object name="1TimerA" type="TimedBtn" x="600" y="2100" width="50" height="50"/>
-  <object name="1Patrol4" type="Patroler" x="1150" y="2150" width="48" height="48"/>
-  <object name="1Poursuiveur" type="Walker" x="2100" y="2500" width="48" height="48"/>
-  <object name="1BaseArcUC" type="BaseArcU" x="2650" y="2150" width="50" height="100"/>
-  <object name="1BaseArcDC" type="BaseArcD" x="2650" y="1950" width="50" height="100"/>
-  <object name="1END" type="EndDoor" x="2950" y="2600" width="50" height="100"/>
-  <object name="1BaseArcLA" type="BaseArcL" x="1500" y="2400" width="100" height="50"/>
-  <object name="1BaseArcRA" type="BaseArcR" x="1400" y="2400" width="100" height="50"/>
-  <object name="1Patrol5" type="Patroler" x="2800" y="1750" width="48" height="48"/>
-  <object name="1BaseArcRB" type="BaseArcR" x="3100" y="1900" width="100" height="50"/>
-  <object name="1BaseArcLB" type="BaseArcL" x="3200" y="1900" width="100" height="50"/>
-  <object name="1Caisse2" type="Crate" x="3050" y="2150" width="100" height="100"/>
-  <object name="1Patrol6" type="Patroler" x="3350" y="2150" width="48" height="48"/>
-  <object name="1ArcVertB2" type="ArcVertical" x="2050" y="1550" width="50" height="100"/>
-  <object name="1ArcVertC" type="ArcVertical" x="2650" y="2050" width="50" height="100"/>
-  <object name="1BaseArcDD" type="BaseArcD" x="650" y="1350" width="50" height="100"/>
-  <object name="1BaseArcUD" type="BaseArcU" x="650" y="1300" width="50" height="50"/>
-  <object name="1PorteB" type="TriggeredDoor" x="3700" y="1850" width="200" height="50"/>
-  <object name="1BaseArcUA" type="BaseArcU" x="1750" y="1650" width="50" height="100"/>
-  <object name="1ArcVertA2" type="ArcVertical" x="1750" y="1550" width="50" height="100"/>
-  <object name="1ArcVertA1" type="ArcVertical" x="1750" y="1450" width="50" height="100"/>
-  <object name="1BaseArcDA" type="BaseArcD" x="1750" y="1350" width="50" height="100"/>
-  <object name="1BaseArcRC" type="BaseArcR" x="4600" y="1300" width="100" height="50"/>
-  <object name="1BaseArcLC" type="BaseArcL" x="4050" y="1300" width="100" height="50"/>
-  <object name="1ArcHorizC1" type="ArcHorizontal" x="4150" y="1300" width="100" height="50"/>
-  <object name="1ArcHorizC2" type="ArcHorizontal" x="4250" y="1300" width="100" height="50"/>
-  <object name="1ArcHorizC3" type="ArcHorizontal" x="4350" y="1300" width="100" height="50"/>
-  <object name="1ArcHorizC4" type="ArcHorizontal" x="4450" y="1300" width="150" height="50"/>
-  <object name="1BaseArcUE" type="BaseArcU" x="4000" y="1550" width="50" height="100"/>
-  <object name="1BaseArcDE" type="BaseArcD" x="4000" y="1650" width="50" height="100"/>
-  <object name="INTERMITTENT 1" x="4050" y="1550" width="50" height="200"/>
-  <object name="1BaseArcLD" type="BaseArcL" x="4750" y="1850" width="100" height="50"/>
-  <object name="1BaseArcRD" type="BaseArcR" x="4850" y="1850" width="50" height="50"/>
-  <object name="1BaseArcLE" type="BaseArcL" x="4750" y="1900" width="100" height="50"/>
-  <object name="1BaseArcRE" type="BaseArcR" x="4850" y="1900" width="50" height="50"/>
-  <object name="INTERMITTENTS 1" x="4750" y="1800" width="150" height="50"/>
-  <object name="1Patrol7" type="Patroler" x="4200" y="2100" width="48" height="48"/>
-  <object name="PAS HYPER FAST 1" x="4050" y="2050" width="500" height="50"/>
-  <object name="1PorteC" type="TriggeredDoor" x="2700" y="1950" width="50" height="300"/>
-  <object name="1boutonC" type="Lever" x="3450" y="2350" width="50" height="50"/>
-  <object name="ABANDONNE :A pousser avant, sinon le timer est trop court MOUAHAHAHAH" x="2750" y="2100" width="500" height="50"/>
-  <object name="INTERMITTENT ACTIVE LONGTEMPS (MAIS DOIT POUVOIR ETRE PASSE MEME ACTIVE, SI LE SAUT EST PRECIS)" x="4050" y="1350" width="650" height="50"/>
+ <objectgroup color="#f9f9ff" name="1" visible="0">
+  <object id="82" name="1Patrol1" type="Patroler" x="950" y="1700" width="48" height="48"/>
+  <object id="83" name="1Patrol2" type="Patroler" x="1800" y="1700" width="48" height="48"/>
+  <object id="84" name="1Patrol3" type="Patroler" x="2000" y="1700" width="48" height="48"/>
+  <object id="85" name="1BaseArcUB" type="BaseArcU" x="2050" y="1650" width="50" height="100"/>
+  <object id="86" name="1ArcVertB1" type="ArcVertical" x="2050" y="1450" width="50" height="100"/>
+  <object id="87" name="1BaseArcDB" type="BaseArcD" x="2050" y="1350" width="50" height="100"/>
+  <object id="88" name="1Caisse1" type="Crate" x="1950" y="2100" width="100" height="100"/>
+  <object id="89" name="1porteA" type="TriggeredDoor" x="1900" y="1900" width="50" height="300"/>
+  <object id="90" name="1TimerA" type="TimedBtn" x="600" y="2100" width="50" height="50"/>
+  <object id="91" name="1Patrol4" type="Patroler" x="1150" y="2150" width="48" height="48"/>
+  <object id="92" name="1Poursuiveur" type="Walker" x="2100" y="2500" width="48" height="48"/>
+  <object id="93" name="1BaseArcUC" type="BaseArcU" x="2650" y="2150" width="50" height="100"/>
+  <object id="94" name="1BaseArcDC" type="BaseArcD" x="2650" y="1950" width="50" height="100"/>
+  <object id="95" name="1END" type="EndDoor" x="2950" y="2600" width="50" height="100"/>
+  <object id="96" name="1BaseArcLA" type="BaseArcL" x="1500" y="2400" width="100" height="50"/>
+  <object id="97" name="1BaseArcRA" type="BaseArcR" x="1400" y="2400" width="100" height="50"/>
+  <object id="98" name="1Patrol5" type="Patroler" x="2800" y="1750" width="48" height="48"/>
+  <object id="99" name="1BaseArcRB" type="BaseArcR" x="3100" y="1900" width="100" height="50"/>
+  <object id="100" name="1BaseArcLB" type="BaseArcL" x="3200" y="1900" width="100" height="50"/>
+  <object id="101" name="1Caisse2" type="Crate" x="3050" y="2150" width="100" height="100"/>
+  <object id="102" name="1Patrol6" type="Patroler" x="3350" y="2150" width="48" height="48"/>
+  <object id="103" name="1ArcVertB2" type="ArcVertical" x="2050" y="1550" width="50" height="100"/>
+  <object id="104" name="1ArcVertC" type="ArcVertical" x="2650" y="2050" width="50" height="100"/>
+  <object id="105" name="1BaseArcDD" type="BaseArcD" x="650" y="1350" width="50" height="100"/>
+  <object id="106" name="1BaseArcUD" type="BaseArcU" x="650" y="1300" width="50" height="50"/>
+  <object id="107" name="1PorteB" type="TriggeredDoor" x="3700" y="1850" width="200" height="50"/>
+  <object id="108" name="1BaseArcUA" type="BaseArcU" x="1750" y="1650" width="50" height="100"/>
+  <object id="109" name="1ArcVertA2" type="ArcVertical" x="1750" y="1550" width="50" height="100"/>
+  <object id="110" name="1ArcVertA1" type="ArcVertical" x="1750" y="1450" width="50" height="100"/>
+  <object id="111" name="1BaseArcDA" type="BaseArcD" x="1750" y="1350" width="50" height="100"/>
+  <object id="112" name="1BaseArcRC" type="BaseArcR" x="4600" y="1300" width="100" height="50"/>
+  <object id="113" name="1BaseArcLC" type="BaseArcL" x="4050" y="1300" width="100" height="50"/>
+  <object id="114" name="1ArcHorizC1" type="ArcHorizontal" x="4150" y="1300" width="100" height="50"/>
+  <object id="115" name="1ArcHorizC2" type="ArcHorizontal" x="4250" y="1300" width="100" height="50"/>
+  <object id="116" name="1ArcHorizC3" type="ArcHorizontal" x="4350" y="1300" width="100" height="50"/>
+  <object id="117" name="1ArcHorizC4" type="ArcHorizontal" x="4450" y="1300" width="150" height="50"/>
+  <object id="118" name="1BaseArcUE" type="BaseArcU" x="4000" y="1550" width="50" height="100"/>
+  <object id="119" name="1BaseArcDE" type="BaseArcD" x="4000" y="1650" width="50" height="100"/>
+  <object id="120" name="INTERMITTENT 1" x="4050" y="1550" width="50" height="200"/>
+  <object id="121" name="1BaseArcLD" type="BaseArcL" x="4750" y="1850" width="100" height="50"/>
+  <object id="122" name="1BaseArcRD" type="BaseArcR" x="4850" y="1850" width="50" height="50"/>
+  <object id="123" name="1BaseArcLE" type="BaseArcL" x="4750" y="1900" width="100" height="50"/>
+  <object id="124" name="1BaseArcRE" type="BaseArcR" x="4850" y="1900" width="50" height="50"/>
+  <object id="125" name="INTERMITTENTS 1" x="4750" y="1800" width="150" height="50"/>
+  <object id="126" name="1Patrol7" type="Patroler" x="4200" y="2100" width="48" height="48"/>
+  <object id="127" name="PAS HYPER FAST 1" x="4050" y="2050" width="500" height="50"/>
+  <object id="128" name="1PorteC" type="TriggeredDoor" x="2700" y="1950" width="50" height="300"/>
+  <object id="129" name="1boutonC" type="Lever" x="3450" y="2350" width="50" height="50"/>
+  <object id="130" name="ABANDONNE :A pousser avant, sinon le timer est trop court MOUAHAHAHAH" x="2750" y="2100" width="500" height="50"/>
+  <object id="131" name="INTERMITTENT ACTIVE LONGTEMPS (MAIS DOIT POUVOIR ETRE PASSE MEME ACTIVE, SI LE SAUT EST PRECIS)" x="4050" y="1350" width="650" height="50"/>
  </objectgroup>
- <objectgroup name="2" width="110" height="70" visible="0">
-  <object name="2Poursuiveur" type="Walker" x="3450" y="2400" width="48" height="48"/>
-  <object name="2Poursuiveur1" type="Walker" x="950" y="1700" width="48" height="48"/>
-  <object name="2Caisse1" type="Crate" x="1000" y="1650" width="100" height="100"/>
-  <object name="2Caisse2" type="Crate" x="2050" y="2100" width="100" height="100"/>
-  <object name="2Poursuiveur3" type="Walker" x="2000" y="2150" width="48" height="48"/>
-  <object name="2Poursuiveur2" type="Walker" x="1000" y="2150" width="48" height="48"/>
-  <object name="2tourelleL" type="TurretL" x="1800" y="2400" width="50" height="100"/>
-  <object name="CLE ! 2" type="Start" x="3250" y="2350" width="48" height="48"/>
-  <object name="2Fin" type="EndDoor" x="2900" y="2500" width="50" height="150"/>
-  <object name="2PorteA" type="TriggeredDoor" x="1750" y="1350" width="50" height="400"/>
-  <object name="2SequencedBtnB" type="SequencedBtn" x="650" y="2100" width="48" height="48"/>
-  <object name="2BaseArcLA" type="BaseArcL" x="2200" y="1850" width="100" height="50"/>
-  <object name="2BasearcRA" type="BaseArcR" x="2550" y="1850" width="100" height="50"/>
-  <object name="2ArcHorizA1" type="ArcHorizontal" x="2300" y="1850" width="100" height="50"/>
-  <object name="2ArcHorizA2" type="ArcHorizontal" x="2400" y="1850" width="150" height="50"/>
-  <object name="2BaseArcLB" type="BaseArcL" x="3100" y="1850" width="100" height="50"/>
-  <object name="2BaseArcRB" type="BaseArcR" x="3200" y="1850" width="100" height="50"/>
-  <object name="2BaseArcLD" type="BaseArcL" x="3700" y="1850" width="100" height="50"/>
-  <object name="2BaseArcRD" type="BaseArcR" x="3800" y="1850" width="100" height="50"/>
-  <object name="2BaseArcLC" type="BaseArcL" x="3100" y="1900" width="100" height="50"/>
-  <object name="2BaseArcRC" type="BaseArcR" x="3200" y="1900" width="100" height="50"/>
-  <object name="2SequencedBtnA" type="SequencedBtn" x="1400" y="2350" width="48" height="48"/>
-  <object name="2Patrouilleur" type="Patroler" x="2700" y="1750" width="48" height="48"/>
-  <object name="2BaseArcD" type="BaseArcD" x="3550" y="2100" width="50" height="100"/>
-  <object name="2BaseArcU" type="BaseArcU" x="3550" y="1950" width="50" height="100"/>
-  <object name="PATROLLER ZONE 2" type="Start" x="1650" y="2100" width="550" height="50"/>
-  <object name="2PorteB" type="TriggeredDoor" x="4000" y="1550" width="50" height="200"/>
-  <object name="2PorteC" type="TriggeredDoor" x="4000" y="1900" width="50" height="150"/>
-  <object name="2SequencedBtnC" type="SequencedBtn" x="850" y="1050" width="48" height="48"/>
+ <objectgroup name="2" visible="0">
+  <object id="132" name="2Poursuiveur" type="Walker" x="3450" y="2400" width="48" height="48"/>
+  <object id="133" name="2Poursuiveur1" type="Walker" x="950" y="1700" width="48" height="48"/>
+  <object id="134" name="2Caisse1" type="Crate" x="1000" y="1650" width="100" height="100"/>
+  <object id="135" name="2Caisse2" type="Crate" x="2050" y="2100" width="100" height="100"/>
+  <object id="136" name="2Poursuiveur3" type="Walker" x="2000" y="2150" width="48" height="48"/>
+  <object id="137" name="2Poursuiveur2" type="Walker" x="1000" y="2150" width="48" height="48"/>
+  <object id="138" name="2tourelleL" type="TurretL" x="1800" y="2400" width="50" height="100"/>
+  <object id="139" name="CLE ! 2" type="Start" x="3250" y="2350" width="48" height="48"/>
+  <object id="140" name="2Fin" type="EndDoor" x="2900" y="2500" width="50" height="150"/>
+  <object id="141" name="2PorteA" type="TriggeredDoor" x="1750" y="1350" width="50" height="400"/>
+  <object id="142" name="2SequencedBtnB" type="SequencedBtn" x="650" y="2100" width="48" height="48"/>
+  <object id="143" name="2BaseArcLA" type="BaseArcL" x="2200" y="1850" width="100" height="50"/>
+  <object id="144" name="2BasearcRA" type="BaseArcR" x="2550" y="1850" width="100" height="50"/>
+  <object id="145" name="2ArcHorizA1" type="ArcHorizontal" x="2300" y="1850" width="100" height="50"/>
+  <object id="146" name="2ArcHorizA2" type="ArcHorizontal" x="2400" y="1850" width="150" height="50"/>
+  <object id="147" name="2BaseArcLB" type="BaseArcL" x="3100" y="1850" width="100" height="50"/>
+  <object id="148" name="2BaseArcRB" type="BaseArcR" x="3200" y="1850" width="100" height="50"/>
+  <object id="149" name="2BaseArcLD" type="BaseArcL" x="3700" y="1850" width="100" height="50"/>
+  <object id="150" name="2BaseArcRD" type="BaseArcR" x="3800" y="1850" width="100" height="50"/>
+  <object id="151" name="2BaseArcLC" type="BaseArcL" x="3100" y="1900" width="100" height="50"/>
+  <object id="152" name="2BaseArcRC" type="BaseArcR" x="3200" y="1900" width="100" height="50"/>
+  <object id="153" name="2SequencedBtnA" type="SequencedBtn" x="1400" y="2350" width="48" height="48"/>
+  <object id="154" name="2Patrouilleur" type="Patroler" x="2700" y="1750" width="48" height="48"/>
+  <object id="155" name="2BaseArcD" type="BaseArcD" x="3550" y="2100" width="50" height="100"/>
+  <object id="156" name="2BaseArcU" type="BaseArcU" x="3550" y="1950" width="50" height="100"/>
+  <object id="157" name="PATROLLER ZONE 2" type="Start" x="1650" y="2100" width="550" height="50"/>
+  <object id="158" name="2PorteB" type="TriggeredDoor" x="4000" y="1550" width="50" height="200"/>
+  <object id="159" name="2PorteC" type="TriggeredDoor" x="4000" y="1900" width="50" height="150"/>
+  <object id="160" name="2SequencedBtnC" type="SequencedBtn" x="850" y="1050" width="48" height="48"/>
  </objectgroup>
- <objectgroup color="#ffffff" name="3" width="110" height="70" visible="0">
-  <object name="3TourelleU" type="TurretU" x="950" y="1700" width="50" height="50"/>
-  <object name="3TourelleD1" type="TurretD" x="1550" y="1300" width="50" height="50"/>
-  <object name="3TourelleL2" type="TurretL" x="1400" y="1800" width="50" height="50"/>
-  <object name="3TourelleL3" type="TurretL" x="2150" y="1750" width="50" height="50"/>
-  <object name="3BaseArcLA" type="BaseArcL" x="2200" y="1800" width="100" height="50"/>
-  <object name="3BaseArcRA" type="BaseArcR" x="2500" y="1800" width="100" height="50"/>
-  <object name="3ArcHorizA1" type="ArcHorizontal" x="2300" y="1800" width="100" height="50"/>
-  <object name="3ArcHorizA2" type="ArcHorizontal" x="2400" y="1800" width="100" height="50"/>
-  <object name="CLE ! 3" type="Start" x="850" y="1050" width="48" height="48"/>
-  <object name="3PatrouilleurVert" type="Patroler" x="450" y="1150" width="50" height="50"/>
-  <object name="3BaseArcLB" type="BaseArcL" x="3100" y="1850" width="100" height="50"/>
-  <object name="3BaseArcRB" type="BaseArcR" x="3200" y="1850" width="100" height="50"/>
-  <object name="3BaseArcDA" type="BaseArcD" x="3400" y="1500" width="50" height="100"/>
-  <object name="3BaseArcUA" type="BaseArcU" x="3400" y="1750" width="50" height="100"/>
-  <object name="3ArcVertA" type="ArcVertical" x="3400" y="1600" width="50" height="150"/>
-  <object name="3 Laser intermitant" x="3450" y="1550" width="150" height="100"/>
-  <object name="3FIN" type="EndDoor" x="650" y="2100" width="50" height="100"/>
-  <object name="3ArcVertB" type="ArcVertical" x="750" y="950" width="50" height="100"/>
-  <object name="3BaseArcDB" type="BaseArcD" x="750" y="850" width="50" height="100"/>
-  <object name="3BaseArcUB" type="BaseArcU" x="750" y="1050" width="50" height="100"/>
-  <object name="3TourelleR" type="TurretR" x="2500" y="2200" width="50" height="50"/>
-  <object name="3TourelleL4" type="TurretL" x="3600" y="1800" width="50" height="50"/>
-  <object name="3 Short !" x="3700" y="1800" width="200" height="100"/>
-  <object name="3PatrouilleurVert2" type="Patroler" x="4200" y="1550" width="50" height="50"/>
-  <object name="3TourelleL5" type="TurretL" x="4500" y="1650" width="50" height="50"/>
-  <object name="3Bouton" type="Lever" x="1550" y="2350" width="50" height="50"/>
-  <object name="3porte" type="TriggeredDoor" x="1100" y="1900" width="50" height="300"/>
-  <object name="3Poursuiveur" type="Walker" x="3450" y="2400" width="50" height="50"/>
-  <object name="3PatrouilleurHoriz" type="Patroler" x="4100" y="2100" width="50" height="50"/>
-  <object name="3TourelleD2" type="TurretD" x="3250" y="1900" width="50" height="50"/>
-  <object name="3Caisse1" type="Crate" x="3300" y="1750" width="100" height="100"/>
+ <objectgroup color="#ffffff" name="3" visible="0">
+  <object id="161" name="3TourelleU" type="TurretU" x="950" y="1700" width="50" height="50"/>
+  <object id="162" name="3TourelleD1" type="TurretD" x="1550" y="1300" width="50" height="50"/>
+  <object id="163" name="3TourelleL2" type="TurretL" x="1400" y="1800" width="50" height="50"/>
+  <object id="164" name="3TourelleL3" type="TurretL" x="2150" y="1750" width="50" height="50"/>
+  <object id="165" name="3BaseArcLA" type="BaseArcL" x="2200" y="1800" width="100" height="50"/>
+  <object id="166" name="3BaseArcRA" type="BaseArcR" x="2500" y="1800" width="100" height="50"/>
+  <object id="167" name="3ArcHorizA1" type="ArcHorizontal" x="2300" y="1800" width="100" height="50"/>
+  <object id="168" name="3ArcHorizA2" type="ArcHorizontal" x="2400" y="1800" width="100" height="50"/>
+  <object id="169" name="CLE ! 3" type="Start" x="850" y="1050" width="48" height="48"/>
+  <object id="170" name="3PatrouilleurVert" type="Patroler" x="450" y="1150" width="50" height="50"/>
+  <object id="171" name="3BaseArcLB" type="BaseArcL" x="3100" y="1850" width="100" height="50"/>
+  <object id="172" name="3BaseArcRB" type="BaseArcR" x="3200" y="1850" width="100" height="50"/>
+  <object id="173" name="3BaseArcDA" type="BaseArcD" x="3400" y="1500" width="50" height="100"/>
+  <object id="174" name="3BaseArcUA" type="BaseArcU" x="3400" y="1750" width="50" height="100"/>
+  <object id="175" name="3ArcVertA" type="ArcVertical" x="3400" y="1600" width="50" height="150"/>
+  <object id="176" name="3 Laser intermitant" x="3450" y="1550" width="150" height="100"/>
+  <object id="177" name="3FIN" type="EndDoor" x="650" y="2100" width="50" height="100"/>
+  <object id="178" name="3ArcVertB" type="ArcVertical" x="750" y="950" width="50" height="100"/>
+  <object id="179" name="3BaseArcDB" type="BaseArcD" x="750" y="850" width="50" height="100"/>
+  <object id="180" name="3BaseArcUB" type="BaseArcU" x="750" y="1050" width="50" height="100"/>
+  <object id="181" name="3TourelleR" type="TurretR" x="2500" y="2200" width="50" height="50"/>
+  <object id="182" name="3TourelleL4" type="TurretL" x="3600" y="1800" width="50" height="50"/>
+  <object id="183" name="3 Short !" x="3700" y="1800" width="200" height="100"/>
+  <object id="184" name="3PatrouilleurVert2" type="Patroler" x="4200" y="1550" width="50" height="50"/>
+  <object id="185" name="3TourelleL5" type="TurretL" x="4500" y="1650" width="50" height="50"/>
+  <object id="186" name="3Bouton" type="Lever" x="1550" y="2350" width="50" height="50"/>
+  <object id="187" name="3porte" type="TriggeredDoor" x="1100" y="1900" width="50" height="300"/>
+  <object id="188" name="3Poursuiveur" type="Walker" x="3450" y="2400" width="50" height="50"/>
+  <object id="189" name="3PatrouilleurHoriz" type="Patroler" x="4100" y="2100" width="50" height="50"/>
+  <object id="190" name="3TourelleD2" type="TurretD" x="3250" y="1900" width="50" height="50"/>
+  <object id="191" name="3Caisse1" type="Crate" x="3300" y="1750" width="100" height="100"/>
  </objectgroup>
- <objectgroup color="#ffffff" name="4" width="110" height="70" visible="0">
-  <object name="4PatrouilleurVert2" type="Patroler" x="600" y="1200" width="50" height="50"/>
-  <object name="4PatrouilleurVert1" type="Patroler" x="450" y="1050" width="50" height="50"/>
-  <object name="4PatrouilleurHoriz1" type="Patroler" x="850" y="1100" width="50" height="50"/>
-  <object name="4Poursuiveur 1" type="Walker" x="950" y="1700" width="50" height="50"/>
-  <object name="4BaseArcUA" type="BaseArcU" x="1750" y="1650" width="50" height="100"/>
-  <object name="4ArcVertA1" type="ArcVertical" x="1750" y="1450" width="50" height="100"/>
-  <object name="4BaseArcDA" type="BaseArcD" x="1750" y="1350" width="50" height="100"/>
-  <object name="4ArcVertA2" type="ArcVertical" x="1750" y="1550" width="50" height="100"/>
-  <object name="4fin" type="EndDoor" x="1850" y="1650" width="50" height="100"/>
-  <object name="4Poursuiveur3" type="Walker" x="600" y="2150" width="50" height="50"/>
-  <object name="4Poursuiveur4" type="Walker" x="950" y="2150" width="50" height="50"/>
-  <object name="4BaseArcRC" type="BaseArcR" x="1500" y="2350" width="100" height="50"/>
-  <object name="4BaseArcLC" type="BaseArcL" x="1400" y="2350" width="100" height="50"/>
-  <object name="4BaseArcRA" type="BaseArcR" x="2550" y="1800" width="100" height="50"/>
-  <object name="4BaseArcLA" type="BaseArcL" x="2200" y="1800" width="100" height="50"/>
-  <object name="4ArcHorizA2" type="ArcHorizontal" x="2450" y="1800" width="100" height="50"/>
-  <object name="4ArcHorizA1" type="ArcHorizontal" x="2300" y="1800" width="150" height="50"/>
-  <object name="4tourelleL" type="TurretL" x="1800" y="2400" width="50" height="100"/>
-  <object name="4Poursuiveur5" type="Walker" x="3450" y="2400" width="48" height="48"/>
-  <object name="4porteA" type="TriggeredDoor" x="1850" y="1900" width="50" height="300"/>
-  <object name="4TimerA" type="TimedBtn" x="650" y="2100" width="50" height="50"/>
-  <object name="4Timer encore plus short !" x="750" y="2050" width="150" height="50"/>
-  <object name="4timerB" type="TimedBtn" x="1700" y="2700" width="50" height="50"/>
-  <object name="4porteB" type="TriggeredDoor" x="2750" y="1950" width="50" height="300"/>
-  <object name="4Poursuiveur6" type="Walker" x="2950" y="2650" width="48" height="48"/>
-  <object name="4Patrouilleur" type="Patroler" x="4150" y="2100" width="48" height="48"/>
-  <object name="4tourelleD" type="TurretD" x="2950" y="1450" width="100" height="50"/>
-  <object name="4BaseArcLB" type="BaseArcL" x="3700" y="1850" width="100" height="50"/>
-  <object name="4BaseArcRB" type="BaseArcR" x="3800" y="1850" width="100" height="50"/>
-  <object name="4 SHORT !" type="Start" x="3700" y="1750" width="200" height="50"/>
-  <object name="4Patrouilleur" type="Patroler" x="4300" y="1450" width="48" height="48"/>
-  <object name="4Poursuiveur7" type="Walker" x="4200" y="1700" width="48" height="48"/>
-  <object name="Clé ! 4" x="3400" y="1750" width="50" height="50"/>
-  <object name="4BaseArcLC" type="BaseArcL" x="3100" y="1850" width="100" height="50"/>
-  <object name="4BaseArcRC" type="BaseArcR" x="3200" y="1850" width="100" height="50"/>
+ <objectgroup color="#ffffff" name="4" visible="0">
+  <object id="192" name="4PatrouilleurVert2" type="Patroler" x="600" y="1200" width="50" height="50"/>
+  <object id="193" name="4PatrouilleurVert1" type="Patroler" x="450" y="1050" width="50" height="50"/>
+  <object id="194" name="4PatrouilleurHoriz1" type="Patroler" x="850" y="1100" width="50" height="50"/>
+  <object id="195" name="4Poursuiveur 1" type="Walker" x="950" y="1700" width="50" height="50"/>
+  <object id="196" name="4BaseArcUA" type="BaseArcU" x="1750" y="1650" width="50" height="100"/>
+  <object id="197" name="4ArcVertA1" type="ArcVertical" x="1750" y="1450" width="50" height="100"/>
+  <object id="198" name="4BaseArcDA" type="BaseArcD" x="1750" y="1350" width="50" height="100"/>
+  <object id="199" name="4ArcVertA2" type="ArcVertical" x="1750" y="1550" width="50" height="100"/>
+  <object id="200" name="4fin" type="EndDoor" x="1850" y="1650" width="50" height="100"/>
+  <object id="201" name="4Poursuiveur3" type="Walker" x="600" y="2150" width="50" height="50"/>
+  <object id="202" name="4Poursuiveur4" type="Walker" x="950" y="2150" width="50" height="50"/>
+  <object id="203" name="4BaseArcRC" type="BaseArcR" x="1500" y="2350" width="100" height="50"/>
+  <object id="204" name="4BaseArcLC" type="BaseArcL" x="1400" y="2350" width="100" height="50"/>
+  <object id="205" name="4BaseArcRA" type="BaseArcR" x="2550" y="1800" width="100" height="50"/>
+  <object id="206" name="4BaseArcLA" type="BaseArcL" x="2200" y="1800" width="100" height="50"/>
+  <object id="207" name="4ArcHorizA2" type="ArcHorizontal" x="2450" y="1800" width="100" height="50"/>
+  <object id="208" name="4ArcHorizA1" type="ArcHorizontal" x="2300" y="1800" width="150" height="50"/>
+  <object id="209" name="4tourelleL" type="TurretL" x="1800" y="2400" width="50" height="100"/>
+  <object id="210" name="4Poursuiveur5" type="Walker" x="3450" y="2400" width="48" height="48"/>
+  <object id="211" name="4porteA" type="TriggeredDoor" x="1850" y="1900" width="50" height="300"/>
+  <object id="212" name="4TimerA" type="TimedBtn" x="650" y="2100" width="50" height="50"/>
+  <object id="213" name="4Timer encore plus short !" x="750" y="2050" width="150" height="50"/>
+  <object id="214" name="4timerB" type="TimedBtn" x="1700" y="2700" width="50" height="50"/>
+  <object id="215" name="4porteB" type="TriggeredDoor" x="2750" y="1950" width="50" height="300"/>
+  <object id="216" name="4Poursuiveur6" type="Walker" x="2950" y="2650" width="48" height="48"/>
+  <object id="217" name="4Patrouilleur" type="Patroler" x="4150" y="2100" width="48" height="48"/>
+  <object id="218" name="4tourelleD" type="TurretD" x="2950" y="1450" width="100" height="50"/>
+  <object id="219" name="4BaseArcLB" type="BaseArcL" x="3700" y="1850" width="100" height="50"/>
+  <object id="220" name="4BaseArcRB" type="BaseArcR" x="3800" y="1850" width="100" height="50"/>
+  <object id="221" name="4 SHORT !" type="Start" x="3700" y="1750" width="200" height="50"/>
+  <object id="222" name="4Patrouilleur" type="Patroler" x="4300" y="1450" width="48" height="48"/>
+  <object id="223" name="4Poursuiveur7" type="Walker" x="4200" y="1700" width="48" height="48"/>
+  <object id="224" name="Clé ! 4" x="3400" y="1750" width="50" height="50"/>
+  <object id="225" name="4BaseArcLC" type="BaseArcL" x="3100" y="1850" width="100" height="50"/>
+  <object id="226" name="4BaseArcRC" type="BaseArcR" x="3200" y="1850" width="100" height="50"/>
  </objectgroup>
- <objectgroup color="#ffffff" name="5" width="110" height="70" visible="0">
-  <object name="5Caisse1" type="Crate" x="1850" y="1650" width="100" height="100"/>
-  <object name="Clé ! 5" x="1450" y="2200" width="100" height="100"/>
-  <object name="5Poursuiveur1" type="Walker" x="1450" y="2350" width="100" height="100"/>
-  <object name="5Fin" type="EndDoor" x="650" y="2100" width="50" height="100"/>
-  <object name="5PorteB" type="TriggeredDoor" x="1700" y="1350" width="100" height="400"/>
-  <object name="5LevierA" type="Lever" x="900" y="1050" width="50" height="50"/>
-  <object name="5PatrouilleurVert1" type="Patroler" x="450" y="1050" width="50" height="50"/>
-  <object name="5PatrouilleurHoriz1" type="Patroler" x="850" y="1100" width="50" height="50"/>
-  <object name="5PorteFERMEEA" type="TriggeredDoor" x="1100" y="1900" width="50" height="300"/>
-  <object name="5PorteOuverteA" type="TriggeredDoor" x="1750" y="1900" width="50" height="300"/>
-  <object name="5PatrouilleurVert2" type="Patroler" x="600" y="1200" width="50" height="50"/>
-  <object name="5BaseArcLA" type="BaseArcL" x="2200" y="1850" width="100" height="50"/>
-  <object name="5BaseArcRA" type="BaseArcR" x="2500" y="1850" width="100" height="50"/>
-  <object name="5ArcHorizA1" type="ArcHorizontal" x="2300" y="1850" width="100" height="50"/>
-  <object name="5ArcHorizA2" type="ArcHorizontal" x="2400" y="1850" width="100" height="50"/>
-  <object name="5PatrouilleurVert1" type="Patroler" x="1900" y="2550" width="50" height="50"/>
-  <object name="5SeqBtnB1" type="SequencedBtn" x="2900" y="2600" width="50" height="50"/>
-  <object name="5SeqBtnB2" type="SequencedBtn" x="1700" y="2700" width="50" height="50"/>
-  <object name="5SeqBtnB3" type="SequencedBtn" x="3350" y="1750" width="50" height="50"/>
-  <object name="5BaseArcRB" type="BaseArcR" x="3200" y="1900" width="100" height="50"/>
-  <object name="5BaseArcLB" type="BaseArcL" x="3100" y="1900" width="100" height="50"/>
-  <object name="5PatrouilleurCaisse" type="Patroler" x="2750" y="2200" width="50" height="50"/>
-  <object name="5Caisse2" type="Crate" x="2700" y="2100" width="100" height="100"/>
-  <object name="5SUPER RACCOURCI." x="3100" y="1800" width="200" height="50"/>
-  <object name="5PatrouilleurHoriz2" type="Patroler" x="4200" y="2100" width="50" height="50"/>
-  <object name="5PatrouilleurVert3" type="Patroler" x="4500" y="1600" width="50" height="50"/>
-  <object name="5BaseArcLD" type="BaseArcL" x="3700" y="1850" width="100" height="50"/>
-  <object name="5BaseArcRD" type="BaseArcR" x="3800" y="1850" width="100" height="50"/>
-  <object name="5PatrouilleurHoriz3" type="Patroler" x="4050" y="1700" width="50" height="50"/>
-  <object name="5BaseArcLC" type="BaseArcL" x="4050" y="1250" width="100" height="50"/>
-  <object name="5BaseArcRC" type="BaseArcR" x="4600" y="1250" width="100" height="50"/>
-  <object name="5ArcHorizC1" type="ArcHorizontal" x="4150" y="1250" width="150" height="50"/>
-  <object name="5ArcHorizC2" type="ArcHorizontal" x="4300" y="1250" width="100" height="50"/>
-  <object name="5ArcHorizC3" type="ArcHorizontal" x="4400" y="1250" width="100" height="50"/>
-  <object name="5ArcHorizC4" type="ArcHorizontal" x="4500" y="1250" width="100" height="50"/>
-  <object name="5PatrouilleurVert2" type="Patroler" x="4850" y="1650" width="50" height="50"/>
+ <objectgroup color="#ffffff" name="5" visible="0">
+  <object id="227" name="5Caisse1" type="Crate" x="1850" y="1650" width="100" height="100"/>
+  <object id="228" name="Clé ! 5" x="1450" y="2200" width="100" height="100"/>
+  <object id="229" name="5Poursuiveur1" type="Walker" x="1450" y="2350" width="100" height="100"/>
+  <object id="230" name="5Fin" type="EndDoor" x="650" y="2100" width="50" height="100"/>
+  <object id="231" name="5PorteB" type="TriggeredDoor" x="1700" y="1350" width="100" height="400"/>
+  <object id="232" name="5LevierA" type="Lever" x="900" y="1050" width="50" height="50"/>
+  <object id="233" name="5PatrouilleurVert1" type="Patroler" x="450" y="1050" width="50" height="50"/>
+  <object id="234" name="5PatrouilleurHoriz1" type="Patroler" x="850" y="1100" width="50" height="50"/>
+  <object id="235" name="5PorteFERMEEA" type="TriggeredDoor" x="1100" y="1900" width="50" height="300"/>
+  <object id="236" name="5PorteOuverteA" type="TriggeredDoor" x="1750" y="1900" width="50" height="300"/>
+  <object id="237" name="5PatrouilleurVert2" type="Patroler" x="600" y="1200" width="50" height="50"/>
+  <object id="238" name="5BaseArcLA" type="BaseArcL" x="2200" y="1850" width="100" height="50"/>
+  <object id="239" name="5BaseArcRA" type="BaseArcR" x="2500" y="1850" width="100" height="50"/>
+  <object id="240" name="5ArcHorizA1" type="ArcHorizontal" x="2300" y="1850" width="100" height="50"/>
+  <object id="241" name="5ArcHorizA2" type="ArcHorizontal" x="2400" y="1850" width="100" height="50"/>
+  <object id="242" name="5PatrouilleurVert1" type="Patroler" x="1900" y="2550" width="50" height="50"/>
+  <object id="243" name="5SeqBtnB1" type="SequencedBtn" x="2900" y="2600" width="50" height="50"/>
+  <object id="244" name="5SeqBtnB2" type="SequencedBtn" x="1700" y="2700" width="50" height="50"/>
+  <object id="245" name="5SeqBtnB3" type="SequencedBtn" x="3350" y="1750" width="50" height="50"/>
+  <object id="246" name="5BaseArcRB" type="BaseArcR" x="3200" y="1900" width="100" height="50"/>
+  <object id="247" name="5BaseArcLB" type="BaseArcL" x="3100" y="1900" width="100" height="50"/>
+  <object id="248" name="5PatrouilleurCaisse" type="Patroler" x="2750" y="2200" width="50" height="50"/>
+  <object id="249" name="5Caisse2" type="Crate" x="2700" y="2100" width="100" height="100"/>
+  <object id="250" name="5SUPER RACCOURCI." x="3100" y="1800" width="200" height="50"/>
+  <object id="251" name="5PatrouilleurHoriz2" type="Patroler" x="4200" y="2100" width="50" height="50"/>
+  <object id="252" name="5PatrouilleurVert3" type="Patroler" x="4500" y="1600" width="50" height="50"/>
+  <object id="253" name="5BaseArcLD" type="BaseArcL" x="3700" y="1850" width="100" height="50"/>
+  <object id="254" name="5BaseArcRD" type="BaseArcR" x="3800" y="1850" width="100" height="50"/>
+  <object id="255" name="5PatrouilleurHoriz3" type="Patroler" x="4050" y="1700" width="50" height="50"/>
+  <object id="256" name="5BaseArcLC" type="BaseArcL" x="4050" y="1250" width="100" height="50"/>
+  <object id="257" name="5BaseArcRC" type="BaseArcR" x="4600" y="1250" width="100" height="50"/>
+  <object id="258" name="5ArcHorizC1" type="ArcHorizontal" x="4150" y="1250" width="150" height="50"/>
+  <object id="259" name="5ArcHorizC2" type="ArcHorizontal" x="4300" y="1250" width="100" height="50"/>
+  <object id="260" name="5ArcHorizC3" type="ArcHorizontal" x="4400" y="1250" width="100" height="50"/>
+  <object id="261" name="5ArcHorizC4" type="ArcHorizontal" x="4500" y="1250" width="100" height="50"/>
+  <object id="262" name="5PatrouilleurVert2" type="Patroler" x="4850" y="1650" width="50" height="50"/>
  </objectgroup>
 </map>

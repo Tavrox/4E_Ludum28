@@ -20,7 +20,7 @@ public class InvasionAnims : MonoBehaviour {
 		_EndLvlContent.gameObject.SetActive(false);}
 		stopped = false;
 		invade();
-		if(!_player.killedByBlob) animSprite.renderer.enabled = false;
+		if(_player.killedByBlob || _player.killedByLaser) animSprite.renderer.enabled = false;
 		if(FETool.Round(((float) Screen.width/(float) Screen.height),1)!=1.3) {
 			ratio = FETool.Round(((float) Screen.width/(float) Screen.height),1) - 1.3f;
 			gameObject.transform.localScale += new Vector3(ratio,ratio,0f);
@@ -49,9 +49,10 @@ public class InvasionAnims : MonoBehaviour {
 			yield return new WaitForFixedUpdate();	
 		}
 		animSprite.PlayBackward("invade");
-		
-		_player.transform.position = _player.spawnPos;
-		transform.position = new Vector3(_player.transform.position.x,_player.transform.position.y,-4f);
+
+        _player.transform.position = _player.spawnPos;
+        _player._rewindHUD.transform.localPosition = new Vector3(_player.spawnPos.x - 1.25f, _player.spawnPos.y - 6, _player.spawnPos .z- 60);
+		transform.position = new Vector3(_player.transform.position.x,_player.transform.position.y,-50f);
 		if(GameObject.Find("EndLVLPanel")!=null) {// _EndLvlPanel = GameObject.Find("EndLVLPanel").gameObject;
 		//_EndLvlPanel.transform.parent = GameObject.Find("Player").GetComponent<Transform>();
 		_EndLvlPanel.transform.position = new Vector3 (_player.transform.position.x,_player.transform.position.y,0f);
@@ -61,7 +62,7 @@ public class InvasionAnims : MonoBehaviour {
 	}
 	public void invade () {
 		//print ("invade");
-		transform.position = new Vector3(_player.transform.position.x,_player.transform.position.y,-4f);
+		transform.position = new Vector3(_player.transform.position.x,_player.transform.position.y,-50f);
 		_player.transform.position = new Vector3 (_player.transform.position.x,_player.transform.position.y,-4.5f);
 		animSprite.Play("invade");
 	}

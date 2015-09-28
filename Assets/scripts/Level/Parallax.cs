@@ -8,14 +8,15 @@ public class Parallax : MonoBehaviour {
 	//private int scrollSpeed;
 	private Vector3 scrollVector;
 	
-	[HideInInspector] public Transform thisTransform;
+	[HideInInspector] public Transform thisTransform, parentTransform;
 	private Vector3 posIni;
 	private bool active;
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindWithTag("Player").GetComponent<Player>();
 		thisTransform = transform;
-		posIni = gameObject.transform.position;
+        parentTransform = transform.parent;
+		posIni = gameObject.transform.localPosition;
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GamePause += GamePause;
 		GameEventManager.GameUnpause += GameUnpause;
@@ -34,7 +35,7 @@ public class Parallax : MonoBehaviour {
 	private void GameStart()
 	{
 		if(this != null && gameObject.activeInHierarchy) {
-			transform.position = posIni;
+            transform.localPosition = posIni;
 		}
 	}
 	void GamePause()

@@ -316,10 +316,88 @@
                 <key>sourceSize</key>
                 <string>{100,120}</string>
             </dict>
+            <key>perso_MortzElectroV50001 (1).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{530,130},{150,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{150,120}}</string>
+                <key>sourceSize</key>
+                <string>{150,120}</string>
+            </dict>
+            <key>perso_MortzElectroV50001 (2).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{685,130},{150,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{150,120}}</string>
+                <key>sourceSize</key>
+                <string>{150,120}</string>
+            </dict>
+            <key>perso_MortzElectroV50001 (3).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{840,130},{150,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{150,120}}</string>
+                <key>sourceSize</key>
+                <string>{150,120}</string>
+            </dict>
+            <key>perso_MortzElectroV50001 (4).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{995,130},{150,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{150,120}}</string>
+                <key>sourceSize</key>
+                <string>{150,120}</string>
+            </dict>
+            <key>perso_MortzElectroV50001 (5).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1150,130},{150,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{150,120}}</string>
+                <key>sourceSize</key>
+                <string>{150,120}</string>
+            </dict>
+            <key>perso_MortzElectroV50001 (6).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1305,130},{150,120}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{150,120}}</string>
+                <key>sourceSize</key>
+                <string>{150,120}</string>
+            </dict>
             <key>perso_Tiragecaissemoisi0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{530,130},{100,120}}</string>
+                <string>{{1460,130},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -332,7 +410,7 @@
             <key>perso_Tiragecaissemoisi0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{635,130},{100,120}}</string>
+                <string>{{1565,130},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -345,7 +423,7 @@
             <key>perso_Tiragecaissemoisi0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{740,130},{100,120}}</string>
+                <string>{{1670,130},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -358,7 +436,7 @@
             <key>perso_Tiragecaissemoisi0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{845,130},{100,120}}</string>
+                <string>{{1775,130},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -371,7 +449,7 @@
             <key>perso_Tiragecaissemoisi0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{950,130},{100,120}}</string>
+                <string>{{1880,130},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -384,7 +462,7 @@
             <key>perso_Tiragecaissemoisi0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1055,130},{100,120}}</string>
+                <string>{{5,255},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -397,7 +475,7 @@
             <key>perso_Tiragecaissemoisi0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1160,130},{100,120}}</string>
+                <string>{{110,255},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -410,7 +488,7 @@
             <key>perso_Tiragecaissemoisi0008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1265,130},{100,120}}</string>
+                <string>{{215,255},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -423,7 +501,7 @@
             <key>perso_Tiragecaissemoisi0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1370,130},{100,120}}</string>
+                <string>{{320,255},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -436,7 +514,7 @@
             <key>perso_Tiragecaissemoisi0010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1475,130},{100,120}}</string>
+                <string>{{425,255},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -449,7 +527,7 @@
             <key>perso_idle0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1580,130},{100,120}}</string>
+                <string>{{530,255},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -462,7 +540,7 @@
             <key>perso_idle0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1685,130},{100,120}}</string>
+                <string>{{635,255},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -475,7 +553,7 @@
             <key>perso_idle0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1790,130},{100,120}}</string>
+                <string>{{740,255},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -488,7 +566,7 @@
             <key>perso_idle0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1895,130},{100,120}}</string>
+                <string>{{845,255},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -501,7 +579,7 @@
             <key>perso_idle0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{5,255},{100,120}}</string>
+                <string>{{950,255},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -514,7 +592,7 @@
             <key>perso_jump0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{110,255},{100,120}}</string>
+                <string>{{1055,255},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -527,7 +605,7 @@
             <key>perso_jump0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{215,255},{100,120}}</string>
+                <string>{{1160,255},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -540,7 +618,7 @@
             <key>perso_jump0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{320,255},{100,120}}</string>
+                <string>{{1265,255},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -553,7 +631,7 @@
             <key>perso_jump0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{425,255},{100,120}}</string>
+                <string>{{1370,255},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -566,7 +644,7 @@
             <key>perso_jump0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{530,255},{100,120}}</string>
+                <string>{{1475,255},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -579,7 +657,7 @@
             <key>perso_poussecaisse0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{635,255},{100,120}}</string>
+                <string>{{1580,255},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -592,7 +670,7 @@
             <key>perso_poussecaisse0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{740,255},{100,120}}</string>
+                <string>{{1685,255},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -605,7 +683,7 @@
             <key>perso_poussecaisse0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{845,255},{100,120}}</string>
+                <string>{{1790,255},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -618,7 +696,7 @@
             <key>perso_poussecaisse0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{950,255},{100,120}}</string>
+                <string>{{1895,255},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -631,7 +709,7 @@
             <key>perso_poussecaisse0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1055,255},{100,120}}</string>
+                <string>{{5,380},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -644,7 +722,7 @@
             <key>perso_poussecaisse0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1160,255},{100,120}}</string>
+                <string>{{110,380},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -657,7 +735,7 @@
             <key>perso_poussecaisse0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1265,255},{100,120}}</string>
+                <string>{{215,380},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -670,7 +748,7 @@
             <key>perso_poussecaisse0008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1370,255},{100,120}}</string>
+                <string>{{320,380},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -683,7 +761,7 @@
             <key>perso_poussecaisse0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1475,255},{100,120}}</string>
+                <string>{{425,380},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -696,7 +774,7 @@
             <key>perso_poussecaisse0010.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1580,255},{100,120}}</string>
+                <string>{{530,380},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -709,7 +787,7 @@
             <key>perso_run0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1685,255},{100,120}}</string>
+                <string>{{635,380},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -722,7 +800,7 @@
             <key>perso_run0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1790,255},{100,120}}</string>
+                <string>{{740,380},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -735,7 +813,7 @@
             <key>perso_run0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1895,255},{100,120}}</string>
+                <string>{{845,380},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -748,7 +826,7 @@
             <key>perso_run0004.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{5,380},{100,120}}</string>
+                <string>{{950,380},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -761,7 +839,7 @@
             <key>perso_run0005.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{110,380},{100,120}}</string>
+                <string>{{1055,380},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -774,7 +852,7 @@
             <key>perso_run0006.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{215,380},{100,120}}</string>
+                <string>{{1160,380},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -787,7 +865,7 @@
             <key>perso_run0007.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{320,380},{100,120}}</string>
+                <string>{{1265,380},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -800,7 +878,7 @@
             <key>perso_run0008.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{425,380},{100,120}}</string>
+                <string>{{1370,380},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -813,7 +891,7 @@
             <key>perso_run0009.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{530,380},{100,120}}</string>
+                <string>{{1475,380},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -823,101 +901,192 @@
                 <key>sourceSize</key>
                 <string>{100,120}</string>
             </dict>
-            <key>perso_ymortblob (1).png</key>
+            <key>perso_ymortblob (01).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{635,380},{100,120}}</string>
+                <string>{{1580,380},{140,130}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{100,120}}</string>
+                <string>{{0,0},{140,130}}</string>
                 <key>sourceSize</key>
-                <string>{100,120}</string>
+                <string>{140,130}</string>
             </dict>
-            <key>perso_ymortblob (2).png</key>
+            <key>perso_ymortblob (02).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{740,380},{100,120}}</string>
+                <string>{{1725,380},{140,130}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{100,120}}</string>
+                <string>{{0,0},{140,130}}</string>
                 <key>sourceSize</key>
-                <string>{100,120}</string>
+                <string>{140,130}</string>
             </dict>
-            <key>perso_ymortblob (3).png</key>
+            <key>perso_ymortblob (03).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{845,380},{100,120}}</string>
+                <string>{{1870,380},{140,130}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{100,120}}</string>
+                <string>{{0,0},{140,130}}</string>
                 <key>sourceSize</key>
-                <string>{100,120}</string>
+                <string>{140,130}</string>
             </dict>
-            <key>perso_ymortblob (4).png</key>
+            <key>perso_ymortblob (04).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{950,380},{100,120}}</string>
+                <string>{{5,515},{140,130}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{100,120}}</string>
+                <string>{{0,0},{140,130}}</string>
                 <key>sourceSize</key>
-                <string>{100,120}</string>
+                <string>{140,130}</string>
             </dict>
-            <key>perso_ymortblob (5).png</key>
+            <key>perso_ymortblob (05).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1055,380},{100,120}}</string>
+                <string>{{150,515},{140,130}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{100,120}}</string>
+                <string>{{0,0},{140,130}}</string>
                 <key>sourceSize</key>
-                <string>{100,120}</string>
+                <string>{140,130}</string>
             </dict>
-            <key>perso_zMortElectro0001 (1).png</key>
+            <key>perso_ymortblob (06).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1160,380},{150,120}}</string>
+                <string>{{295,515},{140,130}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{150,120}}</string>
+                <string>{{0,0},{140,130}}</string>
                 <key>sourceSize</key>
-                <string>{150,120}</string>
+                <string>{140,130}</string>
             </dict>
-            <key>perso_zMortElectro0001 (2).png</key>
+            <key>perso_ymortblob (07).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1315,380},{150,120}}</string>
+                <string>{{440,515},{140,130}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{150,120}}</string>
+                <string>{{0,0},{140,130}}</string>
                 <key>sourceSize</key>
-                <string>{150,120}</string>
+                <string>{140,130}</string>
+            </dict>
+            <key>perso_ymortblob (08).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{585,515},{140,130}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{140,130}}</string>
+                <key>sourceSize</key>
+                <string>{140,130}</string>
+            </dict>
+            <key>perso_ymortblob (09).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{730,515},{140,130}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{140,130}}</string>
+                <key>sourceSize</key>
+                <string>{140,130}</string>
+            </dict>
+            <key>perso_ymortblob (10).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{875,515},{140,130}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{140,130}}</string>
+                <key>sourceSize</key>
+                <string>{140,130}</string>
+            </dict>
+            <key>perso_ymortblob (11).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1020,515},{140,130}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{140,130}}</string>
+                <key>sourceSize</key>
+                <string>{140,130}</string>
+            </dict>
+            <key>perso_ymortblob (12).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1165,515},{140,130}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{140,130}}</string>
+                <key>sourceSize</key>
+                <string>{140,130}</string>
+            </dict>
+            <key>perso_ymortblob (13).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1310,515},{140,130}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{140,130}}</string>
+                <key>sourceSize</key>
+                <string>{140,130}</string>
+            </dict>
+            <key>perso_ymortblob (14).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1455,515},{140,130}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{140,130}}</string>
+                <key>sourceSize</key>
+                <string>{140,130}</string>
             </dict>
             <key>perso_zzidle_Bas0001.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1470,380},{100,120}}</string>
+                <string>{{1600,515},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -930,7 +1099,7 @@
             <key>perso_zzidle_Bas0002.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1575,380},{100,120}}</string>
+                <string>{{1705,515},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -943,7 +1112,7 @@
             <key>perso_zzidle_Bas0003.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1680,380},{100,120}}</string>
+                <string>{{1810,515},{100,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -953,6 +1122,1852 @@
                 <key>sourceSize</key>
                 <string>{100,120}</string>
             </dict>
+            <key>perso_zzzfinV1 (01).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{5,650},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (02).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{260,650},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (03).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{515,650},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (04).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{770,650},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (05).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1025,650},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (06).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1280,650},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (07).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1535,650},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (08).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1790,650},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (09).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{5,805},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (10).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{260,805},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (11).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{515,805},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (12).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{770,805},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (13).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1025,805},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (14).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1280,805},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (15).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1535,805},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (16).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1790,805},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (17).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{5,960},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (18).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{260,960},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (19).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{515,960},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (20).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{770,960},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (21).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1025,960},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (22).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1280,960},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (23).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1535,960},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (24).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1790,960},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (25).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{5,1115},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (26).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{260,1115},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (27).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{515,1115},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (28).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{770,1115},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (29).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1025,1115},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (30).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1280,1115},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (31).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1535,1115},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (32).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1790,1115},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (33).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{5,1270},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (34).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{260,1270},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (35).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{515,1270},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (36).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{770,1270},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (37).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1025,1270},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (38).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1280,1270},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (39).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1535,1270},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (40).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1790,1270},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (41).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{5,1425},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (42).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{260,1425},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (43).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{515,1425},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (44).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{770,1425},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV1 (45).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1025,1425},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (01).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1280,1425},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (02).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1535,1425},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (03).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1790,1425},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (04).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{5,1580},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (05).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{260,1580},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (06).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{515,1580},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (07).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{770,1580},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (08).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1025,1580},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (09).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1280,1580},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (10).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1535,1580},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (11).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1790,1580},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (12).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{5,1735},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (13).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{260,1735},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (14).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{515,1735},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (15).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{770,1735},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (16).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1025,1735},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (17).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1280,1735},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (18).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1535,1735},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (19).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1790,1735},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (20).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{5,1890},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (21).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{260,1890},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (22).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{515,1890},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (23).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{770,1890},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (24).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1025,1890},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (25).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1280,1890},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (26).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1535,1890},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (27).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1790,1890},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (28).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{5,2045},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (29).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{260,2045},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (30).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{515,2045},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (31).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{770,2045},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (32).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1025,2045},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (33).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1280,2045},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (34).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1535,2045},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (35).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1790,2045},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (36).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{5,2200},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (37).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{260,2200},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (38).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{515,2200},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (39).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{770,2200},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (40).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1025,2200},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (41).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1280,2200},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (42).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1535,2200},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (43).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1790,2200},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (44).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{5,2355},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (45).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{260,2355},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (46).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{515,2355},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (47).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{770,2355},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (48).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1025,2355},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV2 (49).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1280,2355},{250,150}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,150}}</string>
+                <key>sourceSize</key>
+                <string>{250,150}</string>
+            </dict>
+            <key>perso_zzzfinV3 (01).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1535,2355},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (02).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1790,2355},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (03).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{5,2530},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (04).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{260,2530},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (05).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{515,2530},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (06).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{770,2530},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (07).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1025,2530},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (08).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1280,2530},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (09).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1535,2530},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (12).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1790,2530},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (13).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{5,2705},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (14).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{260,2705},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (15).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{515,2705},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (16).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{770,2705},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (17).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1025,2705},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (18).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1280,2705},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (19).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1535,2705},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (20).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1790,2705},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (21).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{5,2880},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (22).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{260,2880},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (23).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{515,2880},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (24).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{770,2880},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (25).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1025,2880},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (26).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1280,2880},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (27).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1535,2880},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (28).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1790,2880},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (29).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{5,3055},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (30).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{260,3055},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (31).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{515,3055},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (32).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{770,3055},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (33).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1025,3055},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (34).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1280,3055},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (35).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1535,3055},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (36).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1790,3055},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (37).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{5,3230},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (38).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{260,3230},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (39).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{515,3230},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (40).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{770,3230},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (41).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1025,3230},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (42).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1280,3230},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (43).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1535,3230},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (44).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1790,3230},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (45).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{5,3405},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (46).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{260,3405},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (47).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{515,3405},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (48).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{770,3405},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (49).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1025,3405},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
+            <key>perso_zzzfinV3 (50).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1280,3405},{250,170}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,170}}</string>
+                <key>sourceSize</key>
+                <string>{250,170}</string>
+            </dict>
         </dict>
         <key>metadata</key>
         <dict>
@@ -961,9 +2976,9 @@
             <key>realTextureFileName</key>
             <string>player.png</string>
             <key>size</key>
-            <string>{2048,512}</string>
+            <string>{2048,4096}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:019368937e1bd6e821c27055c620a0ec:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:5817c38d0184fba5e5245b4601c434e9:8414d850545c63f2438799568ee6d4e9:1e35b2f0f109b90c83b5cc60e6e323d8$</string>
             <key>textureFileName</key>
             <string>player.png</string>
         </dict>

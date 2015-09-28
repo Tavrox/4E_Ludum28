@@ -11,11 +11,12 @@ public class LevelManager : MonoBehaviour {
 	public int chosenVariation;
 	public bool isBoss;
 	public static BMTuning TuningDocument;
+    public string victoryTypeEndLvl = "bronzeVictory";
 
 	private int _secLeft, _scoreTotalLvl,cptKey, nbGoldMedalLVL, scoreGoldMedalLVL;
-	private bool bestScore;
+	private bool bestScore, medalSplashed=false;
 	private TileImporter _tileImporter;
-	private PlayerData _pdata;
+	public PlayerData _pdata;
 	private string _rand;
 	private Vector3 spawnPoint;
 	private PartyData _partyData;
@@ -110,15 +111,16 @@ public class LevelManager : MonoBehaviour {
 		
 		playLevelMusic();
 		_playerDataLoader = ScriptableObject.CreateInstance<GameSaveLoad>();
-		_playerDataLoader.LoadXMLToList("blob_minute-players");
+        _playerDataLoader.LoadXMLToList("plr");
 		_levelDataLoader = ScriptableObject.CreateInstance<GameSaveLoad>();
-		_levelDataLoader.LoadXMLToList("blob_minute-levels");
+        _levelDataLoader.LoadXMLToList("lv");
 		if(_realID==1 && chosenVariation==1 && _bulleTuto!=null) {
 			_bulleTuto.gameObject.SetActive(true);
 		}
 	}
 	void Update () {
-		if(player.finishedLevel && (Input.GetKey(player.InputMan.Enter)  || Input.GetKey(player.InputMan.PadSkipDeath))) {
+        if (player.finishedLevel && !medalSplashed && (Input.GetKey(player.InputMan.Enter) || Input.GetKey(player.InputMan.PadSkipDeath)))
+        {
 			skipIncrementScore();
 		}
 	}
@@ -126,6 +128,7 @@ public class LevelManager : MonoBehaviour {
 		
 		if(this != null && gameObject.activeInHierarchy) {
 		//player = GameObject.FindWithTag("Player").GetComponent<Player>();
+        medalSplashed = false;
 		_collectedKeys = player.GetComponentsInChildren<Key>();
 		int k = 0;
 		foreach(Key _k in _collectedKeys) {
@@ -140,12 +143,14 @@ public class LevelManager : MonoBehaviour {
 		_endLvlPanelTween = new OTTween(_EndLvlSprite.transform ,1f, OTEasing.QuartOut).Tween("localScale", new Vector3( 1f, 1f, 1f )).OnFinish(displayEndLvlContent);	
 		lblLevel.text = _realID.ToString()+"."+chosenVariation.ToString();
 		lblScoreGold.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"gold");
-		lblScoreSilver.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"bronze");
-		lblScoreBronze.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"silver");
+        lblScoreSilver.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level" + _realID.ToString() + "/occ" + chosenVariation.ToString(), "silver");
+		lblScoreBronze.text = _levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"bronze");
 		lblScoreOld.text = _playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString()+"/occ"+chosenVariation.ToString(),"score");
 		nbGoldMedalLVL = System.Convert.ToInt32(_playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+_realID.ToString(),"nbGold"));
 		scoreGoldMedalLVL = System.Convert.ToInt32(_levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_realID.ToString(),"gold"));
 		playerMedal.frameIndex = displayPlayerMedal(lblScoreOld.text, lblScoreGold.text, lblScoreSilver.text, lblScoreBronze.text);
+        victoryTypeEndLvl = getMedalTypeVictory(lblScoreOld.text, lblScoreGold.text, lblScoreSilver.text, lblScoreBronze.text);
+        player.GetComponent<PlayerAnims>().Victory(victoryTypeEndLvl);
 		updateScore();
 		//player.nbKey;
 		//_player._COEFF_BATTERY;
@@ -164,6 +169,15 @@ public class LevelManager : MonoBehaviour {
 		*/
 		}
 	}
+    public string getMedalTypeVictory(string playerScore, string goldScore, string silverScore, string bronzeScore)
+    {
+        string victoryType = "bronzeVictory";
+        if (playerScore == "") playerScore = "0"; if (goldScore == "") goldScore = "0"; if (silverScore == "") silverScore = "0"; if (bronzeScore == "") bronzeScore = "0";
+        if (System.Convert.ToInt32(playerScore) >= System.Convert.ToInt32(bronzeScore)) victoryType = "bronzeVictory";
+        if (System.Convert.ToInt32(playerScore) >= System.Convert.ToInt32(silverScore)) victoryType = "silverVictory";
+        if (System.Convert.ToInt32(playerScore) >= System.Convert.ToInt32(goldScore)) victoryType = "goldVictory";
+        return victoryType;
+    }
 	int displayPlayerMedal(string playerScore, string goldScore, string silverScore, string bronzeScore) {
 		int numFrame = 0;
 		if(playerScore=="") playerScore="0";if(goldScore=="") goldScore="0";if(silverScore=="") silverScore="0";if(bronzeScore=="") bronzeScore="0";
@@ -175,6 +189,7 @@ public class LevelManager : MonoBehaviour {
 	void skipIncrementScore() {
 		StopCoroutine("incrementScore");
 		StopCoroutine("incrementBattery");
+        StopCoroutine("splashMedal");
 				
 //		if(_endLvlSpriteAlphaTween!=null) _endLvlSpriteAlphaTween.Stop();
 //		if(_endLvlPanelTween!=null) _endLvlPanelTween.Stop();
@@ -212,8 +227,11 @@ public class LevelManager : MonoBehaviour {
 			lblNBKey.text = cptKey.ToString();
 			lblScoreKey.text = "= "+ (cptKey * player._COEFF_BATTERY).ToString();
 			lblScoreTotal.text = (_timer.getScoreTime()+cptKey * player._COEFF_BATTERY).ToString();
-			playerMedalFinal.frameIndex = displayPlayerMedal(lblScoreTotal.text, lblScoreGold.text, lblScoreSilver.text, lblScoreBronze.text)+4;
-			if(cptKey==player.nbKey) popMedalFinal();
+            if (cptKey == player.nbKey)
+            {
+                playerMedalFinal.frameIndex = displayPlayerMedal(lblScoreTotal.text, lblScoreGold.text, lblScoreSilver.text, lblScoreBronze.text) + 4;
+                popMedalFinal();
+            }
 		}
 	}
 	private void popKeyScore (OTTween tween) {
@@ -221,10 +239,17 @@ public class LevelManager : MonoBehaviour {
 		_scalePingKeyTw = new OTTween(_collectedKeys[cptKey-1].transform, 1f, OTEasing.QuadInOut).Tween("localScale", new Vector3(2.5f, 2.5f, 1f)).PingPong();
 	}
 	private void popMedalFinal () {
+        medalSplashed = true;
 		_alphaMedalTw = new OTTween(playerMedalFinal, 0.4f, OTEasing.Linear).Tween("alpha", 1f);
+        StartCoroutine("splashMedal");
 		_scaleMedalTw = new OTTween(playerMedalFinal.transform.parent.transform, 1f, OTEasing.QuadInOut).Tween("localScale", new Vector3(.4f, .4f, 1f));
 		if(bestScore) {lblRecord.gameObject.SetActive(true);}
 	}
+    IEnumerator splashMedal()
+    {
+        yield return new WaitForSeconds(0.8f);
+        GameObject.FindObjectOfType<SplashMedalAnimations>().playSplash();
+    }
 	// Update is called once per frame
 //	void Update () 
 //	{
@@ -327,10 +352,15 @@ public class LevelManager : MonoBehaviour {
 				TranslateAllInScene();
 				GameEventManager.TriggerGameStart();
 			}
-			else {
-				GameEventManager.TriggerNextLevel();
-				GameEventManager.NextInstance -= NextInstance;
-				DestroyImmediate(this.gameObject);	
+            else
+            {
+                Debug.Log("Level Manager Next Instance");
+                GameEventManager.TriggerNextLevel();
+                Debug.Log("Level Manager Next LEVEL");
+                GameEventManager.NextInstance -= NextInstance;
+                Debug.Log("Level Manager REMOVE Next Instance");
+                DestroyImmediate(this.gameObject);
+                Debug.Log("Level Manager DESTROY");
 			}
 		}
 	}
@@ -346,7 +376,9 @@ public class LevelManager : MonoBehaviour {
 	private void NextLevel ()
 	{		
 		if(this != null) {
-		Application.ExternalEval("document.cookie = \""+"Level"+(ID+1)+"Unlocked"+"=1; \"");
+		//Application.ExternalEval("document.cookie = \""+"Level"+(ID+1)+"Unlocked"+"=1; \"");
+        _pdata.choixOccurence = 1;
+        DestroyImmediate(player.gameObject);
 		Application.LoadLevel((ID+1));
 		}
 	}

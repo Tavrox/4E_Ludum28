@@ -26,6 +26,7 @@ public class PauseButton : MonoBehaviour {
 	public string STATE="Default";
 	private PauseButton [] _listButtons;
 	public bool first=true,trigged=false;
+    private LevelManager _levelManager;
 	
 	// Use this for initialization
 	void Start () {
@@ -33,7 +34,8 @@ public class PauseButton : MonoBehaviour {
 		pauseMainMenu = GameObject.Find("Player/IngameUI/Pause/PauseMainMenu").GetComponent<Transform>();
 		pauseExit = GameObject.Find("Player/IngameUI/Pause/PauseExit").GetComponent<Transform>();
 		pauseOption = GameObject.Find("Player/IngameUI/Pause/PauseOption").GetComponent<Transform>();
-		
+
+        _levelManager = GameObject.FindObjectOfType<LevelManager>();
 		_listButtons = GameObject.FindObjectsOfType(typeof(PauseButton)) as PauseButton[];
 		
 		_player=GameObject.Find("Player").GetComponent<Player>();
@@ -117,7 +119,7 @@ public class PauseButton : MonoBehaviour {
 			case buttonList.Save :
 			{
 				pauseDefault.position += new Vector3(0,20,0);
-				pauseOption.position -= new Vector3(0,20,0);
+				pauseOption.position -= new Vector3(0,21,0);
 				foreach(PauseButton btn in _listButtons)
 					btn.STATE="Option";
 				break;
@@ -125,7 +127,7 @@ public class PauseButton : MonoBehaviour {
 			case buttonList.OptionNo :
 			{
 				pauseDefault.position -= new Vector3(0,20,0);
-				pauseOption.position += new Vector3(0,20,0);
+				pauseOption.position += new Vector3(0,21,0);
 				foreach(PauseButton btn in _listButtons)
 					btn.STATE="Default";
 				break;
@@ -157,7 +159,10 @@ public class PauseButton : MonoBehaviour {
 				break;
 			}
 			case buttonList.MenuYes :
-			{
+            {
+                _player.triggerPause();
+                DestroyImmediate(_levelManager._pdata.gameObject);
+                DestroyImmediate(_player.gameObject);
 				Application.LoadLevel(0);
 				break;
 			}
