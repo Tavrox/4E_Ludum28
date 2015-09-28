@@ -44,8 +44,10 @@ public class DialogSheet : ScriptableObject {
 			foreach (TextUI _tx in _arrTxt)
 			{
 				if (translated_texts.ContainsKey(_tx.DIALOG_ID) != false && _tx.dontTranslate == false)
-				{		
+                {
 					_tx.text = translated_texts[_tx.DIALOG_ID];
+                    _tx.displayedText = _tx.text;
+                    _tx._mesh.text = _tx.text;
 					_tx.hasBeenTranslated = true;
 				}
 				else

@@ -4,7 +4,7 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>invasion_0000.png</key>
+            <key>StationInvaded0000.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{0,0},{800,600}}</string>
@@ -17,7 +17,7 @@
                 <key>sourceSize</key>
                 <string>{800,600}</string>
             </dict>
-            <key>invasion_0001.png</key>
+            <key>StationInvaded0001.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{800,0},{800,600}}</string>
@@ -30,7 +30,7 @@
                 <key>sourceSize</key>
                 <string>{800,600}</string>
             </dict>
-            <key>invasion_0002.png</key>
+            <key>StationInvaded0002.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{1600,0},{800,600}}</string>
@@ -43,7 +43,7 @@
                 <key>sourceSize</key>
                 <string>{800,600}</string>
             </dict>
-            <key>invasion_0003.png</key>
+            <key>StationInvaded0003.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2400,0},{800,600}}</string>
@@ -56,7 +56,7 @@
                 <key>sourceSize</key>
                 <string>{800,600}</string>
             </dict>
-            <key>invasion_0004.png</key>
+            <key>StationInvaded0004.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{3200,0},{800,600}}</string>
@@ -69,7 +69,7 @@
                 <key>sourceSize</key>
                 <string>{800,600}</string>
             </dict>
-            <key>invasion_0005.png</key>
+            <key>StationInvaded0005.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{0,600},{800,600}}</string>
@@ -82,7 +82,7 @@
                 <key>sourceSize</key>
                 <string>{800,600}</string>
             </dict>
-            <key>invasion_0006.png</key>
+            <key>StationInvaded0006.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{800,600},{800,600}}</string>
@@ -95,7 +95,7 @@
                 <key>sourceSize</key>
                 <string>{800,600}</string>
             </dict>
-            <key>invasion_0007.png</key>
+            <key>StationInvaded0007.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{1600,600},{800,600}}</string>
@@ -108,7 +108,7 @@
                 <key>sourceSize</key>
                 <string>{800,600}</string>
             </dict>
-            <key>invasion_0008.png</key>
+            <key>StationInvaded0008.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2400,600},{800,600}}</string>
@@ -121,7 +121,7 @@
                 <key>sourceSize</key>
                 <string>{800,600}</string>
             </dict>
-            <key>invasion_0009.png</key>
+            <key>StationInvaded0009.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{3200,600},{800,600}}</string>
@@ -134,7 +134,7 @@
                 <key>sourceSize</key>
                 <string>{800,600}</string>
             </dict>
-            <key>invasion_0010.png</key>
+            <key>StationInvaded0010.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{0,1200},{800,600}}</string>
@@ -147,7 +147,7 @@
                 <key>sourceSize</key>
                 <string>{800,600}</string>
             </dict>
-            <key>invasion_0011.png</key>
+            <key>StationInvaded0011.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{800,1200},{800,600}}</string>
@@ -160,7 +160,7 @@
                 <key>sourceSize</key>
                 <string>{800,600}</string>
             </dict>
-            <key>invasion_0012.png</key>
+            <key>StationInvaded0012.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{1600,1200},{800,600}}</string>
@@ -173,7 +173,7 @@
                 <key>sourceSize</key>
                 <string>{800,600}</string>
             </dict>
-            <key>invasion_0013.png</key>
+            <key>StationInvaded0013.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2400,1200},{800,600}}</string>
@@ -186,7 +186,7 @@
                 <key>sourceSize</key>
                 <string>{800,600}</string>
             </dict>
-            <key>invasion_0014.png</key>
+            <key>StationInvaded0014.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{3200,1200},{800,600}}</string>
@@ -199,7 +199,7 @@
                 <key>sourceSize</key>
                 <string>{800,600}</string>
             </dict>
-            <key>invasion_0015.png</key>
+            <key>StationInvaded0015.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{0,1800},{800,600}}</string>
@@ -212,7 +212,7 @@
                 <key>sourceSize</key>
                 <string>{800,600}</string>
             </dict>
-            <key>invasion_0016.png</key>
+            <key>StationInvaded0016.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{800,1800},{800,600}}</string>
@@ -225,7 +225,7 @@
                 <key>sourceSize</key>
                 <string>{800,600}</string>
             </dict>
-            <key>invasion_0017.png</key>
+            <key>StationInvaded0017.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{1600,1800},{800,600}}</string>
@@ -238,7 +238,7 @@
                 <key>sourceSize</key>
                 <string>{800,600}</string>
             </dict>
-            <key>invasion_0018.png</key>
+            <key>StationInvaded0018.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2400,1800},{800,600}}</string>
@@ -261,7 +261,7 @@
             <key>size</key>
             <string>{4096,4096}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:dff907c0469575d6b7022f042a4b4213:1/1$</string>
+            <string>$TexturePacker:SmartUpdate:66b06cca98ee88c97b7f9f49688f1fd9:b459f764418d547ab94b7e2697010e90:8d157f399f783b4bbe0afce110055875$</string>
             <key>textureFileName</key>
             <string>invasion.png</string>
         </dict>

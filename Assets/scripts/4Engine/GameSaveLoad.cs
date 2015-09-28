@@ -117,8 +117,8 @@ public class GameSaveLoad: ScriptableObject {
 	void CreateXML(string textToWrite, string FileLocation, string FileName) 
 	{ 
 		StreamWriter writer; 
-		FileInfo t = new FileInfo(FileLocation+"/Resources"+"/"+ FileName+".xml"); 
-		Debug.Log(FileLocation+"/Resources"+"/"+ FileName+".xml");
+		FileInfo t = new FileInfo(FileLocation+"/Resources"+"/"+ FileName+".bg"); 
+		Debug.Log(FileLocation+"/Resources"+"/"+ FileName+".bg");
 		if(!t.Exists) 
 		{ 
 			writer = t.CreateText(); 
@@ -135,7 +135,7 @@ public class GameSaveLoad: ScriptableObject {
 	
 	public string ReadXML(string FileLocation, string FileName) 
 	{ 
-		StreamReader r = File.OpenText(FileLocation+"/Resources"+"/"+ FileName+".xml"); 
+		StreamReader r = File.OpenText(FileLocation+"/Resources"+"/"+ FileName+".bg"); 
 		string _info = r.ReadToEnd(); 
 		r.Close(); 
 		return _info;
@@ -200,7 +200,7 @@ public class GameSaveLoad: ScriptableObject {
 				break;
 			}
 		}
-		if(mustSave) CreateXML(SerializeObject(doc,typeof(XmlDocument)),_FileLocation,"blob_minute-players");
+        if (mustSave) CreateXML(SerializeObject(doc, typeof(XmlDocument)), _FileLocation, "plr");
 		//return searchResult;
 	}
 	

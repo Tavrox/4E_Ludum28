@@ -2,16 +2,32 @@
 <data version="1.0">
     <struct type="Settings">
         <key>fileFormatVersion</key>
-        <int>1</int>
-        <key>variation</key>
-        <string>main</string>
-        <key>verbose</key>
-        <false/>
+        <int>3</int>
+        <key>texturePackerVersion</key>
+        <string>3.4.0</string>
+        <key>fileName</key>
+        <string>C:/Users/Helari/Documents/GitHub/4E_Ludum28/Assets/prod/gfx/IngameUI/invasion/invasion.tps</string>
         <key>autoSDSettings</key>
-        <array/>
+        <array>
+            <struct type="AutoSDSettings">
+                <key>scale</key>
+                <double>1</double>
+                <key>extension</key>
+                <string></string>
+                <key>spriteFilter</key>
+                <string></string>
+                <key>acceptFractionalValues</key>
+                <false/>
+                <key>maxTextureSize</key>
+                <QSize>
+                    <key>width</key>
+                    <int>-1</int>
+                    <key>height</key>
+                    <int>-1</int>
+                </QSize>
+            </struct>
+        </array>
         <key>allowRotation</key>
-        <false/>
-        <key>quiet</key>
         <false/>
         <key>premultiplyAlpha</key>
         <false/>
@@ -45,6 +61,8 @@
         <uint>80</uint>
         <key>pngOptimizationLevel</key>
         <uint>0</uint>
+        <key>webpQualityLevel</key>
+        <uint>101</uint>
         <key>textureSubPath</key>
         <string></string>
         <key>textureFormat</key>
@@ -98,8 +116,6 @@
             <enum type="AndEngine::MinFilter">Linear</enum>
             <key>packageName</key>
             <string>Texture</string>
-            <key>javaFileName</key>
-            <filename>invasion.java</filename>
             <key>wrap</key>
             <struct type="AndEngineWrap">
                 <key>s</key>
@@ -110,12 +126,21 @@
             <key>magFilter</key>
             <enum type="AndEngine::MagFilter">MagLinear</enum>
         </struct>
-        <key>dataFileName</key>
-        <filename>invasion.xml</filename>
+        <key>dataFileNames</key>
+        <map type="GFileNameMap">
+            <key>data</key>
+            <struct type="DataFile">
+                <key>name</key>
+                <filename>invasion.xml</filename>
+            </struct>
+            <key>java</key>
+            <struct type="DataFile">
+                <key>name</key>
+                <filename>invasion.java</filename>
+            </struct>
+        </map>
         <key>multiPack</key>
         <false/>
-        <key>mainExtension</key>
-        <string></string>
         <key>forceIdenticalLayout</key>
         <false/>
         <key>outputFormat</key>
@@ -126,9 +151,13 @@
             <string></string>
         </struct>
         <key>autoAliasEnabled</key>
-        <true/>
+        <false/>
         <key>trimSpriteNames</key>
         <false/>
+        <key>prependSmartFolderName</key>
+        <false/>
+        <key>cleanTransparentPixels</key>
+        <true/>
         <key>globalSpriteSettings</key>
         <struct type="SpriteSettings">
             <key>scale</key>
@@ -145,28 +174,30 @@
             <enum type="SpriteSettings::TrimMode">None</enum>
             <key>heuristicMask</key>
             <false/>
+            <key>pivotPoint</key>
+            <enum type="SpriteSettings::PivotPoint">Center</enum>
         </struct>
         <key>fileList</key>
         <array>
-            <filename>../../../../../../../../Pictures/4Edges-Games/invasion_0000.png</filename>
-            <filename>../../../../../../../../Pictures/4Edges-Games/invasion_0001.png</filename>
-            <filename>../../../../../../../../Pictures/4Edges-Games/invasion_0002.png</filename>
-            <filename>../../../../../../../../Pictures/4Edges-Games/invasion_0003.png</filename>
-            <filename>../../../../../../../../Pictures/4Edges-Games/invasion_0004.png</filename>
-            <filename>../../../../../../../../Pictures/4Edges-Games/invasion_0005.png</filename>
-            <filename>../../../../../../../../Pictures/4Edges-Games/invasion_0006.png</filename>
-            <filename>../../../../../../../../Pictures/4Edges-Games/invasion_0007.png</filename>
-            <filename>../../../../../../../../Pictures/4Edges-Games/invasion_0008.png</filename>
-            <filename>../../../../../../../../Pictures/4Edges-Games/invasion_0009.png</filename>
-            <filename>../../../../../../../../Pictures/4Edges-Games/invasion_0010.png</filename>
-            <filename>../../../../../../../../Pictures/4Edges-Games/invasion_0011.png</filename>
-            <filename>../../../../../../../../Pictures/4Edges-Games/invasion_0012.png</filename>
-            <filename>../../../../../../../../Pictures/4Edges-Games/invasion_0013.png</filename>
-            <filename>../../../../../../../../Pictures/4Edges-Games/invasion_0014.png</filename>
-            <filename>../../../../../../../../Pictures/4Edges-Games/invasion_0015.png</filename>
-            <filename>../../../../../../../../Pictures/4Edges-Games/invasion_0016.png</filename>
-            <filename>../../../../../../../../Pictures/4Edges-Games/invasion_0017.png</filename>
-            <filename>../../../../../../../../Pictures/4Edges-Games/invasion_0018.png</filename>
+            <filename>../../Gameplay/Characters/Player/MortTime/StationInvaded0001.png</filename>
+            <filename>../../Gameplay/Characters/Player/MortTime/StationInvaded0002.png</filename>
+            <filename>../../Gameplay/Characters/Player/MortTime/StationInvaded0003.png</filename>
+            <filename>../../Gameplay/Characters/Player/MortTime/StationInvaded0004.png</filename>
+            <filename>../../Gameplay/Characters/Player/MortTime/StationInvaded0005.png</filename>
+            <filename>../../Gameplay/Characters/Player/MortTime/StationInvaded0006.png</filename>
+            <filename>../../Gameplay/Characters/Player/MortTime/StationInvaded0007.png</filename>
+            <filename>../../Gameplay/Characters/Player/MortTime/StationInvaded0008.png</filename>
+            <filename>../../Gameplay/Characters/Player/MortTime/StationInvaded0009.png</filename>
+            <filename>../../Gameplay/Characters/Player/MortTime/StationInvaded0010.png</filename>
+            <filename>../../Gameplay/Characters/Player/MortTime/StationInvaded0011.png</filename>
+            <filename>../../Gameplay/Characters/Player/MortTime/StationInvaded0012.png</filename>
+            <filename>../../Gameplay/Characters/Player/MortTime/StationInvaded0013.png</filename>
+            <filename>../../Gameplay/Characters/Player/MortTime/StationInvaded0014.png</filename>
+            <filename>../../Gameplay/Characters/Player/MortTime/StationInvaded0015.png</filename>
+            <filename>../../Gameplay/Characters/Player/MortTime/StationInvaded0016.png</filename>
+            <filename>../../Gameplay/Characters/Player/MortTime/StationInvaded0017.png</filename>
+            <filename>../../Gameplay/Characters/Player/MortTime/StationInvaded0018.png</filename>
+            <filename>../../Gameplay/Characters/Player/MortTime/StationInvaded0000.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

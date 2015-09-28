@@ -99,8 +99,8 @@ public class MiscButton : MonoBehaviour {
 		
 		_levelDataLoader = ScriptableObject.CreateInstance<GameSaveLoad>();
 		_playerDataLoader = ScriptableObject.CreateInstance<GameSaveLoad>();
-		_levelDataLoader.LoadXMLToList("blob_minute-levels");
-		_playerDataLoader.LoadXMLToList("blob_minute-players");
+        _levelDataLoader.LoadXMLToList("lv");
+        _playerDataLoader.LoadXMLToList("plr");
 		
 		SETUP = Resources.Load ("Tuning/GameSetup") as GameSetup;
 		if (GameObject.Find("TitleMenu") != null)
@@ -190,7 +190,7 @@ public class MiscButton : MonoBehaviour {
 		if (locked == false)
 		{
 			if(buttonType == buttonList.PlayLevel) {
-				if(!mainUi.lvlSplashed) _scoreTween = new OTTween(_levelDetails.transform ,.4f, OTEasing.QuadInOut).Tween("localPosition", new Vector3( _levelDetails.transform.localPosition.x, 1.5f, _levelDetails.transform.localPosition.z ));
+				if(!mainUi.lvlSplashed) _scoreTween = new OTTween(_levelDetails.transform ,.4f, OTEasing.QuadInOut).Tween("localPosition", new Vector3( _levelDetails.transform.localPosition.x, 2.3f, _levelDetails.transform.localPosition.z ));
 //				print (_levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_thumb.Info.levelNumName,"id"));
 //				print (_levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_thumb.Info.levelNumName,"gold"));
 //				print (_levelDataLoader.getValueFromXmlDoc("BlobMinute/levels/level"+_thumb.Info.levelNumName,"silver"));
@@ -279,8 +279,11 @@ public class MiscButton : MonoBehaviour {
 			{
 					//_spriteBtn.alpha = 1f;
 				_playerData.choixOccurence = System.Convert.ToInt32(numOccurence);
-				if(numOccurence==6) _lvlToLoad = System.Convert.ToString(System.Convert.ToInt32(numOccurence)+1);
-                if (numOccurence == 7) _lvlToLoad = System.Convert.ToString(System.Convert.ToInt32(_realLvlNameToLoad) + 11);//_lvlToLoad = System.Convert.ToInt32(_lvlToLoad+?); NUM SCENE OCC 6
+                if (numOccurence == 6) { print("boss"); _lvlToLoad = System.Convert.ToString(System.Convert.ToInt32(_lvlToLoad) + 1); }
+                if (numOccurence == 7)
+                {
+                    print("bonus"); _lvlToLoad = System.Convert.ToString(System.Convert.ToInt32(_realLvlNameToLoad) + 11);//_lvlToLoad = System.Convert.ToInt32(_lvlToLoad+?); NUM SCENE OCC 6
+                }
 				print(_lvlToLoad + " - " + numOccurence);
 				Application.LoadLevel(System.Convert.ToInt32(_lvlToLoad));
 				break;

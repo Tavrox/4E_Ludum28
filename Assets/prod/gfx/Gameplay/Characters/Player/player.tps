@@ -4,9 +4,9 @@
         <key>fileFormatVersion</key>
         <int>3</int>
         <key>texturePackerVersion</key>
-        <string>3.3.1</string>
+        <string>3.4.0</string>
         <key>fileName</key>
-        <string>C:/Users/Thomas/Documents/GitHub/4E_Ludum28/Assets/prod/gfx/Gameplay/Characters/Player/player.tps</string>
+        <string>C:/Users/Helari/Documents/GitHub/4E_Ludum28/Assets/prod/gfx/Gameplay/Characters/Player/player.tps</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -188,6 +188,8 @@
         <false/>
         <key>trimSpriteNames</key>
         <false/>
+        <key>prependSmartFolderName</key>
+        <false/>
         <key>cleanTransparentPixels</key>
         <true/>
         <key>globalSpriteSettings</key>
@@ -206,6 +208,8 @@
             <enum type="SpriteSettings::TrimMode">None</enum>
             <key>heuristicMask</key>
             <false/>
+            <key>pivotPoint</key>
+            <enum type="SpriteSettings::PivotPoint">Center</enum>
         </struct>
         <key>fileList</key>
         <array>
@@ -275,26 +279,168 @@
             <filename>perso_zzidle_Bas0001.png</filename>
             <filename>perso_zzidle_Bas0002.png</filename>
             <filename>perso_zzidle_Bas0003.png</filename>
-            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_MortzElectroV50001 (2).png</filename>
-            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_MortzElectroV50001 (3).png</filename>
-            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_MortzElectroV50001 (4).png</filename>
-            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_MortzElectroV50001 (5).png</filename>
-            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_MortzElectroV50001 (6).png</filename>
-            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_MortzElectroV50001 (1).png</filename>
-            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (4).png</filename>
-            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (5).png</filename>
-            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (6).png</filename>
-            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (7).png</filename>
-            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (8).png</filename>
-            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (9).png</filename>
-            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (10).png</filename>
-            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (11).png</filename>
-            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (12).png</filename>
-            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (13).png</filename>
-            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (14).png</filename>
-            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (1).png</filename>
-            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (2).png</filename>
-            <filename>../../../../../../../../blobminutep/Assets/prod/gfx/Gameplay/Characters/Player/perso_ymortblob (3).png</filename>
+            <filename>MortElectro/perso_MortzElectroV50001 (1).png</filename>
+            <filename>MortElectro/perso_MortzElectroV50001 (2).png</filename>
+            <filename>MortElectro/perso_MortzElectroV50001 (3).png</filename>
+            <filename>MortElectro/perso_MortzElectroV50001 (4).png</filename>
+            <filename>MortElectro/perso_MortzElectroV50001 (5).png</filename>
+            <filename>MortElectro/perso_MortzElectroV50001 (6).png</filename>
+            <filename>MortBlob/perso_ymortblob (10).png</filename>
+            <filename>MortBlob/perso_ymortblob (11).png</filename>
+            <filename>MortBlob/perso_ymortblob (12).png</filename>
+            <filename>MortBlob/perso_ymortblob (13).png</filename>
+            <filename>MortBlob/perso_ymortblob (14).png</filename>
+            <filename>MortBlob/perso_ymortblob (01).png</filename>
+            <filename>MortBlob/perso_ymortblob (02).png</filename>
+            <filename>MortBlob/perso_ymortblob (03).png</filename>
+            <filename>MortBlob/perso_ymortblob (04).png</filename>
+            <filename>MortBlob/perso_ymortblob (05).png</filename>
+            <filename>MortBlob/perso_ymortblob (06).png</filename>
+            <filename>MortBlob/perso_ymortblob (07).png</filename>
+            <filename>MortBlob/perso_ymortblob (08).png</filename>
+            <filename>MortBlob/perso_ymortblob (09).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (01).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (02).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (03).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (04).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (05).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (06).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (07).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (08).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (09).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (10).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (11).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (12).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (13).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (14).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (15).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (16).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (17).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (18).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (19).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (20).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (21).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (22).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (23).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (24).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (25).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (26).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (27).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (28).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (29).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (30).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (31).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (32).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (33).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (34).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (35).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (36).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (37).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (38).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (39).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (40).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (41).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (42).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (43).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (44).png</filename>
+            <filename>Victoire01/perso_zzzfinV1 (45).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (49).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (01).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (02).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (03).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (04).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (05).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (06).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (07).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (08).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (09).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (10).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (11).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (12).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (13).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (14).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (15).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (16).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (17).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (18).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (19).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (20).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (21).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (22).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (23).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (24).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (25).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (26).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (27).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (28).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (29).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (30).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (31).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (32).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (33).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (34).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (35).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (36).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (37).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (38).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (39).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (40).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (41).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (42).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (43).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (44).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (45).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (46).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (47).png</filename>
+            <filename>Victoire02/perso_zzzfinV2 (48).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (48).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (49).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (50).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (01).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (02).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (03).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (04).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (05).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (06).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (07).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (08).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (09).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (12).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (13).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (14).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (15).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (16).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (17).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (18).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (19).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (20).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (21).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (22).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (23).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (24).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (25).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (26).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (27).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (28).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (29).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (30).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (31).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (32).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (33).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (34).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (35).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (36).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (37).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (38).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (39).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (40).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (41).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (42).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (43).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (44).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (45).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (46).png</filename>
+            <filename>Victoire03/perso_zzzfinV3 (47).png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

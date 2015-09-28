@@ -22,6 +22,7 @@ public class Player : Character {
 	public int _COEFF_TEMPS, _COEFF_BATTERY;
 	public int _scorePlayer;
 	public Transform HUDPause;
+    public RewindSprite _rewindHUD;
 //	public delegate void TweenDelegate();
 //	public TweenDelegate otweenFinish;
 
@@ -49,7 +50,9 @@ public class Player : Character {
 		//HUDPause = GameObject.Find("Pause").GetComponent<Transform>();
 		//HUDPause.gameObject.SetActive(false);
 		InvokeRepeating("playFootstep",0f,0.4f);
-		
+
+        _rewindHUD = GameObject.FindObjectOfType<RewindSprite>();
+        _rewindHUD.hideRewindSprite();
 //		GetComponent<BoxCollider>().size = new Vector3(1.3f,2f,30f);
 //		GetComponent<BoxCollider>().center = new Vector3(0f,0f,0f);
 		nbKey = 0;
@@ -167,7 +170,7 @@ public class Player : Character {
 		}
 		if (Input.GetKeyDown(KeyCode.Alpha2))
 		{
-			GameObject.Find("Invasion").GetComponent<InvasionAnims>().invade();
+			//GameObject.Find("Invasion").GetComponent<InvasionAnims>().invade();
 		}
 		if (Input.GetKeyDown(InputMan.Reset) || Input.GetKey(InputMan.Reset2) || Input.GetKey(InputMan.PadReset)) 
 		{
@@ -234,7 +237,16 @@ public class Player : Character {
 	}
 
 	public void teleportTo(Vector3 pos) {
-		thisTransform.position = pos;
+        Parallax[] testPara = GameObject.FindObjectsOfType<Parallax>();
+        for (int i = 0; i < testPara.Length; i++)
+        {
+            testPara[i].gameObject.transform.parent = thisTransform;
+        }
+        thisTransform.position = pos;
+        for (int i = 0; i < testPara.Length; i++)
+        {
+            testPara[i].gameObject.transform.parent = testPara[i].parentTransform;
+        }
 	}
 	public IEnumerator rewind () {
 		yield return new WaitForSeconds(0.01f);
@@ -264,19 +276,22 @@ public class Player : Character {
 			transform.localPosition = spawnPos;
 			enabled = true;
 			moveVel = moveVelIni;
-		pushCrate = grabCrate = false;
-		col.size = new Vector3(1f, col.size.y, col.size.z);
-		col.center = new Vector3(0f, 0f, 0f);
-		thisTransform.rotation = new Quaternion(0f,0f,0f,0f);
-		HUDPause.gameObject.SetActive(false);
+		    pushCrate = grabCrate = false;
+            _rewindHUD.hideRewindSprite();
+            _rewindHUD.transform.parent = thisTransform;
+            _rewindHUD.transform.localPosition = new Vector3(-1.25f, -6, -60);
+		    col.size = new Vector3(1f, col.size.y, col.size.z);
+		    col.center = new Vector3(0f, 0f, 0f);
+		    thisTransform.rotation = new Quaternion(0f,0f,0f,0f);
+		    HUDPause.gameObject.SetActive(false);
 			finishedLevel=killedByBlob = killedByLaser = false;
-		collider.enabled=true;
-		isJump = false;
-		chute = true;
-		vectorMove.y = 0;
-		angleRotation = 0;
-		nbKey = 0;
-		isDead = false;
+		    collider.enabled=true;
+		    isJump = false;
+		    chute = true;
+		    vectorMove.y = 0;
+		    angleRotation = 0;
+		    nbKey = 0;
+		    isDead = false;
 		}
 	}
 	private void FinishLevel() {
@@ -289,7 +304,10 @@ public class Player : Character {
 	private void GameOver () 
 	{
 		if(this != null && gameObject.activeInHierarchy) {
-			paused=false;
+            paused = false;
+            _rewindHUD.showRewindSprite();
+            _rewindHUD.transform.localPosition = new Vector3(-1.25f, -6, -60);
+            _rewindHUD.transform.parent = thisTransform.parent;
 			StartCoroutine("resetGame");
 			isLeft = false;
 			isRight = false;

@@ -57,6 +57,7 @@ public class EndLvlButton : MonoBehaviour {
 			{
 				//OTTween _endLvlPanelTween = new OTTween(transform.parent.GetComponentInChildren<SpriteRenderer>().gameObject.transform ,0.5f, OTEasing.BounceOut).Tween("localScale", new Vector3( 10f, 10f, 1f ));
 				//_EndLvlContent.gameObject.SetActive(false);	
+                Debug.Log("Next Instance");
 				GameEventManager.TriggerNextInstance();
 				break;
 			}

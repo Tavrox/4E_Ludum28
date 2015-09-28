@@ -20,7 +20,7 @@ public class LevelThumbnail : MonoBehaviour
 		animThumb = GetComponentInChildren<ThumbnailAnimations>();
 		animThumb.Setup();
 		_playerDataLoader = ScriptableObject.CreateInstance<GameSaveLoad>();
-		_playerDataLoader.LoadXMLToList("blob_minute-players");
+        _playerDataLoader.LoadXMLToList("plr");
 		Info.locked = (_playerDataLoader.getValueFromXmlDoc("BlobMinute/players/Bastien/level"+Info.levelNumName,"locked")=="true")?true:false;
 		
 		linkedText = GetComponentInChildren<TextUI>();

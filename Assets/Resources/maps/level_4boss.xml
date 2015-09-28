@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="300" height="30" tilewidth="50" tileheight="50">
- <tileset firstgid="1" name="background" tilewidth="50" tileheight="50">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="300" height="30" tilewidth="50" tileheight="50" nextobjectid="57">
+ <tileset firstgid="1" name="background" tilewidth="50" tileheight="50" tilecount="108">
   <image source="tilesets/background.png" width="150" height="1800"/>
  </tileset>
- <tileset firstgid="109" name="metal" tilewidth="50" tileheight="50">
+ <tileset firstgid="109" name="metal" tilewidth="50" tileheight="50" tilecount="15">
   <image source="tilesets/metal.png" width="150" height="250"/>
  </tileset>
- <tileset firstgid="124" name="tilesBG2" tilewidth="50" tileheight="50">
+ <tileset firstgid="124" name="tilesBG2" tilewidth="50" tileheight="50" tilecount="400">
   <image source="tilesets/tilesBG2.png" width="512" height="2048"/>
  </tileset>
- <tileset firstgid="524" name="lightlever" tilewidth="50" tileheight="50" spacing="2">
+ <tileset firstgid="524" name="lightlever" tilewidth="50" tileheight="50" spacing="2" tilecount="16">
   <image source="tilesets/lightlever.png" width="256" height="256"/>
  </tileset>
- <tileset firstgid="540" name="lightlever2" tilewidth="50" tileheight="50" spacing="2">
+ <tileset firstgid="540" name="lightlever2" tilewidth="50" tileheight="50" spacing="2" tilecount="16">
   <image source="tilesets/lightlever2.png" width="256" height="256"/>
  </tileset>
- <tileset firstgid="556" name="borders" tilewidth="50" tileheight="50">
+ <tileset firstgid="556" name="borders" tilewidth="50" tileheight="50" tilecount="50">
   <image source="tilesets/borders.png" width="256" height="512"/>
  </tileset>
- <tileset firstgid="606" name="bordersDark" tilewidth="50" tileheight="50">
+ <tileset firstgid="606" name="bordersDark" tilewidth="50" tileheight="50" tilecount="50">
   <image source="tilesets/bordersDark.png" width="256" height="512"/>
  </tileset>
- <layer name="Background" width="300" height="30" visible="0">
+ <layer name="Background" width="300" height="30">
   <data encoding="csv">
 5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -939,71 +939,71 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup name="Collider_0" width="300" height="30" visible="0">
-  <object x="-38" y="999" width="14580" height="193"/>
-  <object x="-517" y="187" width="15214" height="210"/>
-  <object x="6799" y="649" width="97" height="98"/>
-  <object x="6200" y="650" width="97" height="98"/>
-  <object x="7500" y="799" width="97" height="98"/>
-  <object x="8099" y="599" width="97" height="98"/>
-  <object x="8500" y="600" width="97" height="98"/>
-  <object x="8351" y="798" width="97" height="98"/>
-  <object x="8650" y="798" width="97" height="98"/>
-  <object x="1205" y="650" width="138" height="97"/>
-  <object x="5348" y="746" width="151" height="103"/>
-  <object x="5648" y="595" width="103" height="102"/>
-  <object x="9399" y="600" width="97" height="98"/>
-  <object x="9799" y="600" width="97" height="98"/>
-  <object x="9601" y="799" width="97" height="98"/>
-  <object x="10351" y="798" width="97" height="98"/>
-  <object x="10653" y="597" width="93" height="199"/>
-  <object x="11002" y="797" width="93" height="98"/>
-  <object x="11201" y="597" width="93" height="98"/>
-  <object x="11402" y="598" width="94" height="298"/>
-  <object x="11461" y="600" width="686" height="96"/>
-  <object x="14462" y="139" width="640" height="1304"/>
-  <object x="2453" y="601" width="91" height="97"/>
-  <object x="2203" y="799" width="93" height="100"/>
-  <object x="2851" y="797" width="97" height="99"/>
-  <object x="3101" y="597" width="97" height="100"/>
-  <object x="3649" y="597" width="99" height="100"/>
-  <object x="4101" y="600" width="96" height="96"/>
-  <object x="4501" y="797" width="95" height="96"/>
-  <object x="13650" y="601" width="497" height="97"/>
-  <object x="12603" y="601" width="94" height="93"/>
-  <object x="13052" y="601" width="94" height="95"/>
+ <objectgroup name="Collider_0">
+  <object id="1" x="-38" y="999" width="14580" height="193"/>
+  <object id="2" x="-517" y="187" width="15214" height="210"/>
+  <object id="3" x="6799" y="649" width="97" height="98"/>
+  <object id="4" x="6200" y="650" width="97" height="98"/>
+  <object id="5" x="7500" y="799" width="97" height="98"/>
+  <object id="6" x="8099" y="599" width="97" height="98"/>
+  <object id="7" x="8500" y="600" width="97" height="98"/>
+  <object id="8" x="8351" y="798" width="97" height="98"/>
+  <object id="9" x="8650" y="798" width="97" height="98"/>
+  <object id="10" x="1205" y="650" width="138" height="97"/>
+  <object id="11" x="5348" y="746" width="151" height="103"/>
+  <object id="12" x="5648" y="595" width="103" height="102"/>
+  <object id="13" x="9399" y="600" width="97" height="98"/>
+  <object id="14" x="9799" y="600" width="97" height="98"/>
+  <object id="15" x="9601" y="799" width="97" height="98"/>
+  <object id="16" x="10351" y="798" width="97" height="98"/>
+  <object id="17" x="10653" y="597" width="93" height="199"/>
+  <object id="18" x="11002" y="797" width="93" height="98"/>
+  <object id="19" x="11201" y="597" width="93" height="98"/>
+  <object id="20" x="11402" y="598" width="94" height="298"/>
+  <object id="21" x="11461" y="600" width="686" height="96"/>
+  <object id="22" x="14462" y="139" width="640" height="1304"/>
+  <object id="23" x="2453" y="601" width="91" height="97"/>
+  <object id="24" x="2203" y="799" width="93" height="100"/>
+  <object id="25" x="2851" y="797" width="97" height="99"/>
+  <object id="26" x="3101" y="597" width="97" height="100"/>
+  <object id="27" x="3649" y="597" width="99" height="100"/>
+  <object id="28" x="4101" y="600" width="96" height="96"/>
+  <object id="29" x="4501" y="797" width="95" height="96"/>
+  <object id="30" x="13650" y="601" width="497" height="97"/>
+  <object id="31" x="12603" y="601" width="94" height="93"/>
+  <object id="32" x="13052" y="601" width="94" height="95"/>
  </objectgroup>
- <objectgroup name="1" width="300" height="30" visible="0">
-  <object name="1-Porte1" type="TriggeredDoor" x="1347" y="799" width="259" height="47"/>
-  <object name="1-Porte2" type="TriggeredDoor" x="1344" y="1049" width="261" height="48"/>
-  <object name="1-Porte3" type="TriggeredDoor" x="1601" y="832" width="45" height="223"/>
-  <object name="1-BoutonTimerPorte1234" type="TimedBtn" x="1501" y="695" width="49" height="55"/>
-  <object name="1-Porte4" type="TriggeredDoor" x="1299" y="579" width="45" height="223"/>
-  <object name="1-Porte5" type="TriggeredDoor" x="2041" y="754" width="214" height="47"/>
-  <object name="1-caisse tueur de blob" type="Crate" x="2149" y="651" width="97" height="99"/>
-  <object name="1-BoutonTimerPorte5" type="TimedBtn" x="2349" y="897" width="49" height="55"/>
-  <object name="1-ChienDebase" type="Walker" x="927" y="948" width="137" height="96"/>
-  <object name="1-LevierPorteBlobetoirtebas" type="Lever" x="1251" y="1201" width="48" height="52"/>
-  <object name="1-PorteBlockBlob" type="TriggeredDoor" x="1293" y="883" width="55" height="164"/>
-  <object name="1-PorteBlockPersoBas" type="TriggeredDoor" x="1654" y="1137" width="55" height="164"/>
-  <object name="1-Laser01BaseUP" type="BaseArcU" x="1155" y="1393" width="45" height="105"/>
-  <object name="1-Laser01-1" type="ArcVertical" x="1151" y="1497" width="43" height="101"/>
-  <object name="1-Laser02BaseUP" type="BaseArcU" x="1401" y="1397" width="45" height="105"/>
-  <object name="1-Laser03BaseUP" type="BaseArcU" x="1655" y="1395" width="45" height="105"/>
-  <object name="1-Laser04BaseUP" type="BaseArcU" x="1755" y="1396" width="45" height="105"/>
+ <objectgroup name="1">
+  <object id="33" name="1-Porte1" type="TriggeredDoor" x="1347" y="799" width="259" height="47"/>
+  <object id="34" name="1-Porte2" type="TriggeredDoor" x="1344" y="1049" width="261" height="48"/>
+  <object id="35" name="1-Porte3" type="TriggeredDoor" x="1601" y="832" width="45" height="223"/>
+  <object id="36" name="1-BoutonTimerPorte1234" type="TimedBtn" x="1501" y="695" width="49" height="55"/>
+  <object id="37" name="1-Porte4" type="TriggeredDoor" x="1299" y="579" width="45" height="223"/>
+  <object id="38" name="1-Porte5" type="TriggeredDoor" x="2041" y="754" width="214" height="47"/>
+  <object id="39" name="1-caisse tueur de blob" type="Crate" x="2149" y="651" width="97" height="99"/>
+  <object id="40" name="1-BoutonTimerPorte5" type="TimedBtn" x="2349" y="897" width="49" height="55"/>
+  <object id="41" name="1-ChienDebase" type="Walker" x="927" y="948" width="137" height="96"/>
+  <object id="42" name="1-LevierPorteBlobetoirtebas" type="Lever" x="1251" y="1201" width="48" height="52"/>
+  <object id="43" name="1-PorteBlockBlob" type="TriggeredDoor" x="1293" y="883" width="55" height="164"/>
+  <object id="44" name="1-PorteBlockPersoBas" type="TriggeredDoor" x="1654" y="1137" width="55" height="164"/>
+  <object id="45" name="1-Laser01BaseUP" type="BaseArcU" x="1155" y="1393" width="45" height="105"/>
+  <object id="46" name="1-Laser01-1" type="ArcVertical" x="1151" y="1497" width="43" height="101"/>
+  <object id="47" name="1-Laser02BaseUP" type="BaseArcU" x="1401" y="1397" width="45" height="105"/>
+  <object id="48" name="1-Laser03BaseUP" type="BaseArcU" x="1655" y="1395" width="45" height="105"/>
+  <object id="49" name="1-Laser04BaseUP" type="BaseArcU" x="1755" y="1396" width="45" height="105"/>
  </objectgroup>
- <objectgroup name="2" width="300" height="30" visible="0">
-  <object name="2-PatrollerPousseCaiisseGauche" type="Patroler" x="2941" y="919" width="138" height="74"/>
+ <objectgroup name="2">
+  <object id="50" name="2-PatrollerPousseCaiisseGauche" type="Patroler" x="2941" y="919" width="138" height="74"/>
  </objectgroup>
- <objectgroup name="3" width="300" height="30" visible="0"/>
- <objectgroup name="4" width="300" height="30" visible="0"/>
- <objectgroup name="5" width="300" height="30" visible="0"/>
- <objectgroup name="Generique" width="300" height="30" visible="0">
-  <object type="Crate" x="1707" y="1306" width="100" height="99"/>
-  <object type="Crate" x="2357" y="1305" width="100" height="100"/>
-  <object type="TriggeredDoor" x="1927" y="1415" width="295" height="34"/>
-  <object type="TeleportIn" x="1725" y="1213" width="52" height="93"/>
-  <object type="TeleportIn" x="2377" y="1209" width="52" height="93"/>
-  <object type="TriggeredDoor" x="2758" y="1481" width="40" height="222"/>
+ <objectgroup name="3"/>
+ <objectgroup name="4"/>
+ <objectgroup name="5"/>
+ <objectgroup name="Generique">
+  <object id="51" type="Crate" x="1707" y="1306" width="100" height="99"/>
+  <object id="52" type="Crate" x="2357" y="1305" width="100" height="100"/>
+  <object id="53" type="TriggeredDoor" x="1927" y="1415" width="295" height="34"/>
+  <object id="54" type="TeleportIn" x="1725" y="1213" width="52" height="93"/>
+  <object id="55" type="TeleportIn" x="2377" y="1209" width="52" height="93"/>
+  <object id="56" type="TriggeredDoor" x="2758" y="1481" width="40" height="222"/>
  </objectgroup>
 </map>
