@@ -39,12 +39,12 @@ public class LeverLightPath : MonoBehaviour {
 		first = false;
 		_myLever = gameObject.transform.parent.transform.GetComponent<Lever>();
 		GameEventManager.GameStart += GameStart;
-		//createLine();
+        //createLine();
+        updateLight();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		updateLight();
 	}
 	private static int CompareListByName(Transform i1, Transform i2)
 	{
@@ -76,7 +76,9 @@ public class LeverLightPath : MonoBehaviour {
 			j++;
 		}
 	}
-	public void switchON() {
+    public void switchON()
+    {
+        updateLight();
 		//StopCoroutine("lightOFFDelay");
 		if(_lightTransition != null) _lightTransition.Stop();
 //		if(first) cDisplay = cReduced;
@@ -91,7 +93,9 @@ public class LeverLightPath : MonoBehaviour {
 		}
 			_lightTransition = new OTTween(this, .2f).Tween("cDisplay", cBegin).OnFinish(reduceBrightness);	
 	}
-	public void switchOFF() {
+    public void switchOFF()
+    {
+        updateLight();
 		StartCoroutine("lightOFFDelay",duration);
 	}
 	IEnumerator lightOFFDelay(float delay) {

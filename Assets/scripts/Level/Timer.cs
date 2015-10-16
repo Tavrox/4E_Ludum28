@@ -40,6 +40,7 @@ public class Timer : MonoBehaviour {
 		_alertMask = GameObject.Find("Player/IngameUI/Timer/timerAlert").GetComponent<Transform>();
 		alertColor = _alertMask.renderer.material.color;
 		alertColor.a = 0f;
+        _alertMask.renderer.enabled = false;
 		_txtTimer.color = _colSafe;
 		GameEventManager.GameStart += GameStart;
 		GameEventManager.GameOver += GameOver;
@@ -132,14 +133,19 @@ public class Timer : MonoBehaviour {
 		//alertColor.a = Mathf.PingPong(Time.time, 0.5f);
 		//print(Time.deltaTime);
 //		alertColor.a = (Mathf.Sin(Time.time*6.25f)+0.5f ) * 0.2f;
-//		_alertMask.renderer.material.color = alertColor;
+        //		_alertMask.renderer.material.color = alertColor;
+        _alertMask.renderer.enabled = true;
 		_rescaleCircleClock = new OTTween(_alertMask.renderer.material, .49f, OTEasing.Linear).Tween("color", new Color(_alertMask.renderer.material.color.r,_alertMask.renderer.material.color.g,_alertMask.renderer.material.color.b,.4f));
 		if(!_player.isDead) StartCoroutine("resetAlert");
 	}
 	private IEnumerator resetAlert() {
 		yield return new WaitForSeconds(.50f);
-		_rescaleCircleClock = new OTTween(_alertMask.renderer.material, .5f, OTEasing.Linear).Tween("color", new Color(_alertMask.renderer.material.color.r,_alertMask.renderer.material.color.g,_alertMask.renderer.material.color.b,0f));
+        _rescaleCircleClock = new OTTween(_alertMask.renderer.material, .5f, OTEasing.Linear).Tween("color", new Color(_alertMask.renderer.material.color.r, _alertMask.renderer.material.color.g, _alertMask.renderer.material.color.b, 0f)).OnFinish(disableRenderer);
 	}
+    void disableRenderer(OTTween _t)
+    {
+        _alertMask.renderer.enabled = false;
+    }
 	private void rescaleChrono () {
 		_rescaleClock = new OTTween(_circleClock.transform, .5f, OTEasing.BackOut).Tween("localScale", new Vector3(2.5f, 2.5f, 1f)).PingPong();
 		_rescaleClock = new OTTween(_minute.transform, .5f, OTEasing.BackOut).Tween("localScale", new Vector3(2.5f, 2.5f, 1f)).PingPong();
